@@ -1,0 +1,143 @@
+---
+title: Lector de PDF en Microsoft Edge
+ms.author: adigan
+author: dan-wesley
+manager: balajek
+ms.date: 08/05/2020
+audience: ITPro
+ms.topic: conceptual
+ms.prod: microsoft-edge
+ms.localizationpriority: high
+ms.collection: M365-modern-desktop
+description: Obtenga más información sobre el lector de PDF en Microsoft Edge.
+ms.openlocfilehash: c189bc08d4af0c9d5c4d9c573e0b5b7ef32a7fb3
+ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10981213"
+---
+# <span data-ttu-id="ebb7d-103">Lector de PDF en Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="ebb7d-103">PDF reader in Microsoft Edge</span></span>
+
+<span data-ttu-id="ebb7d-104">Los archivos PDF constituyen una parte importante de nuestra vida diaria.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-104">PDF files make up a substantial part of our day-to-day lives.</span></span> <span data-ttu-id="ebb7d-105">Se incluyen en forma de contratos y acuerdos, boletines, formularios, artículos de investigación, currículos, etc.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-105">They come in the form of contracts and agreements, newsletters, forms, research articles, resumes, and so on.</span></span> <span data-ttu-id="ebb7d-106">Estos archivos destacan la necesidad de un lector de PDF fiable, seguro y de gran capacidad que pueda ser adoptado por las empresas.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-106">These files highlight the need for a reliable, secure, and powerful PDF reader that can be adopted by Enterprises.</span></span>
+
+<span data-ttu-id="ebb7d-107">Microsoft Edge incorpora un lector de PDF integrado que le permite abrir archivos PDF locales, archivos PDF en línea o archivos PDF incrustados en páginas Web.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-107">Microsoft Edge comes with a built-in PDF reader that lets you open your local pdf files, online pdf files, or pdf files embedded in web pages.</span></span> <span data-ttu-id="ebb7d-108">Puede anotar estos archivos con entradas de lápiz y resaltado.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-108">You can annotate these files with ink and highlighting.</span></span> <span data-ttu-id="ebb7d-109">Este lector de PDF ofrece a los usuarios una única aplicación para satisfacer las necesidades de documentos de páginas web y de PDF.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-109">This PDF reader gives users a single application to meet web page and PDF document needs.</span></span> <span data-ttu-id="ebb7d-110">El lector PDF de Microsoft Edge es una aplicación segura y fiable que funciona en todas las plataformas de escritorio de Windows y macOS.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-110">The Microsoft Edge PDF reader is a secure and reliable application that works across the Windows and macOS desktop platforms.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="ebb7d-111">Este artículo se aplica a Microsoft Edge, versión 77 o posterior.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-111">This article applies to Microsoft Edge version 77 or later.</span></span>
+
+## <span data-ttu-id="ebb7d-112">Requisitos previos, soporte técnico y restricciones</span><span class="sxs-lookup"><span data-stu-id="ebb7d-112">Prerequisites, support, and constraints</span></span>
+
+<span data-ttu-id="ebb7d-113">En la tabla siguiente se muestran los canales y versiones de Microsoft Edge compatibles con la característica lector de PDF.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-113">The following table shows which channels and versions of Microsoft Edge support each PDF reader feature.</span></span>
+
+| <span data-ttu-id="ebb7d-114">Característica</span><span class="sxs-lookup"><span data-stu-id="ebb7d-114">Feature</span></span> | <span data-ttu-id="ebb7d-115">Versión de canal estable</span><span class="sxs-lookup"><span data-stu-id="ebb7d-115">Stable channel version</span></span> |
+|---------|------------------------|
+| <span data-ttu-id="ebb7d-116">Ver e imprimir archivos PDF integrados, en línea y locales</span><span class="sxs-lookup"><span data-stu-id="ebb7d-116">View and print local, online, and embedded PDF files</span></span> | <span data-ttu-id="ebb7d-117">79.0.309.71</span><span class="sxs-lookup"><span data-stu-id="ebb7d-117">79.0.309.71</span></span>                |
+| <span data-ttu-id="ebb7d-118">Relleno básico de formularios</span><span class="sxs-lookup"><span data-stu-id="ebb7d-118">Basic form filling</span></span><br><span data-ttu-id="ebb7d-119">(Los formularios de JavaScript no son compatibles)</span><span class="sxs-lookup"><span data-stu-id="ebb7d-119">(JavaScript forms aren't supported)</span></span> | <span data-ttu-id="ebb7d-120">79.0.309.71</span><span class="sxs-lookup"><span data-stu-id="ebb7d-120">79.0.309.71</span></span>           |
+| <span data-ttu-id="ebb7d-121">Entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="ebb7d-121">Inking</span></span>  | <span data-ttu-id="ebb7d-122">80.0.361.48</span><span class="sxs-lookup"><span data-stu-id="ebb7d-122">80.0.361.48</span></span>            |
+| <span data-ttu-id="ebb7d-123">Personalización de entrada de lápiz</span><span class="sxs-lookup"><span data-stu-id="ebb7d-123">Ink customization</span></span> | <span data-ttu-id="ebb7d-124">83.0.478.54.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-124">83.0.478.54</span></span>  |
+| <span data-ttu-id="ebb7d-125">Resaltar</span><span class="sxs-lookup"><span data-stu-id="ebb7d-125">Highlight</span></span>  | <span data-ttu-id="ebb7d-126">81.0.416.53</span><span class="sxs-lookup"><span data-stu-id="ebb7d-126">81.0.416.53</span></span>         |
+| <span data-ttu-id="ebb7d-127">Lectura en voz alta</span><span class="sxs-lookup"><span data-stu-id="ebb7d-127">Read Aloud</span></span> | <span data-ttu-id="ebb7d-128">Se promueve actualmente en canales de [Insider de Microsoft Edge](https://www.microsoftedgeinsider.com/)</span><span class="sxs-lookup"><span data-stu-id="ebb7d-128">Currently being promoted in [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) channels</span></span> |
+| <span data-ttu-id="ebb7d-129">Ver archivos protegidos MIP</span><span class="sxs-lookup"><span data-stu-id="ebb7d-129">View MIP protected files</span></span> | <span data-ttu-id="ebb7d-130">Soporte técnico de Windows en 80.0.361.48</span><span class="sxs-lookup"><span data-stu-id="ebb7d-130">Windows support in 80.0.361.48</span></span><br><span data-ttu-id="ebb7d-131">Soporte técnico para Mac en 81.0.416.53</span><span class="sxs-lookup"><span data-stu-id="ebb7d-131">Mac support in 81.0.416.53</span></span> |
+|  <span data-ttu-id="ebb7d-132">Ver archivos protegidos por IRM</span><span class="sxs-lookup"><span data-stu-id="ebb7d-132">View IRM protected files</span></span>  | <span data-ttu-id="ebb7d-133">83.0.478.37</span><span class="sxs-lookup"><span data-stu-id="ebb7d-133">83.0.478.37</span></span>            |
+
+### <span data-ttu-id="ebb7d-134">Restricciones</span><span class="sxs-lookup"><span data-stu-id="ebb7d-134">Constraints</span></span>
+
+<span data-ttu-id="ebb7d-135">Tenga en cuenta las siguientes restricciones del lector de PDF actual:</span><span class="sxs-lookup"><span data-stu-id="ebb7d-135">Note the following constraints for the current PDF reader:</span></span>
+
+-  <span data-ttu-id="ebb7d-136">La arquitectura de formularios XML (XFA) es un formato heredado de formularios que no es compatible con Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-136">XML Forms Architecture (XFA), is a legacy format of forms that isn't  supported in Microsoft Edge.</span></span>
+-  <span data-ttu-id="ebb7d-137">La documentación relacionada con los escenarios de accesibilidad que actualmente no son compatibles se puede encontrar en el blog [Informes de conformidad de accesibilidad de Microsoft](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports/).</span><span class="sxs-lookup"><span data-stu-id="ebb7d-137">Documentation related to Accessibility scenarios that currently aren't supported can be found on the [Microsoft Accessibility Conformance Reports](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports/) blog.</span></span>
+
+## <span data-ttu-id="ebb7d-138">Características</span><span class="sxs-lookup"><span data-stu-id="ebb7d-138">Features</span></span>
+
+### <span data-ttu-id="ebb7d-139">Entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="ebb7d-139">Inking</span></span>
+
+<span data-ttu-id="ebb7d-140">Las entradas manuscritas en archivos PDF son útiles para tomar notas rápidas para facilitar referencias, firmar o rellenar formularios PDF.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-140">Inking on PDF files comes in handy to take quick notes for easy reference, sign, or fill out PDF forms.</span></span> <span data-ttu-id="ebb7d-141">Esta función ya está disponible en Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-141">This capability is now available in Microsoft Edge.</span></span> <span data-ttu-id="ebb7d-142">Además de los archivos PDF de entrada manuscrita cuando es necesario, puede usar el color y el ancho del trazo para ofrecer atención a las distintas partes del archivo PDF.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-142">In addition to inking PDF files as needed, you can use color and stroke width to bring attention to different parts of the PDF file.</span></span> <span data-ttu-id="ebb7d-143">La siguiente captura de pantalla muestra cómo un usuario puede Agregar entradas manuscritas a una página PDF.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-143">The next screenshot shows how a user can add inking to a pdf page.</span></span>
+
+<!-- SCREENSHOT -->
+![Agregar la página de entrada manuscrita al pdf](media/microsoft-edge-pdf/pdf-reader-inking.png)
+
+### <span data-ttu-id="ebb7d-145">Resaltar</span><span class="sxs-lookup"><span data-stu-id="ebb7d-145">Highlight</span></span>
+
+<span data-ttu-id="ebb7d-146">Lector de PDF en Microsoft Edge tiene la compatibilidad para agregar y editar los puntos destacados.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-146">PDF reader in Microsoft Edge comes with support for adding and editing highlights.</span></span> <span data-ttu-id="ebb7d-147">Para crear un resaltado, el usuario solo tiene que seleccionar el texto, haga clic con el botón derecho en él y seleccione iluminado en el menú y elija el color que desee.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-147">To create a highlight, the user simply needs to select the text, right-click on it, select highlights in the menu and choose the desired color.</span></span> <span data-ttu-id="ebb7d-148">La siguiente captura de pantalla muestra las opciones de resaltado disponibles.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-148">The next screenshot shows the highlight options that are available.</span></span>
+
+![Use la opción resaltar del lector de PDF](media/microsoft-edge-pdf/pdf-reader-highlight.png)
+
+### <span data-ttu-id="ebb7d-150">Lectura en voz alta</span><span class="sxs-lookup"><span data-stu-id="ebb7d-150">Read Aloud</span></span>
+
+<span data-ttu-id="ebb7d-151">Leer en voz alta para PDF aumenta la comodidad de escuchar el contenido de PDF mientras lleva a cabo otras tareas que pueden ser importantes para los usuarios.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-151">Read Aloud for PDF adds the convenience of listening to PDF content while carrying out other tasks that may be important to users.</span></span> <span data-ttu-id="ebb7d-152">También ayuda a que los estudiantes se centren en el contenido, lo que facilita mucho más el aprendizaje.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-152">It also helps auditory learners focus on the content, which makes learning much easier.</span></span> <span data-ttu-id="ebb7d-153">La siguiente captura de pantalla muestra un ejemplo de Lectura en voz alta.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-153">The next screenshot shows a Read Aloud example.</span></span> <span data-ttu-id="ebb7d-154">El resaltado muestra el texto que se está leyendo actualmente.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-154">The highlighting shows the text that is currently being read.</span></span>
+
+![Use la opción resaltar del lector de PDF](media/microsoft-edge-pdf/pdf-reader-read-aloud-example.png)
+
+### <span data-ttu-id="ebb7d-156">Documentos PDF protegidos</span><span class="sxs-lookup"><span data-stu-id="ebb7d-156">Protected PDFs</span></span>
+
+<span data-ttu-id="ebb7d-157">[ Microsoft Information Protection (MIP)](https://docs.microsoft.com/microsoft-365/compliance/protect-information?view=o365-worldwide) permite que los usuarios colaboren con otras personas con seguridad, a la vez que se respetan las directivas de cumplimiento normativo de la organización.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-157">[Microsoft Information Protection (MIP)](https://docs.microsoft.com/microsoft-365/compliance/protect-information?view=o365-worldwide) enables users to collaborate with others securely, while adhering to your organization's compliance policies.</span></span> <span data-ttu-id="ebb7d-158">Una vez que un archivo está protegido, las acciones que los usuarios pueden llevar a cabo están determinadas por los permisos que tienen asignados.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-158">After a file is protected, the actions users can take on it are determined by the permissions assigned to them.</span></span>
+
+<span data-ttu-id="ebb7d-159">Estos archivos pueden abrirse directamente en el explorador, sin necesidad de descargar ningún otro software ni de instalar ningún complemento.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-159">These files can be opened directly in the browser, without the need to download any other software, or install any add-in.</span></span> <span data-ttu-id="ebb7d-160">Esto integra la seguridad proporcionada por el MIP directamente en el explorador, proporcionando un flujo de trabajo perfecto.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-160">This integrates the security provided by MIP directly into the browser, providing a seamless workflow.</span></span>
+
+<!-- SCREENSHOT -->
+![Documentos PDF protegidos.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
+
+<span data-ttu-id="ebb7d-162">Además de los archivos protegidos por el MIP, los archivos PDF de las bibliotecas SharePoint protegidas por la [Information Rights Management (IRM)](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center?view=o365-worldwide) también pueden abrirse de forma nativa en el explorador.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-162">In addition to MIP protected files, PDF files in [Information Rights Management (IRM)](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center?view=o365-worldwide) protected SharePoint libraries can also be opened natively in the browser.</span></span>
+
+<span data-ttu-id="ebb7d-163">Con Microsoft Edge, los usuarios pueden ver los archivos protegidos MIP guardados localmente o en la nube.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-163">With Microsoft Edge, users can view MIP protected files saved locally, or in the cloud.</span></span> <span data-ttu-id="ebb7d-164">Si se guarda localmente, el archivo puede abrirse directamente en el explorador.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-164">If saved locally, the file can be opened directly in the browser.</span></span> <span data-ttu-id="ebb7d-165">Si el archivo se abre desde un servicio en la nube como SharePoint, es posible que el usuario tenga que utilizar la opción "Abrir en el explorador".</span><span class="sxs-lookup"><span data-stu-id="ebb7d-165">If the file is opened from a cloud service as SharePoint, the user may need to use the "Open in browser" option.</span></span>
+
+<span data-ttu-id="ebb7d-166">Si el perfil con el que el usuario ha iniciado sesión en Microsoft Edge tiene al menos permisos de visualización del archivo, este se abrirá en Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-166">If the profile that the user is logged into Microsoft Edge with has at least view permissions to the file, the file will open in Microsoft Edge.</span></span>
+
+<!-- SCREENSHOT -->
+![Preguntar si se guarda la página PDF de SharePoint protegida por MIP](media/microsoft-edge-pdf/pdf-reader-sharepoint-irm.png)
+
+## <span data-ttu-id="ebb7d-168">Accesibilidad</span><span class="sxs-lookup"><span data-stu-id="ebb7d-168">Accessibility</span></span>
+
+<span data-ttu-id="ebb7d-169">El lector de PDF es compatible con la accesibilidad de teclado, el modo de contraste alto y la compatibilidad con lectores de pantalla en dispositivos Windows y Mac OS.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-169">The PDF reader comes with support for Keyboard accessibility, High contrast mode, and screen reader support across Windows and macOS devices.</span></span>
+
+### <span data-ttu-id="ebb7d-170">Accesibilidad de teclado</span><span class="sxs-lookup"><span data-stu-id="ebb7d-170">Keyboard Accessibility</span></span>
+
+<span data-ttu-id="ebb7d-171">Los usuarios pueden usar el teclado para desplazarse por las distintas partes del documento con las que un usuario puede interactuar, como campos de formulario y resaltados.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-171">Users can use navigate to different parts of the document that a user can interact with, such as form fields and highlights, using the keyboard.</span></span>
+
+<!-- SCREENSHOT -->
+
+### <span data-ttu-id="ebb7d-172">Modo de contraste alto</span><span class="sxs-lookup"><span data-stu-id="ebb7d-172">High contrast mode</span></span>
+
+<span data-ttu-id="ebb7d-173">El lector de PDF usará la configuración definida en el nivel de sistema operativo para representar el contenido de PDF en el modo de contraste alto.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-173">PDF reader will use the settings defined at the operating system level to render PDF content in high contrast mode.</span></span>
+
+<!-- SCREENSHOT -->
+<!--![High contrast mode for pdf file](media/microsoft-edge-pdf/pdf-reader-high-contrast.png)-->
+
+### <span data-ttu-id="ebb7d-174">Compatibilidad con lector de pantalla</span><span class="sxs-lookup"><span data-stu-id="ebb7d-174">Screen reader support</span></span>
+
+<span data-ttu-id="ebb7d-175">Los usuarios pueden navegar y leer archivos PDF usando lectores de pantalla en computadoras Windows y Mac.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-175">Users can navigate through and read PDF files using screen readers on Windows and Mac computers.</span></span> <!--The next screenshot shows the toolbar that users can use for audio settings when they're using the Read Aloud option in PDF reader. -->
+
+<!-- SCREENSHOT -->
+<!--
+![Screen reader toolbar](media/microsoft-edge-pdf/pdf-reader-read-aloud.png) -->
+
+## <span data-ttu-id="ebb7d-176">Seguridad y confiabilidad</span><span class="sxs-lookup"><span data-stu-id="ebb7d-176">Security and reliability</span></span>
+
+<span data-ttu-id="ebb7d-177">La seguridad se encuentra entre los principios más importantes para cualquier organización.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-177">Security is among the most important tenets for any organization.</span></span> <span data-ttu-id="ebb7d-178">La seguridad del lector de PDF es una parte integral del diseño de seguridad de Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-178">PDF reader security is an integral part of the Microsoft Edge security design.</span></span> <span data-ttu-id="ebb7d-179">Dos de las características de seguridad más importantes desde el punto de vista del lector de PDF, dos características de seguridad importantes son el aislamiento de procesos y la protección de Protección de aplicaciones de Microsoft Defender (protección de aplicaciones).</span><span class="sxs-lookup"><span data-stu-id="ebb7d-179">Two of the most important security features From a PDF reader perspective, two important security features are process isolation and Microsoft Defender Application Guard (Application Guard).</span></span>
+
+- <span data-ttu-id="ebb7d-180">Aislado del proceso.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-180">Process isolation.</span></span> <span data-ttu-id="ebb7d-181">Los archivos PDF abiertos desde diferentes sitios web están completamente aislados del proceso.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-181">PDFs opened from different web sites are completely process isolated.</span></span> <span data-ttu-id="ebb7d-182">El explorador no tiene que comunicarse con ningún sitio web o archivos PDF abiertos desde otro origen.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-182">The browser doesn't have to communicate with any websites, or PDF files opened from another source.</span></span> <span data-ttu-id="ebb7d-183">La exploración de PDF está protegida frente a cualquier ataque que planee usar archivos PDF comprometidos como superficie de ataque.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-183">PDF browsing is secure from any attacks that plan to use compromised PDFs as an attack surface.</span></span>
+
+- <span data-ttu-id="ebb7d-184">Protección de aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-184">Application Guard.</span></span> <span data-ttu-id="ebb7d-185">Con Protección de aplicaciones, los administradores pueden configurar una lista de sitios de confianza para su organización.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-185">With Application Guard, admins can set a list of sites that are trusted by their organization.</span></span> <span data-ttu-id="ebb7d-186">Si los usuarios abren otros sitios, se abren en una ventana de Protección de la aplicación independiente que se ejecuta en su propio contenedor.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-186">If users open any other sites, they are opened in a separate Application Guard window that runs in its own container.</span></span> <span data-ttu-id="ebb7d-187">El contenedor ayuda a proteger la red corporativa y cualquier dato del ordenador del usuario para que no se vea comprometido.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-187">The container helps protect the corporate network and any data on user's computer from being compromised.</span></span><br><br>
+<span data-ttu-id="ebb7d-188">Esta protección también se aplica a todos los archivos PDF en línea que se vean.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-188">This protection also applies to any online PDF files that are viewed.</span></span> <span data-ttu-id="ebb7d-189">Además, todos los archivos PDF que se descargan desde una ventana de Protección de aplicaciones se almacenan y, cuando es necesario, se vuelven a abrir en el contenedor.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-189">Further, any PDF files that are downloaded from an Application Guard window are stored, and when needed, re-opened in the container.</span></span> <span data-ttu-id="ebb7d-190">Esto ayuda a mantener la seguridad de su entorno, no solo cuando se descarga el archivo, sino durante todo su ciclo de vida.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-190">This helps keeps your environment secure not just when the file is downloaded, but through its whole lifecycle.</span></span> <span data-ttu-id="ebb7d-191">Para obtener más información, vea [Protección de aplicaciones](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-defender-application-guard).</span><span class="sxs-lookup"><span data-stu-id="ebb7d-191">For more information, see [Application Guard](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-defender-application-guard).</span></span>
+
+### <span data-ttu-id="ebb7d-192">Confiabilidad</span><span class="sxs-lookup"><span data-stu-id="ebb7d-192">Reliability</span></span>
+
+<span data-ttu-id="ebb7d-193">Debido a que Microsoft Edge está basado en Chromium, los usuarios pueden esperar el mismo nivel de fiabilidad que están acostumbrados a ver en Google Chrome.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-193">Because Microsoft Edge is Chromium-based, users can expect the same level of reliability that they're used to seeing in Google Chrome.</span></span>
+
+## <span data-ttu-id="ebb7d-194">Implementación y actualización del lector de PDF</span><span class="sxs-lookup"><span data-stu-id="ebb7d-194">Deploy and update PDF reader</span></span>
+
+<span data-ttu-id="ebb7d-195">Se implementará el lector de PDF y se actualizará con el resto del explorador Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-195">The PDF reader gets deployed and updated with the rest of the Microsoft Edge browser.</span></span> <span data-ttu-id="ebb7d-196">Para más información sobre la implementación de Microsoft Edge, vea el vídeo [Implementar Microsoft Edge en cientos o miles de dispositivos](microsoft-edge-video-deploy.md).</span><span class="sxs-lookup"><span data-stu-id="ebb7d-196">To learn more about deploying Microsoft Edge, watch the [Deploy Microsoft Edge to hundreds or thousands of devices](microsoft-edge-video-deploy.md) video.</span></span> <span data-ttu-id="ebb7d-197">También puede encontrar más información sobre la implementación en la página de aterrizaje de [Documentación de Microsoft Edge](https://docs.microsoft.com/DeployEdge/).</span><span class="sxs-lookup"><span data-stu-id="ebb7d-197">You can also find more deployment information on the [Microsoft Edge documentation](https://docs.microsoft.com/DeployEdge/) landing page.</span></span>
+
+> [!TIP]
+> <span data-ttu-id="ebb7d-198">Puede hacer de Microsoft Edge el lector de PDF predeterminado de su organización.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-198">You can make Microsoft Edge the default PDF reader for your organization.</span></span> <span data-ttu-id="ebb7d-199">Para ello, [siga estos pasos](https://docs.microsoft.com/deployedge/edge-default-browser).</span><span class="sxs-lookup"><span data-stu-id="ebb7d-199">To do this, [follow these steps](https://docs.microsoft.com/deployedge/edge-default-browser).</span></span>
+
+## <span data-ttu-id="ebb7d-200">Plan de desarrollo y comentarios</span><span class="sxs-lookup"><span data-stu-id="ebb7d-200">Roadmap and feedback</span></span>
+
+<span data-ttu-id="ebb7d-201">La hoja de ruta para el lector de PDF en Microsoft Edge se encuentra disponible [aquí](https://techcommunity.microsoft.com/t5/articles/roadmap-for-pdf-reader-in-microsoft-edge/m-p/1467667).</span><span class="sxs-lookup"><span data-stu-id="ebb7d-201">The roadmap for PDF Reader in Microsoft Edge is available [here](https://techcommunity.microsoft.com/t5/articles/roadmap-for-pdf-reader-in-microsoft-edge/m-p/1467667).</span></span>
+
+<span data-ttu-id="ebb7d-202">Buscamos constantemente su opinión sobre las características que le parecen importantes.</span><span class="sxs-lookup"><span data-stu-id="ebb7d-202">We're actively looking at feedback from you about the features you find important.</span></span> <span data-ttu-id="ebb7d-203">No dude en enviarnos sus comentarios a través de [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/) y en [Foro de Insider de Microsoft Edge](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider).</span><span class="sxs-lookup"><span data-stu-id="ebb7d-203">Feel free to send us feedback through [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/) and on [Microsoft Edge Insider](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider) forum.</span></span>
+
+## <span data-ttu-id="ebb7d-204">Consulte también</span><span class="sxs-lookup"><span data-stu-id="ebb7d-204">See also</span></span>
+
+- [<span data-ttu-id="ebb7d-205">Página de aterrizaje de Microsoft Edge Enterprise</span><span class="sxs-lookup"><span data-stu-id="ebb7d-205">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
