@@ -3,19 +3,19 @@ title: Reversión de Microsoft Edge para empresas
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 07/21/2020
+ms.date: 09/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Cómo revertir Microsoft Edge a una versión anterior
-ms.openlocfilehash: 9af0881a079dd3059e567eaadb912b3d929924c4
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9f659b0bcdd82f54a814c8ad4157521061cdfa7c
+ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981127"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993710"
 ---
 # Cómo revertir Microsoft Edge a una versión anterior
 
@@ -79,12 +79,11 @@ Siga los pasos siguientes para habilitar la reversión con Microsoft Edge Update
 
    - Permitir siempre actualizaciones
    - Solo actualizaciones silenciosas automáticas
-   - Solo actualizaciones manuales  
 
-5. La reversión se producirá la próxima vez que Microsoft Edge Update compruebe si hay alguna actualización.
+     > [!NOTE]
+     > Para forzar una actualización de directiva de grupo, escriba `dsregcmd /status` en el símbolo del sistema de Administrador de Windows (ejecutar como administrador).
 
-   > [!NOTE]
-   > Si se desea que la reversión se realice inmediatamente, se debe cambiar el intervalo de sondeo de Microsoft Edge Update o habilitar la reversión mediante un MSI.
+5. Haz clic en **Aceptar** para guardar la configuración de directiva. La reversión se producirá la próxima vez que Microsoft Edge Update compruebe si hay alguna actualización. Si desea que la actualización se realice antes, puede cambiar el intervalo de sondeo de Microsoft Edge Update o habilitar la reversión mediante un MSI.
 
 ### Errores comunes de reversión
 
@@ -109,6 +108,12 @@ Se recomienda forzar un reinicio en los usuarios después de habilitar la revers
 
 - Habilite *Notificar al usuario que se recomienda o se requiere el reinicio del navegador para realizar las actualizaciones pendientes*. En opciones, seleccione **Necesario**.
 - Habilite *Establecer el período de tiempo de las notificaciones de actualización* y, a continuación, establezca el tiempo deseado en milisegundos.
+
+## Instantánea
+
+Una instantánea es una copia de la versión marcada de la carpeta de datos de usuario. Durante una actualización de versión, se crea una instantánea de la versión anterior y se almacena en la carpeta de instantáneas. Tras la reversión, se copia una instantánea de una versión coincidente en la nueva carpeta de datos de usuario y se elimina de la carpeta de instantáneas. Si no hay disponible una instantánea que coincida con la versión al cambiar a una versión anterior, la reversión confiará en la sincronización para rellenar los datos de usuario en la nueva versión de Microsoft Edge.
+
+La directiva de grupo [UserDataSnapshotRetentionLimit] permite establecer un límite para el número de instantáneas que se pueden conservar en un momento determinado. De forma predeterminada, se conservan tres instantáneas. Puede configurar esta directiva para mantener entre 0 y 5 instantáneas.
 
 ## Preguntas frecuentes
 
@@ -145,27 +150,15 @@ Algunos errores comunes que impiden la reversión son:
   - Invalidación de versión de destino se ha establecido en una versión de destino que no existe.
   - La entrada de Invalidación de versión de destino tiene un formato incorrecto.
 
-- Si se establece Invalidación de directiva de actualización en "Actualizaciones deshabilitadas", Microsoft Edge Update no aceptará ninguna actualización. Como resultado, no se ejecutará la reversión.
+- Si se establece la Invalidación de directiva de actualización en "Actualizaciones deshabilitadas", Microsoft Edge Update no aceptará ninguna actualización y no se ejecutará la reversión.
 
 ### Configuro todas las directivas de grupo correctamente, pero no se ha ejecutado la reversión. ¿Qué ha ocurrido?
 
-Microsoft Edge Update todavía no ha ejecutado una búsqueda de actualizaciones. De manera predeterminada, la actualización automática busca actualizaciones cada 10 horas. Para solucionar este problema, cambie el intervalo de sondeo de Microsoft Edge Update con la directiva de grupo Invalidar el período de buscar actualizaciones automáticas Para obtener más información, consulte la directiva [AutoUpdateCheckPeriodMinutes](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes).
+Microsoft Edge Update todavía no ha ejecutado una búsqueda de actualizaciones. De manera predeterminada, la actualización automática busca actualizaciones cada 10 horas. Para solucionar este problema, puede cambiar el intervalo de sondeo de Microsoft Edge Update con la directiva de grupo de invalidación del período de búsqueda actualizaciones automáticas Para obtener más información, consulte la directiva [AutoUpdateCheckPeriodMinutes](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes).
 
 ### Como administrador de TI, he seguido todos los pasos para revertir correctamente. Solo se revirtió una parte del grupo de usuarios. ¿Por qué todavía no se han revertido el resto de usuarios?
 
-La configuración de directiva de grupo todavía no se ha sincronizado con todos los clientes. Cuando los administradores configuran una directiva de grupo, los clientes no reciben esta configuración de forma instantánea.
-
-<!--
-You can update all users' group policy with the  
-
-When admins set all users don't get this setting instantaneously 
-
-GP Update force group policy – link to this 
-
--->
-
-
-
+La configuración de directiva de grupo todavía no se ha sincronizado con todos los clientes. Cuando los administradores configuran una directiva de grupo, los clientes no reciben esta configuración de forma instantánea. Puede [Forzar una actualización de directiva de grupo remota](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11)).
 
 
 ## Consulte también
