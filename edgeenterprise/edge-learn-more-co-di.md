@@ -3,19 +3,19 @@ title: ClickOnce y DirectInvoke en Microsoft Edge
 ms.author: kele
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 09/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprende sobre ClickOnce y DirectInvoke en Microsoft Edge.
-ms.openlocfilehash: 8290c34bd29ca72678e3fa68f74b689d0cf797e3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
+ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981145"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11012800"
 ---
 # Conocer las funciones de ClickOnce y DirectInvoke en Microsoft Edge
 
@@ -55,13 +55,12 @@ Los casos de uso de DirectInvoke dependen del propósito del sitio web que solic
 
 Compatibilidad con ClickOnce y DirectInvoke:
 
-- DirectInvoke está disponible de serie para todos los usuarios de Windows, pero ClickOnce está deshabilitado para todos los usuarios de Windows.
+- ClickOnce y DirectInvoke son compatibles de forma predeterminada para todos los usuarios de Windows.
 
   > [!NOTE]
-  > Los usuarios que necesitan la compatibilidad con ClickOnce pueden ir a edge://flags/#edge-click-once y seleccionar **Habilitar** en la lista desplegable. Posteriormente tendrás que **Reiniciar** el explorador.
+  > Los usuarios que quieran deshabilitar la compatibilidad con ClickOnce pueden ir a *edge://flags/#edge-click-once* y seleccionar **Deshabilitar** en la lista desplegable. Posteriormente tendrás que **Reiniciar** el explorador.
 
 - ClickOnce y DirectInvoke no son compatibles con ninguna otra plataforma que no sea Windows.
-- Dado que ClickOnce es una función orientada a empresas que usa un grupo específico de usuarios avanzados y no está destinada a uso general, ClickOnce está deshabilitado de manera predeterminada.
 
 ## Seguridad de administración de archivos de ClickOnce y DirectInvoke
 
