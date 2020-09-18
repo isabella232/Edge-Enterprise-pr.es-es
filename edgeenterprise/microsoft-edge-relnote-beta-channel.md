@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: 2bcd18cd18c9b5be1f4b3b39137aea09889bbc2f
-ms.sourcegitcommit: db44b524973df8ac811b09e6b71c25be9ba92bbc
+ms.openlocfilehash: 75ae113b7e4b39a76b70d9c0f85bc484f63e3c1a
+ms.sourcegitcommit: 468b75d86803ad1531d7bed8e6c1a562a00ebe50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015366"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "11026900"
 ---
 # Notas de la versión para el canal beta de Microsoft Edge
 
@@ -35,7 +35,6 @@ Se han corregido varios errores y problemas de rendimiento.
 * **Modo Internet Explorer:**
 
    * Permite que los usuarios usen la interfaz de usuario (UI) de Microsoft Edge para probar los sitios en el modo Internet Explorer. A partir de la versión 86 de Microsoft Edge, los administradores pueden habilitar la opción de interfaz de usuario para cargar una pestaña en el modo de Internet Explorer con propósitos de prueba o como medida provisional, hasta que los sitios se agreguen al XML de la lista de sitios.
-   * Permitir que los usuarios envíen comentarios sobre los sitios que requieran el modo Internet Explorer. Los usuarios pueden enviarle comentarios con la opción de interfaz de usuario de Microsoft Edge. Puede configurar esta opción de interfaz de usuario para que sea visible a través de la directiva de grupo y elegir cómo desea recibir esta información (por correo electrónico o con un formulario personalizado).
 
 * **Elimine las descargas en el disco con el administrador de descargas.** Ahora los usuarios pueden eliminar los archivos descargados en su disco sin salir del explorador. La nueva funcionalidad Eliminar descargas se encuentra en el menú emergente del estante de descargas o de la página de descargas.
 
