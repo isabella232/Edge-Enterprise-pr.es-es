@@ -3,23 +3,23 @@ title: Materiales para la adopción de clientes de Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/30/2020
+ms.date: 09/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Materiales para la adopción de clientes de Microsoft Edge
-ms.openlocfilehash: ce3db319fb813e069131700b8de97c51e510333a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 68b984faad3b36c0926ece070ca052e81e764e0e
+ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981211"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11072637"
 ---
 # Materiales para la adopción de clientes para Microsoft Edge
 
-Para facilitar la implementación y la adopción del nuevo Microsoft Edge, vea el material y los recursos recopilados siguientes.
+Para facilitar la implementación y la adopción del nuevo Microsoft Edge, consulte el material y los recursos recopilados que aparecen a continuación. Se proporciona un archivo zip recopilado para que lo descargue.
 
 Vuelva para ver el material adicional cuando esté disponible.
 
@@ -29,31 +29,40 @@ El kit de adopción del cliente contiene el material siguiente:
 
 - Guía de implementación de sistemas de información
 - Guía de introducción para el usuario
+- Correo electrónico de anuncio
+- Sugerencias y trucos para el correo electrónico
 - Señalización digital
 
-## Guía de implementación de sistemas de información
+[Descargar el kit de adopción de clientes](https://www.microsoft.com/download/details.aspx?id=102119)
+
+### Guía de implementación de sistemas de información
 
 Use esta guía para empezar a planear la implementación y descubrir cómo empezar con la implementación de Microsoft Edge en su entorno.
 
-[Obtener la guía de implementación de sistemas de información](media/customer-adoption-not-md/commercial-deployment-guide-microsoft-edge.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-deployment-guide-4.png" alt-text="Serie de vídeos de Microsoft Mechanics":::
 
-## Guía de introducción para el usuario
+### Guía de introducción para el usuario
 
 Use esta guía para instruir a los usuarios en el nuevo Microsoft Edge. La guía incluye información general sobre la interfaz de usuario, los menús y las características. También hemos incluido sugerencias para ayudar a los usuarios a empezar.
 
-[Obtener la guía de introducción para el usuario](media/customer-adoption-not-md/microsoft-edge-how-to-get-started-user-guide.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Guía de introducción para el usuario":::
 
-## Señalización digital
+### Plantillas de correo electrónico
 
-Use la siguiente señalización digital para informar a los usuarios sobre el nuevo Microsoft Edge.
+Use estas plantillas de correo electrónico para anunciar que el nuevo Microsoft Edge está disponible para los usuarios, y para ofrecer sugerencias y trucos sobre cómo sacarle el máximo provecho al explorador.
 
-[Microsoft Edge: Página de nueva pestaña empresarial](media/customer-adoption-not-md/microsoft-edge-digital-signage-enterprise-new-tab-page.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Plantilla de correo electrónico para sugerencias y trucos":::
 
-[Microsoft Edge: Múltiples perfiles y plataformas](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-multiple-profiles-and-cross-platform.pdf)
+### Señalización digital
 
-[Microsoft Edge: Búsqueda de Microsoft en Bing](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-microsoft-search-in-bing.pdf)
+Use la siguiente señalización digital para informar a los usuarios sobre el nuevo Microsoft Edge:
 
-[Microsoft Edge: Seguridad](media/customer-adoption-not-md/microsoft-edge-digital-signage-security.pdf)
+- Página de nueva pestaña de Enterprise
+- Múltiples perfiles y plataformas
+- Búsqueda de Microsoft en Bing
+- Seguridad
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Página de nueva pestaña":::
 
 ## Otros recursos de aprendizaje
 
