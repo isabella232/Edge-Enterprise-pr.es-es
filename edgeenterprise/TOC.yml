@@ -1,4 +1,4 @@
-# last revised 09/21/2020
+# last revised 09/29/2020
 - name: Documentación de Microsoft Edge Enterprise
   href: index.yml
 - name: Documentación de Microsoft Edge
@@ -89,7 +89,7 @@
       href: microsoft-edge-enterprise-state-roaming.md
     - name: Pantalla completa de Microsoft Edge
       href: microsoft-edge-kiosk-mode.md
-    - name: Configurar el modo de quiosco de Microsoft Edge
+    - name: Configurar la pantalla completa en Microsoft Edge
       href: microsoft-edge-configure-kiosk-mode.md
     - name: Sincronización de Microsoft Edge
       href: microsoft-edge-enterprise-sync.md
@@ -155,6 +155,8 @@
           href: edge-learnmore-mixed-content-downloads.md
         - name: Implementación progresiva para actualizaciones de canal estable
           href: microsoft-edge-update-progressive-rollout.md
+        - name: Aprovisionar favoritos para Microsoft Edge
+          href: edge-learnmore-provision-favorites.md
         - name: Sintaxis de Expresiones regulares 2 (re2.h)
           href: edge-learnmore-regex.md
         - name: Variables de directorio de datos del usuario
