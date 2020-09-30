@@ -3,19 +3,19 @@ title: Configurar la pantalla completa en Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/22/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar la pantalla completa en Microsoft Edge
-ms.openlocfilehash: d7c9df82079f8343d43ccfd312623e6e01358fa9
-ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
+ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
+ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11072728"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "11078670"
 ---
 # Configurar la pantalla completa en Microsoft Edge
 
@@ -77,7 +77,7 @@ Puedes invocar el modo de pantalla completa de Microsoft Edge con las siguientes
 
 ## Configurar el modo de pantalla completa con el acceso asignado
 
-Actualmente, la pantalla completa de Microsoft Edge con acceso asignado se puede probar con la última [versión preliminar de Windows 10 Insider](https://insider.windows.com/), versiones 20215 o superiores, y con el [Canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), versiones 87.0.644 o superiores.
+Actualmente, la pantalla completa de Microsoft Edge con acceso asignado se puede probar con la última [versión preliminar de Windows 10 Insider](https://insider.windows.com/), versiones 20215 o superiores, y con el [Canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), versiones 87.0.644.4 o superiores.
 
 **¿Cómo puedo obtener la vista previa de Windows Insider?**
 
@@ -88,7 +88,7 @@ Para instalar una versión preliminar de Windows 10 en un PC, sigue las instrucc
 La configuración de Windows es la manera más sencilla de configurar uno o dos dispositivos de quiosco de aplicación única. Usa los siguientes pasos para configurar un equipo de quiosco de una sola aplicación.
 
 1. Instala la última versión preliminar de Windows 10 Insider, versiones 20215 o superiores. Sigue las instrucciones que se indican en [Introducción a las versiones preliminares de Windows 10](https://docs.microsoft.com/windows-insider/get-started).
-2. Instala la última versión del [canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), 87.0.644 o superior.
+2. Instala la última versión del [canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), 87.0.644.4 o superior.
 
    > [!IMPORTANT]
    > Dado que es necesario instalar a nivel de dispositivo, solo se admite un canal que no sea Canary.
@@ -99,68 +99,39 @@ La configuración de Windows es la manera más sencilla de configurar uno o dos 
 
 4. En la página **Configurar un quiosco** , haz clic en  **Empezar**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Página de quiosco: introducción":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Configurar el quiosco con el acceso asignado":::
 
 5. Escribe un nombre para crear una nueva cuenta de quiosco o elije una cuenta existente de la lista rellenada y haz clic en  **Siguiente**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Modo de pantalla completa: crear cuenta":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Configurar el quiosco con el acceso asignado":::
 
 6. En la página **Elegir una aplicación de quiosco** , selecciona **Microsoft** Edge y haz clic en  **Siguiente**.
 
    > [!NOTE]
    > Esto solo se aplica a Microsoft Edge Dev, Beta y canales estables.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Modo de pantalla completa: elegir una aplicación":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Configurar el quiosco con el acceso asignado":::
 
 7. Elige una de las siguientes opciones para decidir cómo se muestra Microsoft Edge cuando se ejecuta en el modo de pantalla completa:
 
    - Señalización de indicación digital/interactiva: muestra un sitio específico en el modo de pantalla completa que ejecuta Microsoft Edge
    - Explorador público: ejecuta una versión multipestaña limitada de Microsoft Edge.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Pantalla completa: inicio de sesión digital en pantalla completa.":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Configurar el quiosco con el acceso asignado":::
 
 8. Selecciona  **Siguiente**.
 9. Escribe la dirección URL que quieres cargar cuando se inicie la pantalla completa.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Modo de pantalla completa: escribir URL":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Configurar el quiosco con el acceso asignado":::
 
 10. Acepta el valor predeterminado de 5 minutos para el tiempo de inactividad o proporciona un valor.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Modo de pantalla completa: introducir el tiempo de inactividad":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Configurar el quiosco con el acceso asignado":::
 
 11. Haz clic en  **Siguiente**.
 12. Cierra la ventana  **Configuración**  para guardar y aplicar las opciones.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Modo de pantalla completa: finalizar la configuración":::
-
-13. Cierra sesión en el dispositivo de quiosco e inicia sesión con la cuenta de quiosco local para validar la configuración.
-
-## Limitaciones funcionales
-
-Con el lanzamiento de esta vista previa de la modalidad de pantalla completa, continuamos trabajando para mejorar el producto y agregar nuevas características.
-
-El modo de pantalla completa no es compatible actualmente con las siguientes funciones (estamos trabajando para que lo sea en el futuro):
-
-- Colecciones
-- Extensions
-- Modo Internet Explorer
-- Protección de aplicaciones de Microsoft Defender (WDAG)
-
-## Guía básica
-
-### A finales de este año (2020)
-
-Agregaremos las siguientes características:
-
-- Botón Finalizar sesión
-- Barra de direcciones URL de solo lectura  
-  - Configurable con la directiva de grupo
-  - Cuando se habilite, los usuarios no podrán editar la dirección URL de la barra de direcciones para intentar ir a otra página.
-
-- Más funciones de bloqueo:
-
-  - Se bloquearán aceleradores adicionales (por ejemplo, CTRL + N)
-  - El menú "..."  de configuración solo habilitará las opciones necesarias (por ejemplo, Imprimir, Ayuda, Comentarios y Leer en voz alta).
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Configurar el quiosco con el acceso asignado"  de configuración solo habilitará las opciones necesarias (por ejemplo, Imprimir, Ayuda, Comentarios y Leer en voz alta).
   - Bloqueo adicional de páginas *edge://* (por ejemplo, *edge://settings*)
   - Configurar la interfaz de usuario de opciones de impresión
   - Limitar el explorador de archivos a la carpeta de descargas.
@@ -176,6 +147,6 @@ Agregaremos las siguientes características y soporte:
 ## Consulte también
 
 - [Configurar quioscos multimedia y señales digitales en las ediciones de escritorio de Windows](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [Implementar la pantalla completa de Microsoft Edge (versión heredada)](https://aka.ms/edgekioskmode) 
+- [Implementar la pantalla completa de Microsoft Edge (versión heredada)](https://aka.ms/edgekioskmode)
 - [Planear tu implementación de Microsoft Edge](deploy-edge-plan-deployment.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
