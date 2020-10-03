@@ -3,19 +3,19 @@ title: Sincronización de Microsoft Edge Enterprise
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/15/2020
+ms.date: 09/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sincronización de Microsoft Edge Enterprise
-ms.openlocfilehash: d9cd643142d0f6744664a5071c5000b820583e41
-ms.sourcegitcommit: 06c365faeea6070f103fe867cc2da13539ae4680
+ms.openlocfilehash: d5868fb496c036d750925bb5ae6dfa3de0293fd2
+ms.sourcegitcommit: 8a4479a1b034c3c13ea03ee3a2374a1af332cb38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "11016349"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "11091952"
 ---
 # Sincronización de Microsoft Edge Enterprise
 
@@ -33,8 +33,6 @@ La sincronización de Microsoft Edge permite a los usuarios acceder a sus datos 
 - Direcciones y más (relleno de formularios)
 - Colecciones
 - Configuración
-- Historial de exploración
-- Abrir pestañas
 
 La funcionalidad de sincronización está habilitada a través del consentimiento del usuario y los usuarios pueden activar o desactivar la sincronización para cada uno de los tipos de datos enumerados anteriormente.
 
@@ -80,7 +78,7 @@ Las siguientes directivas de grupo afectan a la sincronización de Microsoft Edg
 
 #### ¿Se cifran los datos sincronizados? 
 
-Los datos se cifran en el transporte con TLS 1.2 o superior. La mayoría de los tipos de datos se cifran también al almacenarlos en el servicio de Microsoft con AES256, excepto los tipos de datos de historial de explorador y pestañas abiertas. Para impedir que estos tipos de datos se sincronicen, puedes aplicar la directiva [ SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled).
+Los datos se cifran en el transporte con TLS 1.2 o superior. La mayoría de los tipos de datos se cifran también al almacenarlos en el servicio de Microsoft con AES256. 
 
 #### ¿Dónde se almacenan los datos de sincronización de Microsoft Edge?
 
