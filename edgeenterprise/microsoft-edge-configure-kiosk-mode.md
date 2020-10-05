@@ -131,7 +131,7 @@ La configuración de Windows es la manera más sencilla de configurar uno o dos 
 11. Haz clic en  **Siguiente**.
 12. Cierra la ventana  **Configuración**  para guardar y aplicar las opciones.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Configurar el quiosco con el acceso asignado"  de configuración solo habilitará las opciones necesarias (por ejemplo, Imprimir, Ayuda, Comentarios y Leer en voz alta).
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Configurar el quiosco con el acceso asignado de configuración solo habilitará las opciones necesarias (por ejemplo, Imprimir, Ayuda, Comentarios y Leer en voz alta).":::
   - Bloqueo adicional de páginas *edge://* (por ejemplo, *edge://settings*)
   - Configurar la interfaz de usuario de opciones de impresión
   - Limitar el explorador de archivos a la carpeta de descargas.
