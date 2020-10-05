@@ -3,19 +3,19 @@ title: Microsoft Edge y Protección de aplicaciones de Microsoft Defender
 ms.author: srugh
 author: dan-wesley
 manager: seanlyn
-ms.date: 06/19/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Compatibilidad de Microsoft Edge para la Protección de aplicaciones de Microsoft Defender
-ms.openlocfilehash: 7bd2efd35e0cd65c524a17a88f659e9b3838233f
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 7052c8cee9282c0ca2f5cafaa608e7e4e71d111d
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981228"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094764"
 ---
 # Compatibilidad de Microsoft Edge para la Protección de aplicaciones de Microsoft Defender
 
@@ -121,5 +121,4 @@ Sí. [Preguntas más frecuentes: Protección de aplicaciones de Microsoft Defend
 ## Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Visión general de la seguridad](security-overview.md)
 - [Protección contra amenazas avanzada de Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
