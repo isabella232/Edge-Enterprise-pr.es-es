@@ -3,19 +3,19 @@ title: Seguridad de Microsoft Edge para su empresa
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 09/30/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Seguridad de Microsoft Edge para su empresa
-ms.openlocfilehash: 313d1837d85fe23ab910741e28f95b77ffd7029d
-ms.sourcegitcommit: fbfe796b2717573dc221b9d4509a1662d9bbb452
+ms.openlocfilehash: 018353c4f85bc380d85554d058d029dfde959257
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "11091689"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094744"
 ---
 # Seguridad de Microsoft Edge para su empresa
 
@@ -46,7 +46,7 @@ Para Chrome, se encuentra disponible una extensión para poder emplear el aislam
 
 Además de proteger contra amenazas externas, los administradores de TI también deben proteger frente a riesgos internos. La protección —sólida y a escala— de datos corporativos confidenciales es una de las máximas prioridades de los administradores de TI, sobre todo teniendo en cuenta que el personal se ha descentralizado. Microsoft Edge es el único explorador con compatibilidad nativa para el Acceso condicional de Azure AD, para Windows Information Protection y para la nueva prevención de pérdida de datos (DLP) de Microsoft Endpoint sin necesidad de software adicional.
 
-**Microsoft Edge es el único explorador que admite de forma nativa el Acceso condicional**. La [compatibilidad de Microsoft Edge con el acceso condicional](https://docs.microsoft.com/DeployEdge/security-overview#conditional-access) facilita a las organizaciones el uso de señales de identidad como parte de sus decisiones relacionadas con el control de acceso. El [Acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) es la herramienta que utiliza Azure Active Directory para reunir señales, tomar decisiones y aplicar directivas de la organización. El Acceso condicional constituye la base del nuevo plano de control controlado por identidad. Para obtener compatibilidad con el Acceso condicional en Google Chrome, se requiere un complemento adicional.
+**Microsoft Edge es el único explorador que admite de forma nativa el Acceso condicional**. La [compatibilidad de Microsoft Edge con el acceso condicional](ms-edge-security-conditional-access.md) facilita a las organizaciones el uso de señales de identidad como parte de sus decisiones relacionadas con el control de acceso. El [Acceso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) es la herramienta que utiliza Azure Active Directory para reunir señales, tomar decisiones y aplicar directivas de la organización. El Acceso condicional constituye la base del nuevo plano de control controlado por identidad. Para obtener compatibilidad con el Acceso condicional en Google Chrome, se requiere un complemento adicional.
 
 > [!NOTE]
 > Para el Acceso condicional de Azure AD, se requiere una suscripción a Microsoft 365 E3 o superior.
@@ -56,7 +56,7 @@ Además de proteger contra amenazas externas, los administradores de TI también
 > [!NOTE]
 > La configuración de Windows Information Protection (WIP) requiere la licencia de Microsoft Intune o del Administrador de configuración de Microsoft Endpoint, o bien el uso de una solución de administración de dispositivos móviles (MDM) de terceros, que puede tener requisitos de licencia adicionales.
 
-**DLP de Microsoft Endpoint será compatible de forma nativa solo en Microsoft Edge cuando esté disponible de manera general en octubre**. La prevención de pérdida de datos (DLP) de Microsoft Endpoint se integra en el Microsoft Security Center y amplía la protección de la información a Microsoft Edge para alertar a los usuarios sobre la actividad no conforme y evitar la pérdida de datos mientras los usuarios trabajan en línea. Detecta y etiqueta los datos confidenciales dentro de la empresa que coinciden con los criterios definidos por el administrador, como archivos que contienen números de tarjeta de crédito o Id. gubernamental (por ejemplo, números de la seguridad social), información financiera, etc. Las directivas de Microsoft Information Protection se pueden implementar en DLP de Microsoft Endpoint sin que sea necesaria una reconfiguración adicional, incluidos los identificadores de contenido confidenciales y las directivas que los administradores de TI ya hayan personalizado. Así, los administradores de TI pueden realizar una implementación fluida de la protección de la información.
+**DLP de Microsoft Endpoint será compatible de forma nativa solo en Microsoft Edge cuando esté disponible de manera general en octubre**. La prevención de pérdida de datos (DLP) de Microsoft Endpoint se integra en el Microsoft Security Center y amplía la protección de la información a Microsoft Edge para alertar a los usuarios sobre la actividad no conforme y evitar la pérdida de datos mientras los usuarios trabajan en línea. Detecta y etiqueta los datos confidenciales dentro de la empresa que coincidan con los criterios definidos por el administrador, como archivos que contengan números de tarjeta de crédito o Id. gubernamental (por ejemplo, números de la seguridad social), información financiera, etc. Las directivas de Microsoft Information Protection se pueden implementar en DLP de Microsoft Endpoint sin que sea necesaria una reconfiguración adicional, incluidos los identificadores de contenido confidencial y las directivas que los administradores de TI ya hayan personalizado. Así, los administradores de TI pueden realizar una implementación fluida de la protección de la información.
 
 > [!NOTE]
 > Se requiere una suscripción a Microsoft 365 E5 o a Cumplimiento de Microsoft 365 E5 para la prevención de pérdida de datos de Microsoft Endpoint.
