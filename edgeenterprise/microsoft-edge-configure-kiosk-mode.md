@@ -3,19 +3,19 @@ title: Configurar la pantalla completa en Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/24/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar la pantalla completa en Microsoft Edge
-ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
-ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
+ms.openlocfilehash: 799b3dd4b7fc96f0b8e5cb718bca98fd4f38ec15
+ms.sourcegitcommit: 78905f66f4a6590a57c8f2bf808af92106b62996
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078670"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "11094867"
 ---
 # Configurar la pantalla completa en Microsoft Edge
 
@@ -23,8 +23,6 @@ En este artículo se describe cómo configurar las opciones de pantalla completa
 
 > [!NOTE]
 > Este artículo es aplicable para Microsoft Edge, versión 87 o posterior.
-
-Para obtener información sobre la pantalla completa de Microsoft Edge (versión heredada) (versión 45 y anteriores), consulta [Implementar pantalla completa de Microsoft Edge](https://aka.ms/edgekioskmode).
 
 ## Introducción
 
@@ -35,7 +33,7 @@ El modo de pantalla completa de Microsoft Edge ofrece dos experiencias de bloque
 
 En ambas experiencias se ejecuta una sesión de Microsoft Edge InPrivate, que protege los datos de usuario.
 
-## Configurar la pantalla completa de Microsoft Edge  
+## Configurar la pantalla completa de Microsoft Edge
 
 Ya está disponible un conjunto inicial de características de modo de pantalla completa para probar el Canal Microsoft Edge Canary, versión 87. Puedes descargar Microsoft Edge Canary en la página [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/download).
 
@@ -43,10 +41,10 @@ Ya está disponible un conjunto inicial de características de modo de pantalla 
 
 Las siguientes características están disponibles:
 
-- Exploración InPrivate. Protege los datos del usuario eliminando los datos y descargas del explorador cuando termina la sesión.
-- Directiva para configurar la eliminación de descargas al dejar la sesión.
-- Restablecer la sesión del usuario después de un período de inactividad determinado.
-- Conjunto inicial de funciones de bloqueo. Están disponibles las funciones siguientes:
+- La navegación de InPrivate protege los datos del usuario eliminando los datos y descargas del explorador cuando termina la sesión.
+- Una directiva para configurar la eliminación de descargas al dejar la sesión.
+- La opción de restablecer una sesión de usuario después de un determinado período de inactividad.
+- Un conjunto inicial de funciones de bloqueo. Están disponibles las funciones siguientes:
 
   - Menú contextual del mouse
   - Herramientas de desarrollo con la tecla F12
@@ -56,14 +54,14 @@ Las siguientes características están disponibles:
 > [!NOTE]
 > A medida que el modo de pantalla completa evolucione, habrá más características disponibles.
 
-### Uso del modo de pantalla completa
+## Uso del modo de pantalla completa
 
 Puedes invocar el modo de pantalla completa de Microsoft Edge con las siguientes opciones de línea de comandos de Windows 10:
 
 - Indicación digital/interactiva de pantalla completa: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
 - Exploración pública de pantalla completa: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
 
-#### Opciones de la línea de comandos adicionales
+### Opciones de la línea de comandos adicionales
 
 - `--no-first-run` : deshabilita la primera experiencia de ejecución de Microsoft Edge.
 - `--kiosk-idle-timeout-minutes` : cambia el tiempo en minutos de la última actividad de usuario antes de que el modo de pantalla completa de Microsoft Edge restablezca la sesión del usuario. Se admiten los valores siguientes:
@@ -75,13 +73,23 @@ Puedes invocar el modo de pantalla completa de Microsoft Edge con las siguientes
     - 0: desactiva el temporizador
     - 1-1440: número de minutos para restablecer el temporizador de inactividad
 
-## Configurar el modo de pantalla completa con el acceso asignado
+## Microsoft Edge con acceso asignado
 
-Actualmente, la pantalla completa de Microsoft Edge con acceso asignado se puede probar con la última [versión preliminar de Windows 10 Insider](https://insider.windows.com/), versiones 20215 o superiores, y con el [Canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), versiones 87.0.644.4 o superiores.
+### Quiosco multimedia de aplicación única
+
+En la actualidad, Microsoft Edge es compatible con un subconjunto de los mismos tipos de pantalla completa que Microsoft Edge (versión anterior) para el acceso asignado a una sola aplicación con las siguientes experiencias de bloqueo, señalización digital e interactiva y navegación pública.  
+
+Actualmente, la pantalla completa de Microsoft Edge con acceso asignado está disponible para probar con la última  [versión preliminar de Windows 10 Insider](https://insider.windows.com/), versión 20215 o superiores, y con el  [Canal Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), versión 87.0.644.4 o superiores.
 
 **¿Cómo puedo obtener la vista previa de Windows Insider?**
 
-Para instalar una versión preliminar de Windows 10 en un PC, sigue las instrucciones que se indican en [Introducción a las versiones preliminares de Windows 10](https://docs.microsoft.com/windows-insider/get-started).
+Para instalar una versión preliminar de Windows 10 Insider en un PC, sigue las instrucciones que se indican en  [Introducción a las versiones preliminares de Windows 10 Insider](https://docs.microsoft.com/windows-insider/get-started).
+
+### Pantalla completa de varias aplicaciones
+
+Microsoft Edge se puede ejecutar con [acceso asignado a varias aplicaciones](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) en Windows 10, que es el equivalente del tipo de pantalla completa de "Exploración normal" de Microsoft Edge (versión anterior). Para configurar Microsoft Edge con acceso asignado a varias aplicaciones, sigue las instrucciones acerca de cómo [Configurar un quiosco multimedia de varias aplicaciones](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (El AUMID para el canal estable de Microsoft Edge es **MSEdge**).
+
+Al configurar la pantalla completa de Microsoft Edge cuando usas Microsoft Edge con acceso asignado de varias aplicaciones, puedes usar las [directivas del explorador Microsoft Edge](https://review.docs.microsoft.com/en-us/DeployEdge/microsoft-edge-policies) para configurar la experiencia de exploración de manera que cumpla con tus requisitos únicos.
 
 ### Usar la configuración de Windows
 
@@ -131,7 +139,7 @@ La configuración de Windows es la manera más sencilla de configurar uno o dos 
 11. Haz clic en  **Siguiente**.
 12. Cierra la ventana  **Configuración**  para guardar y aplicar las opciones.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Configurar el quiosco con el acceso asignado de configuración solo habilitará las opciones necesarias (por ejemplo, Imprimir, Ayuda, Comentarios y Leer en voz alta).":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Configurar el quiosco con el acceso asignado"  de configuración solo habilitará las opciones necesarias (por ejemplo, Imprimir, Ayuda, Comentarios y Leer en voz alta).
   - Bloqueo adicional de páginas *edge://* (por ejemplo, *edge://settings*)
   - Configurar la interfaz de usuario de opciones de impresión
   - Limitar el explorador de archivos a la carpeta de descargas.
