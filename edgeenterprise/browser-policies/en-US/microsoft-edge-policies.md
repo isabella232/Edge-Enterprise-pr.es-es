@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/24/2020
+ms.date: 09/28/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 146043b518f02b8581498c273db4327682993609
-ms.sourcegitcommit: d4f2b62b41f0e40ec6b22aeca436b2c261658bd8
+ms.openlocfilehash: dc780166f05afd7d667f901a1198ce125831d01b
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078339"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094615"
 ---
 # Microsoft Edge: directivas
 La versión más reciente de Microsoft Edge incluye las siguientes directivas. Puede usar estas directivas para configurar cómo se ejecuta Microsoft Edge en su organización.
@@ -36,10 +36,11 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[Configuración de Protección de aplicaciones](#application-guard-settings)|[Transmitir](#cast)|
 |[Configuración del Contenido](#content-settings)|[Proveedor de búsquedas predeterminado](#default-search-provider)|
 |[Extensions](#extensions)|[Autenticación HTTP](#http-authentication)|
-|[Mensajería nativa](#native-messaging)|[Administrador de contraseñas y protección](#password-manager-and-protection)|
-|[Impresión](#printing)|[Servidor proxy](#proxy-server)|
-|[Configuración de SmartScreen](#smartscreen-settings)|[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|
-|[Adicional](#additional)|
+|[Configuración de pantalla completa](#kiosk-mode-settings)|[Mensajería nativa](#native-messaging)|
+|[Administrador de contraseñas y protección](#password-manager-and-protection)|[Impresión](#printing)|
+|[Servidor proxy](#proxy-server)|[Configuración de SmartScreen](#smartscreen-settings)|
+|[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|[Adicional](#additional)|
+
 
 ### [*Configuración de Protección de aplicaciones*](#application-guard-settings-policies)
 |Nombre de directiva|Título|
@@ -117,13 +118,17 @@ y sugerencias para los servicios Microsoft|
 ### [*Autenticación HTTP*](#http-authentication-policies)
 |Nombre de directiva|Título|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Permitir solicitudes HTTP básicas entre orígenes|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Especifica una lista de servidores en los que Microsoft Edge puede delegar credenciales de usuario|
 |[AuthSchemes](#authschemes)|Esquemas de autenticación compatibles|
 |[AuthServerAllowlist](#authserverallowlist)|Configurar la lista de servidores de autenticación permitidos|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Deshabilitar la búsqueda CNAME al negociar la autenticación Kerberos|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Incluir un puerto no estándar en Kerberos SPN|
 |[NtlmV2Enabled](#ntlmv2enabled)|Controlar si la autenticación NTLMv2 está habilitada|
+### [*Configuración de pantalla completa*](#kiosk-mode-settings-policies)
+|Nombre de directiva|Título|
+|-|-|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Eliminar archivos descargados como parte de la sesión de pantalla completa cuando se cierra Microsoft Edge|
 ### [*Mensajería nativa*](#native-messaging-policies)
 |Nombre de directiva|Título|
 |-|-|
@@ -559,11 +564,21 @@ Si también ha configurado la directiva [EnableMediaRouter](#enablemediarouter) 
   - En Windows y MacOS desde 77 o posterior
 
   #### Descripción
-  Especifique una lista de sitios, basada en los patrones de dirección URL, para los cuales Microsoft Edge debería seleccionar automáticamente un certificado de cliente, si el sitio lo solicita.
+  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
 
-El valor debe ser una matriz de diccionarios JSON encadenados. Cada diccionario debe tener la forma { "pattern": "$URL_PATTERN", "filter" : $FILTER }, donde $URL_PATTERN es un patrón de configuración de contenido. $FILTER restringe los certificados de cliente que el navegador seleccionará automáticamente. Independientemente del filtro, solamente se seleccionarán los certificados que coincidan con la solicitud de certificado del servidor. Por ejemplo, si $FILTER tiene el formulario {"ISSUER": { "CN": "$ISSUER_CN" } }, además se seleccionan solo los certificados de cliente que son emitidos por un certificado con el nombre común $ISSUER_CN. Si $FILTER contiene una sección de "EMISOR" y otra de "ASUNTO", un certificado de cliente debe satisfacer ambas condiciones para ser seleccionado. Si $FILTER especifica una organización ("O"), un certificado debe tener al menos una organización que coincida con el valor especificado para ser seleccionado. Si $FILTER especifica una unidad de organización ("OU"), un certificado debe tener al menos una unidad de organización que coincida con el valor especificado para ser seleccionado. Si $FILTER es el diccionario vacío {}, la selección de certificados de clientes no está restringida adicionalmente.
+Examples for the usage of the $FILTER section:
 
-Si no configuras esta directiva, la autoselección no se hace para ningún sitio.
+* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+
+* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+
+* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+
+* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+
+* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+
+If you leave the policy unset, there's no autoselection for any site.
 
   #### Características admitidas:
   - Puede ser obligatorio: sí
@@ -2039,9 +2054,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - En Windows y MacOS desde 80 o posterior
 
   #### Descripción
-  Permite revertir todas las cookies al comportamiento de SameSite heredado. Revertir al comportamiento heredado hace que las cookies que no especifican un atributo SameSite sean tratadas como si fueran "SameSite=None", y elimina el requisito de que las cookies "SameSite=None" lleven el atributo "Secure".
+  Permite revertir todas las cookies al comportamiento de SameSite heredado. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
 
-Si no establece esta directiva, el comportamiento predeterminado de las cookies que no especifiquen un atributo SameSite dependerá de otras fuentes de configuración de la función SameSite de forma predeterminada. Esta característica puede establecerse mediante una prueba de campo o activando el marcador de las cookies de SameSite de forma predeterminada en edge://flags.
+If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 Asignación de opciones de directiva:
 
@@ -2097,7 +2112,7 @@ Use la información anterior al configurar esta directiva.
   #### Descripción
   Las cookies establecidas para los dominios que coincidan con los patrones determinados revertirán al comportamiento heredado de SameSite.
 
-Revertir al comportamiento heredado hace que las cookies que no especifican un atributo SameSite sean tratadas como si fueran "SameSite=None", y elimina el requisito de que las cookies "SameSite=None" lleven el atributo "Secure".
+Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
 
 Si no establece esta directiva, se usará el valor predeterminado global. El valor predeterminado global también se utilizará para las cookies de los dominios no cubiertos por los patrones especificados.
 
@@ -3801,16 +3816,16 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   [Volver al principio](#microsoft-edge---policies)
 
   ### AllowCrossOriginAuthPrompt
-  #### Permitir solicitudes HTTP básicas entre orígenes
+  #### Allow cross-origin HTTP Authentication prompts
   
   
   #### Versiones compatibles:
   - En Windows y MacOS desde 77 o posterior
 
   #### Descripción
-  Controla si el subcontenido de terceros en una página puede abrir un cuadro de diálogo de autenticación básica HTTP.
+  Controls whether third-party images on a page can show an authentication prompt.
 
-Generalmente, esto está deshabilitado como defensa contra la suplantación de identidad (phishing). Si no configura esta directiva, se deshabilitará y el subcontenido de terceros no podrá abrir un cuadro de diálogo de autenticación básica HTTP.
+Generalmente, esto está deshabilitado como defensa contra la suplantación de identidad (phishing). If you don't configure this policy, it's disabled and third-party images can't show an authentication prompt.
 
   #### Características admitidas:
   - Puede ser obligatorio: sí
@@ -3823,7 +3838,7 @@ Generalmente, esto está deshabilitado como defensa contra la suplantación de i
   #### Información y configuración de Windows
   ##### Información de directiva de grupo (ADMX)
   - Nombre único de GP: AllowCrossOriginAuthPrompt
-  - Nombre de GP: permitir solicitudes HTTP básicas entre orígenes
+  - Nombre de GP: Permitir solicitudes de autenticación HTTP de origen cruzado
   - Ruta de acceso GP (obligatoria): Plantillas administrativas/Microsoft Edge/autenticación HTTP
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -4128,6 +4143,56 @@ Si no configura esta directiva, NTLMv2 se habilitará de forma predeterminada.
 ``` xml
 <true/>
 ```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ## Directivas de configuración de pantalla completa
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### KioskDeleteDownloadsOnExit
+  #### Eliminar archivos descargados como parte de la sesión de pantalla completa cuando se cierra Microsoft Edge
+  
+  
+  #### Versiones compatibles:
+  - En Windows desde la versión 87 o posterior
+
+  #### Descripción
+  Nota: esta directiva solo se admite cuando Microsoft Edge se inicia con el parámetro de línea de comandos "--edge-kiosk-type".
+
+Si habilitas esta directiva, los archivos descargados como parte de la sesión de pantalla completa se eliminan cada vez que se cierra Microsoft Edge.
+
+Si deshabilitas esta directiva o no la configuras, los archivos descargados como parte de la sesión de pantalla completa no se eliminan cuando se cierra Microsoft Edge.
+
+Para obtener información detallada sobre cómo configurar la pantalla completa, consulta [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+
+  #### Características admitidas:
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+  - Booleano
+
+  #### Información y configuración de Windows
+  ##### Información de directiva de grupo (ADMX)
+  - Nombre único de GP: KioskDeleteDownloadsOnExit
+  - Nombre de GP: Eliminar archivos descargados como parte de la sesión de pantalla completa cuando se cierra Microsoft Edge
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Configuración de pantalla completa
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+  ##### Configuración del Registro de Windows
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/D
+  - Nombre del valor: KioskDeleteDownloadsOnExit
+  - Tipo de valor: REG_DWORD
+  ##### Valor de ejemplo:
+```
+0x00000001
+```
+
+
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -9170,8 +9235,7 @@ Use la información anterior al configurar esta directiva.
   - En Windows y MacOS desde 86 o posterior
 
   #### Descripción
-  
-Establecer si los sitios web pueden acceder a los puertos serie. Puede bloquear completamente el acceso o preguntar al usuario cada vez que un sitio web quiera acceder a un puerto serie.
+  Establecer si los sitios web pueden acceder a los puertos serie. Puede bloquear completamente el acceso o preguntar al usuario cada vez que un sitio web quiera acceder a un puerto serie.
 
 Establecer la directiva en 3 permite a los sitios web solicitar acceso a los puertos serie. Establecer la directiva en 2 impide a los sitios web tener acceso a puertos serie.
 
@@ -10892,7 +10956,7 @@ Si deshabilita esta directiva o no la configura, no se aplicará la búsqueda se
   - En Windows y MacOS desde la versión 81 o posterior
 
   #### Descripción
-  Esta directiva está en desuso porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web cuando se ha comprobado que es incompatible con la directiva de referencia predeterminada actual. No funciona en la versión 86 de Microsoft Edge.
+  Esta directiva está en desuso porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web cuando se ha comprobado que es incompatible con la directiva de referencia predeterminada actual. No funciona en la versión 88 de Microsoft Edge.
 
 La directiva de referencia predeterminada de Microsoft Edge se está reforzando a partir de su valor actual de no-referrer-when-downgrade, con strict-origin-when-cross-origin (más seguro), a través de una implementación gradual.
 
@@ -10992,7 +11056,7 @@ Esta directiva está deshabilitada forma predeterminada Al habilitarla, los usua
 
 Si no configura esta directiva, los usuarios podrán activar o desactivar la sincronización. Si habilita esta directiva, los usuarios no podrán desactivar la sincronización.
 
-Para que esta directiva funcione correctamente, la directiva [BrowserSignin](#browsersignin) no debe estar configurada, o bien debe establecerse como habilitada. Si [ForceSync](#forcesync) está establecido como deshabilitado, [BrowserSignin](#browsersignin) no tendrá efecto.
+Para que esta directiva funcione correctamente, la directiva [BrowserSignin](#browsersignin) no debe estar configurada, o bien debe establecerse como habilitada. Si [BrowserSignin](#browsersignin) está establecido como deshabilitado, [ForceSync](#forcesync) no tendrá efecto.
 
 [SyncDisabled](#syncdisabled) no debe estar configurado o debe establecerse como "Falso". Si se establece como "Verdadero", [ForceSync](#forcesync) no tendrá efecto.
 
@@ -11365,7 +11429,7 @@ En las opciones de configuración que se muestran en la primera vista de Windows
 
 -El usuario seguirá iniciando sesión automáticamente en Microsoft Edge si la cuenta de Windows es del tipo Azure AD o MSA.
 
--La sincronización no estará habilitada de forma predeterminada y los usuarios podrán activarla en la configuración de sincronización.
+-La sincronización no se habilitará de forma predeterminada y se pedirá a los usuarios que elijan si quieren sincronizar al iniciar el explorador. Para configurar la sincronización y la solicitud de consentimiento de sincronización, puede usar la directiva [ForceSync](#forcesync) o [SyncDisabled](#syncdisabled).
 
 Si deshabilita o no configura esta directiva, se mostrará la primera vista de Windows y la pantalla de presentación.
 
@@ -11376,6 +11440,8 @@ Nota: Las opciones específicas de configuración que se muestran al usuario en 
 -[NewTabPageLocation](#newtabpagelocation)
 
 -[NewTabPageSetFeedType](#newtabpagesetfeedtype)
+
+-[ForceSync](#forcesync)
 
 -[SyncDisabled](#syncdisabled)
 
@@ -12474,13 +12540,13 @@ Use la información anterior al configurar esta directiva.
   #### Descripción
   Esta directiva es un sustituto de la directiva de marca de pruebas del modo IE. Permite a los usuarios abrir una pestaña en modo IE desde la opción del menú de la interfaz de usuario.
 
-       Esta configuración funciona conjuntamente con: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) establecida en "IEMode" y la directiva [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist), donde la lista tiene al menos una entrada.
+Esta configuración funciona conjuntamente con: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) establecida en "IEMode" y la directiva [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) donde la lista tiene al menos una entrada.
 
-       Si habilita esta directiva, los usuarios podrán abrir la pestaña en modo IE desde la opción de la interfaz de usuario y desplazarse por el sitio actual hasta un sitio en modo IE.
+Si habilita esta directiva, los usuarios podrán abrir la pestaña en modo IE desde la opción de la interfaz de usuario y desplazarse por el sitio actual hasta un sitio en modo IE.
 
-       Si deshabilita esta directiva, los usuarios no podrán ver la opción de la interfaz de usuario directamente en el menú.
+Si deshabilita esta directiva, los usuarios no podrán ver la opción de la interfaz de usuario directamente en el menú.
 
-       Si no configura esta directiva, podrá configurar la marca de pruebas del modo IE de forma manual.
+Si no configura esta directiva, podrá configurar la marca de pruebas del modo IE de forma manual.
 
   #### Características admitidas:
   - Puede ser obligatorio: sí
@@ -12521,9 +12587,13 @@ Use la información anterior al configurar esta directiva.
 
   #### Descripción
   Especifica los orígenes para que se ejecuten de forma aislada, en su propio proceso.
+
 Esta directiva también aísla los orígenes nombrados por los subdominios, por ejemplo, al especificar https://contoso.com/ que se https://foo.contoso.com/ aislarán como parte del https://contoso.com/ sitio.
+
 Si se habilita esta directiva, cada uno de los orígenes nombrados en una lista separada por comas se ejecutará en su propio proceso.
+
 Si deshabilita esta directiva, las funciones "IsolateOrigins" y "SitePerProcess" también se deshabilitarán. Los usuarios aún podrán habilitar la directiva ''IsolateOrigins'' manualmente, a través de los indicadores de la línea de comandos.
+
 Si no configura esta directiva, el usuario podrá cambiar esta configuración manualmente.
 
   #### Características admitidas:
@@ -14149,9 +14219,9 @@ Si deshabilita esta directiva, se bloqueará a los usuarios para que no puedan h
   - En Windows y MacOS desde 77 o posterior
 
   #### Descripción
-  Establece la versión mínima admitida de SSL. Si no configura esta directiva, Microsoft Edge usará una versión mínima predeterminada, TLS 1.0.
+  Sets the minimum supported version of TLS. Si no configura esta directiva, Microsoft Edge usará una versión mínima predeterminada, TLS 1.0.
 
-Si habilita esta directiva, puede establecer la versión mínima en uno de los siguientes valores: "TLSv1", "TLSv1.1" o "TLSv1.2". Cuando se establezca, Microsoft Edge no usará ninguna versión de SSL/TLS inferior a la versión especificada. Los valores no reconocidos serán ignorados.
+If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Los valores no reconocidos serán ignorados.
 
 Asignación de opciones de directiva:
 
@@ -14950,9 +15020,10 @@ Si esta directiva está deshabilitada, los intercambios firmados por HTTP no pod
   - En Windows y MacOS desde 77 o posterior
 
   #### Descripción
-  
-La directiva "SitePerProcess" puede ser usada para evitar que los usuarios opten por el comportamiento predeterminado de aislar todos los sitios. Tenga en cuenta que también puede usar la directiva [IsolateOrigins](#isolateorigins) para aislar orígenes adicionales más precisos.
+  La directiva "SitePerProcess" puede ser usada para evitar que los usuarios opten por el comportamiento predeterminado de aislar todos los sitios. Tenga en cuenta que también puede usar la directiva [IsolateOrigins](#isolateorigins) para aislar orígenes adicionales más precisos.
+
 Si habilita esta directiva, los usuarios no podrán optar por el comportamiento predeterminado donde cada sitio se ejecuta en su propio proceso.
+
 Si deshabilita o no configura esta directiva, el usuario podrá optar por no recibir el aislamiento del sitio.  (Por ejemplo, con la entrada "deshabilitar aislamiento de sitio" en edge://flags.)  Si deshabilita o no configura la directiva, no se desactivará el aislamiento de sitio.
 
 
@@ -16229,16 +16300,9 @@ Independientemente de si esta directiva está habilitada, los usuarios no podrá
   - En Windows y MacOS desde 80 o posterior
 
   #### Descripción
-  Se especifica una lista de sitios Web que se instalan de forma silenciosa, sin la interacción del usuario, por lo que no pueden ser desinstalados o deshabilitos por el usuario.
+  Configure esta directiva para especificar una lista de aplicaciones web que se instalan de forma silenciosa, sin interacción del usuario, y qué usuarios no pueden desinstalar o desactivar.
 
-Cada elemento en la lista de la directiva es un objeto con los siguientes miembros:
-  - La "dirección URL", que es obligatoria. La "dirección URL" debe ser de la aplicación Web que será instalada.
-
-Los valores para los miembros opcionales son:
-  - "launch_container" debe ser una "ventana" o "pestaña" que indique cómo abrir la aplicación web una vez que se haya instalado.
-  - "create_desktop_shortcut" debe ser verdadero para crear un acceso directo en el escritorio de Windows.
-
-Si se omite "default_launch_container", la aplicación se abrirá en una pestaña de forma predeterminada. Independientemente del valor de "default_launch_container", los usuarios pueden cambiar el contenedor donde se abrirá la aplicación. Si se omite "create_desktop_shortcuts", no se creará ningún acceso directo en el escritorio.
+Cada elemento de la lista es un objeto con un miembro obligatorio: url (la dirección URL de la aplicación web que se va a instalar) y 2 miembros opcionales: default_launch_container (especifica el modo de ventana en el que se abre la aplicación web: una pestaña nueva es el valor predeterminado) y create_desktop_shortcut (True si quiere crear accesos directos del escritorio de Windows y Linux).
 
   #### Características admitidas:
   - Puede ser obligatorio: sí
@@ -16360,8 +16424,7 @@ Si establece esta directiva como falsa o no la establece, las características d
   - En Windows y MacOS desde el 77 hasta el 84
 
   #### Descripción
-  
-Esta Directiva no funciona porque Webdriver ya es compatible con todas las directivas existentes.
+  Esta Directiva no funciona porque Webdriver ya es compatible con todas las directivas existentes.
 
 Esta directiva permite que los usuarios de la función WebDriver anulen las directivas que puedan interferir con su operación.
 
