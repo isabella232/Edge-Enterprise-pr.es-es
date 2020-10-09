@@ -1,4 +1,4 @@
-# last revised 10/05/2020
+# last revised 10/08/2020
 - name: Documentación de Microsoft Edge Enterprise
   href: index.yml
 - name: Documentación de Microsoft Edge
@@ -79,17 +79,17 @@
       href: configure-microsoft-edge-on-mac.md
     - name: Configurar para macOS con Jamf
       href: configure-microsoft-edge-on-mac-jamf.md
-- name: Use Microsoft Edge enterprise features
+- name: Usar características de empresa de Microsoft Edge
   items:
-    - name: Configurations and experimentation
+    - name: Configuraciones y experimentación
       href: edge-configuration-and-experiments.md
     - name: Compatibilidad con identidades y configuración
       href: microsoft-edge-security-identity.md
-    - name: Microsoft Edge and Enterprise State Roaming
+    - name: Microsoft Edge y Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
-    - name: Configure Microsoft Edge kiosk mode
+    - name: Configurar la pantalla completa en Microsoft Edge
       href: microsoft-edge-configure-kiosk-mode.md
-    - name: Microsoft Edge Sync
+    - name: Sincronización de Microsoft Edge
       href: microsoft-edge-enterprise-sync.md
     - name: Sincronización local para usuarios de Active Directory
       href: microsoft-edge-on-premises-sync.md
@@ -109,17 +109,19 @@
           href: edge-ie-mode-site-discovery.md
         - name: Preguntas más frecuentes sobre el modo IE
           href: edge-ie-mode-faq.md
-- name: Microsoft Edge Security
+- name: Seguridad de Microsoft Edge
   items:
-    - name: Security for your business
+    - name: Seguridad para tu empresa
       href: ms-edge-security-for-business.md
-    - name: Allow list for Microsoft Edge endpoints
+    - name: Lista de permitidos para puntos de conexión de Microsoft Edge
       href: microsoft-edge-security-endpoints.md
-    - name: Protect against potentially unwanted applications
+    - name: Prevención de pérdida de datos (DLP)
+      href: microsoft-edge-security-dlp.md
+    - name: Proteger contra aplicaciones potencialmente no deseadas
       href: microsoft-edge-potentially-unwanted-apps.md
-    - name: Support for Azure AD Conditional Access
+    - name: Compatibilidad con el acceso condicional de Azure AD
       href: ms-edge-security-conditional-access.md
-    - name: Support for Application Guard
+    - name: Soporte de la Protección de aplicaciones
       href: microsoft-edge-security-windows-defender-application-guard.md
     - name: Soporte para SmartScreen de Microsoft Defender
       href: microsoft-edge-security-smartscreen.md
@@ -151,25 +153,27 @@
           href: edge-learnmore-inpage-nav.md
         - name: Descargas de contenido mixto
           href: edge-learnmore-mixed-content-downloads.md
-        - name: Progressive rollouts for Stable channel updates
+        - name: Implementación progresiva para actualizaciones de canal estable
           href: microsoft-edge-update-progressive-rollout.md
-        - name: Provision favorites for Microsoft Edge
+        - name: Aprovisionar favoritos en Microsoft Edge
           href: edge-learnmore-provision-favorites.md
-        - name: Regular Expression 2 (re2.h) syntax
+        - name: Sintaxis de Expresiones regulares 2 (re2.h)
           href: edge-learnmore-regex.md
-        - name: User data directory variables
+        - name: Variables de directorio de datos del usuario
           href: edge-learnmore-create-user-directory-vars.md
-        - name: Using Microsoft Edge rollback for enterprises
+        - name: Uso de la reversión de Microsoft Edge para empresas
           href: edge-learnmore-rollback.md
-- name: Microsoft Edge Videos
+- name: Vídeos de Microsoft Edge
   items:
-    - name: Microsoft Edge video collection
+    - name: Colección de vídeos de Microsoft Edge
       href: microsoft-edge-videos.md
-    - name: Video - Deploy Microsoft Edge
+    - name: 'Vídeo: Implementación de Microsoft Edge'
       href: microsoft-edge-video-deploy.md
-    - name: Video - Microsoft Edge and Microsoft Search
+    - name: 'Vídeo: Microsoft Edge y prevención de pérdida de datos (DLP)'
+      href: microsoft-edge-video-security-dlp.md
+    - name: 'Vídeo: Microsoft Edge y Búsqueda de Microsoft'
       href: microsoft-edge-video-search.md
-    - name: 'Video - Security, compatibility, and manageability'
+    - name: 'Vídeo: seguridad, compatibilidad y capacidad de administración'
       href: microsoft-edge-video-security-compatibility-manageability.md
-- name: Frequently asked questions
+- name: Preguntas frecuentes
   href: faqs-edge-in-the-enterprise.md
