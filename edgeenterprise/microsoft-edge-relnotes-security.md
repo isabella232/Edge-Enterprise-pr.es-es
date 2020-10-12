@@ -3,23 +3,27 @@ title: Notas de la versión para las actualizaciones de seguridad de Microsoft E
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 09/23/2020
+ms.date: 10/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
-ms.openlocfilehash: 944a57661a76815d2c90742070a3619a82e83be4
-ms.sourcegitcommit: 4d250c0c48634ecb1ea7ca03307809c80bb21db8
+ms.openlocfilehash: ac29dbb9e69f005b13e2ea7196413cc3a9a75e81
+ms.sourcegitcommit: bdd2b9f7fc6f816ed03bf57de89b87a66b9479c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "11077627"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105805"
 ---
 # Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
 
 Estas notas de versión proporcionan información acerca de las correcciones de seguridad que se incluyen en las actualizaciones del canal estable de Microsoft Edge.
+
+## 9 de octubre de 2020
+
+Microsoft ha lanzado el último **Canal estable de Microsoft Edge (versión 86.0.622.38)**, el cual incorpora las últimas Actualizaciones de Seguridad del proyecto Chromium. Para obtener más información, consulte la [Guía de actualización de seguridad](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 23 de septiembre de 2020
 
