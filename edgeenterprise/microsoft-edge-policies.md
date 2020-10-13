@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 906a8cdd73e07efc5662e9b3ea51d8b7a2f03079
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 9a0a9157f1176f935ba2462ee34abb3ebb708b66
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094754"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105734"
 ---
 # Microsoft Edge: directivas
 La versión más reciente de Microsoft Edge incluye las siguientes directivas. Puede usar estas directivas para configurar cómo se ejecuta Microsoft Edge en su organización.
@@ -255,7 +255,7 @@ y sugerencias para los servicios Microsoft|
 |[DownloadRestrictions](#downloadrestrictions)|Permitir las restricciones de descarga|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Habilitar la característica colecciones|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Permitir que los usuarios editen los favoritos|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Volver a habilitar las características de plataforma web en desuso durante un período de tiempo limitado|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Habilitar la descarga de acciones de dominio de Microsoft (obsoleto)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Habilitar las comprobaciones de OCSP/CRL en línea|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Permitir certificados firmados mediante SHA-1 cuando sean emitidos por anclajes de veracidad locales (en desuso).|
@@ -345,6 +345,7 @@ y sugerencias para los servicios Microsoft|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar el acceso directo de Microsoft Office en la barra de favoritos (en desuso)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilite la compatibilidad con el intercambio de HTTP firmado (SXG)|
 |[SitePerProcess](#siteperprocess)|Habilite el aislamiento de sitio para cada sitio|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilite corrección ortográfica|
 |[SpellcheckLanguage](#spellchecklanguage)|Habilite idiomas de revisión ortográfica específicos|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Forzar deshabilitar idioma de revisión ortográfica|
@@ -10120,14 +10121,16 @@ Deshabilite esta directiva para evitar que los usuarios puedan agregar, quitar o
   [Volver al principio](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Volver a habilitar las características de plataforma web en desuso durante un período de tiempo limitado
+  #### Re-enable deprecated web platform features for a limited time (obsolete)
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Versiones compatibles:
-  - En Windows y MacOS desde 77 o posterior
+  - On Windows and macOS since 77, until 86
 
   #### Descripción
-  Especifica una lista de características obsoletas de la plataforma web para volver a habilitar temporalmente.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+
+Especifica una lista de características obsoletas de la plataforma web para volver a habilitar temporalmente.
 
 Esta directiva le permite volver a habilitar las características en desuso de la plataforma web durante un período de tiempo limitado. Las características se identifican con una etiqueta de cadena.
 
@@ -10154,7 +10157,7 @@ Use la información anterior al configurar esta directiva.
   #### Información y configuración de Windows
   ##### Información de directiva de grupo (ADMX)
   - Nombre único de GP: EnableDeprecatedWebPlatformFeatures
-  - Nombre de GP: volver a habilitar las características de la plataforma web en desuso durante un período de tiempo limitado
+  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
   - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -15055,6 +15058,58 @@ Si deshabilita o no configura esta directiva, el usuario podrá optar por no rec
 
   #### Información y configuración de Mac
   - Nombre clave de la preferencia: SitePerProcess
+  - Valor de ejemplo:
+``` xml
+<true/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Versiones compatibles:
+  - On Windows and macOS since 87 or later
+
+  #### Descripción
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Características admitidas:
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+  - Booleano
+
+  #### Información y configuración de Windows
+  ##### Información de directiva de grupo (ADMX)
+  - GP unique name: SpeechRecognitionEnabled
+  - GP name: Configure Speech Recognition
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+  ##### Configuración del Registro de Windows
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/D
+  - Value Name: SpeechRecognitionEnabled
+  - Tipo de valor: REG_DWORD
+  ##### Valor de ejemplo:
+```
+0x00000001
+```
+
+
+  #### Información y configuración de Mac
+  - Preference Key Name: SpeechRecognitionEnabled
   - Valor de ejemplo:
 ``` xml
 <true/>
