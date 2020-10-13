@@ -1,30 +1,45 @@
 ---
-ms.openlocfilehash: bd70db3a942a526267de982018c25710e436af58
-ms.sourcegitcommit: bd68077356a944b99a424d03b444b04aa60272dd
+ms.openlocfilehash: 7ca2675c7d1809801ea6479138efe3dde3d3ccfc
+ms.sourcegitcommit: 65164f81d74e268f56a2893fadf32e97d5194d95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "11099819"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "11115642"
 ---
+<!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+## Semana del 5 de octubre de 2020
+
+| Fecha de publicación |Título del tema | Cambiar |
+|------|------------|--------|
+| 5/10/2020 | [Configurar la pantalla completa en Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>Revisar las instrucciones de configuración para el modo de pantalla completa.| modificado |
+| 5/10/2020 | [Sincronización local para usuarios de Active Directory (AD)](/DeployEdge/microsoft-edge-on-premises-sync)<br>Solución para la instrucción de ruta de acceso: *%APPDATA%/Microsoft/Edge*  | modificado |
+| 6/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Solución para la versión secundaria 85.0.564.70| modificado |
+| 7/10/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Solución para la versión secundaria 86.0.622.36 | modificado |
+| 8/10/2020 | [Documentación de directiva de explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Actualizar las directivas de referencia del explorador. | modificado |
+| 8/10/2020 | [Documentación de directiva de Microsoft Edge Update](/DeployEdge/microsoft-edge-update-policies)<br>Agregar para actualizar las directivas de referencia. | modificado |
+| 8/10/2020 | [Documentación de directiva de WebView2 de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-webview-policies)<br>Agregar directivas de referencia WebView2. | Nuevo |
+| 9/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Actualizar para la versión principal estable 86.0.622.38. Incluir la actualización de seguridad del 9 de octubre.| modificado |
+| 9/10/2020 | [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Actualizar para la versión estable 86.0.622.38. | modificado |
+| 9/10/2020 | [Programa de publicación de versiones de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Actualizar para reflejar la publicación de la versión estable 86.0.622.38. | modificado |
+
 
 ## Semana del 28 de septiembre de 2020
 
 
 | Fecha de publicación |Título del tema | Cambiar |
 |------|------------|--------|
-| 29/9/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Corrección para la versión secundaria beta 86.0.622.28. | modificado |
-| 30/9/2020 | [Seguridad de Microsoft Edge para su empresa](/DeployEdge/ms-edge-security-for-business)<br>Corrección menor de redacción y vínculo de corrección. | modificado |
-| 30/9/2020 | [Sincronización de Microsoft Edge Enterprise](/DeployEdge/microsoft-edge-enterprise-sync)<br>Ámbito correcto de los datos sincronizados y preguntas frecuentes: "¿Se cifran los datos sincronizados?"  | modificado |
-| 1/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Correcciones para la versión secundaria estable 85.0.564.68. | modificado |
-| 2/10/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Corrección para la versión secundaria beta 86.0.622.31. | modificado |
-| 2/10/2020 | [Documentación de Microsoft Edge Enterprise](/DeployEdge/index)<br>Agregar un vínculo a la documentación de Seguridad, "Seguridad de Microsoft Edge para su empresa". | modificado |
-| 2/10/2020 | [Microsoft Edge y Protección de aplicaciones de Microsoft Defender](/DeployEdge/microsoft-edge-security-windows-defender-application-guard)<br>Corregir vínculo roto en **Vea también** | modificado |
-| 2/10/2020 | [Seguridad de Microsoft Edge para su empresa](/DeployEdge/ms-edge-security-for-business)<br>Corregir error tipográfico. | modificado |
-| 2/10/2020 | [Documentación de directiva de explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Actualizar directivas de grupo de Microsoft Edge. | modificado |
-
+| 29/9/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
+| 30/9/2020 | [Seguridad de Microsoft Edge para su empresa](/DeployEdge/ms-edge-security-for-business) | modificado |
+| 30/9/2020 | [Sincronización de Microsoft Edge Enterprise](/DeployEdge/microsoft-edge-enterprise-sync) | modificado |
+| 1/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
+| 2/10/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
+| 2/10/2020 | [Documentación de Microsoft Edge Enterprise](/DeployEdge/index) | modificado |
+| 2/10/2020 | [Microsoft Edge y Protección de aplicaciones de Microsoft Defender](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | modificado |
+| 2/10/2020 | [Seguridad de Microsoft Edge para su empresa](/DeployEdge/ms-edge-security-for-business) | modificado |
+| 2/10/2020 | [Documentación de directiva de explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies) | modificado |
 
 ## Semana del 21 de septiembre de 2020
-
 
 | Fecha de publicación |Título del tema | Cambiar |
 |------|------------|--------|
@@ -57,4 +72,3 @@ ms.locfileid: "11099819"
 |------|------------|--------|
 | 9/2/2020. | [Documentación de directiva de explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies) | modificado |
 | 9/2/2020. | [Reversión de Microsoft Edge para empresas](/DeployEdge/edge-learnmore-rollback) | modificado |
-
