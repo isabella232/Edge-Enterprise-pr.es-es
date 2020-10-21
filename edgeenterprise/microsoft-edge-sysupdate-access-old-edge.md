@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Obtén información acerca de cómo obtener acceso a la versión heredada de Microsoft Edge.
-ms.openlocfilehash: e5a97a487dc6b3a45504a721e460a69103b0174e
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
+ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981173"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125522"
 ---
 # Obtener acceso a la versión heredada de Microsoft Edge tras la instalación de la nueva versión de Microsoft Edge
 
@@ -35,6 +35,8 @@ Si bien la mayoría de las organizaciones querrán reemplazar Microsoft Edge her
 > La aplicación de Microsoft Edge (versión anterior) llegará al fin de soporte el 9 de marzo de 2021 para dar paso al nuevo Microsoft Edge. Esto significa que Microsoft Edge (versión anterior) no recibirá actualizaciones de seguridad después de esa fecha. Este cambio se aplica a todas las experiencias que se ejecutan en la aplicación de escritorio de Microsoft Edge (versión anterior). [Más información](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
 ## Antes de comenzar
+> [!NOTE]
+> A partir de la versión 20H2 de Windows 10, se dejará de incluir Microsoft Edge (versión anterior). A partir de esta versión de Windows 10, no se admite la experiencia en paralelo.
 
 Los procedimientos descritos en este artículo se aplican a los sistemas que se han actualizado con las últimas actualizaciones de seguridad. Cuando se instale la nueva versión de Microsoft Edge, se ocultará la versión antigua (Microsoft Edge [versión heredada]). De manera predeterminada, todos los intentos de iniciar la versión anterior redirigirán al usuario a la versión recientemente instalada de Microsoft Edge. En este artículo se describe cómo puede seguir usando Microsoft Edge heredado después de instalar Microsoft Edge.
 
