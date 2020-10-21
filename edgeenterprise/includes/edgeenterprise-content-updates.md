@@ -12,16 +12,16 @@ ms.locfileid: "11115642"
 
 | Fecha de publicación |Título del tema | Cambiar |
 |------|------------|--------|
-| 5/10/2020 | [Configurar la pantalla completa en Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>Revisar las instrucciones de configuración para el modo de pantalla completa.| modificado |
-| 5/10/2020 | [Sincronización local para usuarios de Active Directory (AD)](/DeployEdge/microsoft-edge-on-premises-sync)<br>Solución para la instrucción de ruta de acceso: *%APPDATA%/Microsoft/Edge*  | modificado |
-| 6/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Solución para la versión secundaria 85.0.564.70| modificado |
-| 7/10/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Solución para la versión secundaria 86.0.622.36 | modificado |
-| 8/10/2020 | [Documentación de directiva de explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Actualizar las directivas de referencia del explorador. | modificado |
-| 8/10/2020 | [Documentación de directiva de Microsoft Edge Update](/DeployEdge/microsoft-edge-update-policies)<br>Agregar para actualizar las directivas de referencia. | modificado |
-| 8/10/2020 | [Documentación de directiva de WebView2 de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-webview-policies)<br>Agregar directivas de referencia WebView2. | Nuevo |
-| 9/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Actualizar para la versión principal estable 86.0.622.38. Incluir la actualización de seguridad del 9 de octubre.| modificado |
-| 9/10/2020 | [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Actualizar para la versión estable 86.0.622.38. | modificado |
-| 9/10/2020 | [Programa de publicación de versiones de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Actualizar para reflejar la publicación de la versión estable 86.0.622.38. | modificado |
+| 5/10/2020 | [Configurar la pantalla completa en Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>Se han revisado las instrucciones de configuración para el modo de pantalla completa.| modificado |
+| 5/10/2020 | [Sincronización local para usuarios de Active Directory (AD)](/DeployEdge/microsoft-edge-on-premises-sync)<br>Corrección de la instrucción de ruta de acceso: *%APPDATA%/Microsoft/Edge*  | modificado |
+| 6/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Correcciones para la versión secundaria 85.0.564.70.| modificado |
+| 7/10/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Correcciones para la versión secundaria 86.0.622.36. | modificado |
+| 8/10/2020 | [Documentación de directiva de explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Se han actualizado las directivas de referencia del explorador. | modificado |
+| 8/10/2020 | [Documentación de directiva de Microsoft Edge Update](/DeployEdge/microsoft-edge-update-policies)<br>Adición para actualizar las directivas de referencia. | modificado |
+| 8/10/2020 | [Documentación de directiva de WebView2 de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-webview-policies)<br>Se han agregado las directivas de referencia WebView2. | Nuevo |
+| 9/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Actualización para la versión principal estable 86.0.622.38. Incluye la actualización de seguridad del 9 de octubre.| modificado |
+| 9/10/2020 | [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Actualización para la versión estable 86.0.622.38. | modificado |
+| 9/10/2020 | [Programa de publicación de versiones de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Actualización para reflejar la publicación de la versión estable 86.0.622.38. | modificado |
 
 
 ## Semana del 28 de septiembre de 2020
