@@ -3,19 +3,19 @@ title: Lista de permitidos para puntos de conexión de Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/09/2020
+ms.date: 10/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Lista de permitidos para puntos de conexión de Microsoft Edge
-ms.openlocfilehash: 76186524a708861432199d5da7eec7573ebecb96
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 48a3a72e5af3744516e3b72d02b5254ad2e0504a
+ms.sourcegitcommit: b32d8d64ae65dc5a46e47b7c34b0211097a0cc65
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981233"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "11133125"
 ---
 # Lista de permitidos para puntos de conexión de Microsoft Edge
 
@@ -36,7 +36,7 @@ El servicio que Microsoft Edge usa para buscar nuevas actualizaciones.
 
 ### Servicio de experimentación y configuración
 
-- `https://config.ecs.skype.com`
+- `https://config.edge.skype.com`
 
 ### Ubicaciones de descarga para Microsoft Edge
 
