@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/12/2020
+ms.date: 10/20/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: b01b431e117bc528187ee665bd314aab2df6d7e2
-ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
+ms.openlocfilehash: 864c8e9946f5114f2cdf6908ad88fbbe5ca9dd7a
+ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "11114398"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125542"
 ---
 # Notas de la versión para el canal estable de Microsoft Edge
 
@@ -23,6 +23,14 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!NOTE]
 > Para el canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para obtener más información, consulte [Progressive rollouts for Microsoft Edge updates (Implementaciones progresivas de actualizaciones de Microsoft Edge)](microsoft-edge-update-progressive-rollout.md).
+
+## Versión 86.0.622.48: 20 de octubre
+
+Se han corregido varios errores y problemas de rendimiento.
+
+## Versión 86.0.622.43: 15 de octubre
+
+Se han corregido varios errores y problemas de rendimiento.
 
 <!-- begin major 86 -->
 ## Versión 86.0.622.38: 9 de octubre
@@ -46,7 +54,6 @@ Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/
   * **Reemplazar las directivas [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) y [SendSiteInformationToImproveServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) para las versiones anteriores de Windows y macOS.** Estas directivas están en desuso en la versión 86 de Microsoft Edge y quedarán obsoletas en Microsoft Edge versión 89.<br>
 Estas directivas se reemplazarán por [Permitir telemetría](https://go.microsoft.com/fwlink/?linkid=2099569) en Windows 10 y la nueva directiva [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) para las demás plataformas. Esto permitirá que los usuarios administren los datos de diagnóstico que se envían a Microsoft para Windows 7, 8, 8.1 y macOS.
   * Soporte de DNS seguro (DNS a través de HTTPS).  A partir de la versión 86 de Microsoft Edge, está disponible la configuración para controlar el DNS seguro en los dispositivos no administrados. Estas opciones de configuración no son accesibles para los usuarios de dispositivos administrados, pero los administradores de TI pueden habilitar o deshabilitar el DNS seguro con la directiva de grupo [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode).
-  * Se encontraron contraseñas en una pérdida en línea. Microsoft Edge comprueba las contraseñas en un repositorio de credenciales de violación de información conocido y le avisa si se encuentra una coincidencia.
 
 * **modo de Internet Explorer:** permitir que los usuarios usen la interfaz de usuario (UI) de Microsoft Edge para probar los sitios en el modo de Internet Explorer. A partir de la versión 86 de Microsoft Edge, los administradores pueden habilitar la opción de interfaz de usuario para cargar una pestaña en el modo de Internet Explorer con propósitos de prueba o como medida provisional, hasta que los sitios se agreguen al XML de la lista de sitios.
 
@@ -131,7 +138,7 @@ Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/
 
 ### Actualizaciones de características
 
-- **Sincronización local de los Favoritos y las Configuraciones**. Ahora puede sincronizar los favoritos y la configuración del explorador entre los perfiles de Active Directory dentro de su propio entorno sin necesidad de sincronización en la nube.
+- **Sincronización local de los Favoritos y las Configuraciones**. Ahora puede sincronizar los favoritos y la configuración del explorador entre los perfiles de Active Directory dentro de su propio entorno, sin necesidad de sincronización en la nube.
 
 - **Soporte de la directiva del grupo de Microsoft Edge para los sitios confiables y combinaciones de aplicaciones para iniciar sin aviso de confirmación.** El soporte añadido a la directiva del grupo permite a los administradores agregar combinaciones de sitios y aplicaciones de confianza para iniciar sin el aviso de confirmación. Esto agrega la capacidad de que los administradores configuren las combinaciones de protocolo de confianza/origen (como las aplicaciones de Microsoft 365) para que sus usuarios finales puedan suprimir el aviso de confirmación al navegar en una dirección URL que contenga un protocolo de aplicación.
 
