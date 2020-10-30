@@ -3,19 +3,19 @@ title: Materiales para la adopción de clientes de Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 09/22/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Materiales para la adopción de clientes de Microsoft Edge
-ms.openlocfilehash: 68b984faad3b36c0926ece070ca052e81e764e0e
-ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
+ms.openlocfilehash: dd75deb8be985a421adc158069e5562f4428415b
+ms.sourcegitcommit: 76a48f5818c90f3edf5780cfcca5def5aeb863bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11072637"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136098"
 ---
 # Materiales para la adopción de clientes para Microsoft Edge
 
@@ -29,9 +29,12 @@ El kit de adopción del cliente contiene el material siguiente:
 
 - Guía de implementación de sistemas de información
 - Guía de introducción para el usuario
-- Correo electrónico de anuncio
-- Sugerencias y trucos para el correo electrónico
+- Correo electrónico de introducción
+- Banners
 - Señalización digital
+- Localizador
+- Demo y gifs
+- Vínculos de recursos en la web
 
 [Descargar el kit de adopción de clientes](https://www.microsoft.com/download/details.aspx?id=102119)
 
@@ -45,13 +48,13 @@ Use esta guía para empezar a planear la implementación y descubrir cómo empez
 
 Use esta guía para instruir a los usuarios en el nuevo Microsoft Edge. La guía incluye información general sobre la interfaz de usuario, los menús y las características. También hemos incluido sugerencias para ayudar a los usuarios a empezar.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Guía de introducción para el usuario":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Serie de vídeos de Microsoft Mechanics":::
 
 ### Plantillas de correo electrónico
 
 Use estas plantillas de correo electrónico para anunciar que el nuevo Microsoft Edge está disponible para los usuarios, y para ofrecer sugerencias y trucos sobre cómo sacarle el máximo provecho al explorador.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Plantilla de correo electrónico para sugerencias y trucos":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Serie de vídeos de Microsoft Mechanics":::
 
 ### Señalización digital
 
@@ -62,7 +65,19 @@ Use la siguiente señalización digital para informar a los usuarios sobre el nu
 - Búsqueda de Microsoft en Bing
 - Seguridad
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Página de nueva pestaña":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Serie de vídeos de Microsoft Mechanics":::
+
+### Banners
+
+Use estos banners en sus sitios internos para anunciar el nuevo Microsoft Edge a sus empleados.
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-banner-ads.png" alt-text="Serie de vídeos de Microsoft Mechanics":::
+
+### Localizador
+
+Envíe o publique estas páginas para ayudar a sus empleados a aprender sobre Microsoft Edge y configurar el navegador para su uso en el trabajo.
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-one-pager.png" alt-text="Serie de vídeos de Microsoft Mechanics":::
 
 ## Otros recursos de aprendizaje
 
