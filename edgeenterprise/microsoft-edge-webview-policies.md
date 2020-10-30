@@ -3,7 +3,7 @@ title: Documentación de directiva de WebView2 de Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/16/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 4298b25f7f158bc54f798442b4426494f046fa68
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 3ca9adb18ef41581bb016451015cf0aca0aa63c9
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134449"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136219"
 ---
 # Microsoft Edge WebView2: directivas
 
@@ -40,8 +40,8 @@ En estas tablas se muestran todas las directivas de grupo disponibles en esta ve
 
 |Nombre de directiva|Título|
 |-|-|
-|[browserExecutableFolder](#browserexecutablefolder)|Configure la ubicación de la carpeta ejecutable del explorador|
-|[releaseChannelPreference](#releasechannelpreference)|Establezca las preferencias de pedido de búsqueda de canal de publicación|
+|[BrowserExecutableFolder](#browserexecutablefolder)|Configure la ubicación de la carpeta ejecutable del explorador|
+|[ReleaseChannelPreference](#releasechannelpreference)|Establezca las preferencias de pedido de búsqueda de canal de publicación|
 
 
 
@@ -50,7 +50,7 @@ En estas tablas se muestran todas las directivas de grupo disponibles en esta ve
 
   [Volver al principio](#microsoft-edge-webview2---policies)
 
-  ### browserExecutableFolder
+  ### BrowserExecutableFolder
 
   #### Configure la ubicación de la carpeta ejecutable del explorador
 
@@ -80,7 +80,7 @@ Para establecer el valor de la ruta de acceso de la carpeta, especifique un par 
 
   ##### Información de directiva de grupo (ADMX)
 
-  - Nombre único de GP: browserExecutableFolder
+  - Nombre único de GP: BrowserExecutableFolder
   - Nombre GP: configure la ubicación de la carpeta ejecutable del explorador.
   - Ruta de acceso de GP (obligatorio): Plantillas administrativas/Microsoft Edge WebView2/Loader cambiar configuración
   - Ruta de acceso de GP (recomendado): N/D
@@ -88,7 +88,7 @@ Para establecer el valor de la ruta de acceso de la carpeta, especifique un par 
 
   ##### Configuración del Registro de Windows
 
-  - Ruta (obligatoria): SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder
+  - Ruta (obligatoria): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: lista de REG_SZ
   - Tipo de valor: lista de REG_SZ
@@ -96,7 +96,7 @@ Para establecer el valor de la ruta de acceso de la carpeta, especifique un par 
   ##### Valor de ejemplo:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
 
 ```
 
@@ -104,7 +104,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   [Volver al principio](#microsoft-edge-webview2---policies)
 
-  ### releaseChannelPreference
+  ### ReleaseChannelPreference
 
   #### Establezca las preferencias de pedido de búsqueda de canal de publicación
 
@@ -136,7 +136,7 @@ Para establecer el valor de las preferencias de canal de liberación, especifiqu
 
   ##### Información de directiva de grupo (ADMX)
 
-  - Nombre único de GP: releaseChannelPreference
+  - Nombre único de GP: ReleaseChannelPreference
   - Nombre GP: establecer el canal de lanzamiento de preferencias de pedido de búsqueda
   - Ruta de acceso de GP (obligatorio): Plantillas administrativas/Microsoft Edge WebView2/Loader cambiar configuración
   - Ruta de acceso de GP (recomendado): N/D
@@ -144,7 +144,7 @@ Para establecer el valor de las preferencias de canal de liberación, especifiqu
 
   ##### Configuración del Registro de Windows
 
-  - Ruta (obligatoria): SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference
+  - Ruta (obligatoria): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: lista de REG_SZ
   - Tipo de valor: lista de REG_SZ
@@ -152,7 +152,7 @@ Para establecer el valor de las preferencias de canal de liberación, especifiqu
   ##### Valor de ejemplo:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference = "Name: *, Value: 1"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
 ```
 

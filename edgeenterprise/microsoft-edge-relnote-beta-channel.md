@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
-ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
+ms.openlocfilehash: 8cedd34ba3a2053ae7c8d098c9d5106139a8b961
+ms.sourcegitcommit: 737da8f49297a0189f533480f7bfe5989a59a8f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "11133298"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136123"
 ---
 # Notas de la versión para el canal beta de Microsoft Edge
 
@@ -23,6 +23,10 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!IMPORTANT]
 > Vea esta actualización [en las versiones del canal de Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Versión 87.0.664.18: 26 de octubre
+
+Se han corregido varios errores y problemas de rendimiento.
 
 <!-- begin major 87 -->
 ## Versión 87.0.664.12: 20 de octubre
@@ -68,8 +72,6 @@ Se han agregado diez directivas nuevas. Descargue las plantillas administrativas
 #### Directiva obsoleta
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures): Vuelve a habilitar las características de la plataforma web en desuso por un tiempo limitado.
-
-
 
 <!-- end major 87 -->
 
