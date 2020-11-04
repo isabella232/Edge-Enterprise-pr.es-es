@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/29/2020
+ms.date: 11/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: b26835eb53bfe6a327e2b0d8cb4f6a7180214530
-ms.sourcegitcommit: 2a998c7ad37410267703a25f5feff5c0560c5efa
+ms.openlocfilehash: 0315e0d99c2cd019550050b6040cdf5af7207541
+ms.sourcegitcommit: bc4d4b1fd80fc8bccbe3822d4c342cd7777bb7f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "11145681"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "11150899"
 ---
 # Notas de la versión para el canal estable de Microsoft Edge
 
@@ -23,6 +23,10 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!NOTE]
 > Para el canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para obtener más información, consulte [Progressive rollouts for Microsoft Edge updates (Implementaciones progresivas de actualizaciones de Microsoft Edge)](microsoft-edge-update-progressive-rollout.md).
+
+## Versión 86.0.622.61: 2 de noviembre
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## Versión 86.0.622.58: 29 de octubre
 
@@ -271,7 +275,7 @@ Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/
 
 - Varias actualizaciones de DevTools, como la compatibilidad con la personalización de los métodos abreviados de teclado para que coincidan con los de VS Code, y la visualización de DevTools en contraste alto.  Para obtener más información, consulte [Novedades en DevTools (Microsoft Edge 84)](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/whats-new/2020/05/devtools).
 
-### Actualizaciones de directiva
+### Actualizaciones de directivas
 
 #### Nuevas directivas
 
@@ -370,7 +374,7 @@ Un usuario escribe "powerbi" como "powerbbi".com. Link doctor propondrá "powerb
 
 - No permitir XmlHttpRequest sincrónico en el descarte de página. Se eliminará el envío de XmlHttpRequests sincrónicos durante la carga de una página web. Este cambio mejora el rendimiento y la confiabilidad del explorador, pero puede afectar a las aplicaciones web que aún no se han actualizado para usar API web más modernas, como sendBeacon y Fetch. La directiva de grupo para deshabilitar este cambio y permitir la XHR sincrónica durante el descarte de la página estará disponible hasta Microsoft Edge 88. Para más información, consulte [Cambios que se van a producir en Microsoft Edge que afectan a la compatibilidad de los sitios](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
 
-### Actualizaciones de directiva
+### Actualizaciones de directivas
 
 #### Nuevas directivas
 

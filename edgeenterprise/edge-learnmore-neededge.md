@@ -3,19 +3,19 @@ title: Redirección de Internet Explorer a Microsoft Edge por motivos de compati
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/19/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Redirección de Internet Explorer a Microsoft Edge por motivos de compatibilidad con sitios web modernos
-ms.openlocfilehash: ce9e8dabdff25cc3ba375746ec82ddd78b6d7694
-ms.sourcegitcommit: cf991cc4bd2e70169902cbda9ddc870d70e31ca2
+ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
+ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "11120525"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "11151100"
 ---
 # Redirección de Internet Explorer a Microsoft Edge por motivos de compatibilidad con sitios web modernos
 
@@ -74,14 +74,14 @@ El redireccionamiento de Internet Explorer a Microsoft Edge necesita un objeto d
 - Si habilita esta Directiva, el BHO necesario para la redirección no se instalará y los usuarios podrán seguir viendo mensajes de incompatibilidad para determinados sitios web en Internet Explorer. Si el BHO ya está instalado, se desinstalará la próxima vez que se actualice el canal estable de Microsoft Edge.
 - Si deshabilita o no configura esta Directiva, se instalará el BHO. Este es el comportamiento predeterminado.
 
-Además de requerir el BHO, hay una dependencia en la **RedirectSitesFromInternetExplorerRedirectMode**, que se debe establecer en "sitelist" o "no configurado".
+Además de requerir el BHO, hay una dependencia en **RedirectSitesFromInternetExplorerRedirectMode**, que se debe establecer en "Redirigir los sitios de acuerdo con la lista se sitios incompatibles" o en "No configurado".
 
 ### Directiva: RedirectSitesFromInternetExplorerRedirectMode
 
  Esta Directiva corresponde al Microsoft Edge **explorador predeterminado** la configuración "permitir que Internet Explorer abra sitios en Microsoft Edge". Para obtener acceso a esta configuración, vaya a la *edge://settings/defaultbrowser* URL.  
 
 - Si no configura esta Directiva o la configura en "sitelist", Internet Explorer redirigirá sitios incompatibles a Microsoft Edge. Este es el comportamiento predeterminado.
-- Si deshabilita esta Directiva, los sitios incompatibles no se redirigirán a Microsoft Edge.
+- Para deshabilitar esta directiva, seleccione **Habilitado** Y, a continuación, en la lista desplegable de Opciones: Redirigir los sitios incompatibles de Internet Explorer a Microsoft Edge, seleccione **Deshabilitar**. En este estado, los sitios incompatibles no se redirigen a Microsoft Edge.
 
 > [!NOTE]
 > Si se encuentra en un dispositivo personal que no está administrado por su organización, verá otra opción denominada "permitir que los sitios se carguen en modo Internet Explorer", en **Compatibilidad de Internet**. Explorer.
@@ -104,11 +104,11 @@ Esta directiva configura la experiencia de usuario para la redirección del siti
 
 Si desea deshabilitar la redirección antes de actualizar a la versión estable 87 de Microsoft Edge, siga el procedimiento siguiente:
 
-1. Configure la drectiva **RedirectSitesFromInternetExplorerRedirectMode** como **Activada**.. Esta configuración dejará de redirigirse tan pronto como se aplique la drectiva.
+1. Configure la Directiva **RedirectSitesFromInternetExplorerPreventBHOInstall** en **Activada**.
 
 Si desea deshabilitar la redirección después de actualizar a la versión estable 87 de Microsoft Edge, siga estos pasos:
 
-1. Configure la Directiva **RedirectSitesFromInternetExplorerRedirectMode** como **Deshabilitada**. Esta configuración dejará de redirigirse tan pronto como se aplique la drectiva.
+1. Configure la directiva **RedirectSitesFromInternetExplorerRedirectMode** en **Habilitada** Y, a continuación, en la lista desplegable en Opciones: Redirigir los sitios incompatibles de Internet Explorer a Microsoft Edge, seleccione **Deshabilitar**. Esta configuración dejará de redirigirse tan pronto como se aplique la drectiva.
 2. Configure la Directiva **RedirectSitesFromInternetExplorerPreventBHOInstall** en **Activada**. Se desinstalará el BHO después de la siguiente actualización de Microsoft Edge.
 
 ## Consulte también
