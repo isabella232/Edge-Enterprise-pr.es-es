@@ -3,19 +3,19 @@ title: Planear tu implementación de Microsoft Edge
 ms.author: cjacks
 author: appcompatguy
 manager: saudm
-ms.date: 04/23/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planear tu implementación de Microsoft Edge
-ms.openlocfilehash: 3ac3d050578ca4f230ed7e775aefb73f11abb3c0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981112"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155260"
 ---
 # Planear tu implementación de Microsoft Edge
 
@@ -23,6 +23,19 @@ En este artículo se describen los procedimientos recomendados para la implement
 
 >[!NOTE]
 >Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
+
+En las secciones siguientes se proporcionan instrucciones específicas para planear la implementación de Microsoft Edge.
+
+- [Evalúa tu entorno de explorador y requisitos](#evaluate-your-existing-browser-environment-and-browser-needs)
+- [Asegúrate de que los dispositivos con Windows 10 están listos](#make-sure-your-windows-10-devices-are-ready)
+- [Elige la metodología de implementación](#determine-your-deployment-methodology)
+- [Realizar detección de sitio](#do-site-discovery)
+- [Elige la estrategia del canal](#determine-your-channel-strategy)
+- [Identifica y configura directivas](#define-and-configure-policies)
+- [Realiza pruebas de compatibilidad de aplicaciones](#do-app-compatibility-testing)
+- [Piloto de MicrosoftEdge](#deploy-microsoft-edge-to-a-pilot-group)
+- [Evalúa el piloto](#validate-your-deployment)
+- [Implementa Microsoft Edge en toda la empresa](#broad-deployment-of-microsoft-edge)
 
 ## Evalúa las necesidades del explorador y del entorno del explorador existentes
 
@@ -157,9 +170,11 @@ La compatibilidad de aplicaciones para Microsoft Edge es muy alta, tan alta que 
 2. Si funciona en Internet Explorer, funcionará en Microsoft Edge en el modo Internet Explorer.
 3. Si funciona en Google Chrome, funcionará en Microsoft Edge.
 
-Si dispones de una aplicación en la que no se cumple esta promesa, apoyaremos la promesa de solucionarlo con [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
+Si dispones de una aplicación en la que no se cumple esta promesa de compatibilidad, lo solucionaremos con [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
 
-A pesar de esta promesa, sabemos que muchas organizaciones deben validar algunas aplicaciones por motivos de cumplimiento o administración de riesgos. Aunque esperamos que esto sea muy sencillo, es importante que ser organizado y riguroso en las pruebas de la aplicación.
+### Línea interna de pruebas de aplicaciones de negocio
+
+A pesar de nuestra promesa de compatibilidad, sabemos que muchas organizaciones deben validar algunas aplicaciones por motivos de cumplimiento o administración de riesgos. Aunque esperamos que esto sea muy sencillo, es importante que ser organizado y riguroso en las pruebas de la aplicación.
 
 Hay dos maneras de realizar las pruebas de compatibilidad de aplicaciones:
 
@@ -167,6 +182,10 @@ Hay dos maneras de realizar las pruebas de compatibilidad de aplicaciones:
 2. Pruebas piloto. Un número limitado de usuarios validan las aplicaciones en su entorno de trabajo diario usando sus propios dispositivos.
 
 Elige el método más apropiado para cada aplicación, para administrar el riesgo sin invertir demasiado en pruebas de compatibilidad.
+
+### Soporte para aplicaciones de terceros
+
+A parte de sus propias líneas de aplicaciones de negocio, muchas organizaciones usan aplicaciones de orígenes externos. El artículo [Preparado para Microsoft Edge](deploy-edge-ready-for-edge.md) contiene una lista de aplicaciones web que pueden usarse en la organización. En esta lista se proporcionan vínculos a las instrucciones de soporte técnico de los productos cuando se usan con Microsoft Edge.
 
 ## Implementar Microsoft Edge en un grupo piloto
 

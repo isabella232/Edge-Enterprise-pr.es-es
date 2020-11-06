@@ -3,19 +3,19 @@ title: Preguntas frecuentes sobre Edge en la empresa
 ms.author: jwhit
 author: jwhit-MSFT
 manager: laurawi
-ms.date: 08/03/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Preguntas frecuentes sobre la implementación de Microsoft Edge en la empresa
-ms.openlocfilehash: 0f6891f4f7187b23f6e3d4e7880fdafa49def351
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e689967cbad950e2969535bad0dd63d5d7081798
+ms.sourcegitcommit: 12827458f6217f443128e826c1d18d36d401d03b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981125"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "11154325"
 ---
 # Preguntas frecuentes sobre Microsoft Edge en la empresa
 
@@ -56,7 +56,9 @@ Sí. Ya se admite la configuración de Microsoft Edge en Windows 10 con Microsof
 
 ## ¿Admite WSUS la implementación inicial del nuevo Microsoft Edge?
 
-No. WSUS es compatible con la actualización de instalaciones de MSI existentes de Microsoft Edge, pero no se puede usar para la implementación inicial. Si el propósito es administrar actualizaciones en última instancia por medio de WSUS, la implementación inicial se puede realizar mediante una herramienta de administración, como [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+Sí. En el [Catálogo de Microsoft Update](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) hay paquetes que puede usar para la implementación inicial de la nueva versión de Microsoft Edge a través de WSUS. Después de la implementación inicial, las actualizaciones automáticas se configuran de forma predeterminada. Para obtener más información, consulte [Actualización en WSUS para la nueva versión de Microsoft Edge para Windows 10, versiones 1809, 1903, 1909 y 2004: 29 de octubre de 2020](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge).
+
+Las actualizaciones manuales se pueden realizar con una herramienta de administración de configuración, como [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
 
 ## Consulte también
 
