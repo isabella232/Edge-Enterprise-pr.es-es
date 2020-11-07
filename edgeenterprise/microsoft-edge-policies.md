@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/22/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 982a171e1c4f55ab99db53a399c669fdf4798f53
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134469"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155317"
 ---
 # Microsoft Edge: directivas
 
@@ -29,6 +29,18 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
+## Directivas nuevas y obsoletas
+
+En la siguiente tabla se enumeran las directivas nuevas y las obsoletas para esta actualización.
+
+| Nombre | Estado |
+|-|-|
+| [WebWidgetAllowed](#webwidgetallowed) | Nuevo |
+| [ProxyBypassList](#proxybypasslist) | Desusada |
+| [ProxyMode](#proxymode) | Desusada |
+| [ProxyPacUrl](#proxypacurl) | Desusada |
+| [ProxyServer](#proxyserver) | Desusada |
+
 ## Directivas disponibles
 
 Estas tablas enumeran todas las directivas de grupo relacionadas con el explorador disponibles en esta versión de Microsoft Edge. Usa los vínculos de la tabla para obtener más detalles sobre directivas específicas.
@@ -39,10 +51,10 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[Configuración del Contenido](#content-settings)|[Proveedor de búsquedas predeterminado](#default-search-provider)|
 |[Extensions](#extensions)|[Autenticación HTTP](#http-authentication)|
 |[Configuración de pantalla completa](#kiosk-mode-settings)|[Mensajería nativa](#native-messaging)|
-|[Administrador de contraseñas y protección](#password-manager-and-protection)|[Impresión](#printing)|
-|[Servidor proxy](#proxy-server)|[Configuración de SmartScreen](#smartscreen-settings)|
-|[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|[Adicional](#additional)|
-
+|[Administrador de contraseñas y protección](#password-manager-and-protection)|[Rendimiento](#performance)|
+|[Impresión](#printing)|[Servidor proxy](#proxy-server)|
+|[Configuración de SmartScreen](#smartscreen-settings)|[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|
+|[Adicional](#additional)|
 
 ### [*Configuración de Protección de aplicaciones*](#application-guard-settings-policies)
 
@@ -156,6 +168,11 @@ y sugerencias para los servicios Microsoft|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configurar la lista de URLs de acceso a la empresa donde el servicio de protección de contraseñas debe capturar los salted hashes de una contraseña|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configurar el desencadenador de advertencia de protección con contraseña|
 |[PasswordRevealEnabled](#passwordrevealenabled)|Habilitar el botón revelar contraseña|
+### [*Rendimiento*](#performance-policies)
+
+|Nombre de directiva|Título|
+|-|-|
+|[StartupBoostEnabled](#startupboostenabled)|Habilitar el impulso de arranque|
 ### [*Impresión*](#printing-policies)
 
 |Nombre de directiva|Título|
@@ -170,10 +187,10 @@ y sugerencias para los servicios Microsoft|
 
 |Nombre de directiva|Título|
 |-|-|
-|[ProxyBypassList](#proxybypasslist)|Configurar las reglas de omisión de proxy|
-|[ProxyMode](#proxymode)|Configurar los ajustes del servidor proxy|
-|[ProxyPacUrl](#proxypacurl)|Establecer la URL del archivo proxy .pac|
-|[ProxyServer](#proxyserver)|Configurar la dirección o la dirección URL del servidor proxy|
+|[ProxyBypassList](#proxybypasslist)|Configurar las reglas de omisión de proxy (en desuso)|
+|[ProxyMode](#proxymode)|Configurar los ajustes del servidor proxy (en desuso)|
+|[ProxyPacUrl](#proxypacurl)|Establecer la dirección URL del proxy del archivo .pac (en desuso)|
+|[ProxyServer](#proxyserver)|Configurar la dirección o la dirección URL del servidor proxy (en desuso)|
 |[ProxySettings](#proxysettings)|Configuración de proxy|
 ### [*Configuración de SmartScreen*](#smartscreen-settings-policies)
 
@@ -399,6 +416,8 @@ y sugerencias para los servicios Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Administrar la exposición de la dirección IP local por WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir la exposición de la dirección IP local por WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir el rango de puertos UDP locales usados por WebRTC|
+|[WebWidgetAllowed](#webwidgetallowed)|Habilitar el widget web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir el widget web al arrancar Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar la resolución del proxy de Windows (en desuso)|
 
 
@@ -546,7 +565,6 @@ De forma predeterminada, Google Cast está activado.
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: EnableMediaRouter
@@ -608,7 +626,6 @@ Si también ha configurado la directiva [EnableMediaRouter](#enablemediarouter) 
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -687,7 +704,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: AutoSelectCertificateForUrls
@@ -764,7 +780,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: CookiesAllowedForUrls
@@ -839,7 +854,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -920,7 +934,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: CookiesSessionOnlyForUrls
@@ -996,7 +1009,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultCookiesSetting
@@ -1065,7 +1077,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre de clave de preferencias: DefaultFileSystemReadGuardSetting
@@ -1133,7 +1144,6 @@ Use la información anterior al configurar esta directiva.
 ```
 0x00000002
 ```
-
 
   #### Información y configuración de Mac
   
@@ -1205,7 +1215,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultGeolocationSetting
@@ -1273,7 +1282,6 @@ Use la información anterior al configurar esta directiva.
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -1345,7 +1353,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultInsecureContentSetting
@@ -1413,7 +1420,6 @@ Use la información anterior al configurar esta directiva.
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -1485,7 +1491,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultNotificationsSetting
@@ -1556,7 +1561,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultPluginsSetting
@@ -1625,7 +1629,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultPopupsSetting
@@ -1693,7 +1696,6 @@ Use la información anterior al configurar esta directiva.
 ```
 0x00000002
 ```
-
 
   #### Información y configuración de Mac
   
@@ -1765,7 +1767,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultWebUsbGuardSetting
@@ -1831,7 +1832,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.examp
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -1902,7 +1902,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre de clave de preferencias: FileSystemReadBlockedForUrls
@@ -1971,7 +1970,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.exam
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -2042,7 +2040,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre de clave de preferencias: FileSystemWriteBlockedForUrls
@@ -2107,7 +2104,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -2174,7 +2170,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImagesBlockedForUrls
@@ -2239,7 +2234,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -2306,7 +2300,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: InsecureContentBlockedForUrls
@@ -2372,7 +2365,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: JavaScriptAllowedForUrls
@@ -2437,7 +2429,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.conto
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -2510,7 +2501,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: LegacySameSiteCookieBehaviorEnabled
@@ -2579,7 +2569,6 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: LegacySameSiteCookieBehaviorEnabledForDomainList
@@ -2645,7 +2634,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: NotificationsAllowedForUrls
@@ -2710,7 +2698,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.co
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -2779,7 +2766,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: PluginsAllowedForUrls
@@ -2847,7 +2833,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: PluginsBlockedForUrls
@@ -2913,7 +2898,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: PopupsAllowedForUrls
@@ -2978,7 +2962,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -3133,7 +3116,6 @@ Si deshabilita esta opción, las experiencias destacadas y las recomendaciones s
 ```
 0x00000001
 ```
-
 
   
 
@@ -3294,7 +3276,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: WebUsbAskForUrls
@@ -3361,7 +3342,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -3442,7 +3422,6 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderEnabled
@@ -3510,7 +3489,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -3587,7 +3565,6 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderImageURL
@@ -3654,7 +3631,6 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderImageURLPostParams
@@ -3718,7 +3694,6 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 ```
 "mis"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -3785,7 +3760,6 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 ```
 "My Intranet Search"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -3854,7 +3828,6 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -3925,7 +3898,6 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -4004,7 +3976,6 @@ Use la información anterior al configurar esta directiva.
 "bing"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageSetFeedType
@@ -4076,7 +4047,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExtensionAllowedTypes
@@ -4138,7 +4108,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -4206,7 +4175,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -4291,7 +4259,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExtensionInstallForcelist
@@ -4320,9 +4287,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   Defina las direcciones URL que pueden instalar extensiones y temas.
 
-De forma predeterminada, los usuarios tienen que descargar un archivo *.crx para cada extensión o script que quieran instalar, y luego arrastrarlo hasta la página de configuración de Microsoft Edge. Esta directiva permite que las direcciones URL específicas que se utilizan instalen la extensión o el script para el usuario.
+Defina direcciones URL que pueden instalar extensiones y temas directamente, sin tener que arrastrar y soltar los paquetes a la página edge://extensions.
 
-Cada elemento de esta lista es un patrón de coincidencia de estilo de extensión (vea [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Los usuarios pueden instalar fácilmente elementos desde cualquier dirección URL que coincida con un elemento de esta lista. Tanto la ubicación del archivo *.crx como la página desde la que se inicia la descarga (en otras palabras, la de referencia) deben estar permitidas por estos patrones.
+Cada elemento de esta lista es un patrón de coincidencia de estilo de extensión (vea [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Los usuarios pueden instalar fácilmente elementos desde cualquier dirección URL que coincida con un elemento de esta lista. Tanto la ubicación del archivo *.crx como la página desde la que se inicia la descarga (en otras palabras, la de referencia) deben estar permitidas por estos patrones. No hospede los archivos en una ubicación que requiera autenticación.
 
 La directiva [ExtensionInstallBlocklist](#extensioninstallblocklist) tiene prioridad sobre esta directiva. Las extensiones que se encuentren en la lista de bloqueados no se instalarán, incluso si proviene de un sitio de esta lista.
 
@@ -4359,7 +4326,6 @@ La directiva [ExtensionInstallBlocklist](#extensioninstallblocklist) tiene prior
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -4652,7 +4618,6 @@ Generalmente, esto está deshabilitado como defensa contra la suplantación de i
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: AllowCrossOriginAuthPrompt
@@ -4714,7 +4679,6 @@ Si no configura esta directiva, Microsoft Edge no delegará las credenciales de 
 ```
 "contoso.com"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -4778,7 +4742,6 @@ Si no configura esta directiva se utilizarán los cuatro esquemas.
 "basic,digest,ntlm,negotiate"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: AuthSchemes
@@ -4840,7 +4803,6 @@ Si no configura esta directiva, Microsoft Edge intentará detectar si un servido
 ```
 "*contoso.com,contoso.com"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -4904,7 +4866,6 @@ Si deshabilita esta directiva o no la configura, se utilizará el nombre canóni
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DisableAuthNegotiateCnameLookup
@@ -4966,7 +4927,6 @@ Si no configura o desactiva esta directiva, el SPN de Kerberos generado no inclu
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -5099,7 +5059,6 @@ Para obtener información detallada sobre cómo configurar la pantalla completa,
   - En Windows desde la versión 87 o posterior
 
   #### Descripción
-                                                                                              
 
   Esta directiva solo se aplica a la modalidad de exposición de Microsoft Edge.
 
@@ -5141,7 +5100,6 @@ Para obtener información detallada sobre cómo configurar la pantalla completa,
 ```
 0x00000001
 ```
-
 
   
 
@@ -5201,7 +5159,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messag
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -5270,7 +5227,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: NativeMessagingBlocklist
@@ -5335,7 +5291,6 @@ De forma predeterminada, si no configura esta directiva, Microsoft Edge permitir
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -5404,7 +5359,6 @@ Si habilita o deshabilita esta directiva, los usuarios no podrán cambiarla o re
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -5484,7 +5438,6 @@ Obligatorio y Recomendado desactivados: Estos estados funcionarán de la forma h
 0x00000001
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -5543,7 +5496,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 "https://contoso.com/change_password.html"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -5610,7 +5562,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contos
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -5691,7 +5642,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: PasswordProtectionWarningTrigger
@@ -5769,6 +5719,71 @@ Esta directiva solo afecta al botón revelar contraseña del explorador, no afec
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ## Directivas de rendimiento
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### StartupBoostEnabled
+
+  #### Habilitar el impulso de arranque
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows, desde la versión 88 o posterior
+
+  #### Descripción
+
+  Permite que los procesos de Microsoft Edge se inicien en el inicio de sesión del sistema operativo y se reinicie en segundo plano después de cerrar la última ventana del explorador.
+
+Si Microsoft Edge se ejecuta en segundo plano, es posible que el explorador no se cierre cuando se cierre la última ventana y no se reiniciará en segundo plano cuando se cierre la ventana. Vea la directiva [BackgroundModeEnabled](#backgroundmodeenabled) para obtener información sobre lo que sucede después de configurar Microsoft Edge en el modo segundo plano.
+
+Si se habilita esta directiva, se activará el impulso de arranque.
+
+Si se deshabilita esta directiva, se desactivará el impulso de arranque.
+
+Si no configura esta directiva, el impulso de arranque puede estar o no activado en un primer momento. El usuario puede configurarlo en edge://settings/system.
+
+Obtenga más información sobre el impulso de arranque: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: sí
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: StartupBoostEnabled
+  - Nombre de GP: habilitar el impulso de arranque
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Rendimiento
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Rendimiento
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
+  - Nombre del valor: StartupBoostEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ## Directivas de impresión
 
   [Volver al principio](#microsoft-edge---policies)
@@ -5827,7 +5842,6 @@ Omitir un campo significará que todos los valores coinciden; por ejemplo, si no
 ```
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -5893,7 +5907,6 @@ Si habilita esta directiva, los usuarios siempre imprimirán los encabezados y l
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: PrintHeaderFooter
@@ -5956,7 +5969,6 @@ Si habilita esta directiva, la vista previa de impresión utilizará la impresor
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: PrintPreviewUseSystemDefaultPrinter
@@ -6018,7 +6030,6 @@ Si deshabilita esta política, los usuarios no podrán imprimir desde Microsoft 
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -6168,7 +6179,6 @@ Si no configura o deshabilita esta directiva, los comandos de impresión activar
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: UseSystemPrintDialog
@@ -6186,9 +6196,9 @@ Si no configura o deshabilita esta directiva, los comandos de impresión activar
 
   ### ProxyBypassList
 
-  #### Configurar las reglas de omisión de proxy
+  #### Configurar las reglas de omisión de proxy (en desuso)
 
-  
+  >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
   #### Versiones compatibles:
 
@@ -6196,9 +6206,11 @@ Si no configura o deshabilita esta directiva, los comandos de impresión activar
 
   #### Descripción
 
-  Define una lista de hosts para los que Microsoft Edge omite cualquier proxy.
+  Esta directiva está en desuso. En su lugar, use [ProxySettings](#proxysettings). No funciona en la versión 91 de Microsoft Edge.
 
-Esta directiva se aplica solo si ha seleccionado "Usar servidores proxy fijos" en la directiva de [ProxyMode](#proxymode). Si seleccionó cualquier otro modo para configurar directivas de proxy, no habilite ni configure esta directiva.
+Define una lista de hosts para los que Microsoft Edge omite cualquier proxy.
+
+Esta directiva solo se aplica si no se especifica la directiva [ProxySettings](#proxysettings) y si ha seleccionado fixed_servers en la directiva [ProxyMode](#proxymode). Si seleccionó cualquier otro modo para configurar directivas de proxy, no habilite ni configure esta directiva.
 
 Si habilita esta directiva, podrá crear una lista de hosts para los que Microsoft Edge no utiliza un proxy.
 
@@ -6221,7 +6233,7 @@ Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProxyBypassList
-  - Nombre de GP: configurar las reglas de omisión de proxy
+  - Nombre de GP: configurar las reglas de omisión de proxy (en desuso)
   - Ruta de acceso GP: Plantillas administrativas/Microsoft Edge Update/Servidor proxy
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -6239,7 +6251,6 @@ Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ProxyBypassList
@@ -6253,9 +6264,9 @@ Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?
 
   ### ProxyMode
 
-  #### Configurar los ajustes del servidor proxy
+  #### Configurar los ajustes del servidor proxy (en desuso)
 
-  
+  >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
   #### Versiones compatibles:
 
@@ -6263,21 +6274,20 @@ Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?
 
   #### Descripción
 
-  Especifica la configuración del servidor proxy que usa Microsoft Edge. Si habilita esta directiva, los usuarios no podrán cambiar la configuración de proxy.
+  Esta directiva está en desuso. En su lugar, use [ProxySettings](#proxysettings). No funciona en la versión 91 de Microsoft Edge.
 
-Si elige no usar nunca un servidor proxy y conectarse siempre directamente, se ignorarán todas las demás opciones.
+Si configura esta directiva como Habilitada, podrá especificar el servidor proxy que quiere que Microsoft Edge utilice y evitará que los usuarios cambien la configuración del proxy. Microsoft Edge ignorará todas las opciones relacionadas con el proxy especificadas desde la línea de comandos. Esta directiva solo se aplica si no se especifica la directiva [ProxySettings](#proxysettings).
 
-Si elige utilizar la configuración de proxy del sistema, se ignorarán todas las demás opciones.
+Se ignorarán las demás opciones si selecciona una de las siguientes:
+  * direct = no usar nunca un servidor proxy y conectarse siempre de manera directa
+  * system = usar la configuración de proxy del sistema
+  * auto_detect = detectar automáticamente el servidor proxy
 
-Si elige la detección automática del servidor proxy, se ignorarán todas las demás opciones.
-
-Si elige el modo de servidor proxy fijo, puede especificar más opciones en [ProxyServer](#proxyserver) y en 'Lista de reglas de omisión de proxy separadas por comas'.
-
-Si escoge utilizar un script de proxy .pac, deberá especificar la dirección URL del script en "dirección URL de un archivo proxy .pac".
+Si decide usar:
+  * fixed_servers = servidores proxy fijos Puede determinar más opciones con [ProxyServer](#proxyserver) y [ProxyBypassList](#proxybypasslist).
+  * pac_script = un script de proxy .pac. Usa [ProxyPacUrl](#proxypacurl) para configurar la dirección URL en un archivo .pac de proxy.
 
 Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
-
-Si habilita esta directiva, Microsoft Edge ignorará todas las opciones relacionadas con el proxy especificadas desde la línea de comandos.
 
 Si no configura esta directiva, los usuarios podrán elegir su propia configuración de proxy.
 
@@ -6310,7 +6320,7 @@ Use la información anterior al configurar esta directiva.
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProxyMode
-  - Nombre de GP: configurar los ajustes del servidor proxy
+  - Nombre de GP: configurar los ajustes del servidor proxy (en desuso)
   - Ruta de acceso GP: Plantillas administrativas/Microsoft Edge Update/Servidor proxy
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -6328,7 +6338,6 @@ Use la información anterior al configurar esta directiva.
 "direct"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ProxyMode
@@ -6342,9 +6351,9 @@ Use la información anterior al configurar esta directiva.
 
   ### ProxyPacUrl
 
-  #### Establecer la URL del archivo proxy .pac
+  #### Establecer la dirección URL del proxy del archivo .pac (en desuso)
 
-  
+  >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
   #### Versiones compatibles:
 
@@ -6352,9 +6361,11 @@ Use la información anterior al configurar esta directiva.
 
   #### Descripción
 
-  Especifica la dirección URL de un archivo de autoconfiguración de proxy (PAC).
+  Esta directiva está en desuso. En su lugar, use [ProxySettings](#proxysettings). No funciona en la versión 91 de Microsoft Edge.
 
-Esta directiva se aplica sólo si seleccionaste "Usar un script de proxy .pac" en la directiva de [ProxyMode](#proxymode). Si seleccionó cualquier otro modo para configurar directivas de proxy, no habilite ni configure esta directiva.
+Especifica la dirección URL de un archivo de autoconfiguración de proxy (PAC).
+
+Esta directiva solo se aplica si no se especifica la directiva [ProxySettings](#proxysettings) y si ha seleccionado pac_script en la directiva [ProxyMode](#proxymode). Si seleccionó cualquier otro modo para configurar directivas de proxy, no habilite ni configure esta directiva.
 
 Si habilita esta directiva, puede especificar la dirección URL de un archivo PAC, que define cómo el navegador elige automáticamente el servidor proxy apropiado para buscar un sitio web en particular.
 
@@ -6377,7 +6388,7 @@ Para obtener ejemplos más detallados, vea [https://go.microsoft.com/fwlink/?lin
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProxyPacUrl
-  - Nombre de GP: establecer la dirección URL del proxy del archivo .pac
+  - Nombre de GP: establecer la dirección URL del proxy del archivo .pac (en desuso)
   - Ruta de acceso GP: Plantillas administrativas/Microsoft Edge Update/Servidor proxy
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -6395,7 +6406,6 @@ Para obtener ejemplos más detallados, vea [https://go.microsoft.com/fwlink/?lin
 "https://internal.contoso.com/example.pac"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ProxyPacUrl
@@ -6409,9 +6419,9 @@ Para obtener ejemplos más detallados, vea [https://go.microsoft.com/fwlink/?lin
 
   ### ProxyServer
 
-  #### Configurar la dirección o la dirección URL del servidor proxy
+  #### Configurar la dirección o la dirección URL del servidor proxy (en desuso)
 
-  
+  >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
   #### Versiones compatibles:
 
@@ -6419,9 +6429,11 @@ Para obtener ejemplos más detallados, vea [https://go.microsoft.com/fwlink/?lin
 
   #### Descripción
 
-  Especifica la dirección URL del servidor proxy.
+  Esta directiva está en desuso. En su lugar, use [ProxySettings](#proxysettings). No funciona en la versión 91 de Microsoft Edge.
 
-Esta directiva se aplica solo si ha seleccionado "Usar servidores proxy fijos" en la directiva de [ProxyMode](#proxymode). Si seleccionó cualquier otro modo para configurar directivas de proxy, no habilite ni configure esta directiva.
+Especifica la dirección URL del servidor proxy.
+
+Esta directiva solo se aplica si no se especifica la directiva [ProxySettings](#proxysettings) y si ha seleccionado fixed_servers en la directiva [ProxyMode](#proxymode). Si seleccionó cualquier otro modo para configurar directivas de proxy, no habilite ni configure esta directiva.
 
 Si habilita esta directiva, el servidor proxy configurado por la misma se utilizará para todas las direcciones URL.
 
@@ -6444,7 +6456,7 @@ Para obtener más opciones y ejemplos detallados, vea [https://go.microsoft.com/
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProxyServer
-  - Nombre de GP: dirección o la URL del servidor proxy
+  - Nombre de GP: configurar la dirección o la dirección URL del servidor proxy (en desuso)
   - Ruta de acceso GP: Plantillas administrativas/Microsoft Edge Update/Servidor proxy
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -6461,7 +6473,6 @@ Para obtener más opciones y ejemplos detallados, vea [https://go.microsoft.com/
 ```
 "123.123.123.123:8080"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -6499,23 +6510,20 @@ Esta directiva reemplaza las siguientes directivas individuales:
 [ProxyServer](#proxyserver)
 [ProxyBypassList](#proxybypasslist)
 
-El campo ProxyMode permite especificar el servidor proxy utilizado por Microsoft Edge y evita que los usuarios cambien la configuración del proxy.
+La configuración de la directiva [ProxySettings](#proxysettings) acepta los siguientes campos:
+  * ProxyMode, que permite especificar el servidor proxy utilizado por Microsoft Edge y evita que los usuarios cambien la configuración del proxy
+  * ProxyPacUrl, una dirección URL a un archivo proxy .pac
+  * ProxyServer, una dirección URL para el servidor proxy
+  * ProxyBypassList, una lista de hosts proxy que Microsoft Edge omite
 
-El campo ProxyPacUrl es una dirección URL a un archivo proxy. PAC.
+Para ProxyMode, si elige el valor:
+  * direct: no usa un proxy y todos los demás campos se omiten.
+  * system: usa un proxy del sistema y todos los demás campos se omiten.
+  * auto_detect: los demás campos se omiten.
+  * fixed_server: se usan los campos ProxyServer y ProxyBypassList.
+  * pac_script: se usan los campos ProxyPacUrl y ProxyBypassList.
 
-El campo ProxyServer es una URL para el servidor proxy.
-
-El campo ProxyBypassList es una lista de hosts proxy que Microsoft Edge omite.
-
-Si elige el valor "Direct" como "ProxyMode", nunca se utilizará un proxy y se ignorarán todos los demás campos.
-
-Si elige el valor "Direct" como "ProxyMode", nunca se utilizará un proxy y se ignorarán todos los demás campos.
-
-Si elige el valor "auto_detect" como "ProxyMode", se ignorará todos los demás campos.
-
-Si elige el valor "fixed_server" como "ProxyMode", se usarán los campos "ProxyServer" y "ProxyBypassList".
-
-Si elige el valor "pac_script" como "ProxyMode", se usarán los campos "ProxyPacUrl" y "ProxyBypassList".
+Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### Características admitidas:
 
@@ -6640,7 +6648,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia:PreventSmartScreenPromptOverride
@@ -6705,7 +6712,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -6773,7 +6779,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -6844,7 +6849,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: SmartScreenEnabled
@@ -6909,7 +6913,6 @@ Esta directiva solo está disponible en las instancias de Windows que están uni
 0x00000000
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -6968,7 +6971,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -7040,7 +7042,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: HomepageIsNewTabPage
@@ -7108,7 +7109,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 "https://www.contoso.com"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -7179,7 +7179,6 @@ Use la información anterior al configurar esta directiva.
 ```
 0x00000002
 ```
-
 
   #### Información y configuración de Mac
   
@@ -7347,7 +7346,6 @@ Si establece esta directiva como falsa o no la configura, los iconos del sitio s
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageHideDefaultTopSites
@@ -7417,7 +7415,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 "https://www.fabrikam.com"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -7578,7 +7575,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre de clave de preferencias: NewTabPagePrerenderEnabled
@@ -7661,7 +7657,6 @@ Use la información anterior al configurar esta directiva.
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageSetFeedType
@@ -7740,7 +7735,6 @@ Use la información anterior al configurar esta directiva.
 0x00000004
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: RestoreOnStartup
@@ -7804,7 +7798,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -7871,7 +7864,6 @@ Si no configura la directiva, los usuarios pueden elegir si se muestra el botón
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ShowHomeButton
@@ -7935,7 +7927,6 @@ Si habilitó el conjunto de directivas que fuerza a un proveedor de búsqueda pr
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -8003,7 +7994,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: AdsSettingForIntrusiveAdsSites
@@ -8033,7 +8023,7 @@ Tenga en cuenta que incluso con esta directiva deshabilitada, no se garantiza la
 
 Si habilita esta directiva o no la configura, los usuarios podrán eliminar el historial de exploración y descarga.
 
-Si deshabilita esta directiva, los usuarios no podrán eliminar el historial de exploración y descarga.
+Si deshabilita esta directiva, los usuarios no podrán eliminar el historial de exploración y descarga y se deshabilitará la sincronización del historial.
 
 Si deshabilita esta directiva, no habilite la directiva de [ClearBrowsingDataOnExit](#clearbrowsingdataonexit), porque ambas se ocupan de la eliminación de datos. Si habilita ambas directivas, la directiva [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) tendrá prioridad y eliminará todos los datos cuando se cierre Microsoft Edge, independientemente de cómo haya configurado esta directiva.
 
@@ -8069,7 +8059,6 @@ Si deshabilita esta directiva, no habilite la directiva de [ClearBrowsingDataOnE
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -8132,7 +8121,6 @@ Si se deshabilita esta directiva, siempre que el usuario realice una acción que
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -8198,7 +8186,6 @@ En el futuro se eliminará esta directiva.
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: AllowPopupsDuringPageUnload
@@ -8258,7 +8245,6 @@ Si habilita o no configura esta directiva, los usuarios podrán jugar al juego d
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -8323,7 +8309,6 @@ Si deshabilita esta directiva o no la configura, las páginas no podrán enviar 
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -8394,7 +8379,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -8451,7 +8435,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -8521,7 +8504,6 @@ En concreto, hay una **sugerir páginas similares cuando no se puede encontrar u
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: AlternateErrorPagesEnabled
@@ -8583,7 +8565,6 @@ Si no configura esta directiva o la deshabilita, Microsoft Edge abrirá archivos
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -8669,7 +8650,6 @@ Use la información anterior al configurar esta directiva.
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: AmbientAuthenticationInPrivateModesEnabled
@@ -8729,7 +8709,6 @@ Si establece esta directiva en falso, o no la establece, AppCache seguirá las o
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -8793,7 +8772,6 @@ Si deshabilita o no configura esta opción, Microsoft Edge usa la configuración
 "en"
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -8850,7 +8828,6 @@ Esta directiva afecta a todos los tipos de entradas de audio, no solo al micróf
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -8911,7 +8888,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -8982,7 +8958,6 @@ Esta directiva está pensada para ofrecer a las empresas la flexibilidad necesar
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -9096,7 +9071,6 @@ Use la información anterior al configurar esta directiva.
 ```
 0x00000002
 ```
-
 
   #### Información y configuración de Mac
   
@@ -9295,7 +9269,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre de clave de preferencias: AutoOpenAllowedForURLs
@@ -9372,7 +9345,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre de clave de preferencias: AutoOpenFileTypes
@@ -9440,7 +9412,6 @@ Tenga en cuenta que si deshabilita esta directiva, también detendrá toda la ac
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: AutofillAddressEnabled
@@ -9502,7 +9473,6 @@ Si habilita esta directiva o no la configura, los usuarios podrán controlar la 
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -9571,7 +9541,6 @@ Será necesario cerrar y volver a abrir una cuenta para que esta directiva tenga
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: AutoplayAllowed
@@ -9636,7 +9605,6 @@ Si no configura esta directiva, el modo en segundo plano se desactivará inicial
 0x00000001
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -9691,7 +9659,6 @@ Si deshabilita esta configuración, la lista de plantillas disponibles se descar
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -9765,7 +9732,6 @@ Por favor, vea[https://go.microsoft.com/fwlink/?linkid=2119711](https://go.micro
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: BingAdsSuppression
@@ -9830,7 +9796,6 @@ Si no configura esta directiva, las cookies de terceros se habilitan, pero los u
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: BlockThirdPartyCookies
@@ -9891,7 +9856,6 @@ Si desactiva esta directiva, los usuarios no podrán agregar nuevos perfiles des
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -9955,7 +9919,6 @@ Si deshabilita esta directiva, Microsoft Edge no permite a los usuarios explorar
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: BrowserGuestModeEnabled
@@ -10017,7 +9980,6 @@ Si habilita o no configura esta directiva, Microsoft Edge enviará ocasionalment
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -10095,7 +10057,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: BrowserSignin
@@ -10161,7 +10122,6 @@ Si no configura esta Directiva, el cliente DNS integrado está habilitado de for
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -10274,7 +10234,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: CertificateTransparencyEnforcementDisabledForCas
@@ -10346,7 +10305,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: CertificateTransparencyEnforcementDisabledForLegacyCas
@@ -10415,7 +10373,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -10486,7 +10443,6 @@ Para impedir que se eliminen las cookies al salir, configure la directiva [SaveC
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ClearBrowsingDataOnExit
@@ -10552,7 +10508,6 @@ Si deshabilita esta Directiva, no habilite la Directiva de [ ClearBrowsingDataOn
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -10622,7 +10577,6 @@ Para obtener más información sobre ClickOnce, vea [https://go.microsoft.com/fw
 0x00000000
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -10648,6 +10602,8 @@ Si no configura esta Directiva, no se aplicarán restricciones sobre los servici
 Asignación de opciones de directiva:
 
 * pinterest_suggestions (pinterest_suggestions) = sugerencias de Pinterest
+
+* collections_share (collections_share) = uso compartido de colecciones
 
 Use la información anterior al configurar esta directiva.
 
@@ -10682,9 +10638,9 @@ Use la información anterior al configurar esta directiva.
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -10693,6 +10649,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ``` xml
 <array>
   <string>pinterest_suggestions</string>
+  <string>collections_share</string>
 </array>
 ```
   
@@ -10751,7 +10708,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -10814,7 +10770,6 @@ Sin embargo, en esta directiva se omiten algunos componentes. Esto incluye cualq
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -10880,7 +10835,6 @@ Si no configura esta directiva, los usuarios podrán elegir si enviar estas soli
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ConfigureDoNotTrack
@@ -10901,6 +10855,7 @@ Si no configura esta directiva, los usuarios podrán elegir si enviar estas soli
   #### Versiones compatibles:
 
   - En Windows desde la versión 87 o posterior
+  - En macOS, desde la versión 88 o posterior
 
   #### Descripción
 
@@ -10963,6 +10918,13 @@ Use la información anterior al configurar esta directiva.
 0x00000003
 ```
 
+  #### Información y configuración de Mac
+  
+  - Nombre de clave de preferencia: ConfigureFriendlyURLFormat
+  - Valor de ejemplo:
+``` xml
+<integer>3</integer>
+```
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -11028,7 +10990,6 @@ Use la información anterior al configurar esta directiva.
 0x00000000
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -11085,7 +11046,6 @@ Obtenga más información sobre esta característica aquí: API SpeechSynthesis:
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -11155,7 +11115,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -11212,7 +11171,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -11278,7 +11236,6 @@ Si deshabilita esta directiva, no se llevarán a cabo las comprobaciones de inte
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DNSInterceptionChecksEnabled
@@ -11343,7 +11300,6 @@ Nota para los administradores de Windows: esta directiva solo funciona en los or
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultBrowserSettingEnabled
@@ -11407,7 +11363,6 @@ El valor de la directiva solo se aplica cuando la directiva [DefaultSearchProvid
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -11481,7 +11436,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSensorsSetting
@@ -11553,7 +11507,6 @@ Use la información anterior al configurar esta directiva.
 ```
 0x00000002
 ```
-
 
   #### Información y configuración de Mac
   
@@ -11629,7 +11582,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -11684,7 +11636,6 @@ Si establece esta directiva como "deshabilitada", o si no está configurada, los
 ```
 0x00000000
 ```
-
 
   
 
@@ -11752,7 +11703,6 @@ Use la información anterior al configurar esta directiva.
 ```
 0x00000002
 ```
-
 
   #### Información y configuración de Mac
   
@@ -11840,7 +11790,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre de clave de preferencias: DiagnosticData
@@ -11907,7 +11856,6 @@ Para obtener más información acerca de DirectInvoke, vea [https://go.microsoft
 0x00000000
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -11962,7 +11910,6 @@ Si establece la directiva [HardwareAccelerationModeEnabled](#hardwareacceleratio
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -12028,7 +11975,6 @@ Tenga en cuenta que esta directiva controla las capturas de pantalla tomadas des
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DisableScreenshots
@@ -12093,7 +12039,6 @@ Si no configura esta directiva, se usará el directorio de caché predeterminado
 "${user_home}/Edge_cache"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DiskCacheDir
@@ -12157,7 +12102,6 @@ Si no configura esta Directiva, se usará el tamaño predeterminado, pero los us
 ```
 0x06400000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -12235,7 +12179,6 @@ Use la información anterior al configurar esta directiva.
 "off"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DnsOverHttpsMode
@@ -12302,7 +12245,6 @@ Las plantillas con un formato incorrecto serán omitidas.
 "https://dns.example.net/dns-query{?dns}"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DnsOverHttpsTemplates
@@ -12368,7 +12310,6 @@ Si no existe la carpeta especificada por la ruta de acceso, la descarga activar�
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -12454,7 +12395,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: DownloadRestrictions
@@ -12516,7 +12456,6 @@ Si deshabilita esta directiva, los usuarios no podrán acceder ni usar las colec
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -12640,7 +12579,6 @@ Deshabilite esta directiva para evitar que los usuarios puedan agregar, quitar o
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: EditFavoritesEnabled
@@ -12659,7 +12597,6 @@ Deshabilite esta directiva para evitar que los usuarios puedan agregar, quitar o
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Versiones compatibles:
-            
 
   - On Windows and macOS since 77, until 86
 
@@ -12716,7 +12653,6 @@ Use la información anterior al configurar esta directiva.
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -12790,7 +12726,6 @@ Si no configura esta directiva, la lista de acciones del dominio se seguirá des
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: EnableDomainActionsDownload
@@ -12852,7 +12787,6 @@ Si deshabilita la directiva o no la configura, Microsoft Edge no realizará comp
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -12918,7 +12852,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: EnableSha1ForLocalAnchors
@@ -12978,7 +12911,6 @@ Esta directiva también se aplica a las extensiones de los componentes.
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -13041,7 +12973,6 @@ Si deshabilita o no configura esta directiva, los usuarios no verán el botón d
 ```
 0x00000000
 ```
-
 
   
 
@@ -13112,7 +13043,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -13201,7 +13131,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExperimentationAndConfigurationServiceControl
@@ -13270,7 +13199,6 @@ A partir de Microsoft Edge 84, si no configura esta directiva, cuando se muestre
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExternalProtocolDialogShowAlwaysOpenCheckbox
@@ -13332,7 +13260,6 @@ Si deshabilita esta directiva, no se mostrará la página de seguridad familiar.
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -13397,7 +13324,6 @@ Si no se configura esta directiva, el usuario podrá optar por usar la barra de 
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -13475,7 +13401,6 @@ Use la información anterior al configurar esta directiva.
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceBingSafeSearch
@@ -13537,7 +13462,6 @@ Si establece esta directiva como falsa o no la configura, Microsoft Edge selecci
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -13603,7 +13527,6 @@ En el modo efímero, los datos del perfil solo se guardarán en el disco mientra
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceEphemeralProfiles
@@ -13665,7 +13588,6 @@ Si deshabilita esta directiva o no la configura, no se aplicará la búsqueda se
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -13731,7 +13653,6 @@ Esta directiva de empresa está deshabilitada de forma predeterminada.
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceLegacyDefaultReferrerPolicy
@@ -13794,7 +13715,6 @@ Esta directiva está deshabilitada forma predeterminada Al habilitarla, los usua
 0x00000000
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -13853,7 +13773,6 @@ Para que esta directiva funcione correctamente, la directiva [BrowserSignin](#br
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -13929,7 +13848,6 @@ Use la información anterior al configurar esta directiva.
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceYouTubeRestrict
@@ -13994,7 +13912,6 @@ No se puede abrir Microsoft Edge en el modo de pantalla completa usando la líne
 0x00000001
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -14053,7 +13970,6 @@ Esta directiva está pensada para que las empresas que dependen del comportamien
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -14123,7 +14039,6 @@ Los términos de búsqueda populares de una sola palabra requerirán de la selec
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: GoToIntranetSiteForSingleWordEntryInAddressBar
@@ -14182,7 +14097,6 @@ Los términos de búsqueda populares de una sola palabra requerirán de la selec
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -14245,7 +14159,6 @@ Si deshabilita esta directiva, también se deshabilitará la aceleración de har
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -14330,7 +14243,6 @@ Nota: Las opciones específicas de configuración que se muestran al usuario en 
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -14457,7 +14369,6 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportAutofillFormData
@@ -14526,7 +14437,6 @@ También puede establecer esta directiva como una recomendación. Esto significa
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportBrowserSettings
@@ -14592,7 +14502,6 @@ También puede establecer esta directiva como una recomendación. Esto quiere de
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -14662,7 +14571,6 @@ También puede establecer esta directiva como una recomendación. Esto significa
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportExtensions
@@ -14730,7 +14638,6 @@ También puede establecer esta directiva como una recomendación. Esto significa
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -14800,7 +14707,6 @@ También puede establecer esta directiva como una recomendación. Esto significa
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportHistory
@@ -14868,7 +14774,6 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -14938,7 +14843,6 @@ También puede establecer esta directiva como una recomendación. Esto significa
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportOpenTabs
@@ -15006,7 +14910,6 @@ También puede establecer esta directiva como una recomendación. Esto significa
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -15076,7 +14979,6 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportSavedPasswords
@@ -15145,7 +15047,6 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportSearchEngine
@@ -15211,7 +15112,6 @@ También puede establecer esta directiva como una recomendación. Esto quiere de
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -15287,7 +15187,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: InPrivateModeAvailability
@@ -15347,7 +15246,6 @@ Si deshabilita esta directiva, no se mostrarán advertencias para formularios no
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -15415,7 +15313,6 @@ Tenga en cuenta que la Directiva se aplica por cada proceso del representador, c
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -15493,7 +15390,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -15555,7 +15451,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -15606,7 +15501,6 @@ Use la información anterior al configurar esta directiva.
 ```
 "https://internal.contoso.com/sitelist.xml"
 ```
-
 
   
 
@@ -15683,7 +15577,6 @@ Use la información anterior al configurar esta directiva.
 0x00000000
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -15700,15 +15593,17 @@ Use la información anterior al configurar esta directiva.
 
   #### Descripción
 
-  Esta directiva es un sustituto de la directiva de marca de pruebas del modo IE. Permite a los usuarios abrir una pestaña en modo IE desde la opción del menú de la interfaz de usuario.
+  Esta directiva permite a los usuarios comprobar aplicaciones en el modo de Internet Explorer abriendo una pestaña del modo de Internet Explorer en Microsoft Edge.
+
+Los usuarios lo pueden hacer desde la opción "Abrir sitios en el modo de Internet Explorer" del el menú "Más herramientas".
+
+Además, los usuarios pueden probar sus aplicaciones en un explorador moderno sin desinstalarlas de la lista de sitios con la opción "Abrir sitios en modo de Edge".
 
 Esta configuración funciona conjuntamente con: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) establecida en "IEMode" y la directiva [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) donde la lista tiene al menos una entrada.
 
-Si habilita esta directiva, los usuarios podrán abrir la pestaña en modo IE desde la opción de la interfaz de usuario y desplazarse por el sitio actual hasta un sitio en modo IE.
+Si habilita esta directiva, la opción "Abrir sitios en el modo de Internet Explorer" estará visible en "Más herramientas". Los usuarios pueden visualizar sus sitios en el modo de Internet Explorer en esta pestaña. En "Más herramientas" estará visible otra opción para "Abrir sitios en modo de Edge" para ayudar a probar sitios en un explorador moderno sin desistalarlos de la lista de sitios.
 
-Si deshabilita esta directiva, los usuarios no podrán ver la opción de la interfaz de usuario directamente en el menú.
-
-Si no configura esta directiva, podrá configurar la marca de pruebas del modo IE de forma manual.
+Si deshabilita o no configura esta directiva, los usuarios no podrán ver las opciones "Abrir en el modo de Internet Explorer" ni "Abrir en el modo de Edge" en el menú "Más herramientas". Sin embargo, los usuarios pueden configurar estas opciones con la marca --ie-mode-test.
 
   #### Características admitidas:
 
@@ -15742,7 +15637,6 @@ Si no configura esta directiva, podrá configurar la marca de pruebas del modo I
 ```
 0x00000000
 ```
-
 
   
 
@@ -15802,7 +15696,6 @@ Si no configura esta directiva, el usuario podrá cambiar esta configuración ma
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -15871,7 +15764,6 @@ Para finalizar la aplicación de esta directiva, es necesario que se reinicie el
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -16232,7 +16124,6 @@ Si no configura esta directiva, se usará el valor predeterminado (32).
 0x00000020
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: MaxConnectionsPerProxy
@@ -16296,7 +16187,6 @@ Si la Directiva [EnableMediaRouter](#enablemediarouter) está deshabilitada, no 
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -16368,7 +16258,6 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: MetricsReportingEnabled
@@ -16433,7 +16322,6 @@ Si no se establece esta directiva, se habilitará la detección de ventanas ocul
 0x00000001
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -16492,7 +16380,6 @@ Si no configura esta Directiva, se usará el tiempo de espera predeterminado de 
 ```
 0x0000000a
 ```
-
 
   
 
@@ -16558,7 +16445,6 @@ Use la información anterior al configurar esta directiva.
 ```
 0x00000002
 ```
-
 
   #### Información y configuración de Mac
   
@@ -16626,7 +16512,6 @@ Esta directiva solo está disponible en las instancias de Windows que están uni
 0x00000001
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -16685,7 +16570,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -16752,7 +16636,6 @@ Si habilita o no establece esta directiva, los sitios web podrán comprobar si e
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: PaymentMethodQueryEnabled
@@ -16814,7 +16697,6 @@ Si deshabilita esta directiva, los usuarios no podrán cambiar ni reemplazar est
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -16880,7 +16762,6 @@ Las opciones de configuración del usuario para habilitar o deshabilitar el asis
 0x00000000
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -16937,7 +16818,6 @@ Si no configura esta directiva, se habilitará la autenticación proactiva.
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -17001,7 +16881,6 @@ Si deshabilita (establecido como falso) esta directiva, Microsoft Edge no podrá
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: PromotionalTabsEnabled
@@ -17063,7 +16942,6 @@ Si no configura esta directiva, el usuario podrá cambiar su configuración.
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -17128,7 +17006,6 @@ QUIC es un protocolo red de la capa de transporte que puede mejorar el rendimien
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -17215,8 +17092,6 @@ Para obtener más información sobre esta Directiva, vea [https://go.microsoft.c
   Esta configuración le permite especificar si Internet Explorer va a redirigir las navegaciones a los sitios que requieran un explorador moderno para Microsoft Edge.
 
 Si no configura esta Directiva o la configura en "sitelist", comenzando en M87, Internet Explorer redirigirá los sitios que requieran un explorador moderno a Microsoft Edge.
-
-Microsoft proporciona una lista de sitios públicos que requieren el redireccionamiento, como https://mail.yahoo.com.
 
 Cuando se redirige un sitio de Internet Explorer a Microsoft Edge, la pestaña de Internet Explorer que comenzó a cargar el sitio se cierra si no tenía contenido anterior. En caso contrario, se desplazará hasta una página de ayuda de Microsoft en la que se explica por qué el sitio se redirigió a Microsoft Edge.
 
@@ -17334,7 +17209,6 @@ Use la información anterior al configurar esta directiva.
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: RelaunchNotification
@@ -17397,7 +17271,6 @@ Si no se establece, se usa el período predeterminado de 604,8 millones de milis
 0x240c8400
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: RelaunchNotificationPeriod
@@ -17458,7 +17331,6 @@ Si se deshabilita esta directiva, la seguridad y la estabilidad de Microsoft Edg
 0x00000000
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -17513,7 +17385,6 @@ Si no configura o deshabilita esta directiva, entonces Microsoft Edge usará la 
 ```
 0x00000000
 ```
-
 
   
 
@@ -17574,7 +17445,6 @@ Específicamente, hay un botón de alternancia **Usar un servicio web para ayuda
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -17637,7 +17507,6 @@ Si no se configura esta directiva o la deja en blanco, los usuarios podrán conf
 ```
 ".*@contoso.com"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -17703,7 +17572,6 @@ Si no configura esta Directiva, se usará la ruta de acceso del perfil móvil pr
 "${roaming_app_data}\\edge-profile"
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -17761,7 +17629,6 @@ Consulte https://docs.microsoft.com/windows-server/storage/folder-redirection/de
 0x00000001
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -17816,7 +17683,6 @@ Si deshabilita o no configura esta directiva, es posible que el contenido de Ado
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -17880,7 +17746,6 @@ Si deshabilita esta directiva, se bloqueará a los usuarios para que no puedan h
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: SSLErrorOverrideAllowed
@@ -17904,7 +17769,7 @@ Si deshabilita esta directiva, se bloqueará a los usuarios para que no puedan h
 
   #### Descripción
 
-  Sets the minimum supported version of TLS. Si no configura esta directiva, Microsoft Edge usará una versión mínima predeterminada, TLS 1.0.
+  Sets the minimum supported version of TLS. Si no configura esta directiva, Microsoft Edge mostrará un error para TLS 1.0 y TLS 1.1, pero el usuario podrá omitirlo.
 
 If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Los valores no reconocidos serán ignorados.
 
@@ -17950,7 +17815,6 @@ Use la información anterior al configurar esta directiva.
 ```
 "tls1"
 ```
-
 
   #### Información y configuración de Mac
   
@@ -18023,7 +17887,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre de clave de preferencias: SaveCookiesOnExit
@@ -18089,7 +17952,6 @@ Si deshabilita o no configura esta directiva, se guardará el historial de explo
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: SavingBrowserHistoryDisabled
@@ -18148,7 +18010,6 @@ Si deshabilita esta directiva, las llamadas a las API de uso compartido de panta
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -18211,7 +18072,6 @@ Si deshabilita esta directiva, también se deshabilitará el desplazamiento de l
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -18277,7 +18137,6 @@ Si no se establece esta directiva, se habilitarán las sugerencias de búsqueda,
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: SearchSuggestEnabled
@@ -18339,7 +18198,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: SecurityKeyPermitAttestation
@@ -18399,7 +18257,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 0x00000001
 ```
-
 
   
 
@@ -18461,7 +18318,6 @@ Para habilitar esta directiva, debe establecer [MetricsReportingEnabled](#metric
 ```
 0x00000000
 ```
-
 
   #### Información y configuración de Mac
   
@@ -18530,7 +18386,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -18603,7 +18458,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de las preferencias: SensorsBlockedForUrls
@@ -18674,7 +18528,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -18747,7 +18600,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: SerialBlockedForUrls
@@ -18812,7 +18664,6 @@ Si deshabilita esta directiva, el método abreviado no se muestra.
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: ShowOfficeShortcutInFavoritesBar
@@ -18874,7 +18725,6 @@ Si esta directiva está deshabilitada, los intercambios firmados por HTTP no pod
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -18938,7 +18788,6 @@ Si deshabilita o no configura esta directiva, el usuario podrá optar por no rec
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -19064,7 +18913,6 @@ Si deshabilita esta directiva, el usuario no podrá usar la revisión ortográfi
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: SpellcheckEnabled
@@ -19135,7 +18983,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -19199,7 +19046,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -19258,7 +19104,6 @@ Esta directiva no afecta otros tipos de contenido mixto que no sean audio, víde
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -19320,7 +19165,6 @@ Si esta directiva tiene un valor falso o no está establecido, las advertencias 
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: SuppressUnsupportedOSWarning
@@ -19380,7 +19224,6 @@ Si no establece o aplica esta directiva como se recomienda, los usuarios podrán
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -19444,7 +19287,6 @@ Los usuarios no podrán reemplazar los tipos de datos deshabilitados.
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -19513,7 +19355,6 @@ Se puede usar esta directiva para comprobar los proxis afectados y actualizarlos
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -19586,7 +19427,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre de clave de preferencias: TLSCipherSuiteDenyList
@@ -19655,7 +19495,6 @@ Si desactiva esta directiva, no se congelarán las pestañas.
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: TabFreezingEnabled
@@ -19713,7 +19552,6 @@ Si desactiva esta directiva, no se congelarán las pestañas.
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -19776,7 +19614,6 @@ Si no establece esta directiva, el explorador solo intentará ahorrar memoria cu
 ```
 0x00000800
 ```
-
 
   #### Información y configuración de Mac
   
@@ -19850,7 +19687,6 @@ Use la información anterior al configurar esta directiva.
 0x00000002
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: TrackingPrevention
@@ -19915,7 +19751,6 @@ Si no configura la directiva, los usuarios podrán elegir si desean usar la func
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: TranslateEnabled
@@ -19938,7 +19773,6 @@ Si no configura la directiva, los usuarios podrán elegir si desean usar la func
   - En Windows y MacOS desde 77 o posterior
 
   #### Descripción
-                    
 
   El establecimiento de la Directiva permite tener acceso a las direcciones URL indicadas, como excepciones para [URLBlocklist](#urlblocklist).
 
@@ -19991,7 +19825,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -20075,7 +19908,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: URLBlocklist
@@ -20149,7 +19981,6 @@ Si habilita o no configura esta directiva, se habilitará la característica Use
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: UserAgentClientHintsEnabled
@@ -20216,7 +20047,6 @@ Vea [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
 "${users}/${user_name}/Edge"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: UserDataDir
@@ -20279,7 +20109,6 @@ Si define esta directiva, las instantáneas antiguas se eliminarán según sea n
 0x00000003
 ```
 
-
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -20334,7 +20163,6 @@ Si deshabilita esta directiva, los usuarios no podrán invocar la característic
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -20400,7 +20228,6 @@ Esta directiva afecta todos los tipos de entradas de vídeo, no solo a la cámar
 0x00000000
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: VideoCaptureAllowed
@@ -20460,7 +20287,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -20528,7 +20354,6 @@ Independientemente de si esta directiva está habilitada, los usuarios no podrá
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -20745,7 +20570,6 @@ Si establece esta directiva como falsa o no la establece, las características d
 0x00000001
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: WebComponentsV0Enabled
@@ -20763,7 +20587,6 @@ Si establece esta directiva como falsa o no la establece, las características d
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-                     
   #### Versiones compatibles:
 
   - En Windows y MacOS desde el 77 hasta el 84
@@ -20811,7 +20634,6 @@ Si la directiva está deshabilitada o no está configurada, WebDriver no podrá 
 ```
 0x00000001
 ```
-
 
   #### Información y configuración de Mac
   
@@ -20880,7 +20702,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.cont
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
-
 
   #### Información y configuración de Mac
   
@@ -20961,7 +20782,6 @@ Use la información anterior al configurar esta directiva.
 "default"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: WebRtcLocalhostIpHandling
@@ -21024,7 +20844,6 @@ Si no configura esta directiva, o si la establece con una cadena vacía o un int
 "10000-11999"
 ```
 
-
   #### Información y configuración de Mac
   
   - Nombre clave de preferencia: WebRtcUdpPortRange
@@ -21032,6 +20851,130 @@ Si no configura esta directiva, o si la establece con una cadena vacía o un int
 ``` xml
 <string>10000-11999</string>
 ```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Habilitar el widget web
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows, desde la versión 88 o posterior
+
+  #### Descripción
+
+  Habilita el widget web. Cuando se habilita, los usuarios pueden usar el widget para buscar la web desde su escritorio o desde una aplicación. El widget ofrece un cuadro de búsqueda en el que se muestran las web sugeridas y abre todas las búsquedas web en Microsoft Edge. El cuadro de búsqueda ofrece búsquedas (con tecnología de Bing) y sugerencias de direcciones URL. El widget también incluye iconos de fuentes en los que los usuarios pueden clicar y ver más información sobre msn.com en una nueva ventana o pestaña del explorador Microsoft Edge. Los iconos de las fuentes pueden incluir anuncios. El widget se puede iniciar desde la configuración de Microsoft Edge o desde el menú "Más herramientas" de Microsoft Edge.
+
+Si habilita o no configura esta directiva: el widget web se habilitará de manera automática para todos los perfiles.
+En la configuración de Microsoft Edge, los usuarios verán la opción para iniciar el widget.
+En la configuración de Microsoft Edge, los usuarios verán el elemento de menú para ejecutar el widget cuando se arranque Windows (inicio automático).
+La opción para habilitar el widget en el momento del arranque estará activada si se habilita la directiva [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup).
+Si la directiva [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) está deshabilitada o no se configura, la opción para habilitar el widget en el momento del arranque estará desactivada.
+Los usuarios verán el elemento de menú para iniciar el widget desde el menú "Más herramientas" de Microsoft Edge. Los usuarios pueden iniciar el widget desde "Más herramientas".
+El widget se puede desactivar con la opción "Salir" en la bandeja del sistema o si se cierra el widget desde la barra de tareas. El widget se reiniciará cuando se reinicie el sistema si se ha habilitado el inicio automático.
+
+Si se deshabilita esta directiva: el widget web estará deshabilitado para todos los perfiles.
+La opción de iniciar el widget desde Configuración de Microsoft Edge estará deshabilitada.
+La opción para que le widget se inicie en el momento del arranque de Windows (inicio automático) estará deshabilitada.
+La opción de iniciar el widget desde el menú "Más herramientas" de Microsoft Edge estará deshabilitada.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: WebWidgetAllowed
+  - Nombre de GP: habilitar el widget web
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/D
+  - Nombre del valor: WebWidgetAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Permitir el widget web al arrancar Windows
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows, desde la versión 88 o posterior
+
+  #### Descripción
+
+  Permite que el widget web empiece a iniciarse al arrancar Windows.
+
+Si lo habilita: el widget web se empezará a iniciar de manera predeterminada al arrancar Windows.
+Si el widget se deshabilita a través de la directiva [WebWidgetAllowed](#webwidgetallowed), esta directiva no iniciará el widget al arrancar Windows.
+
+Si se deshabilita esta directiva: el widget web no se iniciará al arrancar Windows en ninguno de los perfiles.
+La opción para iniciar el widget al arrancar Windows se deshabilitará y se desactivará en la configuración de Microsoft Edge.
+
+Si no configura esta directiva: el widget web no se iniciará al arrancar Windows en ninguno de los perfiles.
+La opción para iniciar el widget al arrancar Windows estará desactivado en la configuración de Microsoft Edge.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: WebWidgetIsEnabledOnStartup
+  - Nombre de GP: permitir el widget web al arrancar Windows
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/D
+  - Nombre del valor: WebWidgetIsEnabledOnStartup
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
   
 
   [Volver al principio](#microsoft-edge---policies)
@@ -21090,7 +21033,6 @@ Si deshabilita o no configura esta Directiva, se usará la resolución de proxy 
 ```
 0x00000001
 ```
-
 
   
 
