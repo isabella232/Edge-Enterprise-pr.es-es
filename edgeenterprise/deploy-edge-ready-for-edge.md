@@ -3,19 +3,19 @@ title: Preparado para Microsoft Edge
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/04/2020
+ms.date: 11/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Preparado para Microsoft Edge
-ms.openlocfilehash: 06fd37dfa910c05db091cf764552ec93471dcbef
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: eb4f03fd831eda4b4773b87469ceeb896e3fe08a
+ms.sourcegitcommit: 2e8906d1090263efe83d628be06dbe910cb82bf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155372"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "11157693"
 ---
 # Preparado para Microsoft Edge
 
@@ -24,6 +24,17 @@ En el artículo se proporciona información para los administradores de TI que p
 ## Compatibilidad de aplicaciones web y soporte
 
 Para facilitarte planear la implementación de Microsoft Edge, hemos compilado una lista de aplicaciones web que puede que use tu organización. Esta lista te permite determinar si la aplicación web está preparada para Microsoft Edge, según se indique en la declaración de soporte técnico pública del proveedor de aplicaciones Web.
+
+### Agregar a la lista de aplicaciones
+
+La lista se actualiza regularmente a como que se identifican las instrucciones de soporte de los comentarios de compromiso del cliente.
+
+Si eres un proveedor de aplicaciones web y le gustaría incluir la declaración de soporte en la referencia de los clientes, por favor envíe por correo la siguiente información a [isvoutreach@microsoft.com](mailto:isvoutreach@microsoft.com).
+
+- Nombre del producto
+- Versión compatible (si es aplicable)
+- Nombre del proveedor
+- URL de declaración de soporte técnico
 
 ### Lista de aplicaciones
 
