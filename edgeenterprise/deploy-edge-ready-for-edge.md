@@ -27,9 +27,9 @@ Para facilitarte planear la implementación de Microsoft Edge, hemos compilado u
 
 ### Agregar a la lista de aplicaciones
 
-La lista se actualiza regularmente a como que se identifican las instrucciones de soporte de los comentarios de compromiso del cliente.
+La lista se actualiza regularmente a medida que se identifican las declaraciones de soporte de los comentarios de compromiso del cliente.
 
-Si eres un proveedor de aplicaciones web y le gustaría incluir la declaración de soporte en la referencia de los clientes, por favor envíe por correo la siguiente información a [isvoutreach@microsoft.com](mailto:isvoutreach@microsoft.com).
+Si eres un proveedor de aplicaciones web y te gustaría incluir la declaración de soporte en la referencia de los clientes, envía por correo la siguiente información a [isvoutreach@microsoft.com](mailto:isvoutreach@microsoft.com).
 
 - Nombre del producto
 - Versión compatible (si es aplicable)
