@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155317"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168805"
 ---
 # Microsoft Edge: directivas
 
@@ -28,18 +28,6 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
-
-## Directivas nuevas y obsoletas
-
-En la siguiente tabla se enumeran las directivas nuevas y las obsoletas para esta actualización.
-
-| Nombre | Estado |
-|-|-|
-| [WebWidgetAllowed](#webwidgetallowed) | Nuevo |
-| [ProxyBypassList](#proxybypasslist) | Desusada |
-| [ProxyMode](#proxymode) | Desusada |
-| [ProxyPacUrl](#proxypacurl) | Desusada |
-| [ProxyServer](#proxyserver) | Desusada |
 
 ## Directivas disponibles
 
@@ -4003,15 +3991,23 @@ Use la información anterior al configurar esta directiva.
 
   #### Descripción
 
-  Controla qué tipos de extensión se pueden instalar y limita el acceso en tiempo de ejecución.
+  La configuración de la directiva controla qué aplicaciones y extensiones se pueden instalar en Microsoft Edge, con qué hosts puede interactuar y limita el acceso durante el tiempo de ejecución.
 
-Esta configuración define los tipos de extensiones permitidas y los hosts con los que pueden interactuar. El valor es una lista de cadenas, cada una de las cuales debe ser una de las siguientes: "extension", "theme", "user_script", y "hosted_app". Vea la documentación de las extensiones de Microsoft Edge para obtener más información sobre estos tipos.
+Si no se configura esta directiva, no habrá ninguna restricción en cuanto a la extensión y a los tipos de aplicación que acepte.
 
-Tenga en cuenta que esta directiva también afecta a las extensiones que se instalen a la fuerza mediante el uso de la directiva [ExtensionInstallForcelist](#extensioninstallforcelist).
+No se instalarán las extensiones o aplicaciones que tengan un tipo que no aparezca en la lista. Cada valor debe corresponder con una de estas cadenas:
 
-Si habilita esta directiva, solo se instalarán las extensiones que coincidan con un tipo de la lista.
+* "extension"
 
-Si no configura esta directiva, no se aplicarán restricciones a los tipos de extensión aceptables.
+* "theme"
+
+* "user_script"
+
+* "hosted_app"
+
+Vea la documentación de las extensiones de Microsoft Edge para obtener más información sobre estos tipos.
+
+Tenga en cuenta: esta directiva también afecta a las extensiones y aplicaciones que se instalen por la fuerza usando [ExtensionInstallForcelist](#extensioninstallforcelist).
 
   #### Características admitidas:
 
@@ -4202,27 +4198,21 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   #### Descripción
 
-  Especifica las extensiones que se instalan silenciosamente, sin interacción del usuario, y que los usuarios no pueden desinstalar ni deshabilitar ("forzar instalación"). Todos los permisos solicitados por las extensiones se conceden de forma implícita, sin interacción del usuario, incluyendo todos los permisos adicionales solicitados por las futuras versiones de la extensión. Además, se conceden permisos para las API de extensión enterprise.deviceAttributes y enterprise.platformKeys. (Estas dos API sólo están disponibles para las extensiones que se instalan a la fuerza).
+  Establezca esta directiva para especificar una lista de aplicaciones y de extensiones que se instalen en modo silencioso, sin interacción del usuario. Los usuarios no pueden desinstalarla nis desactivarla. Los permisos se conceden de forma implícita, incluso las API de extensión enterprise.deviceAttributes incluidas y enterprise.platformKeys. Tenga en cuenta: estas dos API no están disponibles para las aplicaciones y las extensiones que no se instalan por la fuerza.
 
-Esta directiva tiene prioridad sobre una directiva potencialmente conflictiva de [ExtensionInstallBlocklist](#extensioninstallblocklist). Cuando se quita una extensión de la lista forzar instalación, Microsoft Edge la desinstala automáticamente.
+Si no se establece esta directiva, no se instalarán automáticamente las aplicaciones ni las extensiones y los usuarios podrán desinstalar cualquier aplicación de Microsoft Edge.
 
-La instalación forzada está limitada a las aplicaciones y extensiones que aparecen en el sitio web de complementos de Microsoft Edge para aquellas instancias que no se cuentan entre ninguna de las siguientes: instancias de Windows que se unen a un dominio de Microsoft Active Directory, instancias de Windows 10 Pro o Enterprise inscritas para la administración de dispositivos o instancias de macOS que se administran mediante MDM o que están unidas a un dominio a través de MCX.
+Esta directiva sustituye a la de [ExtensionInstallBlocklist](#extensioninstallblocklist). Si se quita de esta lista una aplicación o extensión que haya instalado anteriormente por la fuerza, Microsoft Edge la desinstalará de manera automática.
 
-Tenga en cuenta que los usuarios pueden modificar el código fuente de cualquier extensión mediante el uso de herramientas de desarrollo, lo que podría hacer que la extensión fuera disfuncional. Si esto le preocupa, establezca la directiva [DeveloperToolsAvailability](#developertoolsavailability).
+En las instancias de Microsoft Windows, las aplicaciones y extensiones externas al sitio web de complementos de Microsoft Edge solo se pueden instalar por la fuerza si la instancia está unida a un dominio de Microsoft Active Directory y ejecuta Windows 10 Pro.
 
-Utilice el siguiente formato para agregar una extensión a la lista:
+En las instancias de macOS, las aplicaciones y extensiones externas al sitio web de complementos de Microsoft Edge solo se pueden instalar por la fuerza si la instancia se administra a través de MDM o se ha unido a un dominio a través de MCX.
 
-[extensionID];[updateURL]
+Los usuarios pueden modificar el código fuente de cualquier extensión con herramientas de desarrollo, lo que podría representar la extensión como no funcional. Si esto le preocupa, configure la directiva DeveloperToolsDisabled.
 
-- extensionID: es la cadena de 32 letras que se encuentra en edge://extensiones cuando está en modo de programador.
+Cada elemento de lista de la directiva es una cadena que contiene un id. de extensión y, opcionalmente, una dirección URL "update" separada por un punto y coma (;). El id. de extensión es la cadena de 32 letras que se encuentra, por ejemplo, en edge://extensions cuando está en el modo para desarrolladores. Si se especifica, la dirección URL "update" debe apuntar a un documento de actualización manifiesto XML ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). De forma predeterminada, se usa la dirección URL de actualización del sitio web de complementos de Microsoft Edge. La dirección URL "update" establecida en esta directiva solo se usa para la instalación inicial; las actualizaciones posteriores de la extensión utilizan la dirección URL de actualización en el manifiesto de la extensión.
 
-- updateURL (opcional) es la dirección del documento XML del manifiesto de actualización para la aplicación o extensión, como se describe en [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043). Si desea instalar una extensión desde el almacén Web de Chrome, proporcione la dirección URL de la actualización de almacenes Web de Chrome, https://clients2.google.com/service/update2/crx. Tenga en cuenta que la dirección URL de actualización establecida en esta directiva sólo se utiliza para la instalación inicial; las actualizaciones posteriores de la extensión utilizan la dirección URL de actualización indicada en el manifiesto de la extensión. Si no define el updateURL, se presupone que la extensión está hospedada en Microsoft Store y se usa la siguiente URL de actualización (https://edge.microsoft.com/extensionwebstorebase/v1/crx).
-
-Por ejemplo, gggmmkjegpiggikcnhidnjjhmicpibll;https://edge.microsoft.com/extensionwebstorebase/v1/crx instala la aplicación Microsoft Online desde la dirección URL de "actualización" de Microsoft Store. Para obtener más información sobre las extensiones de hospedaje vea: [https://go.microsoft.com/fwlink/?linkid=2095044](https://go.microsoft.com/fwlink/?linkid=2095044).
-
-Si no configura esta directiva, no se instalarán extensiones automáticamente y los usuarios podrán desinstalar cualquier extensión en Microsoft Edge.
-
-Tenga en cuenta que esta directiva no se aplica al modo InPrivate.
+Tenga en cuenta: esta directiva no se aplica al modo de InPrivate. Obtenga más información sobre las extensiones de hospedaje (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### Características admitidas:
 
