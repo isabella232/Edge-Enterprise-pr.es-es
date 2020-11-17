@@ -3,23 +3,27 @@ title: Notas de la versión para las actualizaciones de seguridad de Microsoft E
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/11/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
-ms.openlocfilehash: ce88dc7eb33355b76a073c4de54fd5f043c9d947
-ms.sourcegitcommit: ac0d3fe9a2d0b3023abd2cc22868579aa9942a9b
+ms.openlocfilehash: c6367b803994a975f07bd38f375835c17625d905
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11166025"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168765"
 ---
 # Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
 
 Estas notas de versión proporcionan información acerca de las correcciones de seguridad que se incluyen en las actualizaciones del canal estable de Microsoft Edge.
+
+## 13 de noviembre de 2020
+
+Microsoft ha lanzado el último **canal estable Microsoft Edge (versión 86.0.622.69)**, que incorpora las actualizaciones más recientes de seguridad del proyecto Chromium. Esta actualización contiene [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) y [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), que han sido reportados por el equipo de Chromium como si fueran una vulnerabilidad de seguridad. Para obtener más información, consulte la [Guía de actualización de seguridad](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 11 de noviembre de 2020
 
@@ -27,11 +31,11 @@ Microsoft ha lanzado el último **canal estable de Microsoft Edge (versión 86.0
 
 ## 4 de noviembre de 2020
 
-Microsoft ha lanzado el último **Canal estable de Microsoft Edge (versión 86.0.622.63)**, el cual incorpora las últimas Actualizaciones de Seguridad del proyecto Chromium. Esta actualización contiene [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), notificado por el equipo de Chromium como una vulnerabilidad de seguridad. Para obtener más información, consulte la [Guía de actualización de seguridad](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Microsoft ha lanzado el último **canal estable Microsoft Edge (versión 86.0.622.63)**, que incorpora las actualizaciones más recientes de seguridad del proyecto Chromium. Esta actualización contiene [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad. Para obtener más información, consulte la [Guía de actualización de seguridad](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 22 de octubre de 2020
 
-Microsoft ha lanzado el último **Canal estable de Microsoft Edge (versión 86.0.622.51)**, el cual incorpora las últimas Actualizaciones de Seguridad del proyecto Chromium. Esta actualización contiene [CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999), notificado por el equipo de Chromium como una vulnerabilidad de seguridad. Para obtener más información, consulte la [Guía de actualización de seguridad](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Microsoft ha lanzado el último **canal estable Microsoft Edge (versión 86.0.622.51)**, que incorpora las actualizaciones más recientes de seguridad del proyecto Chromium. Esta actualización contiene [CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad. Para obtener más información, consulte la [Guía de actualización de seguridad](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 9 de octubre de 2020
 
