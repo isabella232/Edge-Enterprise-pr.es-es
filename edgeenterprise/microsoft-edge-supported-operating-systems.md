@@ -3,19 +3,19 @@ title: Sistemas operativos admitidos con Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 10/30/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sistemas operativos admitidos con Microsoft Edge
-ms.openlocfilehash: cb7998fd8ee47b376df94f52bfc5f636687d848f
-ms.sourcegitcommit: 0c713487a811a2837abe4a3b08236f6815e65773
+ms.openlocfilehash: 62b8df0ed23ed72d5e29008ddea8aa7116317616
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "11145892"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175173"
 ---
 # Sistemas operativos admitidos con Microsoft Edge
 
@@ -29,21 +29,25 @@ En este artículo se describen los sistemas operativos admitidos que se aplican 
 > [!NOTE]
 > La funcionalidad del producto y la disponibilidad de las características pueden variar en los sistemas operativos antiguos. Para asegurarse de que Microsoft Edge se instala correctamente, utilice la versión más reciente de cualquier sistema operativo especificado a continuación. Esta guía incluye la última actualización acumulativa, según corresponda.
 
-La próxima versión de Microsoft Edge es compatible con los siguientes sistemas operativos:
+Microsoft Edge sigue la directiva del ciclo de vida moderna y es compatible con los siguientes sistemas operativos.
 
 ### Cliente de Windows
 
-- Windows 7**
+- Windows 7 **
 - Windows 8.1
 - Windows 10 SAC RS3 y versiones posteriores**_
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
 - Sesión múltiple de Windows 10 Enterprise
+- Windows 10 IoT Enterprise SAC _***
+- Windows 10 IoT Enterprise 2019 LTSC ****
+
+
 
 ### Windows Server
 
-- Windows Server2008R2_*
+- Windows Server 2008 R2 **
 - Windows Server 2012
 - Windows Server2012R2
 - Windows Server 2016 (LTSC)
@@ -51,9 +55,11 @@ La próxima versión de Microsoft Edge es compatible con los siguientes sistemas
 - Windows Server (SAC)
 
 > [!IMPORTANT]
-> ** Seguiremos ofreciendo soporte para Microsoft Edge en Windows 7 y Windows Server 2008 R2 hasta el 15 de julio de 2021. Estos sistemas operativos ya no cuentan con soporte y Microsoft recomienda pasar a un sistema operativo con soporte, como Windows 10. Si bien Microsoft Edge le ayuda a tener mayor seguridad en la Web, su equipo puede seguir siendo vulnerable a riesgos. Para que el modo IE sea compatible con estos sistemas operativos, los dispositivos deberán tener las [Actualizaciones de seguridad extendidas para Windows](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Sin las actualizaciones de seguridad extendidas para Windows 7, las funcionalidades de Internet Explorer serán vulnerables a riesgos de seguridad. Asimismo, es posible que las funcionalidades del modo IE no estén disponibles sin el mantenimiento continuo de las actualizaciones de seguridad extendidas.  
+> ** Seguiremos ofreciendo soporte para Microsoft Edge en Windows 7 y Windows Server 2008 R2 hasta el 15 de julio de 2021. Estos sistemas operativos ya no cuentan con soporte y Microsoft recomienda pasar a un sistema operativo con soporte, como Windows 10. Si bien Microsoft Edge le ayuda a tener mayor seguridad en la Web, su equipo puede seguir siendo vulnerable a riesgos. Para que el modo IE sea compatible con estos sistemas operativos, los dispositivos deberán tener las [Actualizaciones de seguridad extendidas para Windows](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Sin las actualizaciones de seguridad extendidas para Windows 7, las funcionalidades de Internet Explorer serán vulnerables a riesgos de seguridad. Asimismo, es posible que las funcionalidades del modo Internet Explorer no estén disponibles sin el mantenimiento continuo de las actualizaciones de seguridad extendidas.  
 >
-> De la misma forma que arriba, para las versiones de SAC que no son compatibles con Windows 10, pero que no son compatibles con Microsoft Edge, se recomienda realizar una actualización a una versión de Win10 SAC compatible tan pronto como sea posible para que permanezcan seguras. Microsoft Edge admitido en este estado debería considerarse algo temporal para obtener un estado de sistema operativo compatible.
+> **_ De la misma manera, para las versiones de Windows 10 SAC que no son compatibles pero con Microsoft Edge compatible, se recomienda actualizar a una versión de Win10 SAC compatible lo antes posible para mantener la seguridad. La compatibilidad de Microsoft Edge en este estado debería considerarse algo temporal para obtener un sistema operativo compatible.
+>
+> _ *** El OPK de Microsoft Edge está disponible en MOO para los fabricantes OEM de IoT para preinstalar y distribuir como parte de su solución basada en Windows 10 IoT Enterprise.
 
 ### macOS
 
