@@ -1,23 +1,23 @@
 ---
-title: Agregar el modo Internet Explorer al menú contextual Abrir con
+title: Asociar extensiones de archivo con el modo Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/13/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Agregar el modo Internet Explorer al menú contextual Abrir con
-ms.openlocfilehash: 6453cd2587e3bec10404d2491914debb999fcf3f
-ms.sourcegitcommit: e3c80274a9b8ef15761c968214b3cba593476132
+description: Asociar extensiones de archivo con el modo Internet Explorer
+ms.openlocfilehash: c80732239b911f7cd3d615e9ce1e480db2749f17
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168495"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175183"
 ---
-# Agregar el modo Internet Explorer al menú contextual "Abrir con"
+# Asociar extensiones de archivo con el modo Internet Explorer
 
 En este artículo explica cómo asociar Microsoft Edge con el modo Internet Explorer con extensiones para aplicaciones de escritorio.
 
