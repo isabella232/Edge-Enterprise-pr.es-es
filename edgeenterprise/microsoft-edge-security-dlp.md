@@ -3,19 +3,19 @@ title: Prevención de pérdida de datos en Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/08/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prevención de pérdida de datos (DLP) en Microsoft Edge
-ms.openlocfilehash: 59c1b68c0526a49a2ee30283893707852514828d
-ms.sourcegitcommit: 2af303fc97e8493024e2359fa2e8be162ab95a59
+ms.openlocfilehash: 72f670caf34a09cdfc7f47575f688c2a39d3c221
+ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104632"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176947"
 ---
 # Prevención de pérdida de datos (DLP) en Microsoft Edge
 
@@ -27,14 +27,19 @@ Esta mezcla de las actividades de los usuarios también se distribuye en los dis
 
 Microsoft Edge es compatible de forma nativa con dos soluciones DLP distintas, DLP de Microsoft Endpoint y la protección de información de Windows (WIP).
 
-## Administrador de puntos de conexión de Microsoft
+## Prevención de pérdida de datos de Microsoft Endpoint (DLP de Endpoint)
 
-Microsoft Endpoint DLP es la siguiente generación de DLP que usa conceptos modernos como, por ejemplo, la protección centrada en datos. Está integrado en Windows 10 y Microsoft Edge, por lo que no necesita complementos o agentes adicionales en el dispositivo. Para más información sobre las DLP de Endpoint, lea [más información sobre la prevención de pérdida de datos de Microsoft 365 Endpoint](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide).
+DLP de Microsoft Endpoint es la siguiente generación de prevención de pérdida de datos con conceptos modernos como la protección centrada en los datos. Está integrado en Windows 10 y Microsoft Edge, de modo que no necesitará agentes ni complementos adicionales en el dispositivo.
 
 > [!NOTE]
-> Esto se aplica a Microsoft Edge, versión 85 o posterior.
+> Esto se aplica a la versión85 y a las posteriores de Microsoft Edge.
 
-Microsoft Edge aplica directivas configuradas por el administrador para archivos confidenciales y registra eventos de auditoría para actividades de no conformidad.
+Para obtener más información sobre la DLP de Endpoint, consulte lo siguiente:
+
+- [Más información sobre la prevención de pérdida de datos de Endpoint de Microsoft 365](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
+- [Introducción a la prevención de pérdida de datos de Endpoint](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
+
+Microsoft Edge aplica directivas configuradas por el administrador para los archivos confidenciales y registra eventos de auditoría para las actividades que no cumplan con la normativa.
 
 Entre las actividades de usuario que se pueden auditar y administrar en los dispositivos que ejecutan Windows 10 se incluyen las siguientes:
 
