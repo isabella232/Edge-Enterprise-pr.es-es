@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/13/2020
+ms.date: 11/19/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
-ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
+ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
+ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168805"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "11181991"
 ---
 # Microsoft Edge: directivas
 
@@ -28,6 +28,17 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
+
+## Directivas nuevas y en desuso
+
+En la tabla siguiente se enumeran las directivas nuevas y en desuso para esta actualización.
+
+| Nombre | Estado |
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| Nueva |
+|[BlockExternalExtensions](#blockexternalextensions) | Nueva |
+|[ShowMicrosoftRewards](#showmicrosoftrewards) | Nueva |
+|[ProactiveAuthEnabled](#proactiveauthenabled) | En desuso |
 
 ## Directivas disponibles
 
@@ -41,8 +52,9 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[Configuración de pantalla completa](#kiosk-mode-settings)|[Mensajería nativa](#native-messaging)|
 |[Administrador de contraseñas y protección](#password-manager-and-protection)|[Rendimiento](#performance)|
 |[Impresión](#printing)|[Servidor proxy](#proxy-server)|
-|[Configuración de SmartScreen](#smartscreen-settings)|[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|
-|[Adicional](#additional)|
+|[Configuración de pestañas en suspensión](#sleeping-tabs-settings)|[Configuración de SmartScreen](#smartscreen-settings)|
+|[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|[Adicional](#additional)|
+
 
 ### [*Configuración de Protección de aplicaciones*](#application-guard-settings-policies)
 
@@ -116,6 +128,7 @@ y sugerencias para los servicios Microsoft|
 
 |Nombre de directiva|Título|
 |-|-|
+|[BlockExternalExtensions](#blockexternalextensions)|Bloquear la instalación de extensiones externas|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|Configurar los tipos de extensión permitidos|
 |[ExtensionInstallAllowlist](#extensioninstallallowlist)|Permitir que se instalen extensiones específicas|
 |[ExtensionInstallBlocklist](#extensioninstallblocklist)|Controlar qué extensiones no se pueden instalar|
@@ -180,6 +193,13 @@ y sugerencias para los servicios Microsoft|
 |[ProxyPacUrl](#proxypacurl)|Establecer la dirección URL del proxy del archivo .pac (en desuso)|
 |[ProxyServer](#proxyserver)|Configurar la dirección o la dirección URL del servidor proxy (en desuso)|
 |[ProxySettings](#proxysettings)|Configuración de proxy|
+### [*Configuración de pestañas en suspensión*](#sleeping-tabs-settings-policies)
+
+|Nombre de directiva|Título|
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Bloquear las pestañas en suspensión en sitios específicos|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Configurar las pestañas en suspensión|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Establecer el tiempo de espera de inactividad de las pestañas en segundo plano para la configuración de las pestañas en suspensión|
 ### [*Configuración de SmartScreen*](#smartscreen-settings-policies)
 
 |Nombre de directiva|Título|
@@ -341,7 +361,7 @@ y sugerencias para los servicios Microsoft|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Permita que los sitios web consulten los métodos de pago disponibles|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Permita la personalización de anuncios, búsquedas y noticias enviando el historial de exploración a Microsoft|
 |[PinningWizardAllowed](#pinningwizardallowed)|Permita anclar al Asistente para tareas|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|Permitir la autenticación proactiva|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|Habilitar la autenticación proactiva (en desuso)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Habilitar contenido promocional de pestañas completas|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Pregunte dónde guardar los archivos descargados|
 |[QuicAllowed](#quicallowed)|Permitir protocolo QUIC|
@@ -369,7 +389,8 @@ y sugerencias para los servicios Microsoft|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Permitir el acceso a sensores en sitios específicos|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquear el acceso a sensores en sitios específicos|
 |[SerialAskForUrls](#serialaskforurls)|Permitir la API de serie en sitios específicos|
-|[SerialBlockedForUrls](#serialblockedforurls)|Bloquear la API de serie en sitios específicos|
+|[SerialBlockedForUrls](#serialblockedforurls)|Bloquear la API en serie en sitios específicos|
+|[ShowMicrosoftRewards](#showmicrosoftrewards)|Mostrar las experiencias de MicrosoftRewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar el acceso directo de Microsoft Office en la barra de favoritos (en desuso)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilite la compatibilidad con el intercambio de HTTP firmado (SXG)|
 |[SitePerProcess](#siteperprocess)|Habilite el aislamiento de sitio para cada sitio|
@@ -3979,6 +4000,71 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### BlockExternalExtensions
+
+  #### Bloquear la instalación de extensiones externas
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión88.
+
+  #### Descripción
+
+  Controla la instalación de extensiones externas.
+
+Si habilita esta configuración, se bloqueará la instalación de extensiones externas.
+
+Si deshabilita esta configuración o la deja sin establecer, las extensiones externas podrán instalarse.
+
+Las extensiones externas y su instalación están documentadas en https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: BlockExternalExtensions
+  - Nombre de GP: bloquea la instalación de extensiones externas.
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Extensiones
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: BlockExternalExtensions
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### Información y configuración para Mac
+  
+  - Nombre de la clave de preferencias: BlockExternalExtensions
+  - Valor de ejemplo:
+``` xml
+<true/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### ExtensionAllowedTypes
 
   #### Configurar los tipos de extensión permitidos
@@ -6581,6 +6667,225 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ## Directivas de configuración de pestañas en suspensión
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### SleepingTabsBlockedForUrls
+
+  #### Bloquear las pestañas en suspensión en sitios específicos
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión88.
+
+  #### Descripción
+
+  Permite definir una lista de sitios en función de patrones de direcciones URL que no permiten que las pestañas se pongan en suspensión.
+
+Si la directiva [SleepingTabsEnabled](#sleepingtabsenabled) está deshabilitada, esta lista no se usa y ningún sitio se pondrá en suspensión automáticamente.
+
+Si no se configura esta directiva, todos los sitios podrán ponerse en suspensión a menos que la configuración personal del usuario los bloquee.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: sí
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Lista de cadenas
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: SleepingTabsBlockedForUrls
+  - Nombre de GP: Bloquear las pestañas en suspensión en sitios específicos
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Configuración de pestañas en suspensión
+  - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidar)/Configuración de pestañas en suspensión
+  - Nombre de archivo ADMX de GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\SleepingTabsBlockedForUrls
+  - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Edge\Recomendado\SleepingTabsBlockedForUrls
+  - Nombre del valor: 1, 2, 3...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### Valor de ejemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+  #### Información y configuración para Mac
+  
+  - Nombre de la clave de preferencias: SleepingTabsBlockedForUrls
+  - Valor de ejemplo:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### SleepingTabsEnabled
+
+  #### Configurar las pestañas en suspensión
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión88.
+
+  #### Descripción
+
+  Esta configuración de directiva le permite configurar si se activan las pestañas en suspensión o no. Las pestañas en suspensión reducen el uso de la CPU, la batería y la memoria, ya que se ponen en suspensión pestañas en segundo plano inactivas. Microsoft Edge usa la heurística para evitar poner en suspensión pestañas que hacen un trabajo útil en segundo plano, como notificaciones de visualización, reproducción de sonido y transmisión de vídeo. De forma predeterminada, las pestañas en suspensión están activadas.
+
+Es posible configurar la directiva [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls) para evitar que se pongan determinados sitios en suspensión.
+
+Si habilita esta configuración, la característica de pestañas en suspensión estará activa.
+
+Si deshabilita esta configuración, la característica de pestañas en suspensión no estará activa.
+
+Si no establece esta configuración, los usuarios podrán elegir si usan la característica de pestañas en suspensión.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: sí
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: SleepingTabsEnabled
+  - Nombre de la GP: Configurar las pestañas en suspensión
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Configuración de pestañas en suspensión
+  - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidar)/Configuración de pestañas en suspensión
+  - Nombre de archivo ADMX de GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft\Edge\Recomendado
+  - Nombre del valor: SleepingTabsEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### Información y configuración para Mac
+  
+  - Nombre de la clave de preferencias: SleepingTabsEnabled
+  - Valor de ejemplo:
+``` xml
+<true/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### SleepingTabsTimeout
+
+  #### Establecer el tiempo de espera de inactividad de las pestañas en segundo plano para la configuración de las pestañas en suspensión
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión88.
+
+  #### Descripción
+
+  Esta configuración de directiva te permite configurar el tiempo de espera, en segundos, tras el cual las pestañas en segundo plano inactivas se pondrán automáticamente en suspensión si se habilita la característica de pestañas en espera. De forma predeterminada, el tiempo de espera es de 7200 segundos (2horas).
+
+Las pestañas solo se ponen en suspensión automáticamente cuando la directiva [SleepingTabsEnabled](#sleepingtabsenabled) está habilitada o no está configurada y el usuario ha habilitado la configuración de las pestañas de suspensión.
+
+Si no se configura esta directiva, los usuarios podrán elegir el valor de tiempo de espera.
+
+Asignación de opciones de directiva:
+
+* 5Minutes (300) = 5 minutos de inactividad
+
+* 15Minutes (900) = 15 minutos de inactividad
+
+* 30Minutes (1800) = 30 minutos de inactividad
+
+* 1Hour (3600) = 1 hora de inactividad
+
+* 2Hours (7200) = 2 horas de inactividad
+
+* 3Hours (10800) = 3 horas de inactividad
+
+* 6Horas (21600) = 6 horas de inactividad
+
+* 12Hours (43200) = 12 horas de inactividad
+
+Use la información anterior al configurar esta directiva.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: sí
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Integer
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: SleepingTabsTimeout
+  - Nombre de GP: Establecer el tiempo de espera de inactividad de las pestañas en segundo plano para la configuración de las pestañas en suspensión
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Configuración de pestañas en suspensión
+  - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidar)/Configuración de pestañas en suspensión
+  - Nombre de archivo ADMX de GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft\Edge\Recomendado
+  - Nombre del valor: SleepingTabsTimeout
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000384
+```
+
+  #### Información y configuración para Mac
+  
+  - Nombre de la clave de preferencias: SleepingTabsTimeout
+  - Valor de ejemplo:
+``` xml
+<integer>900</integer>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ## Configuración de directivas de SmartScreen
 
   [Volver al principio](#microsoft-edge---policies)
@@ -7359,7 +7664,9 @@ Si establece esta directiva como falsa o no la configura, los iconos del sitio s
 
   #### Descripción
 
-  Configura la dirección URL predeterminada de la página de la nueva pestaña.
+  Permite configurar la dirección URL predeterminada de la página de nueva pestaña.
+
+En la actualidad, la versión recomendada de esta directiva no funciona, por lo que su funcionamiento es exactamente el mismo que el de la versión obligatoria.
 
 Esta directiva determina la página que se abre cuando se crean nuevas pestañas (incluso cuando se abren nuevas ventanas). También afecta a la página de inicio si está configurada para abrirse en la página de la nueva pestaña.
 
@@ -7889,7 +8196,7 @@ Si habilitó el conjunto de directivas que fuerza a un proveedor de búsqueda pr
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
-  - Actualización de directiva dinámica: sí
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
   #### Tipo de datos:
 
@@ -16758,9 +17065,9 @@ Las opciones de configuración del usuario para habilitar o deshabilitar el asis
 
   ### ProactiveAuthEnabled
 
-  #### Permitir la autenticación proactiva
+  #### Habilitar la autenticación proactiva (en desuso)
 
-  
+  >EN DESUSO: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
   #### Versiones compatibles:
 
@@ -16768,13 +17075,15 @@ Las opciones de configuración del usuario para habilitar o deshabilitar el asis
 
   #### Descripción
 
-  Le permite configurar si debe habilitar o no la autenticación proactiva.
+  Esta directiva ha quedado en desuso porque no funciona, independientemente del inicio de sesión en el explorador. No funciona en la versión91 de Microsoft Edge. Si quiere configurar el inicio de sesión del explorador, utilice la directiva [BrowserSignin](#browsersignin).
 
-Si habilita esta directiva, Microsoft Edge intentará autenticar con el modo proactivo al usuario que haya iniciado sesión con los servicios Microsoft. Microsoft Edge comprueba con regularidad la actualización del manifiesto que contiene la configuración que rige la ejecución de este proceso en un servicio en línea.
+Le permite configurar si quiere activar la autenticación proactiva en Microsoft Edge.
 
-Si deshabilita esta directiva, Microsoft Edge no intentará autenticar con el modo proactivo al usuario que haya iniciado sesión con los servicios Microsoft. Microsoft Edge dejará de comprobar con regularidad la actualización del manifiesto que contiene la configuración que rige la ejecución de este proceso en un servicio en línea.
+Si se habilita esta directiva, Microsoft Edge intenta autenticarse al instante en los sitios web y los servicios con la cuenta con la que se ha iniciado sesión en el explorador.
 
-Si no configura esta directiva, se habilitará la autenticación proactiva.
+Si se deshabilita esta directiva, Microsoft Edge no intentará autenticarse en sitios web o servicios mediante el inicio de sesión único (SSO). Las experiencias autenticadas, como la página de la nueva pestaña empresarial, no funcionarán (por ejemplo, los documentos recientes y recomendados de Office no estarán disponibles).
+
+Si no se configura esta directiva, la autenticación proactiva está activada.
 
   #### Características admitidas:
 
@@ -16791,7 +17100,7 @@ Si no configura esta directiva, se habilitará la autenticación proactiva.
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProactiveAuthEnabled
-  - Nombre de GP: permitir la autenticación proactiva
+  - Nombre de GP: Habilitar la autenticación proactiva (en desuso)
   - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -18599,6 +18908,77 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### ShowMicrosoftRewards
+
+  #### Mostrar las experiencias de MicrosoftRewards
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión88.
+
+  #### Descripción
+
+  Muestra las notificaciones y la experiencia de Microsoft Rewards.
+Si habilita esta directiva:
+   - Los usuarios con una cuenta de Microsoft (excepto las de AzureAD) en los mercados con recompensas por búsquedas verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
+   - La configuración para habilitar las Microsoft Rewards en la configuración de Microsoft Edge se habilitará y se activará.
+   - La configuración para habilitar el modo de donación estará habilitada y respetará la configuración del usuario.
+
+Si se deshabilita esta directiva:
+   - Los usuarios con una cuenta de Microsoft (excepto las de AzureAD) en los mercados con recompensas por búsquedas no verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
+   - La configuración para habilitar las Microsoft Rewards en la configuración de Microsoft Edge se deshabilitará y se desactivará.
+
+Si no se configura esta directiva:
+   - Los usuarios con una cuenta de Microsoft (excepto las de AzureAD) en los mercados con recompensas por búsquedas verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
+   - La configuración para habilitar las Microsoft Rewards en la configuración de Microsoft Edge se habilitará y se activará.
+   - La configuración para habilitar el modo de donación estará habilitada y respetará la configuración del usuario.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: sí
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: ShowMicrosoftRewards
+  - Nombre de GP: Mostrar las experiencias de Microsoft Rewards
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft\Edge\Recomendado
+  - Nombre del valor: ShowMicrosoftRewards
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000000
+```
+
+  #### Información y configuración para Mac
+  
+  - Nombre de la clave de preferencias: ShowMicrosoftRewards
+  - Valor de ejemplo:
+``` xml
+<false/>
 ```
   
 
