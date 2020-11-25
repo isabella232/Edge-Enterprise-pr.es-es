@@ -1,27 +1,49 @@
 ---
-ms.openlocfilehash: e707310902d2c114ced45b218af1da8d625e8011
-ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
+ms.openlocfilehash: 7be9a33378d8df71273e67fd3dd18bb48461ea2c
+ms.sourcegitcommit: a4495ebedb9b2147530890a2c93651a766045bdb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175212"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "11189652"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 
-## Semana del 09 de noviembre de 2020
+## Semana del 16 de noviembre de 2020
 
 | Fecha de publicación |Título del tema | Cambiar |
 |------|------------|--------|
-| 9/11/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Correcciones para la versión secundaria 87.0.664.30. | modificado |
-| 11/11/2020 | [Seguridad de Microsoft Edge para la empresa](/DeployEdge/ms-edge-security-for-business)<br>Información sobre la actualización de DLP del punto de conexión de Microsoft | modificado |
-| 11/11/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Actualización de seguridad para la versión secundaria 86.0.622.68 | modificado |
-| 11/11/2020 | [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Actualización de seguridad para la versión secundaria estable 86.0.622.68 | modificado |
-| 12/11/2020 | [Documentación de la directiva de Microsoft Edge Update](/DeployEdge/microsoft-edge-update-policies)<br>Se actualizan los metadatos. | modificado |
-| 13/11/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Actualización de seguridad para la versión secundaria 86.0.622.69 Referente a las vulnerabilidades de seguridad CVE-2020-16013 y CVE-2020-16017. | modificado |
-| 13/11/2020 | [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Actualización de seguridad para la versión secundaria estable 86.0.622.69 Referente a las vulnerabilidades de seguridad CVE-2020-16013 y CVE-2020-16017.  | modificado |
-| 13/11/2020 | [Documentación de directiva del explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Actualizaciones de la directiva | modificado |
-| 13/11/2020 | [Documentación de directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies)<br>Se actualizan el formato y los metadatos. | modificado |
-| 13/11/2020 | [Programa de publicación de versiones de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Se revisan las fechas de las versiones 89 beta y 89. Se agregan compilaciones 90 y 91 para versiones beta y estable.  | modificado |
+| 16/11/2020 | [Agregar el modo Internet Explorer al menú contextual Abrir con](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations)<br>Configure las extensiones de archivo para la opción "Abrir con". | Nuevo |
+| 16/11/2020 | [Redireccionamiento desde Internet Explorer a Microsoft Edge por motivos de compatibilidad con los sitios web modernos](/DeployEdge/edge-learnmore-neededge)<br>Revisiones menores para mayor claridad. | modificado |
+| 16/11/2020 | [Sistemas operativos admitidos que admiten Microsoft Edge](/DeployEdge/microsoft-edge-supported-operating-systems) <br>Agregar soporte para los clientes de IoT de Windows 10.| modificado |
+| 16/11/2020 | [Asociar las extensiones de los archivos con el modo Internet Explorer](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations)<br>Cambiar el nombre a "Agregar el modo Internet Explorer al menú contextual Abrir con" y actualizar. | modificado |
+| 17/11/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Correcciones para la versión beta secundaria 87.0.664.36.| modificado |
+| 18/11/2020 | [Prevención de pérdida de datos en Microsoft Edge](/DeployEdge/microsoft-edge-security-dlp)<br>Agregue vínculos a los requisitos previos y a cómo empezar a usar el Punto de conexión DLP. | modificado |
+| 18/11/2020 | [Seguridad de Microsoft Edge para su empresa](/DeployEdge/ms-edge-security-for-business)<br>Agregue vínculos a los requisitos previos y a cómo empezar a usar el Punto de conexión DLP. | modificado |
+| 18/11/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Correcciones para la versión beta secundaria 87.0.664.40.  | modificado |
+| 19/11/2020 | [Documentación de la directiva del explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Actualice e invoque directivas nuevas y obsoletas. | modificado |
+| 19/11/2020 | [Documentación de la directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies)<br>Actualizar | modificado |
+| 19/11/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Actualización de la versión principal de 87.0.664.41, con características adicionales y actualizaciones de la directiva. | modificado |
+| 19/11/2020 | [Notas de la versión para las Actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Actualización de seguridad para la versión principal estable 87.0.664.41. | modificado |
+| 19/11/2020 | [Programa de publicación de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Actualizar para reflejar el lanzamiento de la versión principal estable 87.0.664.41. | modificado |
+| 20/11/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Cambiar vínculo a la entrada de blog sobre la característica Compras.  | modificado |
+
+
+## Semana del 09 de noviembre de 2020
+
+
+| Fecha de publicación |Título del tema | Cambiar |
+|------|------------|--------|
+| 9/11/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
+| 9/11/2020 | [Seguridad de Microsoft Edge para su empresa](/DeployEdge/ms-edge-security-for-business) | modificado |
+| 11/11/2020 | [Seguridad de Microsoft Edge para su empresa](/DeployEdge/ms-edge-security-for-business) | modificado |
+| 11/11/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
+| 11/11/2020 | [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security) | modificado |
+| 12/11/2020 | [Documentación de la directiva de Microsoft Edge Update](/DeployEdge/microsoft-edge-update-policies) | modificado |
+| 13/11/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
+| 13/11/2020 | [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security) | modificado |
+| 13/11/2020 | [Documentación de la directiva del explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies) | modificado |
+| 13/11/2020 | [Documentación de directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies) | modificado |
+| 13/11/2020 | [Programa de publicación de versiones de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule) | modificado |
 
 
 ## Semana del 02 de noviembre de 2020
@@ -72,17 +94,3 @@ ms.locfileid: "11175212"
 | 22/10/2020 | [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security) | modificado |
 | 22/10/2020 | [Documentación de directiva de explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies) | modificado |
 | 22/10/2020 | [Documentación de directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies) | modificado |
-
-
-## Semana del 12 de octubre de 2020
-
-
-| Fecha de publicación |Título del tema | Cambiar |
-|------|------------|--------|
-| 12/10/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
-| 12/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
-| 12/10/2020 | [Microsoft Edge y Protección de aplicaciones de Microsoft Defender](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | modificado |
-| 13/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
-| 15/10/2020 | [Documentación de Microsoft Edge Enterprise](/DeployEdge/index) | modificado |
-| 16/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
-| 16/10/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
