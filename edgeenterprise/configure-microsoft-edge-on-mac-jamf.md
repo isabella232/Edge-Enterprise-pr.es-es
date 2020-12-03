@@ -3,19 +3,19 @@ title: Configurar Microsoft Edge en macOS con Jamf
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 02/20/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar las opciones de directiva de Microsoft Edge en dispositivos Mac con Jamf
-ms.openlocfilehash: 336bdfed2c53811615b0183dc5ca7db916cd7428
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981048"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194718"
 ---
 # Configurar las opciones de directiva de Microsoft Edge en macOS con Jamf
 
@@ -45,8 +45,8 @@ Para obtener más información, vea [perfiles de configuración del equipo](http
 Para obtener el manifiesto de directiva:
 
 - Diríjase a la [Página de inicio Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise).
-- En la lista desplegable Canal/Versión, seleccione **cualquier canal con la versión 81 o posterior.***
-- En la lista desplegable Compilación, seleccione cualquier **compilación del 81 o posterior.***.
+- En la lista desplegable Canal o versión, seleccione **cualquier canal con la versión 81 o posterior.**_.
+- En la lista desplegable Compilación, seleccione cualquier _*compilación 81 o posterior.**_
 - Haga clic en obtener archivos de directiva para descargar nuestro paquete de plantillas de directivas.
 
   > [!NOTE]
@@ -61,7 +61,7 @@ Este manifiesto se publicará en cada paquete de directivas empezando con la com
 Siga los pasos siguientes para cargar el manifiesto de directiva en Jamf Pro y crear un perfil de directiva para macOS.
 
 1. Inicie sesión en Jamf.
-2. Seleccione la pestaña **equipo**.
+2. Seleccione la pestaña _*Equipo**.
 3. En **administración de contenido**, seleccione **perfiles de configuración**.
 4. En la página **perfiles de configuración**, haga clic en **+ nuevo**.
 
@@ -115,22 +115,7 @@ Después de crear el nuevo perfil de configuración aún tiene que configurar el
 2. Para **limitaciones**, conserve la configuración predeterminada: ninguna. Haga clic en **Cancelar**.
 3. Para **exclusiones**, conserve la configuración predeterminada: ninguna. Haga clic en **Cancelar**.
 
-## Preguntas más frecuentes
-
-### ¿Se puede configurar Microsoft Edge para usar las preferencias maestras?
-
-Si, puedes configurar Microsoft Edge para usar un archivo de preferencias maestras.
-
-Un archivo de preferencias maestras permite configurar las opciones predeterminadas para un perfil de usuario de explorador cuando se implementa Microsoft Edge. También puedes usar un archivo de preferencias maestras para aplicar la configuración en equipos que no están administrados por un sistema de administración de dispositivos. Esta configuración se aplica al perfil del usuario la primera vez que el usuario ejecuta el explorador. Cuando el usuario ejecute el explorador, no se aplicarán los cambios realizados en el archivo de preferencias maestras. Un usuario puede cambiar la configuración de las preferencias maestras del explorador. Si quieres que una configuración sea obligatoria o cambiar una configuración después de la primera ejecución del explorador, debes usar una directiva.
-
-Un archivo de preferencias principales permite personalizar muchas opciones de configuración y preferencias diferentes del explorador, incluidas las que se comparten con otros exploradores basados en Chromium y las específicas de Microsoft Edge.  Las preferencias relacionadas con la directiva pueden configurarse mediante el archivo de preferencias maestras. En los casos en los que se establece una directiva y hay un conjunto de preferencias maestro correspondiente, la configuración de directiva tiene prioridad.
-
-> [!IMPORTANT]
-> Es posible que todas las preferencias disponibles no sean coherentes con la terminología Microsoft Edge y las convenciones de nomenclatura.  No hay ninguna garantía de que estas preferencias sigan funcionando según lo previsto en futuras versiones. Las preferencias se pueden cambiar u omitir en versiones posteriores.
-
-Un archivo de preferencias maestras es un archivo de texto que se ha formateado usando marcado JSON. Este archivo debe agregarse al mismo directorio que el ejecutable msedge.exe. Para las implementaciones por toda la empresa en macOS, esto suele ser: “*~/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*" o "*/Library/Microsoft/Microsoft Edge Master Preferences*”.
-
-## Consulta también
+## Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para macOS con Intune](configure-microsoft-edge-on-mac.md)

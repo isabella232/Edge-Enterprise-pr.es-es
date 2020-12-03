@@ -3,19 +3,19 @@ title: Configurar Microsoft Edge para Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/09/2019
+ms.date: 11/30/2019
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar las opciones de directiva de Microsoft Edge en dispositivos Windows
-ms.openlocfilehash: 99aaf002f868ce29e81aa40024fa1de2e83d76e1
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 14ba2845e95394fe1f992c8b6446c975a8b4fb00
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981043"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194708"
 ---
 # Configurar las opciones de directiva de Microsoft Edge en Windows
 
@@ -53,12 +53,12 @@ Ve a la [página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/Edge
 #### Agregar la plantilla administrativa a Active Directory
 
 1. En un controlador de dominio o una estación de trabajo con RSAT, busca la carpeta **PolicyDefinition** (también conocida como _Almacén central_) en cualquier controlador de dominio de tu dominio. Para versiones anteriores de Windows Server, es posible que tengas que crear la carpeta PolicyDefinition. Para obtener más información, consulta [Cómo crear y administrar el almacén central de plantillas administrativas de directivas de grupo en Windows](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra).
-1. Abre *MicrosoftEdgePolicyTemplates* y ve a **windows** > **admx**.
-1. Copia el archivo *msedge.admx* en la carpeta PolicyDefinition. (Ejemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
-1. En la carpeta *admx*, abre la carpeta de idioma apropiada. Por ejemplo, si estás en EE. UU., abre la carpeta **en-US**.
-1. Copia el archivo *msedge.adml* en la carpeta de idioma correspondiente de la carpeta PolicyDefinition. Si no existe, crea la carpeta. (Ejemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
-1. Si tu dominio tiene más de un controlador de dominio, los nuevos archivos ADMX se replicarán en ellos en el siguiente intervalo de replicación del dominio.
-1. Para confirmar que los archivos se hayan cargado correctamente, abre el **Editor de administración de directivas de grupo** desde las herramientas administrativas de Windows y expande **Configuración de equipo** > **Directivas** > **Plantillas administrativas** > **Microsoft Edge**. Deberían aparecer ver uno o varios nodos de Microsoft Edge, como se muestra a continuación.
+2. Abre *MicrosoftEdgePolicyTemplates* y ve a **windows** > **admx**.
+3. Copia el archivo *msedge.admx* en la carpeta PolicyDefinition. (Ejemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
+4. En la carpeta *admx*, abre la carpeta de idioma apropiada. Por ejemplo, si estás en EE. UU., abre la carpeta **en-US**.
+5. Copia el archivo *msedge.adml* en la carpeta de idioma correspondiente de la carpeta PolicyDefinition. Si no existe, crea la carpeta. (Ejemplo: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
+6. Si tu dominio tiene más de un controlador de dominio, los nuevos archivos ADMX se replicarán en ellos en el siguiente intervalo de replicación del dominio.
+7. Para confirmar que los archivos se hayan cargado correctamente, abre el **Editor de administración de directivas de grupo** desde las herramientas administrativas de Windows y expande **Configuración de equipo** > **Directivas** > **Plantillas administrativas** > **Microsoft Edge**. Deberían aparecer ver uno o varios nodos de Microsoft Edge, como se muestra a continuación.
 
     ![Directivas de Microsoft Edge](./media/configure-microsoft-edge/edge-gpo-policies.png)
 
@@ -69,19 +69,6 @@ Ve a la [página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/Edge
 3. En la carpeta *admx*, abre la carpeta de idioma apropiada. Por ejemplo, si estás en EE. UU., abre la carpeta **en-US**.
 4. Copia el archivo *msedge.adml* en la carpeta de idioma correspondiente de la carpeta de definición de directivas. (Ejemplo: C:\Windows\PolicyDefinitions\en-US)
 5. Para confirmar que los archivos se hayan cargado correctamente, abre Editor de directivas de grupo local directamente (tecla Windows + R y escribe gpedit.msc) o abre MMC y carga el complemento de Editor de directivas de grupo local. Si se produce un error, suele deberse a que los archivos se encuentran en una ubicación incorrecta.
-
-<!--
-To add the administrative template to manage Microsoft Edge updates:
-
-1. Open the *MicrosoftEdgePolicyTemplates* file and go to **windows** > **admx**.
-2. Copy the *msedgeupdate.admx* file to your Policy Definition template folder. (Example: C:\Windows\PolicyDefinitions)
-3. In the *updatepolicies* folder, open the appropriate language folder. For example, if you’re in Germany, open the **de-DE** folder.
-4. Copy the *msedgeupdate.adml* file to the matching language folder in your Policy Definition folder. (Example: C:\Windows\PolicyDefinitions\de-DE)
-5. Open MMC and load the Local Group Policy Editor snap-in to confirm the files loaded correctly. If an error occurs, it’s usually because the files are in an incorrect location.
-
-> [!NOTE]
-> Currently the Microsoft Edge update policies are only localized in en-US. Additional language support will be added in a future release.
--->
 
 ### 2. Establece directivas obligatorias o recomendadas
 
@@ -108,22 +95,7 @@ Es posible que tengas que cerrar y volver a abrir Microsoft Edge para que aparez
 
 También puedes usar REGEDIT.exe en un equipo de destino para ver la configuración del Registro que almacena la configuración de directiva de grupo. Esta configuración se encuentra en la ruta del Registro **HKLM\SOFTWARE\Policies\Microsoft\Edge**.
 
-## Preguntas frecuentes
-
-### ¿Se puede configurar Microsoft Edge para usar las preferencias maestras?
-
-Si, puedes configurar Microsoft Edge para usar un archivo de preferencias maestras?
-
- Un archivo de preferencias maestras permite configurar las opciones predeterminadas cuando se implementa Microsoft Edge. También puedes usar un archivo de preferencias maestras para aplicar la configuración en equipos que no están administrados por un sistema de administración de dispositivos. Esta configuración se aplica al perfil del usuario la primera vez que el usuario ejecuta el explorador. Cuando el usuario ejecute el explorador, no se aplicarán los cambios realizados en el archivo de preferencias principales. Un usuario puede cambiar la configuración de las preferencias maestras del explorador. Si quieres que una configuración sea obligatoria o cambiar una configuración después de la primera ejecución del explorador, debes usar una directiva.
-
-Un archivo de preferencias principales permite personalizar muchas opciones de configuración y preferencias diferentes del explorador, incluidas las que se comparten con otros exploradores basados en Chromium y las específicas de Microsoft Edge.  Las preferencias relacionadas con la directiva pueden configurarse mediante el archivo de preferencias maestras. En los casos en los que se establece una directiva y hay un conjunto de preferencias maestro correspondiente, la configuración de directiva tiene prioridad.
-
-> [!IMPORTANT]
-> Es posible que todas las preferencias disponibles no sean coherentes con la terminología Microsoft Edge y las convenciones de nomenclatura.  No hay ninguna garantía de que estas preferencias sigan funcionando según lo previsto en futuras versiones. Las preferencias se pueden cambiar u omitir en versiones posteriores.
-
-Un archivo de preferencias maestras es un archivo de texto que se ha formateado usando marcado JSON. Este archivo debe agregarse al mismo directorio que el ejecutable msedge.exe. Para implementaciones de empresa por todo el sistema en Windows, suele ser: *Windows: C:\Program Files\Microsoft\Edge\Application\master_preferences*.
-
-## Consulta también
+## Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para Windows con Intune](configure-edge-with-intune.md)

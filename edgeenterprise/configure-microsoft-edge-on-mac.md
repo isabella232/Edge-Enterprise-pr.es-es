@@ -3,19 +3,19 @@ title: Configurar Microsoft Edge para macOS con un .plist
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 02/14/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar las opciones de directiva de Microsoft Edge en macOS con un .plist
-ms.openlocfilehash: 84469a4f84deeee0e47b6d8899426fa36cf345aa
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: abe110ab3589cc9276f28590273ece2d372be3b8
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981042"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194697"
 ---
 # Configurar las opciones de directiva de Microsoft Edge en macOS con un .plist
 
@@ -35,7 +35,7 @@ El primer paso es crear el archivo plist. Puedes crear el archivo plist con cual
 
 Para obtener una lista de las directivas admitidas y sus nombres clave preferidos, consulta [Referencia de directivas del explorador de Microsoft Edge](microsoft-edge-policies.md). En el archivo de plantillas de directiva, que se puede descargar desde la [página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise), hay un ejemplo de archivo plist (*itadminexample.plist*) en la carpeta de **ejemplos**. El archivo de ejemplo contiene todos los tipos de datos admitidos que se pueden personalizar para definir la configuración de directiva. 
 
-El siguiente paso después de crear el contenido del archivo plist, es asignarle un nombre usando el dominio de preferencia de Microsoft Edge, *com.microsoft.Edge*. El nombre distingue entre mayúsculas y minúsculas y no debe incluir el canal de destino porque se aplica a todos los canales de Microsoft Edge. El nombre de archivo plist debe ser **_com.microsoft.Edge.plist_**. 
+El siguiente paso después de crear el contenido del archivo plist, es asignarle un nombre usando el dominio de preferencia de Microsoft Edge, *com.microsoft.Edge*. El nombre distingue entre mayúsculas y minúsculas y no debe incluir el canal de destino porque se aplica a todos los canales de Microsoft Edge. El nombre de archivo plist debe ser **_com.microsoft.Edge.plist_**.
 
 > [!IMPORTANT]
 > A partir de la compilación 78.0.249.2, todos los canales de Microsoft Edge en macOS se leen desde el dominio de preferencias **com.microsoft.Edge**. Todas las versiones anteriores se leían desde un dominio específico de canal, como **com.microsoft.Edge.Dev** para el canal Dev.
@@ -55,6 +55,7 @@ El último paso es implementar el archivo plist en los dispositivos Mac de los u
    ```cmd
    /usr/bin/plutil -convert xml1 ~/Desktop/com.microsoft.Edge.plist
    ```
+
 Después de convertir el archivo, comprueba que los datos de la directiva sean correctos y contengan la configuración que quieras para tu perfil de configuración.
 
 > [!NOTE]
@@ -66,22 +67,7 @@ Para Microsoft Intune, crea un nuevo perfil de configuración de dispositivo des
 
 Para Jamf, carga el archivo .plist como una carga de *Configuración personalizada*.
 
-## Preguntas más frecuentes
-
-### ¿Se puede configurar Microsoft Edge para usar las preferencias maestras?
-
-Si, puedes configurar Microsoft Edge para usar un archivo de preferencias maestras.
-
-Un archivo de preferencias maestras permite configurar las opciones predeterminadas para un perfil de usuario de explorador cuando se implementa Microsoft Edge. También puedes usar un archivo de preferencias maestras para aplicar la configuración en equipos que no están administrados por un sistema de administración de dispositivos. Esta configuración se aplica al perfil del usuario la primera vez que el usuario ejecuta el explorador. Cuando el usuario ejecute el explorador, no se aplicarán los cambios realizados en el archivo de preferencias maestras. Un usuario puede cambiar la configuración de las preferencias maestras del explorador. Si quieres que una configuración sea obligatoria o cambiar una configuración después de la primera ejecución del explorador, debes usar una directiva.
-
-Un archivo de preferencias principales permite personalizar muchas opciones de configuración y preferencias diferentes del explorador, incluidas las que se comparten con otros exploradores basados en Chromium y las específicas de Microsoft Edge.  Las preferencias relacionadas con la directiva pueden configurarse mediante el archivo de preferencias maestras. En los casos en los que se establece una directiva y hay un conjunto de preferencias maestro correspondiente, la configuración de directiva tiene prioridad.
-
-> [!IMPORTANT]
-> Es posible que todas las preferencias disponibles no sean coherentes con la terminología Microsoft Edge y las convenciones de nomenclatura.  No hay ninguna garantía de que estas preferencias sigan funcionando según lo previsto en futuras versiones. Las preferencias se pueden cambiar u omitir en versiones posteriores.
-
-Un archivo de preferencias maestras es un archivo de texto que se ha formateado usando marcado JSON. Este archivo debe agregarse al mismo directorio que el ejecutable msedge.exe. Para las implementaciones de sistema para toda la organización en el Mac, esto suele ser: "*~/Library/Application Support/Microsoft/Microsoft Edge general Preferences*" o "*/Library/Application Support/Microsoft/Microsoft Edge general Preferences*".
-
-## Consulta también
+## Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para macOS con Jamf](configure-microsoft-edge-on-mac-jamf.md)
