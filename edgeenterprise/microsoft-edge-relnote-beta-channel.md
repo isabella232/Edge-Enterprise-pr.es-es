@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: f674c39506736dfc5b5706e902970e0e4ce84fd8
-ms.sourcegitcommit: 2a53bdd2510770c0b7580f912864337c6ef617fd
+ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
+ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "11192541"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195266"
 ---
 # Notas de la versión para el canal beta de Microsoft Edge
 
@@ -23,6 +23,12 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!IMPORTANT]
 > Vea esta actualización [en las versiones del canal de Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Versión 87.0.664.55: 3 de diciembre
+
+Se han corregido varios errores y problemas de rendimiento. La siguiente característica nueva es compatible con esta versión.
+
+- **Se generan alertas si se encuentra la contraseña de un usuario en una filtración en línea**. Las contraseñas de los usuarios se compararán con un repositorio de credenciales violadas conocidas y se enviará al usuario una alerta si se encuentra una coincidencia. (Esta característica estará disponible en la actualización estable de Microsoft Edge 88).
 
 ## Versión 87.0.664.52: 30 de noviembre
 
