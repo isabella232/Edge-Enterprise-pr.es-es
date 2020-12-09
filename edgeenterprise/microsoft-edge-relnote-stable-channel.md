@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 12/07/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 7975cf408a2b9d1c759ebf31e115b830649f1ee4
-ms.sourcegitcommit: 2a53bdd2510770c0b7580f912864337c6ef617fd
+ms.openlocfilehash: 27cce29832e6a4a4b6ee1dbd9e077bd61fd8733a
+ms.sourcegitcommit: 27eea895892d7125cd4147323681beaeef98d1af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "11192535"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "11196856"
 ---
 # Notas de la versión para el canal estable de Microsoft Edge
 
@@ -23,6 +23,16 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!NOTE]
 > Para el canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para obtener más información, consulte [Progressive rollouts for Microsoft Edge updates (Implementaciones progresivas de actualizaciones de Microsoft Edge)](microsoft-edge-update-progressive-rollout.md).
+
+## Versión 87.0.664.57: 7 de diciembre
+
+Se han corregido varios errores y problemas de rendimiento.
+
+## Versión 87.0.664.55: 3 de diciembre
+
+Se han corregido varios errores y problemas de rendimiento. La siguiente característica se actualizó para esta versión.
+
+- La **opción compras está habilitada de forma predeterminada**. A partir de la versión 87 de Microsoft Edge, los usuarios empresariales pueden beneficiarse de la compra en Microsoft Edge. Con las características de compra, Microsoft Edge ayuda a los usuarios a buscar cupones y mejores precios mientras compras en Internet. (La experiencia del cupón se presentó con la versión estable de 87.0.664.41). La experiencia de comparación de precios ahora está disponible con esta actualización. Esta característica se puede configurar con la directiva [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled). Consulte nuestro [Blog](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/) y [Obtenga más información](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#shopping) sobre Compras de Microsoft.
 
 ## Versión 87.0.664.52: 30 de noviembre
 
@@ -350,7 +360,7 @@ Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/
 
 - Varias actualizaciones de DevTools, como la compatibilidad con la personalización de los métodos abreviados de teclado para que coincidan con los de VS Code, y la visualización de DevTools en contraste alto.  Para obtener más información, consulte [Novedades en DevTools (Microsoft Edge 84)](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/whats-new/2020/05/devtools).
 
-### Actualizaciones de directivas
+### Actualizaciones de directiva
 
 #### Nuevas directivas
 
@@ -449,7 +459,7 @@ Un usuario escribe "powerbi" como "powerbbi".com. Link doctor propondrá "powerb
 
 - No permitir XmlHttpRequest sincrónico en el descarte de página. Se eliminará el envío de XmlHttpRequests sincrónicos durante la carga de una página web. Este cambio mejora el rendimiento y la confiabilidad del explorador, pero puede afectar a las aplicaciones web que aún no se han actualizado para usar API web más modernas, como sendBeacon y Fetch. La directiva de grupo para deshabilitar este cambio y permitir la XHR sincrónica durante el descarte de la página estará disponible hasta Microsoft Edge 88. Para más información, consulte [Cambios que se van a producir en Microsoft Edge que afectan a la compatibilidad de los sitios](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
 
-### Actualizaciones de directivas
+### Actualizaciones de directiva
 
 #### Nuevas directivas
 
