@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/03/2020
+ms.date: 12/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
-ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
+ms.openlocfilehash: 39e6062d8cf7ce0e5f03ecf26daaae4cc06bd4cf
+ms.sourcegitcommit: 46d42a284e54574811a7c934a36d85a3526fc8ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195266"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "11196541"
 ---
 # Notas de la versión para el canal beta de Microsoft Edge
 
@@ -28,7 +28,7 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 Se han corregido varios errores y problemas de rendimiento. La siguiente característica nueva es compatible con esta versión.
 
-- **Se generan alertas si se encuentra la contraseña de un usuario en una filtración en línea**. Las contraseñas de los usuarios se compararán con un repositorio de credenciales violadas conocidas y se enviará al usuario una alerta si se encuentra una coincidencia. (Esta característica estará disponible en la actualización estable de Microsoft Edge 88).
+- **Se generan alertas si se encuentra la contraseña de un usuario en una filtración en línea**. Las contraseñas de usuario se comprueban con un repositorio de credenciales infringidas y se envía una alerta al usuario si se encuentra una coincidencia. Para garantizar la seguridad y la privacidad, las contraseñas de los usuarios se dividen y cifran cuando se comparan con la base de datos de credenciales filtradas.
 
 ## Versión 87.0.664.52: 30 de noviembre
 
