@@ -1,18 +1,39 @@
 ---
-ms.openlocfilehash: ce28ae4b68d062b4b361b1d5eb57fc8ae85c724e
-ms.sourcegitcommit: 63a094a5268bb3b4819269438357095acd79abac
+ms.openlocfilehash: c4f155b54e8f98e599868583ceb93f3b5abbeac2
+ms.sourcegitcommit: 8840ea3c0d7b68a81ed09c9dae5456d1a3a0b27a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "11193387"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "11201257"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 
-## Semana del 23 de noviembre de 2020
+## Semana del 30 de noviembre de 2020
+
 
 | Fecha de publicación |Título del tema | Cambiar |
 |------|------------|--------|
-| 24/11/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Correcciones para la versión menor 87.0.664.47. | modificado |
+| 30/11/2020 | [Reversión de Microsoft Edge para empresas](/DeployEdge/edge-learnmore-rollback)<br>Comando de corrección en reversión para forzar la actualización de la directiva de grupo. | modificado |
+| 30/11/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Correcciones para la versión secundaria 87.0.664.52.  | modificado |
+| 30/11/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Correcciones para la versión secundaria 87.0.664.52.| modificado |
+| 1/12/2020 | [Configurar Microsoft Edge en macOS con Jamf](/DeployEdge/configure-microsoft-edge-on-mac-jamf)<br>Quitar compatibilidad con las preferencias principales. | modificado |
+| 1/12/2020 | [Configurar Microsoft Edge para macOS con un .plist](/DeployEdge/configure-microsoft-edge-on-mac)<br>Quitar compatibilidad con las preferencias principales. | modificado |
+| 1/12/2020 | [Configurar Microsoft Edge para Windows](/DeployEdge/configure-microsoft-edge)<br>Quitar compatibilidad con las preferencias principales. | modificado |
+| 1/12/2020 | [Automatizar Microsoft Edge para la implementación en macOS con Jamf](/DeployEdge/deploy-edge-mac-jamf)<br>Actualizar los metadatos. | modificado |
+| 1/12/2020 | [Lista de permitidos para puntos de conexión de Microsoft Edge](/DeployEdge/microsoft-edge-security-endpoints)<br>Corregir el punto de conexión para el servicio de sincronización empresarial. | modificado |
+| 2/12/2020 | [Documentación de la directiva del explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Realizar anotaciones con la lista de directivas nuevas y en desuso. | modificado |
+| 2/12/2020 | [Documentación de la directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies)<br>Actualizar los metadatos. | modificado |
+| 3/12/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Correcciones para la versión secundaria 87.0.664.55, en las que se resaltan la característica de supervisión y alerta de la contraseña. | modificado |
+| 3/12/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) <br>Correcciones para la versión secundaria 87.0.664.55, en las que se resaltan la disponibilidad de la comparación de precios para Microsoft Shopping.| modificado |
+| 4/12/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Revisión de la nota de la versión para la versión beta secundaria 87.0.664.55 para obtener más claridad.  | modificado |
+
+
+## Semana del 23 de noviembre de 2020
+
+
+| Fecha de publicación |Título del tema | Cambiar |
+|------|------------|--------|
+| 24/11/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
 
 
 ## Semana del 16 de noviembre de 2020
@@ -70,18 +91,3 @@ ms.locfileid: "11193387"
 | 4/11/2020 | [Documentación de directiva de explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies) | modificado |
 | 4/11/2020 | [Documentación de directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies) | modificado |
 | 6/11/2020 | [Preparado para Microsoft Edge](/DeployEdge/deploy-edge-ready-for-edge) | modificado |
-
-
-## Semana del 26 de octubre de 2020
-
-
-| Fecha de publicación |Título del tema | Cambiar |
-|------|------------|--------|
-| 26/10/2020 | [Ciclo de vida de Microsoft Edge](/DeployEdge/microsoft-edge-support-lifecycle) | modificado |
-| 26/10/2020 | [Materiales para la adopción de clientes de Microsoft Edge](/DeployEdge/microsoft-edge-customer-adoption-kit) | modificado |
-| 26/10/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
-| 27/10/2020 | [Documentación de directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies) | modificado |
-| 27/10/2020 | [Ciclo de vida de Microsoft Edge](/DeployEdge/microsoft-edge-support-lifecycle) | modificado |
-| 27/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
-| 29/10/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
-| 30/10/2020 | [Sistemas operativos admitidos con Microsoft Edge](/DeployEdge/microsoft-edge-supported-operating-systems) | modificado |
