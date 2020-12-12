@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/07/2020
+ms.date: 12/08/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 27cce29832e6a4a4b6ee1dbd9e077bd61fd8733a
-ms.sourcegitcommit: 27eea895892d7125cd4147323681beaeef98d1af
+ms.openlocfilehash: e998437308a9fc95ba6cb683561c109797a3e9c9
+ms.sourcegitcommit: 1be5f3584b2a9400ca18c3d5483c3c8929ac9dce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "11196856"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "11203602"
 ---
 # Notas de la versión para el canal estable de Microsoft Edge
 
@@ -26,7 +26,7 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 ## Versión 87.0.664.57: 7 de diciembre
 
-Se han corregido varios errores y problemas de rendimiento.
+Se han corregido varios errores y problemas de rendimiento. Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020).
 
 ## Versión 87.0.664.55: 3 de diciembre
 
