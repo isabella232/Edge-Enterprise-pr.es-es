@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/02/2020
+ms.date: 12/11/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
-ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
+ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
+ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "11218739"
 ---
 # Microsoft Edge: directivas
 
@@ -29,22 +29,14 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
-## Directivas nuevas y en desuso
+## Nuevas directivas
 
-En la tabla siguiente se enumeran las directivas nuevas y en desuso para esta actualización.
+En la siguiente tabla, se muestran las nuevas directivas para esta actualización.
 
 | Nombre | Título |
-|-|-|
-|[PrinterTypeDenyList](#printertypedenylist)|Deshabilitar los tipos de impresora en la lista de denegación|
-|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Permitir el inicio de archivos locales en el modo de Internet Explorer|
-|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Abrir archivos locales en la lista de permitidos de extensión de archivo del modo Internet Explorer|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Mostrar el menú contextual para abrir un vínculo en el modo de Internet Explorer|
-|[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamiento de la redirección de intranet|
-|[UpdatePolicyOverride](#updatepolicyoverride)|Especifica cómo Microsoft Edge Update controla las actualizaciones disponibles de Microsoft Edge|
-|[VerticalTabsAllowed](#verticaltabsallowed)|Configura la disponibilidad de un diseño vertical para pestañas en el lateral del explorador|
-| OBSOLETO [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Permitir degradación de TLS/DTLS heredado en WebRTC|
-
-
+|--|--|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| Restringir el modo de impresión de imágenes gráficas del fondo|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| Modo predeterminado de impresión de imágenes gráficas del fondo|
 
 ## Directivas disponibles
 
@@ -188,6 +180,8 @@ y sugerencias para los servicios Microsoft|
 |[PrintHeaderFooter](#printheaderfooter)|Imprimir encabezados y pies de página|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Establecer la impresora predeterminada del sistema como la impresora predeterminada|
 |[PrinterTypeDenyList](#printertypedenylist)|Deshabilitar los tipos de impresora en la lista de denegación|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restringir el modo de impresión de imágenes gráficas del fondo|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Modo predeterminado de impresión de imágenes gráficas del fondo|
 |[PrintingEnabled](#printingenabled)|Habilitar la impresión|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Tamaño de página de impresión predeterminado|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimir usando el diálogo de impresión del sistema|
@@ -439,8 +433,6 @@ y sugerencias para los servicios Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Administrar la exposición de la dirección IP local por WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir la exposición de la dirección IP local por WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir el rango de puertos UDP locales usados por WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Habilitar el widget web|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir el widget web al arrancar Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar la resolución del proxy de Windows (en desuso)|
 
 
@@ -2756,7 +2748,7 @@ Defina una lista de sitios, basada en patrones de dirección URL, que pueden eje
 
 Si no configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultPluginsSetting](#defaultpluginssetting) (si está establecido) o la configuración personal del usuario.
 
-Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, las tramas con los caracteres comodín '\*' y '[\*.]' en el host ya no son compatibles con esta directiva.
+Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, los patrones con carácteres comodín de "*" y "[*.]" en el host ya no son compatibles con esta directiva.
 
   #### Características admitidas:
 
@@ -2825,7 +2817,7 @@ Define una lista de sitios basada en los patrones de dirección URL que están b
 
 Si no configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultPluginsSetting](#defaultpluginssetting) (si está establecido) o la configuración personal del usuario.
 
-Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, las tramas con los caracteres comodín '\*' y '[\*.]' en el host ya no son compatibles con esta directiva.
+Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, los patrones con carácteres comodín de "*" y "[*.]" en el host ya no son compatibles con esta directiva.
 
   #### Características admitidas:
 
@@ -4174,7 +4166,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### Descripción
 
-  Se permiten todas las extensiones de forma predeterminada. Sin embargo, si bloquea todas las extensiones configurando la directiva "ExtensionInstallBlockList" en "*", los usuarios solo podrán instalar las extensiones definidas en esta directiva.
+  La configuración de esta directiva especifica qué extensiones no están sujetas a la lista de bloqueo.
+
+Un valor de la lista de bloqueo "*" significa que todas las extensiones están bloqueadas y que los usuarios solo pueden instalar las extensiones que aparecen en la lista de permitidos.
+
+De forma predeterminada, se permiten todas las extensiones. Sin embargo, si prohibió las extensiones por directiva, puede usar la lista de extensiones permitidas para cambiar esa directiva.
 
   #### Características admitidas:
 
@@ -4237,11 +4233,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   #### Descripción
 
-  Lista extensiones específicas que los usuarios no pueden instalar en Microsoft Edge. Al implementar esta directiva cualquier extensión de esta lista que haya sido instalada previamente será deshabilitada y el usuario no podrá habilitarla. Si elimina un elemento de la lista de extensiones bloqueadas, esa extensión se volverá a habilitar automáticamente en cualquier lugar en el que se haya instalado previamente.
+  Permite especificar las extensiones que los usuarios NO pueden instalar. Las extensiones ya instaladas se deshabilitarán si se bloquean, sin que el usuario pueda habilitarlas. Después de quitar una extensión deshabilitada de la lista de bloqueo, se volverá a habilitar de manera automática.
 
-Use "*" para bloquear todas las extensiones que no estén explícitamente listadas en la lista de permisos.
+Un valor de la lista de bloqueo "*" significa que todas las extensiones están bloqueadas, a menos que aparezcan de manera explícita en la lista de permitidos.
 
-Si no configura esta directiva los usuarios podrán instalar cualquier extensión en Microsoft Edge.
+Si esta directiva no está configurada, el usuario puede instalar cualquier extensión en Microsoft Edge.
 
   #### Características admitidas:
 
@@ -4448,11 +4444,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   #### Descripción
 
-  Configura los parámetros de la administración de extensiones para Microsoft Edge.
+  La configuración de esta directiva controla la configuración de la administración de extensiones de Microsoft Edge, incluida cualquier configuración controlada por directivas existentes relacionadas con las extensiones. Esta directiva reemplaza cualquier directiva heredada que pueda configurarse.
 
-Esta directiva controla múltiples parámetros, incluyendo los parámetros controlados por cualquier directiva existente relacionada con las extensiones. Esta directiva reemplaza las directivas heredadas si ambas están establecidas.
+Esta directiva asigna un Id. de extensión o una dirección URL de actualización únicamente a su configuración específica. Se puede establecer una configuración predeterminada para el Id. especial "*", que se aplica a todas las extensiones sin una configuración personalizada en esta directiva. Con una dirección URL de actualización, la configuración se aplica a las extensiones con la dirección URL de actualización exacta establecida en el manifiesto de la extensión ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
 
-Esta directiva asigna un id. de extensión o una dirección URL de actualización a su configuración. Con un id. de extensión, la configuración se aplica solo a la extensión especificada. Establezca una configuración predeterminada para el id. especial "*" para que se aplique a todas las extensiones que no estén específicamente enumeradas en esta política. Con una dirección URL de actualización, la configuración se aplica a todas las extensiones con la dirección URL de actualización exacta indicada en el manifiesto de esta extensión, como se describe en [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043).
+Nota: Para las instancias de Windows que no estén unidas a un dominio de Microsoft Active Directory, la instalación forzada se limita a las aplicaciones y extensiones que aparecen en el sitio web de complementos de Microsoft Edge.
+
 
   #### Características admitidas:
 
@@ -5217,9 +5214,9 @@ Para obtener información detallada sobre cómo configurar la pantalla completa,
 
   #### Descripción
 
-  Enumera los hosts de mensajería nativos específicos que los usuarios pueden utilizar en Microsoft Edge.
+  La configuración de la directiva especifica qué hosts de mensajería nativa no están sujetos a la lista de denegación. Un valor "*" de la lista de denegación significa que todos los hosts de mensajería nativa están denegados, a menos que se permitan de manera explícita.
 
-De forma predeterminada, se permiten todos los hosts de mensajería nativa. Si establece la directiva [NativeMessagingBlocklist](#nativemessagingblocklist) en *, todos los hosts de mensajería nativa se bloquearán y solo se cargarán los hosts de mensajería nativa que figuran en esta lista.
+Todos los hosts de mensajería nativa están permitidos de forma predeterminada. Sin embargo, si un host de mensajería nativa está denegado por directiva, el administrador puede usar la lista de permitidos para cambiar esa directiva.
 
   #### Características admitidas:
 
@@ -5282,11 +5279,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   #### Descripción
 
-  Especifica los hosts de mensajería nativa que no se deben usar.
+  La configuración de esta directiva especifica qué hosts de mensajería nativa no se deben cargar. Un valor "*" de la lista de denegación significa que todos los hosts de mensajería nativa están denegados, a menos que se permitan de manera explícita.
 
-Use "*" para bloquear todos los hosts de mensajería nativa, excepto si aparecen explícitamente en la lista de permitidos.
-
-Si no configura esta directiva Microsoft Edge cargará todos los hosts de mensajería nativa instalados.
+Si deja esta directiva sin configurar, Microsoft Edge carga todos los hosts de mensajería nativos instalados.
 
   #### Características admitidas:
 
@@ -5349,11 +5344,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   #### Descripción
 
-  Permite la instalación a nivel de usuario de hosts de mensajería nativa.
+  Si configura esta directiva como Habilitada o la deja sin configurar, Microsoft Edge puede usar los hosts de mensajería nativa instalados en el nivel de usuario.
 
-Si deshabilita esta directiva, Microsoft Edge solo usará hosts de mensajería nativa instalados en el nivel de sistema.
-
-De forma predeterminada, si no configura esta directiva, Microsoft Edge permitirá el uso de hosts de mensajería nativa a nivel de usuario.
+Si configura esta directiva como Deshabilitada, Microsoft Edge solo puede usar estos hosts si están instalados en el nivel del sistema.
 
   #### Características admitidas:
 
@@ -6153,6 +6146,140 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   <string>local</string>
   <string>privet</string>
 </array>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### PrintingAllowedBackgroundGraphicsModes
+
+  #### Restringir el modo de impresión de imágenes gráficas del fondo
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión 89 o posterior
+
+  #### Descripción
+
+  Restringe el modo de impresión de imágenes gráficas del fondo. Si esta directiva no se establece, no hay restricciones en la impresión de imágenes gráficas del fondo.
+
+Asignación de opciones de directiva:
+
+* any (cualquiera) = permitir la impresión con o sin imágenes gráficas del fondo
+
+* enabled (habilitado) = permitir la impresión solo con imágenes gráficas del fondo
+
+* disabled (deshabilitado) = permitir la impresión solo sin imágenes gráficas del fondo
+
+Use la información anterior al configurar esta directiva.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Cadena
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: PrintingAllowedBackgroundGraphicsModes
+  - Nombre de la directiva de grupo (GP): Restringir el modo de impresión de imágenes gráficas del fondo
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Impresión
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: PrintingAllowedBackgroundGraphicsModes
+  - Tipo de valor: REG_SZ
+
+  ##### Valor de ejemplo:
+
+```
+"enabled"
+```
+
+  #### Información y configuración de Mac
+  
+  - Nombre de clave de preferencia: PrintingAllowedBackgroundGraphicsModes
+  - Valor de ejemplo:
+``` xml
+<string>enabled</string>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### PrintingBackgroundGraphicsDefault
+
+  #### Modo predeterminado de impresión de imágenes gráficas del fondo
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión 89 o posterior
+
+  #### Descripción
+
+  Sustituye el modo predeterminado de impresión de imágenes gráficas del fondo.
+
+Asignación de opciones de directiva:
+
+* enabled (habilitado) = habilitar de forma predeterminada el modo de impresión de imágenes gráficas del fondo
+
+* disabled (deshabilitado) = deshabilitar de forma predeterminada el modo de impresión de imágenes gráficas del fondo
+
+Use la información anterior al configurar esta directiva.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Cadena
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: PrintingBackgroundGraphicsDefault
+  - Nombre de GP: Modo predeterminado de impresión de imágenes gráficas del fondo
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Impresión
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: PrintingBackgroundGraphicsDefault
+  - Tipo de valor: REG_SZ
+
+  ##### Valor de ejemplo:
+
+```
+"enabled"
+```
+
+  #### Información y configuración de Mac
+  
+  - Nombre de clave de preferencia: PrintingBackgroundGraphicsDefault
+  - Valor de ejemplo:
+``` xml
+<string>enabled</string>
 ```
   
 
@@ -8292,7 +8419,7 @@ Si no configura la directiva, los usuarios pueden elegir si se muestra el botón
 
   Habilita la visualización de las sugerencias relevantes de Búsqueda de Microsoft en Bing en la lista de sugerencias de la barra de direcciones cuando el usuario escribe una cadena de búsqueda en la barra de direcciones. Si habilita o no configura esta directiva, los usuarios podrán ver los resultados internos con tecnología de Búsqueda de Microsoft en Bing en la lista de sugerencias de la barra de direcciones de Microsoft Edge. Para ver los resultados de la Búsqueda de Microsoft en Bing, el usuario debe iniciar sesión en Microsoft Edge con su cuenta de Azure AD de esa organización.
 Si deshabilita esta directiva, los usuarios no podrán ver los resultados internos en la lista de sugerencias de la barra de direcciones de Microsoft Edge.
-Si habilitó el conjunto de directivas que fuerza a un proveedor de búsqueda predeterminado ([DefaultSearchProviderEnabled](#defaultsearchproviderenabled), [DefaultSearchProviderName](#defaultsearchprovidername) and [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)), y el proveedor de búsqueda especificado no es Bing, entonces esta directiva no se aplicará y no habrá sugerencias de Búsqueda de Microsoft en Bing en la lista de sugerencias de la barra de direcciones.
+A partir de la versión 89 de Microsoft Edge, las sugerencias de la Búsqueda de Microsoft en Bing estarán disponibles incluso si Bing no es el proveedor de búsquedas predeterminado del usuario.
 
   #### Características admitidas:
 
@@ -17951,9 +18078,8 @@ Si no se establece, se usa el período predeterminado de 604,8 millones de milis
 
   #### Descripción
 
-  Si esta directiva está habilitada o sin establecer, entonces la integridad del código de presentación estará habilitada. Esta directiva sólo debe desactivarse si se produce algún problema de compatibilidad con un software de terceros que deba ejecutarse dentro de los procesos de representación de Microsoft Edge.
-
-Si se deshabilita esta directiva, la seguridad y la estabilidad de Microsoft Edge se verán perjudicadas, ya que se permitirá que se cargue código desconocido y potencialmente hostil en los procesos de representación de Microsoft Edge.
+  Si establece la directiva como Habilitada o la deja sin configurar, se activará la Integridad de código de representador.
+Si establece la directiva como Deshabilitada, esto tiene un efecto perjudicial en la seguridad y estabilidad de Microsoft Edge, ya que un código desconocido y posiblemente hostil puede cargarse dentro de los procesos del representador de Microsoft Edge. Solo desactive la directiva si hay problemas de compatibilidad con software de terceros que deba ejecutarse dentro de los procesos del representador de Microsoft Edge.
 
   #### Características admitidas:
 
@@ -21760,131 +21886,7 @@ Si no configura esta directiva, o si la establece con una cadena vacía o un int
 ``` xml
 <string>10000-11999</string>
 ```
-  
-
-  [Volver al principio](#microsoft-edge---policies)
-
-  ### WebWidgetAllowed
-
-  #### Habilitar el widget web
-
-  
-  
-  #### Versiones compatibles:
-
-  - En Windows, desde la versión 88 o posterior
-
-  #### Descripción
-
-  Habilita el widget web. Cuando se habilita, los usuarios pueden usar el widget para buscar la web desde su escritorio o desde una aplicación. El widget ofrece un cuadro de búsqueda en el que se muestran las web sugeridas y abre todas las búsquedas web en Microsoft Edge. El cuadro de búsqueda ofrece búsquedas (con tecnología de Bing) y sugerencias de direcciones URL. El widget también incluye iconos de fuentes en los que los usuarios pueden clicar y ver más información sobre msn.com en una nueva ventana o pestaña del explorador Microsoft Edge. Los iconos de las fuentes pueden incluir anuncios. El widget se puede iniciar desde la configuración de Microsoft Edge o desde el menú "Más herramientas" de Microsoft Edge.
-
-Si habilita o no configura esta directiva: el widget web se habilitará de manera automática para todos los perfiles.
-En la configuración de Microsoft Edge, los usuarios verán la opción para iniciar el widget.
-En la configuración de Microsoft Edge, los usuarios verán el elemento de menú para ejecutar el widget cuando se arranque Windows (inicio automático).
-La opción para habilitar el widget en el momento del arranque estará activada si se habilita la directiva [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup).
-Si la directiva [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) está deshabilitada o no se configura, la opción para habilitar el widget en el momento del arranque estará desactivada.
-Los usuarios verán el elemento de menú para iniciar el widget desde el menú "Más herramientas" de Microsoft Edge. Los usuarios pueden iniciar el widget desde "Más herramientas".
-El widget se puede desactivar con la opción "Salir" en la bandeja del sistema o si se cierra el widget desde la barra de tareas. El widget se reiniciará cuando se reinicie el sistema si se ha habilitado el inicio automático.
-
-Si se deshabilita esta directiva: el widget web estará deshabilitado para todos los perfiles.
-La opción de iniciar el widget desde Configuración de Microsoft Edge estará deshabilitada.
-La opción para que le widget se inicie en el momento del arranque de Windows (inicio automático) estará deshabilitada.
-La opción de iniciar el widget desde el menú "Más herramientas" de Microsoft Edge estará deshabilitada.
-
-  #### Características admitidas:
-
-  - Puede ser obligatorio: sí
-  - Puede ser recomendable: no
-  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
-
-  #### Tipo de datos:
-
-  - Booleano
-
-  #### Información y configuración de Windows
-
-  ##### Información de directiva de grupo (ADMX)
-
-  - Nombre único de GP: WebWidgetAllowed
-  - Nombre de GP: habilitar el widget web
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
-  - Ruta de acceso de GP (recomendado): N/D
-  - Nombre de archivo de ADMX GP: MSEdge.admx
-
-  ##### Configuración del Registro de Windows
-
-  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendado): N/D
-  - Nombre del valor: WebWidgetAllowed
-  - Tipo de valor: REG_DWORD
-
-  ##### Valor de ejemplo:
-
-```
-0x00000001
-```
-
-  
-
-  [Volver al principio](#microsoft-edge---policies)
-
-  ### WebWidgetIsEnabledOnStartup
-
-  #### Permitir el widget web al arrancar Windows
-
-  
-  
-  #### Versiones compatibles:
-
-  - En Windows, desde la versión 88 o posterior
-
-  #### Descripción
-
-  Permite que el widget web empiece a iniciarse al arrancar Windows.
-
-Si lo habilita: el widget web se empezará a iniciar de manera predeterminada al arrancar Windows.
-Si el widget se deshabilita a través de la directiva [WebWidgetAllowed](#webwidgetallowed), esta directiva no iniciará el widget al arrancar Windows.
-
-Si se deshabilita esta directiva: el widget web no se iniciará al arrancar Windows en ninguno de los perfiles.
-La opción para iniciar el widget al arrancar Windows se deshabilitará y se desactivará en la configuración de Microsoft Edge.
-
-Si no configura esta directiva: el widget web no se iniciará al arrancar Windows en ninguno de los perfiles.
-La opción para iniciar el widget al arrancar Windows estará desactivado en la configuración de Microsoft Edge.
-
-  #### Características admitidas:
-
-  - Puede ser obligatorio: sí
-  - Puede ser recomendable: no
-  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
-
-  #### Tipo de datos:
-
-  - Booleano
-
-  #### Información y configuración de Windows
-
-  ##### Información de directiva de grupo (ADMX)
-
-  - Nombre único de GP: WebWidgetIsEnabledOnStartup
-  - Nombre de GP: permitir el widget web al arrancar Windows
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
-  - Ruta de acceso de GP (recomendado): N/D
-  - Nombre de archivo de ADMX GP: MSEdge.admx
-
-  ##### Configuración del Registro de Windows
-
-  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendado): N/D
-  - Nombre del valor: WebWidgetIsEnabledOnStartup
-  - Tipo de valor: REG_DWORD
-
-  ##### Valor de ejemplo:
-
-```
-0x00000001
-```
-
-  
+ 
 
   [Volver al principio](#microsoft-edge---policies)
 
