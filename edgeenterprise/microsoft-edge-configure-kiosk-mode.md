@@ -107,39 +107,68 @@ La configuración de Windows es la manera más sencilla de configurar uno o dos 
 
 4. En la página **Configurar un quiosco** , haz clic en  **Empezar**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Configurar el quiosco con el acceso asignado":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Página de quiosco: introducción":::
 
 5. Escribe un nombre para crear una nueva cuenta de quiosco o elije una cuenta existente de la lista rellenada y haz clic en  **Siguiente**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Configurar el quiosco con el acceso asignado":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Modo de pantalla completa: crear cuenta":::
 
 6. En la página **Elegir una aplicación de quiosco** , selecciona **Microsoft** Edge y haz clic en  **Siguiente**.
 
    > [!NOTE]
    > Esto solo se aplica a Microsoft Edge Dev, Beta y canales estables.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Configurar el quiosco con el acceso asignado":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Modo de pantalla completa: elegir una aplicación":::
 
 7. Elige una de las siguientes opciones para decidir cómo se muestra Microsoft Edge cuando se ejecuta en el modo de pantalla completa:
 
    - Señalización de indicación digital/interactiva: muestra un sitio específico en el modo de pantalla completa que ejecuta Microsoft Edge
    - Explorador público: ejecuta una versión multipestaña limitada de Microsoft Edge.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Configurar el quiosco con el acceso asignado":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Pantalla completa: inicio de sesión digital en pantalla completa.":::
 
 8. Selecciona  **Siguiente**.
 9. Escribe la dirección URL que quieres cargar cuando se inicie la pantalla completa.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Configurar el quiosco con el acceso asignado":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Modo de pantalla completa: escribir URL":::
 
 10. Acepta el valor predeterminado de 5 minutos para el tiempo de inactividad o proporciona un valor.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Configurar el quiosco con el acceso asignado":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Modo de pantalla completa: introducir el tiempo de inactividad":::
 
 11. Haz clic en  **Siguiente**.
 12. Cierra la ventana  **Configuración**  para guardar y aplicar las opciones.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Configurar el quiosco con el acceso asignado"  de configuración solo habilitará las opciones necesarias (por ejemplo, Imprimir, Ayuda, Comentarios y Leer en voz alta).
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Modo de pantalla completa: finalizar la configuración":::
+
+13. Cierra sesión en el dispositivo de quiosco e inicia sesión con la cuenta de quiosco local para validar la configuración.
+
+## Limitaciones funcionales
+
+Con el lanzamiento de esta vista previa de la modalidad de pantalla completa, continuamos trabajando para mejorar el producto y agregar nuevas características.
+
+El modo de pantalla completa no es compatible actualmente con las siguientes funciones (estamos trabajando para que lo sea en el futuro):
+
+- Colecciones
+- Extensions
+- Modo Internet Explorer
+- Protección de aplicaciones de Microsoft Defender (WDAG)
+
+## Guía básica
+
+### A finales de este año (2020)
+
+Agregaremos las siguientes características:
+
+- Botón Finalizar sesión
+- Barra de direcciones de solo lectura  
+  - Configurable con la directiva de grupo
+  - Cuando esté habilitado, los usuarios no podrán editar la barra de direcciones y navegar a otra página.
+
+- Más funciones de bloqueo:
+
+  - Se bloquearán aceleradores adicionales (por ejemplo, CTRL + N)
+  - El menú "..."  de configuración solo habilitará las opciones necesarias (por ejemplo, Imprimir, Ayuda, Comentarios y Leer en voz alta).
   - Bloqueo adicional de páginas *edge://* (por ejemplo, *edge://settings*)
   - Configurar la interfaz de usuario de opciones de impresión
   - Limitar el explorador de archivos a la carpeta de descargas.
