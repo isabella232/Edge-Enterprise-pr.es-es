@@ -107,39 +107,39 @@ ms.locfileid: "11094867"
 
 4. <span data-ttu-id="fb861-163">En la página **Configurar un quiosco** , haz clic en  **Empezar**.</span><span class="sxs-lookup"><span data-stu-id="fb861-163">On the **Set up a kiosk** page, click **Get started**.</span></span>
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Configurar el quiosco con el acceso asignado":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Página de quiosco: introducción":::
 
 5. <span data-ttu-id="fb861-165">Escribe un nombre para crear una nueva cuenta de quiosco o elije una cuenta existente de la lista rellenada y haz clic en  **Siguiente**.</span><span class="sxs-lookup"><span data-stu-id="fb861-165">Type a name to create a new kiosk account or choose an existing account from the populated dropdown list and then click **Next**.</span></span>
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Configurar el quiosco con el acceso asignado":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Modo de pantalla completa: crear cuenta":::
 
 6. <span data-ttu-id="fb861-167">En la página **Elegir una aplicación de quiosco** , selecciona **Microsoft** Edge y haz clic en  **Siguiente**.</span><span class="sxs-lookup"><span data-stu-id="fb861-167">On the **Choose a kiosk app** page, select **Microsoft Edge** and then click **Next**.</span></span>
 
    > [!NOTE]
    > <span data-ttu-id="fb861-168">Esto solo se aplica a Microsoft Edge Dev, Beta y canales estables.</span><span class="sxs-lookup"><span data-stu-id="fb861-168">This only applies to Microsoft Edge Dev, Beta, and Stable channels.</span></span>
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Configurar el quiosco con el acceso asignado":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Modo de pantalla completa: elegir una aplicación":::
 
 7. <span data-ttu-id="fb861-170">Elige una de las siguientes opciones para decidir cómo se muestra Microsoft Edge cuando se ejecuta en el modo de pantalla completa:</span><span class="sxs-lookup"><span data-stu-id="fb861-170">Pick one of the following options for how Microsoft Edge displays when running in kiosk mode:</span></span>
 
    - <span data-ttu-id="fb861-171">Señalización de indicación digital/interactiva: muestra un sitio específico en el modo de pantalla completa que ejecuta Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="fb861-171">Digital/Interactive signage - Displays a specific site in full-screen mode, running Microsoft Edge.</span></span>
    - <span data-ttu-id="fb861-172">Explorador público: ejecuta una versión multipestaña limitada de Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="fb861-172">Public browser - Runs a limited multi-tab version of Microsoft Edge.</span></span>
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Configurar el quiosco con el acceso asignado":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Pantalla completa: inicio de sesión digital en pantalla completa.":::
 
 8. <span data-ttu-id="fb861-174">Selecciona  **Siguiente**.</span><span class="sxs-lookup"><span data-stu-id="fb861-174">Select **Next**.</span></span>
 9. <span data-ttu-id="fb861-175">Escribe la dirección URL que quieres cargar cuando se inicie la pantalla completa.</span><span class="sxs-lookup"><span data-stu-id="fb861-175">Type the URL to load when the kiosk launches.</span></span>
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Configurar el quiosco con el acceso asignado":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Modo de pantalla completa: escribir URL":::
 
 10. <span data-ttu-id="fb861-177">Acepta el valor predeterminado de 5 minutos para el tiempo de inactividad o proporciona un valor.</span><span class="sxs-lookup"><span data-stu-id="fb861-177">Accept the default value of 5 minutes for the idle time or provide a value of your own.</span></span>
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Configurar el quiosco con el acceso asignado":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Modo de pantalla completa: introducir el tiempo de inactividad":::
 
 11. <span data-ttu-id="fb861-179">Haz clic en  **Siguiente**.</span><span class="sxs-lookup"><span data-stu-id="fb861-179">Click **Next**.</span></span>
 12. <span data-ttu-id="fb861-180">Cierra la ventana  **Configuración**  para guardar y aplicar las opciones.</span><span class="sxs-lookup"><span data-stu-id="fb861-180">Close the **Settings** window to save and apply your choices.</span></span>
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Configurar el quiosco con el acceso asignado":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Modo de pantalla completa: finalizar la configuración":::
 
 13. <span data-ttu-id="fb861-182">Cierra sesión en el dispositivo de quiosco e inicia sesión con la cuenta de quiosco local para validar la configuración.</span><span class="sxs-lookup"><span data-stu-id="fb861-182">Sign off from the kiosk device and sign in with the local kiosk account to validate the configuration.</span></span>
 
