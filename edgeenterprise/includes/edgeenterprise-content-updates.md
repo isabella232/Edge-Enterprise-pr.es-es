@@ -1,12 +1,28 @@
 ---
-ms.openlocfilehash: c4f155b54e8f98e599868583ceb93f3b5abbeac2
-ms.sourcegitcommit: 8840ea3c0d7b68a81ed09c9dae5456d1a3a0b27a
+ms.openlocfilehash: 0466d312837cbd423c00bfbd7acd613124bd8948
+ms.sourcegitcommit: 6b02e0fedcf4c00737a8342f38f039b4e1bbbfda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "11201257"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "11229228"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+## Semana del 7 de diciembre de 2020
+
+
+| Fecha de publicación | Título del tema | Cambiar |
+|-|-|-|
+|8/12/2020| [Soporte y configuración de identidad de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity)<br>Actualizar la sección de [WIA](https://docs.microsoft.com/deployedge/microsoft-edge-security-identity#windows-integrated-authentication-wia).| modificado|
+|8/12/2020| [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-relnotes-security#december-7-2020)<br>Actualización de seguridad para la versión menor 87.0.664.57.|  modificado |
+|8/12/2020| [Notas de la versión para el canal estable de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066457-december-7)<br>Actualizar para reflejar la actualización de seguridad para la versión secundaria 87.0.664.57.| modificado |
+|10/12/2020|[Microsoft Edge: directivas](https://docs.microsoft.com/deployedge/microsoft-edge-policies)<br>Realizar anotaciones con la lista de nuevas directivas.| modificado|
+|10/12/2020|[Microsoft Edge WebView2: directivas](https://docs.microsoft.com/deployedge/microsoft-edge-webview-policies)<br>Actualizar los metadatos.| modificado|
+|10/12/2020| [Sistemas operativos admitidos con Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-supported-operating-systems)<br>Reemplazar el sistema operativo con el número de versión de lanzamiento.| modificado|
+|10/12/2020| [Notas de la versión para el canal estable de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066460-december-10)<br>Resuelve errores y problemas de rendimiento en la versión secundaria 87.0.664.60.| modificado |
+|10/12/2020| [Programa de publicación de versiones de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-release-schedule)<br>Programa de actualización con versión principal beta de 88.0.705.18.| modificado |
+|11/12/2020| [Notas de la versión de Microsoft Edge para el canal beta](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9)<br>Actualizaciones de características, directivas nuevas y obsoletas para la versión principal beta 88.0.705.18.| modificado |
+|11/12/2020| [Microsoft Edge: directivas](https://docs.microsoft.com/deployedge/microsoft-edge-policies)<br>Eliminar directivas publicadas por error: no publicadas.| modificado|
 
 ## Semana del 30 de noviembre de 2020
 
