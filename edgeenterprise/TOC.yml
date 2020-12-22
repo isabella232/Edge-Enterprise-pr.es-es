@@ -1,4 +1,4 @@
-# last revised 12/14/2020
+# last revised 12/21/2020
 - name: Documentación de Microsoft Edge Enterprise
   href: index.yml
 - name: Documentación de Microsoft Edge
@@ -113,7 +113,7 @@
           href: edge-ie-mode-faq.md
         - name: Instrucciones adicionales
           items:
-            - name: Asociar extensiones de archivo con el modo Internet Explorer
+            - name: Asociar las extensiones de los archivos con el modo Internet Explorer
               href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Compartir cookies de Microsoft Edge a Internet Explorer
               href: edge-ie-mode-add-guidance-cookieshare.md
@@ -173,6 +173,8 @@
           href: edge-learnmore-neededge.md
         - name: Sintaxis de Expresiones regulares 2 (re2.h)
           href: edge-learnmore-regex.md
+        - name: Restablecer datos de Microsoft Edge
+          href: edge-learnmore-reset-data-in-cloud.md
         - name: Variables de directorio de datos del usuario
           href: edge-learnmore-create-user-directory-vars.md
         - name: Uso de la reversión de Microsoft Edge para empresas
