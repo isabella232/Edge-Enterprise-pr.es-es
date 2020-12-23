@@ -1,0 +1,64 @@
+---
+title: Restablecer datos de Microsoft Edge
+ms.author: scottbo
+author: dan-wesley
+manager: silvanam
+ms.date: 12/21/2020
+audience: ITPro
+ms.topic: conceptual
+ms.prod: microsoft-edge
+ms.localizationpriority: high
+ms.collection: M365-modern-desktop
+description: Cómo restablecer datos de Microsoft Edge en la nube
+ms.openlocfilehash: 638abe5dc80aafa64d05bccd4a0f5542fa13860c
+ms.sourcegitcommit: 51f43d220503547f24b56ff3dda5373c5aca6b57
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238034"
+---
+# <span data-ttu-id="c2f7c-103">Restablecer datos de Microsoft Edge en la nube</span><span class="sxs-lookup"><span data-stu-id="c2f7c-103">Reset Microsoft Edge data in the cloud</span></span>
+
+<span data-ttu-id="c2f7c-104">En este artículo se describen los pasos para restablecer los datos de Microsoft Edge en la nube.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-104">This article describes the steps for resetting your Microsoft Edge data in the cloud.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="c2f7c-105">Este artículo se aplica a Microsoft Edge versión 88 o posterior, a menos que se indique lo contrario.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-105">This article applies to Microsoft Edge version 88 or later unless otherwise noted.</span></span>
+
+## <span data-ttu-id="c2f7c-106">Introducción</span><span class="sxs-lookup"><span data-stu-id="c2f7c-106">Overview</span></span>
+
+<span data-ttu-id="c2f7c-107">Hay situaciones en las que puedes querer restablecer los datos de Microsoft Edge en la nube.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-107">There are situations in which you want to reset your Microsoft Edge data in the cloud.</span></span> <span data-ttu-id="c2f7c-108">Por ejemplo, quieres sincronizar los datos, pero Microsoft Edge notifica que no puede sincronizar los datos.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-108">For example,  you want to synchronize your data, but Microsoft Edge reports that it is unable to synchronize the data.</span></span> <span data-ttu-id="c2f7c-109">También es posible que quieras asegurarte de que tus datos se quitan de la nube de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-109">Or you might want to make sure that your data is removed from Microsoft’s cloud.</span></span> <span data-ttu-id="c2f7c-110">En ambos casos, Microsoft Edge te permite realizar un restablecimiento de datos en la nube.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-110">In both cases, Microsoft Edge lets you perform a cloud data reset.</span></span>
+
+## <span data-ttu-id="c2f7c-111">Hacer una copia de seguridad de tus favoritos</span><span class="sxs-lookup"><span data-stu-id="c2f7c-111">Back up your favorites</span></span>
+
+<span data-ttu-id="c2f7c-112">Antes de restablecer, te recomendamos que hagas una copia de seguridad de tus favoritos.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-112">Before performing a reset, we recommend that you back up your favorites.</span></span> <span data-ttu-id="c2f7c-113">Sigue estos pasos para realizar una copia de seguridad de tus favoritos.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-113">Use the following steps to back up your favorites.</span></span>
+
+1. <span data-ttu-id="c2f7c-114">En Microsoft Edge, selecciona **Configuración y más > Favoritos > Más opciones > Exportar favoritos**.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-114">In Microsoft Edge, select **Settings and more > Favorites > More options > Export favorites**.</span></span>
+2. <span data-ttu-id="c2f7c-115">Elige el archivo en el que quieres guardar los favoritos.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-115">Choose the file to where you want to save your favorites.</span></span> <span data-ttu-id="c2f7c-116">Puedes escribir tu propio nombre de archivo o usar el nombre que Microsoft Edge proporciona de forma predeterminada, "favoritos_mes_día_año.html" como nombre de archivo.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-116">You can type your own filename or use the name that Microsoft Edge provides by default,  "favorites_month_day_year.html" as a filename.</span></span> <span data-ttu-id="c2f7c-117">Por ejemplo, "favoritos_12_17_20.html".</span><span class="sxs-lookup"><span data-stu-id="c2f7c-117">For example, "favorites_12_17_20.html".</span></span> <span data-ttu-id="c2f7c-118">Si necesitas restaurar tus favoritos más adelante, puedes hacerlo desde ese archivo.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-118">If you need to restore your favorites later, you can do so from that file.</span></span>
+3. <span data-ttu-id="c2f7c-119">Haz clic en **Guardar**.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-119">Click **Save**.</span></span>
+
+## <span data-ttu-id="c2f7c-120">Realizar un restablecimiento para corregir un problema de sincronización</span><span class="sxs-lookup"><span data-stu-id="c2f7c-120">Perform a reset to fix a synchronization problem</span></span>
+
+<span data-ttu-id="c2f7c-121">Si Microsoft Edge informa de que no puede sincronizar los datos y sugiere restablecerlos, realiza un restablecimiento para corregir el problema.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-121">If Microsoft Edge reports that it can't synchronize your data and suggests resetting your data, perform a reset to fix the problem.</span></span>
+
+<span data-ttu-id="c2f7c-122">Sigue los pasos siguientes para restablecer.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-122">Use the following steps to do a reset.</span></span>
+
+1. <span data-ttu-id="c2f7c-123">En primer lugar, asegúrate de que has cerrado la sesión de Microsoft Edge en todos los dispositivos, incluidos los dispositivos móviles, excepto el dispositivo en el que estás realizando el restablecimiento.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-123">First, make sure that you’re signed out of Microsoft Edge on all your devices, including your mobile devices, except the device you are performing the reset on.</span></span> <span data-ttu-id="c2f7c-124">Para cerrar la sesión de Microsoft Edge, selecciona **Configuración y más > Configuración > Cerrar sesión**. Al cerrar sesión, no selecciones la opción para borrar los favoritos, la configuración, etc. de tu dispositivo local.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-124">To sign out of Microsoft Edge, select **Settings and more > Settings > Sign out**. When signing out, do not select the option to clear favorites, settings, and etc. from your local device.</span></span>
+2. <span data-ttu-id="c2f7c-125">Después de cerrar la sesión de todos los demás dispositivos, abre Microsoft Edge en el escritorio.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-125">After you sign out of all your other devices, open Microsoft Edge on your desktop.</span></span> <span data-ttu-id="c2f7c-126">**Selecciona Configuración y más > Sincronizar > Restablecer sincronización**. En el cuadro de diálogo que aparece, elige reanudar la sincronización después de restablecer los datos y selecciona **Restablecer**.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-126">**Select Settings and more > Sync > Reset sync**. In the resulting dialog box, choose to resume sync after resetting data, and then select **Reset**.</span></span>
+
+## <span data-ttu-id="c2f7c-127">Realizar un restablecimiento para quitar los datos de la nube de Microsoft</span><span class="sxs-lookup"><span data-stu-id="c2f7c-127">Perform a reset to remove your data from Microsoft’s cloud</span></span>
+
+<span data-ttu-id="c2f7c-128">Si quieres quitar los datos de la nube de Microsoft, sigue estos pasos para restablecer.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-128">If you want to remove your data from Microsoft’s cloud, use the following steps to do a reset.</span></span>
+
+1. <span data-ttu-id="c2f7c-129">Detén la sincronización en dispositivos excepto el dispositivo en el que estás realizando el restablecimiento.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-129">Stop synchronization on devices except the device you are performing the reset on.</span></span>  <span data-ttu-id="c2f7c-130">En Microsoft Edge, selecciona **Configuración y más > Configuración > Sincronización > Desactivar sincronización**.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-130">In Microsoft Edge, select **Settings and more > Settings > Sync > Turn off sync**.</span></span>  
+2. <span data-ttu-id="c2f7c-131">Después de detener la sincronización, selecciona **Configuración y más > Sincronizar > Restablecer sincronización**. En el cuadro de diálogo que aparece, elige reanudar la sincronización después de restablecer los datos y selecciona **Restablecer**.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-131">After you stop synchronization, select **Settings and more > Sync > Reset sync**. In the resulting dialog box, **do not** choose to resume sync after resetting data.</span></span> <span data-ttu-id="c2f7c-132">Selecciona **Restablecer**.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-132">Select **Reset**.</span></span>
+
+## <span data-ttu-id="c2f7c-133">Qué esperar durante y después de restablecer datos</span><span class="sxs-lookup"><span data-stu-id="c2f7c-133">What to expect during and after a data reset</span></span>
+
+<span data-ttu-id="c2f7c-134">Un restablecimiento de datos puede tardar entre unos segundos y unos minutos, en función de la cantidad de datos que hayas almacenado en la nube de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-134">A data reset can take from a few seconds to a few minutes, depending on how much data you have stored in Microsoft’s cloud.</span></span> <span data-ttu-id="c2f7c-135">En algunos casos, es posible que veas un mensaje que indica que no se pudo completar un restablecimiento y una sugerencia para volver a restablecerlo.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-135">In some cases, you might see a message saying that a reset could not be completed and a suggestion to reset again.</span></span> <span data-ttu-id="c2f7c-136">En ese caso, espera unas pocas horas e intenta restablecer los datos de nuevo.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-136">In this case, wait a few hours and try to reset the data again.</span></span> <span data-ttu-id="c2f7c-137">Si sigues sin poder restablecer los datos, ponte en contacto con el soporte técnico de Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-137">If you are still unable to reset your data, contact Microsoft Edge Support.</span></span>
+
+<span data-ttu-id="c2f7c-138">Después de completar correctamente un restablecimiento de datos, los datos volverán a sincronizarse desde el dispositivo si eliges reanudar la sincronización después del restablecimiento.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-138">After a data reset has been successfully completed, data will once again synchronize from your device if you chose to resume sync after the reset.</span></span> <span data-ttu-id="c2f7c-139">Si quieres sincronizar desde otros dispositivos, deberás volver a iniciar sesión en esos dispositivos.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-139">You will need to sign back in on your other devices if you want to sync from those devices.</span></span> <span data-ttu-id="c2f7c-140">Sin embargo, si no has elegido reanudar la sincronización, los datos de Microsoft Edge se quitarán de la nube y los datos ya no se sincronizarán.</span><span class="sxs-lookup"><span data-stu-id="c2f7c-140">However, if you didn’t choose to resume sync, then your Microsoft Edge data is removed from the cloud and your data will no longer synchronize.</span></span>
+
+## <span data-ttu-id="c2f7c-141">Consulta también</span><span class="sxs-lookup"><span data-stu-id="c2f7c-141">See also</span></span>
+
+- [<span data-ttu-id="c2f7c-142">Página de aterrizaje de Microsoft Edge Enterprise</span><span class="sxs-lookup"><span data-stu-id="c2f7c-142">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
+- [<span data-ttu-id="c2f7c-143">Sincronización de Microsoft Edge Enterprise</span><span class="sxs-lookup"><span data-stu-id="c2f7c-143">Microsoft Edge Enterprise Sync</span></span>](microsoft-edge-enterprise-sync.md)
