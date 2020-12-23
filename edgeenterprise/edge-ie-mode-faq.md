@@ -1,21 +1,21 @@
 ---
 title: Preguntas más frecuentes sobre el modo IE
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/27/2020
+ms.author: shisub
+author: dan-wesley
+manager: srugh
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Preguntas más frecuentes y solución de problemas de Microsoft Edge con el modo IE
-ms.openlocfilehash: fcceb9eab19d667f772c593fe4f362606c1623ff
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981097"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238177"
 ---
 # Preguntas más frecuentes sobre el modo IE
 
@@ -81,6 +81,20 @@ No hay ninguna línea de comandos explícita en Microsoft Edge que refleje la op
 2. Usa la línea de comandos `--user-data-dir=<path>`, pero con una ruta de acceso diferente para cada sesión. Si es necesario, puedes crear una utilidad que el usuario puede ejecutar y que inicia Microsoft Edge y cambia la ruta de acceso de la sesión.
 
 Si las opciones anteriores no son adecuadas para el escenario en cuestión, puedes ponerte en contacto con uno de nuestros canales de comentarios: soporte técnico de Microsoft, el [foro TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise) o [UserVoice de Microsoft Edge](https://microsoftedge.uservoice.com/forums/928825-enterprise).
+
+### ¿Puedo guardar vínculos como páginas web en el modo Internet Explorer?
+ 
+Sí, puede habilitar la opción de Guardar destino como en el menú contextual del modo Internet Explorer en Microsoft Edge. Para hacerlo, configure la directiva de grupo *"Permitir la opción Guardar destino como en el modo Internet Explorer"* que se encuentra en *Configuración del equipo > Plantillas administrativas > Componentes de Windows > Internet Explorer*.
+El mecanismo de guardado funciona de la misma manera que en Internet Explorer y, si el destino está guardado como archivo HTML, al volver a abrir el archivo se representará la página en Microsoft Edge.
+ 
+Tenga en cuenta que esta funcionalidad requiere las siguientes actualizaciones mínimas del sistema operativo:
+- Windows 10, versión 2004, Windows Server versión 2004, Windows 10, versión 20H2: [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)
+- Windows 10, versión 1903, Windows 10, versión 1909, Windows Server versión 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)
+- Windows 10, versión 1809, Windows Server versión 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)
+- Windows 10, versión 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)
+- Windows 10, versión 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
+- Windows 10, versión 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
+
 
 ## Consulte también
 
