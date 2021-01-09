@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/11/2020
+ms.date: 01/07/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
+ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218739"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "11254978"
 ---
 # Microsoft Edge: directivas
 
@@ -29,14 +29,18 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
+
 ## Nuevas directivas
 
 En la siguiente tabla, se muestran las nuevas directivas para esta actualización.
 
 | Nombre | Título |
-|--|--|
-|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| Restringir el modo de impresión de imágenes gráficas del fondo|
-|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| Modo predeterminado de impresión de imágenes gráficas del fondo|
+|-|-|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Permitir autenticación básica para HTTP|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|No establezca window.opener para vínculos destinados a \_blank|
+|[WebWidgetAllowed](#webwidgetallowed)|Permitir el widget Web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Habilitar el widget Web en el inicio de Windows|
+
 
 ## Directivas disponibles
 
@@ -50,7 +54,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[Configuración de pantalla completa](#kiosk-mode-settings)|[Mensajería nativa](#native-messaging)|
 |[Administrador de contraseñas y protección](#password-manager-and-protection)|[Rendimiento](#performance)|
 |[Impresión](#printing)|[Servidor proxy](#proxy-server)|
-|[Configuración de pestañas en suspensión](#sleeping-tabs-settings)|[Configuración de SmartScreen](#smartscreen-settings)|
+|[Configuración de pestañas en estado de reposo](#sleeping-tabs-settings)|[Configuración de SmartScreen](#smartscreen-settings)|
 |[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|[Adicional](#additional)|
 
 
@@ -141,6 +145,7 @@ y sugerencias para los servicios Microsoft|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Especifica una lista de servidores en los que Microsoft Edge puede delegar credenciales de usuario|
 |[AuthSchemes](#authschemes)|Esquemas de autenticación compatibles|
 |[AuthServerAllowlist](#authserverallowlist)|Configurar la lista de servidores de autenticación permitidos|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Permitir autenticación básica para HTTP|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Deshabilitar la búsqueda CNAME al negociar la autenticación Kerberos|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Incluir un puerto no estándar en Kerberos SPN|
 |[NtlmV2Enabled](#ntlmv2enabled)|Controlar si la autenticación NTLMv2 está habilitada|
@@ -194,13 +199,13 @@ y sugerencias para los servicios Microsoft|
 |[ProxyPacUrl](#proxypacurl)|Establecer la dirección URL del proxy del archivo .pac (en desuso)|
 |[ProxyServer](#proxyserver)|Configurar la dirección o la dirección URL del servidor proxy (en desuso)|
 |[ProxySettings](#proxysettings)|Configuración de proxy|
-### [*Configuración de pestañas en suspensión*](#sleeping-tabs-settings-policies)
+### [*Configuración de pestañas en estado de reposo*](#sleeping-tabs-settings-policies)
 
 |Nombre de directiva|Título|
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Bloquear las pestañas en suspensión en sitios específicos|
-|[SleepingTabsEnabled](#sleepingtabsenabled)|Configurar las pestañas en suspensión|
-|[SleepingTabsTimeout](#sleepingtabstimeout)|Establecer el tiempo de espera de inactividad de las pestañas en segundo plano para la configuración de las pestañas en suspensión|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Bloquear pestañas en reposo en sitios específicos|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Configurar pestañas en estado de reposo|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Establecer el tiempo de espera de inactividad de la pestaña en segundo plano para las pestañas en reposo|
 ### [*Configuración de SmartScreen*](#smartscreen-settings-policies)
 
 |Nombre de directiva|Título|
@@ -235,7 +240,7 @@ y sugerencias para los servicios Microsoft|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Configuración de anuncios para sitios con anuncios intrusivos|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Habilitar la eliminación del explorador y el historial de descargas|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Permitir cuadros de diálogo de selección de archivos|
-|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Permitir que una página muestre elementos emergentes durante su descarga|
+|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Permite que una página muestre elementos emergentes durante su descarga (obsoleto)|
 |[AllowSurfGame](#allowsurfgame)|Permitir el juego surf|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Permitir que las páginas envíen solicitudes de XHR sincrónicas durante el descarte de página (en desuso)|
 |[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Configurar la lista de sitios con los que Microsoft Edge intentará establecer un enlace de tokens.|
@@ -316,7 +321,7 @@ y sugerencias para los servicios Microsoft|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configurar si Microsoft Edge debe seleccionar automáticamente un certificado cuando haya múltiples coincidencias de certificados para un sitio configurado con "AutoSelectCertificateForUrls"|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Permitir el uso de perfiles efímeros|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Forzar la búsqueda segura de Google|
-|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Usar una directiva de referencia predeterminada de sin referencia cuando se cambia a una versión anterior (en desuso).|
+|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Usar una directiva de referencia predeterminada de no-referrer-when-downgrade (obsoleto)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Forzar el código de red para que se ejecute en el proceso del explorador|
 |[ForceSync](#forcesync)|Forzar la sincronización de los datos del explorador y no mostrar la solicitud de consentimiento de sincronización|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Forzar el modo restringido de YouTube mínimo|
@@ -357,7 +362,7 @@ y sugerencias para los servicios Microsoft|
 |[ManagedSearchEngines](#managedsearchengines)|Administrar motores de búsqueda|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Número máximo de conexiones simultáneas al servidor proxy|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Permitir que Google Cast se conecte para transmitir dispositivos en todas las direcciones IP|
-|[MetricsReportingEnabled](#metricsreportingenabled)|Habilitar el uso y los informes de datos relacionados con bloqueos (en desuso)|
+|[MetricsReportingEnabled](#metricsreportingenabled)|Habilitar el uso y los informes de datos relacionados con bloqueos (obsoletos)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar oclusión de ventana nativa|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Establecer un tiempo de espera de retardo en la navegación por la etiqueta de la lista de sitios de modo empresarial|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Habilitar predicción de red|
@@ -390,7 +395,7 @@ y sugerencias para los servicios Microsoft|
 |[SearchSuggestEnabled](#searchsuggestenabled)|Permitir sugerencias de búsqueda|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Sitios web o dominios que no necesitan permiso para usar la atestación de clave de seguridad directa|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Enviar todos los sitios de intranet a Internet Explorer|
-|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Enviar información de sitios para mejorar los servicios Microsoft (en desuso)|
+|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Enviar información del sitio para mejorar los servicios Microsoft (obsoleto)|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Permitir el acceso a sensores en sitios específicos|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquear el acceso a sensores en sitios específicos|
 |[SerialAskForUrls](#serialaskforurls)|Permitir la API de serie en sitios específicos|
@@ -410,6 +415,7 @@ y sugerencias para los servicios Microsoft|
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Habilitar una característica de seguridad TLS 1.3 para los anclajes de veracidad locales (en desuso)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Especificar los conjuntos de cifrado TLS para deshabilitarlos|
 |[TabFreezingEnabled](#tabfreezingenabled)|Permitir el bloqueo de las pestañas en segundo plano|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|No establezca window.opener para vínculos destinados a _blank|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Habilitar los procesos de finalización en el administrador de tareas del explorador|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Establecer el límite en megabytes de memoria que puede utilizar una única instancia de Microsoft Edge.|
 |[TrackingPrevention](#trackingprevention)|Bloquear el seguimiento de la actividad de exploración de los usuarios en la web|
@@ -433,6 +439,8 @@ y sugerencias para los servicios Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Administrar la exposición de la dirección IP local por WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir la exposición de la dirección IP local por WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir el rango de puertos UDP locales usados por WebRTC|
+|[WebWidgetAllowed](#webwidgetallowed)|Permitir el widget Web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Habilitar el widget Web en el inicio de Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar la resolución del proxy de Windows (en desuso)|
 
 
@@ -758,6 +766,8 @@ Tenga en cuenta que no puede haber patrones de dirección URL conflictivos estab
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
+Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
+
 Para impedir que se eliminen las cookies al salir, configure la directiva [SaveCookiesOnExit](#savecookiesonexit) .
 
   #### Características admitidas:
@@ -835,6 +845,8 @@ Tenga en cuenta que no puede haber patrones de dirección URL conflictivos estab
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
+Para obtener información detallada sobre los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * no es un valor aceptado para esta directiva.
+
   #### Características admitidas:
 
   - Puede ser obligatorio: sí
@@ -911,6 +923,8 @@ Tenga en cuenta que no puede haber patrones de dirección URL conflictivos estab
 - [CookiesAllowedForUrls](#cookiesallowedforurls)
 
 - CookiesSessionOnlyForUrls
+
+Para obtener información detallada sobre los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * no es un valor aceptado para esta directiva.
 
 Si establece la directiva [RestoreOnStartup](#restoreonstartup) para restaurar las direcciones URL de sesiones anteriores, esta directiva se ignorará y las cookies se almacenarán de forma permanente para esos sitios.
 
@@ -2748,7 +2762,7 @@ Defina una lista de sitios, basada en patrones de dirección URL, que pueden eje
 
 Si no configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultPluginsSetting](#defaultpluginssetting) (si está establecido) o la configuración personal del usuario.
 
-Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, los patrones con carácteres comodín de "*" y "[*.]" en el host ya no son compatibles con esta directiva.
+Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, las tramas con los caracteres comodín '\*' y '[\*.]' en el host ya no son compatibles con esta directiva.
 
   #### Características admitidas:
 
@@ -2817,7 +2831,7 @@ Define una lista de sitios basada en los patrones de dirección URL que están b
 
 Si no configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultPluginsSetting](#defaultpluginssetting) (si está establecido) o la configuración personal del usuario.
 
-Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, los patrones con carácteres comodín de "*" y "[*.]" en el host ya no son compatibles con esta directiva.
+Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, las tramas con los caracteres comodín '\*' y '[\*.]' en el host ya no son compatibles con esta directiva.
 
   #### Características admitidas:
 
@@ -4235,7 +4249,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   Permite especificar las extensiones que los usuarios NO pueden instalar. Las extensiones ya instaladas se deshabilitarán si se bloquean, sin que el usuario pueda habilitarlas. Después de quitar una extensión deshabilitada de la lista de bloqueo, se volverá a habilitar de manera automática.
 
-Un valor de la lista de bloqueo "*" significa que todas las extensiones están bloqueadas, a menos que aparezcan de manera explícita en la lista de permitidos.
+Un valor de lista de bloqueo de "\*" significa que todas las extensiones se bloquean a menos que aparezcan explícitamente en la lista de permitidos.
 
 Si esta directiva no está configurada, el usuario puede instalar cualquier extensión en Microsoft Edge.
 
@@ -4447,6 +4461,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
   La configuración de esta directiva controla la configuración de la administración de extensiones de Microsoft Edge, incluida cualquier configuración controlada por directivas existentes relacionadas con las extensiones. Esta directiva reemplaza cualquier directiva heredada que pueda configurarse.
 
 Esta directiva asigna un Id. de extensión o una dirección URL de actualización únicamente a su configuración específica. Se puede establecer una configuración predeterminada para el Id. especial "*", que se aplica a todas las extensiones sin una configuración personalizada en esta directiva. Con una dirección URL de actualización, la configuración se aplica a las extensiones con la dirección URL de actualización exacta establecida en el manifiesto de la extensión ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+
+Para bloquear extensiones de un almacén de terceros determinado, solo tienes que bloquear el update_url para ese almacén. Por ejemplo, si desea bloquear extensiones de Chrome Web Store, puede usar el siguiente JSON.
+
+{"update_url: https://clients2.google.com/service/update2/crx ":{"installation_mode":"blocked"}}
+
+Tenga en cuenta que aún puede usar [ExtensionInstallForcelist](#extensioninstallforcelist) y [ExtensionInstallAllowlist](#extensioninstallallowlist) para permitir o forzar la instalación de extensiones específicas incluso si el almacén está bloqueado con el JSON del ejemplo anterior.
 
 Nota: Para las instancias de Windows que no estén unidas a un dominio de Microsoft Active Directory, la instalación forzada se limita a las aplicaciones y extensiones que aparecen en el sitio web de complementos de Microsoft Edge.
 
@@ -4903,6 +4923,66 @@ Si no configura esta directiva, Microsoft Edge intentará detectar si un servido
   - Valor de ejemplo:
 ``` xml
 <string>*contoso.com,contoso.com</string>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### BasicAuthOverHttpEnabled
+
+  #### Permitir autenticación básica para HTTP
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión88.
+
+  #### Descripción
+
+  Si habilita esta directiva o la deja sin activar, se permitirán los desafíos de autenticación básica recibidos a través de HTTP no seguro.
+
+Si deshabilita esta directiva, se bloquean las solicitudes HTTP no seguras del esquema de autenticación básica y solo se permite HTTPS seguro.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: BasicAuthOverHttpEnabled
+  - Nombre de GP: permitir la autenticación básica para HTTP
+  - Ruta de acceso GP (obligatoria): Plantillas administrativas/Microsoft Edge/autenticación HTTP
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: BasicAuthOverHttpEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000000
+```
+
+  #### Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: BasicAuthOverHttpEnabled
+  - Valor de ejemplo:
+``` xml
+<false/>
 ```
   
 
@@ -6896,13 +6976,13 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de configuración de pestañas en suspensión
+  ## Directivas de configuración de pestañas en estado de reposo
 
   [Volver al principio](#microsoft-edge---policies)
 
   ### SleepingTabsBlockedForUrls
 
-  #### Bloquear las pestañas en suspensión en sitios específicos
+  #### Bloquear pestañas en reposo en sitios específicos
 
   
   
@@ -6912,7 +6992,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   #### Descripción
 
-  Permite definir una lista de sitios en función de patrones de direcciones URL que no permiten que las pestañas se pongan en suspensión.
+  Definir una lista de sitios, en función de los patrones de dirección URL, que no se pueden poner en suspensión con pestañas en reposo.
 
 Si la directiva [SleepingTabsEnabled](#sleepingtabsenabled) está deshabilitada, esta lista no se usa y ningún sitio se pondrá en suspensión automáticamente.
 
@@ -6933,10 +7013,10 @@ Si no se configura esta directiva, todos los sitios podrán ponerse en suspensi�
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SleepingTabsBlockedForUrls
-  - Nombre de GP: Bloquear las pestañas en suspensión en sitios específicos
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Configuración de pestañas en suspensión
-  - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidar)/Configuración de pestañas en suspensión
-  - Nombre de archivo ADMX de GP: MSEdge.admx
+  - Nombre de GP: bloquear pestañas en reposo en sitios específicos
+  - Ruta de acceso de GP (obligatoria): Configuración de plantillas administrativas/Microsoft Edge/pestañas en estado de reposo
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Configuración de pestañas en estado de reposo
+  - Nombre de archivo de ADMX GP: MSEdge.admx
 
   ##### Configuración del Registro de Windows
 
@@ -6969,7 +7049,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   ### SleepingTabsEnabled
 
-  #### Configurar las pestañas en suspensión
+  #### Configurar pestañas en estado de reposo
 
   
   
@@ -6979,15 +7059,15 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   #### Descripción
 
-  Esta configuración de directiva le permite configurar si se activan las pestañas en suspensión o no. Las pestañas en suspensión reducen el uso de la CPU, la batería y la memoria, ya que se ponen en suspensión pestañas en segundo plano inactivas. Microsoft Edge usa la heurística para evitar poner en suspensión pestañas que hacen un trabajo útil en segundo plano, como notificaciones de visualización, reproducción de sonido y transmisión de vídeo. De forma predeterminada, las pestañas en suspensión están activadas.
+  Esta configuración de directiva te permite configurar si se deben activar las pestañas en estado de reposo. Las pestañas en reposo reducen el uso de cpu, batería y memoria al poner pestañas en segundo plano inactivas para que se queden en reposo. Microsoft Edge usa la heurística para evitar poner en suspensión pestañas que hacen un trabajo útil en segundo plano, como notificaciones de visualización, reproducción de sonido y transmisión de vídeo. De forma predeterminada, las pestañas en estado de reposo están activadas.
 
 Es posible configurar la directiva [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls) para evitar que se pongan determinados sitios en suspensión.
 
-Si habilita esta configuración, la característica de pestañas en suspensión estará activa.
+Si habilitas esta configuración, se activarán las pestañas en estado de reposo.
 
-Si deshabilita esta configuración, la característica de pestañas en suspensión no estará activa.
+Si deshabilitas esta configuración, se desactivarán las pestañas en modo de reposo.
 
-Si no establece esta configuración, los usuarios podrán elegir si usan la característica de pestañas en suspensión.
+Si no configuras esta opción, los usuarios pueden elegir si quieren usar pestañas en estado de reposo.
 
   #### Características admitidas:
 
@@ -7004,10 +7084,10 @@ Si no establece esta configuración, los usuarios podrán elegir si usan la cara
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SleepingTabsEnabled
-  - Nombre de la GP: Configurar las pestañas en suspensión
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Configuración de pestañas en suspensión
-  - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidar)/Configuración de pestañas en suspensión
-  - Nombre de archivo ADMX de GP: MSEdge.admx
+  - Nombre de GP: configurar pestañas en estado de reposo
+  - Ruta de acceso de GP (obligatoria): Configuración de plantillas administrativas/Microsoft Edge/pestañas en estado de reposo
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Configuración de pestañas en estado de reposo
+  - Nombre de archivo de ADMX GP: MSEdge.admx
 
   ##### Configuración del Registro de Windows
 
@@ -7035,7 +7115,7 @@ Si no establece esta configuración, los usuarios podrán elegir si usan la cara
 
   ### SleepingTabsTimeout
 
-  #### Establecer el tiempo de espera de inactividad de las pestañas en segundo plano para la configuración de las pestañas en suspensión
+  #### Establecer el tiempo de espera de inactividad de la pestaña en segundo plano para las pestañas en reposo
 
   
   
@@ -7045,9 +7125,9 @@ Si no establece esta configuración, los usuarios podrán elegir si usan la cara
 
   #### Descripción
 
-  Esta configuración de directiva te permite configurar el tiempo de espera, en segundos, tras el cual las pestañas en segundo plano inactivas se pondrán automáticamente en suspensión si se habilita la característica de pestañas en espera. De forma predeterminada, el tiempo de espera es de 7200 segundos (2horas).
+  Esta configuración de directiva te permite configurar el tiempo de espera, en segundos, después del cual las pestañas en segundo plano inactivas se pondrán automáticamente en suspensión si las pestañas en reposo están habilitadas. De forma predeterminada, el tiempo de espera es de 7200 segundos (2horas).
 
-Las pestañas solo se ponen en suspensión automáticamente cuando la directiva [SleepingTabsEnabled](#sleepingtabsenabled) está habilitada o no está configurada y el usuario ha habilitado la configuración de las pestañas de suspensión.
+Las pestañas solo se ponen en modo de suspensión automáticamente cuando la directiva [SleepTabsEnabled](#sleepingtabsenabled) está habilitada o no está configurada y el usuario ha habilitado la configuración de pestañas en reposo.
 
 Si no se configura esta directiva, los usuarios podrán elegir el valor de tiempo de espera.
 
@@ -7086,10 +7166,10 @@ Use la información anterior al configurar esta directiva.
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SleepingTabsTimeout
-  - Nombre de GP: Establecer el tiempo de espera de inactividad de las pestañas en segundo plano para la configuración de las pestañas en suspensión
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Configuración de pestañas en suspensión
-  - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidar)/Configuración de pestañas en suspensión
-  - Nombre de archivo ADMX de GP: MSEdge.admx
+  - Nombre de GP: establecer el tiempo de espera de inactividad de la pestaña en segundo plano para las pestañas en reposo
+  - Ruta de acceso de GP (obligatoria): Configuración de plantillas administrativas/Microsoft Edge/pestañas en reposo
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Configuración de pestañas en reposo
+  - Nombre de archivo de ADMX GP: MSEdge.admx
 
   ##### Configuración del Registro de Windows
 
@@ -8661,13 +8741,13 @@ Si se deshabilita esta directiva, siempre que el usuario realice una acción que
 
   ### AllowPopupsDuringPageUnload
 
-  #### Permitir que una página muestre elementos emergentes durante su descarga
+  #### Permite que una página muestre elementos emergentes durante su descarga (obsoleto)
 
   
-  
+  >OBSOLETO: esta directiva es obsoleta y no funciona después de Microsoft Edge 87.
   #### Versiones compatibles:
 
-  - En Windows y macOS desde 78 o posterior
+  - En Windows y macOS desde 78, hasta 87
 
   #### Descripción
 
@@ -8677,7 +8757,7 @@ Cuando la Directiva está configurada en habilitada, se permite que las páginas
 
 Cuando la Directiva está configurada en habilitada o deshabilitada, se permite que las páginas muestren mensajes emergentes mientras se descargan. Esto es lo que se contempla en SPEC:https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name)
 
-En el futuro se eliminará esta directiva.
+Esta directiva se quitó en Microsoft Edge 88 y se omite si está establecida.
 
   #### Características admitidas:
 
@@ -8694,7 +8774,7 @@ En el futuro se eliminará esta directiva.
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AllowPopupsDuringPageUnload
-  - Nombre de GP: permitir que la página muestre los elementos emergentes durante su descarga
+  - Nombre de GP: permite que una página muestre elementos emergentes durante su descarga (obsoleto)
   - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -11469,11 +11549,15 @@ Use la información anterior al configurar esta directiva.
 
   Habilita el uso de cuentas de Active Directory para el inicio de sesión automático en caso de que los equipos de los usuarios se unan a un dominio y el entorno no se haya unido de forma híbrida. Si desea que los usuarios inicien sesión automáticamente con sus cuentas de Azure Active Directory, en su lugar, llame a Azure AD join (vea[https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) para obtener más información) o a una combinación híbrida (vea[https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) para obtener más información) en su entorno.
 
+En cada inicio, Microsoft Edge intentará iniciar sesión con esta directiva, siempre y cuando el primer perfil que se inicie no haya iniciado sesión o no haya ocurrido antes un inicio de sesión automático.
+
 Si ha configurado la directiva[BrowserSignin](#browsersignin) como deshabilitada, esta directiva no tendrá ningún efecto.
 
 Si habilita esta directiva y la establece en "SignInAndMakeDomainAccountNonRemovable", Microsoft Edge iniciará automáticamente la sesión de los usuarios que estén en equipos unidos a un dominio mediante sus cuentas de Active Directory.
 
 Si establece esta directiva como "Deshabilitada" o no la establece, Microsoft Edge no iniciará sesión automáticamente a los usuarios que se encuentren en equipos unidos a un dominio con cuentas de Active Directory.
+
+A partir de Microsoft Edge 89, si hay un perfil local existente con sincronización deshabilitada y la máquina ahora está híbrida unida, es decir, tiene una cuenta de Azure AD, actualizará automáticamente el perfil local al perfil de Azure AD para obtener todas las instalaciones de sincronización de Azure AD.
 
 Asignación de opciones de directiva:
 
@@ -14128,21 +14212,21 @@ Si deshabilita esta directiva o no la configura, no se aplicará la búsqueda se
 
   ### ForceLegacyDefaultReferrerPolicy
 
-  #### Usar una directiva de referencia predeterminada de sin referencia cuando se cambia a una versión anterior (en desuso).
+  #### Usar una directiva de referencia predeterminada de no-referrer-when-downgrade (obsoleto)
 
-  >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
+  >OBSOLETO: esta directiva está obsoleta y no funciona después de Microsoft Edge 88.
   #### Versiones compatibles:
 
-  - En Windows y MacOS desde la versión 81 o posterior
+  - En Windows y macOS desde 81, hasta 88
 
   #### Descripción
 
-  Esta directiva está en desuso porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web cuando se ha comprobado que es incompatible con la directiva de referencia predeterminada actual. No funciona en la versión 88 de Microsoft Edge.
+  Esta directiva no funciona porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web si se ha encontrado que no es compatible con la nueva directiva de referencia predeterminada.
 
-La directiva de referencia predeterminada de Microsoft Edge se está reforzando a partir de su valor actual de no-referrer-when-downgrade, con strict-origin-when-cross-origin (más seguro), a través de una implementación gradual.
+La directiva de referencia predeterminada de Microsoft Edge se reforzó del valor de no-referrer-when-downgrade al más seguro strict-origin-when-cross-origin.
 
-Antes del lanzamiento, esta directiva de la empresa no tendrá ningún efecto. Después de que se haya implementado y habilitado esta directiva de empresa, la directiva de referencia predeterminada de Microsoft Edge se establecerá en su valor anterior de no-referrer-when-downgrade.
+Cuando esta directiva de empresa está habilitada, la directiva de referencia predeterminada de Microsoft Edge se establecerá en su valor anterior de no-referrer-when-downgrade.
 
 Esta directiva de empresa está deshabilitada de forma predeterminada.
 
@@ -14161,7 +14245,7 @@ Esta directiva de empresa está deshabilitada de forma predeterminada.
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ForceLegacyDefaultReferrerPolicy
-  - Nombre de GP: usar de forma predeterminada la directiva sin referencia cuando se cambia a una versión anterior.
+  - Nombre de GP: usar una directiva de referencia predeterminada de no-referrer-when-downgrade (obsoleto)
   - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -16983,17 +17067,17 @@ Si la Directiva [EnableMediaRouter](#enablemediarouter) está deshabilitada, no 
 
   ### MetricsReportingEnabled
 
-  #### Habilitar el uso y los informes de datos relacionados con bloqueos (en desuso)
+  #### Habilitar el uso y los informes de datos relacionados con bloqueos (obsoletos)
 
-  >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
+  >OBSOLETO: esta directiva está obsoleta y no funciona después de Microsoft Edge 88.
   #### Versiones compatibles:
 
-  - En Windows y MacOS desde 77 o posterior
+  - En Windows y macOS desde 77, hasta 88
 
   #### Descripción
 
-  Esta directiva está en desuso. Actualmente, se admite pero quedará obsoleto en Microsoft Edge 89. Esta directiva se reemplaza por la nueva directiva: [DiagnosticData](#diagnosticdata)para Windows 7, Windows 8 y macOS. Esta directiva se ha reemplazado por Permitir telemetría en Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  Esta directiva ya no es compatible. Se reemplaza por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 y macOS) y Permitir telemetría en Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 Esta directiva permite los informes de datos de uso y relacionados con bloqueos acerca de Microsoft Edge para Microsoft.
 
@@ -17022,7 +17106,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: MetricsReportingEnabled
-  - Nombre de GP: habilitar el uso y los informes de datos relacionados con bloqueos (en desuso)
+  - Nombre de GP: habilitar el uso y los informes de datos relacionados con bloqueos (obsoleto)
   - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -17253,13 +17337,15 @@ Use la información anterior al configurar esta directiva.
 
   Esta directiva determina si un usuario puede quitar el perfil de Microsoft Edge que ha iniciado sesión automáticamente con la cuenta profesional o educativa de un usuario.
 
-Si habilita esta directiva, se creará un perfil que no se pueda quitar con la cuenta profesional o escolar del usuario en Windows. No se podrá quitar este perfil o iniciar sesión.
+Si habilita esta directiva, se creará un perfil que no se pueda quitar con la cuenta profesional o escolar del usuario en Windows. No se podrá quitar este perfil o iniciar sesión. El perfil no será extraíble solo si el perfil ha iniciado sesión con una cuenta local o una cuenta de Azure AD que coincida con la cuenta de inicio de sesión del sistema operativo.
 
 Si deshabilita o no configura esta directiva, el perfil con el que se ha iniciado sesión automáticamente, ya sea con la cuenta profesional o educativa de un usuario en Windows, no podrá cerrar sesión ni ser quitado por el usuario.
 
 Si desea configurar el inicio de sesión del explorador, utilice la directiva [BrowserSignin](#browsersignin).
 
 Esta directiva solo está disponible en las instancias de Windows que están unidas a un dominio de Microsoft Active Directory o en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos.
+
+A partir de Microsoft Edge 89, si hay un perfil local existente con la sincronización deshabilitada y el equipo está unido a la máquina, actualizará automáticamente el perfil local al perfil de Azure AD y lo hará no extraíble en lugar de crear un nuevo perfil de Azure AD no extraíble.
 
   #### Características admitidas:
 
@@ -19049,17 +19135,17 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   ### SendSiteInfoToImproveServices
 
-  #### Enviar información de sitios para mejorar los servicios Microsoft (en desuso)
+  #### Enviar información del sitio para mejorar los servicios Microsoft (obsoleto)
 
-  >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
+  >OBSOLETO: esta directiva está obsoleta y no funciona después de Microsoft Edge 88.
   #### Versiones compatibles:
 
-  - En Windows y MacOS desde 77 o posterior
+  - En Windows y macOS desde 77, hasta 88
 
   #### Descripción
 
-  Esta directiva está en desuso. Actualmente, se admite pero quedará obsoleto en Microsoft Edge 89. Esta directiva se reemplaza por la nueva directiva: [DiagnosticData](#diagnosticdata)para Windows 7, Windows 8 y macOS. Esta directiva se ha reemplazado por Permitir telemetría en Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  Esta directiva ya no es compatible. Se reemplaza por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 y macOS) y Permitir telemetría en Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 Esta directiva permite enviar información a Microsoft acerca de los sitios web visitados en Microsoft Edge para mejorar servicios como la búsqueda.
 
@@ -19086,7 +19172,7 @@ Para habilitar esta directiva, debe establecer [MetricsReportingEnabled](#metric
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SendSiteInfoToImproveServices
-  - Nombre GP: enviar información de sitios para mejorar los servicios Microsoft (en desuso)
+  - Nombre de GP: enviar información del sitio para mejorar los servicios Microsoft (obsoleto)
   - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -19415,7 +19501,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 Si habilita esta directiva:
    - Los usuarios con una cuenta de Microsoft (excepto las de AzureAD) en los mercados con recompensas por búsquedas verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
    - La configuración para habilitar las Microsoft Rewards en la configuración de Microsoft Edge se habilitará y se activará.
-   - La configuración para habilitar el modo de donación estará habilitada y respetará la configuración del usuario.
 
 Si se deshabilita esta directiva:
    - Los usuarios con una cuenta de Microsoft (excepto las de AzureAD) en los mercados con recompensas por búsquedas no verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
@@ -19424,7 +19509,6 @@ Si se deshabilita esta directiva:
 Si no se configura esta directiva:
    - Los usuarios con una cuenta de Microsoft (excepto las de AzureAD) en los mercados con recompensas por búsquedas verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
    - La configuración para habilitar las Microsoft Rewards en la configuración de Microsoft Edge se habilitará y se activará.
-   - La configuración para habilitar el modo de donación estará habilitada y respetará la configuración del usuario.
 
   #### Características admitidas:
 
@@ -20362,6 +20446,68 @@ Si desactiva esta directiva, no se congelarán las pestañas.
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### TargetBlankImpliesNoOpener
+
+  #### No establezca window.opener para vínculos destinados a _blank
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión88.
+
+  #### Descripción
+
+  Si habilitas esta directiva o la dejas sin establecer, la propiedad window.opener se establece en null a menos que el delimitador especifique rel="opener".
+
+Si deshabilitas esta directiva, los elementos emergentes de destino _blank pueden acceder (a través de JavaScript) a la página que solicitó abrir el elemento emergente.
+
+Esta directiva estará obsoleta en La versión 95 de Microsoft Edge.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: TargetBlankImpliesNoOpener
+  - Nombre de GP: no establecer window.opener para vínculos destinados a _blank
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: TargetBlankImpliesNoOpener
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000000
+```
+
+  #### Información y configuración de Mac
+  
+  - Nombre de la clave de preferencia: TargetBlankImpliesNoOpener
+  - Valor de ejemplo:
+``` xml
+<false/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### TaskManagerEndProcessEnabled
 
   #### Habilitar los procesos de finalización en el administrador de tareas del explorador
@@ -20634,7 +20780,7 @@ Si no configura la directiva, los usuarios podrán elegir si desean usar la func
 
 Aplique formato al modelo de dirección URL en función de [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-Puede usar esta directiva para abrir excepciones a las listas de bloqueo restrictivas. Por ejemplo, puede incluir "*" en la lista de bloqueados para bloquear todas las solicitudes y, a continuación, usar esta directiva para permitir el acceso a una lista limitada de direcciones URL. Puede usar esta directiva para abrir excepciones para determinados esquemas, subdominios de otros dominios, puertos o rutas de acceso específicas.
+Puede usar esta directiva para abrir excepciones a las listas de bloqueo restrictivas. Por ejemplo, puede incluir "\*" en la lista de bloqueados para bloquear todas las solicitudes y, a continuación, usar esta directiva para permitir el acceso a una lista limitada de direcciones URL. Puede usar esta directiva para abrir excepciones para determinados esquemas, subdominios de otros dominios, puertos o rutas de acceso específicas.
 
 El filtro más específico determina si una dirección URL está bloqueada o es permitida. La lista de permitidos tiene prioridad sobre la lista de bloqueados.
 
@@ -21354,7 +21500,14 @@ Independientemente de si esta directiva está habilitada, los usuarios no podrá
 
   Configure esta directiva para especificar una lista de aplicaciones web que se instalan de forma silenciosa, sin interacción del usuario, y qué usuarios no pueden desinstalar o desactivar.
 
-Cada elemento de la lista es un objeto con un miembro obligatorio: url (la dirección URL de la aplicación web que se va a instalar) y 2 miembros opcionales: default_launch_container (especifica el modo de ventana en el que se abre la aplicación web: una pestaña nueva es el valor predeterminado) y create_desktop_shortcut (True si quiere crear accesos directos del escritorio de Windows y Linux).
+Cada elemento de lista de la directiva es un objeto con un miembro obligatorio: url (la dirección URL de la aplicación web que se va a instalar)
+
+y 3 miembros opcionales:
+- default_launch_container (especifica que el modo de ventana que la aplicación web abre con una nueva pestaña es la configuración predeterminada).
+
+- create_desktop_shortcut (True si quieres crear accesos directos de escritorio de Linux y Windows).
+
+- override_app_name (a partir de Microsoft Edge 89, permite invalidar el nombre de la aplicación si no es una aplicación web progresiva (PWA) o el nombre de la aplicación que se instala temporalmente si es una PWA, pero la autenticación es necesaria antes de que se pueda completar la instalación).
 
   #### Características admitidas:
 
@@ -21395,6 +21548,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21402,7 +21560,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Valor de ejemplo de Compact:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21426,6 +21584,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
@@ -21886,7 +22052,131 @@ Si no configura esta directiva, o si la establece con una cadena vacía o un int
 ``` xml
 <string>10000-11999</string>
 ```
- 
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Permitir el widget Web
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows, desde la versión 88 o posterior
+
+  #### Descripción
+
+  Habilita el widget web. Cuando se habilita, los usuarios pueden usar el widget para buscar la web desde su escritorio o desde una aplicación. El widget ofrece un cuadro de búsqueda en el que se muestran las web sugeridas y abre todas las búsquedas web en Microsoft Edge. El cuadro de búsqueda ofrece búsquedas (con tecnología de Bing) y sugerencias de direcciones URL. El widget también incluye iconos de fuentes en los que los usuarios pueden clicar y ver más información sobre msn.com en una nueva ventana o pestaña del explorador Microsoft Edge. Los iconos de las fuentes pueden incluir anuncios. El widget se puede iniciar desde la configuración de Microsoft Edge o desde el menú "Más herramientas" de Microsoft Edge.
+
+Si habilita o no configura esta directiva: el widget web se habilitará de manera automática para todos los perfiles.
+En la configuración de Microsoft Edge, los usuarios verán la opción para iniciar el widget.
+En la configuración de Microsoft Edge, los usuarios verán el elemento de menú para ejecutar el widget cuando se arranque Windows (inicio automático).
+La opción para habilitar el widget en el momento del arranque estará activada si se habilita la directiva [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup).
+Si la directiva [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) está deshabilitada o no se configura, la opción para habilitar el widget en el momento del arranque estará desactivada.
+Los usuarios verán el elemento de menú para iniciar el widget desde el menú "Más herramientas" de Microsoft Edge. Los usuarios pueden iniciar el widget desde "Más herramientas".
+El widget se puede desactivar con la opción "Salir" en la bandeja del sistema o si se cierra el widget desde la barra de tareas. El widget se reiniciará cuando se reinicie el sistema si se ha habilitado el inicio automático.
+
+Si se deshabilita esta directiva: el widget web estará deshabilitado para todos los perfiles.
+La opción de iniciar el widget desde Configuración de Microsoft Edge estará deshabilitada.
+La opción para que le widget se inicie en el momento del arranque de Windows (inicio automático) estará deshabilitada.
+La opción de iniciar el widget desde el menú "Más herramientas" de Microsoft Edge estará deshabilitada.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: WebWidgetAllowed
+  - Nombre de GP: habilitar el widget web
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/D
+  - Nombre del valor: WebWidgetAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Habilitar el widget Web en el inicio de Windows
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows, desde la versión 88 o posterior
+
+  #### Descripción
+
+  Permite que el widget web empiece a iniciarse al arrancar Windows.
+
+Si lo habilita: el widget web se empezará a iniciar de manera predeterminada al arrancar Windows.
+Si el widget se deshabilita a través de la directiva [WebWidgetAllowed](#webwidgetallowed), esta directiva no iniciará el widget al arrancar Windows.
+
+Si se deshabilita esta directiva: el widget web no se iniciará al arrancar Windows en ninguno de los perfiles.
+La opción para iniciar el widget al arrancar Windows se deshabilitará y se desactivará en la configuración de Microsoft Edge.
+
+Si no configura esta directiva: el widget web no se iniciará al arrancar Windows en ninguno de los perfiles.
+La opción para iniciar el widget al arrancar Windows estará desactivado en la configuración de Microsoft Edge.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: WebWidgetIsEnabledOnStartup
+  - Nombre de GP: permitir el widget web al arrancar Windows
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/D
+  - Nombre del valor: WebWidgetIsEnabledOnStartup
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  
 
   [Volver al principio](#microsoft-edge---policies)
 
