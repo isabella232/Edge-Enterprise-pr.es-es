@@ -1,4 +1,4 @@
-# last revised 12/21/2020
+# last revised 01/13/2021
 - name: Documentación de Microsoft Edge Enterprise
   href: index.yml
 - name: Documentación de Microsoft Edge
@@ -27,16 +27,18 @@
       href: deploy-edge-plan-deployment.md
     - name: Preparado para Microsoft Edge
       href: deploy-edge-ready-for-edge.md
-    - name: Información de versiones
-      items:
-        - name: Programa de lanzamiento
-          href: microsoft-edge-release-schedule.md
-        - name: Notas de la versión de canal beta
-          href: microsoft-edge-relnote-beta-channel.md
-        - name: Notas de la versión de canal estable
-          href: microsoft-edge-relnote-stable-channel.md
-        - name: Actualizaciones de seguridad
-          href: microsoft-edge-relnotes-security.md
+    - name: Notas de la versión de canal estable
+      href: microsoft-edge-relnote-stable-channel.md
+    - name: Notas de la versión archivadas del canal estable
+      href: microsoft-edge-relnote-archive-stable-channel.md
+    - name: Notas de la versión de canal beta
+      href: microsoft-edge-relnote-beta-channel.md
+    - name: Notas de la versión archivadas del canal beta
+      href: microsoft-edge-relnote-archive-beta-channel.md
+    - name: Programa de lanzamiento
+      href: microsoft-edge-release-schedule.md
+    - name: Actualizaciones de seguridad
+      href: microsoft-edge-relnotes-security.md
     - name: Asignación de directivas de Microsoft Edge
       items:
         - name: Introducción a la asignación de directivas
@@ -113,13 +115,13 @@
           href: edge-ie-mode-faq.md
         - name: Instrucciones adicionales
           items:
-            - name: Asociar las extensiones de los archivos con el modo Internet Explorer
+            - name: Asociar extensiones de archivo con el modo Internet Explorer
               href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Compartir cookies de Microsoft Edge a Internet Explorer
               href: edge-ie-mode-add-guidance-cookieshare.md
 - name: Seguridad de Microsoft Edge
   items:
-    - name: Seguridad para tu empresa
+    - name: Seguridad para su empresa
       href: ms-edge-security-for-business.md
     - name: Lista de permitidos para puntos de conexión de Microsoft Edge
       href: microsoft-edge-security-endpoints.md
@@ -147,11 +149,11 @@
       href: microsoft-edge-policies.md
     - name: Actualizar referencia de directiva
       href: microsoft-edge-update-policies.md
-    - name: Referencia de directiva WebView2
+    - name: Referencia de directiva de WebView2
       href: microsoft-edge-webview-policies.md
     - name: Más información sobre la referencia
       items:
-        - name: Página de nueva pestaña de compatibilidad con versiones anteriores de Enterprise
+        - name: Compatibilidad con versiones anteriores de la página de la nueva pestaña De empresa
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce y DirectInvoke
           href: edge-learn-more-co-di.md
@@ -169,7 +171,7 @@
           href: microsoft-edge-update-progressive-rollout.md
         - name: Aprovisionar favoritos en Microsoft Edge
           href: edge-learnmore-provision-favorites.md
-        - name: Redireccionamiento de Internet Explorer a Microsoft Edge
+        - name: Redirección de Internet Explorer a Microsoft Edge
           href: edge-learnmore-neededge.md
         - name: Sintaxis de Expresiones regulares 2 (re2.h)
           href: edge-learnmore-regex.md
@@ -183,11 +185,11 @@
   items:
     - name: Colección de vídeos de Microsoft Edge
       href: microsoft-edge-videos.md
-    - name: 'Vídeo: aislamiento de explorador con protección de aplicaciones'
+    - name: 'Vídeo: Aislamiento del explorador con protección de aplicaciones'
       href: microsoft-edge-video-security-application-guard.md
     - name: 'Vídeo: Implementación de Microsoft Edge'
       href: microsoft-edge-video-deploy.md
-    - name: 'Vídeo: prevención de pérdida de datos (DLP)'
+    - name: 'Vídeo: Prevención de pérdida de datos (DLP)'
       href: microsoft-edge-video-security-dlp.md
     - name: 'Vídeo: Microsoft Edge y Búsqueda de Microsoft'
       href: microsoft-edge-video-search.md
