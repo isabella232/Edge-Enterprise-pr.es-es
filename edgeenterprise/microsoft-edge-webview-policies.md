@@ -3,7 +3,7 @@ title: Documentación de directiva de WebView2 de Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/07/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,18 +11,19 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 0be51f193d12c14d1bb40439d7ec6ca9e59effae
-ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
+ms.openlocfilehash: edc942eb2f8238433ded0e94cbb6a5af8cd7293c
+ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "11254958"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "11270826"
 ---
 # Microsoft Edge WebView2: directivas
 
 La versión más reciente de Microsoft Edge WebView2 incluye las siguientes directivas. Puede usar estas directivas para configurar cómo se ejecuta Microsoft Edge WebView2 en su organización.
 
 Para obtener información sobre un conjunto adicional de directivas usadas para controlar cómo y cuándo se actualiza Microsoft Edge WebView2, vea la [referencia de directiva de actualización de Microsoft Edge](microsoft-edge-update-policies.md).
+
 
 > [!NOTE]
 > Este artículo es aplicable para Microsoft Edge, versión 87 o posterior.
@@ -160,7 +161,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, V
   [Volver al principio](#microsoft-edge-webview2---policies)
 
 
-## Consulte también
+## Consulta también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
