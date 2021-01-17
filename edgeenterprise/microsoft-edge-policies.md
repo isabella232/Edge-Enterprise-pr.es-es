@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/07/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
-ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
+ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
+ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "11254978"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "11270846"
 ---
 # Microsoft Edge: directivas
 
@@ -29,17 +29,14 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
-
 ## Nuevas directivas
 
 En la siguiente tabla, se muestran las nuevas directivas para esta actualización.
 
 | Nombre | Título |
-|-|-|
-|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Permitir autenticación básica para HTTP|
-|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|No establezca window.opener para vínculos destinados a \_blank|
-|[WebWidgetAllowed](#webwidgetallowed)|Permitir el widget Web|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Habilitar el widget Web en el inicio de Windows|
+|--|--|
+|[BrowsingDataLifetime](#browsingdatalifetime)|Configuración de la duración de los datos de exploración|
+|[DefinePreferredLanguages](#definepreferredlanguages)|Define una lista ordenada de idiomas preferidos en que los sitios web deben mostrarse si el sitio es compatible con el idioma|
 
 
 ## Directivas disponibles
@@ -268,6 +265,7 @@ y sugerencias para los servicios Microsoft|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Activar el modo invitado|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Permitir consultas a un servicio de tiempo de red del explorador|
 |[BrowserSignin](#browsersignin)|Configuración de inicio de sesión del explorador|
+|[BrowsingDataLifetime](#browsingdatalifetime)|Configuración de la duración de los datos de exploración|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Usar cliente DNS integrado|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Determina si el comprobador de certificados integrado se usará para comprobar certificados de servidor (en desuso)|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Deshabilitar el certificado de transparencia para obtener una lista de hashes de PublicKeyInfo|
@@ -289,7 +287,8 @@ y sugerencias para los servicios Microsoft|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Establecer Microsoft Edge como explorador predeterminado|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Permitir el acceso de búsqueda al menú contextual del proveedor de búsquedas predeterminado|
 |[DefaultSensorsSetting](#defaultsensorssetting)|Configuración predeterminada de sensores|
-|[DefaultSerialGuardSetting](#defaultserialguardsetting)|Controlar el uso de la API de serie|
+|[DefaultSerialGuardSetting](#defaultserialguardsetting)|Controla el uso de la API de serie|
+|[DefinePreferredLanguages](#definepreferredlanguages)|Define una lista ordenada de idiomas preferidos en que los sitios web deben mostrarse si el sitio es compatible con el idioma|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Requerir que la lista de sitios modo empresarial esté disponible antes que la navegación por la tabulación|
 |[DeleteDataOnMigration](#deletedataonmigration)|Eliminar datos antiguos del explorador en la migración.|
 |[DeveloperToolsAvailability](#developertoolsavailability)|Controlar dónde se pueden usar las herramientas de desarrollo|
@@ -439,8 +438,8 @@ y sugerencias para los servicios Microsoft|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Administrar la exposición de la dirección IP local por WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Restringir la exposición de la dirección IP local por WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Restringir el rango de puertos UDP locales usados por WebRTC|
-|[WebWidgetAllowed](#webwidgetallowed)|Permitir el widget Web|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Habilitar el widget Web en el inicio de Windows|
+|[WebWidgetAllowed](#webwidgetallowed)|Habilitar el widget web|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir el widget web al arrancar Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar la resolución del proxy de Windows (en desuso)|
 
 
@@ -6311,7 +6310,9 @@ Use la información anterior al configurar esta directiva.
 
   #### Descripción
 
-  Sustituye el modo predeterminado de impresión de imágenes gráficas del fondo.
+  Reemplaza la última configuración usada para imprimir gráficos de fondo.
+Si habilita esta configuración, se habilitará la impresión de gráficos de fondo.
+Si deshabilita esta configuración, se deshabilitará la impresión de gráficos de fondo.
 
 Asignación de opciones de directiva:
 
@@ -7015,7 +7016,7 @@ Si no se configura esta directiva, todos los sitios podrán ponerse en suspensi�
   - Nombre único de GP: SleepingTabsBlockedForUrls
   - Nombre de GP: bloquear pestañas en reposo en sitios específicos
   - Ruta de acceso de GP (obligatoria): Configuración de plantillas administrativas/Microsoft Edge/pestañas en estado de reposo
-  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Configuración de pestañas en estado de reposo
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Configuración de pestañas en reposo
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
   ##### Configuración del Registro de Windows
@@ -7086,7 +7087,7 @@ Si no configuras esta opción, los usuarios pueden elegir si quieren usar pesta�
   - Nombre único de GP: SleepingTabsEnabled
   - Nombre de GP: configurar pestañas en estado de reposo
   - Ruta de acceso de GP (obligatoria): Configuración de plantillas administrativas/Microsoft Edge/pestañas en estado de reposo
-  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Configuración de pestañas en estado de reposo
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Configuración de pestañas en reposo
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
   ##### Configuración del Registro de Windows
@@ -10674,6 +10675,108 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### BrowsingDataLifetime
+
+  #### Configuración de la duración de los datos de exploración
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión 89 o posterior
+
+  #### Descripción
+
+  Configura la duración de los datos de exploración para Microsoft Edge.
+Esta directiva controla la duración de los datos de exploración seleccionados. Esta directiva no tiene ningún efecto si la sincronización está habilitada.
+Los tipos de datos disponibles son 'browsing_history', 'download_history', 'cookies_and_other_site_data', 'cached_images_and_files', 'password_signin', 'autofill', 'site_settings' y 'hosted_app_data'.
+Microsoft Edge quitará periódicamente los datos de los tipos seleccionados con una antigüedad superior a "time_to_live_in_hours". Dado que la eliminación de datos solo se produce a determinados intervalos, es posible que algunos datos se conserven por un poco más de tiempo, pero nunca más del doble de su "time_to_live_in_hours" usual.
+
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Diccionario
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: BrowsingDataLifetime
+  - Nombre de GP: Configuración de duración de los datos de exploración
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: BrowsingDataLifetime
+  - Tipo de valor: REG_SZ
+
+  ##### Valor de ejemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
+  {
+    "data_types": [
+      "browsing_history"
+    ], 
+    "time_to_live_in_hours": 24
+  }, 
+  {
+    "data_types": [
+      "password_signin", 
+      "autofill"
+    ], 
+    "time_to_live_in_hours": 12
+  }
+]
+```
+
+  ##### Valor de ejemplo de Compact:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [{"data_types": ["browsing_history"], "time_to_live_in_hours": 24}, {"data_types": ["password_signin", "autofill"], "time_to_live_in_hours": 12}]
+  ```
+  
+
+  #### Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: BrowsingDataLifetime
+  - Valor de ejemplo:
+``` xml
+<key>BrowsingDataLifetime</key>
+<array>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>browsing_history</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>24</integer>
+  </dict>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>password_signin</string>
+      <string>autofill</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>12</integer>
+  </dict>
+</array>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### BuiltInDnsClientEnabled
 
   #### Usar cliente DNS integrado
@@ -10688,13 +10791,13 @@ Use la información anterior al configurar esta directiva.
 
   Controla si se debe usar el cliente DNS integrado.
 
-Esto no afecta a los servidores DNS que se usan; sino la pila de software que se utiliza para comunicarse con ellos. Por ejemplo, si el sistema operativo se configura para usar un servidor DNS empresarial, el cliente DNS integrado usaría ese mismo servidor. Sin embargo, es posible que el cliente DNS integrado se dirigirá a los servidores en diferentes formas al usar protocolos más modernos relacionados con DNS, como DNS a través de TLS.
+Esta directiva controla qué pila de software se usa para comunicarse con el servidor DNS: el cliente DNS del sistema operativo o el cliente DNS integrado de Microsoft Edge. Esta directiva no afecta a los servidores DNS que se usan: si, por ejemplo, el sistema operativo está configurado para usar un servidor DNS empresarial, ese mismo servidor lo usaría el cliente DNS integrado. Tampoco controla si se usa DNS a través de HTTPS; Microsoft Edge siempre usa la resolución integrada para las solicitudes DNS a través de HTTPS. Consulte la directiva [DnsOverHttpsMode](#dnsoverhttpsmode) para obtener información sobre el control de DNS a través de HTTPS.
 
-Si habilita esta Directiva, el cliente DNS integrado se usa, si está disponible.
+Si habilita esta directiva, se usará el cliente DNS integrado si está disponible.
 
-Si deshabilita esta Directiva, el cliente no se usa nunca.
+Si deshabilita esta directiva, solo se usará el cliente DNS integrado cuando DNS a través de HTTPS esté en uso.
 
-Si no configura esta Directiva, el cliente DNS integrado está habilitado de forma predeterminada en el MacOS, y los usuarios pueden cambiar si lo usan para usar el cliente DNS integrado Si edita edge://flags o especifique el marcador de la línea de comandos.
+Si no configura esta directiva, el cliente DNS integrado estará habilitado de forma predeterminada.
 
   #### Características admitidas:
 
@@ -12129,6 +12232,70 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### DefinePreferredLanguages
+
+  #### Define una lista ordenada de idiomas preferidos en que los sitios web deben mostrarse si el sitio es compatible con el idioma
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión 89 o posterior
+
+  #### Descripción
+
+  Configura las variantes de idioma que Microsoft Edge envía a los sitios web como parte del encabezado HTTP de solicitud Accept-Language e impide que los usuarios agreguen, quiten o cambien el orden de los idiomas preferidos en la configuración de Microsoft Edge. Los usuarios que quieran cambiar los idiomas en los que se muestra Microsoft Edge u ofrece traducir páginas se limitarán a los idiomas configurados en esta directiva.
+
+Si habilita esta directiva, los sitios web aparecerán en el primer idioma de la lista que admiten, a menos que se utilice otra lógica específica del sitio para determinar el idioma para mostrar. Las variantes de idioma definidas en esta directiva invalidan los idiomas configurados como parte de la directiva [SpellcheckLanguage](#spellchecklanguage).
+
+Si no configura o deshabilita esta directiva, Microsoft Edge envía a los sitios web los idiomas preferidos especificados por el usuario como parte del encabezado HTTP de solicitud Accept-Language.
+
+Para obtener información detallada sobre las variantes de idioma válidas, consulte [https://go.microsoft.com/fwlink/?linkid=2148854](https://go.microsoft.com/fwlink/?linkid=2148854).
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Cadena
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: DefinePreferredLanguages
+  - Nombre de GP: define una lista ordenada de idiomas preferidos que los sitios web deben mostrar si el sitio admite el idioma
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/D
+  - Nombre del valor: DefinePreferredLanguages
+  - Tipo de valor: REG_SZ
+
+  ##### Valor de ejemplo:
+
+```
+"en-US,fr,es"
+```
+
+  #### Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: DefinePreferredLanguages
+  - Valor de ejemplo:
+``` xml
+<string>en-US,fr,es</string>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### DelayNavigationsForInitialSiteListDownload
 
   #### Requerir que la lista de sitios modo empresarial esté disponible antes que la navegación por la tabulación
@@ -13090,11 +13257,11 @@ Si deshabilita esta directiva, los usuarios no podrán acceder ni usar las colec
 
   #### Descripción
 
-  Esta directiva permite a los usuarios comparar los precios de un producto que estén buscando, obtener cupones en el sitio web en el que se encuentren y aplicar cupones automáticamente durante la compra.
+  Esta directiva permite que los usuarios comparen los precios de un producto que estén buscando, obtengan cupones o reembolsos en el sitio web en el que se encuentren y apliquen cupones automáticamente durante la compra.
 
-Si habilita o no configura esta Directiva, las características de compra, como la comparación de precios y los cupones, se aplicarán automáticamente para los dominios comerciales. Los cupones para el minorista actual y los precios de otros minoristas se obtendrán de un servidor.
+Si habilita o no configura esta directiva, las características de compra, como la comparación de precios, los cupones y los reembolsos se aplicarán automáticamente para los dominios comerciales. Los cupones para el minorista actual y los precios de otros minoristas se obtendrán de un servidor.
 
-Si deshabilita esta Directiva, las características de compra, como la comparación de precios y los cupones, no se encontrarán automáticamente para los dominios comerciales.
+Si deshabilita esta directiva, las características de compra, como la comparación de precios, los cupones y los reembolsos no se encontrarán automáticamente para los dominios comerciales.
 
   #### Características admitidas:
 
@@ -16350,7 +16517,7 @@ Use la información anterior al configurar esta directiva.
 
   - Nombre único de GP: InternetExplorerIntegrationSiteRedirect
   - Nombre de GP: especificar el comportamiento de las navegaciones "en la página" de los sitios no configurados cuando se inician desde las páginas en modo Internet Explorer
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -18459,11 +18626,11 @@ Si no configura esta Directiva, se usará la ruta de acceso del perfil móvil pr
 
   Habilite esta directiva para usar perfiles móviles en Windows. La configuración almacenada en perfiles de Microsoft Edge (favoritos y preferencias) también se guarda en un archivo almacenado en la carpeta de Perfil de usuario móvil (o en la ubicación especificada por el administrador mediante la Directiva de [RoamingProfileLocation](#roamingprofilelocation)).
 
-Si deshabilita esta Directiva o no la configura, solo se usarán los perfiles locales habituales.
+Si deshabilita esta directiva o no la configura, solo se usarán los perfiles locales habituales.
 
-La Directiva [SyncDisabled](#syncdisabled) deshabilita toda la sincronización de datos y suplanta la Directiva.
+[SyncDisabled](#syncdisabled) solo deshabilita la sincronización en la nube y no afecta a esta directiva.
 
-Consulte https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-roaming-user-profiles para obtener más información sobre el uso de perfiles de usuario móviles.
+Consulte [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) para obtener más información sobre el uso de perfiles de usuario móviles.
 
   #### Características admitidas:
 
@@ -19400,7 +19567,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### Información y configuración para Mac
   
   - Nombre clave de la preferencia: SerialAskForUrls
   - Valor de ejemplo:
@@ -20129,6 +20296,8 @@ Si esta directiva tiene un valor falso o no está establecido, las advertencias 
   #### Descripción
 
   Deshabilita la sincronización de datos en Microsoft Edge. Esta directiva también evita que se muestren solicitudes de consentimiento de sincronización.
+
+Esta directiva deshabilita solo la sincronización en la nube y no afecta a la directiva [RoamingProfileSupportEnabled](#roamingprofilesupportenabled).
 
 Si no establece o aplica esta directiva como se recomienda, los usuarios podrán activar o desactivar la sincronización. Si aplica esta directiva como obligatoria, los usuarios no podrán activar la sincronización.
 
@@ -22058,7 +22227,7 @@ Si no configura esta directiva, o si la establece con una cadena vacía o un int
 
   ### WebWidgetAllowed
 
-  #### Permitir el widget Web
+  #### Habilitar el widget web
 
   
   
@@ -22122,7 +22291,7 @@ La opción de iniciar el widget desde el menú "Más herramientas" de Microsoft 
 
   ### WebWidgetIsEnabledOnStartup
 
-  #### Habilitar el widget Web en el inicio de Windows
+  #### Permitir el widget web al arrancar Windows
 
   
   
@@ -22240,7 +22409,7 @@ Si deshabilita o no configura esta Directiva, se usará la resolución de proxy 
   [Volver al principio](#microsoft-edge---policies)
 
 
-## Consulte también
+## Consulta también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
