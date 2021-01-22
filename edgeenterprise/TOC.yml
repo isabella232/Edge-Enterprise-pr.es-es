@@ -1,4 +1,4 @@
-# last revised 01/14/2021
+# last revised 01/20/2021
 - name: Documentación de Microsoft Edge Enterprise
   href: index.yml
 - name: Documentación de Microsoft Edge
@@ -119,6 +119,8 @@
               href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Compartir cookies de Microsoft Edge a Internet Explorer
               href: edge-ie-mode-add-guidance-cookieshare.md
+            - name: Enterprise Site List Manager en Microsoft Edge
+              href: edge-ie-mode-site-list-manager.md
 - name: Seguridad de Microsoft Edge
   items:
     - name: Seguridad para su empresa
@@ -187,13 +189,13 @@
       href: microsoft-edge-videos.md
     - name: 'Vídeo: Microsoft Edge: estado del explorador 2020'
       href: microsoft-edge-video-state-of-browser.md
-    - name: 'Vídeo: Aislamiento del explorador con protección de aplicaciones'
+    - name: 'Vídeo: aislamiento del explorador con la Protección de aplicaciones'
       href: microsoft-edge-video-security-application-guard.md
     - name: 'Vídeo: Implementación de Microsoft Edge'
       href: microsoft-edge-video-deploy.md
     - name: 'Vídeo: Prevención de pérdida de datos (DLP)'
       href: microsoft-edge-video-security-dlp.md
-    - name: 'Vídeo: identidad en Microsoft Edge'
+    - name: 'Vídeo: Identidad en Microsoft Edge'
       href: microsoft-edge-video-identity.md
     - name: 'Vídeo: reversión de la versión de Microsoft Edge'
       href: microsoft-edge-video-version-rollback.md
