@@ -1,4 +1,4 @@
-# last revised 01/20/2021
+# last revised 01/21/2021
 - name: Documentación de Microsoft Edge Enterprise
   href: index.yml
 - name: Documentación de Microsoft Edge
@@ -129,6 +129,8 @@
       href: microsoft-edge-security-endpoints.md
     - name: Prevención de pérdida de datos (DLP)
       href: microsoft-edge-security-dlp.md
+    - name: Monitor de contraseñas habilitado automáticamente para usuarios
+      href: microsoft-edge-security-password-monitor.md
     - name: Proteger contra aplicaciones potencialmente no deseadas
       href: microsoft-edge-potentially-unwanted-apps.md
     - name: Compatibilidad con el acceso condicional de Azure AD
