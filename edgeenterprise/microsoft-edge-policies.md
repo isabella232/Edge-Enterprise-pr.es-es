@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/15/2021
+ms.date: 01/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
-ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
+ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
+ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270846"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11281029"
 ---
 # Microsoft Edge: directivas
 
@@ -35,8 +35,10 @@ En la siguiente tabla, se muestran las nuevas directivas para esta actualizació
 
 | Nombre | Título |
 |--|--|
-|[BrowsingDataLifetime](#browsingdatalifetime)|Configuración de la duración de los datos de exploración|
-|[DefinePreferredLanguages](#definepreferredlanguages)|Define una lista ordenada de idiomas preferidos en que los sitios web deben mostrarse si el sitio es compatible con el idioma|
+|[MAMEnabled](#mamenabled)|Administración de aplicaciones móviles habilitada|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permite las recomendaciones y notificaciones promocionales de Microsoft Edge|
+
+
 
 
 ## Directivas disponibles
@@ -48,12 +50,12 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[Configuración de Protección de aplicaciones](#application-guard-settings)|[Transmitir](#cast)|
 |[Configuración del Contenido](#content-settings)|[Proveedor de búsquedas predeterminado](#default-search-provider)|
 |[Extensions](#extensions)|[Autenticación HTTP](#http-authentication)|
-|[Configuración de pantalla completa](#kiosk-mode-settings)|[Mensajería nativa](#native-messaging)|
-|[Administrador de contraseñas y protección](#password-manager-and-protection)|[Rendimiento](#performance)|
-|[Impresión](#printing)|[Servidor proxy](#proxy-server)|
-|[Configuración de pestañas en estado de reposo](#sleeping-tabs-settings)|[Configuración de SmartScreen](#smartscreen-settings)|
-|[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|[Adicional](#additional)|
-
+|[Configuración de pantalla completa](#kiosk-mode-settings)|[Capacidad de administración](#manageability)|
+|[Mensajería nativa](#native-messaging)|[Administrador de contraseñas y protección](#password-manager-and-protection)|
+|[Rendimiento](#performance)|[Impresión](#printing)|
+|[Servidor proxy](#proxy-server)|[Configuración de pestañas en estado de reposo](#sleeping-tabs-settings)|
+|[Configuración de SmartScreen](#smartscreen-settings)|[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|
+|[Adicional](#additional)|
 
 ### [*Configuración de Protección de aplicaciones*](#application-guard-settings-policies)
 
@@ -151,7 +153,12 @@ y sugerencias para los servicios Microsoft|
 |Nombre de directiva|Título|
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Configura la edición de la barra de direcciones para la experiencia de navegación pública en modo de pantalla completa.|
-|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Eliminar archivos descargados como parte de la sesión de pantalla completa cuando se cierra Microsoft Edge|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Elimina los archivos descargados como parte de la sesión de pantalla completa cuando se cierra Microsoft Edge|
+### [*Capacidad de administración*](#manageability-policies)
+
+|Nombre de directiva|Descripción|
+|-|-|
+|[MAMEnabled](#mamenabled)|Administración de aplicaciones móviles habilitada|
 ### [*Mensajería nativa*](#native-messaging-policies)
 
 |Nombre de directiva|Título|
@@ -400,7 +407,8 @@ y sugerencias para los servicios Microsoft|
 |[SerialAskForUrls](#serialaskforurls)|Permitir la API de serie en sitios específicos|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquear la API en serie en sitios específicos|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Mostrar las experiencias de MicrosoftRewards|
-|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostrar el acceso directo de Microsoft Office en la barra de favoritos (en desuso)|
+|[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Muestra el acceso directo de Microsoft Office en la barra de favoritos (en desuso)|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permite las recomendaciones y notificaciones promocionales de Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilite la compatibilidad con el intercambio de HTTP firmado (SXG)|
 |[SitePerProcess](#siteperprocess)|Habilite el aislamiento de sitio para cada sitio|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
@@ -5277,6 +5285,72 @@ Para obtener información detallada sobre cómo configurar la pantalla completa,
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ## Directivas de capacidad de administración
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### MAMEnabled
+
+  #### Administración de aplicaciones móviles habilitada
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión 89 o posterior
+
+  #### Descripción
+
+  Permite que el explorador Microsoft Edge recupere las directivas de los servicios de administración de aplicaciones de Intune y las aplique a los perfiles de usuarios.
+
+Si habilita esta directiva o no la configura, se pueden aplicar directivas de administración de aplicaciones móviles (MAM).
+
+Si deshabilita esta directiva, Microsoft Edge no se comunicará con Intune para solicitar directivas de MAM.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: MAMEnabled
+  - Nombre de GP: Administración de aplicaciones móviles habilitada
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Capacidad de administración
+  - Ruta de acceso de GP (recomendada): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: MAMEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000000
+```
+
+  #### Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: MAMEnabled
+  - Valor de ejemplo:
+``` xml
+<false/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ## Directivas de mensajería nativa
 
   [Volver al principio](#microsoft-edge---policies)
@@ -9136,9 +9210,11 @@ En concreto, hay una **sugerir páginas similares cuando no se puede encontrar u
 
   Deshabilita el visor de PDF interno en Microsoft Edge.
 
-Si habilita esta directiva, Microsoft Edge tratará los archivos PDF como descargas y permitirá a los usuarios abrirlos con la aplicación predeterminada.
+Si habilita esta directiva, Microsoft Edge tratará los archivos PDF como descargas y permitirá que los usuarios los abran con la aplicación predeterminada.
 
-Si no configura esta directiva o la deshabilita, Microsoft Edge abrirá archivos PDF (a menos que el usuario la deshabilite).
+Si Microsoft Edge es el lector de PDF predeterminado, los archivos PDF no se descargarán y seguirán abiertos en Microsoft Edge.
+
+Si no configura esta directiva o la deshabilita, Microsoft Edge abrirá los archivos PDF (a menos que el usuario la deshabilite).
 
   #### Características admitidas:
 
@@ -16517,7 +16593,7 @@ Use la información anterior al configurar esta directiva.
 
   - Nombre único de GP: InternetExplorerIntegrationSiteRedirect
   - Nombre de GP: especificar el comportamiento de las navegaciones "en la página" de los sitios no configurados cuando se inician desde las páginas en modo Internet Explorer
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -19567,7 +19643,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración para Mac
+  #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: SerialAskForUrls
   - Valor de ejemplo:
@@ -19777,6 +19853,68 @@ Si deshabilita esta directiva, el método abreviado no se muestra.
   - Valor de ejemplo:
 ``` xml
 <false/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### ShowRecommendationsEnabled
+
+  #### Permite las recomendaciones y notificaciones promocionales de Microsoft Edge
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión 89 o posterior
+
+  #### Descripción
+
+  Esta configuración de directiva permite decidir si los empleados deben recibir recomendaciones y notificaciones de asistencia en el producto por parte de Microsoft Edge.
+
+Si habilita o no configura esta opción, los empleados recibirán recomendaciones o notificaciones de Microsoft Edge.
+
+Si deshabilita esta configuración, los empleados no recibirán ninguna recomendación o notificación de Microsoft Edge.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: ShowRecommendationsEnabled
+  - Nombre de GP: permitir recomendaciones y notificaciones promocionales de Microsoft Edge
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: ShowRecommendationsEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: ShowRecommendationsEnabled
+  - Valor de ejemplo:
+``` xml
+<true/>
 ```
   
 
@@ -22409,7 +22547,7 @@ Si deshabilita o no configura esta Directiva, se usará la resolución de proxy 
   [Volver al principio](#microsoft-edge---policies)
 
 
-## Consulta también
+## Consulte también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
