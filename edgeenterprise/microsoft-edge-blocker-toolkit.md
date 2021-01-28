@@ -23,10 +23,10 @@ Este artículo describe el kit de herramientas de bloqueo para deshabilitar la e
 
 Se han realizado las siguientes actualizaciones en este artículo:
 
-- **01/09/2020** con más información sobre los dispositivos que pueden requerir que use el kit de herramientas de bloqueo
-- **2/28/2020** para quitar "MDM administrado" de los criterios de los dispositivos que se deben excluir de esta actualización automática
-- **6/30/2020** para reflejar que todos los dispositivos conectados a Windows Update están en el ámbito para recibir esta actualización (vigente no antes del 7/30/2020)
-- **12/10/2020** para explicar las situaciones pre 20H2 en las que se omitirá la configuración del kit de herramientas de bloqueo
+- **9/1/2020** con más información sobre los dispositivos que pueden requerir que use el kit de herramientas de bloqueo
+- **28/2/2020** para quitar "Administrado por MDM" de los criterios de los dispositivos que se deben excluir de esta actualización automática
+- **30/6/2020** para reflejar que todos los dispositivos conectados a Windows Update están en el ámbito para recibir esta actualización (vigente no antes del 30/7/2020)
+- **10/12/2020** para explicar las situaciones anteriores a 20H2 en las que se omitirá la configuración del kit de herramientas de bloqueo
 
 > [!NOTE]
 > Esto es de aplicación al canal estable de Microsoft Edge.
@@ -43,7 +43,7 @@ El kit de herramientas de bloqueo está pensado para las organizaciones que dese
 - Las organizaciones con actualizaciones administradas a través de Windows Update para empresas (WUfB) no recibirán automáticamente esta actualización y no tienen que implementar el kit de herramientas de bloqueo.
 - Las organizaciones con entornos administrados con una solución de administración de actualizaciones, como Windows Server Update Services (WSUS) o System Center Configuration Manager (SCCM) no tienen que implementar el kit de herramientas de bloqueo. Pueden usar esos productos para administrar completamente la implementación de actualizaciones publicadas a través de Windows Update y Microsoft Update, incluida la [actualización en WSUS para el nuevo Microsoft Edge](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge), dentro de su entorno.
 - Esta actualización es una actualización independiente (no forma parte de la actualización acumulativa mensual) para ofrecer flexibilidad a los clientes de Enterprise y un control máximo sobre la implementación de esta actualización.
-- El nuevo Microsoft Edge (basado en cromo) se incluye como parte de la actualización de características de Windows 10, versión 20H2, en la segunda mitad de 2020. El kit de herramientas de bloqueo no impacta en los comportamientos o la implementación de la versión 20H2. Puede ver más información sobre Windows 10, versión 20H2, [aquí](https://blogs.windows.com/windowsexperience/2020/06/16/whats-next-for-windows-10-updates/).
+- El nuevo Microsoft Edge (basado en Chromium) se incluye como parte de la actualización de características de Windows 10, versión 20H2, en la segunda mitad de 2020. El kit de herramientas de bloqueo no impacta en los comportamientos o la implementación de la versión 20H2. Puede ver más información sobre Windows 10, versión 20H2, [aquí](https://blogs.windows.com/windowsexperience/2020/06/16/whats-next-for-windows-10-updates/).
 
 Puedes descargar el archivo ejecutable del kit de herramientas de bloqueo desde [https://msedgeblockertoolkit.blob.core.windows.net/blockertoolkit/MicrosoftEdgeChromiumBlockerToolkit.exe](https://msedgeblockertoolkit.blob.core.windows.net/blockertoolkit/MicrosoftEdgeChromiumBlockerToolkit.exe).
 
