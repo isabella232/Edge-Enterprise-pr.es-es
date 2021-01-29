@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
+ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281029"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "11304733"
 ---
 # Microsoft Edge: directivas
 
@@ -35,11 +35,7 @@ En la siguiente tabla, se muestran las nuevas directivas para esta actualizació
 
 | Nombre | Título |
 |--|--|
-|[MAMEnabled](#mamenabled)|Administración de aplicaciones móviles habilitada|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permite las recomendaciones y notificaciones promocionales de Microsoft Edge|
-
-
-
+|[SmartActionsBlockList](#smartactionsblocklist)|Bloquear acciones inteligentes para una lista de servicios|
 
 ## Directivas disponibles
 
@@ -156,7 +152,7 @@ y sugerencias para los servicios Microsoft|
 |[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Elimina los archivos descargados como parte de la sesión de pantalla completa cuando se cierra Microsoft Edge|
 ### [*Capacidad de administración*](#manageability-policies)
 
-|Nombre de directiva|Descripción|
+|Nombre de directiva|Título|
 |-|-|
 |[MAMEnabled](#mamenabled)|Administración de aplicaciones móviles habilitada|
 ### [*Mensajería nativa*](#native-messaging-policies)
@@ -410,7 +406,8 @@ y sugerencias para los servicios Microsoft|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Muestra el acceso directo de Microsoft Office en la barra de favoritos (en desuso)|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permite las recomendaciones y notificaciones promocionales de Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilite la compatibilidad con el intercambio de HTTP firmado (SXG)|
-|[SitePerProcess](#siteperprocess)|Habilite el aislamiento de sitio para cada sitio|
+|[SitePerProcess](#siteperprocess)|Habilita el aislamiento de sitio para cada sitio|
+|[SmartActionsBlockList](#smartactionsblocklist)|Bloquear acciones inteligentes para una lista de servicios|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilite corrección ortográfica|
 |[SpellcheckLanguage](#spellchecklanguage)|Habilite idiomas de revisión ortográfica específicos|
@@ -2901,7 +2898,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
   #### Descripción
 
-  Define una lista de sitios basada en los patrones de dirección URL que puedan abrir ventanas emergentes.
+  Define una lista de sitios basada en los patrones de dirección URL que puedan abrir ventanas emergentes. * no es un valor aceptado para esta directiva.
 
 Si no configura esta directiva se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultPopupsSetting](#defaultpopupssetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
 
@@ -2966,7 +2963,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
   #### Descripción
 
-  Define una lista de sitios basada en los patrones de dirección URL que están bloqueados para abrir ventanas emergentes.
+  Define una lista de sitios basada en los patrones de dirección URL tienen bloqueada la opción de abrir ventanas emergentes. * no es un valor aceptado para esta directiva.
 
 Si no configura esta directiva se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultPopupsSetting](#defaultpopupssetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
 
@@ -6979,8 +6976,8 @@ La configuración de la directiva [ProxySettings](#proxysettings) acepta los sig
 Para ProxyMode, si elige el valor:
   * direct: no usa un proxy y todos los demás campos se omiten.
   * system: usa un proxy del sistema y todos los demás campos se omiten.
-  * auto_detect: los demás campos se omiten.
-  * fixed_server: se usan los campos ProxyServer y ProxyBypassList.
+  * auto_detect: todos los demás campos se omiten.
+  * fixed_servers: se usan los campos ProxyServer y ProxyBypassList.
   * pac_script: se usan los campos ProxyPacUrl y ProxyBypassList.
 
 Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
@@ -7017,7 +7014,7 @@ Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "direct", 
+  "ProxyMode": "pac_script", 
   "ProxyPacUrl": "https://internal.site/example.pac", 
   "ProxyServer": "123.123.123.123:8080"
 }
@@ -7026,7 +7023,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### Valor de ejemplo de Compact:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
@@ -7040,7 +7037,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <key>ProxyBypassList</key>
   <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
   <key>ProxyMode</key>
-  <string>direct</string>
+  <string>pac_script</string>
   <key>ProxyPacUrl</key>
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
@@ -20045,6 +20042,83 @@ Si deshabilita o no configura esta directiva, el usuario podrá optar por no rec
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### SmartActionsBlockList
+
+  #### Bloquear acciones inteligentes para una lista de servicios
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde la versión 89 o posterior
+
+  #### Descripción
+
+  Enumerar servicios específicos, como PDF, que no muestran acciones inteligentes. (Las acciones inteligentes son acciones, como "definir", que están disponibles en menús contextuales completos o pequeños en Microsoft Edge).
+
+Si habilita la directiva:
+   - Se deshabilitará la acción inteligente del menú contextual completo y del pequeño para todos los perfiles de los servicios que coincidan con la lista proporcionada.
+   - Los usuarios no verán la acción inteligente en el menú contextual completo ni el pequeño en la selección de texto de los servicios que coinciden con la lista proporcionada.
+   - En la configuración de Microsoft Edge, se deshabilitará la acción inteligente del menú contextual completo y del pequeño para los servicios que coincidan con la lista proporcionada.
+
+Si deshabilita o no configura esta directiva:
+   - Se habilitará la acción inteligente del menú contextual completo y del pequeño para todos los perfiles.
+   - Los usuarios verán la acción inteligente en el menú contextual completo ni el pequeño en la selección de texto.
+   - En la configuración de Microsoft Edge, se habilitará la acción inteligente del menú contextual completo y del pequeño.
+
+Asignación de opciones de directiva:
+
+* smart_actions_pdf (smart_actions_pdf) = Acciones inteligentes en PDF
+
+Use la información anterior al configurar esta directiva.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: sí
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Lista de cadenas
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: SmartActionsBlockList
+  - Nombre de GP: Bloquear acciones inteligentes para una lista de servicios
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList
+  - Ruta de acceso (recomendada): SOFTWARE\Policies\Microsoft\Edge\Recommended\SmartActionsBlockList
+  - Nombre del valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### Valor de ejemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
+
+```
+
+  #### Información y configuración de Mac
+  
+  - Nombre de clave de preferencia: SmartActionsBlockList
+  - Valor de ejemplo:
+``` xml
+<array>
+  <string>smart_actions_pdf</string>
+</array>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### SpeechRecognitionEnabled
 
   #### Configure Speech Recognition
@@ -21807,14 +21881,7 @@ Independientemente de si esta directiva está habilitada, los usuarios no podrá
 
   Configure esta directiva para especificar una lista de aplicaciones web que se instalan de forma silenciosa, sin interacción del usuario, y qué usuarios no pueden desinstalar o desactivar.
 
-Cada elemento de lista de la directiva es un objeto con un miembro obligatorio: url (la dirección URL de la aplicación web que se va a instalar)
-
-y 3 miembros opcionales:
-- default_launch_container (especifica que el modo de ventana que la aplicación web abre con una nueva pestaña es la configuración predeterminada).
-
-- create_desktop_shortcut (True si quieres crear accesos directos de escritorio de Linux y Windows).
-
-- override_app_name (a partir de Microsoft Edge 89, permite invalidar el nombre de la aplicación si no es una aplicación web progresiva (PWA) o el nombre de la aplicación que se instala temporalmente si es una PWA, pero la autenticación es necesaria antes de que se pueda completar la instalación).
+Cada elemento de la lista es un objeto con un miembro obligatorio: url (la dirección URL de la aplicación web que se va a instalar) y 2 miembros opcionales: default_launch_container (especifica el modo de ventana en el que se abre la aplicación web: una pestaña nueva es el valor predeterminado) y create_desktop_shortcut (True si quiere crear accesos directos del escritorio de Windows y Linux).
 
   #### Características admitidas:
 
@@ -21855,11 +21922,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
-  }, 
-  {
-    "default_launch_container": "window", 
-    "override_app_name": "Editor", 
-    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21867,7 +21929,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Valor de ejemplo de Compact:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
   ```
   
 
@@ -21891,14 +21953,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
-  </dict>
-  <dict>
-    <key>default_launch_container</key>
-    <string>window</string>
-    <key>override_app_name</key>
-    <string>Editor</string>
-    <key>url</key>
-    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```

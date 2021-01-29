@@ -3,19 +3,19 @@ title: Monitor de contraseñas habilitado automáticamente para usuarios
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/21/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Monitor de contraseñas habilitado automáticamente para usuarios
-ms.openlocfilehash: 8ea96522fe99082579e88b2eab330fb265d02b12
-ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
+ms.openlocfilehash: 2f796f0cd1bbb437f83d04a8bd59586ef7b6a982
+ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297532"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "11304540"
 ---
 # Monitor de contraseñas habilitado automáticamente para usuarios
 
@@ -26,7 +26,7 @@ En este artículo se describe cómo se activará el Monitor de contraseñas en M
 
 ## Introducción, ventajas y disponibilidad
 
-El Monitor de contraseñas ayuda a los usuarios de Microsoft Edge a proteger sus cuentas en línea informándoles si alguna de sus contraseñas ha sido encontrada en una filtración en línea. Las filtraciones en línea o las infracciones de datos ocurren cuando los usuarios malintencionados roban datos de sitios web o aplicaciones de terceros.
+El Monitor de contraseñas ayuda a los usuarios de Microsoft Edge a proteger sus cuentas en línea informándoles si alguna de sus contraseñas ha sido encontrada en una filtración en línea. Las filtraciones en línea o las infracciones de datos ocurren cuando los usuarios malintencionados roban datos de sitios web o aplicaciones de terceros. Para más información, consulte el documento [Monitor de contraseñas: Proteger contraseñas en Microsoft Edge](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/)  en el blog de Microsoft Research.
 
 ### Ventajas
 
@@ -34,7 +34,7 @@ Debido a la frecuencia y el ámbito de estos ataques en línea, tener este tipo 
 
 ### Disponibilidad
 
-El Monitor de contraseñas ha estado en los canales de vista previa (Canary/Dev) y se promoverá a la versión 88 del Canal estable a partir del 21/1. El lanzamiento será gradual y podrían pasar algunas semanas antes de que vea el siguiente mensaje y control en la página **Configuración** > **Perfil** > **Contraseña**.
+El Monitor de contraseñas está disponible en el Canal estable, versión 88, a partir del 21/1. El lanzamiento será gradual y podrían pasar algunas semanas antes de que vea el siguiente mensaje y control en la página **Configuración** > **Perfil** > **Contraseña**.
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Opción para habilitar el Monitor de contraseñas":::
 
