@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/26/2021
+ms.date: 01/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: fd5336a57ad3f6706a2a61a2781c772f12e8b795
-ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
+ms.openlocfilehash: 6adba3b373f5989362594d0ff84a2932a661550a
+ms.sourcegitcommit: 6109055bfd0e2deba7f0cc75b27f6a805b16a0b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "11304550"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "11306070"
 ---
 # Notas de la versión para el canal estable de Microsoft Edge
 
@@ -28,6 +28,10 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!NOTE]
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para obtener más información, consulte [Progressive rollouts for Microsoft Edge updates (Implementaciones progresivas de actualizaciones de Microsoft Edge)](microsoft-edge-update-progressive-rollout.md).
+
+## Versión 88.0.705.56: 28 de enero
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## Versión 88.0.705.53: 26 de enero
 
@@ -48,6 +52,11 @@ Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/
 - **Autenticación:**
 
   - El inicio de sesión único (SSO) ya está disponible para las cuentas de Azure Active Directory (Azure AD) y las cuentas de Microsoft (MSA) en versiones de Windows de nivel inferior. Un usuario que haya iniciado sesión en Microsoft Edge en una versión de Microsoft Windows de nivel inferior (versiones 7 y 8.1) ahora tendrá la sesión iniciada de manera automática en los sitios web que estén configurados para permitir el inicio de sesión único con cuentas profesionales y de Microsoft (por ejemplo, bing.com, office.com, msn.com, outlook.com).<br>Nota: es posible que un usuario tenga que cerrar sesión y volver a iniciarla si ha iniciado sesión en Microsoft Edge en una versión anterior a Microsoft Edge 88 para poder aprovechar esta característica.
+  
+  - Inicio de sesión único (SSO) para trabajar en sitios con cualquier cuenta de Windows Azure Active Directory (Azure AD) que esté en el sistema en perfiles de Microsoft Edge que no sean de Azure AD. Esta característica se puede habilitar para cualquier perfil que no haya iniciado sesión con una cuenta de trabajo o escuela y que no sea invitado o privado, y permite el uso de cualquier cuenta de trabajo o escuela que haya iniciado sesión en el sistema operativo con ese perfil. Esta característica se puede definir en **Configuración** > **Perfiles** > **Preferencias de perfil** > **Permitir el inicio de sesión único en sitios profesionales o educativos con este perfil o**.
+  
+    > [!NOTE]
+    > "Inicio de sesión único (SSO) para todas las cuentas de Windows que usan el perfil de Microsoft Edge" es una actualización de las notas de la versión del 21 de enero.
 
 - **Opción de modo de pantalla completa para finalizar la sesión**. El botón "Finalizar sesión" ahora está disponible en una experiencia de navegación pública en modo de pantalla completa. Esta característica garantiza que los datos y la configuración del explorador se eliminen cuando se cierra Microsoft Edge. Más información sobre las características y la guía básica del modo de pantalla completa, [Configurar el modo de pantalla completa de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
 
