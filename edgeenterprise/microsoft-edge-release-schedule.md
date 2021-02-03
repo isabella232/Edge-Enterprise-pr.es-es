@@ -3,19 +3,19 @@ title: Programa de publicación de versiones de Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 02/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Programa de publicación de versiones de Microsoft Edge
-ms.openlocfilehash: 3b9c257123f2d1eeda1484e761963b6d0106c7c0
-ms.sourcegitcommit: d8d0b0fcb787fe90fa20426ef5e6dc194e935808
+ms.openlocfilehash: ad02c2775b836fe1a829945c205f2f52208065f1
+ms.sourcegitcommit: 90f33698262b255a63d6ba6ec854a12c1091a630
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "11297705"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "11311527"
 ---
 # Programa de publicación de versiones de Microsoft Edge
 
@@ -33,6 +33,8 @@ En la tabla siguiente se enumeran las fechas de lanzamiento previstas para los c
 > Las fechas de lanzamiento son aproximadas y pueden variar en función del estado de la compilación.
 
 ### Lanzamientos de Microsoft Edge
+
+En la tabla siguiente solo se realiza un seguimiento de las versiones principales de ambos canales y se proporciona información para estas.
 
 | Versión | Estado de la versión | Canal Beta<br>Semana de lanzamiento | Canal estable<br>Semana de lanzamiento |
 |---------|-----|------|--------|
