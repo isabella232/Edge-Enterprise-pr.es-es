@@ -11,13 +11,13 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 12/01/2020
-  ms.openlocfilehash: 2a0466121bb773be20a01ec0b9f72e16bb8ac644
-  ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
+  ms.date: 02/02/2021
+  ms.openlocfilehash: 75aa2514ec19bd54bea0e785efcef8f89561d334
+  ms.sourcegitcommit: 231727b0f42bc0b7af49cb3290692aa7e420502a
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/14/2021
-  ms.locfileid: "11269281"
+  ms.lasthandoff: 02/04/2021
+  ms.locfileid: "11312870"
 landingContent:
 - title: Más información sobre Microsoft Edge en la empresa
   linkLists:
@@ -81,7 +81,7 @@ landingContent:
       url: microsoft-edge-policy-map-overview.md
     - text: Blog de líneas de base de seguridad de Microsoft
       url: https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines
-- title: Interactuar con la comunidad empresarial u obtener ayuda
+- title: Interactuar con la comunidad u obtener ayuda
   linkLists:
   - linkListType: get-started
     links:
@@ -89,3 +89,7 @@ landingContent:
       url: https://techcommunity.microsoft.com/t5/Enterprise/bd-p/EdgeInsiderEnterprise
     - text: Ponerse en contacto con Soporte técnico de MicrosoftEdge
       url: https://microsoftedgesupport.microsoft.com/hc/
+  - linkListType: learn
+    links:
+    - text: Comunidad de investigadores de seguridad
+      url: https://microsoftedge.github.io/edgevr/
