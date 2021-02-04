@@ -3,23 +3,23 @@ title: Preguntas más frecuentes sobre el modo IE
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Preguntas más frecuentes y solución de problemas de Microsoft Edge con el modo IE
-ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
-ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
+ms.openlocfilehash: aeae79dfd1745c754fb5ab690338f87fd25c080b
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "11238177"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312596"
 ---
 # Preguntas más frecuentes sobre el modo IE
 
-Este artículo proporciona sugerencias para la solución de problemas y otras preguntas más frecuentes sobre Microsoft Edge (versión 77 o posterior).
+Este artículo proporciona sugerencias para la solución de problemas y otras preguntas más frecuentes sobre Microsoft Edge, versión 77 o posterior.
 
 > [!NOTE]
 > Este artículo se aplica a los canales de Microsoft Edge **Estable**, **Beta** y **Dev**, versión 77 o posterior.
@@ -62,6 +62,10 @@ Es posible que vea este error si se ha producido un error inesperado en Internet
 ### Mensaje de error: "Desactive la depuración remota para abrir este sitio en modo IE, o si no, probablemente no funcionará según lo esperado".
 
 Es probable que vea este error si realiza la depuración de forma remota y navega a una página web configurada para ejecutarse en modo IE. Puede continuar, pero la página se mostrará con Microsoft Edge.
+
+### Mensaje de error: "Error: no se pudo recuperar la lista de sitios de EMIE".
+
+Es posible que veas este error en la página *edge://compat/enterprise* indicando que no se pudo descargar la lista de sitios. A partir de la versión 87 de Microsoft Edge, cuando las cookies se bloquean para solicitudes de terceros usando la directiva [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) la autenticación HTTP también está prohibida. Puedes permitir cookies para el dominio específico que hospeda la Lista de sitios del modo de empresa usando la directiva [CookiesAllowedForURls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) para asegurarte de que las descargas de listas de sitios son correctas.
 
 ## Preguntas más frecuentes
 

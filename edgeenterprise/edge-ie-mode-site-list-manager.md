@@ -3,26 +3,26 @@ title: 'Enterprise Site List Manager en Microsoft Edge '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/20/2021
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Habilitar y usar Enterprise Site List Manager en Microsoft Edge '
-ms.openlocfilehash: 2d10886624918c97933a841c428ea66ccf5b34c9
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 9700c2b78bba514525c4d80d211ef744dd175d2f
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281058"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312586"
 ---
 # Enterprise Site List Manager en Microsoft Edge
 
 En este artículo, se explica cómo usar y habilitar el acceso de Enterprise Site List Manager en Microsoft Edge para crear, editar y exportar la lista de sitios del Modo de empresa para el modo Internet Explorer.
 
 > [!NOTE]
-> Este artículo se aplica a la versión 89 de Microsoft Edge o posteriores.
+> Este artículo se aplica a la versión 89 de Microsoft Edge o posteriores. 
 
 ## Información general
 
@@ -38,7 +38,7 @@ Si está habilitada, los usuarios verán una opción denominada Enterprise Site 
 
 ## Usar Enterprise Site List Manager
 
-La herramienta Enterprise Site List Manager usa la versión 2 del esquema. Si importa la versión 1 del esquema a Enterprise Site List Manager (esquema v.2), se guardará el archivo XML en la versión 2 del esquema.
+La herramienta Enterprise Site List Manager usa la versión 2 del esquema. Si importa la versión 1 del esquema a Enterprise Site List Manager (esquema v.2), se guardará el archivo XML en la versión 2 del esquema. Consulte la [Guía del esquema v.2 del Modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 ### Agregar sitios únicos a la lista de sitios  
 
@@ -127,5 +127,5 @@ Para buscar, escriba parte de la dirección URL en el cuadro de búsqueda  **F
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Acerca del modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
+- [Guía del esquema v.2 del Modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
 - [Información adicional del modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Información adicional de Detección de sitio empresarial](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
