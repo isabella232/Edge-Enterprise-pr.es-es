@@ -3,23 +3,23 @@ title: Obtener acceso a la versión anterior de Microsoft Edge
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 08/17/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Obtén información acerca de cómo obtener acceso a la versión heredada de Microsoft Edge.
-ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
-ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
+ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125522"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313900"
 ---
 # Obtener acceso a la versión heredada de Microsoft Edge tras la instalación de la nueva versión de Microsoft Edge
 
-Obtén información acerca de cómo obtener acceso a la versión heredada de Microsoft Edge tras la instalación de la nueva versión de Microsoft Edge.
+Microsoft Edge (versión anterior) dejará de recibir actualizaciones de seguridad el 9 de marzo de 2021. Puede acceder a Microsoft Edge (versión anterior) hasta el 13 de abril. Para más información, vea la [entrada de blog](https://aka.ms/EdgeLegacyEOS) del Equipo de producto de Microsoft Edge.
 
 > [!NOTE]
 > Este artículo se aplica al [canal Estable](microsoft-edge-channels.md) de Microsoft Edge.
@@ -44,11 +44,7 @@ Los procedimientos descritos en este artículo se aplican a los sistemas que se 
 
 Antes de usar las instrucciones detalladas de este artículo, tenga en cuenta los dos pasos siguientes para permitir que los usuarios ejecuten Microsoft Edge (versión anterior) y el [canal Microsoft Edge Beta](microsoft-edge-channels.md) en paralelo.
 
-1. Impide la instalación automática del canal estable de Microsoft Edge por parte de [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq).
-
-   > [!TIP]
-   > Usa el [kit de herramientas de bloqueo](microsoft-edge-blocker-toolkit.md) para deshabilitar la entrega automática de Microsoft Edge.
-
+1. Impida la instalación automática del canal estable de Microsoft Edge por parte de [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq).
 2. Instale el [canal beta](https://www.microsoft.com/edge/business/download) de la nueva versión de Microsoft Edge.
 
    > [!NOTE]

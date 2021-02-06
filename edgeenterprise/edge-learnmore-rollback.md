@@ -3,23 +3,23 @@ title: Reversión de Microsoft Edge para empresas
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 02/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Cómo revertir Microsoft Edge a una versión anterior
-ms.openlocfilehash: 69fdfd29572dd6eda9f7eb7cbd4c2500851dcafc
-ms.sourcegitcommit: 63a094a5268bb3b4819269438357095acd79abac
+ms.openlocfilehash: 2059ea04bf8ec3a03266fe95599ea3b515b78c12
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "11192430"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314573"
 ---
 # Cómo revertir Microsoft Edge a una versión anterior
 
-En este artículo se describe cómo revertir a una versión anterior de Microsoft Edge con la característica de reversión.
+En este artículo se describe cómo revertir a una versión anterior de Microsoft Edge con la característica de reversión. Para obtener más información sobre esta característica, vea [Vídeo: Reversión de versión de Microsoft Edge](microsoft-edge-video-version-rollback.md).
 
 >[!NOTE]
 >Este artículo se aplica a Microsoft Edge, versión 86 o posterior.
@@ -163,3 +163,4 @@ La configuración de directiva de grupo todavía no se ha sincronizado con todos
 ## Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Vídeo: Reversión de versión de Microsoft Edge](microsoft-edge-video-version-rollback.md)

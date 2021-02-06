@@ -3,30 +3,33 @@ title: Actualizaciones de Windows para Microsoft Edge
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/20/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Actualizaciones de Windows para Microsoft Edge
-ms.openlocfilehash: ab5832dc878495a0f0a0880676fb7c3e34b69d4d
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981170"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313910"
 ---
 # Actualizaciones de Windows para admitir la próxima versión de Microsoft Edge
 
 En este artículo se describe cómo se actualizará Windows para admitir la próxima versión de Microsoft Edge.
+
+> [!IMPORTANT]
+> Consulta la [entrada del blog](https://aka.ms/EdgeLegacyEOS) del equipo de producto e Microsoft Edge sobre la finalización del servicio de Microsoft Edge (versión anterior).
 
 > [!NOTE]
 > Este artículo se aplica al canal Estable de Microsoft Edge.
 
 ## Microsoft Edge y el ciclo de versión de Windows
 
-La próxima versión de Microsoft Edge ofrece funcionalidades de actualización más frecuentes y flexibles. Dado que las versiones del explorador no están unidas a las versiones principales de Windows, se realizarán cambios en el sistema operativo para garantizar que la próxima versión de Microsoft Edge se adapte perfectamente a Windows. Como resultado, las actualizaciones de funciones se publicarán en un ciclo de 6 semanas (aproximadamente). Las actualizaciones de seguridad y compatibilidad se enviarán según sea necesario.
+La próxima versión de Microsoft Edge ofrece funcionalidades de actualización más frecuentes y flexibles. Dado que las versiones del explorador no están unidas a las versiones principales de Windows, se realizarán cambios en el sistema operativo para garantizar que la próxima versión de Microsoft Edge se adapte perfectamente a Windows. Como resultado, las actualizaciones de características se publicarán en un ciclo de 6 semanas (aproximadamente). Las actualizaciones de seguridad y compatibilidad se publicarán según sea necesario.
 
 ## Actualizaciones y experiencia del usuario
 

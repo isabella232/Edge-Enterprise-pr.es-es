@@ -1,21 +1,21 @@
 ---
 title: Planear tu implementación de Microsoft Edge
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
-manager: saudm
-ms.date: 11/04/2020
+manager: srugh
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planear tu implementación de Microsoft Edge
-ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: 1b56d9874550c2002cec0577a53a3bf5766e2805
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155260"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313880"
 ---
 # Planear tu implementación de Microsoft Edge
 
@@ -55,8 +55,7 @@ Para empezar, define tu estado actual:
 Después de comprender el estado actual, puedes determinar los objetivos deseados para la implementación del explorador, teniendo en cuenta lo siguiente:
 
 - ¿Quieres [establecer Microsoft Edge como tu explorador predeterminado](https://docs.microsoft.com/DeployEdge/edge-default-browser)?
-- ¿Quieres ocultar la versión heredada de Microsoft Edge o quieres [dejarla disponible para los usuarios?](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-access-old-edge)?
-- ¿Cómo [configurará Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)?
+- ¿Cómo [configurarás Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)?
 - ¿Qué características son críticas para configurarlas como parte de tu implementación inicial?
 - ¿Cuál es el proceso para abordar los problemas de compatibilidad o configuración identificados?
 
@@ -211,4 +210,3 @@ Después de finalizar el piloto y actualizar el plan de implementación con las 
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Vídeo: Implementación de Microsoft Edge](microsoft-edge-video-deploy.md)
-

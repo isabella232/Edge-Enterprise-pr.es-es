@@ -3,19 +3,19 @@ title: Microsoft Edge y Protección de aplicaciones de Microsoft Defender
 ms.author: srugh
 author: dan-wesley
 manager: seanlyn
-ms.date: 10/12/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Compatibilidad de Microsoft Edge para la Protección de aplicaciones de Microsoft Defender
-ms.openlocfilehash: fcf9bb6e36ddd5e014bd8176643554bfe3ff8fd4
-ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
+ms.openlocfilehash: 751201192c3b4e69cc866f35e51a6db23b9972f9
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "11114368"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314593"
 ---
 # Compatibilidad de Microsoft Edge para la Protección de aplicaciones de Microsoft Defender
 
@@ -38,7 +38,10 @@ Diseñado para la protección de aplicaciones de Windows 10 y Microsoft Edge, ut
 
 El administrador de la empresa define el concepto de sitios de confianza, los recursos de la nube y las redes internas. Todo lo que no está en la lista de sitios de confianza se considera no confiable. Estos sitios están aislados de la red corporativa y de los datos del dispositivo del usuario.
 
-Para más información. consulte[¿Qué es la protección de aplicaciones y cómo funciona?](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work).
+Para más información:
+
+- vea nuestro vídeo [aislamiento del explorador Microsoft Edge usando Protección de aplicaciones](microsoft-edge-video-security-application-guard.md)
+- consulte [Qué es la Protección de aplicaciones y cómo funciona?](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work)
 
 La siguiente captura de pantalla muestra un ejemplo del mensaje de protección de aplicaciones en donde muestra que el usuario está navegando en un espacio seguro.
 

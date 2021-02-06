@@ -3,23 +3,23 @@ title: Soporte y configuración de identidad de Microsoft Edge
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Soporte y configuración de identidad de Microsoft Edge
-ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
-ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
+ms.openlocfilehash: 05dc0fabe212f31fe9207c72d097913d5765915f
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "11201297"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314613"
 ---
 # Soporte y configuración de identidad de Microsoft Edge
 
-En este artículo se describe cómo Microsoft Edge usa la identidad para admitir funciones como la sincronización y el inicio de sesión único (SSO). Microsoft Edge admite el inicio de sesión con Active Directory Domain Services (AD DS), Azure Active Directory (Azure AD) y cuentas Microsoft (MSA). Actualmente, Microsoft Edge solo es compatible con cuentas de Azure Active Directory (Azure AD) que pertenecen a la nube global o a la nube independiente de GCC. Estamos trabajando para agregar compatibilidad con otras nubes independientes. 
+En este artículo se describe cómo Microsoft Edge usa la identidad para admitir funciones como la sincronización y el inicio de sesión único (SSO). Microsoft Edge admite el inicio de sesión con Active Directory Domain Services (AD DS), Azure Active Directory (Azure AD) y cuentas Microsoft (MSA). Actualmente, Microsoft Edge solo es compatible con cuentas de Azure Active Directory (Azure AD) que pertenecen a la nube global o a la nube independiente de GCC. Estamos trabajando para agregar compatibilidad con otras nubes independientes.
 
 > [!NOTE]
 > Esto se aplica a Microsoft Edge, versión 77 o posterior.
@@ -28,7 +28,7 @@ En este artículo se describe cómo Microsoft Edge usa la identidad para admitir
 
 Microsoft Edge admite el inicio de sesión en un perfil de explorador con una cuenta de dominio, Azure AD o MSA. El tipo de cuenta que se usa para el inicio de sesión determina las funciones autenticadas que están disponibles para el usuario en Microsoft Edge. En la siguiente tabla se resume la compatibilidad de funciones para cada tipo de cuenta.
 
-|    | Azure AD Premium | Azure AD Free | AD DS local | MSA     |
+| Característica   | Azure AD Premium | Azure AD Free | AD DS local | MSA     |
 |----|------------------|---------------|----------------|---------|
 | Sincronización | Sí | No | No | Sí |
 | SSO con token de actualización principal | Sí | Sí | No | Sí |
@@ -51,7 +51,7 @@ De forma predeterminada, el usuario no podrá iniciar sesión automáticamente. 
 
 ### Inicio de sesión manual
 
-Si el usuario no inicia sesión automáticamente en Microsoft Edge, puede hacerlo manualmente durante la experiencia de primera ejecución, la configuración del explorador o abriendo el control flotante de identidad. 
+Si el usuario no inicia sesión automáticamente en Microsoft Edge, puede hacerlo manualmente durante la experiencia de primera ejecución, la configuración del explorador o abriendo el control flotante de identidad.
 
 ### Administrar el inicio de sesión del explorador
 
@@ -104,7 +104,7 @@ Si un usuario guarda las contraseñas en Microsoft Edge, puede habilitar una fun
 ## Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Página de aterrizaje de documentación de Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
+- [Vídeo: Microsoft Edge y la identidad](microsoft-edge-video-identity.md)
 - [Administración de identidades y acceso](https://www.microsoft.com/security/technology/identity-access-management)
 - [Plataforma de identidad](https://developer.microsoft.com/identity)
 - [Cuatro pasos para una sólida base de identidad con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/four-steps)
