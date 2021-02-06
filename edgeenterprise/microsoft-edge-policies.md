@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/27/2021
+ms.date: 02/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
-ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
+ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
+ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "11304733"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "11313428"
 ---
 # Microsoft Edge: directivas
 
@@ -33,9 +33,11 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 
 En la siguiente tabla, se muestran las nuevas directivas para esta actualización.
 
-| Nombre | Título |
+| Nombre| Título |
 |--|--|
-|[SmartActionsBlockList](#smartactionsblocklist)|Bloquear acciones inteligentes para una lista de servicios|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Autenticación de Windows Hello para HTTP habilitada|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Establece valores de configuración administrados para sitios web en orígenes específicos|
+
 
 ## Directivas disponibles
 
@@ -144,6 +146,7 @@ y sugerencias para los servicios Microsoft|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Deshabilitar la búsqueda CNAME al negociar la autenticación Kerberos|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Incluir un puerto no estándar en Kerberos SPN|
 |[NtlmV2Enabled](#ntlmv2enabled)|Controlar si la autenticación NTLMv2 está habilitada|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Autenticación de Windows Hello para HTTP habilitada|
 ### [*Configuración de pantalla completa*](#kiosk-mode-settings-policies)
 
 |Nombre de directiva|Título|
@@ -360,6 +363,7 @@ y sugerencias para los servicios Microsoft|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamiento de la redirección de intranet|
 |[IsolateOrigins](#isolateorigins)|Habilitar el aislamiento de sitio para determinados orígenes|
 |[LocalProvidersEnabled](#localprovidersenabled)|Permita sugerencias de proveedores locales.|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Establece valores de configuración administrados para sitios web en orígenes específicos|
 |[ManagedFavorites](#managedfavorites)|Configurar Favoritos|
 |[ManagedSearchEngines](#managedsearchengines)|Administrar motores de búsqueda|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Número máximo de conexiones simultáneas al servidor proxy|
@@ -412,7 +416,7 @@ y sugerencias para los servicios Microsoft|
 |[SpellcheckEnabled](#spellcheckenabled)|Habilite corrección ortográfica|
 |[SpellcheckLanguage](#spellchecklanguage)|Habilite idiomas de revisión ortográfica específicos|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Forzar deshabilitar idioma de revisión ortográfica|
-|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Permitir el tratamiento más estricto de contenido mixto (en desuso)|
+|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|Habilitar un tratamiento más estricto para el contenido mixto (obsoleto)|
 |[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|Suprimir la advertencia de SO no compatible|
 |[SyncDisabled](#syncdisabled)|Deshabilitar la sincronización de datos con servicios de sincronización de Microsoft|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|Configurar la lista de tipos que se excluyen de la sincronización|
@@ -770,7 +774,7 @@ Tenga en cuenta que no puede haber patrones de dirección URL conflictivos estab
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
 Para impedir que se eliminen las cookies al salir, configure la directiva [SaveCookiesOnExit](#savecookiesonexit) .
 
@@ -5157,6 +5161,59 @@ Si no configura esta directiva, NTLMv2 se habilitará de forma predeterminada.
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### WindowsHelloForHTTPAuthEnabled
+
+  #### Autenticación de Windows Hello para HTTP habilitada
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows desde la versión 90 o posterior
+
+  #### Descripción
+
+  Indica si se debe usar la interfaz de usuario de Credenciales de Windows para responder a los desafíos de autenticación NTLM y Negociar.
+
+Si deshabilita esta política, se utilizará una solicitud básica de nombre de usuario y contraseña para responder a los desafíos de NTLM y Negociar. Si habilita o no configura esta directiva, se usará la interfaz de usuario de Credenciales de Windows.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: sí
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: WindowsHelloForHTTPAuthEnabled
+  - Nombre de GP: Windows Hello para autenticación HTTP habilitada
+  - Ruta de acceso GP (obligatoria): Plantillas Administrativas/Microsoft Edge/autenticación HTTP
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Autenticación HTTP
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
+  - Nombre del valor: WindowsHelloForHTTPAuthEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ## Directivas de configuración de pantalla completa
 
   [Volver al principio](#microsoft-edge---policies)
@@ -5321,13 +5378,13 @@ Si deshabilita esta directiva, Microsoft Edge no se comunicará con Intune para 
   - Nombre único de GP: MAMEnabled
   - Nombre de GP: Administración de aplicaciones móviles habilitada
   - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Capacidad de administración
-  - Ruta de acceso de GP (recomendada): N/D
+  - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
   ##### Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendada): N/D
+  - Ruta de acceso (recomendado): N/D
   - Nombre del valor: MAMEnabled
   - Tipo de valor: REG_DWORD
 
@@ -6416,7 +6473,7 @@ Use la información anterior al configurar esta directiva.
   ##### Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendada): N/D
+  - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PrintingBackgroundGraphicsDefault
   - Tipo de valor: REG_SZ
 
@@ -7256,7 +7313,7 @@ Use la información anterior al configurar esta directiva.
 0x00000384
 ```
 
-  #### Información y configuración para Mac
+  #### Información y configuración de Mac
   
   - Nombre de la clave de preferencias: SleepingTabsTimeout
   - Valor de ejemplo:
@@ -10720,14 +10777,14 @@ Use la información anterior al configurar esta directiva.
 
   - Nombre único de GP: BrowserSignin
   - Nombre de GP: configuración del inicio de sesión en el explorador
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
   ##### Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendado): N/D
+  - Ruta de acceso (recomendada): N/D
   - Nombre del valor: BrowserSignin
   - Tipo de valor: REG_DWORD
 
@@ -16720,7 +16777,7 @@ Use la información anterior al configurar esta directiva.
 
   - Nombre único de GP: IntranetRedirectBehavior
   - Nombre de GP: comportamiento de redirección de intranet
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -16877,6 +16934,103 @@ Para finalizar la aplicación de esta directiva, es necesario que se reinicie el
   - Valor de ejemplo:
 ``` xml
 <false/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### ManagedConfigurationPerOrigin
+
+  #### Establece valores de configuración administrados para sitios web en orígenes específicos
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde 90 o posterior
+
+  #### Descripción
+
+  La configuración de esta política define el valor de retorno de la API de configuración administrada para un origen determinado.
+
+ La API de configuración administrada es una configuración de clave-valor a la que se puede acceder a través de la llamada javascript navigator.device.getManagedConfiguration(). Esta API solo está disponible para los orígenes que corresponden a aplicaciones web instaladas por la fuerza a través [de WebAppInstallForceList](#webappinstallforcelist).
+
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Diccionario
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: ManagedConfigurationPerOrigin
+  - Nombre de GP: establece los valores de configuración administrados para los sitios web en orígenes específicos
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: ManagedConfigurationPerOrigin
+  - Tipo de valor: REG_SZ
+
+  ##### Valor de ejemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
+  {
+    "managed_configuration_hash": "asd891jedasd12ue9h", 
+    "managed_configuration_url": "https://static.contoso.com/configuration.json", 
+    "origin": "https://www.contoso.com"
+  }, 
+  {
+    "managed_configuration_hash": "djio12easd89u12aws", 
+    "managed_configuration_url": "https://static.contoso.com/configuration2.json", 
+    "origin": "https://www.example.com"
+  }
+]
+```
+
+  ##### Valor de ejemplo de Compact:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [{"managed_configuration_hash": "asd891jedasd12ue9h", "managed_configuration_url": "https://static.contoso.com/configuration.json", "origin": "https://www.contoso.com"}, {"managed_configuration_hash": "djio12easd89u12aws", "managed_configuration_url": "https://static.contoso.com/configuration2.json", "origin": "https://www.example.com"}]
+  ```
+  
+
+  #### Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: ManagedConfigurationPerOrigin
+  - Valor de ejemplo:
+``` xml
+<key>ManagedConfigurationPerOrigin</key>
+<array>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>asd891jedasd12ue9h</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration.json</string>
+    <key>origin</key>
+    <string>https://www.contoso.com</string>
+  </dict>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>djio12easd89u12aws</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration2.json</string>
+    <key>origin</key>
+    <string>https://www.example.com</string>
+  </dict>
+</array>
 ```
   
 
@@ -19766,7 +19920,7 @@ Si no se configura esta directiva:
 
   - Nombre único de GP: ShowMicrosoftRewards
   - Nombre de GP: Mostrar las experiencias de Microsoft Rewards
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -19783,7 +19937,7 @@ Si no se configura esta directiva:
 0x00000000
 ```
 
-  #### Información y configuración para Mac
+  #### Información y configuración de Mac
   
   - Nombre de la clave de preferencias: ShowMicrosoftRewards
   - Valor de ejemplo:
@@ -20087,8 +20241,8 @@ Use la información anterior al configurar esta directiva.
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SmartActionsBlockList
-  - Nombre de GP: Bloquear acciones inteligentes para una lista de servicios
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Nombre de GP: bloquear acciones inteligentes para una lista de servicios
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -20371,17 +20525,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   ### StricterMixedContentTreatmentEnabled
 
-  #### Permitir el tratamiento más estricto de contenido mixto (en desuso)
+  #### Habilitar un tratamiento más estricto para el contenido mixto (obsoleto)
 
-  >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
+  >OBSOLETA: Esta directiva está obsoleta y no funciona después de Microsoft Edge 84.
   #### Versiones compatibles:
 
-  - En Windows y MacOS desde la versión 81 o posterior
+  - En Windows y macOS desde 81, hasta 84
 
   #### Descripción
 
-  Esta directiva está en desuso porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web cuando se ha comprobado que es incompatible con el tratamiento de contenido mixto más estricto. No funciona en la versión 85 de Microsoft Edge.
+  Esta política no funciona porque solo tenía la intención de ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web si se determina que es incompatible con un tratamiento de contenido mixto más estricto.
 
 Esta directiva controla el tratamiento para contenido mixto (contenido HTTP en sitios HTTPS) en el explorador.
 
@@ -20406,7 +20560,7 @@ Esta directiva no afecta otros tipos de contenido mixto que no sean audio, víde
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: StricterMixedContentTreatmentEnabled
-  - Nombre de DG: permitir el tratamiento más estricto de contenido mixto (en desuso)
+  - Nombre de GP: habilitar un tratamiento más estricto para el contenido mixto (obsoleto)
   - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -20735,7 +20889,7 @@ Esta Directiva no afecta a las conexiones basadas en QUIC. QUIC puede apagarse a
   ##### Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - Ruta de acceso (recomendado): N/D
+  - Ruta de acceso (recomendada): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
@@ -20868,7 +21022,7 @@ Esta directiva estará obsoleta en La versión 95 de Microsoft Edge.
   ##### Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendada): N/D
+  - Ruta de acceso (recomendado): N/D
   - Nombre del valor: TargetBlankImpliesNoOpener
   - Tipo de valor: REG_DWORD
 
@@ -21881,7 +22035,14 @@ Independientemente de si esta directiva está habilitada, los usuarios no podrá
 
   Configure esta directiva para especificar una lista de aplicaciones web que se instalan de forma silenciosa, sin interacción del usuario, y qué usuarios no pueden desinstalar o desactivar.
 
-Cada elemento de la lista es un objeto con un miembro obligatorio: url (la dirección URL de la aplicación web que se va a instalar) y 2 miembros opcionales: default_launch_container (especifica el modo de ventana en el que se abre la aplicación web: una pestaña nueva es el valor predeterminado) y create_desktop_shortcut (True si quiere crear accesos directos del escritorio de Windows y Linux).
+Cada elemento de lista de la directiva es un objeto con un miembro obligatorio: url (la dirección URL de la aplicación web que se va a instalar)
+
+y 3 miembros opcionales:
+- default_launch_container (especifica que el modo de ventana que la aplicación web abre con una nueva pestaña es la configuración predeterminada).
+
+- create_desktop_shortcut (True si quieres crear accesos directos de escritorio de Linux y Windows).
+
+- override_app_name (a partir de Microsoft Edge 89, permite invalidar el nombre de la aplicación si no es una aplicación web progresiva (PWA) o el nombre de la aplicación que se instala temporalmente si es una PWA, pero la autenticación es necesaria antes de que se pueda completar la instalación).
 
   #### Características admitidas:
 
@@ -21922,6 +22083,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21929,7 +22095,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Valor de ejemplo de Compact:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21953,6 +22119,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
@@ -22054,7 +22228,7 @@ Si establece esta directiva como falsa o no la establece, las características d
 
   - Nombre único de GP: WebComponentsV0Enabled
   - Nombre GP: vuelva a habilitar los componentes Web API V0 hasta M84 (obsoleto)
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
