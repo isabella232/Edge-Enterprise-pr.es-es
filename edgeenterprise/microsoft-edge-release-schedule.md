@@ -3,19 +3,19 @@ title: Programa de publicación de versiones de Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/03/2021
+ms.date: 02/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Programa de publicación de versiones de Microsoft Edge
-ms.openlocfilehash: ad85141b9dbcf80b40991f99f6854958542cd30c
-ms.sourcegitcommit: 61a61ed16b1b9c5ee700f952b241d9ca7802abbe
+ms.openlocfilehash: b5530cfd4c42d64d2737153aaf0e1c7d65fe1777
+ms.sourcegitcommit: f141a3b315244e93291ca30ed23741a1d84f0a73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "11312686"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "11324843"
 ---
 # Programa de publicación de versiones de Microsoft Edge
 
@@ -38,15 +38,14 @@ En la tabla siguiente solo se realiza un seguimiento de las versiones principale
 
 | Versión | Estado de la versión | Canal Beta<br>Semana de lanzamiento | Canal estable<br>Semana de lanzamiento |
 |---------|-----|------|--------|
-| 83 | Publicado<br>Versión | 22-abr-2020<br>[83.0.478.13](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-83047813-april-22) | 21-may-2020<br> [83.0.478.37](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-stable-channel#version-83047837-may-21) |
-| 84 | Publicado<br>Versión | 02-jun-2020<br>[84.0.522.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-84052211-june-2) | 16-jul-2020<br> [84.0.522.40](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-stable-channel#version-84052240-july-16) |
-| 85 | Publicado<br>Versión | 28-jul-2020<br>[85.0.564.18](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-85056418-july-28)  | 27-ago-2020<br>[85.0.564.41](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-85056441-august-27) |
 | 86 | Publicado<br>Versión | 09-sep-2020<br>[86.0.622.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-86062211-september-9) | 09-oct-2020<br>[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9) |
 | 87 | Publicado<br>Versión | 20-oct-2020<br>[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412--october-20) | 19-nov-2020<br>[87.0.664.41](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066441-november-19) |
 | **88** | Publicado<br>Versión | 09-dic-2020<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | **21-ene-2021**<br>**[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)**|
 | **89** | Publicado<br>Versión | **03-Feb-2021**<br>**[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3)** | Semana del 04-mar-2021 |
 | 90 | Versión de destino | Semana del 16-mar-2021 | Semana del 15-abr-2021 |
 | 91 | Versión de destino | Semana del 27-abr-2021 | Semana del 27-may-2021 |
+| 92 | Versión de destino | Semana de 08-jun-2021 | Semana del 22-jul-2021 |
+| 93 | Versión de destino | Semana del 03-ago-2021 | Semana del 02-sep-2021 |
 
 ## Proceso de publicación
 
