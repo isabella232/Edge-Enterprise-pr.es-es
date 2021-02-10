@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/03/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
-ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
+ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
+ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313428"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325900"
 ---
 # Microsoft Edge: directivas
 
@@ -33,10 +33,11 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 
 En la siguiente tabla, se muestran las nuevas directivas para esta actualización.
 
-| Nombre| Título |
+| Nombre | Título |
 |--|--|
-|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Autenticación de Windows Hello para HTTP habilitada|
-|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Establece valores de configuración administrados para sitios web en orígenes específicos|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Sincronización de favoritos de Protección de aplicaciones habilitada|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Administrar la función de archivos de Office QuickView en Microsoft Edge|
+
 
 
 ## Directivas disponibles
@@ -60,6 +61,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |Nombre de directiva|Título|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Contenedor proxy de la Protección de aplicaciones|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Sincronización de favoritos de Protección de aplicaciones habilitada|
 ### [*Transmitir*](#cast-policies)
 
 |Nombre de directiva|Título|
@@ -381,6 +383,7 @@ y sugerencias para los servicios Microsoft|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Habilitar contenido promocional de pestañas completas|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Pregunte dónde guardar los archivos descargados|
 |[QuicAllowed](#quicallowed)|Permitir protocolo QUIC|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Administrar la función de archivos de Office QuickView en Microsoft Edge|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|Evita la instalación del BHO para redirigir sitios incompatibles desde Internet Explorer a Microsoft Edge|
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Redirigir los sitios incompatibles de Internet Explorer a Microsoft Edge.|
 |[RelaunchNotification](#relaunchnotification)|Notifique a un usuario que es recomendable reiniciar el explorador, o es necesario para actualizaciones pendientes|
@@ -536,6 +539,63 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### ApplicationGuardFavoritesSyncEnabled
+
+  #### Sincronización de favoritos de Protección de aplicaciones habilitada
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows desde la versión 90 o posterior
+
+  #### Descripción
+
+  Esta directiva permite a los equipos o dispositivos con Microsoft Edge que tengan Protección de aplicaciones habilitada sincronizar los favoritos del host con el contenedor para que los favoritos coincidan.
+
+Si [ManagedFavorites](#managedfavorites) está configurado, esos favoritos también se sincronizarán con el contenedor.
+
+Si habilita esta directiva, se deshabilitará la edición de favoritos en el contenedor. Por lo tanto, los botones de Agregar favoritos y Agregar carpeta de favoritos se difuminarán en la interfaz de usuario del explorador del contenedor.
+
+Si deshabilita o no configura esta directiva, los favoritos del host no se compartirán con el contenedor.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: ApplicationGuardFastroSyncEnabled
+  - Nombre de GP: Sincronización de favoritos de Protección de aplicaciones habilitada
+  - Ruta de GP (obligatorio): Plantillas administrativas/Microsoft Edge/Configuración de la Protección de aplicaciones
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre de valor: ApplicationGuardFavoritesSyncEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
 
   
 
@@ -2719,7 +2779,7 @@ Si no establece esta directiva, se utilizará el valor predeterminado global par
 
   - Nombre único de GP: NotificationsBlockedForUrls
   - Nombre de GP: bloquear las notificaciones en sitios determinados
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge / Configuración de contenido
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Configuración de contenido
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -4019,7 +4079,7 @@ Use la información anterior al configurar esta directiva.
 "bing"
 ```
 
-  #### Información y configuración de Mac
+  #### Información y configuración para Mac
   
   - Nombre clave de la preferencia: NewTabPageSetFeedType
   - Valor de ejemplo:
@@ -5230,13 +5290,13 @@ Si deshabilita esta política, se utilizará una solicitud básica de nombre de 
 
   #### Descripción
 
-  Esta directiva solo se aplica en el modo de pantalla completa de Microsoft Edge al usar la experiencia de examen público.
+  Esta directiva solo se aplica en el modo de pantalla completa de Microsoft Edge al usar la experiencia de exploración pública.
 
-Si habilita esta Directiva, impedirá que los usuarios puedan cambiar la dirección URL en la barra de direcciones.
+Si deshabilita esta directiva o no la configura, los usuarios podrán cambiar la dirección URL en la barra de direcciones.
 
-Si deshabilita esta Directiva o no la configura, los usuarios podrán cambiar la dirección URL en la barra de direcciones.
+Si habilita esta directiva, impedirá que los usuarios puedan cambiar la dirección URL en la barra de direcciones.
 
-Para obtener información detallada sobre cómo configurar la pantalla completa, consulta [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+Para obtener información detallada sobre cómo configurar la pantalla completa, consulte [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
   #### Características admitidas:
 
@@ -8114,7 +8174,7 @@ Si no configura esta directiva, se utiliza la página de la nueva pestaña prede
 
 Si configura esta directiva*y* la directiva [NewTabPageSetFeedType](#newtabpagesetfeedtype), esta directiva tendrá prioridad.
 
-Si se proporciona una dirección URL incorrecta, se abrirán nuevas pestañas about://blank.
+Si se prefiere usar una pestaña en blanco, "about:blank" es la dirección URL correcta, en lugar de "about://blank".
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
@@ -10430,9 +10490,9 @@ Esta directiva solo está disponible para los SKUs K-12 identificados como inqui
 
 Por favor, vea[https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711) para obtener más información sobre esta directiva, o si se aplican las siguientes situaciones:
 
-* Tiene un inquilino de la UDE, pero la directiva no funciona.
+* Tiene un espacio empresarial de educación, pero la directiva no funciona.
 
-* En la lista blanca de direcciones IP se disponía de una experiencia de búsqueda gratis en anuncios.
+* Tenía su IP en la lista de permitidos para tener una experiencia de búsqueda sin anuncios.
 
 * Estaba experimentando una experiencia de búsqueda sin anuncios en Microsoft Edge (versión anterior) y desea actualizarse a la nueva versión de Microsoft Edge.
 
@@ -18282,6 +18342,68 @@ QUIC es un protocolo red de la capa de transporte que puede mejorar el rendimien
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### QuickViewOfficeFilesEnabled
+
+  #### Administrar la función de archivos de Office QuickView en Microsoft Edge
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde 90 o posterior
+
+  #### Descripción
+
+  Le permite establecer si los usuarios pueden ver archivos de Office en la Web que no están en OneDrive o SharePoint. (Por ejemplo: documentos de Word, presentaciones de PowerPoint y hojas de cálculo de Excel)
+
+Si habilita o no configura esta directiva, estos archivos se pueden ver en Microsoft Edge con el Visor de Office en lugar de descargarlos.
+
+Si deshabilita esta directiva, estos archivos se descargarán para que se puedan ver.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: QuickViewOfficeFilesEnabled
+  - Nombre de GP: Administrar la función de archivos de Office QuickView en Microsoft Edge
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: QuickViewOfficeFilesEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### Información y configuración de Mac
+  
+  - Nombre de clave de preferencia: QuickViewOfficeFilesEnabled
+  - Valor de ejemplo:
+``` xml
+<true/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### RedirectSitesFromInternetExplorerPreventBHOInstall
 
   #### Evita la instalación del BHO para redirigir sitios incompatibles desde Internet Explorer a Microsoft Edge
@@ -20042,8 +20164,8 @@ Si deshabilita esta configuración, los empleados no recibirán ninguna recomend
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ShowRecommendationsEnabled
-  - Nombre de GP: permitir recomendaciones y notificaciones promocionales de Microsoft Edge
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Nombre de GP: Permitir las recomendaciones y notificaciones promocionales de Microsoft Edge
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -20889,7 +21011,7 @@ Esta Directiva no afecta a las conexiones basadas en QUIC. QUIC puede apagarse a
   ##### Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - Ruta de acceso (recomendada): N/D
+  - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
@@ -22228,7 +22350,7 @@ Si establece esta directiva como falsa o no la establece, las características d
 
   - Nombre único de GP: WebComponentsV0Enabled
   - Nombre GP: vuelva a habilitar los componentes Web API V0 hasta M84 (obsoleto)
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -22775,7 +22897,7 @@ Si deshabilita o no configura esta Directiva, se usará la resolución de proxy 
   [Volver al principio](#microsoft-edge---policies)
 
 
-## Consulte también
+## Consulta también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
