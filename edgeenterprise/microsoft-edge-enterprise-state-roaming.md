@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge y Enterprise State Roaming
-ms.openlocfilehash: a759b1d9d4be8dced7bfcc2ef8d0f23b514f4be0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 6090ecfda2f792d49e452771943bc6348066a3d8
+ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981208"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "11328062"
 ---
 # Microsoft Edge y Enterprise State Roaming
 
@@ -63,7 +63,7 @@ Proporcionaremos control y visibilidad sobre quién sincroniza la configuración
 
 ### Administración
 
-Los administradores podrán controlar qué miembros de la organización pueden habilitar la sincronización. Consulta [Opciones de configuración para sincronización de Microsoft Edge](microsoft-edge-enterprise-sync.md#configuration-options-for-microsoft-edge-sync) y las [Directivas de grupo de sincronización](microsoft-edge-enterprise-sync.md#sync-group-policies). Además, los usuarios pueden activar o desactivar la sincronización para cada uno de sus dispositivos, así como alternar cada atributo de datos individualmente para la sincronización.
+Los administradores podrán controlar qué miembros de la organización pueden habilitar la sincronización. Consulta [Configurar la sincronización de Microsoft Edge](microsoft-edge-enterprise-sync.md#configure-microsoft-edge-sync) y las [Directivas de grupo de sincronización](microsoft-edge-enterprise-sync.md#sync-group-policies). Además, los usuarios pueden activar o desactivar la sincronización para cada uno de sus dispositivos, así como alternar cada atributo de datos individualmente para la sincronización.
 
 ### Administración de claves
 
