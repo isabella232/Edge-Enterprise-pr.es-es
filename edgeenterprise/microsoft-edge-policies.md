@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/09/2021
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
-ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
+ms.openlocfilehash: e293fc948625f2a36a94184f1e0502bb5e73f65a
+ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "11325900"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11340610"
 ---
 # Microsoft Edge: directivas
 
@@ -29,16 +29,15 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
-## Nuevas directivas
+## Directivas nuevas y en desuso
 
-En la siguiente tabla, se muestran las nuevas directivas para esta actualización.
+En la tabla siguiente se enumeran las directivas nuevas y en desuso para esta actualización.
 
 | Nombre | Título |
 |--|--|
-|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Sincronización de favoritos de Protección de aplicaciones habilitada|
-|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Administrar la función de archivos de Office QuickView en Microsoft Edge|
-
-
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Permitir que los usuarios continúen desde la página de advertencia HTTPS para determinados orígenes|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Habilitar oclusión de ventana|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar oclusión de ventana nativa (en desuso)|
 
 ## Directivas disponibles
 
@@ -371,7 +370,7 @@ y sugerencias para los servicios Microsoft|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Número máximo de conexiones simultáneas al servidor proxy|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Permitir que Google Cast se conecte para transmitir dispositivos en todas las direcciones IP|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Habilitar el uso y los informes de datos relacionados con bloqueos (obsoletos)|
-|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar oclusión de ventana nativa|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar oclusión de ventana nativa (en desuso)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Establecer un tiempo de espera de retardo en la navegación por la etiqueta de la lista de sitios de modo empresarial|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Habilitar predicción de red|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Configurar si un usuario siempre tiene un perfil predeterminado que inicia sesión automáticamente con su cuenta profesional o educativa|
@@ -395,7 +394,8 @@ y sugerencias para los servicios Microsoft|
 |[RoamingProfileLocation](#roamingprofilelocation)|Configurar el directorio de perfiles móviles|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Permitir el uso de copias móviles para datos de Perfil de Microsoft Edge|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Ampliar la configuración de contenido de Adobe Flash a todo el contenido (obsoleto)|
-|[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Permita que los usuarios continúen desde la página de advertencia HTTPS|
+|[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Permitir que los usuarios continúen desde la página de advertencia HTTPS|
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Permitir que los usuarios continúen desde la página de advertencia HTTPS para determinados orígenes|
 |[SSLVersionMin](#sslversionmin)|Versión de TLS mínima activada|
 |[SaveCookiesOnExit](#savecookiesonexit)|Guardar cookies cuando se cierra Microsoft Edge|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Deshabilitar la opción pada guardar el historial del explorador|
@@ -453,6 +453,7 @@ y sugerencias para los servicios Microsoft|
 |[WebWidgetAllowed](#webwidgetallowed)|Habilitar el widget web|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Permitir el widget web al arrancar Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Usar la resolución del proxy de Windows (en desuso)|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|Habilitar oclusión de ventana|
 
 
 
@@ -2779,7 +2780,7 @@ Si no establece esta directiva, se utilizará el valor predeterminado global par
 
   - Nombre único de GP: NotificationsBlockedForUrls
   - Nombre de GP: bloquear las notificaciones en sitios determinados
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Configuración de contenido
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge / Configuración de contenido
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -4079,7 +4080,7 @@ Use la información anterior al configurar esta directiva.
 "bing"
 ```
 
-  #### Información y configuración para Mac
+  #### Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageSetFeedType
   - Valor de ejemplo:
@@ -10837,14 +10838,14 @@ Use la información anterior al configurar esta directiva.
 
   - Nombre único de GP: BrowserSignin
   - Nombre de GP: configuración del inicio de sesión en el explorador
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
   ##### Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendada): N/D
+  - Ruta de acceso (recomendado): N/D
   - Nombre del valor: BrowserSignin
   - Tipo de valor: REG_DWORD
 
@@ -17591,9 +17592,9 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   ### NativeWindowOcclusionEnabled
 
-  #### Habilitar oclusión de ventana nativa
+  #### Habilitar oclusión de ventana nativa (en desuso)
 
-  
+  >EN DESUSO: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
   #### Versiones compatibles:
 
@@ -17601,13 +17602,15 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   #### Descripción
 
-  Habilita la oclusión de ventana nativa en Microsoft Edge.
+  Esta directiva está en desuso, use la directiva "[WindowOcclusionEnabled](#windowocclusionenabled)" en su lugar. No funciona en la versión 92 de Microsoft Edge.
+
+Habilita la oclusión de ventana nativa en Microsoft Edge.
 
 Si habilita esta configuración, para reducir el consumo de energía y de CPU, Microsoft Edge detectará cuando una ventana esté cubierta por otras ventanas, y suspenderá los píxeles de los trabajos de pintura.
 
 Si deshabilita esta configuración, Microsoft Edge no detectará cuando una ventana esté cubierta por otras ventanas.
 
-Si no se establece esta directiva, se habilitará la detección de ventanas ocultas.
+Si no se establece esta directiva, se habilitará la detección de oclusión.
 
   #### Características admitidas:
 
@@ -17624,8 +17627,8 @@ Si no se establece esta directiva, se habilitará la detección de ventanas ocul
   ##### Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NativeWindowOcclusionEnabled
-  - Nombre GP: habilitar oclusión de ventana nativa
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Nombre GP: Habilitar oclusión de ventana nativa (en desuso)
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -19144,6 +19147,77 @@ Si deshabilita esta directiva, se bloqueará a los usuarios para que no puedan h
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### SSLErrorOverrideAllowedForOrigins
+
+  #### Permitir que los usuarios continúen desde la página de advertencia HTTPS para determinados orígenes
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows y macOS desde 90 o posterior
+
+  #### Descripción
+
+  Microsoft Edge muestra una página de advertencia cuando los usuarios visitan sitios con errores de SSL.
+
+Si habilita o no configura la directiva [SSLErrorOverrideAllowed](#sslerroroverrideallowed), esta directiva no hace nada.
+
+Si deshabilita la directiva [SSLErrorOverrideAllowed](#sslerroroverrideallowed), configurar esta directiva le permite configurar una lista de patrones de origen para los sitios en los que los usuarios pueden seguir haciendo clic a través de las páginas de error SSL. Los usuarios no pueden hacer clic a través de páginas de errores SSL en orígenes que no están en esta lista.
+
+Si no configura esta directiva, la directiva [SSLErrorOverrideAllowed](#sslerroroverrideallowed) se aplicará para todos los sitios.
+
+Para obtener información detallada acerca de los patrones de origen válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva. Esta directiva solo coincide según el origen, por lo que cualquier ruta de acceso o consulta en el patrón de dirección URL se ignora.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Lista de cadenas
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: SSLErrorOverrideAllowedForOrigins
+  - Nombre de GP: Permitir que los usuarios continúen desde la página de advertencia HTTPS para determinados orígenes
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatorio): SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### Valor de ejemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: SSLErrorOverrideAllowedForOrigins
+  - Valor de ejemplo:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### SSLVersionMin
 
   #### Versión de TLS mínima activada
@@ -20042,7 +20116,7 @@ Si no se configura esta directiva:
 
   - Nombre único de GP: ShowMicrosoftRewards
   - Nombre de GP: Mostrar las experiencias de Microsoft Rewards
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -22162,9 +22236,9 @@ Cada elemento de lista de la directiva es un objeto con un miembro obligatorio: 
 y 3 miembros opcionales:
 - default_launch_container (especifica que el modo de ventana que la aplicación web abre con una nueva pestaña es la configuración predeterminada).
 
-- create_desktop_shortcut (True si quieres crear accesos directos de escritorio de Linux y Windows).
+- create_desktop_shortcut (True si quiere crear accesos directos de escritorio de Linux y Microsoft Windows).
 
-- override_app_name (a partir de Microsoft Edge 89, permite invalidar el nombre de la aplicación si no es una aplicación web progresiva (PWA) o el nombre de la aplicación que se instala temporalmente si es una PWA, pero la autenticación es necesaria antes de que se pueda completar la instalación).
+- fallback_app_name (a partir de Microsoft Edge 90, permite invalidar el nombre de la aplicación si no es una aplicación web progresiva (PWA) o el nombre de la aplicación que se instala temporalmente si es una PWA, pero la autenticación es necesaria antes de que se pueda completar la instalación).
 
   #### Características admitidas:
 
@@ -22208,7 +22282,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   }, 
   {
     "default_launch_container": "window", 
-    "override_app_name": "Editor", 
+    "fallback_app_name": "Editor", 
     "url": "https://app.contoso.com/editor"
   }
 ]
@@ -22217,7 +22291,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Valor de ejemplo de Compact:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -22245,7 +22319,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   <dict>
     <key>default_launch_container</key>
     <string>window</string>
-    <key>override_app_name</key>
+    <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
     <string>https://app.contoso.com/editor</string>
@@ -22896,8 +22970,65 @@ Si deshabilita o no configura esta Directiva, se usará la resolución de proxy 
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### WindowOcclusionEnabled
 
-## Consulta también
+  #### Habilitar oclusión de ventana
+
+  
+  
+  #### Versiones compatibles:
+
+  - En Windows desde la versión 89 o posterior
+
+  #### Descripción
+
+  Habilita la oclusión de ventana en Microsoft Edge.
+
+Si habilita esta configuración, para reducir el consumo de energía y de CPU, Microsoft Edge detectará cuando una ventana esté cubierta por otras ventanas, y suspenderá los píxeles de los trabajos de pintura.
+
+Si deshabilita esta configuración, Microsoft Edge no detectará cuando una ventana esté cubierta por otras ventanas.
+
+Si no se establece esta directiva, se habilitará la detección de ventanas ocultas.
+
+  #### Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### Tipo de datos:
+
+  - Booleano
+
+  #### Información y configuración de Windows
+
+  ##### Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: WindowOcclusionEnabled
+  - Nombre de GP: Habilitar oclusión de ventana
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: WindowOcclusionEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+
+## Consulte también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
