@@ -3,21 +3,21 @@ title: Prevención de pérdida de datos en Microsoft Edge
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Prevención de pérdida de datos (DLP) en Microsoft Edge
-ms.openlocfilehash: 8c7906f69f8d1161b47aa381bc04bcdaa70fe6cd
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: f25e1fa7a610645f6ca0ca10cbcfc69ae8689b7a
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314563"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11384995"
 ---
-# Prevención de pérdida de datos (DLP) en Microsoft Edge
+# <a name="data-loss-prevention-dlp-in-microsoft-edge"></a>Prevención de pérdida de datos (DLP) en Microsoft Edge
 
 La prevención de pérdida de datos (DLP) es un sistema de tecnologías que identifican y protegen los datos confidenciales de la empresa de la divulgación no autorizada. Con el fin de cumplir las normas de la industria y los estándares empresariales, las organizaciones deben proteger la información confidencial y evitar la divulgación no autorizada. La información confidencial incluye datos financieros o información de identificación personal (PII), como números de tarjeta de crédito, números de la seguridad social o registros de salud, entre muchas otras cosas.
 
@@ -27,7 +27,7 @@ Esta mezcla de las actividades de los usuarios también se distribuye en los dis
 
 Microsoft Edge es compatible de forma nativa con dos soluciones DLP distintas, DLP de Microsoft Endpoint y la protección de información de Windows (WIP).
 
-## Prevención de pérdida de datos de Microsoft Endpoint (DLP de Endpoint)
+## <a name="microsoft-endpoint-data-loss-prevention-endpoint-dlp"></a>Prevención de pérdida de datos de Microsoft Endpoint (DLP de Endpoint)
 
 DLP de Microsoft Endpoint es la siguiente generación de prevención de pérdida de datos con conceptos modernos como la protección centrada en los datos. Está integrado en Windows 10 y Microsoft Edge, de modo que no necesitará agentes ni complementos adicionales en el dispositivo.
 
@@ -51,15 +51,15 @@ Entre las actividades de usuario que se pueden auditar y administrar en los disp
 
 Para obtener información más detallada sobre las actividades de usuario que se pueden auditar y administrar, consulte [actividades de Endpoint que se pueden supervisar y tomar medidas en](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true).
 
-## Windows Information Protection
+## <a name="windows-information-protection"></a>Windows Information Protection
 
 Consulte [Soporte técnico para protección de la información de Windows](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection), donde se describe cómo Microsoft Edge es compatible con la protección de información de Windows (WIP). Puede obtener más información sobre los requisitos del sistema, las prestaciones y las características compatibles en las secciones siguientes:
 
-- [Requisitos del sistema](https://docs.microsoft.com/deployedge/:microsoft-edge-security-windows-information-protection#system-requirements)
+- [Requisitos del sistema](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)
 - [Beneficios de la Protección de la Información de Windows](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
 - [Las características WIP compatibles en Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Vídeo: prevención de pérdida de datos-Microsoft Edge](https://www.youtube.com/watch?v=dLD04U9eTqg)
