@@ -3,28 +3,28 @@ title: Compatibilidad con idiomas de Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 10/22/2019
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Compatibilidad con idiomas de Microsoft Edge
-ms.openlocfilehash: 60fff62335f5683f338c4a4b1b17ea54d40e19c6
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981176"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11384998"
 ---
-# Compatibilidad con idiomas de Microsoft Edge
+# <a name="microsoft-edge-language-support"></a>Compatibilidad con idiomas de Microsoft Edge
 
 En este artículo se muestra cómo puedes usar la configuración de Microsoft Edge para agregar un idioma compatible al explorador. Microsoft Edge admite 96 idiomas en Windows y 91 idiomas en macOS.
 
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 78 o posterior.
 
-## Agregar un idioma compatible a Microsoft Edge
+## <a name="add-a-supported-language-to-microsoft-edge"></a>Agregar un idioma compatible a Microsoft Edge
 
 Usa los siguientes pasos para ver la lista de idiomas admitidos y después agregar un idioma a Microsoft Edge.
 
@@ -34,7 +34,7 @@ Usa los siguientes pasos para ver la lista de idiomas admitidos y después agreg
 4. En la lista **Agregar idiomas**, puedes buscar un idioma (**Buscar idiomas**) o usar la barra de desplazamiento para encontrar el idioma que deseas agregar.
 5. Cuando encuentres el idioma, marca la casilla del idioma y, a continuación, haz clic en **Agregar**. El idioma que hayas agregado aparecerá en la parte inferior de la lista **Idiomas preferidos** que ya están establecidos para Microsoft Edge. Los sitios web que visites aparecerán en el primer idioma de la lista de idiomas admitidos.
 
-### Cambiar los idiomas preferidos
+### <a name="change-preferred-languages"></a>Cambiar los idiomas preferidos
 
 Puedes cambiar el orden de las preferencias de idioma, hacer que Microsoft Edge ofrezca traducciones y ver Microsoft Edge en un idioma específico.
 Para cambiar una opción de idioma, haz clic en los puntos suspensivos (**...**) junto al idioma para abrir "Más acciones".
@@ -51,14 +51,14 @@ Dependiendo del idioma, aparecerán una o varias de las siguientes acciones:
 > [!NOTE]
 > También puedes configurar las opciones de la revisión ortográfica (**Comprobar ortografía**)en función de la configuración de idioma que prefieras.
 
-## Extensión del traductor de idiomas extranjeros
+## <a name="foreign-language-translator-extension"></a>Extensión del traductor de idiomas extranjeros
 
 Además de usar un idioma extranjero en el navegador, puedes usar la extensión [Traductor para Microsoft Edge](https://www.microsoft.com/p/translator-for-microsoft-edge/9nblggh4n4n3) para traducir páginas web y selecciones de texto a idiomas extranjeros, para más de 60 idiomas.
 
 > [!NOTE]
 > Si la extensión de traductor no funciona después de la instalación, reinicia Microsoft Edge. Si la extensión sigue sin funcionar, facilita comentarios a través de Centro de opiniones.
 
-## Idiomas admitidos
+## <a name="supported-languages"></a>Idiomas admitidos
 
 En la tabla siguiente se enumeran los idiomas que admite Microsoft Edge.
 
@@ -71,23 +71,18 @@ En la tabla siguiente se enumeran los idiomas que admite Microsoft Edge.
 |                 Albano                           |                 Albania                 |     sq         |
 |            Amárico                                 |                Etiopía                 |     am         |
 |               Árabe                               |              Arabia Saudí               |     ar         |
-|               Armenio                             |              Armenia                    |      hy        |
 |               Asamés                             |                  India                  |     as         |
 |          Azerbaiyano                               |               Azerbaiyano, latino         |    az          |
-|                   Bangla                           |              Bangladesh*                |     bn         |
-|                                                    |                  India*                 |     bn-IN      |
+|                   Bangla                           |              India*                     |     bn-IN      |
 |                  Euskera                            |                  Euskera                 |     eu         |
-|                   Bielorruso                       |                  Belarús                |     be         |
 |              Bosnio                               |       Bosnia y Herzegovina, latino     |       bs       |
 |                Búlgaro                           |                Bulgaria                 |     bg         |
 |                 Catalán                            |                Catalán                  |     ca         |
-|                Cheroqui                            |                   Cheroqui              |      chr       |
 |            Chino                                 |              China, simplificado          |     zh-CN      |
 |                                                    |             Taiwán, tradicional         |     zh-TW      |
 |                 Croata                           |                 Croacia                 |     hr         |
 |                 Checo                              |             República Checa              |     cs         |
 |                  Danés                            |                 Dinamarca                 |     da         |
-|                   Dari                             |                  Afganistán*           |     prs        |
 |                Neerlandés                               |               Países Bajos               |     nl         |
 |              Inglés                               |             Reino Unido              |     en-GB      |
 |                                                    |              Estados Unidos              |     en         |
@@ -112,10 +107,8 @@ En la tabla siguiente se enumeran los idiomas que admite Microsoft Edge.
 |                      Kannada                       |                  India                  |     kn         |
 |                Kazajo                              |               Kazajistán                |     kk         |
 |                  Khmer                             |                Camboya                 |     km         |
-|                   Kiswahili                        |                    Kenia                |     sw         |
 |                      Konkani                       |                  India                  |     kok        |
 |                   Coreano                           |                  Corea                  |     ko         |
-|                    Kirguís                          |              Kirguistán                 |     ky         |
 |                     Lao                            |               R.D.P. de Laos               |     lo         |
 |                  Letón                           |                 Letonia                  |     lv         |
 |               Lituano                           |                Lituania                |     lt         |
@@ -126,7 +119,6 @@ En la tabla siguiente se enumeran los idiomas que admite Microsoft Edge.
 |               Maltés                              |                  Malta                  |     mt         |
 |          Maorí                                     |               Nueva Zelanda               |     mi         |
 |               Marathi                              |                  India                  |     mr         |
-|                Mongol                           |           Mongolia, cirílico            |     mn         |
 |                Nepalí                              |               Nepal                     |     ne         |
 |             Noruego                              |                 Noruega, Bokmål          |     nb         |
 |                                                    |                 Noruega, Nynorsk         |     nn         |
@@ -143,8 +135,6 @@ En la tabla siguiente se enumeran los idiomas que admite Microsoft Edge.
 |            Serbio                                 |    Bosnia y Herzegovina, cirílico*    |   sr-Cyrl-BA   |
 |                                                    |                 Serbia, cirílico        |   sr-Cyrl-RS   |
 |                                                    |                 Serbia, latino           |   sr-Latn-RS   |
-|                   Sindhi                           |               Pakistán                  |      sd        |
-|                 Sinhala                            |           Sri Lanka                     |      si        |
 |                 Eslovaco                             |                Eslovaquia                 |        sk      |
 |                Esloveno                           |                Eslovenia                 |        sl      |
 |              Español                               |                 México                  |     es-MX      |
@@ -155,18 +145,16 @@ En la tabla siguiente se enumeran los idiomas que admite Microsoft Edge.
 |                Telugu                              |                  India                  |     te         |
 |                  Tailandés                              |                Tailandia                 |     th         |
 |                  Turco                           |                 Turquía                  |     tr         |
-|                  Turcomano                           |         Turkmenistán                    |      tk        |
 |                Ucraniano                           |                 Ucrania                 |     uk         |
 |             Urdu                                   |       República Islámica de Pakistán      |     ur         |
 |              Uigur                                |                   República Popular China                   |     ug         |
-|              Uzbeko                                 |         Uzbekistán, latino               |   uz-Latn      |
 |               Valenciano                            |                  España*                 | ca-Es-VALENCIA |
 |            Vietnamita                              |                 Vietnam                 |     vi         |
 |            Galés                                   |             Reino Unido              |     cy         |
 
 ---
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 
 - [Documentación de Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
