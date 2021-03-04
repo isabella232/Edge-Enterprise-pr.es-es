@@ -3,21 +3,21 @@ title: Lector de PDF en Microsoft Edge
 ms.author: adigan
 author: dan-wesley
 manager: balajek
-ms.date: 01/21/2021
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Obtenga más información sobre el lector de PDF en Microsoft Edge.
-ms.openlocfilehash: d4d9d3efa063b9b6981d5c7cd4bc69968b56448b
-ms.sourcegitcommit: f0f250190fc09964175778338a177f1240946b98
+ms.openlocfilehash: d84b838556ed10951d7a7a3c6e5085b7e32c286c
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297249"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11385038"
 ---
-# Lector de PDF en Microsoft Edge
+# <a name="pdf-reader-in-microsoft-edge"></a>Lector de PDF en Microsoft Edge
 
 Los archivos PDF forman una gran parte de nuestra vida diaria. Se incluyen en forma de contratos y acuerdos, boletines, formularios, artículos de investigación, currículos, etc. Estos archivos destacan la necesidad de un lector de PDF fiable, seguro y de gran capacidad que pueda ser adoptado por las empresas.
 
@@ -26,7 +26,7 @@ Microsoft Edge incorpora un lector de PDF integrado que le permite abrir archivo
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
-## Requisitos previos, soporte técnico y restricciones
+## <a name="prerequisites-support-and-constraints"></a>Requisitos previos, soporte técnico y restricciones
 
 En la tabla siguiente se muestran los canales y versiones de Microsoft Edge compatibles con la característica lector de PDF.
 
@@ -46,50 +46,50 @@ En la tabla siguiente se muestran los canales y versiones de Microsoft Edge comp
 |  Ver archivos protegidos de Information Rights Management (IRM)  | 83.0.478.37            |
 | Ver y validar firmas digitales | Disponible en los canales Canary y Dev. En el que se trabaja activamente. |
 
-### Restricciones
+### <a name="constraints"></a>Restricciones
 
 Tenga en cuenta las siguientes restricciones del lector de PDF actual:
 
 -  La arquitectura de formularios XML (XFA) es un formato heredado de formularios que no es compatible con Microsoft Edge.
 -  La documentación relacionada con los escenarios de accesibilidad que actualmente no son compatibles se puede encontrar en el blog [Informes de conformidad de accesibilidad de Microsoft](https://cloudblogs.microsoft.com/industry-blog/government/2018/09/11/accessibility-conformance-reports/).
 
-## Características
+## <a name="features"></a>Características
 
 El lector de PDF, integrado en Microsoft Edge, incluye las características básicas de lectura y navegación, como Zoom, Girar, Ajustar a página/ancho, saltar a la página y buscar, entre otras. Se puede acceder a ellos a través de una barra de herramientas anclada en la parte superior del contenido PDF. En esta sección se proporciona información general sobre algunas funciones importantes. La siguiente captura de pantalla muestra la barra de herramientas del lector de PDF.
 
 ![Barra de herramientas lector de PDF](media/microsoft-edge-pdf/pdf-reader-toolbar.png)
 
-### Tabla de contenido
+### <a name="table-of-contents"></a>Tabla de contenido
 
 La tabla de contenido permite a los usuarios navegar fácilmente por documentos PDF que tienen una tabla de contenido. Cuando un usuario hace clic en el icono Tabla de contenido, se muestra un panel de navegación que muestra una lista de las secciones y subsecciones etiquetadas en el documento PDF. A continuación, el usuario puede hacer clic en cualquiera de las etiquetas del panel para navegar a esa sección del documento. El panel permanece abierto durante el tiempo que sea necesario y se puede cerrar cuando el usuario desea volver a leer el documento. La siguiente captura de pantalla muestra el panel de navegación de un documento abierto.
 
 ![Navegación del lector de PDF con tabla de contenido](media/microsoft-edge-pdf/pdf-reader-toc.png)
 
-### Vista de página
+### <a name="page-view"></a>Vista de página
 
 Microsoft Edge admite diferentes vistas para documentos PDF en nuestros canales Dev y Canary. Los usuarios pueden cambiar el diseño de un documento de una vista de página única a dos páginas que se muestran en paralelo. Para cambiar la forma en que se está visualizando el documento PDF, los usuarios pueden hacer clic en el botón Vista de página de la barra de herramientas de PDF y, a continuación, elegir cualquiera de las vistas que quieran usar. La vista de dos páginas se muestra en la siguiente captura de pantalla.
 
 ![Lector de PDF con dos vistas de página del documento.](media/microsoft-edge-pdf/pdf-reader-page-view.png)
 
-### Exploración del modo de cotejo
+### <a name="caret-mode-browsing"></a>Exploración del modo de cotejo
 
 La exploración de modo cotejo está disponible para los archivos PDF abiertos en Microsoft Edge, lo que significa que los usuarios pueden interactuar con archivos PDF con el teclado. Si un usuario presiona la tecla F7 en cualquier parte del explorador, se le preguntará si se debe desactivar la exploración de la ventana. Si está habilitada, la exploración de la característica de cotejo se encuentra disponible para cualquier contenido abierto en el explorador, ya sean archivos PDF o páginas web. Cuando un usuario presiona F7 de nuevo, se desactivará la exploración de modo cotejo. Cuando la exploración modo cotejo está activa y el foco está en el contenido, los usuarios verán un cursor parpadeante en el archivo PDF. El cotejo también se puede usar para desplazarse por el archivo o para seleccionar texto presionando Mayús mientras mueve el cursor. Esta capacidad permite a los usuarios crear fácilmente elementos como resaltados o interactuar con elementos como vínculos, campos de formulario con el teclado. La siguiente captura de pantalla muestra el menú emergente para activar la exploración en modo de cotejo.
 
 ![Menú lector de PDF para la exploración del modo cotejo](media/microsoft-edge-pdf/pdf-reader-caret-mode.png)
 
-### Entrada manuscrita
+### <a name="inking"></a>Entrada manuscrita
 
 Las entradas manuscritas en archivos PDF son útiles para tomar notas rápidas para facilitar referencias, firmar o rellenar formularios PDF. Esta función ya está disponible en Microsoft Edge. Además de los archivos PDF de entrada manuscrita cuando es necesario, puede usar el color y el ancho del trazo para ofrecer atención a las distintas partes del archivo PDF. La siguiente captura de pantalla muestra cómo un usuario puede Agregar entradas manuscritas a una página PDF.
 
 ![Agregar la página de entrada manuscrita al pdf](media/microsoft-edge-pdf/pdf-reader-inking.png)
 
-### Resaltar
+### <a name="highlight"></a>Resaltar
 
 Lector de PDF en Microsoft Edge tiene la compatibilidad para agregar y editar los puntos destacados. Para crear un resaltado, el usuario solo tiene que seleccionar el texto, haga clic con el botón derecho en él y seleccione iluminado en el menú y elija el color que desee. Los resaltados también se pueden crear con un lápiz o un teclado. La siguiente captura de pantalla muestra las opciones de resaltado disponibles.
 
 ![Use la opción resaltar del lector de PDF](media/microsoft-edge-pdf/pdf-reader-highlight.png)
 
-### Notas de texto
+### <a name="text-notes"></a>Notas de texto
 
 Al leer un archivo PDF, las notas de texto se pueden agregar al texto del archivo para anotar ideas para facilitar la referencia más adelante.
 
@@ -101,13 +101,13 @@ La siguiente captura de pantalla muestra una nota que se agrega al texto resalta
 
 ![Lector de PDF agrega nota de texto al documento.](media/microsoft-edge-pdf/pdf-reader-text-note.png)
 
-### Leer en voz alta
+### <a name="read-aloud"></a>Leer en voz alta
 
 Leer en voz alta para PDF agrega la comodidad de escuchar contenido PDF mientras se llevan a cabo otras tareas que pueden ser importantes para los usuarios. También ayuda a que los estudiantes se centren en el contenido, lo que facilita mucho más el aprendizaje. La siguiente captura de pantalla muestra un ejemplo de lectura en voz alta. El resaltado muestra el texto que se está leyendo actualmente.
 
 ![Usar la opción de resaltado para Leer en voz alta en el lector de PDF](media/microsoft-edge-pdf/pdf-reader-read-aloud-example.png)
 
-### Documentos PDF protegidos
+### <a name="protected-pdfs"></a>Documentos PDF protegidos
 
 [ Microsoft Information Protection (MIP)](https://docs.microsoft.com/microsoft-365/compliance/protect-information?view=o365-worldwide&preserve-view=true) permite que los usuarios colaboren con otras personas con seguridad, a la vez que se respetan las directivas de cumplimiento normativo de la organización. Una vez que un archivo está protegido, las acciones que los usuarios pueden llevar a cabo están determinadas por los permisos que tienen asignados.
 
@@ -126,29 +126,29 @@ Si el perfil con el que el usuario ha iniciado sesión en Microsoft Edge tiene a
 
 ![Preguntar si se guarda la página PDF de SharePoint protegida por MIP](media/microsoft-edge-pdf/pdf-reader-sharepoint-irm.png)
 
-### Ver y validar firmas digitales basadas en certificados
+### <a name="view-and-validate-certificate-based-digital-signatures"></a>Ver y validar firmas digitales basadas en certificados
 
 En este mundo digital, es importante establecer la autenticidad y la propiedad del contenido del documento. Las firmas digitales basadas en certificados se usan habitualmente en documentos PDF para garantizar que el contenido del documento es el mismo que el autor quería que era y que no se ha cambiado. Con Microsoft Edge, puede ver y validar firmas digitales de certificado en archivos PDF.
 
 Estamos trabajando activamente para mejorar el soporte para abordar más escenarios y esperamos recibir comentarios sobre el mismo.
 
-## Accesibilidad
+## <a name="accessibility"></a>Accesibilidad
 
 El lector de PDF es compatible con la accesibilidad de teclado, el modo de contraste alto y la compatibilidad con lectores de pantalla en dispositivos Windows y Mac OS.
 
-### Accesibilidad de teclado
+### <a name="keyboard-accessibility"></a>Accesibilidad de teclado
 
 Los usuarios pueden usar el teclado para desplazarse por las distintas partes del documento con las que un usuario puede interactuar, como campos de formulario y resaltados. Los usuarios también pueden usar el modo de cotejo para navegar e interactuar con los archivos PDF con el teclado.
 
-### Modo de contraste alto
+### <a name="high-contrast-mode"></a>Modo de contraste alto
 
 El lector de PDF usará la configuración definida en el nivel de sistema operativo para representar el contenido de PDF en el modo de contraste alto.
 
-### Compatibilidad con lector de pantalla
+### <a name="screen-reader-support"></a>Compatibilidad con lector de pantalla
 
 Los usuarios pueden navegar y leer archivos PDF usando lectores de pantalla en computadoras Windows y Mac.
 
-## Seguridad y confiabilidad
+## <a name="security-and-reliability"></a>Seguridad y confiabilidad
 
 La seguridad se encuentra entre los principios más importantes para cualquier organización. La seguridad del lector de PDF es una parte integral del diseño de seguridad de Microsoft Edge. Dos de las características de seguridad más importantes desde el punto de vista del lector de PDF, dos características de seguridad importantes son el aislamiento de procesos y la protección de Protección de aplicaciones de Microsoft Defender (protección de aplicaciones).
 
@@ -157,24 +157,24 @@ La seguridad se encuentra entre los principios más importantes para cualquier o
 - Protección de aplicaciones. Con Protección de aplicaciones, los administradores pueden configurar una lista de sitios de confianza para su organización. Si los usuarios abren otros sitios, se abren en una ventana de Protección de la aplicación independiente que se ejecuta en su propio contenedor. El contenedor ayuda a proteger la red corporativa y cualquier dato del ordenador del usuario para que no se vea comprometido.<br><br>
 Esta protección también se aplica a todos los archivos PDF en línea que se vean. Además, todos los archivos PDF que se descargan desde una ventana de Protección de aplicaciones se almacenan y, cuando es necesario, se vuelven a abrir en el contenedor. Esto ayuda a mantener la seguridad de su entorno, no solo cuando se descarga el archivo, sino durante todo su ciclo de vida. Para obtener más información, vea [Protección de aplicaciones](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-defender-application-guard).
 
-### Confiabilidad
+### <a name="reliability"></a>Confiabilidad
 
 Dado que Microsoft Edge está basado en Chromium, los usuarios pueden esperar el mismo nivel de confiabilidad que están acostumbrados a ver en otros exploradores basados en Chromium.
 
-## Implementación y actualización del lector de PDF
+## <a name="deploy-and-update-pdf-reader"></a>Implementación y actualización del lector de PDF
 
 Se implementará el lector de PDF y se actualizará con el resto del explorador Microsoft Edge. Para más información sobre la implementación de Microsoft Edge, vea el vídeo [Implementar Microsoft Edge en cientos o miles de dispositivos](microsoft-edge-video-deploy.md). También puede encontrar más información sobre la implementación en la página de aterrizaje de [Documentación de Microsoft Edge](https://docs.microsoft.com/DeployEdge/).
 
 > [!TIP]
 > Puede hacer de Microsoft Edge el lector de PDF predeterminado de su organización. Para ello, [siga estos pasos](https://docs.microsoft.com/deployedge/edge-default-browser).
 
-## Plan de desarrollo y comentarios
+## <a name="roadmap-and-feedback"></a>Plan de desarrollo y comentarios
 
 La guía básica para el lector de PDF en Microsoft Edge está disponible [aquí.](https://techcommunity.microsoft.com/t5/articles/roadmap-for-pdf-reader-in-microsoft-edge/m-p/1467667)
 
-Buscamos constantemente su opinión sobre las características que le parecen importantes. No dude en enviarnos sus comentarios a través de [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/) y en [Foro de Insider de Microsoft Edge](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider).
+Buscamos constantemente su opinión sobre las características que le parecen importantes. No dude en enviarnos comentarios a través del foro [de la aplicación de Insider](https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider) Microsoft Edge.
 
-## Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Plan de desarrollo de Microsoft 365](https://www.microsoft.com/microsoft-365/roadmap)
