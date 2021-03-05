@@ -1,34 +1,51 @@
 ---
-ms.openlocfilehash: 9e1442968848c6213ad629be126b8e3fc8c805d2
-ms.sourcegitcommit: a5432605280b1a634fdaf31b21b55ba1e2818763
+ms.openlocfilehash: 629b50229375a73f7b79f1753cc99a32a043df5f
+ms.sourcegitcommit: 928714329d0b11575494f557498f69a8417a3289
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "11328339"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11385299"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 
-## Semana del 08 de febrero de 2021
+## <a name="week-of-february-22-2021"></a>Semana del 22 de febrero de 2021
+
+Sistema de publicación no disponible durante toda la semana. No se ha publicado nada.
+
+## <a name="week-of-february-15-2021"></a>Semana del 15 de febrero de 2021
+
 
 | Fecha de publicación |Título del tema | Cambiar |
 |------|------------|--------|
-| 8/2/2021 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Nota de actualización 89.0.774.18, característica Pestañas inactivas agregada.  | modificado |
-| 8/2/2021 | [Actualizaciones de contenido de Microsoft Edge](/DeployEdge/microsoft-edge-content-updates)<br>Anotar el contenido publicado la semana del 1 de febrero. | modificado |
-| 8/2/2021 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Correcciones en la versión secundaria 88.0.705.63. | modificado |
-| 9/2/2021 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Correcciones en la versión secundaria 89.0.774.23. | modificado |
-| 9/2/2021 | [Programación de publicación de versiones de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Corregir un vínculo roto en la nota de la versión. | modificado |
-| 9/2/2021 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Actualice la versión secundaria 88.0.705.63 para llamar a la seguridad esta vulnerabilidad de seguridad. | modificado |
-| 9/2/2021 | [Documentación de la directiva del explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Actualización y llamada a 2 nuevas directivas. | modificado |
-| 9/2/2021 | [Documentación de la directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies)<br>Actualización, sin cambios. | modificado |
-| 10/2/2021 | [Seguridad de Microsoft Edge para su empresa](/DeployEdge/ms-edge-security-for-business)<br>Agregue vínculos a los informes de NSS Labs sobre pruebas de malware y suplantación de identidad (phishing).| modificado |
-| 10/2/2021 | [Programación de publicación de versiones de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Recortar tabla, eliminar las 3 filas más antiguas y agregar 2 nuevas para futuras versiones. | modificado |
-| 11/2/2021 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Correcciones en la versión secundaria 88.0.705.68. | modificado |
-| 12/2/2021 | [Sincronización local para usuarios de Active Directory (AD)](/DeployEdge/microsoft-edge-on-premises-sync)<br>Clarificación: cómo funciona la sincronización, el perfil asociado con AD y la directiva SyncDisabled. | modificado |
-| 12/2/2021 | [Microsoft Edge y Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming)<br>Actualización con pequeños cambios de palabras para corregir errores tipográficos. | modificado |
-| 12/2/2021 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Correcciones en la versión secundaria 89.0.774.27. | modificado |
+| 15-2-2021 | [Actualizaciones de contenido de Microsoft Edge](/DeployEdge/microsoft-edge-content-updates)<br>Anotar el contenido publicado la semana del 8 de febrero. | modificado |
+| 17-2-2021 | [Documentación de las políticas del explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Actualizar la documentación de referencia de las políticas del explorador, que sustituye a las directivas nuevas y en desuso. | modificado |
+| 17-2-2021 | [Documentación de la directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies)<br>Actualización automática, ningún cambio en el contenido. | modificado |
+| 17-2-2021 | [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Actualización de seguridad para la versión menor 88.0.705.74. | modificado |
+| 17-2-2021 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Actualizado para reflejar la actualización de seguridad para la versión secundaria estable 88.0.705.74. | modificado |
 
 
-## Semana del 01 de febrero de 2021
+## <a name="week-of-february-08-2021"></a>Semana del 08 de febrero de 2021
+
+
+| Fecha de publicación |Título del tema | Cambiar |
+|------|------------|--------|
+| 8/2/2021 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
+| 8/2/2021 | [Actualizaciones de contenido de Microsoft Edge](/DeployEdge/microsoft-edge-content-updates) | modificado |
+| 8/2/2021 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
+| 9/2/2021 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
+| 9/2/2021 | [Programación de publicación de versiones de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule) | modificado |
+| 9/2/2021 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
+| 9/2/2021 | [Documentación de la directiva del explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies) | modificado |
+| 9/2/2021 | [Documentación de la directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies) | modificado |
+| 10/2/2021 | [Seguridad de Microsoft Edge para su empresa](/DeployEdge/ms-edge-security-for-business) | modificado |
+| 10/2/2021 | [Programación de publicación de versiones de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule) | modificado |
+| 11/2/2021 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
+| 12/2/2021 | [Sincronización local para usuarios de Active Directory (AD)](/DeployEdge/microsoft-edge-on-premises-sync) | modificado |
+| 12/2/2021 | [Microsoft Edge y Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming) | modificado |
+| 12/2/2021 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
+
+
+## <a name="week-of-february-01-2021"></a>Semana del 01 de febrero de 2021
 
 
 | Fecha de publicación |Título del tema | Cambiar |
@@ -71,7 +88,7 @@ ms.locfileid: "11328339"
 | 5 de febrero de 2021 | [Seguridad de Microsoft Edge para su empresa](/DeployEdge/ms-edge-security-for-business) | modificado |
 
 
-## Semana del 25 de enero de 2021
+## <a name="week-of-january-25-2021"></a>Semana del 25 de enero de 2021
 
 
 | Fecha de publicación |Título del tema | Cambiar |
@@ -86,7 +103,7 @@ ms.locfileid: "11328339"
 | 29/01/2021 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
 
 
-## Semana del 18 de enero de 2021
+## <a name="week-of-january-18-2021"></a>Semana del 18 de enero de 2021
 
 
 | Fecha de publicación |Título del tema | Cambiar |
@@ -103,61 +120,3 @@ ms.locfileid: "11328339"
 | 19/1/2021 | [Actualizaciones de contenido de Microsoft Edge](/DeployEdge/microsoft-edge-content-updates) | modificado |
 | 22/1/2021 | [Configurar el modo de pantalla completa en Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode) | modificado |
 | 22/1/2021 | [Configurar y solucionar problemas de sincronización de Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-sync) | modificado |
-
-
-## Semana del 21 de diciembre de 2020
-
-
-| Fecha de publicación |Título del tema | Cambiar |
-|------|------------|--------|
-| 21/12/2020 | [Compartir cookies de Microsoft Edge a Internet Explorer](/DeployEdge/edge-ie-mode-add-guidance-cookieshare) | modificado |
-| 21/12/2020 | [Asociar extensiones de archivo con el modo Internet Explorer](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations) | modificado |
-| 21/12/2020 | [Preguntas más frecuentes sobre el modo IE](/DeployEdge/edge-ie-mode-faq) | modificado |
-| 21/12/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
-
-
-## Semana del 4 de enero de 2021
-
-
-| Fecha de publicación |Título del tema | Cambiar |
-|------|------------|--------|
-| 1/7/2021 | [Documentación de la directiva del explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies) | modificado |
-| 1/7/2021 | [Documentación de la directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies) | modificado |
-| 1/8/2021 | [Notas de la versión para las actualizaciones de seguridad de Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security) | modificado |
-| 1/8/2021 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
-
-
-## Semana del 11 de enero de 2021
-
-
-| Fecha de publicación |Título del tema | Cambiar |
-|------|------------|--------|
-| 1/11/2021 | [Actualizaciones de contenido de Microsoft Edge](/DeployEdge/microsoft-edge-content-updates) | modificado |
-| 1/11/2021 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
-| 1/13/2021 | [Programación de publicación de versiones de Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule) | modificado |
-| 1/13/2021 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
-| 1/13/2021 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
-| 1/13/2021 | [Documentación de Microsoft Edge Enterprise](/DeployEdge/index) | modificado |
-| 1/13/2021 | [Implementación de Microsoft Edge en cientos o miles de dispositivos](/DeployEdge/microsoft-edge-video-deploy) | modificado |
-| 1/13/2021 | [Microsoft Edge y Búsqueda de Microsoft](/DeployEdge/microsoft-edge-video-search) | modificado |
-| 1/13/2021 | [Aislamiento del explorador Microsoft Edge usando Protección de aplicaciones](/DeployEdge/microsoft-edge-video-security-application-guard) | modificado |
-| 1/13/2021 | [Seguridad, compatibilidad y capacidad de administración de Microsoft Edge](/DeployEdge/microsoft-edge-video-security-compatibility-manageability) | modificado |
-| 1/13/2021 | [Microsoft Edge y prevención de pérdida de datos](/DeployEdge/microsoft-edge-video-security-dlp) | modificado |
-| 1/14/2021 | [Configurar y solucionar problemas de sincronización de Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-sync) | modificado |
-| 1/15/2021 | [Documentación de la directiva del explorador Microsoft Edge](/DeployEdge/microsoft-edge-policies) | modificado |
-| 1/15/2021 | [Documentación de la directiva de WebView2 de Microsoft Edge](/DeployEdge/microsoft-edge-webview-policies) | modificado |
-| 1/15/2021 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
-
-
-## Semana del 14 de diciembre de 2020
-
-
-| Fecha de publicación |Título del tema | Cambiar |
-|------|------------|--------|
-| 15/12/2020 | Preguntas frecuentes sobre Microsoft Edge en la empresa | quitado |
-| 16/12/2020 | [Kit de herramientas de bloqueo para deshabilitar la entrega automática de Microsoft Edge](/DeployEdge/microsoft-edge-blocker-toolkit) | modificado |
-| 16/12/2020 | [Notas de la versión de Microsoft Edge para el canal beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | modificado |
-| 16/12/2020 | Pantalla completa de Microsoft Edge | quitado |
-| 17/12/2020 | [Preguntas más frecuentes (P+F) sobre Microsoft Edge en la empresa](/DeployEdge/faqs-edge-in-the-enterprise) | modificado |
-| 17/12/2020 | [Notas de la versión de Microsoft Edge para el canal estable](/DeployEdge/microsoft-edge-relnote-stable-channel) | modificado |
-| 17/12/2020 | [Sistemas operativos admitidos con Microsoft Edge](/DeployEdge/microsoft-edge-supported-operating-systems) | modificado |

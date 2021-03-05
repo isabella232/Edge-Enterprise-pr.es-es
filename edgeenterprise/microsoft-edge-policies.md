@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/17/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,14 +11,14 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: e293fc948625f2a36a94184f1e0502bb5e73f65a
-ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
+ms.openlocfilehash: 130ed008a190edb92649beb658084c157ebade50
+ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "11340610"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11388728"
 ---
-# Microsoft Edge: directivas
+# <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
 La versión más reciente de Microsoft Edge incluye las siguientes directivas. Puede usar estas directivas para configurar cómo se ejecuta Microsoft Edge en su organización.
 
@@ -29,17 +29,15 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
-## Directivas nuevas y en desuso
+## <a name="new-policies"></a>Nuevas directivas
 
-En la tabla siguiente se enumeran las directivas nuevas y en desuso para esta actualización.
+En la siguiente tabla, se muestran las nuevas directivas para esta actualización.
 
 | Nombre | Título |
 |--|--|
-|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Permitir que los usuarios continúen desde la página de advertencia HTTPS para determinados orígenes|
-|[WindowOcclusionEnabled](#windowocclusionenabled)|Habilitar oclusión de ventana|
-|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Habilitar oclusión de ventana nativa (en desuso)|
+|[PrintRasterizationMode](#printrasterizationmode)|Modo de rasterización de impresión|
 
-## Directivas disponibles
+## <a name="available-policies"></a>Directivas disponibles
 
 Estas tablas enumeran todas las directivas de grupo relacionadas con el explorador disponibles en esta versión de Microsoft Edge. Usa los vínculos de la tabla para obtener más detalles sobre directivas específicas.
 
@@ -55,19 +53,19 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[Configuración de SmartScreen](#smartscreen-settings)|[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|
 |[Adicional](#additional)|
 
-### [*Configuración de Protección de aplicaciones*](#application-guard-settings-policies)
+### [*<a name="application-guard-settings"></a>Configuración de Protección de aplicaciones*](#application-guard-settings-policies)
 
 |Nombre de directiva|Título|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Contenedor proxy de la Protección de aplicaciones|
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Sincronización de favoritos de Protección de aplicaciones habilitada|
-### [*Transmitir*](#cast-policies)
+### [*<a name="cast"></a>Transmitir*](#cast-policies)
 
 |Nombre de directiva|Título|
 |-|-|
 |[EnableMediaRouter](#enablemediarouter)|Habilitar Google Cast|
 |[ShowCastIconInToolbar](#showcasticonintoolbar)|Mostrar el icono transmitir en la barra de herramientas|
-### [*Configuración del Contenido*](#content-settings-policies)
+### [*<a name="content-settings"></a>Configuración del Contenido*](#content-settings-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -111,7 +109,7 @@ y sugerencias para los servicios Microsoft|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Conceder acceso a determinados sitios para conectarse a dispositivos USB determinados|
 |[WebUsbAskForUrls](#webusbaskforurls)|Permitir WebUSB en determinados sitios|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Bloquear WebUSB en determinados sitios|
-### [*Proveedor de búsquedas predeterminado*](#default-search-provider-policies)
+### [*<a name="default-search-provider"></a>Proveedor de búsquedas predeterminado*](#default-search-provider-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -124,7 +122,7 @@ y sugerencias para los servicios Microsoft|
 |[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)|URL de búsqueda del proveedor de búsqueda predeterminado|
 |[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|URL del proveedor de búsqueda predeterminado para sugerencias|
 |[NewTabPageSearchBox](#newtabpagesearchbox)|Configurar la nueva experiencia del cuadro de búsqueda de la página de pestañas|
-### [*Extensions*](#extensions-policies)
+### [*<a name="extensions"></a>Extensions*](#extensions-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -135,7 +133,7 @@ y sugerencias para los servicios Microsoft|
 |[ExtensionInstallForcelist](#extensioninstallforcelist)|Controlar qué extensiones se instalan de forma silenciosa|
 |[ExtensionInstallSources](#extensioninstallsources)|Configurar la extensión y los orígenes de instalación de los scripts de usuario|
 |[ExtensionSettings](#extensionsettings)|Configurar la administración de la extensión|
-### [*Autenticación HTTP*](#http-authentication-policies)
+### [*<a name="http-authentication"></a>Autenticación HTTP*](#http-authentication-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -148,25 +146,25 @@ y sugerencias para los servicios Microsoft|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Incluir un puerto no estándar en Kerberos SPN|
 |[NtlmV2Enabled](#ntlmv2enabled)|Controlar si la autenticación NTLMv2 está habilitada|
 |[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Autenticación de Windows Hello para HTTP habilitada|
-### [*Configuración de pantalla completa*](#kiosk-mode-settings-policies)
+### [*<a name="kiosk-mode-settings"></a>Configuración de pantalla completa*](#kiosk-mode-settings-policies)
 
 |Nombre de directiva|Título|
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Configura la edición de la barra de direcciones para la experiencia de navegación pública en modo de pantalla completa.|
 |[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Elimina los archivos descargados como parte de la sesión de pantalla completa cuando se cierra Microsoft Edge|
-### [*Capacidad de administración*](#manageability-policies)
+### [*<a name="manageability"></a>Capacidad de administración*](#manageability-policies)
 
 |Nombre de directiva|Título|
 |-|-|
 |[MAMEnabled](#mamenabled)|Administración de aplicaciones móviles habilitada|
-### [*Mensajería nativa*](#native-messaging-policies)
+### [*<a name="native-messaging"></a>Mensajería nativa*](#native-messaging-policies)
 
 |Nombre de directiva|Título|
 |-|-|
 |[NativeMessagingAllowlist](#nativemessagingallowlist)|Controlar cuáles hosts de mensajería nativo pueden utilizar los usuarios|
 |[NativeMessagingBlocklist](#nativemessagingblocklist)|Configurar la lista de bloqueados de la mensajería nativa|
 |[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|Permitir los hosts de mensajería nativo en el nivel de usuario (instalado sin permisos de administrador) |
-### [*Administrador de contraseñas y protección*](#password-manager-and-protection-policies)
+### [*<a name="password-manager-and-protection"></a>Administrador de contraseñas y protección*](#password-manager-and-protection-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -176,25 +174,26 @@ y sugerencias para los servicios Microsoft|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configurar la lista de URLs de acceso a la empresa donde el servicio de protección de contraseñas debe capturar los salted hashes de una contraseña|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configurar el desencadenador de advertencia de protección con contraseña|
 |[PasswordRevealEnabled](#passwordrevealenabled)|Habilitar el botón revelar contraseña|
-### [*Rendimiento*](#performance-policies)
+### [*<a name="performance"></a>Rendimiento*](#performance-policies)
 
 |Nombre de directiva|Título|
 |-|-|
 |[StartupBoostEnabled](#startupboostenabled)|Habilitar el impulso de arranque|
-### [*Impresión*](#printing-policies)
+### [*<a name="printing"></a>Impresión*](#printing-policies)
 
 |Nombre de directiva|Título|
 |-|-|
 |[DefaultPrinterSelection](#defaultprinterselection)|Reglas predeterminadas para seleccionar impresoras|
 |[PrintHeaderFooter](#printheaderfooter)|Imprimir encabezados y pies de página|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Establecer la impresora predeterminada del sistema como la impresora predeterminada|
+|[PrintRasterizationMode](#printrasterizationmode)|Modo de rasterización de impresión|
 |[PrinterTypeDenyList](#printertypedenylist)|Deshabilitar los tipos de impresora en la lista de denegación|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Restringir el modo de impresión de imágenes gráficas del fondo|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Modo predeterminado de impresión de imágenes gráficas del fondo|
 |[PrintingEnabled](#printingenabled)|Habilitar la impresión|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Tamaño de página de impresión predeterminado|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimir usando el diálogo de impresión del sistema|
-### [*Servidor proxy*](#proxy-server-policies)
+### [*<a name="proxy-server"></a>Servidor proxy*](#proxy-server-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -203,14 +202,14 @@ y sugerencias para los servicios Microsoft|
 |[ProxyPacUrl](#proxypacurl)|Establecer la dirección URL del proxy del archivo .pac (en desuso)|
 |[ProxyServer](#proxyserver)|Configurar la dirección o la dirección URL del servidor proxy (en desuso)|
 |[ProxySettings](#proxysettings)|Configuración de proxy|
-### [*Configuración de pestañas en estado de reposo*](#sleeping-tabs-settings-policies)
+### [*<a name="sleeping-tabs-settings"></a>Configuración de pestañas en estado de reposo*](#sleeping-tabs-settings-policies)
 
 |Nombre de directiva|Título|
 |-|-|
 |[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Bloquear pestañas en reposo en sitios específicos|
 |[SleepingTabsEnabled](#sleepingtabsenabled)|Configurar pestañas en estado de reposo|
 |[SleepingTabsTimeout](#sleepingtabstimeout)|Establecer el tiempo de espera de inactividad de la pestaña en segundo plano para las pestañas en reposo|
-### [*Configuración de SmartScreen*](#smartscreen-settings-policies)
+### [*<a name="smartscreen-settings"></a>Configuración de SmartScreen*](#smartscreen-settings-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -220,7 +219,7 @@ y sugerencias para los servicios Microsoft|
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar SmartScreen de Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forzar a SmartScreen de Microsoft Defender a comprobar las descargas de origen confiable|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.|
-### [*Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -236,7 +235,7 @@ y sugerencias para los servicios Microsoft|
 |[RestoreOnStartup](#restoreonstartup)|Acción que se realizará en el inicio|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sitios que se abren cuando el explorador se inicia|
 |[ShowHomeButton](#showhomebutton)|Mostrar el botón Inicio en la barra de herramientas|
-### [*Adicional*](#additional-policies)
+### [*<a name="additional"></a>Adicional*](#additional-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -321,7 +320,7 @@ y sugerencias para los servicios Microsoft|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Deshabilitar el tipo de archivo de descarga advertencias basadas en la extensión para tipos de archivo especificados en dominios|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Controlar la comunicación con el servicio de experimentación y configuración|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Mostrar la casilla "abrir siempre" en el cuadro de diálogo de protocolo externo|
-|[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Permitir que los usuarios configuren la seguridad familiar|
+|[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Permitir a los usuarios configurar la seguridad infantil y el modo niños|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Habilitar la barra de favoritos|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Forzar la búsqueda segura de Bing|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configurar si Microsoft Edge debe seleccionar automáticamente un certificado cuando haya múltiples coincidencias de certificados para un sitio configurado con "AutoSelectCertificateForUrls"|
@@ -458,21 +457,21 @@ y sugerencias para los servicios Microsoft|
 
 
 
-  ## Directivas de configuración de Protección de aplicaciones
+  ## <a name="application-guard-settings-policies"></a>Directivas de configuración de Protección de aplicaciones
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ApplicationGuardContainerProxy
+  ### <a name="applicationguardcontainerproxy"></a>ApplicationGuardContainerProxy
 
-  #### Contenedor proxy de la Protección de aplicaciones
+  #### <a name="application-guard-container-proxy"></a>Contenedor proxy de la Protección de aplicaciones
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 84 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configure los parámetros del proxy para la Protección de aplicaciones de Microsoft Edge.
 Si habilita esta directiva, la Protección de aplicaciones de Microsoft Edge ignora otras fuentes de configuraciones de proxy.
@@ -497,19 +496,19 @@ Si elige el valor 'pac_script' como 'ProxyMode', se utiliza el campo 'ProxyPacUr
 
 Para obtener más información acerca de cómo identificar el tráfico de Protección de aplicaciones mediante proxy doble, visite [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ApplicationGuardContainerProxy
   - Nombre GP: contenedor proxy de Protección de aplicaciones
@@ -517,14 +516,14 @@ Para obtener más información acerca de cómo identificar el tráfico de Protec
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ApplicationGuardContainerProxy
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
@@ -534,7 +533,7 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 }
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
@@ -545,17 +544,17 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ApplicationGuardFavoritesSyncEnabled
+  ### <a name="applicationguardfavoritessyncenabled"></a>ApplicationGuardFavoritesSyncEnabled
 
-  #### Sincronización de favoritos de Protección de aplicaciones habilitada
+  #### <a name="application-guard-favorites-sync-enabled"></a>Sincronización de favoritos de Protección de aplicaciones habilitada
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 90 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva permite a los equipos o dispositivos con Microsoft Edge que tengan Protección de aplicaciones habilitada sincronizar los favoritos del host con el contenedor para que los favoritos coincidan.
 
@@ -565,19 +564,19 @@ Si habilita esta directiva, se deshabilitará la edición de favoritos en el con
 
 Si deshabilita o no configura esta directiva, los favoritos del host no se compartirán con el contenedor.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ApplicationGuardFastroSyncEnabled
   - Nombre de GP: Sincronización de favoritos de Protección de aplicaciones habilitada
@@ -585,14 +584,14 @@ Si deshabilita o no configura esta directiva, los favoritos del host no se compa
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): N/D
   - Nombre de valor: ApplicationGuardFavoritesSyncEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -602,21 +601,21 @@ Si deshabilita o no configura esta directiva, los favoritos del host no se compa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de transmisión
+  ## <a name="cast-policies"></a>Directivas de transmisión
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EnableMediaRouter
+  ### <a name="enablemediarouter"></a>EnableMediaRouter
 
-  #### Habilitar Google Cast
+  #### <a name="enable-google-cast"></a>Habilitar Google Cast
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilitar esta directiva para habilitar Google Cast. Los usuarios podrán iniciarlo desde el menú de aplicaciones, los menús contextuales de la página, los controles de medios en los sitios web habilitados para la transmisión y (si se muestra) el icono de la barra de herramientas de transmisión.
 
@@ -624,19 +623,19 @@ Deshabilitar esta directiva para deshabilitar Google Cast.
 
 De forma predeterminada, Google Cast está activado.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EnableMediaRouter
   - Nombre de GP: habilitar Google Cast
@@ -644,20 +643,20 @@ De forma predeterminada, Google Cast está activado.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: EnableMediaRouter
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: EnableMediaRouter
   - Valor de ejemplo:
@@ -668,17 +667,17 @@ De forma predeterminada, Google Cast está activado.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ShowCastIconInToolbar
+  ### <a name="showcasticonintoolbar"></a>ShowCastIconInToolbar
 
-  #### Mostrar el icono transmitir en la barra de herramientas
+  #### <a name="show-the-cast-icon-in-the-toolbar"></a>Mostrar el icono transmitir en la barra de herramientas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establecer esta directiva a verdadero para mostrar el icono de la barra de herramientas de Transmitir en la barra de herramientas o el menú de desbordamiento. Los usuarios no podrán eliminarlo.
 
@@ -686,19 +685,19 @@ Si no configura esta directiva o si la deshabilita, los usuarios pueden anclar o
 
 Si también ha configurado la directiva [EnableMediaRouter](#enablemediarouter) como falsa, entonces esta directiva se ignora y el icono de la barra de herramientas no se mostrará.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ShowCastIconInToolbar
   - Nombre de GP: mostrar el icono transmitir en la barra de herramientas
@@ -706,20 +705,20 @@ Si también ha configurado la directiva [EnableMediaRouter](#enablemediarouter) 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ShowCastIconInToolbar
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ShowCastIconInToolbar
   - Valor de ejemplo:
@@ -730,21 +729,21 @@ Si también ha configurado la directiva [EnableMediaRouter](#enablemediarouter) 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de configuración de contenidos
+  ## <a name="content-settings-policies"></a>Directivas de configuración de contenidos
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AutoSelectCertificateForUrls
+  ### <a name="autoselectcertificateforurls"></a>AutoSelectCertificateForUrls
 
-  #### Seleccionar automáticamente certificados de cliente para estos sitios
+  #### <a name="automatically-select-client-certificates-for-these-sites"></a>Seleccionar automáticamente certificados de cliente para estos sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   El establecimiento de la Directiva permite crear una lista de patrones de URL que especifican los sitios para los que Microsoft Edge puede seleccionar automáticamente un certificado de cliente. El valor es una matriz de stringified diccionarios JSON, cada uno con el formato {"pattern": "$URL _PATTERN", "filtro": $FILTER}, donde $URL _PATTERN es un patrón de configuración de contenido. $FILTER restringe los certificados de cliente que selecciona automáticamente el explorador. Independientemente del filtro, solo se seleccionan los certificados que coinciden con la solicitud de certificado del servidor.
 
@@ -762,19 +761,19 @@ Ejemplos de uso de la $FILTER sección:
 
 Si deja la Directiva sin establecer, no se puede seleccionar nada para ningún sitio.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AutoSelectCertificateForUrls
   - Nombre de GP: seleccionar automáticamente certificados de cliente para estos sitios
@@ -782,21 +781,21 @@ Si deja la Directiva sin establecer, no se puede seleccionar nada para ningún s
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\AutoSelectCertificateForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":\"https://www.contoso.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\", \"L\": \"certificate issuer location\", \"O\": \"certificate issuer org\", \"OU\": \"certificate issuer org unit\"}, \"SUBJECT\":{\"CN\":\"certificate subject name\", \"L\": \"certificate subject location\", \"O\": \"certificate subject org\", \"OU\": \"certificate subject org unit\"}}}"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AutoSelectCertificateForUrls
   - Valor de ejemplo:
@@ -809,17 +808,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### CookiesAllowedForUrls
+  ### <a name="cookiesallowedforurls"></a>CookiesAllowedForUrls
 
-  #### Permitir las cookies en determinados sitios
+  #### <a name="allow-cookies-on-specific-sites"></a>Permitir las cookies en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Defina una lista de sitios, basada en los patrones de dirección URL, a los que se les permite colocar cookies.
 
@@ -839,19 +838,19 @@ Para obtener información detallada acerca de los patrones de dirección URL vá
 
 Para impedir que se eliminen las cookies al salir, configure la directiva [SaveCookiesOnExit](#savecookiesonexit) .
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: CookiesAllowedForUrls
   - Nombre de GP: permitir las cookies en determinados sitios
@@ -859,14 +858,14 @@ Para impedir que se eliminen las cookies al salir, configure la directiva [SaveC
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\CookiesAllowedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
@@ -874,7 +873,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: CookiesAllowedForUrls
   - Valor de ejemplo:
@@ -888,17 +887,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### CookiesBlockedForUrls
+  ### <a name="cookiesblockedforurls"></a>CookiesBlockedForUrls
 
-  #### Bloquear las cookies en determinados sitios
+  #### <a name="block-cookies-on-specific-sites"></a>Bloquear las cookies en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios, basada en los patrones de dirección URL, que no pueden establecer cookies.
 
@@ -916,19 +915,19 @@ Tenga en cuenta que no puede haber patrones de dirección URL conflictivos estab
 
 Para obtener información detallada sobre los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * no es un valor aceptado para esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: CookiesBlockedForUrls
   - Nombre de GP: bloquear las cookies en determinados sitios
@@ -936,14 +935,14 @@ Para obtener información detallada sobre los patrones de dirección URL válido
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\CookiesBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.com"
@@ -951,7 +950,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: CookiesBlockedForUrls
   - Valor de ejemplo:
@@ -965,17 +964,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### CookiesSessionOnlyForUrls
+  ### <a name="cookiessessiononlyforurls"></a>CookiesSessionOnlyForUrls
 
-  #### Limitar las cookies de determinados sitios web en la sesión actual
+  #### <a name="limit-cookies-from-specific-websites-to-the-current-session"></a>Limitar las cookies de determinados sitios web en la sesión actual
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Las cookies creadas por los sitios web que coinciden con un patrón de dirección URL definido por usted se eliminan cuando termina la sesión (cuando se cierra la ventana).
 
@@ -997,19 +996,19 @@ Para obtener información detallada sobre los patrones de dirección URL válido
 
 Si establece la directiva [RestoreOnStartup](#restoreonstartup) para restaurar las direcciones URL de sesiones anteriores, esta directiva se ignorará y las cookies se almacenarán de forma permanente para esos sitios.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: CookiesSessionOnlyForUrls
   - Nombre de GP: limitar las cookies de determinados sitios web en la sesión actual
@@ -1017,14 +1016,14 @@ Si establece la directiva [RestoreOnStartup](#restoreonstartup) para restaurar l
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\CookiesSessionOnlyForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = "https://www.contoso.com"
@@ -1032,7 +1031,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: CookiesSessionOnlyForUrls
   - Valor de ejemplo:
@@ -1046,17 +1045,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultCookiesSetting
+  ### <a name="defaultcookiessetting"></a>DefaultCookiesSetting
 
-  #### Configurar cookies
+  #### <a name="configure-cookies"></a>Configurar cookies
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controlar si los sitios web pueden crear cookies en el dispositivo del usuario. Esta directiva es todo o nada: puede permitir que todos los sitios web creen cookies o que ningún sitio web cree cookies. No puede utilizar esta directiva para habilitar las cookies de determinados sitios web.
 
@@ -1074,19 +1073,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultCookiesSetting
   - Nombre de GP: configurar cookies
@@ -1094,20 +1093,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultCookiesSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultCookiesSetting
   - Valor de ejemplo:
@@ -1118,17 +1117,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultFileSystemReadGuardSetting
+  ### <a name="defaultfilesystemreadguardsetting"></a>DefaultFileSystemReadGuardSetting
 
-  #### Controlar el uso de la API del sistema de archivos para leer
+  #### <a name="control-use-of-the-file-system-api-for-reading"></a>Controlar el uso de la API del sistema de archivos para leer
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si establece esta directiva en 3, los sitios web podrán pedir acceso de lectura al sistema de archivos del sistema operativo del host utilizando la API del sistema de archivos. Si establece esta directiva en 2, se deniega el acceso.
 
@@ -1142,19 +1141,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultFileSystemReadGuardSetting
   - Nombre de GP: controla el uso de la API del sistema de archivos para lectura
@@ -1162,20 +1161,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultFileSystemReadGuardSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: DefaultFileSystemReadGuardSetting
   - Valor de ejemplo:
@@ -1186,17 +1185,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultFileSystemWriteGuardSetting
+  ### <a name="defaultfilesystemwriteguardsetting"></a>DefaultFileSystemWriteGuardSetting
 
-  #### Controlar el uso de la API del sistema de archivos para escribir
+  #### <a name="control-use-of-the-file-system-api-for-writing"></a>Controlar el uso de la API del sistema de archivos para escribir
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si establece esta directiva en 3, los sitios web podrán pedir acceso de escritura al sistema de archivos del sistema operativo del host mediante la API del sistema de archivos. Si establece esta directiva en 2, se deniega el acceso.
 
@@ -1210,19 +1209,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultFileSystemWriteGuardSetting
   - Nombre de GP: controla el uso de la API del sistema de archivos para escribir
@@ -1230,20 +1229,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultFileSystemWriteGuardSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: DefaultFileSystemWriteGuardSetting
   - Valor de ejemplo:
@@ -1254,17 +1253,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultGeolocationSetting
+  ### <a name="defaultgeolocationsetting"></a>DefaultGeolocationSetting
 
-  #### Configuración de geolocalización predeterminada
+  #### <a name="default-geolocation-setting"></a>Configuración de geolocalización predeterminada
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establecer si los sitios web pueden realizar un seguimiento de las ubicaciones físicas de los usuarios. Puede permitir que se realice un seguimiento de forma predeterminada ("AllowGeolocation"), rechazarlo de forma predeterminada ("BlockGeolocation") o preguntar a los usuarios cada vez que un sitio web solicite su ubicación ("AskGeolocation").
 
@@ -1280,19 +1279,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultGeolocationSetting
   - Nombre de GP: configuración de geolocalización predeterminada
@@ -1300,20 +1299,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultGeolocationSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultGeolocationSetting
   - Valor de ejemplo:
@@ -1324,17 +1323,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultImagesSetting
+  ### <a name="defaultimagessetting"></a>DefaultImagesSetting
 
-  #### Configuración predeterminada de imágenes
+  #### <a name="default-images-setting"></a>Configuración predeterminada de imágenes
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establecer si los sitios web pueden mostrar imágenes. Puede permitir imágenes en todos los sitios ("AllowImages") o bloquearlas en todos los sitios ("BlockImages").
 
@@ -1348,19 +1347,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultImagesSetting
   - Nombre de GP: configuración predeterminada de imágenes
@@ -1368,20 +1367,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultImagesSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultImagesSetting
   - Valor de ejemplo:
@@ -1392,17 +1391,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultInsecureContentSetting
+  ### <a name="defaultinsecurecontentsetting"></a>DefaultInsecureContentSetting
 
-  #### Controlar el uso de excepciones de contenido inseguro
+  #### <a name="control-use-of-insecure-content-exceptions"></a>Controlar el uso de excepciones de contenido inseguro
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite establecer si los usuarios pueden agregar excepciones para permitir contenido mixto para sitios determinados.
 
@@ -1418,19 +1417,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultInsecureContentSetting
   - Nombre de GP: controlar el uso de excepciones de contenido inseguro
@@ -1438,20 +1437,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultInsecureContentSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultInsecureContentSetting
   - Valor de ejemplo:
@@ -1462,17 +1461,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultJavaScriptSetting
+  ### <a name="defaultjavascriptsetting"></a>DefaultJavaScriptSetting
 
-  #### Configuración predeterminada de JavaScript
+  #### <a name="default-javascript-setting"></a>Configuración predeterminada de JavaScript
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establecer si los sitios web pueden ejecutar JavaScript. Puede permitir el acceso ("AllowJavaScript") o bloquearlo ("BlockJavaScript") para todos los sitios.
 
@@ -1486,19 +1485,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultJavaScriptSetting
   - Nombre de GP: configuración predeterminada de JavaScript
@@ -1506,20 +1505,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultJavaScriptSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultJavaScriptSetting
   - Valor de ejemplo:
@@ -1530,17 +1529,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultNotificationsSetting
+  ### <a name="defaultnotificationssetting"></a>DefaultNotificationsSetting
 
-  #### Configuración predeterminada de notificación
+  #### <a name="default-notification-setting"></a>Configuración predeterminada de notificación
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establecer si los sitios web pueden mostrar notificaciones de escritorio. Puede permitirlas de forma predeterminada ("AllowNotifications"), denegarlas de forma predeterminada ("BlockNotifications") o hacer que se le pregunte al usuario cada vez que un sitio web quiera mostrar una notificación ("AskNotifications").
 
@@ -1556,19 +1555,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultNotificationsSetting
   - Nombre de GP: configuración predeterminada de notificación
@@ -1576,20 +1575,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultNotificationsSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultNotificationsSetting
   - Valor de ejemplo:
@@ -1600,17 +1599,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultPluginsSetting
+  ### <a name="defaultpluginssetting"></a>DefaultPluginsSetting
 
-  #### Configuración predeterminada de Adobe Flash (obsoleto)
+  #### <a name="default-adobe-flash-setting-obsolete"></a>Configuración predeterminada de Adobe Flash (obsoleto)
 
   
   >OBSOLETO: esta directiva es obsoleta y no funciona después de Microsoft Edge 87.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 77 hasta 87
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva no funciona porque Microsoft Edge ya no admite Flash.
 
@@ -1628,19 +1627,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultPluginsSetting
   - Nombre de GP: configuración predeterminada de Adobe Flash (obsoleto)
@@ -1648,20 +1647,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultPluginsSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultPluginsSetting
   - Valor de ejemplo:
@@ -1672,17 +1671,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultPopupsSetting
+  ### <a name="defaultpopupssetting"></a>DefaultPopupsSetting
 
-  #### Configuración predeterminada de la ventana emergente
+  #### <a name="default-pop-up-window-setting"></a>Configuración predeterminada de la ventana emergente
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establecer si los sitios web pueden mostrar ventanas emergentes. Puede permitirlas ("AllowPopups") o bloquearlas ("BlockPopups") en todos los sitios web.
 
@@ -1696,19 +1695,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultPopupsSetting
   - Nombre de GP: configuración predeterminada de la ventana emergente
@@ -1716,20 +1715,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultPopupsSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultPopupsSetting
   - Valor de ejemplo:
@@ -1740,17 +1739,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultWebBluetoothGuardSetting
+  ### <a name="defaultwebbluetoothguardsetting"></a>DefaultWebBluetoothGuardSetting
 
-  #### Controlar el uso de la API de Bluetooth Web
+  #### <a name="control-use-of-the-web-bluetooth-api"></a>Controlar el uso de la API de Bluetooth Web
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla si los sitios web pueden acceder a los dispositivos Bluetooth cercanos. Puede bloquear completamente el acceso o requerir que el sitio le pregunte a los usuarios cada vez que deseen tener acceso a un dispositivo Bluetooth.
 
@@ -1764,19 +1763,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultWebBluetoothGuardSetting
   - Nombre de GP: controlar el uso de la API de Bluetooth Web
@@ -1784,20 +1783,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultWebBluetoothGuardSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultWebBluetoothGuardSetting
   - Valor de ejemplo:
@@ -1808,17 +1807,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultWebUsbGuardSetting
+  ### <a name="defaultwebusbguardsetting"></a>DefaultWebUsbGuardSetting
 
-  #### Controlar el uso de la API WebUSB
+  #### <a name="control-use-of-the-webusb-api"></a>Controlar el uso de la API WebUSB
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establecer si los sitios web pueden acceder a dispositivos USB conectados. Puede bloquear completamente el acceso o preguntar al usuario cada vez que un sitio web quiera acceder a los dispositivos USB conectados.
 
@@ -1834,19 +1833,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultWebUsbGuardSetting
   - Nombre de GP: Nombre de GP: controlar el uso de la API WebUSB
@@ -1854,20 +1853,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultWebUsbGuardSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultWebUsbGuardSetting
   - Valor de ejemplo:
@@ -1878,17 +1877,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### FileSystemReadAskForUrls
+  ### <a name="filesystemreadaskforurls"></a>FileSystemReadAskForUrls
 
-  #### Permitir el acceso de lectura a través de la API del sistema de archivos en estos sitios
+  #### <a name="allow-read-access-via-the-file-system-api-on-these-sites"></a>Permitir el acceso de lectura a través de la API del sistema de archivos en estos sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   El establecimiento de la directiva permite indicar los patrones de dirección URL que especifican los sitios que pueden pedir a los usuarios acceso de lectura a archivos o directorios del sistema de archivos del sistema operativo del host mediante la API del sistema de archivos.
 
@@ -1898,19 +1897,19 @@ Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemRead
 
 Para información detallada sobre los patrones de dirección URL válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: FileSystemReadAskForUrls
   - Nombre de GP: permitir el acceso de lectura a través de la API del sistema de archivos en estos sitios
@@ -1918,14 +1917,14 @@ Para información detallada sobre los patrones de dirección URL válidos, consu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
@@ -1933,7 +1932,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: FileSystemReadAskForUrls
   - Valor de ejemplo:
@@ -1947,17 +1946,17 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### FileSystemReadBlockedForUrls
+  ### <a name="filesystemreadblockedforurls"></a>FileSystemReadBlockedForUrls
 
-  #### Bloquear el acceso de lectura a través de la API del sistema de archivos en estos sitios
+  #### <a name="block-read-access-via-the-file-system-api-on-these-sites"></a>Bloquear el acceso de lectura a través de la API del sistema de archivos en estos sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si define esta directiva, puedes listar los patrones de dirección URL que especifican los sitios que no pueden pedir a los usuarios acceso de lectura a archivos o directorios del sistema de archivos del sistema operativo de host mediante la API del sistema de archivos.
 
@@ -1967,19 +1966,19 @@ Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemRead
 
 Para información detallada sobre los patrones de dirección URL válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: FileSystemReadBlockedForUrls
   - Nombre de GP: bloquear el acceso de lectura a través de la API del sistema de archivos en estos sitios
@@ -1987,14 +1986,14 @@ Para información detallada sobre los patrones de dirección URL válidos, consu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
@@ -2002,7 +2001,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: FileSystemReadBlockedForUrls
   - Valor de ejemplo:
@@ -2016,17 +2015,17 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### FileSystemWriteAskForUrls
+  ### <a name="filesystemwriteaskforurls"></a>FileSystemWriteAskForUrls
 
-  #### Permitir el acceso de escritura a archivos y directorios en estos sitios
+  #### <a name="allow-write-access-to-files-and-directories-on-these-sites"></a>Permitir el acceso de escritura a archivos y directorios en estos sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si define esta directiva, puede listar los patrones de dirección URL que especifican los sitios que pueden pedir a los usuarios acceso de escritura a archivos o directorios del sistema de archivos en el sistema operativo del host.
 
@@ -2036,19 +2035,19 @@ Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemWrit
 
 Para información detallada sobre los patrones de dirección URL válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: FileSystemWriteAskForUrls
   - Nombre de GP: permitir el acceso de escritura a archivos y directorios en estos sitios
@@ -2056,14 +2055,14 @@ Para información detallada sobre los patrones de dirección URL válidos, consu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
@@ -2071,7 +2070,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: FileSystemWriteAskForUrls
   - Valor de ejemplo:
@@ -2085,17 +2084,17 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### FileSystemWriteBlockedForUrls
+  ### <a name="filesystemwriteblockedforurls"></a>FileSystemWriteBlockedForUrls
 
-  #### Bloquear el acceso de escritura a archivos y directorios en estos sitios
+  #### <a name="block-write-access-to-files-and-directories-on-these-sites"></a>Bloquear el acceso de escritura a archivos y directorios en estos sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si define esta directiva, puede listar los patrones de dirección URL que especifican los sitios que no pueden pedir a los usuarios acceso de escritura a archivos o directorios en el sistema de archivos del sistema operativo del host.
 
@@ -2105,19 +2104,19 @@ Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemWrit
 
 Para información detallada sobre los patrones de dirección URL válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: FileSystemWriteBlockedForUrls
   - Nombre de GP: bloquear el acceso de escritura a archivos y directorios en estos sitios
@@ -2125,14 +2124,14 @@ Para información detallada sobre los patrones de dirección URL válidos, consu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
@@ -2140,7 +2139,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: FileSystemWriteBlockedForUrls
   - Valor de ejemplo:
@@ -2154,35 +2153,35 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImagesAllowedForUrls
+  ### <a name="imagesallowedforurls"></a>ImagesAllowedForUrls
 
-  #### Permitir imágenes en estos sitios
+  #### <a name="allow-images-on-these-sites"></a>Permitir imágenes en estos sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios, basada en los patrones de dirección URL que pueden mostrar imagenes.
 
 Si no configura esta directiva, se utiliza el valor predeterminado global para todos los sitios, ya sea de la directiva [DefaultImagesSetting](#defaultimagessetting) (si está establecida) o de la configuración personal del usuario.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImagesAllowedForUrls
   - Nombre de GP: permitir imágenes en estos sitios
@@ -2190,14 +2189,14 @@ Si no configura esta directiva, se utiliza el valor predeterminado global para t
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Microsoft Edge\ImagesAllowedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.com"
@@ -2205,7 +2204,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImagesAllowedForUrls
   - Valor de ejemplo:
@@ -2219,35 +2218,35 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImagesBlockedForUrls
+  ### <a name="imagesblockedforurls"></a>ImagesBlockedForUrls
 
-  #### Bloquear imágenes en determinados sitios
+  #### <a name="block-images-on-specific-sites"></a>Bloquear imágenes en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios, basada en los patrones de dirección URL que pueden mostrar imagenes.
 
 Si no se configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultImagesSetting](#defaultimagessetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImagesBlockedForUrls
   - Nombre de GP: Nombre de GP: bloquear imágenes en sitios determinados
@@ -2255,14 +2254,14 @@ Si no se configura esta directiva, se utilizará para todos los sitios el valor 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Microsoft Edge\ImagesBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = "https://www.contoso.com"
@@ -2270,7 +2269,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImagesBlockedForUrls
   - Valor de ejemplo:
@@ -2284,35 +2283,35 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InsecureContentAllowedForUrls
+  ### <a name="insecurecontentallowedforurls"></a>InsecureContentAllowedForUrls
 
-  #### Permitir el contenido inseguro en determinados sitios
+  #### <a name="allow-insecure-content-on-specified-sites"></a>Permitir el contenido inseguro en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Crea una lista de patrones de dirección URL para especificar los sitios que pueden mostrar contenido mixto inseguro (es decir, contenido HTTP en sitios HTTPS).
 
 Si no configura esta directiva, el contenido mixto bloqueable será bloqueado y opcionalmente el contenido mixto bloqueable será actualizado. Sin embargo, se permitirá a los usuarios establecer excepciones para permitir contenido mixto inseguro para determinados sitios.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InsecureContentAllowedForUrls
   - Nombre de GP: permitir el contenido inseguro en sitios determinados
@@ -2320,14 +2319,14 @@ Si no configura esta directiva, el contenido mixto bloqueable será bloqueado y 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Microsoft Edge\InsecureContentAllowedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.example.com"
@@ -2335,7 +2334,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: InsecureContentAllowedForUrls
   - Valor de ejemplo:
@@ -2349,35 +2348,35 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InsecureContentBlockedForUrls
+  ### <a name="insecurecontentblockedforurls"></a>InsecureContentBlockedForUrls
 
-  #### Bloquear contenidos inseguros en determinados sitios
+  #### <a name="block-insecure-content-on-specified-sites"></a>Bloquear contenidos inseguros en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Crea una lista de patrones de URL para especificar los sitios a los que no se les permite mostrar contenido mixto (es decir, contenido HTTP en sitios HTTPS) bloqueable (es decir, activo) y para los que se deshabilitarán opcionalmente las actualizaciones de contenido mixto bloqueable.
 
 Si no configura esta directiva, el contenido mixto bloqueable será bloqueado y opcionalmente el contenido mixto bloqueable será actualizado. Sin embargo, se permitirá a los usuarios establecer excepciones para permitir contenido mixto inseguro para determinados sitios.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InsecureContentBlockedForUrls
   - Nombre de GP: bloquear los contenidos inseguros en sitios determinados
@@ -2385,14 +2384,14 @@ Si no configura esta directiva, el contenido mixto bloqueable será bloqueado y 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Microsoft Edge\InsecureContentBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = "https://www.example.com"
@@ -2400,7 +2399,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: InsecureContentBlockedForUrls
   - Valor de ejemplo:
@@ -2414,35 +2413,35 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### JavaScriptAllowedForUrls
+  ### <a name="javascriptallowedforurls"></a>JavaScriptAllowedForUrls
 
-  #### Permitir JavaScript en determinados sitios
+  #### <a name="allow-javascript-on-specific-sites"></a>Permitir JavaScript en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios basada en los patrones de dirección URL a los que se les permite ejecutar JavaScript.
 
 Si no configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultJavaScriptSetting](#defaultjavascriptsetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: JavaScriptAllowedForUrls
   - Nombre de GP: permitir JavaScript en determinados sitios
@@ -2450,14 +2449,14 @@ Si no configura esta directiva, se utilizará para todos los sitios el valor glo
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Microsoft Edge\JavaScriptAllowedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = "https://www.contoso.com"
@@ -2465,7 +2464,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: JavaScriptAllowedForUrls
   - Valor de ejemplo:
@@ -2479,35 +2478,35 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### JavaScriptBlockedForUrls
+  ### <a name="javascriptblockedforurls"></a>JavaScriptBlockedForUrls
 
-  #### Bloquear JavaScript en determinados sitios
+  #### <a name="block-javascript-on-specific-sites"></a>Bloquear JavaScript en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios basada en los patrones de dirección URL a los que se les permite ejecutar JavaScript.
 
 Si no configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultJavaScriptSetting](#defaultjavascriptsetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: JavaScriptBlockedForUrls
   - Nombre de GP: bloquear JavaScript en determinados sitios
@@ -2515,14 +2514,14 @@ Si no configura esta directiva, se utilizará para todos los sitios el valor glo
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.contoso.com"
@@ -2530,7 +2529,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: JavaScriptBlockedForUrls
   - Valor de ejemplo:
@@ -2544,17 +2543,17 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### LegacySameSiteCookieBehaviorEnabled
+  ### <a name="legacysamesitecookiebehaviorenabled"></a>LegacySameSiteCookieBehaviorEnabled
 
-  #### Habilitar la configuración predeterminada del comportamiento de las cookies de SameSite
+  #### <a name="enable-default-legacy-samesite-cookie-behavior-setting"></a>Habilitar la configuración predeterminada del comportamiento de las cookies de SameSite
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite revertir todas las cookies al comportamiento de SameSite heredado. Revertir a un comportamiento de herencia hace que las cookies que no especifican un atributo SameSite se traten como si fueran "SameSite = none", quita el requisito de las cookies "SameSite = none" para transportar el atributo "Secure" y omite la comparación de esquemas al evaluar si dos sitios son del mismo sitio.
 
@@ -2568,19 +2567,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: LegacySameSiteCookieBehaviorEnabled
   - Nombre de GP: habilitar la configuración predeterminada del comportamiento heredado de las cookies de SameSite
@@ -2588,20 +2587,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: LegacySameSiteCookieBehaviorEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: LegacySameSiteCookieBehaviorEnabled
   - Valor de ejemplo:
@@ -2612,17 +2611,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### LegacySameSiteCookieBehaviorEnabledForDomainList
+  ### <a name="legacysamesitecookiebehaviorenabledfordomainlist"></a>LegacySameSiteCookieBehaviorEnabledForDomainList
 
-  #### Revertir a la conducta heredada de SameSite para las cookies en determinados sitios
+  #### <a name="revert-to-legacy-samesite-behavior-for-cookies-on-specified-sites"></a>Revertir a la conducta heredada de SameSite para las cookies en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Las cookies establecidas para los dominios que coincidan con los patrones determinados revertirán al comportamiento heredado de SameSite.
 
@@ -2634,19 +2633,19 @@ El valor predeterminado global puede ser configurado usando la directiva [Legacy
 
 Tenga en cuenta que los patrones listados en esta directiva se tratan como dominios, no como dirección URL, por lo que no debe especificar un esquema o un puerto.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: LegacySameSiteCookieBehaviorEnabledForDomainList
   - Nombre de GP: volver a la conducta heredada de SameSite para las cookies en sitios determinados
@@ -2654,14 +2653,14 @@ Tenga en cuenta que los patrones listados en esta directiva se tratan como domin
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = "www.example.com"
@@ -2669,7 +2668,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: LegacySameSiteCookieBehaviorEnabledForDomainList
   - Valor de ejemplo:
@@ -2683,35 +2682,35 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NotificationsAllowedForUrls
+  ### <a name="notificationsallowedforurls"></a>NotificationsAllowedForUrls
 
-  #### Permitir las notificaciones en determinados sitios
+  #### <a name="allow-notifications-on-specific-sites"></a>Permitir las notificaciones en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite crear una lista de patrones de url para especificar los sitios que están autorizados a mostrar notificaciones.
 
 Si no establece esta directiva, se utilizará el valor predeterminado global para todos los sitios. Este valor predeterminado será de la directiva[DefaultNotificationsSetting](#defaultnotificationssetting)de configuración de notificaciones predeterminadas, si está establecida, o de la configuración personal del usuario. Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NotificationsAllowedForUrls
   - Nombre de GP: permitir las notificaciones en sitios determinados
@@ -2719,14 +2718,14 @@ Si no establece esta directiva, se utilizará el valor predeterminado global par
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\NotificationsAllowedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = "https://www.contoso.com"
@@ -2734,7 +2733,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NotificationsAllowedForUrls
   - Valor de ejemplo:
@@ -2748,35 +2747,35 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NotificationsBlockedForUrls
+  ### <a name="notificationsblockedforurls"></a>NotificationsBlockedForUrls
 
-  #### Bloquear las notificaciones en determinados sitios
+  #### <a name="block-notifications-on-specific-sites"></a>Bloquear las notificaciones en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite crear una lista de patrones de url para especificar los sitios que no están autorizados a mostrar notificaciones.
 
 Si no establece esta directiva, se utilizará el valor predeterminado global para todos los sitios. Este valor predeterminado será de la directiva[DefaultNotificationsSetting](#defaultnotificationssetting)de configuración de notificaciones predeterminadas, si está establecida, o de la configuración personal del usuario. Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NotificationsBlockedForUrls
   - Nombre de GP: bloquear las notificaciones en sitios determinados
@@ -2784,14 +2783,14 @@ Si no establece esta directiva, se utilizará el valor predeterminado global par
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\NotificationsBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.contoso.com"
@@ -2799,7 +2798,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NotificationsBlockedForUrls
   - Valor de ejemplo:
@@ -2813,17 +2812,17 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PluginsAllowedForUrls
+  ### <a name="pluginsallowedforurls"></a>PluginsAllowedForUrls
 
-  #### Permitir el complemento Adobe Flash en sitios específicos (obsoleto)
+  #### <a name="allow-the-adobe-flash-plug-in-on-specific-sites-obsolete"></a>Permitir el complemento Adobe Flash en sitios específicos (obsoleto)
 
   
   >OBSOLETO: esta directiva es obsoleta y no funciona después de Microsoft Edge 87.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 77 hasta 87
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva no funciona porque Microsoft Edge ya no admite Flash.
 
@@ -2833,19 +2832,19 @@ Si no configura esta directiva, se utilizará para todos los sitios el valor glo
 
 Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, las tramas con los caracteres comodín '\*' y '[\*.]' en el host ya no son compatibles con esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PluginsAllowedForUrls
   - Nombre de GP: permitir el complemento Adobe Flash en sitios específicos (obsoleto)
@@ -2853,14 +2852,14 @@ Para obtener información detallada sobre los patrones de url válidos, consulte
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\PluginsAllowedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
@@ -2868,7 +2867,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PluginsAllowedForUrls
   - Valor de ejemplo:
@@ -2882,17 +2881,17 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PluginsBlockedForUrls
+  ### <a name="pluginsblockedforurls"></a>PluginsBlockedForUrls
 
-  #### Bloquear el complemento Adobe Flash en sitios específicos (obsoleto)
+  #### <a name="block-the-adobe-flash-plug-in-on-specific-sites-obsolete"></a>Bloquear el complemento Adobe Flash en sitios específicos (obsoleto)
 
   
   >OBSOLETO: esta directiva es obsoleta y no funciona después de Microsoft Edge 87.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 77 hasta 87
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva no funciona porque Microsoft Edge ya no admite Flash.
 
@@ -2902,19 +2901,19 @@ Si no configura esta directiva, se utilizará para todos los sitios el valor glo
 
 Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, las tramas con los caracteres comodín '\*' y '[\*.]' en el host ya no son compatibles con esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PluginsBlockedForUrls
   - Nombre de GP: bloquear el complemento Adobe Flash en sitios específicos (obsoleto)
@@ -2922,14 +2921,14 @@ Para obtener información detallada sobre los patrones de url válidos, consulte
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\PluginsBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
@@ -2937,7 +2936,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PluginsBlockedForUrls
   - Valor de ejemplo:
@@ -2951,35 +2950,35 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PopupsAllowedForUrls
+  ### <a name="popupsallowedforurls"></a>PopupsAllowedForUrls
 
-  #### Permitir ventanas emergentes en determinados sitios
+  #### <a name="allow-pop-up-windows-on-specific-sites"></a>Permitir ventanas emergentes en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios basada en los patrones de dirección URL que puedan abrir ventanas emergentes. * no es un valor aceptado para esta directiva.
 
 Si no configura esta directiva se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultPopupsSetting](#defaultpopupssetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PopupsAllowedForUrls
   - Nombre de GP: permitir las ventanas emergentes en sitios determinados
@@ -2987,14 +2986,14 @@ Si no configura esta directiva se utilizará para todos los sitios el valor glob
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\PopupsAllowedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = "https://www.contoso.com"
@@ -3002,7 +3001,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PopupsAllowedForUrls
   - Valor de ejemplo:
@@ -3016,35 +3015,35 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PopupsBlockedForUrls
+  ### <a name="popupsblockedforurls"></a>PopupsBlockedForUrls
 
-  #### Bloquear ventanas emergentes en determinados sitios
+  #### <a name="block-pop-up-windows-on-specific-sites"></a>Bloquear ventanas emergentes en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios basada en los patrones de dirección URL tienen bloqueada la opción de abrir ventanas emergentes. * no es un valor aceptado para esta directiva.
 
 Si no configura esta directiva se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultPopupsSetting](#defaultpopupssetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PopupsBlockedForUrls
   - Nombre de GP: bloquear las ventanas emergentes en sitios determinados
@@ -3052,14 +3051,14 @@ Si no configura esta directiva se utilizará para todos los sitios el valor glob
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\PopupsBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.com"
@@ -3067,7 +3066,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PopupsBlockedForUrls
   - Valor de ejemplo:
@@ -3081,17 +3080,17 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RegisteredProtocolHandlers
+  ### <a name="registeredprotocolhandlers"></a>RegisteredProtocolHandlers
 
-  #### Registrar controladores de protocolo
+  #### <a name="register-protocol-handlers"></a>Registrar controladores de protocolo
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establezca esta directiva (recomendado únicamente) para registrar una lista de controladores de protocolo. Esta lista se combina con las registradas por el usuario y ambas pueden usarse.
 
@@ -3102,19 +3101,19 @@ Para registrar un controlador de protocolo:
 
 Los usuarios no pueden quitar un controlador de protocolo registrado por esta directiva. Sin embargo, pueden instalar un controlador de protocolo predeterminado nuevo para reemplazar a los controladores de protocolo existentes.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: no
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RegisteredProtocolHandlers
   - Nombre de GP: registrar controladores de protocolo
@@ -3122,14 +3121,14 @@ Los usuarios no pueden quitar un controlador de protocolo registrado por esta di
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Configuración de contenido
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatorio): N/D
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: RegisteredProtocolHandlers
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
@@ -3141,14 +3140,14 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 ]
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [{"default": true, "protocol": "mailto", "url": "https://mail.contoso.com/mail/?extsrc=mailto&url=%s"}]
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: RegisteredProtocolHandlers
   - Valor de ejemplo:
@@ -3169,18 +3168,18 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SpotlightExperiencesAndRecommendationsEnabled
+  ### <a name="spotlightexperiencesandrecommendationsenabled"></a>SpotlightExperiencesAndRecommendationsEnabled
 
-  #### Decida si los usuarios pueden recibir imágenes de fondo y texto personalizados, sugerencias, notificaciones
+  #### <a name="choose-whether-users-can-receive-customized-background-images-and-text-suggestions-notifications"></a>Decida si los usuarios pueden recibir imágenes de fondo y texto personalizados, sugerencias, notificaciones
 y sugerencias para los servicios Microsoft
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Decida si los usuarios pueden recibir imágenes de fondo y texto personalizados, sugerencias, notificaciones y sugerencias para los servicios Microsoft.
 
@@ -3188,19 +3187,19 @@ Si habilita o no configura esta opción, las experiencias destacadas y las recom
 
 Si deshabilita esta opción, las experiencias destacadas y las recomendaciones se desactivarán.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SpotlightExperiencesAndRecommendationsEnabled
   - Nombre de GP: decida si los usuarios pueden recibir imágenes de fondo y texto personalizados, sugerencias, notificaciones y sugerencias para los servicios Microsoft
@@ -3208,14 +3207,14 @@ Si deshabilita esta opción, las experiencias destacadas y las recomendaciones s
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre de valor: SpotlightExperiencesAndRecommendationsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -3225,17 +3224,17 @@ Si deshabilita esta opción, las experiencias destacadas y las recomendaciones s
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebUsbAllowDevicesForUrls
+  ### <a name="webusballowdevicesforurls"></a>WebUsbAllowDevicesForUrls
 
-  #### Conceder acceso a determinados sitios para conectarse a dispositivos USB determinados
+  #### <a name="grant-access-to-specific-sites-to-connect-to-specific-usb-devices"></a>Conceder acceso a determinados sitios para conectarse a dispositivos USB determinados
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite establecer una lista de direcciones URL que especifican los sitios a los que se concederá automáticamente permiso de acceso a un dispositivo USB con el proveedor y los id. de producto dados. Cada elemento de la lista debe contener tanto dispositivos como direcciones url para que la directiva sea válida. Cada elemento de los dispositivos puede contener un id. de proveedor y un campo de id. de producto. Cualquier id. que se omite se trata como un comodín con una excepción, y esa excepción es que no se puede especificar una id. de producto sin que se especifique también una id. de proveedor. De lo contrario, la directiva no será válida y será ignorada.
 
@@ -3245,19 +3244,19 @@ Si no establece esta directiva se utilizará el valor global predeterminado para
 
 Los patrones de URL en esta directiva no deben entrar en conflicto con los configurados a través de [WebUsbBlockedForUrls](#webusbblockedforurls). Si hay un conflicto, esta directiva tendrá prioridad sobre [WebUsbBlockedForUrls](#webusbblockedforurls) y [WebUsbAskForUrls](#webusbaskforurls).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebUsbAllowDevicesForUrls
   - Nombre de GP: conceder acceso a sitios determinados para conectarse a dispositivos USB específicos
@@ -3265,14 +3264,14 @@ Los patrones de URL en esta directiva no deben entrar en conflicto con los confi
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WebUsbAllowDevicesForUrls
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
@@ -3291,14 +3290,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 ]
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [{"devices": [{"product_id": 5678, "vendor_id": 1234}], "urls": ["https://contoso.com", "https://fabrikam.com"]}]
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: WebUsbAllowDevicesForUrls
   - Valor de ejemplo:
@@ -3327,17 +3326,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebUsbAskForUrls
+  ### <a name="webusbaskforurls"></a>WebUsbAskForUrls
 
-  #### Permitir WebUSB en determinados sitios
+  #### <a name="allow-webusb-on-specific-sites"></a>Permitir WebUSB en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios basada en patrones de dirección URL que pueden pedir al usuario acceso a un dispositivo USB.
 
@@ -3345,19 +3344,19 @@ Si no configura esta directiva se utilizará para todos los sitios el valor glob
 
 Los patrones de dirección URL definidos en esta directiva no pueden entrar en conflicto con los configurados en la directiva [WebUsbBlockedForUrls](#webusbblockedforurls), no se puede permitir ni bloquear una dirección URL. Para información detallada sobre los patrones de url válidos, consulte[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebUsbAskForUrls
   - Nombre de GP: permitir WebUSB en sitios determinados
@@ -3365,14 +3364,14 @@ Los patrones de dirección URL definidos en esta directiva no pueden entrar en c
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\WebUsbAskForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = "https://www.contoso.com"
@@ -3380,7 +3379,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: WebUsbAskForUrls
   - Valor de ejemplo:
@@ -3394,17 +3393,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebUsbBlockedForUrls
+  ### <a name="webusbblockedforurls"></a>WebUsbBlockedForUrls
 
-  #### Bloquear WebUSB en determinados sitios
+  #### <a name="block-webusb-on-specific-sites"></a>Bloquear WebUSB en determinados sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios basada en patrones de dirección URL que no pueden pedir al usuario que les conceda acceso a un dispositivo USB.
 
@@ -3412,19 +3411,19 @@ Si no configura esta directiva se utilizará para todos los sitios el valor glob
 
 Los patrones de dirección URL en esta directiva no pueden entrar en conflicto con los configurados en la directiva [WebUsbAskForUrls](#webusbaskforurls). No puede permitir y bloquear una dirección URL.  Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebUsbBlockedForUrls
   - Nombre de GP: bloquear WebUSB en sitios determinados
@@ -3432,14 +3431,14 @@ Los patrones de dirección URL en esta directiva no pueden entrar en conflicto c
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\WebUsbBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.com"
@@ -3447,7 +3446,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: WebUsbBlockedForUrls
   - Valor de ejemplo:
@@ -3461,21 +3460,21 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas del proveedor de búsqueda predeterminado
+  ## <a name="default-search-provider-policies"></a>Directivas del proveedor de búsqueda predeterminado
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderEnabled
+  ### <a name="defaultsearchproviderenabled"></a>DefaultSearchProviderEnabled
 
-  #### Habilitar el proveedor de búsquedas predeterminado
+  #### <a name="enable-the-default-search-provider"></a>Habilitar el proveedor de búsquedas predeterminado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita la posibilidad de utilizar un proveedor de búsqueda predeterminado.
 
@@ -3493,19 +3492,19 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
 A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva recomendada.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSearchProviderEnabled
   - Nombre de GP: habilitar el proveedor de búsquedas predeterminado
@@ -3513,20 +3512,20 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Proveedor de búsquedas predeterminado
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: DefaultSearchProviderEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderEnabled
   - Valor de ejemplo:
@@ -3537,17 +3536,17 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderEncodings
+  ### <a name="defaultsearchproviderencodings"></a>DefaultSearchProviderEncodings
 
-  #### Codificaciones de proveedores de búsqueda predeterminadas
+  #### <a name="default-search-provider-encodings"></a>Codificaciones de proveedores de búsqueda predeterminadas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifique las codificaciones de caracteres admitidas por el proveedor de búsquedas. Las codificaciones son nombres de página de códigos como UTF-8, GB2312 e ISO-8859-1. Se prueban en el orden indicado.
 
@@ -3557,19 +3556,19 @@ Esta directiva solo se aplica si habilita las directivas [DefaultSearchProviderE
 
 A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva recomendada. Si el usuario ya ha establecido un proveedor de búsqueda predeterminado, el proveedor de búsquedas predeterminado configurado por esta directiva recomendada no se agregará a la lista de proveedores de búsqueda entre los que puede elegir el usuario. Si este es el comportamiento deseado, utilice la Directiva de [ ManagedSearchEngines](#managedsearchengines).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSearchProviderEncodings
   - Nombre de GP: codificaciones de proveedores de búsqueda por defecto
@@ -3577,14 +3576,14 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Proveedor de búsquedas predeterminado
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\DefaultSearchProviderEncodings
   - Ruta de acceso (recomendada): SOFTWARE\Policies\Microsoft\Edge\Recommended\DefaultSearchProviderEncodings
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
@@ -3594,7 +3593,7 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderEncodings
   - Valor de ejemplo:
@@ -3610,17 +3609,17 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderImageURL
+  ### <a name="defaultsearchproviderimageurl"></a>DefaultSearchProviderImageURL
 
-  #### Especifica la característica de búsqueda por imagen para el proveedor de búsquedas predeterminado.
+  #### <a name="specifies-the-search-by-image-feature-for-the-default-search-provider"></a>Especifica la característica de búsqueda por imagen para el proveedor de búsquedas predeterminado.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica la dirección URL del motor de búsqueda utilizado para la búsqueda de imágenes. Las solicitudes de búsqueda se envían mediante el método GET.
 
@@ -3636,19 +3635,19 @@ Esta directiva solo se aplica si habilita las directivas [DefaultSearchProviderE
 
 A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva recomendada. Si el usuario ya ha establecido un proveedor de búsqueda predeterminado, el proveedor de búsquedas predeterminado configurado por esta directiva recomendada no se agregará a la lista de proveedores de búsqueda entre los que puede elegir el usuario. Si este es el comportamiento deseado, utilice la Directiva de [ ManagedSearchEngines](#managedsearchengines).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSearchProviderImageURL
   - Nombre de GP: especifica la característica de búsqueda por imagen para el proveedor de búsquedas predeterminado
@@ -3656,20 +3655,20 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Proveedor de búsquedas predeterminado
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: DefaultSearchProviderImageURL
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderImageURL
   - Valor de ejemplo:
@@ -3680,17 +3679,17 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderImageURLPostParams
+  ### <a name="defaultsearchproviderimageurlpostparams"></a>DefaultSearchProviderImageURLPostParams
 
-  #### Parámetros para una URL de imagen que utiliza POST
+  #### <a name="parameters-for-an-image-url-that-uses-post"></a>Parámetros para una URL de imagen que utiliza POST
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita esta directiva, especificará los parámetros que se utilizan cuando se realiza una búsqueda de imágenes que utiliza POST. La directiva consiste en pares nombre/valor separados por comas. Si un valor es un parámetro de plantilla como {imageThumbnail} en el ejemplo anterior, se reemplaza con datos de miniaturas de imágenes reales. Esta directiva solo se aplica si habilita las directivas [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) y [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl).
 
@@ -3702,19 +3701,19 @@ Si no establece esta directiva, las solicitudes de búsqueda de imágenes se env
 
 A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva recomendada. Si el usuario ya ha establecido un proveedor de búsqueda predeterminado, el proveedor de búsquedas predeterminado configurado por esta directiva recomendada no se agregará a la lista de proveedores de búsqueda entre los que puede elegir el usuario. Si este es el comportamiento deseado, utilice la Directiva de [ ManagedSearchEngines](#managedsearchengines).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSearchProviderImageURLPostParams
   - Nombre de GP: parámetros para una dirección URL de imagen que utiliza POST
@@ -3722,20 +3721,20 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Proveedor de búsquedas predeterminado
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: DefaultSearchProviderImageURLPostParams
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderImageURLPostParams
   - Valor de ejemplo:
@@ -3746,17 +3745,17 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderKeyword
+  ### <a name="defaultsearchproviderkeyword"></a>DefaultSearchProviderKeyword
 
-  #### Proveedor de palabras clave predeterminado
+  #### <a name="default-search-provider-keyword"></a>Proveedor de palabras clave predeterminado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica la palabra clave, que es el método abreviado que se usa en la barra de direcciones para desencadenar la búsqueda de este proveedor.
 
@@ -3766,19 +3765,19 @@ Esta directiva solo se aplica si habilita las directivas [DefaultSearchProviderE
 
 A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva recomendada. Si el usuario ya ha establecido un proveedor de búsqueda predeterminado, el proveedor de búsquedas predeterminado configurado por esta directiva recomendada no se agregará a la lista de proveedores de búsqueda entre los que puede elegir el usuario. Si este es el comportamiento deseado, utilice la Directiva de [ ManagedSearchEngines](#managedsearchengines).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSearchProviderKeyword
   - Nombre de GP: palabra clave del proveedor de búsquedas predeterminado
@@ -3786,20 +3785,20 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Proveedor de búsquedas predeterminado
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: DefaultSearchProviderKeyword
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "mis"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderKeyword
   - Valor de ejemplo:
@@ -3810,17 +3809,17 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderName
+  ### <a name="defaultsearchprovidername"></a>DefaultSearchProviderName
 
-  #### Nombre del proveedor de búsquedas predeterminado
+  #### <a name="default-search-provider-name"></a>Nombre del proveedor de búsquedas predeterminado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica el nombre del proveedor de búsquedas predeterminado.
 
@@ -3832,19 +3831,19 @@ Si no habilita esta directiva o la deja vacía, se utilizará el nombre del serv
 
 A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva recomendada. Si el usuario ya ha establecido un proveedor de búsqueda predeterminado, el proveedor de búsquedas predeterminado configurado por esta directiva recomendada no se agregará a la lista de proveedores de búsqueda entre los que puede elegir el usuario. Si este es el comportamiento deseado, utilice la Directiva de [ ManagedSearchEngines](#managedsearchengines).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSearchProviderName
   - Nombre de GP: nombre del proveedor de búsquedas predeterminado
@@ -3852,20 +3851,20 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Proveedor de búsquedas predeterminado
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: DefaultSearchProviderName
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "My Intranet Search"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderName
   - Valor de ejemplo:
@@ -3876,17 +3875,17 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderSearchURL
+  ### <a name="defaultsearchprovidersearchurl"></a>DefaultSearchProviderSearchURL
 
-  #### URL de búsqueda del proveedor de búsqueda predeterminado
+  #### <a name="default-search-provider-search-url"></a>URL de búsqueda del proveedor de búsqueda predeterminado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica la dirección URL del motor de búsqueda utilizado para la búsqueda predeterminado. La dirección URL contiene la cadena "{searchTerms}", que se reemplaza en el momento de la consulta por los términos que está buscando el usuario.
 
@@ -3900,19 +3899,19 @@ Esta directiva es necesaria cuando se habilita la directiva de [DefaultSearchPro
 
 A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva recomendada. Si el usuario ya ha establecido un proveedor de búsqueda predeterminado, el proveedor de búsquedas predeterminado configurado por esta directiva recomendada no se agregará a la lista de proveedores de búsqueda entre los que puede elegir el usuario. Si este es el comportamiento deseado, utilice la Directiva de [ ManagedSearchEngines](#managedsearchengines).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSearchProviderSearchURL
   - Nombre de GP: dirección URL de búsqueda para el proveedor de búsqueda predeterminado
@@ -3920,20 +3919,20 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Proveedor de búsquedas predeterminado
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: DefaultSearchProviderSearchURL
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderSearchURL
   - Valor de ejemplo:
@@ -3944,17 +3943,17 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderSuggestURL
+  ### <a name="defaultsearchprovidersuggesturl"></a>DefaultSearchProviderSuggestURL
 
-  #### URL del proveedor de búsqueda predeterminado para sugerencias
+  #### <a name="default-search-provider-url-for-suggestions"></a>URL del proveedor de búsqueda predeterminado para sugerencias
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica la dirección URL del motor de búsqueda utilizado para ofrecer sugerencias de búsqueda. La dirección URL contiene la cadena "{searchTerms}", que se reemplaza en el momento de la consulta por el texto que el usuario ha introducido de momento.
 
@@ -3970,19 +3969,19 @@ Esta directiva solo se aplica si habilita las directivas [DefaultSearchProviderE
 
 A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva recomendada. Si el usuario ya ha establecido un proveedor de búsqueda predeterminado, el proveedor de búsquedas predeterminado configurado por esta directiva recomendada no se agregará a la lista de proveedores de búsqueda entre los que puede elegir el usuario. Si este es el comportamiento deseado, utilice la Directiva de [ ManagedSearchEngines](#managedsearchengines).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSearchProviderSuggestURL
   - Nombre de GP: dirección URL del proveedor de búsqueda predeterminado para sugerencias
@@ -3990,20 +3989,20 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Proveedor de búsquedas predeterminado
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: DefaultSearchProviderSuggestURL
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderSuggestURL
   - Valor de ejemplo:
@@ -4014,17 +4013,17 @@ A partir de Microsoft Edge 84, puede establecer esta directiva como Directiva re
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NewTabPageSearchBox
+  ### <a name="newtabpagesearchbox"></a>NewTabPageSearchBox
 
-  #### Configurar la nueva experiencia del cuadro de búsqueda de la página de pestañas
+  #### <a name="configure-the-new-tab-page-search-box-experience"></a>Configurar la nueva experiencia del cuadro de búsqueda de la página de pestañas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Puede configurar el cuadro de búsqueda de la página de la nueva pestaña para que use "cuadro de búsqueda (recomendado)" o "barra de direcciones" para buscar en nuevas pestañas. Esta directiva solo funciona si configura el motor de búsqueda en un valor distinto de Bing al establecer las dos directivas siguientes: [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) y [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl).
 
@@ -4047,19 +4046,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NewTabPageSetFeedType
   - Nombre GP: configurar la nueva página de la pestaña buscar en el cuadro de búsqueda
@@ -4067,20 +4066,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Proveedor de búsquedas predeterminado
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: NewTabPageSearchBox
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "bing"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageSetFeedType
   - Valor de ejemplo:
@@ -4091,21 +4090,21 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Extensiones de las directivas
+  ## <a name="extensions-policies"></a>Extensiones de las directivas
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BlockExternalExtensions
+  ### <a name="blockexternalextensions"></a>BlockExternalExtensions
 
-  #### Bloquear la instalación de extensiones externas
+  #### <a name="blocks-external-extensions-from-being-installed"></a>Bloquear la instalación de extensiones externas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla la instalación de extensiones externas.
 
@@ -4116,19 +4115,19 @@ Si deshabilita esta configuración o la deja sin establecer, las extensiones ext
 Las extensiones externas y su instalación están documentadas en https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
 
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BlockExternalExtensions
   - Nombre de GP: bloquea la instalación de extensiones externas.
@@ -4136,20 +4135,20 @@ Las extensiones externas y su instalación están documentadas en https://docs.m
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): N/D
   - Nombre del valor: BlockExternalExtensions
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración para Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración para Mac
   
   - Nombre de la clave de preferencias: BlockExternalExtensions
   - Valor de ejemplo:
@@ -4160,17 +4159,17 @@ Las extensiones externas y su instalación están documentadas en https://docs.m
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ExtensionAllowedTypes
+  ### <a name="extensionallowedtypes"></a>ExtensionAllowedTypes
 
-  #### Configurar los tipos de extensión permitidos
+  #### <a name="configure-allowed-extension-types"></a>Configurar los tipos de extensión permitidos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   La configuración de la directiva controla qué aplicaciones y extensiones se pueden instalar en Microsoft Edge, con qué hosts puede interactuar y limita el acceso durante el tiempo de ejecución.
 
@@ -4190,19 +4189,19 @@ Vea la documentación de las extensiones de Microsoft Edge para obtener más inf
 
 Tenga en cuenta: esta directiva también afecta a las extensiones y aplicaciones que se instalen por la fuerza usando [ExtensionInstallForcelist](#extensioninstallforcelist).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ExtensionAllowedTypes
   - Nombre de GP: configurar los tipos de extensiones permitidas
@@ -4210,21 +4209,21 @@ Tenga en cuenta: esta directiva también afecta a las extensiones y aplicaciones
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\ExtensionAllowedTypes
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExtensionAllowedTypes
   - Valor de ejemplo:
@@ -4237,17 +4236,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ExtensionInstallAllowlist
+  ### <a name="extensioninstallallowlist"></a>ExtensionInstallAllowlist
 
-  #### Permitir que se instalen extensiones específicas
+  #### <a name="allow-specific-extensions-to-be-installed"></a>Permitir que se instalen extensiones específicas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   La configuración de esta directiva especifica qué extensiones no están sujetas a la lista de bloqueo.
 
@@ -4255,19 +4254,19 @@ Un valor de la lista de bloqueo "*" significa que todas las extensiones están b
 
 De forma predeterminada, se permiten todas las extensiones. Sin embargo, si prohibió las extensiones por directiva, puede usar la lista de extensiones permitidas para cambiar esa directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ExtensionInstallAllowlist
   - Nombre de GP: permitir la instalación de extensiones específicas
@@ -4275,14 +4274,14 @@ De forma predeterminada, se permiten todas las extensiones. Sin embargo, si proh
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\ExtensionInstallAllowlist
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
@@ -4290,7 +4289,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExtensionInstallAllowlist
   - Valor de ejemplo:
@@ -4304,17 +4303,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ExtensionInstallBlocklist
+  ### <a name="extensioninstallblocklist"></a>ExtensionInstallBlocklist
 
-  #### Controlar qué extensiones no se pueden instalar
+  #### <a name="control-which-extensions-cannot-be-installed"></a>Controlar qué extensiones no se pueden instalar
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite especificar las extensiones que los usuarios NO pueden instalar. Las extensiones ya instaladas se deshabilitarán si se bloquean, sin que el usuario pueda habilitarlas. Después de quitar una extensión deshabilitada de la lista de bloqueo, se volverá a habilitar de manera automática.
 
@@ -4322,19 +4321,19 @@ Un valor de lista de bloqueo de "\*" significa que todas las extensiones se bloq
 
 Si esta directiva no está configurada, el usuario puede instalar cualquier extensión en Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ExtensionInstallBlocklist
   - Nombre de GP: controlar qué extensiones no pueden ser instaladas
@@ -4342,14 +4341,14 @@ Si esta directiva no está configurada, el usuario puede instalar cualquier exte
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\ExtensionInstallBlocklist
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
@@ -4357,7 +4356,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExtensionInstallBlocklist
   - Valor de ejemplo:
@@ -4371,17 +4370,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ExtensionInstallForcelist
+  ### <a name="extensioninstallforcelist"></a>ExtensionInstallForcelist
 
-  #### Controlar qué extensiones se instalan de forma silenciosa
+  #### <a name="control-which-extensions-are-installed-silently"></a>Controlar qué extensiones se instalan de forma silenciosa
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establezca esta directiva para especificar una lista de aplicaciones y de extensiones que se instalen en modo silencioso, sin interacción del usuario. Los usuarios no pueden desinstalarla nis desactivarla. Los permisos se conceden de forma implícita, incluso las API de extensión enterprise.deviceAttributes incluidas y enterprise.platformKeys. Tenga en cuenta: estas dos API no están disponibles para las aplicaciones y las extensiones que no se instalan por la fuerza.
 
@@ -4399,19 +4398,19 @@ Cada elemento de lista de la directiva es una cadena que contiene un id. de exte
 
 Tenga en cuenta: esta directiva no se aplica al modo de InPrivate. Obtenga más información sobre las extensiones de hospedaje (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ExtensionInstallForcelist
   - Nombre de GP: Controlar qué extensiones se instalan de forma silenciosa
@@ -4419,14 +4418,14 @@ Tenga en cuenta: esta directiva no se aplica al modo de InPrivate. Obtenga más 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\ExtensionInstallForcelist
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = "gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx"
@@ -4434,7 +4433,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExtensionInstallForcelist
   - Valor de ejemplo:
@@ -4448,17 +4447,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ExtensionInstallSources
+  ### <a name="extensioninstallsources"></a>ExtensionInstallSources
 
-  #### Configurar la extensión y los orígenes de instalación de los scripts de usuario
+  #### <a name="configure-extension-and-user-script-install-sources"></a>Configurar la extensión y los orígenes de instalación de los scripts de usuario
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Defina las direcciones URL que pueden instalar extensiones y temas.
 
@@ -4468,19 +4467,19 @@ Cada elemento de esta lista es un patrón de coincidencia de estilo de extensió
 
 La directiva [ExtensionInstallBlocklist](#extensioninstallblocklist) tiene prioridad sobre esta directiva. Las extensiones que se encuentren en la lista de bloqueados no se instalarán, incluso si proviene de un sitio de esta lista.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ExtensionInstallSources
   - Nombre de GP: configurar la extensión y los orígenes de instalación de los scripts del usuario
@@ -4488,21 +4487,21 @@ La directiva [ExtensionInstallBlocklist](#extensioninstallblocklist) tiene prior
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\ExtensionInstallSources
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExtensionInstallSources
   - Valor de ejemplo:
@@ -4515,17 +4514,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ExtensionSettings
+  ### <a name="extensionsettings"></a>ExtensionSettings
 
-  #### Configurar la administración de la extensión
+  #### <a name="configure-extension-management-settings"></a>Configurar la administración de la extensión
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   La configuración de esta directiva controla la configuración de la administración de extensiones de Microsoft Edge, incluida cualquier configuración controlada por directivas existentes relacionadas con las extensiones. Esta directiva reemplaza cualquier directiva heredada que pueda configurarse.
 
@@ -4540,19 +4539,19 @@ Tenga en cuenta que aún puede usar [ExtensionInstallForcelist](#extensioninstal
 Nota: Para las instancias de Windows que no estén unidas a un dominio de Microsoft Active Directory, la instalación forzada se limita a las aplicaciones y extensiones que aparecen en el sitio web de complementos de Microsoft Edge.
 
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ExtensionSettings
   - Nombre de GP: configurar los ajustes de administración de la extensión
@@ -4560,14 +4559,14 @@ Nota: Para las instancias de Windows que no estén unidas a un dominio de Micros
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ExtensionSettings
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
@@ -4635,14 +4634,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 }
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExtensionSettings
   - Valor de ejemplo:
@@ -4747,39 +4746,39 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de autenticación HTTP
+  ## <a name="http-authentication-policies"></a>Directivas de autenticación HTTP
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AllowCrossOriginAuthPrompt
+  ### <a name="allowcrossoriginauthprompt"></a>AllowCrossOriginAuthPrompt
 
-  #### Allow cross-origin HTTP Authentication prompts
+  #### <a name="allow-cross-origin-http-authentication-prompts"></a>Allow cross-origin HTTP Authentication prompts
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla si las imágenes de otros fabricantes en una página pueden mostrar un mensaje de autenticación.
 
 Generalmente, esto está deshabilitado como defensa contra la suplantación de identidad (phishing). Si no configura esta Directiva, se deshabilitará y las imágenes de terceros no podrán mostrar un mensaje de autenticación.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AllowCrossOriginAuthPrompt
   - Nombre de GP: Permitir solicitudes de autenticación HTTP de origen cruzado
@@ -4787,20 +4786,20 @@ Generalmente, esto está deshabilitado como defensa contra la suplantación de i
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AllowCrossOriginAuthPrompt
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AllowCrossOriginAuthPrompt
   - Valor de ejemplo:
@@ -4811,17 +4810,17 @@ Generalmente, esto está deshabilitado como defensa contra la suplantación de i
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AuthNegotiateDelegateAllowlist
+  ### <a name="authnegotiatedelegateallowlist"></a>AuthNegotiateDelegateAllowlist
 
-  #### Especifica una lista de servidores en los que Microsoft Edge puede delegar credenciales de usuario
+  #### <a name="specifies-a-list-of-servers-that-microsoft-edge-can-delegate-user-credentials-to"></a>Especifica una lista de servidores en los que Microsoft Edge puede delegar credenciales de usuario
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura la lista de servidores en los que Microsoft Edge puede delegar.
 
@@ -4829,19 +4828,19 @@ Separa los nombres de los servidores con comas. Se permiten los comodines (*).
 
 Si no configura esta directiva, Microsoft Edge no delegará las credenciales de usuario aunque se detecte un servidor como intranet.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AuthNegotiateDelegateAllowlist
   - Nombre de GP: especificar una lista de servidores en los que Microsoft Edge puede delegar credenciales de usuario
@@ -4849,20 +4848,20 @@ Si no configura esta directiva, Microsoft Edge no delegará las credenciales de 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AuthNegotiateDelegateAllowlist
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "contoso.com"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AuthNegotiateDelegateAllowlist
   - Valor de ejemplo:
@@ -4873,17 +4872,17 @@ Si no configura esta directiva, Microsoft Edge no delegará las credenciales de 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AuthSchemes
+  ### <a name="authschemes"></a>AuthSchemes
 
-  #### Esquemas de autenticación compatibles
+  #### <a name="supported-authentication-schemes"></a>Esquemas de autenticación compatibles
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica qué esquemas de autenticación HTTP son compatibles.
 
@@ -4891,19 +4890,19 @@ Puede configurar la directiva usando estos valores: "básico", "implícito", "NT
 
 Si no configura esta directiva se utilizarán los cuatro esquemas.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AuthSchemes
   - Nombre de GP: esquemas de autenticación admitidos
@@ -4911,20 +4910,20 @@ Si no configura esta directiva se utilizarán los cuatro esquemas.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AuthSchemes
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "basic,digest,ntlm,negotiate"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AuthSchemes
   - Valor de ejemplo:
@@ -4935,17 +4934,17 @@ Si no configura esta directiva se utilizarán los cuatro esquemas.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AuthServerAllowlist
+  ### <a name="authserverallowlist"></a>AuthServerAllowlist
 
-  #### Configurar la lista de servidores de autenticación permitidos
+  #### <a name="configure-list-of-allowed-authentication-servers"></a>Configurar la lista de servidores de autenticación permitidos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica qué servidores habilitar para la autenticación integrada. La autenticación integrada solo está habilitada cuando Microsoft Edge recibe un desafío de autenticación de un proxy o de un servidor de esta lista.
 
@@ -4953,19 +4952,19 @@ Separa los nombres de los servidores con comas. Se permiten los comodines (*).
 
 Si no configura esta directiva, Microsoft Edge intentará detectar si un servidor está en la intranet, solo entonces responderá a las solicitudes de IWA. Si el servidor se encuentra en Internet, Microsoft Edge ignorará las solicitudes de IWA.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AuthServerAllowlist
   - Nombre de GP: configurar la lista de servidores de autenticación permitidos
@@ -4973,20 +4972,20 @@ Si no configura esta directiva, Microsoft Edge intentará detectar si un servido
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AuthServerAllowlist
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "*contoso.com,contoso.com"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AuthServerAllowlist
   - Valor de ejemplo:
@@ -4997,35 +4996,35 @@ Si no configura esta directiva, Microsoft Edge intentará detectar si un servido
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BasicAuthOverHttpEnabled
+  ### <a name="basicauthoverhttpenabled"></a>BasicAuthOverHttpEnabled
 
-  #### Permitir autenticación básica para HTTP
+  #### <a name="allow-basic-authentication-for-http"></a>Permitir autenticación básica para HTTP
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita esta directiva o la deja sin activar, se permitirán los desafíos de autenticación básica recibidos a través de HTTP no seguro.
 
 Si deshabilita esta directiva, se bloquean las solicitudes HTTP no seguras del esquema de autenticación básica y solo se permite HTTPS seguro.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BasicAuthOverHttpEnabled
   - Nombre de GP: permitir la autenticación básica para HTTP
@@ -5033,20 +5032,20 @@ Si deshabilita esta directiva, se bloquean las solicitudes HTTP no seguras del e
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): N/D
   - Nombre del valor: BasicAuthOverHttpEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BasicAuthOverHttpEnabled
   - Valor de ejemplo:
@@ -5057,17 +5056,17 @@ Si deshabilita esta directiva, se bloquean las solicitudes HTTP no seguras del e
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DisableAuthNegotiateCnameLookup
+  ### <a name="disableauthnegotiatecnamelookup"></a>DisableAuthNegotiateCnameLookup
 
-  #### Deshabilitar la búsqueda CNAME al negociar la autenticación Kerberos
+  #### <a name="disable-cname-lookup-when-negotiating-kerberos-authentication"></a>Deshabilitar la búsqueda CNAME al negociar la autenticación Kerberos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Determina si el SPN de Kerberos generado se basa en el nombre DNS canónico (CNAME) o en el nombre original introducido.
 
@@ -5075,19 +5074,19 @@ Si habilita esta directiva, se omitirá la búsqueda del CNAME y se utilizará e
 
 Si deshabilita esta directiva o no la configura, se utilizará el nombre canónico del servidor.  Esto se determina a través de la búsqueda del CNAME.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DisableAuthNegotiateCnameLookup
   - Nombre de GP: deshabilitar la búsqueda de CNAME al negociar la autenticación Kerberos
@@ -5095,20 +5094,20 @@ Si deshabilita esta directiva o no la configura, se utilizará el nombre canóni
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DisableAuthNegotiateCnameLookup
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DisableAuthNegotiateCnameLookup
   - Valor de ejemplo:
@@ -5119,17 +5118,17 @@ Si deshabilita esta directiva o no la configura, se utilizará el nombre canóni
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EnableAuthNegotiatePort
+  ### <a name="enableauthnegotiateport"></a>EnableAuthNegotiatePort
 
-  #### Incluir un puerto no estándar en Kerberos SPN
+  #### <a name="include-non-standard-port-in-kerberos-spn"></a>Incluir un puerto no estándar en Kerberos SPN
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica si el SPN de Kerberos generado debe incluir un puerto no estándar.
 
@@ -5137,19 +5136,19 @@ Si habilita esta directiva y un usuario incluye un puerto no estándar (un puert
 
 Si no configura o desactiva esta directiva, el SPN de Kerberos generado no incluirá un puerto en ningún caso.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EnableAuthNegotiatePort
   - Nombre de GP: incluir un puerto que no sea estándar en Kerberos SPN
@@ -5157,20 +5156,20 @@ Si no configura o desactiva esta directiva, el SPN de Kerberos generado no inclu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: EnableAuthNegotiatePort
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: EnableAuthNegotiatePort
   - Valor de ejemplo:
@@ -5181,17 +5180,17 @@ Si no configura o desactiva esta directiva, el SPN de Kerberos generado no inclu
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NtlmV2Enabled
+  ### <a name="ntlmv2enabled"></a>NtlmV2Enabled
 
-  #### Controlar si la autenticación NTLMv2 está habilitada
+  #### <a name="control-whether-ntlmv2-authentication-is-enabled"></a>Controlar si la autenticación NTLMv2 está habilitada
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En MacOS desde la versión 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla si NTLMv2 está habilitado.
 
@@ -5199,19 +5198,19 @@ Todas las versiones recientes de samba y los servidores de Windows son compatibl
 
 Si no configura esta directiva, NTLMv2 se habilitará de forma predeterminada.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NtlmV2Enabled
   - Valor de ejemplo:
@@ -5222,35 +5221,35 @@ Si no configura esta directiva, NTLMv2 se habilitará de forma predeterminada.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WindowsHelloForHTTPAuthEnabled
+  ### <a name="windowshelloforhttpauthenabled"></a>WindowsHelloForHTTPAuthEnabled
 
-  #### Autenticación de Windows Hello para HTTP habilitada
+  #### <a name="windows-hello-for-http-auth-enabled"></a>Autenticación de Windows Hello para HTTP habilitada
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 90 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Indica si se debe usar la interfaz de usuario de Credenciales de Windows para responder a los desafíos de autenticación NTLM y Negociar.
 
 Si deshabilita esta política, se utilizará una solicitud básica de nombre de usuario y contraseña para responder a los desafíos de NTLM y Negociar. Si habilita o no configura esta directiva, se usará la interfaz de usuario de Credenciales de Windows.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WindowsHelloForHTTPAuthEnabled
   - Nombre de GP: Windows Hello para autenticación HTTP habilitada
@@ -5258,14 +5257,14 @@ Si deshabilita esta política, se utilizará una solicitud básica de nombre de 
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Autenticación HTTP
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: WindowsHelloForHTTPAuthEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -5275,21 +5274,21 @@ Si deshabilita esta política, se utilizará una solicitud básica de nombre de 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de configuración de pantalla completa
+  ## <a name="kiosk-mode-settings-policies"></a>Directivas de configuración de pantalla completa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### KioskAddressBarEditingEnabled
+  ### <a name="kioskaddressbareditingenabled"></a>KioskAddressBarEditingEnabled
 
-  #### Configura la edición de la barra de direcciones para la experiencia de navegación pública en modo de pantalla completa.
+  #### <a name="configure-address-bar-editing-for-kiosk-mode-public-browsing-experience"></a>Configura la edición de la barra de direcciones para la experiencia de navegación pública en modo de pantalla completa.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva solo se aplica en el modo de pantalla completa de Microsoft Edge al usar la experiencia de exploración pública.
 
@@ -5299,19 +5298,19 @@ Si habilita esta directiva, impedirá que los usuarios puedan cambiar la direcci
 
 Para obtener información detallada sobre cómo configurar la pantalla completa, consulte [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: KioskAddressBarEditingEnabled
   - Nombre de GP: Configura la edición de la barra de direcciones para la experiencia de navegación pública en modo de pantalla completa.
@@ -5319,20 +5318,20 @@ Para obtener información detallada sobre cómo configurar la pantalla completa,
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: KioskAddressBarEditingEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: KioskAddressBarEditingEnabled
   - Valor de ejemplo:
@@ -5343,17 +5342,17 @@ Para obtener información detallada sobre cómo configurar la pantalla completa,
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### KioskDeleteDownloadsOnExit
+  ### <a name="kioskdeletedownloadsonexit"></a>KioskDeleteDownloadsOnExit
 
-  #### Eliminar archivos descargados como parte de la sesión de pantalla completa cuando se cierra Microsoft Edge
+  #### <a name="delete-files-downloaded-as-part-of-kiosk-session-when-microsoft-edge-closes"></a>Eliminar archivos descargados como parte de la sesión de pantalla completa cuando se cierra Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva solo se aplica a la modalidad de exposición de Microsoft Edge.
 
@@ -5363,19 +5362,19 @@ Si deshabilitas esta directiva o no la configuras, los archivos descargados como
 
 Para obtener información detallada sobre cómo configurar la pantalla completa, consulta [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: KioskDeleteDownloadsOnExit
   - Nombre de GP: Eliminar archivos descargados como parte de la sesión de pantalla completa cuando se cierra Microsoft Edge
@@ -5383,14 +5382,14 @@ Para obtener información detallada sobre cómo configurar la pantalla completa,
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: KioskDeleteDownloadsOnExit
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -5400,21 +5399,21 @@ Para obtener información detallada sobre cómo configurar la pantalla completa,
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de capacidad de administración
+  ## <a name="manageability-policies"></a>Directivas de capacidad de administración
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### MAMEnabled
+  ### <a name="mamenabled"></a>MAMEnabled
 
-  #### Administración de aplicaciones móviles habilitada
+  #### <a name="mobile-app-management-enabled"></a>Administración de aplicaciones móviles habilitada
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión 89 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que el explorador Microsoft Edge recupere las directivas de los servicios de administración de aplicaciones de Intune y las aplique a los perfiles de usuarios.
 
@@ -5422,19 +5421,19 @@ Si habilita esta directiva o no la configura, se pueden aplicar directivas de ad
 
 Si deshabilita esta directiva, Microsoft Edge no se comunicará con Intune para solicitar directivas de MAM.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: MAMEnabled
   - Nombre de GP: Administración de aplicaciones móviles habilitada
@@ -5442,20 +5441,20 @@ Si deshabilita esta directiva, Microsoft Edge no se comunicará con Intune para 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendado): N/D
+  - Ruta de acceso (recomendada): N/D
   - Nombre del valor: MAMEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: MAMEnabled
   - Valor de ejemplo:
@@ -5466,39 +5465,39 @@ Si deshabilita esta directiva, Microsoft Edge no se comunicará con Intune para 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de mensajería nativa
+  ## <a name="native-messaging-policies"></a>Directivas de mensajería nativa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NativeMessagingAllowlist
+  ### <a name="nativemessagingallowlist"></a>NativeMessagingAllowlist
 
-  #### Controlar cuáles hosts de mensajería nativo pueden utilizar los usuarios
+  #### <a name="control-which-native-messaging-hosts-users-can-use"></a>Controlar cuáles hosts de mensajería nativo pueden utilizar los usuarios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   La configuración de la directiva especifica qué hosts de mensajería nativa no están sujetos a la lista de denegación. Un valor "*" de la lista de denegación significa que todos los hosts de mensajería nativa están denegados, a menos que se permitan de manera explícita.
 
 Todos los hosts de mensajería nativa están permitidos de forma predeterminada. Sin embargo, si un host de mensajería nativa está denegado por directiva, el administrador puede usar la lista de permitidos para cambiar esa directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NativeMessagingAllowlist
   - Nombre de GP: controlar cuáles son los servidores de mensajería nativos que pueden usar los usuarios
@@ -5506,14 +5505,14 @@ Todos los hosts de mensajería nativa están permitidos de forma predeterminada.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\NativeMessagingAllowlist
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messaging.host.name1"
@@ -5521,7 +5520,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NativeMessagingAllowlist
   - Valor de ejemplo:
@@ -5535,35 +5534,35 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NativeMessagingBlocklist
+  ### <a name="nativemessagingblocklist"></a>NativeMessagingBlocklist
 
-  #### Configurar la lista de bloqueados de la mensajería nativa
+  #### <a name="configure-native-messaging-block-list"></a>Configurar la lista de bloqueados de la mensajería nativa
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   La configuración de esta directiva especifica qué hosts de mensajería nativa no se deben cargar. Un valor "*" de la lista de denegación significa que todos los hosts de mensajería nativa están denegados, a menos que se permitan de manera explícita.
 
 Si deja esta directiva sin configurar, Microsoft Edge carga todos los hosts de mensajería nativos instalados.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NativeMessagingBlocklist
   - Nombre de GP: configurar la lista de elementos bloqueados de la mensajería nativa
@@ -5571,14 +5570,14 @@ Si deja esta directiva sin configurar, Microsoft Edge carga todos los hosts de m
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\NativeMessagingBlocklist
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = "com.native.messaging.host.name1"
@@ -5586,7 +5585,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NativeMessagingBlocklist
   - Valor de ejemplo:
@@ -5600,35 +5599,35 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NativeMessagingUserLevelHosts
+  ### <a name="nativemessaginguserlevelhosts"></a>NativeMessagingUserLevelHosts
 
-  #### Permitir los hosts de mensajería nativo en el nivel de usuario (instalado sin permisos de administrador) 
+  #### <a name="allow-user-level-native-messaging-hosts-installed-without-admin-permissions"></a>Permitir los hosts de mensajería nativo en el nivel de usuario (instalado sin permisos de administrador) 
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si configura esta directiva como Habilitada o la deja sin configurar, Microsoft Edge puede usar los hosts de mensajería nativa instalados en el nivel de usuario.
 
 Si configura esta directiva como Deshabilitada, Microsoft Edge solo puede usar estos hosts si están instalados en el nivel del sistema.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NativeMessagingUserLevelHosts
   - Nombre de GP: permitir el servidor de mensajería nativo en el nivel de usuario (instalado sin permisos de administrador) 
@@ -5636,20 +5635,20 @@ Si configura esta directiva como Deshabilitada, Microsoft Edge solo puede usar e
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: NativeMessagingUserLevelHosts
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NativeMessagingUserLevelHosts
   - Valor de ejemplo:
@@ -5660,21 +5659,21 @@ Si configura esta directiva como Deshabilitada, Microsoft Edge solo puede usar e
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Administrador de contraseñas y directivas de protección
+  ## <a name="password-manager-and-protection-policies"></a>Administrador de contraseñas y directivas de protección
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PasswordManagerEnabled
+  ### <a name="passwordmanagerenabled"></a>PasswordManagerEnabled
 
-  #### Habilitar el guardado de contraseñas en el administrador de contraseñas
+  #### <a name="enable-saving-passwords-to-the-password-manager"></a>Habilitar el guardado de contraseñas en el administrador de contraseñas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilitar Microsoft Edge para guardar las contraseñas de los usuarios.
 
@@ -5684,19 +5683,19 @@ Si deshabilita esta directiva, los usuarios no podrán guardar nuevas contraseñ
 
 Si habilita o deshabilita esta directiva, los usuarios no podrán cambiarla o reemplazarla en Microsoft Edge. Si no la configura, los usuarios podrán guardar las contraseñas, así como desactivar esta característica.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PasswordManagerEnabled
   - Nombre de GP: habilitar la posibilidad de guardar contraseñas en el administrador de contraseñas
@@ -5704,20 +5703,20 @@ Si habilita o deshabilita esta directiva, los usuarios no podrán cambiarla o re
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Administrador de contraseñas y protección 
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: PasswordManagerEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PasswordManagerEnabled
   - Valor de ejemplo:
@@ -5728,17 +5727,17 @@ Si habilita o deshabilita esta directiva, los usuarios no podrán cambiarla o re
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PasswordMonitorAllowed
+  ### <a name="passwordmonitorallowed"></a>PasswordMonitorAllowed
 
-  #### Permitir que los usuarios puedan recibir alertas si se detecta que las contraseñas no son seguras
+  #### <a name="allow-users-to-be-alerted-if-their-passwords-are-found-to-be-unsafe"></a>Permitir que los usuarios puedan recibir alertas si se detecta que las contraseñas no son seguras
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permitir que Microsoft Edge supervise las contraseñas de usuario.
 
@@ -5762,19 +5761,19 @@ Directiva en modo Recomendada: Si la Directiva está establecida en Recomendada,
 
 Obligatorio y Recomendado desactivados: Estos estados funcionarán de la forma habitual y se mostrarán los títulos usuales a los usuarios.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PasswordMonitorAllowed
   - Nombre de directiva de usuario: permitir que los usuarios se avisen si se detecta que las contraseñas no son seguras
@@ -5782,14 +5781,14 @@ Obligatorio y Recomendado desactivados: Estos estados funcionarán de la forma h
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Administrador de contraseñas y protección 
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: PasswordMonitorAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -5799,17 +5798,17 @@ Obligatorio y Recomendado desactivados: Estos estados funcionarán de la forma h
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PasswordProtectionChangePasswordURL
+  ### <a name="passwordprotectionchangepasswordurl"></a>PasswordProtectionChangePasswordURL
 
-  #### Configurar el cambio de contraseña URL
+  #### <a name="configure-the-change-password-url"></a>Configurar el cambio de contraseña URL
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura la dirección URL de cambio de contraseña (solo esquemas HTTP y HTTPS).
 
@@ -5821,19 +5820,19 @@ Si deshabilita esta directiva o no la configura, el servicio de protección de c
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PasswordProtectionChangePasswordURL
   - Nombre de GP: configurar el cambio de dirección URL de la contraseña
@@ -5841,20 +5840,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PasswordProtectionChangePasswordURL
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://contoso.com/change_password.html"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PasswordProtectionChangePasswordURL
   - Valor de ejemplo:
@@ -5865,17 +5864,17 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PasswordProtectionLoginURLs
+  ### <a name="passwordprotectionloginurls"></a>PasswordProtectionLoginURLs
 
-  #### Configurar la lista de URLs de acceso a la empresa donde el servicio de protección de contraseñas debe capturar los salted hashes de una contraseña
+  #### <a name="configure-the-list-of-enterprise-login-urls-where-the-password-protection-service-should-capture-salted-hashes-of-a-password"></a>Configurar la lista de URLs de acceso a la empresa donde el servicio de protección de contraseñas debe capturar los salted hashes de una contraseña
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configurar la lista de URL de inicio de sesión de la empresa (sólo esquemas HTTP y HTTPS) en la que Microsoft Edge debe capturar los salted hashes de las contraseñas y utilizarlos para la detección para volver a utilizar las mismas.
 
@@ -5885,19 +5884,19 @@ Si deshabilita esta directiva o no la configura, no se capturarán las huellas d
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PasswordProtectionLoginURLs
   - GP name: configurar la lista de URLs de acceso a la empresa donde el servicio de protección de contraseñas debe capturar los salted hashes de una contraseña
@@ -5905,14 +5904,14 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\PasswordProtectionLoginURLs
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
@@ -5920,7 +5919,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PasswordProtectionLoginURLs
   - Valor de ejemplo:
@@ -5934,17 +5933,17 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PasswordProtectionWarningTrigger
+  ### <a name="passwordprotectionwarningtrigger"></a>PasswordProtectionWarningTrigger
 
-  #### Configurar el desencadenador de advertencia de protección con contraseña
+  #### <a name="configure-password-protection-warning-trigger"></a>Configurar el desencadenador de advertencia de protección con contraseña
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Le permite controlar cuándo activar la advertencia de protección de contraseña. La protección de la contraseña alerta a los usuarios cuando reutilizan su contraseña protegida en sitios potencialmente sospechosos.
 
@@ -5966,19 +5965,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PasswordProtectionWarningTrigger
   - Nombre de GP: configurar el indicador de advertencia para la protección de contraseñas
@@ -5986,20 +5985,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PasswordProtectionWarningTrigger
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PasswordProtectionWarningTrigger
   - Valor de ejemplo:
@@ -6010,17 +6009,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PasswordRevealEnabled
+  ### <a name="passwordrevealenabled"></a>PasswordRevealEnabled
 
-  #### Habilitar el botón revelar contraseña
+  #### <a name="enable-password-reveal-button"></a>Habilitar el botón revelar contraseña
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Le permite configurar la visualización predeterminada del botón revelar contraseña del explorador para los campos de entrada de contraseña en los sitios Web.
 
@@ -6032,19 +6031,19 @@ Por accesibilidad, los usuarios pueden cambiar la configuración del explorador 
 
 Esta directiva solo afecta al botón revelar contraseña del explorador, no afecta a los botones de revelar personalizados de los sitios Web.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: no
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PasswordRevealEnabled
   - Nombre GP: habilitar el botón revelar contraseña
@@ -6052,20 +6051,20 @@ Esta directiva solo afecta al botón revelar contraseña del explorador, no afec
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Administrador de contraseñas y protección 
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatorio): N/D
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: PasswordRevealEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de preferencias: PasswordRevealEnabled
   - Valor de ejemplo:
@@ -6076,21 +6075,21 @@ Esta directiva solo afecta al botón revelar contraseña del explorador, no afec
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de rendimiento
+  ## <a name="performance-policies"></a>Directivas de rendimiento
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### StartupBoostEnabled
+  ### <a name="startupboostenabled"></a>StartupBoostEnabled
 
-  #### Habilitar el impulso de arranque
+  #### <a name="enable-startup-boost"></a>Habilitar el impulso de arranque
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows, desde la versión 88 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los procesos de Microsoft Edge se inicien en el inicio de sesión del sistema operativo y se reinicie en segundo plano después de cerrar la última ventana del explorador.
 
@@ -6104,19 +6103,19 @@ Si no configura esta directiva, el impulso de arranque puede estar o no activado
 
 Obtenga más información sobre el impulso de arranque: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: StartupBoostEnabled
   - Nombre de GP: habilitar el impulso de arranque
@@ -6124,14 +6123,14 @@ Obtenga más información sobre el impulso de arranque: [https://go.microsoft.co
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Rendimiento
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: StartupBoostEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -6141,21 +6140,21 @@ Obtenga más información sobre el impulso de arranque: [https://go.microsoft.co
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de impresión
+  ## <a name="printing-policies"></a>Directivas de impresión
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultPrinterSelection
+  ### <a name="defaultprinterselection"></a>DefaultPrinterSelection
 
-  #### Reglas predeterminadas para seleccionar impresoras
+  #### <a name="default-printer-selection-rules"></a>Reglas predeterminadas para seleccionar impresoras
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Reemplaza las reglas de selección de impresoras predeterminadas de Microsoft Edge. Esta directiva determina las reglas para seleccionar la impresora predeterminada en Microsoft Edge, que ocurre la primera vez que un usuario intenta imprimir una página.
 
@@ -6167,19 +6166,19 @@ El valor se analiza como un objeto JSON, de acuerdo con el siguiente esquema: { 
 
 Omitir un campo significará que todos los valores coinciden; por ejemplo, si no se especifica la conectividad, la vista previa de impresión empezará a descubrir todo tipo de impresoras locales. Los patrones de expresión regulares deben seguir la sintaxis de JavaScript RegExp y las coincidencias se distinguen mayúsculas de minúsculas
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultPrinterSelection
   - Nombre de GP: reglas predeterminadas para seleccionar impresoras
@@ -6187,20 +6186,20 @@ Omitir un campo significará que todos los valores coinciden; por ejemplo, si no
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultPrinterSelection
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultPrinterSelection
   - Valor de ejemplo:
@@ -6211,17 +6210,17 @@ Omitir un campo significará que todos los valores coinciden; por ejemplo, si no
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PrintHeaderFooter
+  ### <a name="printheaderfooter"></a>PrintHeaderFooter
 
-  #### Imprimir encabezados y pies de página
+  #### <a name="print-headers-and-footers"></a>Imprimir encabezados y pies de página
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Forzar a los "encabezados y pies de página" a que estén activados o desactivados en el diálogo de impresión.
 
@@ -6231,19 +6230,19 @@ Si deshabilita esta directiva, los usuarios no podrán imprimir los encabezados 
 
 Si habilita esta directiva, los usuarios siempre imprimirán los encabezados y los pies de página.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PrintHeaderFooter
   - Nombre de GP: imprimir encabezados y pies de página
@@ -6251,20 +6250,20 @@ Si habilita esta directiva, los usuarios siempre imprimirán los encabezados y l
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Impresión
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: PrintHeaderFooter
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PrintHeaderFooter
   - Valor de ejemplo:
@@ -6275,17 +6274,17 @@ Si habilita esta directiva, los usuarios siempre imprimirán los encabezados y l
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PrintPreviewUseSystemDefaultPrinter
+  ### <a name="printpreviewusesystemdefaultprinter"></a>PrintPreviewUseSystemDefaultPrinter
 
-  #### Establecer la impresora predeterminada del sistema como la impresora predeterminada
+  #### <a name="set-the-system-default-printer-as-the-default-printer"></a>Establecer la impresora predeterminada del sistema como la impresora predeterminada
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Indica a Microsoft Edge que utilice la impresora predeterminada del sistema como opción predeterminada en la vista previa de impresión en lugar de la impresora utilizada recientemente.
 
@@ -6293,19 +6292,19 @@ Si deshabilita esta directiva o no la configura, la vista previa de impresión u
 
 Si habilita esta directiva, la vista previa de impresión utilizará la impresora predeterminada del sistema operativo como opción de destino predeterminada.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PrintPreviewUseSystemDefaultPrinter
   - Nombre de GP: establecer la impresora del sistema como la impresora predeterminada
@@ -6313,20 +6312,20 @@ Si habilita esta directiva, la vista previa de impresión utilizará la impresor
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Impresión
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: PrintPreviewUseSystemDefaultPrinter
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PrintPreviewUseSystemDefaultPrinter
   - Valor de ejemplo:
@@ -6337,17 +6336,82 @@ Si habilita esta directiva, la vista previa de impresión utilizará la impresor
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PrinterTypeDenyList
+  ### <a name="printrasterizationmode"></a>PrintRasterizationMode
 
-  #### Deshabilitar los tipos de impresora en la lista de denegación
+  #### <a name="print-rasterization-mode"></a>Modo de rasterización de impresión
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows desde la versión 90 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Controla cómo se imprime Microsoft Edge en Windows.
+
+Al imprimir en una impresora que no sea PostScript en Windows, a veces es necesario rasterizar los trabajos de impresión para imprimir correctamente.
+
+Si establece esta directiva en "Completa" o no la configura, Microsoft Edge realizará la rasterización de la página completa si es necesario.
+
+Si establece esta directiva en "Rápido", Microsoft Edge reducirá la cantidad de rasterización, lo que puede ayudar a reducir el tamaño de los trabajos de impresión y aumentar la velocidad de impresión.
+
+Asignación de opciones de directiva:
+
+* Completo (0) = Rasterización de página completa
+
+* Rápido (1) = Evitar la rasterización si es posible
+
+Use la información anterior al configurar esta directiva.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: PrintRasterizationMode
+  - Nombre de GP: Modo de rasterización de impresión
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Impresión
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/D
+  - Nombre del valor: PrintRasterizationMode
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="printertypedenylist"></a>PrinterTypeDenyList
+
+  #### <a name="disable-printer-types-on-the-deny-list"></a>Deshabilitar los tipos de impresora en la lista de denegación
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Los tipos de impresora de la lista de denegación no se detectarán ni se capturarán sus funciones.
 
@@ -6370,19 +6434,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PrinterTypeDenyList
   - Nombre de GP: deshabilitar los tipos de impresora en la lista de denegación
@@ -6390,14 +6454,14 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatorio): SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\1 = "local"
@@ -6405,7 +6469,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de la clave de preferencias: PrinterTypeDenyList
   - Valor de ejemplo:
@@ -6419,17 +6483,17 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PrintingAllowedBackgroundGraphicsModes
+  ### <a name="printingallowedbackgroundgraphicsmodes"></a>PrintingAllowedBackgroundGraphicsModes
 
-  #### Restringir el modo de impresión de imágenes gráficas del fondo
+  #### <a name="restrict-background-graphics-printing-mode"></a>Restringir el modo de impresión de imágenes gráficas del fondo
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión 89 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Restringe el modo de impresión de imágenes gráficas del fondo. Si esta directiva no se establece, no hay restricciones en la impresión de imágenes gráficas del fondo.
 
@@ -6443,19 +6507,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PrintingAllowedBackgroundGraphicsModes
   - Nombre de la directiva de grupo (GP): Restringir el modo de impresión de imágenes gráficas del fondo
@@ -6463,20 +6527,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): N/D
   - Nombre del valor: PrintingAllowedBackgroundGraphicsModes
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "enabled"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencia: PrintingAllowedBackgroundGraphicsModes
   - Valor de ejemplo:
@@ -6487,17 +6551,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PrintingBackgroundGraphicsDefault
+  ### <a name="printingbackgroundgraphicsdefault"></a>PrintingBackgroundGraphicsDefault
 
-  #### Modo predeterminado de impresión de imágenes gráficas del fondo
+  #### <a name="default-background-graphics-printing-mode"></a>Modo predeterminado de impresión de imágenes gráficas del fondo
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión 89 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Reemplaza la última configuración usada para imprimir gráficos de fondo.
 Si habilita esta configuración, se habilitará la impresión de gráficos de fondo.
@@ -6511,19 +6575,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PrintingBackgroundGraphicsDefault
   - Nombre de GP: Modo predeterminado de impresión de imágenes gráficas del fondo
@@ -6531,20 +6595,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendado): N/D
+  - Ruta de acceso (recomendada): N/D
   - Nombre del valor: PrintingBackgroundGraphicsDefault
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "enabled"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencia: PrintingBackgroundGraphicsDefault
   - Valor de ejemplo:
@@ -6555,17 +6619,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PrintingEnabled
+  ### <a name="printingenabled"></a>PrintingEnabled
 
-  #### Habilitar la impresión
+  #### <a name="enable-printing"></a>Habilitar la impresión
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita la impresión en Microsoft Edge y evita que los usuarios cambien esta configuración.
 
@@ -6573,19 +6637,19 @@ Si habilita esta directiva o no la configura los usuarios podrán imprimir.
 
 Si deshabilita esta política, los usuarios no podrán imprimir desde Microsoft Edge. Si deshabilita esta directiva, los usuarios no podrán imprimir desde Microsoft Edge. Los usuarios pueden seguir imprimiendo desde los complementos que omiten Microsoft Edge mientras imprimen. Por ejemplo, ciertas aplicaciones de Adobe Flash tienen la opción de imprimir en su menú contextual, lo cual no está cubierto en esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PrintingEnabled
   - Nombre de GP: habilitar la impresión
@@ -6593,20 +6657,20 @@ Si deshabilita esta política, los usuarios no podrán imprimir desde Microsoft 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PrintingEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PrintingEnabled
   - Valor de ejemplo:
@@ -6617,17 +6681,17 @@ Si deshabilita esta política, los usuarios no podrán imprimir desde Microsoft 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PrintingPaperSizeDefault
+  ### <a name="printingpapersizedefault"></a>PrintingPaperSizeDefault
 
-  #### Tamaño de página de impresión predeterminado
+  #### <a name="default-printing-page-size"></a>Tamaño de página de impresión predeterminado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Reemplaza el tamaño de página de impresión predeterminado.
 
@@ -6635,19 +6699,19 @@ El nombre debe contener uno de los formatos listados o "personalizado" si el tam
 
 Si el tamaño de la página no está disponible en la impresora elegida por el usuario, se ignora esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PrintingPaperSizeDefault
   - Nombre de GP: tamaño de página de impresión predeterminado
@@ -6655,14 +6719,14 @@ Si el tamaño de la página no está disponible en la impresora elegida por el u
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PrintingPaperSizeDefault
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
@@ -6674,14 +6738,14 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 }
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {"custom_size": {"height": 297000, "width": 210000}, "name": "custom"}
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: PrintingPaperSizeDefault
   - Valor de ejemplo:
@@ -6703,17 +6767,17 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### UseSystemPrintDialog
+  ### <a name="usesystemprintdialog"></a>UseSystemPrintDialog
 
-  #### Imprimir usando el diálogo de impresión del sistema
+  #### <a name="print-using-system-print-dialog"></a>Imprimir usando el diálogo de impresión del sistema
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Muestra el diálogo de impresión del sistema en lugar de la vista previa de impresión.
 
@@ -6721,19 +6785,19 @@ Si habilita esta directiva, Microsoft Edge abrirá el diálogo de impresión del
 
 Si no configura o deshabilita esta directiva, los comandos de impresión activarán la pantalla de vista previa de impresión de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: UseSystemPrintDialog
   - Nombre de GP: imprimir usando el diálogo de impresión del sistema
@@ -6741,20 +6805,20 @@ Si no configura o deshabilita esta directiva, los comandos de impresión activar
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: UseSystemPrintDialog
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: UseSystemPrintDialog
   - Valor de ejemplo:
@@ -6765,21 +6829,21 @@ Si no configura o deshabilita esta directiva, los comandos de impresión activar
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de servidor proxy
+  ## <a name="proxy-server-policies"></a>Directivas de servidor proxy
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ProxyBypassList
+  ### <a name="proxybypasslist"></a>ProxyBypassList
 
-  #### Configurar las reglas de omisión de proxy (en desuso)
+  #### <a name="configure-proxy-bypass-rules-deprecated"></a>Configurar las reglas de omisión de proxy (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva está en desuso. En su lugar, use [ProxySettings](#proxysettings). No funciona en la versión 91 de Microsoft Edge.
 
@@ -6793,19 +6857,19 @@ Si no configura esta directiva, no se crea ninguna lista de hosts para los que M
 
 Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProxyBypassList
   - Nombre de GP: configurar las reglas de omisión de proxy (en desuso)
@@ -6813,20 +6877,20 @@ Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ProxyBypassList
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ProxyBypassList
   - Valor de ejemplo:
@@ -6837,17 +6901,17 @@ Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ProxyMode
+  ### <a name="proxymode"></a>ProxyMode
 
-  #### Configurar los ajustes del servidor proxy (en desuso)
+  #### <a name="configure-proxy-server-settings-deprecated"></a>Configurar los ajustes del servidor proxy (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva está en desuso. En su lugar, use [ProxySettings](#proxysettings). No funciona en la versión 91 de Microsoft Edge.
 
@@ -6880,19 +6944,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProxyMode
   - Nombre de GP: configurar los ajustes del servidor proxy (en desuso)
@@ -6900,20 +6964,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ProxyMode
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "direct"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ProxyMode
   - Valor de ejemplo:
@@ -6924,17 +6988,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ProxyPacUrl
+  ### <a name="proxypacurl"></a>ProxyPacUrl
 
-  #### Establecer la dirección URL del proxy del archivo .pac (en desuso)
+  #### <a name="set-the-proxy-pac-file-url-deprecated"></a>Establecer la dirección URL del proxy del archivo .pac (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva está en desuso. En su lugar, use [ProxySettings](#proxysettings). No funciona en la versión 91 de Microsoft Edge.
 
@@ -6948,19 +7012,19 @@ Si deshabilita o no configura esta directiva, no se especificará ningún archiv
 
 Para obtener ejemplos más detallados, vea [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProxyPacUrl
   - Nombre de GP: establecer la dirección URL del proxy del archivo .pac (en desuso)
@@ -6968,20 +7032,20 @@ Para obtener ejemplos más detallados, vea [https://go.microsoft.com/fwlink/?lin
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ProxyPacUrl
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://internal.contoso.com/example.pac"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ProxyPacUrl
   - Valor de ejemplo:
@@ -6992,17 +7056,17 @@ Para obtener ejemplos más detallados, vea [https://go.microsoft.com/fwlink/?lin
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ProxyServer
+  ### <a name="proxyserver"></a>ProxyServer
 
-  #### Configurar la dirección o la dirección URL del servidor proxy (en desuso)
+  #### <a name="configure-address-or-url-of-proxy-server-deprecated"></a>Configurar la dirección o la dirección URL del servidor proxy (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva está en desuso. En su lugar, use [ProxySettings](#proxysettings). No funciona en la versión 91 de Microsoft Edge.
 
@@ -7016,19 +7080,19 @@ Si deshabilita o no configura esta directiva, los usuarios pueden elegir su prop
 
 Para obtener más opciones y ejemplos detallados, vea [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProxyServer
   - Nombre de GP: configurar la dirección o la dirección URL del servidor proxy (en desuso)
@@ -7036,20 +7100,20 @@ Para obtener más opciones y ejemplos detallados, vea [https://go.microsoft.com/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ProxyServer
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "123.123.123.123:8080"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ProxyServer
   - Valor de ejemplo:
@@ -7060,17 +7124,17 @@ Para obtener más opciones y ejemplos detallados, vea [https://go.microsoft.com/
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ProxySettings
+  ### <a name="proxysettings"></a>ProxySettings
 
-  #### Configuración de proxy
+  #### <a name="proxy-settings"></a>Configuración de proxy
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura la configuración del proxy para Microsoft Edge.
 
@@ -7100,19 +7164,19 @@ Para ProxyMode, si elige el valor:
 
 Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProxySettings
   - Nombre de GP: configurar parámetros proxy
@@ -7120,14 +7184,14 @@ Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ProxySettings
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
@@ -7138,14 +7202,14 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 }
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ProxySettings
   - Valor de ejemplo:
@@ -7166,21 +7230,21 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de configuración de pestañas en estado de reposo
+  ## <a name="sleeping-tabs-settings-policies"></a>Directivas de configuración de pestañas en estado de reposo
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SleepingTabsBlockedForUrls
+  ### <a name="sleepingtabsblockedforurls"></a>SleepingTabsBlockedForUrls
 
-  #### Bloquear pestañas en reposo en sitios específicos
+  #### <a name="block-sleeping-tabs-on-specific-sites"></a>Bloquear pestañas en reposo en sitios específicos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Definir una lista de sitios, en función de los patrones de dirección URL, que no se pueden poner en suspensión con pestañas en reposo.
 
@@ -7188,19 +7252,19 @@ Si la directiva [SleepingTabsEnabled](#sleepingtabsenabled) está deshabilitada,
 
 Si no se configura esta directiva, todos los sitios podrán ponerse en suspensión a menos que la configuración personal del usuario los bloquee.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SleepingTabsBlockedForUrls
   - Nombre de GP: bloquear pestañas en reposo en sitios específicos
@@ -7208,14 +7272,14 @@ Si no se configura esta directiva, todos los sitios podrán ponerse en suspensi�
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Configuración de pestañas en reposo
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\SleepingTabsBlockedForUrls
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Edge\Recomendado\SleepingTabsBlockedForUrls
   - Nombre del valor: 1, 2, 3...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\1 = "https://www.contoso.com"
@@ -7223,7 +7287,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
 ```
 
-  #### Información y configuración para Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración para Mac
   
   - Nombre de la clave de preferencias: SleepingTabsBlockedForUrls
   - Valor de ejemplo:
@@ -7237,17 +7301,17 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SleepingTabsEnabled
+  ### <a name="sleepingtabsenabled"></a>SleepingTabsEnabled
 
-  #### Configurar pestañas en estado de reposo
+  #### <a name="configure-sleeping-tabs"></a>Configurar pestañas en estado de reposo
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta configuración de directiva te permite configurar si se deben activar las pestañas en estado de reposo. Las pestañas en reposo reducen el uso de cpu, batería y memoria al poner pestañas en segundo plano inactivas para que se queden en reposo. Microsoft Edge usa la heurística para evitar poner en suspensión pestañas que hacen un trabajo útil en segundo plano, como notificaciones de visualización, reproducción de sonido y transmisión de vídeo. De forma predeterminada, las pestañas en estado de reposo están activadas.
 
@@ -7259,19 +7323,19 @@ Si deshabilitas esta configuración, se desactivarán las pestañas en modo de r
 
 Si no configuras esta opción, los usuarios pueden elegir si quieren usar pestañas en estado de reposo.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SleepingTabsEnabled
   - Nombre de GP: configurar pestañas en estado de reposo
@@ -7279,20 +7343,20 @@ Si no configuras esta opción, los usuarios pueden elegir si quieren usar pesta�
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Configuración de pestañas en reposo
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft\Edge\Recomendado
   - Nombre del valor: SleepingTabsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración para Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración para Mac
   
   - Nombre de la clave de preferencias: SleepingTabsEnabled
   - Valor de ejemplo:
@@ -7303,17 +7367,17 @@ Si no configuras esta opción, los usuarios pueden elegir si quieren usar pesta�
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SleepingTabsTimeout
+  ### <a name="sleepingtabstimeout"></a>SleepingTabsTimeout
 
-  #### Establecer el tiempo de espera de inactividad de la pestaña en segundo plano para las pestañas en reposo
+  #### <a name="set-the-background-tab-inactivity-timeout-for-sleeping-tabs"></a>Establecer el tiempo de espera de inactividad de la pestaña en segundo plano para las pestañas en reposo
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta configuración de directiva te permite configurar el tiempo de espera, en segundos, después del cual las pestañas en segundo plano inactivas se pondrán automáticamente en suspensión si las pestañas en reposo están habilitadas. De forma predeterminada, el tiempo de espera es de 7200 segundos (2horas).
 
@@ -7341,19 +7405,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SleepingTabsTimeout
   - Nombre de GP: establecer el tiempo de espera de inactividad de la pestaña en segundo plano para las pestañas en reposo
@@ -7361,20 +7425,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden invalidarla)/Configuración de pestañas en reposo
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft\Edge\Recomendado
   - Nombre del valor: SleepingTabsTimeout
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000384
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de la clave de preferencias: SleepingTabsTimeout
   - Valor de ejemplo:
@@ -7385,21 +7449,21 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Configuración de directivas de SmartScreen
+  ## <a name="smartscreen-settings-policies"></a>Configuración de directivas de SmartScreen
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PreventSmartScreenPromptOverride
+  ### <a name="preventsmartscreenpromptoverride"></a>PreventSmartScreenPromptOverride
 
-  #### Impedir la omisión de los mensajes de SmartScreen de Microsoft Defender para los sitios
+  #### <a name="prevent-bypassing-microsoft-defender-smartscreen-prompts-for-sites"></a>Impedir la omisión de los mensajes de SmartScreen de Microsoft Defender para los sitios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta configuración de directiva le permite decidir si los usuarios pueden reemplazar las advertencias de SmartScreen de Microsoft Defender sobre sitios web potencialmente malintencionados.
 
@@ -7409,19 +7473,19 @@ Si deshabilita o no establece esta configuración, los usuarios podrán ignorar 
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PreventSmartScreenPromptOverride
   - Nombre de GP: Impedir la omisión de los avisos de SmartScreen de Microsoft Defender para los sitios
@@ -7429,20 +7493,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Value Name: PreventSmartScreenPromptOverride
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia:PreventSmartScreenPromptOverride
   - Valor de ejemplo:
@@ -7453,18 +7517,18 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PreventSmartScreenPromptOverrideForFiles
+  ### <a name="preventsmartscreenpromptoverrideforfiles"></a>PreventSmartScreenPromptOverrideForFiles
 
-  #### Impedir que se ignoren las advertencias de SmartScreen de Microsoft Defender sobre las descargas
+  #### <a name="prevent-bypassing-of-microsoft-defender-smartscreen-warnings-about-downloads"></a>Impedir que se ignoren las advertencias de SmartScreen de Microsoft Defender sobre las descargas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 77 o posterior
   - En MacOS desde la versión 79 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva le permite determinar si los usuarios pueden anular las advertencias de SmartScreen de Microsoft Defender sobre las descargas sin comprobar.
 
@@ -7474,19 +7538,19 @@ Si deshabilita o no configura esta directiva, los usuarios podrán ignorar las a
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PreventSmartScreenPromptOverrideForFiles
   - Nombre de GP: impedir la omisión de las advertencias sobre las descargas de SmartScreen de Microsoft Defender 
@@ -7494,20 +7558,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Value Name: PreventSmartScreenPromptOverrideForFiles
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PreventSmartScreenPromptOverrideForFiles
   - Valor de ejemplo:
@@ -7518,17 +7582,17 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SmartScreenAllowListDomains
+  ### <a name="smartscreenallowlistdomains"></a>SmartScreenAllowListDomains
 
-  #### Configurar la lista de dominios en los que SmartScreen de Microsoft Defender no desencadenará advertencias
+  #### <a name="configure-the-list-of-domains-for-which-microsoft-defender-smartscreen-wont-trigger-warnings"></a>Configurar la lista de dominios en los que SmartScreen de Microsoft Defender no desencadenará advertencias
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura la lista de dominios de confianza de SmartScreen de Microsoft Defender. Esto significa que: SmartScreen de Microsoft Defender no comprobará la existencia de recursos potencialmente malintencionados como software de suplantación de identidad (phishing) y otro malware si las direcciones URL de origen coinciden con estos dominios.
 El servicio de protección de descargas de SmartScreen de Microsoft Defender no comprueba las descargas hospedadas en estos dominios.
@@ -7539,19 +7603,19 @@ Si deshabilita o no establece esta directiva, la protección predeterminada de S
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 Tenga en cuenta también que esta directiva no se aplicará si su organización habilitó la Protección contra amenazas avanzada de Microsoft Defender. En su lugar, debe configurar las listas de permitidos y bloqueados en el Centro de seguridad de Microsoft Defender.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SmartScreenAllowListDomains
   - Nombre de GP: configurar la lista de dominios en los que SmartScreen de Microsoft Defender no desencadenará advertencias
@@ -7559,14 +7623,14 @@ Tenga en cuenta también que esta directiva no se aplicará si su organización 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\SmartScreenAllowListDomains
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
@@ -7574,7 +7638,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SmartScreenAllowListDomains
   - Valor de ejemplo:
@@ -7588,17 +7652,17 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SmartScreenEnabled
+  ### <a name="smartscreenenabled"></a>SmartScreenEnabled
 
-  #### Configurar SmartScreen de Microsoft Defender
+  #### <a name="configure-microsoft-defender-smartscreen"></a>Configurar SmartScreen de Microsoft Defender
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta configuración de directiva permite configurar si se activa SmartScreen de Microsoft Defender. SmartScreen de Microsoft Defender muestra mensajes de advertencia para ayudar a proteger a los usuarios de posibles estafas de suplantación de identidad (phishing) y software malintencionado. De manera predeterminada, SmartScreen de Microsoft Defender está activado.
 
@@ -7610,19 +7674,19 @@ Si no establece esta configuración, los usuarios podrán elegir si quieren usar
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SmartScreenEnabled
   - Nombre de GP: configurar SmartScreen de Microsoft Defender
@@ -7630,20 +7694,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Configuración de SmartScreen
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: SmartScreenEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SmartScreenEnabled
   - Valor de ejemplo:
@@ -7654,17 +7718,17 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SmartScreenForTrustedDownloadsEnabled
+  ### <a name="smartscreenfortrusteddownloadsenabled"></a>SmartScreenForTrustedDownloadsEnabled
 
-  #### Forzar a SmartScreen de Microsoft Defender a comprobar las descargas de origen confiable
+  #### <a name="force-microsoft-defender-smartscreen-checks-on-downloads-from-trusted-sources"></a>Forzar a SmartScreen de Microsoft Defender a comprobar las descargas de origen confiable
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta configuración de directiva le permite configurar si SmartScreen de Microsoft Defender comprueba la reputación de las descargas de una fuente de confianza.
 
@@ -7674,19 +7738,19 @@ Si deshabilita esta configuración, SmartScreen de Microsoft Defender no comprob
 
 Esta directiva solo está disponible en las instancias de Windows que están unidas a un dominio de Microsoft Active Directory o en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SmartScreenForTrustedDownloadsEnabled
   - Nombre de GP: forzar a SmartScreen de Microsoft Defender a que compruebe las descargas de orígenes de confianza
@@ -7694,14 +7758,14 @@ Esta directiva solo está disponible en las instancias de Windows que están uni
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Configuración de SmartScreen
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: SmartScreenForTrustedDownloadsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -7711,17 +7775,17 @@ Esta directiva solo está disponible en las instancias de Windows que están uni
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SmartScreenPuaEnabled
+  ### <a name="smartscreenpuaenabled"></a>SmartScreenPuaEnabled
 
-  #### Configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.
+  #### <a name="configure-microsoft-defender-smartscreen-to-block-potentially-unwanted-apps"></a>Configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta configuración de directiva le permite configurar si activar o no el bloqueo de aplicaciones potencialmente no deseadas de SmartScreen de Microsoft Defender. El bloqueo de aplicaciones potencialmente no deseadas de SmartScreen de Microsoft Defender proporciona mensajes de advertencia para ayudar a proteger a los usuarios del adware, los mineros de monedas, el bundleware y otras aplicaciones de baja reputación que están hospedadas en sitios web. El bloqueo de aplicaciones potencialmente no deseadas de SmartScreen de Microsoft Defender está desactivado por defecto.
 
@@ -7733,19 +7797,19 @@ Si no configura esta opción, los usuarios podrán elegir si desean utilizar el 
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SmartScreenPuaEnabled
   - Nombre de GP: configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.
@@ -7753,20 +7817,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Configuración de SmartScreen
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: SmartScreenPuaEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SmartScreenPuaEnabled
   - Valor de ejemplo:
@@ -7777,21 +7841,21 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Directivas de Inicio&comma; página principal y página de pestaña nueva
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### HomepageIsNewTabPage
+  ### <a name="homepageisnewtabpage"></a>HomepageIsNewTabPage
 
-  #### Establecer la nueva ficha como página principal
+  #### <a name="set-the-new-tab-page-as-the-home-page"></a>Establecer la nueva ficha como página principal
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura la página principal predeterminada en Microsoft Edge. Puede establecer la página principal en una dirección URL que especifique o en la página de la nueva pestaña.
 
@@ -7803,19 +7867,19 @@ Si no está configurado, los usuarios pueden elegir si la nueva pestaña es su p
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: HomepageIsNewTabPage
   - Nombre de GP: establecer la página de la nueva pestaña como página principal
@@ -7823,20 +7887,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazar)/Startup, página principal y página de la pestaña nueva
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: HomepageIsNewTabPage
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: HomepageIsNewTabPage
   - Valor de ejemplo:
@@ -7847,17 +7911,17 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### HomepageLocation
+  ### <a name="homepagelocation"></a>HomepageLocation
 
-  #### Configurar la dirección URL de la página principal
+  #### <a name="configure-the-home-page-url"></a>Configurar la dirección URL de la página principal
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura la dirección URL de la página principal predeterminada en Microsoft Edge.
 
@@ -7871,19 +7935,19 @@ Si deshabilita o no configura esta directiva, los usuarios podrán elegir su pro
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: HomepageLocation
   - Nombre de GP: configurar la dirección URL de la página principal
@@ -7891,20 +7955,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazar)/Startup, página principal y página de la pestaña nueva
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: HomepageLocation
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://www.contoso.com"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: HomepageLocation
   - Valor de ejemplo:
@@ -7915,17 +7979,17 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NewTabPageAllowedBackgroundTypes
+  ### <a name="newtabpageallowedbackgroundtypes"></a>NewTabPageAllowedBackgroundTypes
 
-  #### Configurar los tipos de fondo permitidos para el diseño de página de nueva pestaña
+  #### <a name="configure-the-background-types-allowed-for-the-new-tab-page-layout"></a>Configurar los tipos de fondo permitidos para el diseño de página de nueva pestaña
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Puede configurar qué tipos de imagen de fondo se permiten en el diseño de página de nueva pestaña en Microsoft Edge.
 
@@ -7941,19 +8005,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NewTabPageAllowedBackgroundTypes
   - Nombre de GP: configurar los tipos de fondo permitidos para el diseño de página de nueva pestaña
@@ -7961,20 +8025,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: NewTabPageAllowedBackgroundTypes
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageAllowedBackgroundTypes
   - Valor de ejemplo:
@@ -7985,17 +8049,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NewTabPageCompanyLogo
+  ### <a name="newtabpagecompanylogo"></a>NewTabPageCompanyLogo
 
-  #### Establecer el logotipo de la compañía en la página de nueva pestaña (obsoleto)
+  #### <a name="set-new-tab-page-company-logo-obsolete"></a>Establecer el logotipo de la compañía en la página de nueva pestaña (obsoleto)
 
   
   >OBSOLETA: Esta directiva está obsoleta y no funciona después de Microsoft Edge 85.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS, desde el 79 hasta el 85
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva no funcionaba como se esperaba debido a cambios en los requisitos operativos. Por lo que está obsoleto y no se debe usar.
 
@@ -8013,19 +8077,19 @@ Si deshabilita o no configura esta directiva, Microsoft Edge no mostrará ningú
 
 Para obtener ayuda para determinar el algoritmo hash SHA-256, vea https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NewTabPageCompanyLogo
   - Nombre de GP: establecer logotipo de la empresa en la página de nueva pestaña (obsoleto)
@@ -8033,14 +8097,14 @@ Para obtener ayuda para determinar el algoritmo hash SHA-256, vea https://docs.m
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: NewTabPageCompanyLogo
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
@@ -8055,14 +8119,14 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 }
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {"default_logo": {"hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", "url": "https://www.contoso.com/logo.png"}, "light_logo": {"hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", "url": "https://www.contoso.com/light_logo.png"}}
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageCompanyLogo
   - Valor de ejemplo:
@@ -8089,17 +8153,17 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NewTabPageHideDefaultTopSites
+  ### <a name="newtabpagehidedefaulttopsites"></a>NewTabPageHideDefaultTopSites
 
-  #### Ocultar los sitios principales predeterminados de la nueva ficha
+  #### <a name="hide-the-default-top-sites-from-the-new-tab-page"></a>Ocultar los sitios principales predeterminados de la nueva ficha
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Oculta los sitios principales predeterminados de la página de la nueva pestaña de Microsoft Edge.
 
@@ -8107,19 +8171,19 @@ Si establece esta directiva en true, los iconos del sitio superior predeterminad
 
 Si establece esta directiva como falsa o no la configura, los iconos del sitio superior predeterminados permanecerán visibles.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NewTabPageHideDefaultTopSites
   - Nombre de GP: Ocultar los principales sitios predeterminados de la nueva página de la pestaña
@@ -8127,20 +8191,20 @@ Si establece esta directiva como falsa o no la configura, los iconos del sitio s
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: NewTabPageHideDefaultTopSites
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageHideDefaultTopSites
   - Valor de ejemplo:
@@ -8151,17 +8215,17 @@ Si establece esta directiva como falsa o no la configura, los iconos del sitio s
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NewTabPageLocation
+  ### <a name="newtabpagelocation"></a>NewTabPageLocation
 
-  #### Configurar la dirección URL de la ficha
+  #### <a name="configure-the-new-tab-page-url"></a>Configurar la dirección URL de la ficha
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite configurar la dirección URL predeterminada de la página de nueva pestaña.
 
@@ -8179,19 +8243,19 @@ Si se prefiere usar una pestaña en blanco, "about:blank" es la dirección URL c
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NewTabPageLocation
   - Nombre de GP: configurar página de la nueva pestaña de dirección URL
@@ -8199,20 +8263,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazar)/Startup, página principal y página de la pestaña nueva
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: NewTabPageLocation
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://www.fabrikam.com"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageLocation
   - Valor de ejemplo:
@@ -8223,17 +8287,17 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NewTabPageManagedQuickLinks
+  ### <a name="newtabpagemanagedquicklinks"></a>NewTabPageManagedQuickLinks
 
-  #### Establecer una nueva ficha de vínculos rápidos
+  #### <a name="set-new-tab-page-quick-links"></a>Establecer una nueva ficha de vínculos rápidos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 79 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   De forma predeterminada, Microsoft Edge muestra vínculos rápidos en la página de la nueva pestaña de los accesos directos agregados por el usuario y los sitios principales en función del historial de exploración. Con esta directiva, puede configurar hasta tres iconos de vínculos rápidos en la página de la nueva pestaña, expresados como objeto JSON:
 
@@ -8247,19 +8311,19 @@ Si la directiva está establecida como obligatoria, el campo " anclado " será i
 
 Si la Directiva está establecida como se recomienda, los mosaicos anclados permanecerán en la lista, pero el usuario podrá editarlos y eliminarlos. Los iconos de vínculos rápidos sin fijar se comportan como sitios principales predeterminados y se resaltan en la lista si se visitan otros sitios web con más frecuencia. Al aplicar vínculos no anclados a través de esta directiva a un perfil de explorador existente, es posible que los vínculos no aparezcan en absoluto, en función de cómo se encuentren en comparación con el historial de exploración del usuario.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NewTabPageManagedQuickLinks
   - Nombre de GP: establecer una nueva pestaña de vínculos rápidos
@@ -8267,14 +8331,14 @@ Si la Directiva está establecida como se recomienda, los mosaicos anclados perm
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazar)/Startup, página principal y página de la pestaña nueva
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: NewTabPageManagedQuickLinks
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
@@ -8290,14 +8354,14 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 ]
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [{"pinned": true, "title": "Contoso Portal", "url": "https://contoso.com"}, {"title": "Fabrikam", "url": "https://fabrikam.com"}]
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageManagedQuickLinks
   - Valor de ejemplo:
@@ -8324,33 +8388,33 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NewTabPagePrerenderEnabled
+  ### <a name="newtabpageprerenderenabled"></a>NewTabPagePrerenderEnabled
 
-  #### Habilitar precarga de la página de nueva pestaña para procesamiento más rápido
+  #### <a name="enable-preload-of-the-new-tab-page-for-faster-rendering"></a>Habilitar precarga de la página de nueva pestaña para procesamiento más rápido
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si configura esta Directiva, se habilitará la carga previa de la página de la pestaña nueva y los usuarios no podrán cambiar esta configuración. Si no configura esta Directiva, se habilita la carga previa y un usuario puede cambiar esta configuración.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NewTabPagePrerenderEnabled
   - Nombre de GP: Habilitar precarga de la página de nueva pestaña para procesamiento más rápido
@@ -8358,20 +8422,20 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazar)/Startup, página principal y página de la pestaña nueva
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: NewTabPagePrerenderEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: NewTabPagePrerenderEnabled
   - Valor de ejemplo:
@@ -8382,17 +8446,17 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NewTabPageSetFeedType
+  ### <a name="newtabpagesetfeedtype"></a>NewTabPageSetFeedType
 
-  #### Configurar la experiencia de la nueva ficha de Microsoft Edge (en desuso)
+  #### <a name="configure-the-microsoft-edge-new-tab-page-experience-deprecated"></a>Configurar la experiencia de la nueva ficha de Microsoft Edge (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 79 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Estamos dejando de usar esta Directiva, ya que la nueva versión de la página de la nueva pestaña de Enterprise ya no requiere escoger entre los diferentes tipos de contenido. En su lugar, el contenido que se presenta al usuario se puede controlar mediante el Centro de administración de Microsoft 365. Para ir al Centro de administración de Microsoft 365, inicie sesión en https://admin.microsoft.com con su cuenta de administrador. La Directiva quedará obsoleta después de la versión 90 de Microsoft Edge.
 
@@ -8420,19 +8484,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NewTabPageSetFeedType
   - Nombre de GP: Configurar la experiencia de la página de la nueva pestaña de Microsoft Edge (en desuso)
@@ -8440,20 +8504,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazar)/Startup, página principal y página de la pestaña nueva
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: NewTabPageSetFeedType
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NewTabPageSetFeedType
   - Valor de ejemplo:
@@ -8464,17 +8528,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RestoreOnStartup
+  ### <a name="restoreonstartup"></a>RestoreOnStartup
 
-  #### Acción que se realizará en el inicio
+  #### <a name="action-to-take-on-startup"></a>Acción que se realizará en el inicio
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica cómo se comporta Microsoft Edge cuando se inicia.
 
@@ -8498,19 +8562,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RestoreOnStartup
   - Nombre de GP: acciones necesarias para realizar el inicio
@@ -8518,20 +8582,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazar)/Startup, página principal y página de la pestaña nueva
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: RestoreOnStartup
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000004
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: RestoreOnStartup
   - Valor de ejemplo:
@@ -8542,17 +8606,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RestoreOnStartupURLs
+  ### <a name="restoreonstartupurls"></a>RestoreOnStartupURLs
 
-  #### Sitios que se abren cuando el explorador se inicia
+  #### <a name="sites-to-open-when-the-browser-starts"></a>Sitios que se abren cuando el explorador se inicia
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especificar una lista de sitios web para que se abran automáticamente cuando se inicie el explorador. Si no configura esta directiva, no se abrirá ningún sitio al iniciar.
 
@@ -8560,19 +8624,19 @@ Esta directiva solo funciona si también establece la directiva [RestoreOnStartu
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RestoreOnStartupURLs
   - Nombre de GP: sitios que se abren al iniciar el explorador
@@ -8580,14 +8644,14 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazar)/Startup, página principal y página de la pestaña nueva
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\RestoreOnStartupURLs
   - Ruta de acceso (recomendada): SOFTWARE\Policies\Microsoft\Microsoft Edge\Recommended\RestoreOnStartupURLs
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
@@ -8595,7 +8659,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: RestoreOnStartupURLs
   - Valor de ejemplo:
@@ -8609,17 +8673,17 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ShowHomeButton
+  ### <a name="showhomebutton"></a>ShowHomeButton
 
-  #### Mostrar el botón Inicio en la barra de herramientas
+  #### <a name="show-home-button-on-toolbar"></a>Mostrar el botón Inicio en la barra de herramientas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Muestra el botón Inicio en la barra de herramientas de Microsoft Edge.
 
@@ -8627,19 +8691,19 @@ Habilite esta directiva para mostrar siempre el botón Inicio. Deshabilítelo de
 
 Si no configura la directiva, los usuarios pueden elegir si se muestra el botón Inicio.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ShowHomeButton
   - Nombre de GP: mostrar el botón de inicio en la barra de herramientas
@@ -8647,20 +8711,20 @@ Si no configura la directiva, los usuarios pueden elegir si se muestra el botón
   - Ruta de acceso de GP (recomendado): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazar)/Startup, página principal y página de la pestaña nueva
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ShowHomeButton
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ShowHomeButton
   - Valor de ejemplo:
@@ -8671,39 +8735,39 @@ Si no configura la directiva, los usuarios pueden elegir si se muestra el botón
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## Otras directivas
+  ## <a name="additional-policies"></a>Otras directivas
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AddressBarMicrosoftSearchInBingProviderEnabled
+  ### <a name="addressbarmicrosoftsearchinbingproviderenabled"></a>AddressBarMicrosoftSearchInBingProviderEnabled
 
-  #### Habilitar las sugerencias de Búsqueda de Microsoft en Bing en la barra de direcciones
+  #### <a name="enable-microsoft-search-in-bing-suggestions-in-the-address-bar"></a>Habilitar las sugerencias de Búsqueda de Microsoft en Bing en la barra de direcciones
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 81 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita la visualización de las sugerencias relevantes de Búsqueda de Microsoft en Bing en la lista de sugerencias de la barra de direcciones cuando el usuario escribe una cadena de búsqueda en la barra de direcciones. Si habilita o no configura esta directiva, los usuarios podrán ver los resultados internos con tecnología de Búsqueda de Microsoft en Bing en la lista de sugerencias de la barra de direcciones de Microsoft Edge. Para ver los resultados de la Búsqueda de Microsoft en Bing, el usuario debe iniciar sesión en Microsoft Edge con su cuenta de Azure AD de esa organización.
 Si deshabilita esta directiva, los usuarios no podrán ver los resultados internos en la lista de sugerencias de la barra de direcciones de Microsoft Edge.
 A partir de la versión 89 de Microsoft Edge, las sugerencias de la Búsqueda de Microsoft en Bing estarán disponibles incluso si Bing no es el proveedor de búsquedas predeterminado del usuario.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AddressBarMicrosoftSearchInBingProviderEnabled
   - Nombre de GP: habilitar las sugerencias en la barra de direcciones de la Búsqueda de Microsoft en Bing
@@ -8711,20 +8775,20 @@ A partir de la versión 89 de Microsoft Edge, las sugerencias de la Búsqueda de
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AddressBarMicrosoftSearchInBingProviderEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AddressBarMicrosoftSearchInBingProviderEnabled
   - Valor de ejemplo:
@@ -8735,17 +8799,17 @@ A partir de la versión 89 de Microsoft Edge, las sugerencias de la Búsqueda de
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AdsSettingForIntrusiveAdsSites
+  ### <a name="adssettingforintrusiveadssites"></a>AdsSettingForIntrusiveAdsSites
 
-  #### Configuración de anuncios para sitios con anuncios intrusivos
+  #### <a name="ads-setting-for-sites-with-intrusive-ads"></a>Configuración de anuncios para sitios con anuncios intrusivos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla si se bloquean anuncios en sitios con anuncios intrusivos.
 
@@ -8757,19 +8821,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AdsSettingForIntrusiveAdsSites
   - Nombre de GP: configuración de anuncios para los sitios con anuncios intrusivos
@@ -8777,20 +8841,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AdsSettingForIntrusiveAdsSites
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AdsSettingForIntrusiveAdsSites
   - Valor de ejemplo:
@@ -8801,17 +8865,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AllowDeletingBrowserHistory
+  ### <a name="allowdeletingbrowserhistory"></a>AllowDeletingBrowserHistory
 
-  #### Habilitar la eliminación del explorador y el historial de descargas
+  #### <a name="enable-deleting-browser-and-download-history"></a>Habilitar la eliminación del explorador y el historial de descargas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita la eliminación del historial del navegador y del historial de descargas y evita que los usuarios cambien esta configuración.
 
@@ -8823,19 +8887,19 @@ Si deshabilita esta directiva, los usuarios no podrán eliminar el historial de 
 
 Si deshabilita esta directiva, no habilite la directiva de [ClearBrowsingDataOnExit](#clearbrowsingdataonexit), porque ambas se ocupan de la eliminación de datos. Si habilita ambas directivas, la directiva [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) tendrá prioridad y eliminará todos los datos cuando se cierre Microsoft Edge, independientemente de cómo haya configurado esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AllowDeletingBrowserHistory
   - Nombre de GP: habilitar la eliminación del buscador y el historial de descargas
@@ -8843,20 +8907,20 @@ Si deshabilita esta directiva, no habilite la directiva de [ClearBrowsingDataOnE
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AllowDeletingBrowserHistory
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AllowDeletingBrowserHistory
   - Valor de ejemplo:
@@ -8867,17 +8931,17 @@ Si deshabilita esta directiva, no habilite la directiva de [ClearBrowsingDataOnE
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AllowFileSelectionDialogs
+  ### <a name="allowfileselectiondialogs"></a>AllowFileSelectionDialogs
 
-  #### Permitir cuadros de diálogo de selección de archivos
+  #### <a name="allow-file-selection-dialogs"></a>Permitir cuadros de diálogo de selección de archivos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite el acceso a los archivos locales permitiendo que Microsoft Edge muestre los cuadro de diálogo de selección de archivos.
 
@@ -8885,19 +8949,19 @@ Si habilita o no configura esta directiva, los usuarios podrán abrir los cuadro
 
 Si se deshabilita esta directiva, siempre que el usuario realice una acción que active un cuadro de diálogo de selección de archivos (como importar favoritos, cargar archivos o guardar enlaces), se mostrará un mensaje en su lugar y se supondrá que el usuario ha hecho clic en Cancelar en el cuadro de diálogo de selección de archivos.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AllowFileSelectionDialogs
   - Nombre de GP: permitir cuadros de diálogo en la selección de archivos
@@ -8905,20 +8969,20 @@ Si se deshabilita esta directiva, siempre que el usuario realice una acción que
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AllowFileSelectionDialogs
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AllowFileSelectionDialogs
   - Valor de ejemplo:
@@ -8929,17 +8993,17 @@ Si se deshabilita esta directiva, siempre que el usuario realice una acción que
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AllowPopupsDuringPageUnload
+  ### <a name="allowpopupsduringpageunload"></a>AllowPopupsDuringPageUnload
 
-  #### Permite que una página muestre elementos emergentes durante su descarga (obsoleto)
+  #### <a name="allows-a-page-to-show-popups-during-its-unloading-obsolete"></a>Permite que una página muestre elementos emergentes durante su descarga (obsoleto)
 
   
   >OBSOLETO: esta directiva es obsoleta y no funciona después de Microsoft Edge 87.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78, hasta 87
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva permite a un administrador especificar que una página puede mostrar mensajes emergentes durante su descarga.
 
@@ -8949,19 +9013,19 @@ Cuando la Directiva está configurada en habilitada o deshabilitada, se permite 
 
 Esta directiva se quitó en Microsoft Edge 88 y se omite si está establecida.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AllowPopupsDuringPageUnload
   - Nombre de GP: permite que una página muestre elementos emergentes durante su descarga (obsoleto)
@@ -8969,20 +9033,20 @@ Esta directiva se quitó en Microsoft Edge 88 y se omite si está establecida.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AllowPopupsDuringPageUnload
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AllowPopupsDuringPageUnload
   - Valor de ejemplo:
@@ -8993,35 +9057,35 @@ Esta directiva se quitó en Microsoft Edge 88 y se omite si está establecida.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AllowSurfGame
+  ### <a name="allowsurfgame"></a>AllowSurfGame
 
-  #### Permitir el juego surf
+  #### <a name="allow-surf-game"></a>Permitir el juego surf
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si deshabilita esta directiva, los usuarios no podrán jugar al juego de surf cuando el dispositivo esté desconectado o si el usuario navega a edge://surf.
 
 Si habilita o no configura esta directiva, los usuarios podrán jugar al juego de surf.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AllowSurfGame
   - Nombre de GP: permitir el juego de surf
@@ -9029,20 +9093,20 @@ Si habilita o no configura esta directiva, los usuarios podrán jugar al juego d
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AllowSurfGame
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AllowSurfGame
   - Valor de ejemplo:
@@ -9053,17 +9117,17 @@ Si habilita o no configura esta directiva, los usuarios podrán jugar al juego d
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AllowSyncXHRInPageDismissal
+  ### <a name="allowsyncxhrinpagedismissal"></a>AllowSyncXHRInPageDismissal
 
-  #### Permitir que las páginas envíen solicitudes de XHR sincrónicas durante el descarte de página (en desuso)
+  #### <a name="allow-pages-to-send-synchronous-xhr-requests-during-page-dismissal-deprecated"></a>Permitir que las páginas envíen solicitudes de XHR sincrónicas durante el descarte de página (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 79 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva está en desuso porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web cuando se ha comprobado que es incompatible con el cambio para no permitir solicitudes de XHR sincrónicas durante el descarte de la página. No funciona en la versión 88 de Microsoft Edge.
 
@@ -9073,19 +9137,19 @@ Si habilita esta directiva, las páginas podrán enviar solicitudes de XHR sincr
 
 Si deshabilita esta directiva o no la configura, las páginas no podrán enviar solicitudes de XHR sincronizadas durante el descarte de la página.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AllowSyncXHRInPageDismissal
   - Nombre de DG: permitir que las páginas envíen solicitudes sincrónicas de XHR durante el descarte de página (en desuso)
@@ -9093,20 +9157,20 @@ Si deshabilita esta directiva o no la configura, las páginas no podrán enviar 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AllowSyncXHRInPageDismissal
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AllowSyncXHRInPageDismissal
   - Valor de ejemplo:
@@ -9117,17 +9181,17 @@ Si deshabilita esta directiva o no la configura, las páginas no podrán enviar 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AllowTokenBindingForUrls
+  ### <a name="allowtokenbindingforurls"></a>AllowTokenBindingForUrls
 
-  #### Configurar la lista de sitios con los que Microsoft Edge intentará establecer un enlace de tokens.
+  #### <a name="configure-the-list-of-sites-for-which-microsoft-edge-will-attempt-to-establish-a-token-binding-with"></a>Configurar la lista de sitios con los que Microsoft Edge intentará establecer un enlace de tokens.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura la lista de patrones de dirección URL para los sitios con los que el navegador intentará realizar el protocolo de enlace de tokens.
 Para los dominios de esta lista, el explorador enviará el enlace de tokens ClientHello en el protocolo de enlace TLS (Ver https://tools.ietf.org/html/rfc8472).
@@ -9139,19 +9203,19 @@ Esta directiva solo está disponible en los dispositivos Windows 10 con capacida
 
 A partir de Microsoft Edge 86, esta directiva ya no es compatible con la actualización dinámica.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AllowTokenBindingForUrls
   - Nombre de GP: configurar la lista de sitios con los que Microsoft Edge intentará establecer un enlace de tokens.
@@ -9159,14 +9223,14 @@ A partir de Microsoft Edge 86, esta directiva ya no es compatible con la actuali
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\AllowTokenBindingForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = "mydomain.com"
@@ -9179,17 +9243,17 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AllowTrackingForUrls
+  ### <a name="allowtrackingforurls"></a>AllowTrackingForUrls
 
-  #### Configurar excepciones de prevención de seguimiento para determinados específicos
+  #### <a name="configure-tracking-prevention-exceptions-for-specific-sites"></a>Configurar excepciones de prevención de seguimiento para determinados específicos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura la lista de patrones de dirección URL que están excluidos de la prevención de seguimiento.
 
@@ -9197,19 +9261,19 @@ Si configura esta directiva, la lista de patrones de dirección URL configurados
 
 Si no configura esta directiva se utilizará para todos los sitios el valor global predeterminado de la directiva "Bloquear el seguimiento de la actividad de exploración de la web de los usuarios" (si está establecido) o la configuración personal del usuario para todos los sitios.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AllowTrackingForUrls
   - Nombre de GP: configurar las excepciones para la prevención de seguimiento en sitios determinados
@@ -9217,14 +9281,14 @@ Si no configura esta directiva se utilizará para todos los sitios el valor glob
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\AllowTrackingForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.com"
@@ -9232,7 +9296,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AllowTrackingForUrls
   - Valor de ejemplo:
@@ -9246,17 +9310,17 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AlternateErrorPagesEnabled
+  ### <a name="alternateerrorpagesenabled"></a>AlternateErrorPagesEnabled
 
-  #### Sugiere páginas similares cuando no se puede encontrar una página web.
+  #### <a name="suggest-similar-pages-when-a-webpage-cant-be-found"></a>Sugiere páginas similares cuando no se puede encontrar una página web.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que Microsoft Edge emita una conexión a un servicio web para generar dirección URL y buscar sugerencias para problemas de conectividad como errores de DNS.
 
@@ -9267,19 +9331,19 @@ Si deshabilita esta directiva, no se realizarán llamadas al servicio web y se m
 Si no configura esta directiva, Microsoft Edge respetará la preferencia de usuario establecida en Servicios en Edge://configuración/privacidad.
 En concreto, hay una **sugerir páginas similares cuando no se puede encontrar una página web** conmutar, en la que el usuario puede activar o desactivar la opción. Tenga en cuenta que si habilitó esta directiva (AlternateErrorPagesEnabled), la opción Sugerir páginas similares cuando no se puede encontrar una página web estará activada, pero el usuario no podrá cambiar la configuración con la tecla de alternancia. Si deshabilita esta directiva, la opción Sugerir páginas similares cuando no se puede encontrar una página web estará desactivada, y el usuario no podrá cambiar la configuración con la tecla de alternancia.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AlternateErrorPagesEnabled
   - Nombre de GP: Sugerir páginas similares cuando no se pueda encontrar una página web
@@ -9287,20 +9351,20 @@ En concreto, hay una **sugerir páginas similares cuando no se puede encontrar u
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: AlternateErrorPagesEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AlternateErrorPagesEnabled
   - Valor de ejemplo:
@@ -9311,17 +9375,17 @@ En concreto, hay una **sugerir páginas similares cuando no se puede encontrar u
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AlwaysOpenPdfExternally
+  ### <a name="alwaysopenpdfexternally"></a>AlwaysOpenPdfExternally
 
-  #### Abrir siempre los archivos PDF externamente
+  #### <a name="always-open-pdf-files-externally"></a>Abrir siempre los archivos PDF externamente
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Deshabilita el visor de PDF interno en Microsoft Edge.
 
@@ -9331,19 +9395,19 @@ Si Microsoft Edge es el lector de PDF predeterminado, los archivos PDF no se des
 
 Si no configura esta directiva o la deshabilita, Microsoft Edge abrirá los archivos PDF (a menos que el usuario la deshabilite).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AlwaysOpenPdfExternally
   - Nombre de GP: siempre abrir los archivos en formato PDF de forma externa
@@ -9351,20 +9415,20 @@ Si no configura esta directiva o la deshabilita, Microsoft Edge abrirá los arch
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AlwaysOpenPdfExternally
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AlwaysOpenPdfExternally
   - Valor de ejemplo:
@@ -9375,17 +9439,17 @@ Si no configura esta directiva o la deshabilita, Microsoft Edge abrirá los arch
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AmbientAuthenticationInPrivateModesEnabled
+  ### <a name="ambientauthenticationinprivatemodesenabled"></a>AmbientAuthenticationInPrivateModesEnabled
 
-  #### Habilitar la autenticación de ambiente para los perfiles InPrivate o Invitado
+  #### <a name="enable-ambient-authentication-for-inprivate-and-guest-profiles"></a>Habilitar la autenticación de ambiente para los perfiles InPrivate o Invitado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 81 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura esta directiva para permitir o desactivar la autenticación del entorno para los perfiles de InPrivate e Invitado en Microsoft Edge.
 
@@ -9415,19 +9479,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AmbientAuthenticationInPrivateModesEnabled
   - Nombre de GP: habilitar la autenticación de ambiente para los perfiles InPrivate o de invitado
@@ -9435,20 +9499,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AmbientAuthenticationInPrivateModesEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AmbientAuthenticationInPrivateModesEnabled
   - Valor de ejemplo:
@@ -9459,35 +9523,35 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AppCacheForceEnabled
+  ### <a name="appcacheforceenabled"></a>AppCacheForceEnabled
 
-  #### Permite volver a habilitar la característica AppCache, incluso si está desactivada de forma predeterminada.
+  #### <a name="allows-the-appcache-feature-to-be-re-enabled-even-if-its-turned-off-by-default"></a>Permite volver a habilitar la característica AppCache, incluso si está desactivada de forma predeterminada.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 84 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si establece esta directiva en "true", la AppCache está habilitada, aunque AppCache en Microsoft Edge no esté disponible de forma predeterminada.
 
 Si establece esta directiva en falso, o no la establece, AppCache seguirá las opciones predeterminadas de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AppCacheForceEnabled
   - Nombre de GP: permite volver a habilitar la característica AppCache, incluso si está desactivada de forma predeterminada.
@@ -9495,20 +9559,20 @@ Si establece esta directiva en falso, o no la establece, AppCache seguirá las o
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AppCacheForceEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: AppCacheForceEnabled
   - Valor de ejemplo:
@@ -9519,17 +9583,17 @@ Si establece esta directiva en falso, o no la establece, AppCache seguirá las o
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ApplicationLocaleValue
+  ### <a name="applicationlocalevalue"></a>ApplicationLocaleValue
 
-  #### Establecer la configuración regional de la aplicación
+  #### <a name="set-application-locale"></a>Establecer la configuración regional de la aplicación
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura la configuración regional de la aplicación en Microsoft Edge y evita que los usuarios cambien la localización.
 
@@ -9537,19 +9601,19 @@ Si habilita esta Directiva, Microsoft Edge use la configuración regional indica
 
 Si deshabilita o no configura esta opción, Microsoft Edge usa la configuración regional preferida especificada por el usuario (si está configurada) o la configuración regional de suplencia "en-US".
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ApplicationLocaleValue
   - Nombre de GP: establecer la configuración regional de la aplicación
@@ -9557,14 +9621,14 @@ Si deshabilita o no configura esta opción, Microsoft Edge usa la configuración
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ApplicationLocaleValue
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "en"
@@ -9574,17 +9638,17 @@ Si deshabilita o no configura esta opción, Microsoft Edge usa la configuración
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AudioCaptureAllowed
+  ### <a name="audiocaptureallowed"></a>AudioCaptureAllowed
 
-  #### Permitir o bloquear captura de audio
+  #### <a name="allow-or-block-audio-capture"></a>Permitir o bloquear captura de audio
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite definir si se pide a un usuario que conceda a un sitio web acceso al dispositivo de captura de audio. Esta directiva se aplica a todas las direcciones URL excepto aquellas configuradas en la lista [AudioCaptureAllowedUrls](#audiocaptureallowedurls).
 
@@ -9594,19 +9658,19 @@ Si deshabilita esta directiva, no se le pedirá al usuario y solo se podrá obte
 
 Esta directiva afecta a todos los tipos de entradas de audio, no solo al micrófono integrado.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AudioCaptureAllowed
   - Nombre de GP: permitir o bloquear la captura de audio
@@ -9614,20 +9678,20 @@ Esta directiva afecta a todos los tipos de entradas de audio, no solo al micróf
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AudioCaptureAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AudioCaptureAllowed
   - Valor de ejemplo:
@@ -9638,33 +9702,33 @@ Esta directiva afecta a todos los tipos de entradas de audio, no solo al micróf
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AudioCaptureAllowedUrls
+  ### <a name="audiocaptureallowedurls"></a>AudioCaptureAllowedUrls
 
-  #### Sitios que pueden acceder a dispositivos de captura de audio sin solicitar permiso
+  #### <a name="sites-that-can-access-audio-capture-devices-without-requesting-permission"></a>Sitios que pueden acceder a dispositivos de captura de audio sin solicitar permiso
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especificar sitios web basándose en modelos URL que pueden usar dispositivos de captura de audio sin pedir permiso al usuario. Los patrones en esta lista se hacen coincidir con el origen de seguridad de la dirección URL que realiza la solicitud. Si son coincidentes, el sitio tiene acceso automático a los dispositivos de captura de audio.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AudioCaptureAllowedUrls
   - Nombre de GP: sitios que pueden acceder a los dispositivos de captura de audio sin solicitar permiso
@@ -9672,14 +9736,14 @@ Esta directiva afecta a todos los tipos de entradas de audio, no solo al micróf
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\AudioCaptureAllowedUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contoso.com/"
@@ -9687,7 +9751,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AudioCaptureAllowedUrls
   - Valor de ejemplo:
@@ -9701,17 +9765,17 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AudioSandboxEnabled
+  ### <a name="audiosandboxenabled"></a>AudioSandboxEnabled
 
-  #### Permitir ejecutar el espacio aislado de audio.
+  #### <a name="allow-the-audio-sandbox-to-run"></a>Permitir ejecutar el espacio aislado de audio.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 81 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva controla el espacio aislado del proceso de audio.
 
@@ -9724,19 +9788,19 @@ Si no configura esta directiva, se usará la configuración predeterminada para 
 
 Esta directiva está pensada para ofrecer a las empresas la flexibilidad necesaria para deshabilitar el espacio aislado de audio si usan configuraciones de software de seguridad que interfieren con el espacio aislado.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AudioSandboxEnabled
   - Nombre de GP: permitir la ejecución del espacio aislado de audio
@@ -9744,20 +9808,20 @@ Esta directiva está pensada para ofrecer a las empresas la flexibilidad necesar
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AudioSandboxEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AudioSandboxEnabled
   - Valor de ejemplo:
@@ -9768,17 +9832,17 @@ Esta directiva está pensada para ofrecer a las empresas la flexibilidad necesar
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AutoImportAtFirstRun
+  ### <a name="autoimportatfirstrun"></a>AutoImportAtFirstRun
 
-  #### Importar automáticamente los datos y la configuración desde otro explorador en la primera ejecución
+  #### <a name="automatically-import-another-browsers-data-and-settings-at-first-run"></a>Importar automáticamente los datos y la configuración desde otro explorador en la primera ejecución
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita esta directiva, todas las configuraciones y tipos de datos admitidos del explorador especificado se importarán de forma silenciosa y automática en la primera ejecución. Durante la primera experiencia de ejecución, también se omitirá la sección de importación.
 
@@ -9837,19 +9901,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AutoImportAtFirstRun
   - Nombre de GP: importar los datos y la configuración de otro navegador automáticamente durante la primera ejecución
@@ -9857,20 +9921,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AutoImportAtFirstRun
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AutoImportAtFirstRun
   - Valor de ejemplo:
@@ -9881,17 +9945,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AutoLaunchProtocolsFromOrigins
+  ### <a name="autolaunchprotocolsfromorigins"></a>AutoLaunchProtocolsFromOrigins
 
-  #### Definir una lista de protocolos para iniciar una aplicación externa desde orígenes de la lista sin pedir al usuario
+  #### <a name="define-a-list-of-protocols-that-can-launch-an-external-application-from-listed-origins-without-prompting-the-user"></a>Definir una lista de protocolos para iniciar una aplicación externa desde orígenes de la lista sin pedir al usuario
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite configurar una lista de protocolos y, para cada protocolo, una lista asociada de patrones de origen permitidos que pueden iniciar una aplicación externa sin tener que preguntar al usuario. El separador final no se debe incluir cuando se enumera el protocolo. Por ejemplo, Enumera "skype" en lugar de "skype:" o "skype://".
 
@@ -9909,19 +9973,19 @@ Los modelos de coincidencia de origen usan un formato similar al de la Directiva
 
 Sin embargo, los patrones de coincidencia de origen para esta Directiva no pueden contener elementos "/path" o "@query". Cualquier patrón que contenga un elemento "/path" o "@query" se pasará por alto.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AutoLaunchProtocolsFromOrigins
   - Nombre de directiva de usuario: definir una lista de protocolos que pueden iniciar una aplicación externa desde orígenes de la lista sin preguntar
@@ -9929,14 +9993,14 @@ Sin embargo, los patrones de coincidencia de origen para esta Directiva no puede
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AutoLaunchProtocolsFromOrigins
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
@@ -9963,14 +10027,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 ]
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "teams"}, {"allowed_origins": ["*"], "protocol": "outlook"}]
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: AutoLaunchProtocolsFromOrigins
   - Valor de ejemplo:
@@ -10009,17 +10073,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AutoOpenAllowedForURLs
+  ### <a name="autoopenallowedforurls"></a>AutoOpenAllowedForURLs
 
-  #### URL donde se pueden aplicar AutoOpenFileTypes
+  #### <a name="urls-where-autoopenfiletypes-can-apply"></a>URL donde se pueden aplicar AutoOpenFileTypes
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Lista de direcciones URL a las que se aplicará [AutoOpenFileTypes](#autoopenfiletypes). Esta Directiva no tiene ningún impacto en los valores abiertos automáticamente establecidos por los usuarios a través de la estante de descarga... > Entrada de menú "abrir archivos siempre para este tipo".
 
@@ -10029,19 +10093,19 @@ Si no define esta Directiva, todas las descargas en las que el tipo de archivo e
 
 Se tiene que dar formato a un modelo de dirección URL con el [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AutoOpenAllowedForURLs
   - Nombre GP: direcciones URL donde se puede aplicar AutoOpenFileTypes
@@ -10049,14 +10113,14 @@ Se tiene que dar formato a un modelo de dirección URL con el [https://go.micros
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\PopupsAllowedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = "example.com"
@@ -10067,7 +10131,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: AutoOpenAllowedForURLs
   - Valor de ejemplo:
@@ -10084,17 +10148,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AutoOpenFileTypes
+  ### <a name="autoopenfiletypes"></a>AutoOpenFileTypes
 
-  #### Lista de tipos de archivo que se deben abrir automáticamente al descargarse
+  #### <a name="list-of-file-types-that-should-be-automatically-opened-on-download"></a>Lista de tipos de archivo que se deben abrir automáticamente al descargarse
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta Directiva establece una lista de los tipos de archivo que se abrirán automáticamente en la descarga. Nota: no es necesario incluir el separador inicial cuando se indica el tipo de archivo, por lo que debe indicar "txt" en lugar de ". txt".
 
@@ -10108,19 +10172,19 @@ Si no define esta Directiva, solo los tipos de archivo que el usuario ya especif
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AutoOpenFileTypes
   - Nombre GP: lista de los tipos de archivo que se abrirán automáticamente al descargarse
@@ -10128,14 +10192,14 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\URLBlocklist
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = "exe"
@@ -10143,7 +10207,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: AutoOpenFileTypes
   - Valor de ejemplo:
@@ -10157,17 +10221,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AutofillAddressEnabled
+  ### <a name="autofilladdressenabled"></a>AutofillAddressEnabled
 
-  #### Habilitar Autorrellenar para las direcciones
+  #### <a name="enable-autofill-for-addresses"></a>Habilitar Autorrellenar para las direcciones
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita la característica Autorrellenar y permite a los usuarios completar automáticamente la información de dirección en formularios web con información almacenada anteriormente.
 
@@ -10177,19 +10241,19 @@ Si habilita esta directiva o no la configura, los usuarios podrán controlar la 
 
 Tenga en cuenta que si deshabilita esta directiva, también detendrá toda la actividad de todos los formularios web, excepto los formularios de pago y contraseña. No se guardan más entradas, y Microsoft Edge no sugiere ni autorellena ninguna entrada anterior.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AutofillAddressEnabled
   - Nombre de GP: habilitar el autorrelleno para las direcciones
@@ -10197,20 +10261,20 @@ Tenga en cuenta que si deshabilita esta directiva, también detendrá toda la ac
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: AutofillAddressEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AutofillAddressEnabled
   - Valor de ejemplo:
@@ -10221,17 +10285,17 @@ Tenga en cuenta que si deshabilita esta directiva, también detendrá toda la ac
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AutofillCreditCardEnabled
+  ### <a name="autofillcreditcardenabled"></a>AutofillCreditCardEnabled
 
-  #### Habilitar Autorrellenar para las tarjetas de crédito
+  #### <a name="enable-autofill-for-credit-cards"></a>Habilitar Autorrellenar para las tarjetas de crédito
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita la función de Autorrelleno de Microsoft Edge y permite a los usuarios autocompletar la información de la tarjeta de crédito en formularios web utilizando la información almacenada anteriormente.
 
@@ -10239,19 +10303,19 @@ Si deshabilita esta directiva, la función de Autorrellenar nunca sugerirá ni r
 
 Si habilita esta directiva o no la configura, los usuarios podrán controlar la función de Autorrellenar para las tarjetas de crédito.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AutofillCreditCardEnabled
   - Nombre de GP: habilitar el autorrelleno para las tarjetas de crédito
@@ -10259,20 +10323,20 @@ Si habilita esta directiva o no la configura, los usuarios podrán controlar la 
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: AutofillCreditCardEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AutofillCreditCardEnabled
   - Valor de ejemplo:
@@ -10283,17 +10347,17 @@ Si habilita esta directiva o no la configura, los usuarios podrán controlar la 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### AutoplayAllowed
+  ### <a name="autoplayallowed"></a>AutoplayAllowed
 
-  #### Permitir la reproducción automática multimedia para sitios web
+  #### <a name="allow-media-autoplay-for-websites"></a>Permitir la reproducción automática multimedia para sitios web
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva establece la directiva de reproducción automática multimedia para los sitios web.
 
@@ -10306,19 +10370,19 @@ Si está en "Deshabilitado", la reproducción automática multimedia estará en 
 Será necesario cerrar y volver a abrir una cuenta para que esta directiva tenga efecto.
 
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: AutoplayAllowed
   - Nombre de GP: permitir la reproducción automática de multimedia en los sitios web
@@ -10326,20 +10390,20 @@ Será necesario cerrar y volver a abrir una cuenta para que esta directiva tenga
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: AutoplayAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: AutoplayAllowed
   - Valor de ejemplo:
@@ -10350,17 +10414,17 @@ Será necesario cerrar y volver a abrir una cuenta para que esta directiva tenga
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BackgroundModeEnabled
+  ### <a name="backgroundmodeenabled"></a>BackgroundModeEnabled
 
-  #### Seguir ejecutando aplicaciones en segundo plano después de cerrar Microsoft Edge
+  #### <a name="continue-running-background-apps-after-microsoft-edge-closes"></a>Seguir ejecutando aplicaciones en segundo plano después de cerrar Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los procesos de Microsoft Edge se inicien en el inicio de sesión del sistema operativo y sigan funcionando después de cerrar la última ventana del explorador. En este escenario, las aplicaciones en segundo plano y la sesión de exploración actual siguen activas, incluyendo las cookies de la sesión. Un proceso abierto en segundo plano muestra un icono en la bandeja del sistema y siempre se puede cerrar desde ahí.
 
@@ -10370,19 +10434,19 @@ Si deshabilita esta directiva, se desactivará el modo en segundo plano.
 
 Si no configura esta directiva, el modo en segundo plano se desactivará inicialmente, y el usuario podrá configurar su comportamiento en edge://configuración/sistema.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BackgroundModeEnabled
   - Nombre de GP: seguir ejecutando las aplicaciones en segundo plano después de cerrar Microsoft Edge
@@ -10390,14 +10454,14 @@ Si no configura esta directiva, el modo en segundo plano se desactivará inicial
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: BackgroundModeEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -10407,17 +10471,17 @@ Si no configura esta directiva, el modo en segundo plano se desactivará inicial
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BackgroundTemplateListUpdatesEnabled
+  ### <a name="backgroundtemplatelistupdatesenabled"></a>BackgroundTemplateListUpdatesEnabled
 
-  #### Permitir actualizaciones en segundo plano de la lista de plantillas disponibles para Colecciones y otras características que utilizan plantillas
+  #### <a name="enables-background-updates-to-the-list-of-available-templates-for-collections-and-other-features-that-use-templates"></a>Permitir actualizaciones en segundo plano de la lista de plantillas disponibles para Colecciones y otras características que utilizan plantillas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 79 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Le permite activar o desactivar las actualizaciones en segundo plano de la lista de plantillas disponibles para las colecciones y otras funciones que utilizan plantillas.  Las plantillas se usan para extraer metadatos enriquecidos de una página web cuando la página se guarda en una colección.
 
@@ -10425,19 +10489,19 @@ Si habilita esta configuración o la configuración no está configurada, la lis
 
 Si deshabilita esta configuración, la lista de plantillas disponibles se descargará a petición. Este tipo de descarga puede dar lugar a pequeñas sanciones de rendimiento para las colecciones y otras funciones.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BackgroundTemplateListUpdatesEnabled
   - Nombre de GP: permitir las actualizaciones en segundo plano de la lista de plantillas disponibles para las colecciones y otras características que utilicen plantillas
@@ -10445,20 +10509,20 @@ Si deshabilita esta configuración, la lista de plantillas disponibles se descar
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: BackgroundTemplateListUpdatesEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BackgroundTemplateListUpdatesEnabled
   - Valor de ejemplo:
@@ -10469,17 +10533,17 @@ Si deshabilita esta configuración, la lista de plantillas disponibles se descar
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BingAdsSuppression
+  ### <a name="bingadssuppression"></a>BingAdsSuppression
 
-  #### Bloquear todos los anuncios en los resultados de búsqueda de Bing.
+  #### <a name="block-all-ads-on-bing-search-results"></a>Bloquear todos los anuncios en los resultados de búsqueda de Bing.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita una experiencia de búsqueda sin anuncios en Bing.com
 
@@ -10497,19 +10561,19 @@ Por favor, vea[https://go.microsoft.com/fwlink/?linkid=2119711](https://go.micro
 
 * Estaba experimentando una experiencia de búsqueda sin anuncios en Microsoft Edge (versión anterior) y desea actualizarse a la nueva versión de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BingAdsSuppression
   - Nombre de GP: bloquear todos los anuncios en los resultados de búsqueda de Bing
@@ -10517,20 +10581,20 @@ Por favor, vea[https://go.microsoft.com/fwlink/?linkid=2119711](https://go.micro
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: BingAdsSuppression
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BingAdsSuppression
   - Valor de ejemplo:
@@ -10541,17 +10605,17 @@ Por favor, vea[https://go.microsoft.com/fwlink/?linkid=2119711](https://go.micro
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BlockThirdPartyCookies
+  ### <a name="blockthirdpartycookies"></a>BlockThirdPartyCookies
 
-  #### Bloquear cookies de terceros
+  #### <a name="block-third-party-cookies"></a>Bloquear cookies de terceros
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Bloquee los elementos de la página web que no estén en el dominio de la barra de direcciones y configuren cookies.
 
@@ -10561,19 +10625,19 @@ Si deshabilita esta directiva, los elementos de la Página Web de dominios que n
 
 Si no configura esta directiva, las cookies de terceros se habilitan, pero los usuarios pueden cambiar esta opción.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BlockThirdPartyCookies
   - Nombre de GP: bloquear las cookies de terceros
@@ -10581,20 +10645,20 @@ Si no configura esta directiva, las cookies de terceros se habilitan, pero los u
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: BlockThirdPartyCookies
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BlockThirdPartyCookies
   - Valor de ejemplo:
@@ -10605,36 +10669,36 @@ Si no configura esta directiva, las cookies de terceros se habilitan, pero los u
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BrowserAddProfileEnabled
+  ### <a name="browseraddprofileenabled"></a>BrowserAddProfileEnabled
 
-  #### Permitir la creación de perfiles desde el menú desplegable identidad o la página Configuración
+  #### <a name="enable-profile-creation-from-the-identity-flyout-menu-or-the-settings-page"></a>Permitir la creación de perfiles desde el menú desplegable identidad o la página Configuración
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite a los usuarios crear nuevos perfiles, con la opción **agregar perfil**.
 Si habilita esta Directiva o no la configura, Microsoft Edge permite a los usuarios usar **agregar perfiles** en el menú desplegable identidad o en la página Configuración para crear nuevos perfiles.
 
 Si desactiva esta directiva, los usuarios no podrán agregar nuevos perfiles desde el menú desplegable Identidad o desde la página Configuración.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BrowserAddProfileEnabled
   - Nombre de GP: habilitar la creación de perfiles en el menú desplegable de identidad o en la página de configuración
@@ -10642,20 +10706,20 @@ Si desactiva esta directiva, los usuarios no podrán agregar nuevos perfiles des
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: BrowserAddProfileEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BrowserAddProfileEnabled
   - Valor de ejemplo:
@@ -10666,17 +10730,17 @@ Si desactiva esta directiva, los usuarios no podrán agregar nuevos perfiles des
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BrowserGuestModeEnabled
+  ### <a name="browserguestmodeenabled"></a>BrowserGuestModeEnabled
 
-  #### Activar el modo invitado
+  #### <a name="enable-guest-mode"></a>Activar el modo invitado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita la opción para permitir el uso de perfiles de invitado en Microsoft Edge. Cuando se trata de un perfil de invitado, el navegador no puede importar los datos de navegación de los perfiles existentes y los elimina cuando se cierran todos los perfiles de invitado.
 
@@ -10684,19 +10748,19 @@ Si habilita esta Directiva o no la configura, Microsoft Edge le permite a los us
 
 Si deshabilita esta directiva, Microsoft Edge no permite a los usuarios explorar los perfiles de invitado.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BrowserGuestModeEnabled
   - Nombre de GP: habilitar el modo de invitado
@@ -10704,20 +10768,20 @@ Si deshabilita esta directiva, Microsoft Edge no permite a los usuarios explorar
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: BrowserGuestModeEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BrowserGuestModeEnabled
   - Valor de ejemplo:
@@ -10728,17 +10792,17 @@ Si deshabilita esta directiva, Microsoft Edge no permite a los usuarios explorar
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BrowserNetworkTimeQueriesEnabled
+  ### <a name="browsernetworktimequeriesenabled"></a>BrowserNetworkTimeQueriesEnabled
 
-  #### Permitir consultas a un servicio de tiempo de red del explorador
+  #### <a name="allow-queries-to-a-browser-network-time-service"></a>Permitir consultas a un servicio de tiempo de red del explorador
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Impide que Microsoft Edge envíe ocasionalmente consultas a un servicio de tiempo de la red del explorador para recuperar una marca de tiempo exacta.
 
@@ -10746,19 +10810,19 @@ Si deshabilita esta directiva, Microsoft Edge dejará de enviar consultas a un s
 
 Si habilita o no configura esta directiva, Microsoft Edge enviará ocasionalmente consultas a un servicio de tiempo de red del explorador.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BrowserNetworkTimeQueriesEnabled
   - Nombre de GP: permitir las consultas al servicio de tiempo en la red del explorador
@@ -10766,20 +10830,20 @@ Si habilita o no configura esta directiva, Microsoft Edge enviará ocasionalment
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: BrowserNetworkTimeQueriesEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BrowserNetworkTimeQueriesEnabled
   - Valor de ejemplo:
@@ -10790,17 +10854,17 @@ Si habilita o no configura esta directiva, Microsoft Edge enviará ocasionalment
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BrowserSignin
+  ### <a name="browsersignin"></a>BrowserSignin
 
-  #### Configuración de inicio de sesión del explorador
+  #### <a name="browser-sign-in-settings"></a>Configuración de inicio de sesión del explorador
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica si un usuario puede iniciar sesión en Microsoft Edge con su cuenta y usar los servicios relacionados con la cuenta, como la sincronización y el inicio de sesión único. Para controlar la disponibilidad de la sincronización, use la directiva de [SyncDisabled](#syncdisabled) en su lugar.
 
@@ -10822,40 +10886,40 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BrowserSignin
   - Nombre de GP: configuración del inicio de sesión en el explorador
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendado): N/D
+  - Ruta de acceso (recomendada): N/D
   - Nombre del valor: BrowserSignin
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BrowserSignin
   - Valor de ejemplo:
@@ -10866,17 +10930,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BrowsingDataLifetime
+  ### <a name="browsingdatalifetime"></a>BrowsingDataLifetime
 
-  #### Configuración de la duración de los datos de exploración
+  #### <a name="browsing-data-lifetime-settings"></a>Configuración de la duración de los datos de exploración
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión 89 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura la duración de los datos de exploración para Microsoft Edge.
 Esta directiva controla la duración de los datos de exploración seleccionados. Esta directiva no tiene ningún efecto si la sincronización está habilitada.
@@ -10884,19 +10948,19 @@ Los tipos de datos disponibles son 'browsing_history', 'download_history', 'cook
 Microsoft Edge quitará periódicamente los datos de los tipos seleccionados con una antigüedad superior a "time_to_live_in_hours". Dado que la eliminación de datos solo se produce a determinados intervalos, es posible que algunos datos se conserven por un poco más de tiempo, pero nunca más del doble de su "time_to_live_in_hours" usual.
 
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BrowsingDataLifetime
   - Nombre de GP: Configuración de duración de los datos de exploración
@@ -10904,14 +10968,14 @@ Microsoft Edge quitará periódicamente los datos de los tipos seleccionados con
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): N/D
   - Nombre del valor: BrowsingDataLifetime
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
@@ -10931,14 +10995,14 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 ]
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [{"data_types": ["browsing_history"], "time_to_live_in_hours": 24}, {"data_types": ["password_signin", "autofill"], "time_to_live_in_hours": 12}]
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BrowsingDataLifetime
   - Valor de ejemplo:
@@ -10968,17 +11032,17 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BuiltInDnsClientEnabled
+  ### <a name="builtindnsclientenabled"></a>BuiltInDnsClientEnabled
 
-  #### Usar cliente DNS integrado
+  #### <a name="use-built-in-dns-client"></a>Usar cliente DNS integrado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla si se debe usar el cliente DNS integrado.
 
@@ -10990,19 +11054,19 @@ Si deshabilita esta directiva, solo se usará el cliente DNS integrado cuando DN
 
 Si no configura esta directiva, el cliente DNS integrado estará habilitado de forma predeterminada.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BuiltInDnsClientEnabled
   - Nombre de GP: usar el cliente integrado de DNS
@@ -11010,20 +11074,20 @@ Si no configura esta directiva, el cliente DNS integrado estará habilitado de f
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: BuiltInDnsClientEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BuiltInDnsClientEnabled
   - Valor de ejemplo:
@@ -11034,36 +11098,36 @@ Si no configura esta directiva, el cliente DNS integrado estará habilitado de f
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### BuiltinCertificateVerifierEnabled
+  ### <a name="builtincertificateverifierenabled"></a>BuiltinCertificateVerifierEnabled
 
-  #### Determina si el comprobador de certificados integrado se usará para comprobar certificados de servidor (en desuso)
+  #### <a name="determines-whether-the-built-in-certificate-verifier-will-be-used-to-verify-server-certificates-deprecated"></a>Determina si el comprobador de certificados integrado se usará para comprobar certificados de servidor (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En macOS desde 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva es obsoleta porque tiene por objeto servir únicamente como mecanismo a corto plazo para que las empresas dispongan de más tiempo para actualizar sus entornos e informar de los problemas si se comprueba que son incompatibles con el verificador de certificados incorporado.
 
 No funcionará en la versión 87 de Microsoft Edge cuando se planee la eliminación del soporte técnico para el comprobador de certificados heredado en Mac OS X.
 
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: BuiltinCertificateVerifierEnabled
   - Valor de ejemplo:
@@ -11074,17 +11138,17 @@ No funcionará en la versión 87 de Microsoft Edge cuando se planee la eliminaci
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### CertificateTransparencyEnforcementDisabledForCas
+  ### <a name="certificatetransparencyenforcementdisabledforcas"></a>CertificateTransparencyEnforcementDisabledForCas
 
-  #### Deshabilitar el certificado de transparencia para obtener una lista de hashes de PublicKeyInfo
+  #### <a name="disable-certificate-transparency-enforcement-for-a-list-of-subjectpublickeyinfo-hashes"></a>Deshabilitar el certificado de transparencia para obtener una lista de hashes de PublicKeyInfo
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Deshabilita la aplicación de los requisitos de transparencia de certificados para una lista de hashes de subjectPublicKeyInfo.
 
@@ -11099,19 +11163,19 @@ Un algoritmo hash subjectPublicKeyInfo se especifica al concatenar el nombre del
 
 Si deshabilita o no configura esta directiva, cualquier certificado que deba divulgarse a través de la transparencia de certificados se considerará de poca confianza si no se divulga de acuerdo con la directiva de transparencia de certificados
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: CertificateTransparencyEnforcementDisabledForCas
   - Nombre de GP: deshabilitar el certificado de transparencia para obtener una lista de hashes de PublicKeyInfo
@@ -11119,14 +11183,14 @@ Si deshabilita o no configura esta directiva, cualquier certificado que deba div
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\CertificateTransparencyEnforcementDisabledForCa
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
@@ -11134,7 +11198,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: CertificateTransparencyEnforcementDisabledForCas
   - Valor de ejemplo:
@@ -11148,17 +11212,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### CertificateTransparencyEnforcementDisabledForLegacyCas
+  ### <a name="certificatetransparencyenforcementdisabledforlegacycas"></a>CertificateTransparencyEnforcementDisabledForLegacyCas
 
-  #### Deshabilitar el certificado Aplicación de la transparencia para una lista de autoridades de certificación de legado
+  #### <a name="disable-certificate-transparency-enforcement-for-a-list-of-legacy-certificate-authorities"></a>Deshabilitar el certificado Aplicación de la transparencia para una lista de autoridades de certificación de legado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Deshabilita la aplicación de los requisitos de transparencia de los certificados para obtener una lista de las entidades de certificación (CAS) heredadas.
 
@@ -11170,19 +11234,19 @@ Se especifica un hash de subjectPublicKeyInfo concatenando el nombre del algorit
 
 Si no configura esta directiva, cualquier certificado que deba divulgarse a través de la transparencia de certificados se considerará de poca confianza si no se divulga de acuerdo con la directiva de transparencia de certificados
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: CertificateTransparencyEnforcementDisabledForLegacyCas
   - Nombre de GP: deshabilitar el certificado de transparencia para obtener una lista de las entidades de certificación heredadas
@@ -11190,14 +11254,14 @@ Si no configura esta directiva, cualquier certificado que deba divulgarse a trav
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\CertificateTransparencyEnforcementDisabledForLegacyCas
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
@@ -11205,7 +11269,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: CertificateTransparencyEnforcementDisabledForLegacyCas
   - Valor de ejemplo:
@@ -11219,17 +11283,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### CertificateTransparencyEnforcementDisabledForUrls
+  ### <a name="certificatetransparencyenforcementdisabledforurls"></a>CertificateTransparencyEnforcementDisabledForUrls
 
-  #### Deshabilitar la aplicación de la transparencia de certificados para dirección URL determinadas
+  #### <a name="disable-certificate-transparency-enforcement-for-specific-urls"></a>Deshabilitar la aplicación de la transparencia de certificados para dirección URL determinadas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Deshabilita la aplicación de los requisitos de transparencia de los certificados en las direcciones URL indicadas.
 
@@ -11239,19 +11303,19 @@ Forme el modelo de URL de acuerdo con [https://go.microsoft.com/fwlink/?linkid=2
 
 Al no configurar esta directiva, cualquier certificado que deba divulgarse a través de la transparencia de certificados es considerado como no confiable si no es revelado.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: CertificateTransparencyEnforcementDisabledForUrls
   - Nombre de GP: deshabilitar la aplicación de transparencia de certificados para direcciones de URL determinadas
@@ -11259,14 +11323,14 @@ Al no configurar esta directiva, cualquier certificado que deba divulgarse a tra
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\CertificateTransparencyEnforcementDisabledForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = "contoso.com"
@@ -11274,7 +11338,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: CertificateTransparencyEnforcementDisabledForUrls
   - Valor de ejemplo:
@@ -11288,17 +11352,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ClearBrowsingDataOnExit
+  ### <a name="clearbrowsingdataonexit"></a>ClearBrowsingDataOnExit
 
-  #### Borrar los datos de exploración cuando se cierra Microsoft Edge
+  #### <a name="clear-browsing-data-when-microsoft-edge-closes"></a>Borrar los datos de exploración cuando se cierra Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Microsoft Edge no desactiva los datos de examen de manera predeterminada cuando se cierra. La búsqueda de datos incluye la información que se especifica en los formularios, las contraseñas e incluso los sitios web que se visitan.
 
@@ -11310,19 +11374,19 @@ Si habilita esta directiva, no configure la [AllowDeletingBrowserHistory](#allow
 
 Para impedir que se eliminen las cookies al salir, configure la directiva [SaveCookiesOnExit](#savecookiesonexit) .
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ClearBrowsingDataOnExit
   - Nombre de GP: borrar los datos de exploración al cerrar Microsoft Edge
@@ -11330,20 +11394,20 @@ Para impedir que se eliminen las cookies al salir, configure la directiva [SaveC
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ClearBrowsingDataOnExit
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ClearBrowsingDataOnExit
   - Valor de ejemplo:
@@ -11354,17 +11418,17 @@ Para impedir que se eliminen las cookies al salir, configure la directiva [SaveC
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ClearCachedImagesAndFilesOnExit
+  ### <a name="clearcachedimagesandfilesonexit"></a>ClearCachedImagesAndFilesOnExit
 
-  #### Limpie las imágenes y los archivos almacenados en caché cuando se cierra Microsoft Edge
+  #### <a name="clear-cached-images-and-files-when-microsoft-edge-closes"></a>Limpie las imágenes y los archivos almacenados en caché cuando se cierra Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   De forma predeterminada, Microsoft Edge no borra las imágenes y los archivos almacenados en caché cuando se cierra.
 
@@ -11376,19 +11440,19 @@ Si no configura esta Directiva, los usuarios pueden elegir si las imágenes y lo
 
 Si deshabilita esta Directiva, no habilite la Directiva de [ ClearBrowsingDataOnExit](#clearbrowsingdataonexit), ya que ambos tratan sobre la eliminación de datos. Si configura ambas opciones, la Directiva [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) tendrá prioridad y eliminará todos los datos cuando se cierre Microsoft Edge, independientemente de cómo haya configurado [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ClearCachedImagesAndFilesOnExit
   - Nombre de GP: limpiar las imágenes y los archivos almacenados en el caché al cerrar Microsoft Edge
@@ -11396,20 +11460,20 @@ Si deshabilita esta Directiva, no habilite la Directiva de [ ClearBrowsingDataOn
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ClearCachedImagesAndFilesOnExit
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ClearCachedImagesAndFilesOnExit
   - Valor de ejemplo:
@@ -11420,17 +11484,17 @@ Si deshabilita esta Directiva, no habilite la Directiva de [ ClearBrowsingDataOn
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ClickOnceEnabled
+  ### <a name="clickonceenabled"></a>ClickOnceEnabled
 
-  #### Permitir que los usuarios abran archivos mediante el protocolo ClickOnce
+  #### <a name="allow-users-to-open-files-using-the-clickonce-protocol"></a>Permitir que los usuarios abran archivos mediante el protocolo ClickOnce
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permita que los usuarios abran los archivos mediante el protocolo ClickOnce El protocolo ClickOnce permite que los sitios web soliciten que el explorador abra archivos de una dirección URL específica mediante el controlador de archivos de ClickOnce en el equipo o dispositivo del usuario.
 
@@ -11444,19 +11508,19 @@ Deshabilitar ClickOnce puede impedir que las aplicaciones ClickOnce (archivos. A
 
 Para obtener más información sobre ClickOnce, vea [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) y [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ClickOnceEnabled
   - Nombre de GP: permitir que los usuarios abran los archivos mediante el protocolo ClickOnce
@@ -11464,14 +11528,14 @@ Para obtener más información sobre ClickOnce, vea [https://go.microsoft.com/fw
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ClickOnceEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -11481,17 +11545,17 @@ Para obtener más información sobre ClickOnce, vea [https://go.microsoft.com/fw
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### CollectionsServicesAndExportsBlockList
+  ### <a name="collectionsservicesandexportsblocklist"></a>CollectionsServicesAndExportsBlockList
 
-  #### Bloquear el acceso a una lista especificada de servicios y destinos de exportación en Colecciones
+  #### <a name="block-access-to-a-specified-list-of-services-and-export-targets-in-collections"></a>Bloquear el acceso a una lista especificada de servicios y destinos de exportación en Colecciones
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Enumera los servicios y destinos de exportación específicos a los que los usuarios no pueden obtener acceso en la característica Colecciones de Microsoft Edge. Esto incluye mostrar datos adicionales de Bing y exportar colecciones a asociados externos o productos de Microsoft.
 
@@ -11507,19 +11571,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: CollectionsServicesAndExportsBlockList
   - Nombre de GP: bloquear el acceso a una lista especificada de servicios y destinos de exportación en Colecciones
@@ -11527,14 +11591,14 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
@@ -11542,7 +11606,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: CollectionsServicesAndExportsBlockList
   - Valor de ejemplo:
@@ -11556,17 +11620,17 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### CommandLineFlagSecurityWarningsEnabled
+  ### <a name="commandlineflagsecuritywarningsenabled"></a>CommandLineFlagSecurityWarningsEnabled
 
-  #### Habilitar advertencias de seguridad para indicadores de la línea de comandos
+  #### <a name="enable-security-warnings-for-command-line-flags"></a>Habilitar advertencias de seguridad para indicadores de la línea de comandos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si se deshabilita, esta directiva evita que las advertencias de seguridad aparezcan cuando se inicia Microsoft Edge el marcador de la línea de comandos potencialmente peligrosas.
 
@@ -11576,19 +11640,19 @@ Por ejemplo, el marcador de --disable-gpu-sandbox genera esta advertencia:  Est�
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: CommandLineFlagSecurityWarningsEnabled
   - Nombre de GP: habilitar las advertencias de seguridad para los indicadores de la línea de comandos
@@ -11596,20 +11660,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: CommandLineFlagSecurityWarningsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: CommandLineFlagSecurityWarningsEnabled
   - Valor de ejemplo:
@@ -11620,17 +11684,17 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ComponentUpdatesEnabled
+  ### <a name="componentupdatesenabled"></a>ComponentUpdatesEnabled
 
-  #### Habilitar las actualizaciones de los componentes en Microsoft Edge
+  #### <a name="enable-component-updates-in-microsoft-edge"></a>Habilitar las actualizaciones de los componentes en Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita o no configura esta directiva, se habilitarán las actualizaciones de componentes en Microsoft Edge.
 
@@ -11638,19 +11702,19 @@ Si deshabilita esta directiva o se establece como falsa, se deshabilitarán las 
 
 Sin embargo, en esta directiva se omiten algunos componentes. Esto incluye cualquier componente que no contenga un código ejecutable, que no cambie significativamente el comportamiento del explorador, o que sea crítico para la seguridad. Es decir, las actualizaciones que se consideran "críticas para la seguridad" y se seguirán aplicando incluso si deshabilita esta directiva
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ComponentUpdatesEnabled
   - Nombre de GP: habilitar las actualizaciones de los componentes en Microsoft Edge
@@ -11658,20 +11722,20 @@ Sin embargo, en esta directiva se omiten algunos componentes. Esto incluye cualq
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ComponentUpdatesEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ComponentUpdatesEnabled
   - Valor de ejemplo:
@@ -11682,17 +11746,17 @@ Sin embargo, en esta directiva se omiten algunos componentes. Esto incluye cualq
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ConfigureDoNotTrack
+  ### <a name="configuredonottrack"></a>ConfigureDoNotTrack
 
-  #### Configurar No realizar seguimiento
+  #### <a name="configure-do-not-track"></a>Configurar No realizar seguimiento
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifique si se enviarán solicitudes de No realizar seguimiento a sitios web que soliciten información de seguimiento. No realizar un seguimiento de las solicitudes permite que los sitios web que visite sepan que no desea que se realice un seguimiento de su actividad de navegación. De forma predeterminada, Microsoft Edge no envía solicitudes de No seguimiento, pero los usuarios pueden activar esta característica para enviarlas.
 
@@ -11702,19 +11766,19 @@ Si deshabilita esta directiva, las solicitudes nunca se enviarán.
 
 Si no configura esta directiva, los usuarios podrán elegir si enviar estas solicitudes.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ConfigureDoNotTrack
   - Nombre de GP: configurar No realizar seguimiento
@@ -11722,20 +11786,20 @@ Si no configura esta directiva, los usuarios podrán elegir si enviar estas soli
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ConfigureDoNotTrack
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ConfigureDoNotTrack
   - Valor de ejemplo:
@@ -11746,18 +11810,18 @@ Si no configura esta directiva, los usuarios podrán elegir si enviar estas soli
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ConfigureFriendlyURLFormat
+  ### <a name="configurefriendlyurlformat"></a>ConfigureFriendlyURLFormat
 
-  #### Configura el formato de pegado predeterminado de las direcciones URL copiadas desde Microsoft Edge y determina si los formatos adicionales estarán disponibles para los usuarios.
+  #### <a name="configure-the-default-paste-format-of-urls-copied-from-microsoft-edge-and-determine-if-additional-formats-will-be-available-to-users"></a>Configura el formato de pegado predeterminado de las direcciones URL copiadas desde Microsoft Edge y determina si los formatos adicionales estarán disponibles para los usuarios.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 87 o posterior
   - En macOS, desde la versión 88 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si FriendlyURLs están habilitadas, Microsoft Edge calculará representaciones adicionales de la dirección URL y las colocará en el portapapeles.
 
@@ -11785,19 +11849,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ConfigureFriendlyURLFormat
   - Nombre de GP: Configura el formato de pegado predeterminado de las direcciones URL copiadas desde Microsoft Edge y determina si los formatos adicionales estarán disponibles para los usuarios.
@@ -11805,20 +11869,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ConfigureFriendlyURLFormat
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000003
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencia: ConfigureFriendlyURLFormat
   - Valor de ejemplo:
@@ -11829,17 +11893,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ConfigureOnPremisesAccountAutoSignIn
+  ### <a name="configureonpremisesaccountautosignin"></a>ConfigureOnPremisesAccountAutoSignIn
 
-  #### Configurar el inicio de sesión automático con una cuenta de dominio de Active Directory cuando no haya cuenta de dominio de Azure AD
+  #### <a name="configure-automatic-sign-in-with-an-active-directory-domain-account-when-there-is-no-azure-ad-domain-account"></a>Configurar el inicio de sesión automático con una cuenta de dominio de Active Directory cuando no haya cuenta de dominio de Azure AD
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 81 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita el uso de cuentas de Active Directory para el inicio de sesión automático en caso de que los equipos de los usuarios se unan a un dominio y el entorno no se haya unido de forma híbrida. Si desea que los usuarios inicien sesión automáticamente con sus cuentas de Azure Active Directory, en su lugar, llame a Azure AD join (vea[https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) para obtener más información) o a una combinación híbrida (vea[https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) para obtener más información) en su entorno.
 
@@ -11861,19 +11925,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ConfigureOnPremisesAccountAutoSignIn
   - Nombre de GP: configurar el inicio de sesión automático con una cuenta de dominio de Active Directory cuando no tenga una cuenta de dominio de Azure AD
@@ -11881,14 +11945,14 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ConfigureOnPremisesAccountAutoSignIn
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -11898,17 +11962,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ConfigureOnlineTextToSpeech
+  ### <a name="configureonlinetexttospeech"></a>ConfigureOnlineTextToSpeech
 
-  #### Configurar Texto a voz en línea
+  #### <a name="configure-online-text-to-speech"></a>Configurar Texto a voz en línea
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configure si el explorador puede usar el texto en línea para la característica fuentes de voz, como parte de los servicios de Azure Cognitive. Estas fuentes de voz son de mayor calidad que las preinstaladas en el sistema.
 
@@ -11918,19 +11982,19 @@ Si deshabilita esta directiva, la característica fuentes de voz no estará disp
 
 Obtenga más información sobre esta característica aquí: API SpeechSynthesis: [ https://go.microsoft.com/fwlink/?linkid=2110038](https://go.microsoft.com/fwlink/?linkid=2110038) servicios cognitivos: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go.microsoft.com/fwlink/?linkid=2110141)
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ConfigureOnlineTextToSpeech
   - Nombre de GP: configurar el texto a voz en línea
@@ -11938,20 +12002,20 @@ Obtenga más información sobre esta característica aquí: API SpeechSynthesis:
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ConfigureOnlineTextToSpeech
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ConfigureOnlineTextToSpeech
   - Valor de ejemplo:
@@ -11962,17 +12026,17 @@ Obtenga más información sobre esta característica aquí: API SpeechSynthesis:
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ConfigureShare
+  ### <a name="configureshare"></a>ConfigureShare
 
-  #### Configurar Compartir experiencia
+  #### <a name="configure-the-share-experience"></a>Configurar Compartir experiencia
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si establece esta directiva en "ShareAllowed" (el valor predeterminado), los usuarios podrán acceder a la experiencia de Uso compartido de Windows 10 desde el Menú Configuración y Más en Microsoft Edge para compartir con otras aplicaciones del sistema.
 
@@ -11986,19 +12050,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ConfigureShare
   - Nombre de GP: configurar la experiencia de uso compartido
@@ -12006,14 +12070,14 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ConfigureShare
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -12023,17 +12087,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### CustomHelpLink
+  ### <a name="customhelplink"></a>CustomHelpLink
 
-  #### Especificar el vínculo de ayuda personalizada
+  #### <a name="specify-custom-help-link"></a>Especificar el vínculo de ayuda personalizada
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 79 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifique un vínculo para el menú de ayuda o la tecla F1.
 
@@ -12043,19 +12107,19 @@ Si deshabilita o no configura esta directiva, se usará el enlace predeterminado
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: CustomHelpLink
   - Nombre de GP: especificar el vínculo de ayuda personalizada
@@ -12063,20 +12127,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: CustomHelpLink
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: CustomHelpLink
   - Valor de ejemplo:
@@ -12087,17 +12151,17 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DNSInterceptionChecksEnabled
+  ### <a name="dnsinterceptionchecksenabled"></a>DNSInterceptionChecksEnabled
 
-  #### Comprobaciones de interceptación de DNS habilitadas
+  #### <a name="dns-interception-checks-enabled"></a>Comprobaciones de interceptación de DNS habilitadas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva configura un conmutador local que puede usarse para deshabilitar las comprobaciones de interceptación de DNS. Estas comprobaciones intentan detectar si el explorador se encuentra detrás de un proxy que redirige nombres de host desconocidos.
 
@@ -12107,19 +12171,19 @@ Si habilita o no establece esta directiva, se realizarán las comprobaciones de 
 
 Si deshabilita esta directiva, no se llevarán a cabo las comprobaciones de interceptación de DNS.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DNSInterceptionChecksEnabled
   - Nombre de GP: comprobaciones de interceptación de DNS habilitadas
@@ -12127,20 +12191,20 @@ Si deshabilita esta directiva, no se llevarán a cabo las comprobaciones de inte
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DNSInterceptionChecksEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DNSInterceptionChecksEnabled
   - Valor de ejemplo:
@@ -12151,17 +12215,17 @@ Si deshabilita esta directiva, no se llevarán a cabo las comprobaciones de inte
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultBrowserSettingEnabled
+  ### <a name="defaultbrowsersettingenabled"></a>DefaultBrowserSettingEnabled
 
-  #### Establecer Microsoft Edge como explorador predeterminado
+  #### <a name="set-microsoft-edge-as-default-browser"></a>Establecer Microsoft Edge como explorador predeterminado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows 7 y macOS desde la versión 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si establece esta directiva en "true", Microsoft Edge siempre comprueba si es el navegador predeterminado en el inicio y, si es posible, se registra automáticamente.
 
@@ -12171,19 +12235,19 @@ Si no define esta Directiva, Microsoft Edge permite a los usuarios controlar si 
 
 Nota para los administradores de Windows: esta directiva solo funciona en los ordenadores que ejecuten Windows 7. Para las versiones posteriores de Windows, hay que implementar un archivo de "asociaciones de aplicación predeterminadas" que hace de Microsoft Edge el controlador de los protocolos https y http (y, opcionalmente, del protocolo ftp y formatos de archivo como .html, .htm, .pdf, .svg, .webp). Vea [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932) para obtener más información.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultBrowserSettingEnabled
   - Nombre de GP: establecer Microsoft Edge como explorador predeterminado
@@ -12191,20 +12255,20 @@ Nota para los administradores de Windows: esta directiva solo funciona en los or
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultBrowserSettingEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultBrowserSettingEnabled
   - Valor de ejemplo:
@@ -12215,17 +12279,17 @@ Nota para los administradores de Windows: esta directiva solo funciona en los or
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderContextMenuAccessAllowed
+  ### <a name="defaultsearchprovidercontextmenuaccessallowed"></a>DefaultSearchProviderContextMenuAccessAllowed
 
-  #### Permitir el acceso de búsqueda al menú contextual del proveedor de búsquedas predeterminado
+  #### <a name="allow-default-search-provider-context-menu-search-access"></a>Permitir el acceso de búsqueda al menú contextual del proveedor de búsquedas predeterminado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite el uso de un proveedor de búsquedas predeterminado en el menú contextual.
 
@@ -12235,19 +12299,19 @@ Si establece esta directiva en habilitada o no la establece, el elemento de men�
 
 El valor de la directiva solo se aplica cuando la directiva [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) está habilitada, y no se aplica en caso contrario.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSearchProviderContextMenuAccessAllowed
   - Nombre de GP: permitir el acceso de búsqueda al menú contextual del proveedor de búsquedas predeterminado
@@ -12255,20 +12319,20 @@ El valor de la directiva solo se aplica cuando la directiva [DefaultSearchProvid
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefaultSearchProviderContextMenuAccessAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSearchProviderContextMenuAccessAllowed
   - Valor de ejemplo:
@@ -12279,17 +12343,17 @@ El valor de la directiva solo se aplica cuando la directiva [DefaultSearchProvid
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSensorsSetting
+  ### <a name="defaultsensorssetting"></a>DefaultSensorsSetting
 
-  #### Configuración predeterminada de sensores
+  #### <a name="default-sensors-setting"></a>Configuración predeterminada de sensores
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establecer si los sitios web pueden acceder y usar sensores, tales como sensores de luz y de movimiento. Puede bloquear o permitir por completo el acceso de los sitios web a los sensores.
 
@@ -12307,19 +12371,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSensorsSetting
   - Nombre de GP: Configuración predeterminada de sensores
@@ -12327,20 +12391,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre de valor: DefaultSensorsSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSensorsSetting
   - Valor de ejemplo:
@@ -12351,17 +12415,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefaultSerialGuardSetting
+  ### <a name="defaultserialguardsetting"></a>DefaultSerialGuardSetting
 
-  #### Controlar el uso de la API de serie
+  #### <a name="control-use-of-the-serial-api"></a>Controlar el uso de la API de serie
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establecer si los sitios web pueden acceder a los puertos serie. Puede bloquear completamente el acceso o preguntar al usuario cada vez que un sitio web quiera acceder a un puerto serie.
 
@@ -12379,19 +12443,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefaultSerialGuardSetting
   - Nombre de GP: Controlar el uso de la API de serie
@@ -12399,20 +12463,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre de valor: DefaultSerialGuardSetting
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefaultSerialGuardSetting
   - Valor de ejemplo:
@@ -12423,17 +12487,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DefinePreferredLanguages
+  ### <a name="definepreferredlanguages"></a>DefinePreferredLanguages
 
-  #### Define una lista ordenada de idiomas preferidos en que los sitios web deben mostrarse si el sitio es compatible con el idioma
+  #### <a name="define-an-ordered-list-of-preferred-languages-that-websites-should-display-in-if-the-site-supports-the-language"></a>Define una lista ordenada de idiomas preferidos en que los sitios web deben mostrarse si el sitio es compatible con el idioma
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión 89 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura las variantes de idioma que Microsoft Edge envía a los sitios web como parte del encabezado HTTP de solicitud Accept-Language e impide que los usuarios agreguen, quiten o cambien el orden de los idiomas preferidos en la configuración de Microsoft Edge. Los usuarios que quieran cambiar los idiomas en los que se muestra Microsoft Edge u ofrece traducir páginas se limitarán a los idiomas configurados en esta directiva.
 
@@ -12443,19 +12507,19 @@ Si no configura o deshabilita esta directiva, Microsoft Edge envía a los sitios
 
 Para obtener información detallada sobre las variantes de idioma válidas, consulte [https://go.microsoft.com/fwlink/?linkid=2148854](https://go.microsoft.com/fwlink/?linkid=2148854).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DefinePreferredLanguages
   - Nombre de GP: define una lista ordenada de idiomas preferidos que los sitios web deben mostrar si el sitio admite el idioma
@@ -12463,20 +12527,20 @@ Para obtener información detallada sobre las variantes de idioma válidas, cons
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DefinePreferredLanguages
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "en-US,fr,es"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DefinePreferredLanguages
   - Valor de ejemplo:
@@ -12487,17 +12551,17 @@ Para obtener información detallada sobre las variantes de idioma válidas, cons
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DelayNavigationsForInitialSiteListDownload
+  ### <a name="delaynavigationsforinitialsitelistdownload"></a>DelayNavigationsForInitialSiteListDownload
 
-  #### Requerir que la lista de sitios modo empresarial esté disponible antes que la navegación por la tabulación
+  #### <a name="require-that-the-enterprise-mode-site-list-is-available-before-tab-navigation"></a>Requerir que la lista de sitios modo empresarial esté disponible antes que la navegación por la tabulación
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 84 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Le permite especificar si las pestañas de Microsoft Edge esperan para navegar hasta que el explorador ha descargado la lista de sitios de modo empresarial inicial. Esta configuración está pensada para el escenario en el que la Página principal del explorador se debe cargar en el modo de Internet Explorer y es importante que se realice en la primera ejecución del explorador después de habilitar el modo IE. Si este escenario no existe, le recomendamos que no habilite esta opción, ya que puede afectar negativamente al rendimiento de carga de la Página principal. La configuración solo se aplica cuando Microsoft Edge no tiene una lista de sitios en el modo de empresa en caché, como en ejecutar por primera vez el explorador después de habilitar el modo IE.
 
@@ -12517,19 +12581,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DelayNavigationsForInitialSiteListDownload
   - Nombre de la Directiva de Grupo: necesita que la lista de sitios modo empresarial esté disponible antes que la navegación por la tabulación
@@ -12537,14 +12601,14 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DelayNavigationsForInitialSiteListDownload
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -12554,17 +12618,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DeleteDataOnMigration
+  ### <a name="deletedataonmigration"></a>DeleteDataOnMigration
 
-  #### Eliminar datos antiguos del explorador en la migración.
+  #### <a name="delete-old-browser-data-on-migration"></a>Eliminar datos antiguos del explorador en la migración.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva determina si se eliminarán los datos de navegación del usuario de Microsoft Edge (versión anterior) después de migrar a la versión 81 o posterior de Microsoft Edge.
 
@@ -12572,19 +12636,19 @@ Si establece esta directiva como "habilitada", todos los datos de navegación de
 
 Si establece esta directiva como "deshabilitada", o si no está configurada, los datos de navegación del usuario no se eliminarán después de migrar a la versión 83 o posterior de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DeleteDataOnMigration
   - Nombre de GP: eliminar los datos antiguos del explorador durante la migración
@@ -12592,14 +12656,14 @@ Si establece esta directiva como "deshabilitada", o si no está configurada, los
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DeleteDataOnMigration
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -12609,17 +12673,17 @@ Si establece esta directiva como "deshabilitada", o si no está configurada, los
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DeveloperToolsAvailability
+  ### <a name="developertoolsavailability"></a>DeveloperToolsAvailability
 
-  #### Controlar dónde se pueden usar las herramientas de desarrollo
+  #### <a name="control-where-developer-tools-can-be-used"></a>Controlar dónde se pueden usar las herramientas de desarrollo
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla dónde se pueden usar las herramientas de desarrollo.
 
@@ -12639,19 +12703,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DeveloperToolsAvailability
   - Nombre de GP: controlar dónde se pueden usar las herramientas de desarrollo
@@ -12659,20 +12723,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DeveloperToolsAvailability
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DeveloperToolsAvailability
   - Valor de ejemplo:
@@ -12683,17 +12747,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DiagnosticData
+  ### <a name="diagnosticdata"></a>DiagnosticData
 
-  #### Enviar datos de diagnóstico necesarios y opcionales sobre el uso del explorador
+  #### <a name="send-required-and-optional-diagnostic-data-about-browser-usage"></a>Enviar datos de diagnóstico necesarios y opcionales sobre el uso del explorador
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows 7 y macOS desde la versión 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva controla el envío a Microsoft de datos de diagnóstico necesarios y opcionales sobre el uso del explorador.
 
@@ -12725,19 +12789,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DiagnosticData
   - Nombre GP: enviar datos de diagnóstico necesarios y opcionales sobre el uso del explorador
@@ -12745,20 +12809,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre de valor: DiagnosticData
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: DiagnosticData
   - Valor de ejemplo:
@@ -12769,17 +12833,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DirectInvokeEnabled
+  ### <a name="directinvokeenabled"></a>DirectInvokeEnabled
 
-  #### Permitir que los usuarios abran archivos mediante el protocolo DirectInvoke
+  #### <a name="allow-users-to-open-files-using-the-directinvoke-protocol"></a>Permitir que los usuarios abran archivos mediante el protocolo DirectInvoke
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permitir que los usuarios abran archivos mediante el protocolo DirectInvoke. El protocolo ClickOnce permite que los sitios web soliciten que el explorador abra los archivos desde una dirección URL determinada mediante un controlador de archivos específico en el equipo o dispositivo del usuario.
 
@@ -12791,19 +12855,19 @@ Nota: si deshabilita DirectInvoke, es posible que algunas características de Mi
 
 Para obtener más información acerca de DirectInvoke, vea [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) y [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DirectInvokeEnabled
   - Nombre de GP: permitir que los usuarios abran los archivos mediante el protocolo DirectInvoke
@@ -12811,14 +12875,14 @@ Para obtener más información acerca de DirectInvoke, vea [https://go.microsoft
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DirectInvokeEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -12828,17 +12892,17 @@ Para obtener más información acerca de DirectInvoke, vea [https://go.microsoft
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### Disable3DAPIs
+  ### <a name="disable3dapis"></a>Disable3DAPIs
 
-  #### Deshabilitar la compatibilidad para las API gráficas 3D
+  #### <a name="disable-support-for-3d-graphics-apis"></a>Deshabilitar la compatibilidad para las API gráficas 3D
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Evita que las páginas web puedan acceder a la unidad de procesamiento de gráficos (GPU). Específicamente, las páginas web no pueden acceder a la API de WebGL y los complementos no pueden usar la API de Pepper 3D.
 
@@ -12846,19 +12910,19 @@ Si no configura o deshabilita esta directiva, las páginas web podrán usar la A
 
 Si establece la directiva [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) como falsa, la configuración de la directiva "Disable3DAPIs" se omitirá, lo que equivaldría a establecer la directiva "Disable3DAPIs" como verdadera.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: Disable3DAPIs
   - Nombre de GP: deshabilitar la compatibilidad con las API de gráficos 3D
@@ -12866,20 +12930,20 @@ Si establece la directiva [HardwareAccelerationModeEnabled](#hardwareacceleratio
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: Disable3DAPIs
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: Disable3DAPIs
   - Valor de ejemplo:
@@ -12890,17 +12954,17 @@ Si establece la directiva [HardwareAccelerationModeEnabled](#hardwareacceleratio
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DisableScreenshots
+  ### <a name="disablescreenshots"></a>DisableScreenshots
 
-  #### Deshabilitar las capturas de pantalla
+  #### <a name="disable-taking-screenshots"></a>Deshabilitar las capturas de pantalla
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla si los usuarios pueden tomar capturas de pantalla de la página del explorador.
 
@@ -12910,19 +12974,19 @@ Si esta directiva está deshabilitada o no es configurada, los usuarios podrán 
 
 Tenga en cuenta que esta directiva controla las capturas de pantalla tomadas desde el propio explorador. Aunque habilite esta directiva, los usuarios podrán seguir realizando capturas de pantalla mediante algún método ajeno al explorador (como usar una característica del sistema operativo u otra aplicación).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DisableScreenshots
   - Nombre de GP: deshabilitar las capturas de pantalla
@@ -12930,20 +12994,20 @@ Tenga en cuenta que esta directiva controla las capturas de pantalla tomadas des
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DisableScreenshots
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DisableScreenshots
   - Valor de ejemplo:
@@ -12954,17 +13018,17 @@ Tenga en cuenta que esta directiva controla las capturas de pantalla tomadas des
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DiskCacheDir
+  ### <a name="diskcachedir"></a>DiskCacheDir
 
-  #### Establecer directorio de caché de disco
+  #### <a name="set-disk-cache-directory"></a>Establecer directorio de caché de disco
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura el directorio que se usará para almacenar los archivos en caché.
 
@@ -12974,19 +13038,19 @@ Vea [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
 
 Si no configura esta directiva, se usará el directorio de caché predeterminado, y los usuarios podrán anularlo con el marcador de la línea de comandos "--disk-cache-dir".
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DiskCacheDir
   - Nombre de GP: establecer directorio de caché de disco
@@ -12994,20 +13058,20 @@ Si no configura esta directiva, se usará el directorio de caché predeterminado
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DiskCacheDir
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "${user_home}/Edge_cache"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DiskCacheDir
   - Valor de ejemplo:
@@ -13018,17 +13082,17 @@ Si no configura esta directiva, se usará el directorio de caché predeterminado
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DiskCacheSize
+  ### <a name="diskcachesize"></a>DiskCacheSize
 
-  #### Configurar el tamaño de la caché de disco, en bytes
+  #### <a name="set-disk-cache-size-in-bytes"></a>Configurar el tamaño de la caché de disco, en bytes
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configure el tamaño de la caché, en bytes, que se usa para almacenar archivos en el disco.
 
@@ -13038,19 +13102,19 @@ Si establece el valor de esta directiva en 0, se usará el tamaño de caché pre
 
 Si no configura esta Directiva, se usará el tamaño predeterminado, pero los usuarios podrán anularla con el marcador "--almacenamiento de caché en disco".
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DiskCacheSize
   - Nombre de GP: configurar el tamaño de la caché de disco en bytes
@@ -13058,20 +13122,20 @@ Si no configura esta Directiva, se usará el tamaño predeterminado, pero los us
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DiskCacheSize
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x06400000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DiskCacheSize
   - Valor de ejemplo:
@@ -13082,17 +13146,17 @@ Si no configura esta Directiva, se usará el tamaño predeterminado, pero los us
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DnsOverHttpsMode
+  ### <a name="dnsoverhttpsmode"></a>DnsOverHttpsMode
 
-  #### Controlar el modo de DNS a través de HTTPS.
+  #### <a name="control-the-mode-of-dns-over-https"></a>Controlar el modo de DNS a través de HTTPS.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla el modo de DNS a través de HTTPS Tenga en cuenta que esta directiva solo establecerá el modo predeterminado en cada consulta. Este modo puede ser anulado en tipos especiales de consultas, como las solicitudes para solucionar el nombre de host de un servidor de DNS a través de HTTPS.
 
@@ -13114,19 +13178,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DnsOverHttpsMode
   - Nombre de GP: controlar el modo de DNS a través de HTTPS
@@ -13134,20 +13198,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DnsOverHttpsMode
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "off"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DnsOverHttpsMode
   - Valor de ejemplo:
@@ -13158,17 +13222,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DnsOverHttpsTemplates
+  ### <a name="dnsoverhttpstemplates"></a>DnsOverHttpsTemplates
 
-  #### Especificar la plantilla de URI de la resolución de DNS a través de HTTPS deseada
+  #### <a name="specify-uri-template-of-desired-dns-over-https-resolver"></a>Especificar la plantilla de URI de la resolución de DNS a través de HTTPS deseada
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   La plantilla de URI del solucionador de DNS a través de HTTPS deseada. Para especificar varias soluciones DNS a través de HTTPS, separe las plantillas URI correspondientes con espacios.
 
@@ -13180,19 +13244,19 @@ Si la plantilla URI contiene una variable DNS, las solicitudes al solucionador u
 
 Las plantillas con un formato incorrecto serán omitidas.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DnsOverHttpsTemplates
   - Nombre de GP: especificar la plantilla URI de la resolución deseada de DNS a través de HTTPS
@@ -13200,20 +13264,20 @@ Las plantillas con un formato incorrecto serán omitidas.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: DnsOverHttpsTemplates
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://dns.example.net/dns-query{?dns}"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DnsOverHttpsTemplates
   - Valor de ejemplo:
@@ -13224,17 +13288,17 @@ Las plantillas con un formato incorrecto serán omitidas.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DownloadDirectory
+  ### <a name="downloaddirectory"></a>DownloadDirectory
 
-  #### Establecer directorio de descarga
+  #### <a name="set-download-directory"></a>Establecer directorio de descarga
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura el directorio que se usará al descargar archivos.
 
@@ -13246,19 +13310,19 @@ Si establece una ruta de acceso no válida, Microsoft Edge usará de forma prede
 
 Si no existe la carpeta especificada por la ruta de acceso, la descarga activará un mensaje de solicitud que preguntará al usuario dónde quiere guardar su descarga.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DownloadDirectory
   - Nombre de GP: establecer el directorio de descarga
@@ -13266,20 +13330,20 @@ Si no existe la carpeta especificada por la ruta de acceso, la descarga activar�
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: DownloadDirectory
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DownloadDirectory
   - Valor de ejemplo:
@@ -13292,17 +13356,17 @@ Si no existe la carpeta especificada por la ruta de acceso, la descarga activar�
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### DownloadRestrictions
+  ### <a name="downloadrestrictions"></a>DownloadRestrictions
 
-  #### Permitir las restricciones de descarga
+  #### <a name="allow-download-restrictions"></a>Permitir las restricciones de descarga
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura el tipo de descargas que Microsoft Edge bloquea completamente, sin dejar que los usuarios anulen la decisión de seguridad.
 
@@ -13330,19 +13394,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: DownloadRestrictions
   - Nombre de GP: permitir las restricciones de descarga
@@ -13350,20 +13414,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: DownloadRestrictions
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: DownloadRestrictions
   - Valor de ejemplo:
@@ -13374,17 +13438,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EdgeCollectionsEnabled
+  ### <a name="edgecollectionsenabled"></a>EdgeCollectionsEnabled
 
-  #### Habilitar la característica colecciones
+  #### <a name="enable-the-collections-feature"></a>Habilitar la característica colecciones
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios accedan a la característica de colecciones, donde pueden recopilar, organizar, compartir y exportar contenido de forma más eficaz y con la integración de Office.
 
@@ -13392,19 +13456,19 @@ Si habilita o no configura esta directiva, los usuarios podrán obtener acceso y
 
 Si deshabilita esta directiva, los usuarios no podrán acceder ni usar las colecciones de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EdgeCollectionsEnabled
   - Nombre de GP: habilitar la característica de colecciones
@@ -13412,20 +13476,20 @@ Si deshabilita esta directiva, los usuarios no podrán acceder ni usar las colec
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: EdgeCollectionsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: EdgeCollectionsEnabled
   - Valor de ejemplo:
@@ -13436,17 +13500,17 @@ Si deshabilita esta directiva, los usuarios no podrán acceder ni usar las colec
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EdgeShoppingAssistantEnabled
+  ### <a name="edgeshoppingassistantenabled"></a>EdgeShoppingAssistantEnabled
 
-  #### Comprar en Microsoft Edge activado
+  #### <a name="shopping-in-microsoft-edge-enabled"></a>Comprar en Microsoft Edge activado
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva permite que los usuarios comparen los precios de un producto que estén buscando, obtengan cupones o reembolsos en el sitio web en el que se encuentren y apliquen cupones automáticamente durante la compra.
 
@@ -13454,19 +13518,19 @@ Si habilita o no configura esta directiva, las características de compra, como 
 
 Si deshabilita esta directiva, las características de compra, como la comparación de precios, los cupones y los reembolsos no se encontrarán automáticamente para los dominios comerciales.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EdgeShoppingAssistantEnabled
   - Nombre GP: Compra en Microsoft Edge activada
@@ -13474,20 +13538,20 @@ Si deshabilita esta directiva, las características de compra, como la comparaci
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: EdgeShoppingAssistantEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: EdgeShoppingAssistantEnabled
   - Valor de ejemplo:
@@ -13498,35 +13562,35 @@ Si deshabilita esta directiva, las características de compra, como la comparaci
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EditFavoritesEnabled
+  ### <a name="editfavoritesenabled"></a>EditFavoritesEnabled
 
-  #### Permitir que los usuarios editen los favoritos
+  #### <a name="allows-users-to-edit-favorites"></a>Permitir que los usuarios editen los favoritos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilite esta directiva para permitir que los usuarios puedan agregar, quitar o modificar los favoritos. Si no se configura esta directiva, este será el comportamiento por defecto.
 
 Deshabilite esta directiva para evitar que los usuarios puedan agregar, quitar o modificar los favoritos. Aún podrán usar los favoritos existentes.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EditFavoritesEnabled
   - Nombre de GP: permitir que los usuarios editen los favoritos
@@ -13534,20 +13598,20 @@ Deshabilite esta directiva para evitar que los usuarios puedan agregar, quitar o
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: EditFavoritesEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: EditFavoritesEnabled
   - Valor de ejemplo:
@@ -13558,17 +13622,17 @@ Deshabilite esta directiva para evitar que los usuarios puedan agregar, quitar o
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EnableDeprecatedWebPlatformFeatures
+  ### <a name="enabledeprecatedwebplatformfeatures"></a>EnableDeprecatedWebPlatformFeatures
 
-  #### Volver a habilitar las características de la plataforma web en desuso durante un período de tiempo limitado
+  #### <a name="re-enable-deprecated-web-platform-features-for-a-limited-time-obsolete"></a>Volver a habilitar las características de la plataforma web en desuso durante un período de tiempo limitado
 
   
   >OBSOLETA: Esta directiva está obsoleta y no funciona después de Microsoft Edge 86.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y Mac OS desde 77, hasta 86
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
 
@@ -13588,19 +13652,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EnableDeprecatedWebPlatformFeatures
   - Nombre de GP: volver a habilitar las características de la plataforma web en desuso durante un período de tiempo limitado (obsoleto)
@@ -13608,21 +13672,21 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: EnableDeprecatedWebPlatformFeatures
   - Valor de ejemplo:
@@ -13635,17 +13699,17 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EnableDomainActionsDownload
+  ### <a name="enabledomainactionsdownload"></a>EnableDomainActionsDownload
 
-  #### Habilitar la descarga de acciones de dominio de Microsoft (obsoleto)
+  #### <a name="enable-domain-actions-download-from-microsoft-obsolete"></a>Habilitar la descarga de acciones de dominio de Microsoft (obsoleto)
 
   
   >OBSOLETA: Esta directiva está obsoleta y no funciona después de Microsoft Edge 84.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde el 77 hasta el 84
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta Directiva no funciona porque deben evitarse Estados en conflicto. Aunque esta directiva se usa para habilitar o deshabilitar la descarga de la lista de acciones del dominio, no siempre alcanza el estado deseado. El servicio de experimentación y configuración, que controla la descarga, tiene su propia directiva de grupo para configurar las descargas realizadas desde el servicio. En su lugar, use la directiva [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)
 
@@ -13661,19 +13725,19 @@ Si deshabilita esta directiva, la lista de acciones del dominio no se seguirá d
 
 Si no configura esta directiva, la lista de acciones del dominio se seguirá descargando desde el servicio de experimentación y configuración.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EnableDomainActionsDownload
   - Nombre de GP: habilitar la descarga de acciones de dominio de Microsoft (en desuso)
@@ -13681,20 +13745,20 @@ Si no configura esta directiva, la lista de acciones del dominio se seguirá des
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: EnableDomainActionsDownload
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: EnableDomainActionsDownload
   - Valor de ejemplo:
@@ -13705,17 +13769,17 @@ Si no configura esta directiva, la lista de acciones del dominio se seguirá des
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EnableOnlineRevocationChecks
+  ### <a name="enableonlinerevocationchecks"></a>EnableOnlineRevocationChecks
 
-  #### Habilitar las comprobaciones de OCSP/CRL en línea
+  #### <a name="enable-online-ocspcrl-checks"></a>Habilitar las comprobaciones de OCSP/CRL en línea
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Las comprobaciones de la revocación en línea no proporcionan una ventaja de seguridad considerable y están deshabilitadas de forma predeterminada.
 
@@ -13723,19 +13787,19 @@ Si habilita esta directiva, Microsoft Edge realizará comprobaciones OCSP/CRL en
 
 Si deshabilita la directiva o no la configura, Microsoft Edge no realizará comprobaciones de la revocación en línea.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EnableOnlineRevocationChecks
   - Nombre de GP: habilitar las comprobaciones de OCSP/CRL en línea
@@ -13743,20 +13807,20 @@ Si deshabilita la directiva o no la configura, Microsoft Edge no realizará comp
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: EnableOnlineRevocationChecks
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: EnableOnlineRevocationChecks
   - Valor de ejemplo:
@@ -13767,17 +13831,17 @@ Si deshabilita la directiva o no la configura, Microsoft Edge no realizará comp
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EnableSha1ForLocalAnchors
+  ### <a name="enablesha1forlocalanchors"></a>EnableSha1ForLocalAnchors
 
-  #### Permitir certificados firmados mediante SHA-1 cuando sean emitidos por anclajes de veracidad locales (en desuso).
+  #### <a name="allow-certificates-signed-using-sha-1-when-issued-by-local-trust-anchors-deprecated"></a>Permitir certificados firmados mediante SHA-1 cuando sean emitidos por anclajes de veracidad locales (en desuso).
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Cuando esta configuración está habilitada, Microsoft Edge permite conexiones protegidas por certificados firmados con SHA-1 siempre y cuando el certificado se encadene a un certificado raíz instalado de forma local y, por lo tanto, sea válido.
 
@@ -13787,19 +13851,19 @@ Si no establece esta directiva o la establece en falso, o si el certificado SHA-
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EnableSha1ForLocalAnchors
   - Nombre de GP: permitir certificados firmados mediante SHA-1 cuando sean emitidos por anclajes de veracidad locales (en desuso).
@@ -13807,20 +13871,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: EnableSha1ForLocalAnchors
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: EnableSha1ForLocalAnchors
   - Valor de ejemplo:
@@ -13831,35 +13895,35 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EnterpriseHardwarePlatformAPIEnabled
+  ### <a name="enterprisehardwareplatformapienabled"></a>EnterpriseHardwarePlatformAPIEnabled
 
-  #### Permitir que las extensiones administradas utilicen la API de la plataforma de hardware empresarial
+  #### <a name="allow-managed-extensions-to-use-the-enterprise-hardware-platform-api"></a>Permitir que las extensiones administradas utilicen la API de la plataforma de hardware empresarial
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Cuando esta directiva se establece como habilitada, las extensiones instaladas por la directiva de empresa pueden usar la API de la plataforma del hardware de empresa.
 Cuando esta directiva se establece como deshabilitada o no establecida, las extensiones instaladas por la directiva de empresa no pueden usar la API de la plataforma del hardware de empresa.
 Esta directiva también se aplica a las extensiones de los componentes.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EnterpriseHardwarePlatformAPIEnabled
   - Nombre de GP: permitir que las extensiones administradas utilicen la API de la plataforma de hardware empresarial
@@ -13867,20 +13931,20 @@ Esta directiva también se aplica a las extensiones de los componentes.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: EnterpriseHardwarePlatformAPIEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: EnterpriseHardwarePlatformAPIEnabled
   - Valor de ejemplo:
@@ -13891,17 +13955,17 @@ Esta directiva también se aplica a las extensiones de los componentes.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### EnterpriseModeSiteListManagerAllowed
+  ### <a name="enterprisemodesitelistmanagerallowed"></a>EnterpriseModeSiteListManagerAllowed
 
-  #### Permitir el acceso a la herramienta Enterprise Mode Site List Manager
+  #### <a name="allow-access-to-the-enterprise-mode-site-list-manager-tool"></a>Permitir el acceso a la herramienta Enterprise Mode Site List Manager
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite establecer si Enterprise Mode Site List Manager está disponible para los usuarios.
 
@@ -13909,19 +13973,19 @@ Si habilita esta directiva, los usuarios pueden ver el botón de navegación de 
 
 Si deshabilita o no configura esta directiva, los usuarios no verán el botón de navegación de Enterprise Mode Site List Manager y no podrán usar la herramienta.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: EnterpriseModeSiteListManagerAllowed
   - Nombre de GP: permitir el acceso a la herramienta Enterprise Mode Site List Manager
@@ -13929,14 +13993,14 @@ Si deshabilita o no configura esta directiva, los usuarios no verán el botón d
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: EnterpriseModeSiteListManagerAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -13946,17 +14010,17 @@ Si deshabilita o no configura esta directiva, los usuarios no verán el botón d
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  ### <a name="exemptdomainfiletypepairsfromfiletypedownloadwarnings"></a>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
 
-  #### Deshabilitar el tipo de archivo de descarga advertencias basadas en la extensión para tipos de archivo especificados en dominios
+  #### <a name="disable-download-file-type-extension-based-warnings-for-specified-file-types-on-domains"></a>Deshabilitar el tipo de archivo de descarga advertencias basadas en la extensión para tipos de archivo especificados en dominios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Puede habilitar esta directiva para crear un diccionario de extensiones de tipo de archivo con una lista de dominios correspondiente que se excluirá de las advertencias de descarga basada en la extensión de tipo de archivo. Esto permite a los administradores de la empresa bloquear las advertencias de descarga basada en la extensión de tipo de archivo para los archivos que están asociados a un dominio de la lista. Por ejemplo, si la extensión "JNLP" está asociada a "website1.com", los usuarios no verán ninguna advertencia al descargar los archivos "JNLP" de "website1.com", pero verán una advertencia de descarga al descargar archivos "JNLP" de "website2.com".
 
@@ -13977,19 +14041,19 @@ El siguiente valor de ejemplo impide las advertencias de descarga basada en la e
 
 Tenga en cuenta que, mientras que en el ejemplo anterior se muestra una advertencia de descarga basada en la extensión de tipo de archivo para los archivos "SWF" para todos los dominios, no se recomienda la eliminación de estas advertencias para todos los dominios por cualquier extensión peligrosa, por motivos de seguridad. Solo se muestra en el ejemplo para mostrar la posibilidad de hacerlo.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Nombre de GP: deshabilitar el tipo de archivo de descarga advertencias basadas en extensión para tipos de archivo especificados en dominios
@@ -13997,14 +14061,14 @@ Tenga en cuenta que, mientras que en el ejemplo anterior se muestra una adverten
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta (obligatoria): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
@@ -14012,7 +14076,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Valor de ejemplo:
@@ -14026,17 +14090,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ExperimentationAndConfigurationServiceControl
+  ### <a name="experimentationandconfigurationservicecontrol"></a>ExperimentationAndConfigurationServiceControl
 
-  #### Controlar la comunicación con el servicio de experimentación y configuración
+  #### <a name="control-communication-with-the-experimentation-and-configuration-service"></a>Controlar la comunicación con el servicio de experimentación y configuración
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   En Microsoft Edge, el servicio de experimentación y configuración se usa para implementar la carga de experimentación y configuración.
 
@@ -14066,19 +14130,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ExperimentationAndConfigurationServiceControl
   - Nombre de GP: controlar la comunicación con el servicio de experimentación y configuración
@@ -14086,20 +14150,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ExperimentationAndConfigurationServiceControl
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExperimentationAndConfigurationServiceControl
   - Valor de ejemplo:
@@ -14110,17 +14174,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ExternalProtocolDialogShowAlwaysOpenCheckbox
+  ### <a name="externalprotocoldialogshowalwaysopencheckbox"></a>ExternalProtocolDialogShowAlwaysOpenCheckbox
 
-  #### Mostrar la casilla "abrir siempre" en el cuadro de diálogo de protocolo externo
+  #### <a name="show-an-always-open-checkbox-in-external-protocol-dialog"></a>Mostrar la casilla "abrir siempre" en el cuadro de diálogo de protocolo externo
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 79 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva controla si la casilla de verificación "permitir siempre que este sitio abra vínculos de este tipo" se muestra en los avisos de confirmación al iniciar el protocolo externo. Esta directiva solo se aplica a los vínculos https://.
 
@@ -14134,19 +14198,19 @@ En Microsoft Edge 83, si no configura esta directiva, la visibilidad de la casil
 
 A partir de Microsoft Edge 84, si no configura esta directiva, cuando se muestre un aviso de confirmación de un protocolo externo, el usuario podrá seleccionar "Permitir siempre" para omitir todos los avisos de confirmación futuros del protocolo en este sitio.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - Nombre de GP: mostrar la casilla "abrir siempre" en el cuadro de diálogo de protocolo externo
@@ -14154,20 +14218,20 @@ A partir de Microsoft Edge 84, si no configura esta directiva, cuando se muestre
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - Valor de ejemplo:
@@ -14178,58 +14242,58 @@ A partir de Microsoft Edge 84, si no configura esta directiva, cuando se muestre
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### FamilySafetySettingsEnabled
+  ### <a name="familysafetysettingsenabled"></a>FamilySafetySettingsEnabled
 
-  #### Permitir que los usuarios configuren la seguridad familiar
+  #### <a name="allow-users-to-configure-family-safety-and-kids-mode"></a>Permitir a los usuarios configurar la seguridad infantil y el modo niños
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
-  Esta directiva deshabilita y oculta completamente la página de seguridad familiar en la configuración. También se bloqueará la navegación a edge://settings/familysafety. La página seguridad familiar describe las características que están disponibles para los grupos de familia y cómo unirse a un grupo de familia. Obtenga más información sobre la seguridad familiar aquí: ([https://go.microsoft.com/fwlink/?linkid=2098432](https://go.microsoft.com/fwlink/?linkid=2098432)).
+  Esta directiva deshabilita dos características relacionadas con la seguridad familiar en el explorador. Esto ocultará la página Familia dentro de Configuración y la navegación a edge://settings/family se bloqueará. La página de configuración de familia describe qué características están disponibles con grupos familiares con Microsoft Family Safety. Obtenga más información sobre Family Safety aquí: ([https://go.microsoft.com/fwlink/?linkid=2098432](https://go.microsoft.com/fwlink/?linkid=2098432)). A partir de Microsoft Edge 90, esta directiva también deshabilita el modo Niños, un modo de exploración para niños con temas personalizados y navegación en lista de permitidos que requiere la contraseña del dispositivo para salir. Obtenga más información sobre el modo Niños aquí: ([https://go.microsoft.com/fwlink/?linkid=2146910](https://go.microsoft.com/fwlink/?linkid=2146910))
 
-Si habilita o no configura esta directiva, se mostrará la página de seguridad familiar.
+Si habilita esta directiva o no la configura, se mostrará la página de familia en Configuración y el modo Niños estará disponible.
 
-Si deshabilita esta directiva, no se mostrará la página de seguridad familiar.
+Si deshabilita esta directiva, no se mostrará la página de familia y el modo Niños se ocultará.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: FamilySafetySettingsEnabled
-  - Nombre de GP: permitir que los usuarios configuren la Protección infantil de Microsoft
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Nombre de GP: Permitir a los usuarios configurar la seguridad infantil y el modo Niños
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: FamilySafetySettingsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: FamilySafetySettingsEnabled
   - Valor de ejemplo:
@@ -14240,17 +14304,17 @@ Si deshabilita esta directiva, no se mostrará la página de seguridad familiar.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### FavoritesBarEnabled
+  ### <a name="favoritesbarenabled"></a>FavoritesBarEnabled
 
-  #### Habilitar la barra de favoritos
+  #### <a name="enable-favorites-bar"></a>Habilitar la barra de favoritos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita o deshabilita la barra de favoritos.
 
@@ -14260,19 +14324,19 @@ Si deshabilita esta directiva, los usuarios no verán la barra de favoritos.
 
 Si no se configura esta directiva, el usuario podrá optar por usar la barra de favoritos.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: FavoritesBarEnabled
   - Nombre de GP: habilitar la barra de favoritos
@@ -14280,20 +14344,20 @@ Si no se configura esta directiva, el usuario podrá optar por usar la barra de 
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: FavoritesBarEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: FavoritesBarEnabled
   - Valor de ejemplo:
@@ -14304,17 +14368,17 @@ Si no se configura esta directiva, el usuario podrá optar por usar la barra de 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ForceBingSafeSearch
+  ### <a name="forcebingsafesearch"></a>ForceBingSafeSearch
 
-  #### Forzar la búsqueda segura de Bing
+  #### <a name="enforce-bing-safesearch"></a>Forzar la búsqueda segura de Bing
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Asegúrese de que las consultas que se realizan en la búsqueda web de Bing se hagan con la búsqueda segura establecida en el valor especificado. Los usuarios no pueden cambiar esta configuración.
 
@@ -14336,19 +14400,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ForceBingSafeSearch
   - Nombre de GP: forzar la búsqueda segura de Bing
@@ -14356,20 +14420,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ForceBingSafeSearch
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceBingSafeSearch
   - Valor de ejemplo:
@@ -14380,17 +14444,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ForceCertificatePromptsOnMultipleMatches
+  ### <a name="forcecertificatepromptsonmultiplematches"></a>ForceCertificatePromptsOnMultipleMatches
 
-  #### Configurar si Microsoft Edge debe seleccionar automáticamente un certificado cuando haya múltiples coincidencias de certificados para un sitio configurado con "AutoSelectCertificateForUrls"
+  #### <a name="configure-whether-microsoft-edge-should-automatically-select-a-certificate-when-there-are-multiple-certificate-matches-for-a-site-configured-with-autoselectcertificateforurls"></a>Configurar si Microsoft Edge debe seleccionar automáticamente un certificado cuando haya múltiples coincidencias de certificados para un sitio configurado con "AutoSelectCertificateForUrls"
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 81 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Se alterna la opción entre la selección de un certificado si hay varios certificados disponibles y la configuración de un sitio con [AutoSelectCertificateForUrls](#autoselectcertificateforurls). Si no se configura [AutoSelectCertificateForUrls](#autoselectcertificateforurls) en un sitio, siempre se le solicitará al usuario que seleccione un certificado.
 
@@ -14398,19 +14462,19 @@ Si establece esta directiva como verdadera, Microsoft Edge le solicitará al usu
 
 Si establece esta directiva como falsa o no la configura, Microsoft Edge seleccionará un certificado automáticamente, aunque hayan varias coincidencias para un certificado. No se solicitará al usuario que seleccione un certificado para los sitios de la lista definida en [AutoSelectCertificateForUrls](#autoselectcertificateforurls).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ForceCertificatePromptsOnMultipleMatches
   - Nombre de GP: configurar la selección automática de un certificado por parte de Microsoft Edge cuando haya múltiples coincidencias de certificados para un sitio configurado con "AutoSelectCertificateForUrls"
@@ -14418,20 +14482,20 @@ Si establece esta directiva como falsa o no la configura, Microsoft Edge selecci
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ForceCertificatePromptsOnMultipleMatches
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceCertificatePromptsOnMultipleMatches
   - Valor de ejemplo:
@@ -14442,17 +14506,17 @@ Si establece esta directiva como falsa o no la configura, Microsoft Edge selecci
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ForceEphemeralProfiles
+  ### <a name="forceephemeralprofiles"></a>ForceEphemeralProfiles
 
-  #### Permitir el uso de perfiles efímeros
+  #### <a name="enable-use-of-ephemeral-profiles"></a>Permitir el uso de perfiles efímeros
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla el cambio de los perfiles de usuario al modo efímero. Un perfil efímero se crea al iniciar una sesión, se elimina al finalizar la misma y se asocia al perfil original del usuario.
 
@@ -14462,19 +14526,19 @@ Si deshabilita esta directiva o no la configura, los usuarios verán sus perfile
 
 En el modo efímero, los datos del perfil solo se guardarán en el disco mientras la sesión del usuario se mantenga activa. Las características como el historial del explorador, las extensiones, sus datos, datos Web como las cookies y las bases de datos web no se guardan después de cerrar el explorador. Esto no impedirá que los usuarios descarguen los datos manualmente en el disco, o que no puedan imprimirlos o guardar las páginas. Si el usuario ha habilitado la sincronización, todos los datos se conservarán en sus cuentas de sincronización al igual que ocurre en los perfiles normales. Los usuarios también pueden usar la exploración InPrivate en modo efímero, a menos que lo desactive explícitamente.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ForceEphemeralProfiles
   - Nombre de GP: permitir el uso de perfiles efímeros
@@ -14482,20 +14546,20 @@ En el modo efímero, los datos del perfil solo se guardarán en el disco mientra
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ForceEphemeralProfiles
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceEphemeralProfiles
   - Valor de ejemplo:
@@ -14506,17 +14570,17 @@ En el modo efímero, los datos del perfil solo se guardarán en el disco mientra
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ForceGoogleSafeSearch
+  ### <a name="forcegooglesafesearch"></a>ForceGoogleSafeSearch
 
-  #### Forzar la búsqueda segura de Google
+  #### <a name="enforce-google-safesearch"></a>Forzar la búsqueda segura de Google
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Obliga a que las consultas de la Búsqueda web de Google se realicen con la opción de búsqueda segura habilitada y evita que los usuarios cambien esta configuración.
 
@@ -14524,19 +14588,19 @@ Al habilitar esta directiva, la función de búsqueda segura siempre estará hab
 
 Si deshabilita esta directiva o no la configura, no se aplicará la búsqueda segura en Google.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ForceGoogleSafeSearch
   - Nombre de GP: forzar la búsqueda segura de Google
@@ -14544,20 +14608,20 @@ Si deshabilita esta directiva o no la configura, no se aplicará la búsqueda se
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ForceGoogleSafeSearch
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceGoogleSafeSearch
   - Valor de ejemplo:
@@ -14568,17 +14632,17 @@ Si deshabilita esta directiva o no la configura, no se aplicará la búsqueda se
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ForceLegacyDefaultReferrerPolicy
+  ### <a name="forcelegacydefaultreferrerpolicy"></a>ForceLegacyDefaultReferrerPolicy
 
-  #### Usar una directiva de referencia predeterminada de no-referrer-when-downgrade (obsoleto)
+  #### <a name="use-a-default-referrer-policy-of-no-referrer-when-downgrade-obsolete"></a>Usar una directiva de referencia predeterminada de no-referrer-when-downgrade (obsoleto)
 
   
   >OBSOLETO: esta directiva está obsoleta y no funciona después de Microsoft Edge 88.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 81, hasta 88
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva no funciona porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web si se ha encontrado que no es compatible con la nueva directiva de referencia predeterminada.
 
@@ -14588,19 +14652,19 @@ Cuando esta directiva de empresa está habilitada, la directiva de referencia pr
 
 Esta directiva de empresa está deshabilitada de forma predeterminada.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ForceLegacyDefaultReferrerPolicy
   - Nombre de GP: usar una directiva de referencia predeterminada de no-referrer-when-downgrade (obsoleto)
@@ -14608,20 +14672,20 @@ Esta directiva de empresa está deshabilitada de forma predeterminada.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ForceLegacyDefaultReferrerPolicy
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceLegacyDefaultReferrerPolicy
   - Valor de ejemplo:
@@ -14632,17 +14696,17 @@ Esta directiva de empresa está deshabilitada de forma predeterminada.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ForceNetworkInProcess
+  ### <a name="forcenetworkinprocess"></a>ForceNetworkInProcess
 
-  #### Forzar el código de red para que se ejecute en el proceso del explorador
+  #### <a name="force-networking-code-to-run-in-the-browser-process-obsolete"></a>Forzar el código de red para que se ejecute en el proceso del explorador
 
   
   >OBSOLETA: Esta directiva está obsoleta y no funciona después de Microsoft Edge 83.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde 78, hasta 83
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva está en desuso, ya que solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para migrar a software de terceros que no dependa del enlace de las API de red. Se recomienda el uso de servidores proxy sobre los LSP y el parcheo de la API de Win32.
 
@@ -14650,19 +14714,19 @@ Esta directiva fuerza el código de red para que se ejecute en el proceso del ex
 
 Esta directiva está deshabilitada forma predeterminada Al habilitarla, los usuarios quedarán expuestos a problemas de seguridad cuando el proceso de red se realice en un espacio aislado
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ForceNetworkInProcess
   - Nombre GP: obligar a ejecutar el código de red en el proceso del explorador (obsoleto)
@@ -14670,14 +14734,14 @@ Esta directiva está deshabilitada forma predeterminada Al habilitarla, los usua
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ForceNetworkInProcess
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -14687,17 +14751,17 @@ Esta directiva está deshabilitada forma predeterminada Al habilitarla, los usua
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ForceSync
+  ### <a name="forcesync"></a>ForceSync
 
-  #### Forzar la sincronización de los datos del explorador y no mostrar la solicitud de consentimiento de sincronización
+  #### <a name="force-synchronization-of-browser-data-and-do-not-show-the-sync-consent-prompt"></a>Forzar la sincronización de los datos del explorador y no mostrar la solicitud de consentimiento de sincronización
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Fuerza la sincronización de datos en Microsoft Edge. Asimismo, esta directiva impide al usuario desactivar la sincronización.
 
@@ -14709,19 +14773,19 @@ Para que esta directiva funcione correctamente, la directiva [BrowserSignin](#br
 
 0 = No iniciar automáticamente la sincronización y mostrar el consentimiento de sincronización (predeterminado) 1 = Forzar la activación de la sincronización para el perfil de usuario de Azure AD o Azure AD degradado y no mostrar la solicitud de consentimiento de sincronización
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ForceSync
   - Nombre de GP: Forzar la sincronización de los datos del explorador y no mostrar la solicitud de consentimiento de sincronización
@@ -14729,20 +14793,20 @@ Para que esta directiva funcione correctamente, la directiva [BrowserSignin](#br
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre de valor: ForceSync
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceSync
   - Valor de ejemplo:
@@ -14753,17 +14817,17 @@ Para que esta directiva funcione correctamente, la directiva [BrowserSignin](#br
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ForceYouTubeRestrict
+  ### <a name="forceyoutuberestrict"></a>ForceYouTubeRestrict
 
-  #### Forzar el modo restringido de YouTube mínimo
+  #### <a name="force-minimum-youtube-restricted-mode"></a>Forzar el modo restringido de YouTube mínimo
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Exige un modo de limitación mínimo en YouTube y evita que los usuarios puedan seleccionar un modo menos restringido.
 
@@ -14783,19 +14847,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ForceYouTubeRestrict
   - Nombre de GP: forzar el mínimo del modo restringido de YouTube
@@ -14803,20 +14867,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ForceYouTubeRestrict
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ForceYouTubeRestrict
   - Valor de ejemplo:
@@ -14827,17 +14891,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### FullscreenAllowed
+  ### <a name="fullscreenallowed"></a>FullscreenAllowed
 
-  #### Permitir el modo de pantalla completa
+  #### <a name="allow-full-screen-mode"></a>Permitir el modo de pantalla completa
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establece la disponibilidad del modo de pantalla completa: toda la interfaz de usuario de Microsoft Edge está oculta y solo el contenido web es visible.
 
@@ -14847,19 +14911,19 @@ Si deshabilita esta directiva, los usuarios, las aplicaciones y las extensiones 
 
 No se puede abrir Microsoft Edge en el modo de pantalla completa usando la línea de comandos cuando el modo de pantalla completa está deshabilitado.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: FullscreenAllowed
   - Nombre de GP: permitir el modo de pantalla completa
@@ -14867,14 +14931,14 @@ No se puede abrir Microsoft Edge en el modo de pantalla completa usando la líne
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: FullscreenAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -14884,17 +14948,17 @@ No se puede abrir Microsoft Edge en el modo de pantalla completa usando la líne
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### GloballyScopeHTTPAuthCacheEnabled
+  ### <a name="globallyscopehttpauthcacheenabled"></a>GloballyScopeHTTPAuthCacheEnabled
 
-  #### Habilitar la caché de autenticación HTTP de ámbito global
+  #### <a name="enable-globally-scoped-http-auth-cache"></a>Habilitar la caché de autenticación HTTP de ámbito global
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 81 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva configura una caché por perfil global con las credenciales de autenticación del servidor HTTP.
 
@@ -14906,19 +14970,19 @@ Al habilitar esta directiva los sitios quedan vulnerables a algunos tipos de ata
 
 Esta directiva está pensada para que las empresas que dependen del comportamiento heredado tengan la posibilidad de actualizar los procedimientos de inicio de sesión, que luego serán eliminados.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: GloballyScopeHTTPAuthCacheEnabled
   - Nombre de GP: habilitar la caché de autenticación HTTP de ámbito global
@@ -14926,20 +14990,20 @@ Esta directiva está pensada para que las empresas que dependen del comportamien
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: GloballyScopeHTTPAuthCacheEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: GloballyScopeHTTPAuthCacheEnabled
   - Valor de ejemplo:
@@ -14950,17 +15014,17 @@ Esta directiva está pensada para que las empresas que dependen del comportamien
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### GoToIntranetSiteForSingleWordEntryInAddressBar
+  ### <a name="gotointranetsiteforsinglewordentryinaddressbar"></a>GoToIntranetSiteForSingleWordEntryInAddressBar
 
-  #### Forzar la navegación directa en el sitio de la intranet en lugar de buscar en las entradas de una sola palabra en la barra de direcciones
+  #### <a name="force-direct-intranet-site-navigation-instead-of-searching-on-single-word-entries-in-the-address-bar"></a>Forzar la navegación directa en el sitio de la intranet en lugar de buscar en las entradas de una sola palabra en la barra de direcciones
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita esta directiva, el resultado principal de la sugerencia de la barra de direcciones navegará a los sitios de la intranet si el texto introducido en la barra de direcciones es una sola palabra sin signos de puntuación.
 
@@ -14974,19 +15038,19 @@ La navegación por los sitios en busca de respuestas para las consultas de una s
 
 Los términos de búsqueda populares de una sola palabra requerirán de la selección manual de sugerencias de búsqueda para realizar una búsqueda adecuada.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: GoToIntranetSiteForSingleWordEntryInAddressBar
   - Nombre de GP: forzar la navegación directa en el sitio de intranet en lugar de buscar por la introducción de una sola palabra en la barra de direcciones
@@ -14994,20 +15058,20 @@ Los términos de búsqueda populares de una sola palabra requerirán de la selec
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: GoToIntranetSiteForSingleWordEntryInAddressBar
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: GoToIntranetSiteForSingleWordEntryInAddressBar
   - Valor de ejemplo:
@@ -15018,33 +15082,33 @@ Los términos de búsqueda populares de una sola palabra requerirán de la selec
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### HSTSPolicyBypassList
+  ### <a name="hstspolicybypasslist"></a>HSTSPolicyBypassList
 
-  #### Configurar la lista de nombres que se omitirán por alto la comprobación de la directiva de HSTS
+  #### <a name="configure-the-list-of-names-that-will-bypass-the-hsts-policy-check"></a>Configurar la lista de nombres que se omitirán por alto la comprobación de la directiva de HSTS
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 79 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Los nombres de host que se especifiquen en esta lista estarán exentos de la comprobación de directivas de HSTS, que podrían actualizar las solicitudes de "http://" a "https://". En esta directiva solo se permiten nombres de host de una sola etiqueta. Los nombres de host deben tener un nombre canónico. Todos los IDN deben ser convertidos a su formato de etiqueta A, y todas las letras ASCII deben estar en minúsculas. Esta directiva solo se aplicará a los nombres de host mencionados específicamente; sin embargo, no se aplicará a los subdominios nombrados en la lista.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: HSTSPolicyBypassList
   - Nombre de GP: configurar la lista de nombres que se omitirán en la comprobación de la directiva de HSTS
@@ -15052,21 +15116,21 @@ Los términos de búsqueda populares de una sola palabra requerirán de la selec
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\HSTSPolicyBypassList
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: HSTSPolicyBypassList
   - Valor de ejemplo:
@@ -15079,35 +15143,35 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### HardwareAccelerationModeEnabled
+  ### <a name="hardwareaccelerationmodeenabled"></a>HardwareAccelerationModeEnabled
 
-  #### Usar la aceleración de hardware cuando esté disponible
+  #### <a name="use-hardware-acceleration-when-available"></a>Usar la aceleración de hardware cuando esté disponible
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica si está disponible el uso de la aceleración de hardware. Si habilita esta directiva o no la configura, se habilitará la aceleración de hardware, a menos que bloquee de manera explícita una función de GPU.
 
 Si deshabilita esta directiva, también se deshabilitará la aceleración de hardware.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: HardwareAccelerationModeEnabled
   - Nombre de GP: usar la aceleración de hardware cuando esté disponible
@@ -15115,20 +15179,20 @@ Si deshabilita esta directiva, también se deshabilitará la aceleración de har
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: HardwareAccelerationModeEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: HardwareAccelerationModeEnabled
   - Valor de ejemplo:
@@ -15139,17 +15203,17 @@ Si deshabilita esta directiva, también se deshabilitará la aceleración de har
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### HideFirstRunExperience
+  ### <a name="hidefirstrunexperience"></a>HideFirstRunExperience
 
-  #### Ocultar la experiencia de primera ejecución y la pantalla de presentación.
+  #### <a name="hide-the-first-run-experience-and-splash-screen"></a>Ocultar la experiencia de primera ejecución y la pantalla de presentación.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita esta directiva, la primera vista de Windows y la pantalla de presentación no se mostrarán a los usuarios cuando ejecuten Microsoft Edge por primera vez.
 
@@ -15179,19 +15243,19 @@ Nota: Las opciones específicas de configuración que se muestran al usuario en 
 
 -[NonRemovableProfileEnabled](#nonremovableprofileenabled)
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: HideFirstRunExperience
   - Nombre de GP: Ocultar la experiencia de primera ejecución y la pantalla de presentación
@@ -15199,20 +15263,20 @@ Nota: Las opciones específicas de configuración que se muestran al usuario en 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: HideFirstRunExperience
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: HideFirstRunExperience
   - Valor de ejemplo:
@@ -15223,17 +15287,17 @@ Nota: Las opciones específicas de configuración que se muestran al usuario en 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
+  ### <a name="hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
-  #### Ocultar el cuadro de diálogo redirección único y la pancarta en Microsoft Edge
+  #### <a name="hide-the-one-time-redirection-dialog-and-the-banner-on-microsoft-edge"></a>Ocultar el cuadro de diálogo redirección único y la pancarta en Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta Directiva ofrece la opción de deshabilitar el cuadro de diálogo redirección único y el anuncio de banner. Cuando esta directiva está habilitada, los usuarios no verán tanto el cuadro de diálogo único como el banner.
 Los usuarios seguirán siendo redirigidos a Microsoft Edge cuando encuentren un sitio web no compatible en Internet Explorer, pero no se importarán los datos de examen.
@@ -15243,19 +15307,19 @@ Los usuarios seguirán siendo redirigidos a Microsoft Edge cuando encuentren un 
 - Si deshabilita o no configura esta Directiva, el cuadro de diálogo de redirección se mostrará en la primera redirección y se mostrará el encabezado de redirección persistente para las sesiones que comiencen con una redirección. Los datos de examen de los usuarios se importarán cada vez que el usuario se encuentre en la redirección (solo si el usuario lo reenvía a él en el cuadro de diálogo de una sola vez).
 
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
   - Nombre GP: ocultar el cuadro de diálogo redirección único y la pancarta en Microsoft Edge
@@ -15263,14 +15327,14 @@ Los usuarios seguirán siendo redirigidos a Microsoft Edge cuando encuentren un 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -15280,17 +15344,17 @@ Los usuarios seguirán siendo redirigidos a Microsoft Edge cuando encuentren un 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportAutofillFormData
+  ### <a name="importautofillformdata"></a>ImportAutofillFormData
 
-  #### Permitir la importación de los datos del formulario Autorrellenar
+  #### <a name="allow-importing-of-autofill-form-data"></a>Permitir la importación de los datos del formulario Autorrellenar
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen datos de los formularios de autorrelleno desde otro navegador a Microsoft Edge.
 
@@ -15304,19 +15368,19 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 
 **Nota**: actualmente, esta directiva administra la importación desde los exploradores Google Chrome (en Windows 7, 8 y 10 y en macOS) y Mozilla Firefox (en Windows 7, 8 y 10 y en macOS).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportAutofillFormData
   - Nombre de GP: permitir la importación de los datos del formulario autorrellenado
@@ -15324,20 +15388,20 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportAutofillFormData
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportAutofillFormData
   - Valor de ejemplo:
@@ -15348,17 +15412,17 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportBrowserSettings
+  ### <a name="importbrowsersettings"></a>ImportBrowserSettings
 
-  #### Permitir la importación de la configuración del explorador
+  #### <a name="allow-importing-of-browser-settings"></a>Permitir la importación de la configuración del explorador
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen la configuración desde otro explorador a Microsoft Edge.
 
@@ -15372,19 +15436,19 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
 **Nota**: actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8 y 10 y en macOS).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportBrowserSettings
   - Nombre de GP: permitir la importación de la configuración del explorador
@@ -15392,20 +15456,20 @@ También puede establecer esta directiva como una recomendación. Esto significa
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportBrowserSettings
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportBrowserSettings
   - Valor de ejemplo:
@@ -15416,17 +15480,17 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportCookies
+  ### <a name="importcookies"></a>ImportCookies
 
-  #### Permitir la importación de cookies
+  #### <a name="allow-importing-of-cookies"></a>Permitir la importación de cookies
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 81 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen las cookies desde otro explorador a Microsoft Edge.
 
@@ -15438,19 +15502,19 @@ También puede establecer esta directiva como una recomendación. Esto quiere de
 
 **Nota**: actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8 y 10 y en macOS).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportCookies
   - Nombre de GP: permitir la importación de cookies
@@ -15458,20 +15522,20 @@ También puede establecer esta directiva como una recomendación. Esto quiere de
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportCookies
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportCookies
   - Valor de ejemplo:
@@ -15482,17 +15546,17 @@ También puede establecer esta directiva como una recomendación. Esto quiere de
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportExtensions
+  ### <a name="importextensions"></a>ImportExtensions
 
-  #### Permitir la importación de extensiones
+  #### <a name="allow-importing-of-extensions"></a>Permitir la importación de extensiones
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 81 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen las extensiones desde otro explorador a Microsoft Edge.
 
@@ -15506,19 +15570,19 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
 **Nota**: actualmente, esta directiva solo admite la importación de Google Chrome (en Windows 7, 8 y 10 y en macOS).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportExtensions
   - Nombre de GP: permitir la importación de extensiones
@@ -15526,20 +15590,20 @@ También puede establecer esta directiva como una recomendación. Esto significa
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportExtensions
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportExtensions
   - Valor de ejemplo:
@@ -15550,17 +15614,17 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportFavorites
+  ### <a name="importfavorites"></a>ImportFavorites
 
-  #### Permitir la importación de favoritos
+  #### <a name="allow-importing-of-favorites"></a>Permitir la importación de favoritos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen los favoritos desde otro explorador a Microsoft Edge.
 
@@ -15574,19 +15638,19 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
 **Nota**: actualmente, esta directiva administra la importación desde los exploradores Internet Explorer (en Windows 7, 8 y 10), Google Chrome (en Windows, 7, 8, 10 y en macOS), Mozilla Firefox (en Windows 7, 8 y 10 y en macOS) y Apple Safari (en macOs).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportFavorites
   - Nombre de GP: permitir la importación de favoritos
@@ -15594,20 +15658,20 @@ También puede establecer esta directiva como una recomendación. Esto significa
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportFavorites
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportFavorites
   - Valor de ejemplo:
@@ -15618,17 +15682,17 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportHistory
+  ### <a name="importhistory"></a>ImportHistory
 
-  #### Permitir la importación del historial de exploración
+  #### <a name="allow-importing-of-browsing-history"></a>Permitir la importación del historial de exploración
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen su historial de exploración desde otro explorador a Microsoft Edge.
 
@@ -15642,19 +15706,19 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
 **Nota**: actualmente, esta directiva administra la importación desde los exploradores Internet Explorer (en Windows 7, 8 y 10), Google Chrome (en Windows, 7, 8, 10 y en macOS), Mozilla Firefox (en Windows 7, 8 y 10 y en macOS) y Apple Safari (macOs).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportHistory
   - Nombre de GP: permitir la importación del historial de exploración
@@ -15662,20 +15726,20 @@ También puede establecer esta directiva como una recomendación. Esto significa
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportHistory
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportHistory
   - Valor de ejemplo:
@@ -15686,17 +15750,17 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportHomepage
+  ### <a name="importhomepage"></a>ImportHomepage
 
-  #### Permitir la importación de la configuración de la página principal
+  #### <a name="allow-importing-of-home-page-settings"></a>Permitir la importación de la configuración de la página principal
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen la configuración de su página principal desde otro explorador a Microsoft Edge.
 
@@ -15710,19 +15774,19 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 
 **Nota**: actualmente, esta directiva administra la importación desde Internet Explorer (en Windows 7, 8 y 10).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportHomepage
   - Nombre de GP: permitir la importación de la configuración de la página principal
@@ -15730,20 +15794,20 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ImportHomepage
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportHomepage
   - Valor de ejemplo:
@@ -15754,17 +15818,17 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportOpenTabs
+  ### <a name="importopentabs"></a>ImportOpenTabs
 
-  #### Permitir la importación de las pestañas abiertas
+  #### <a name="allow-importing-of-open-tabs"></a>Permitir la importación de las pestañas abiertas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 79 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen las pestañas ancladas desde otro explorador a Microsoft Edge.
 
@@ -15778,19 +15842,19 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
 **Nota**: actualmente, esta directiva solo admite la importación de Google Chrome (en Windows 7, 8 y 10 y en macOS).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportOpenTabs
   - Nombre de GP: permitir la importación de las pestañas abiertas
@@ -15798,20 +15862,20 @@ También puede establecer esta directiva como una recomendación. Esto significa
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportOpenTabs
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportOpenTabs
   - Valor de ejemplo:
@@ -15822,17 +15886,17 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportPaymentInfo
+  ### <a name="importpaymentinfo"></a>ImportPaymentInfo
 
-  #### Permitir la importación de información de pago
+  #### <a name="allow-importing-of-payment-info"></a>Permitir la importación de información de pago
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen la información de pago desde otro explorador a Microsoft Edge.
 
@@ -15846,19 +15910,19 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
 **Nota:** actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8, 10 y en macOS).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportPaymentInfo
   - Nombre de GP: permitir la importación de la información de pago
@@ -15866,20 +15930,20 @@ También puede establecer esta directiva como una recomendación. Esto significa
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportPaymentInfo
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportPaymentInfo
   - Valor de ejemplo:
@@ -15890,17 +15954,17 @@ También puede establecer esta directiva como una recomendación. Esto significa
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportSavedPasswords
+  ### <a name="importsavedpasswords"></a>ImportSavedPasswords
 
-  #### Permitir la importación de las contraseñas guardadas
+  #### <a name="allow-importing-of-saved-passwords"></a>Permitir la importación de las contraseñas guardadas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen las contraseñas guardadas desde otro explorador a Microsoft Edge.
 
@@ -15914,19 +15978,19 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 
 **Nota**: actualmente, esta directiva administra la importación desde los exploradores Internet Explorer (en Windows 7, 8 y 10), Google Chrome (en Windows, 7, 8, 10 y en macOS) y Mozilla Firefox (en Windows 7, 8 y 10 y en macOS).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportSavedPasswords
   - Nombre de GP: permitir la importación de las contraseñas guardadas
@@ -15934,20 +15998,20 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportSavedPasswords
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportSavedPasswords
   - Valor de ejemplo:
@@ -15958,17 +16022,17 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportSearchEngine
+  ### <a name="importsearchengine"></a>ImportSearchEngine
 
-  #### Permitir la importación de la configuración del motor de búsqueda
+  #### <a name="allow-importing-of-search-engine-settings"></a>Permitir la importación de la configuración del motor de búsqueda
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen la configuración del motor de búsqueda desde otro explorador a Microsoft Edge.
 
@@ -15982,19 +16046,19 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 
 **Nota**: actualmente, esta directiva administra la importación desde Internet Explorer (en Windows 7, 8 y 10).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportSearchEngine
   - Nombre de GP: permitir la importación de la configuración del motor de búsqueda
@@ -16002,20 +16066,20 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportSearchEngine
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportSearchEngine
   - Valor de ejemplo:
@@ -16026,17 +16090,17 @@ Puede establecer esta directiva como una recomendación. Esto significa que Micr
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ImportShortcuts
+  ### <a name="importshortcuts"></a>ImportShortcuts
 
-  #### Permitir la importación de accesos directos
+  #### <a name="allow-importing-of-shortcuts"></a>Permitir la importación de accesos directos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 81 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que los usuarios importen los accesos directos desde otro explorador a Microsoft Edge.
 
@@ -16048,19 +16112,19 @@ También puede establecer esta directiva como una recomendación. Esto quiere de
 
 **Nota**: actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8, 10 y en macOS).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ImportShortcuts
   - Nombre de GP: permitir la importación de accesos directos
@@ -16068,20 +16132,20 @@ También puede establecer esta directiva como una recomendación. Esto quiere de
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ImportShortcuts
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ImportShortcuts
   - Valor de ejemplo:
@@ -16092,17 +16156,17 @@ También puede establecer esta directiva como una recomendación. Esto quiere de
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InPrivateModeAvailability
+  ### <a name="inprivatemodeavailability"></a>InPrivateModeAvailability
 
-  #### Configurar la disponibilidad del modo InPrivate
+  #### <a name="configure-inprivate-mode-availability"></a>Configurar la disponibilidad del modo InPrivate
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica si el usuario puede abrir páginas en modo InPrivate en Microsoft Edge.
 
@@ -16122,19 +16186,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InPrivateModeAvailability
   - Nombre de GP: configurar la disponibilidad del modo InPrivate
@@ -16142,20 +16206,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: InPrivateModeAvailability
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: InPrivateModeAvailability
   - Valor de ejemplo:
@@ -16166,35 +16230,35 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InsecureFormsWarningsEnabled
+  ### <a name="insecureformswarningsenabled"></a>InsecureFormsWarningsEnabled
 
-  #### Habilitar advertencias para formularios inseguros
+  #### <a name="enable-warnings-for-insecure-forms"></a>Habilitar advertencias para formularios inseguros
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva controla el tratamiento de formularios inseguros (formularios enviados a través de HTTP) incrustados en sitios seguros (HTTPS) en el explorador.
 Si habilita esta directiva o no la establece, se mostrará una advertencia de página completa cuando se envíe un formulario inseguro. Además, se mostrará una advertencia junto a los campos de formulario cuando estén centrados y se deshabilitará el autorrelleno para estos formularios.
 Si deshabilita esta directiva, no se mostrarán advertencias para formularios no seguros y el autorrelleno funcionará con normalidad.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InsecureFormsWarningsEnabled
   - Nombre de GP: Habilitar advertencias para formularios inseguros
@@ -16202,20 +16266,20 @@ Si deshabilita esta directiva, no se mostrarán advertencias para formularios no
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre de valor: InsecureFormsWarningsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: InsecureFormsWarningsEnabled
   - Valor de ejemplo:
@@ -16226,17 +16290,17 @@ Si deshabilita esta directiva, no se mostrarán advertencias para formularios no
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### IntensiveWakeUpThrottlingEnabled
+  ### <a name="intensivewakeupthrottlingenabled"></a>IntensiveWakeUpThrottlingEnabled
 
-  #### Controlar la característica IntensiveWakeUpThrottling
+  #### <a name="control-the-intensivewakeupthrottling-feature"></a>Controlar la característica IntensiveWakeUpThrottling
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Cuando se habilita la característica IntensiveWakeUpThrottling, los temporizadores de JavaScript de las pestañas de fondo se aceleran y se separan de forma agresiva, y no más de una vez por minuto después de que se haya conectado una página durante 5 minutos o más.
 
@@ -16249,19 +16313,19 @@ Si no configura esta Directiva, la característica se controlará con su propia 
 Tenga en cuenta que la Directiva se aplica por cada proceso del representador, con el valor más reciente de la configuración de Directiva vigente cuando se inicia el proceso de un representador. Se debe reiniciar completamente para asegurar que todas las pestañas cargadas reciban una configuración de directiva coherente. Es inocuo tener procesos que se ejecuten con diferentes valores de esta Directiva.
 
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: IntensiveWakeUpThrottlingEnabled
   - Nombre de GP: controle la característica IntensiveWakeUpThrottling
@@ -16269,20 +16333,20 @@ Tenga en cuenta que la Directiva se aplica por cada proceso del representador, c
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: IntensiveWakeUpThrottlingEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: IntensiveWakeUpThrottlingEnabled
   - Valor de ejemplo:
@@ -16293,17 +16357,17 @@ Tenga en cuenta que la Directiva se aplica por cada proceso del representador, c
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationEnhancedHangDetection
+  ### <a name="internetexplorerintegrationenhancedhangdetection"></a>InternetExplorerIntegrationEnhancedHangDetection
 
-  #### Configurar la detección de bloqueos mejorada para el modo de Internet Explorer
+  #### <a name="configure-enhanced-hang-detection-for-internet-explorer-mode"></a>Configurar la detección de bloqueos mejorada para el modo de Internet Explorer
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 84 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   La detección de bloqueos mejorada es un enfoque más específico para detectar páginas web bloqueadas en el modo de Internet Explorer que la que usa Internet Explorer independiente. Cuando se detecta una página web que se ha bloqueado, el explorador aplica una mitigación para evitar el bloqueo del resto del explorador.
 
@@ -16325,19 +16389,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InternetExplorerIntegrationEnhancedHangDetection
   - Nombre GP: configurar la detección mejorada de bloqueo para el modo de Internet Explorer
@@ -16345,14 +16409,14 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: InternetExplorerIntegrationEnhancedHangDetection
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -16362,17 +16426,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationLevel
+  ### <a name="internetexplorerintegrationlevel"></a>InternetExplorerIntegrationLevel
 
-  #### Configurar la integración de Internet Explorer
+  #### <a name="configure-internet-explorer-integration"></a>Configurar la integración de Internet Explorer
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Para obtener instrucciones sobre cómo configurar la experiencia óptima en el modo de Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
@@ -16386,19 +16450,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InternetExplorerIntegrationLevel
   - Nombre de GP: configurar la integración de Internet Explorer
@@ -16406,14 +16470,14 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: InternetExplorerIntegrationLevel
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -16423,17 +16487,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationLocalFileAllowed
+  ### <a name="internetexplorerintegrationlocalfileallowed"></a>InternetExplorerIntegrationLocalFileAllowed
 
-  #### Permitir el inicio de archivos locales en el modo de Internet Explorer
+  #### <a name="allow-launching-of-local-files-in-internet-explorer-mode"></a>Permitir el inicio de archivos locales en el modo de Internet Explorer
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows, desde la versión 88 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva controla la disponibilidad del argumento --ie-mode-file-url de la línea de comandos que se usa para iniciar Microsoft Edge con un archivo local especificado en la línea de comandos en el modo de Internet Explorer.
 
@@ -16445,19 +16509,19 @@ Si establece esta directiva en false, el usuario no tiene permiso para usar el a
 
 Para más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InternetExplorerIntegrationLocalFileAllowed
   - Nombre de GP: permitir el inicio de archivos locales en modo Internet Explorer
@@ -16465,14 +16529,14 @@ Para más información sobre el modo Internet Explorer, vea [https://go.microsof
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: InternetExplorerIntegrationLocalFileAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -16482,17 +16546,17 @@ Para más información sobre el modo Internet Explorer, vea [https://go.microsof
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationLocalFileExtensionAllowList
+  ### <a name="internetexplorerintegrationlocalfileextensionallowlist"></a>InternetExplorerIntegrationLocalFileExtensionAllowList
 
-  #### Abrir archivos locales en la lista de permitidos de extensión de archivo del modo Internet Explorer
+  #### <a name="open-local-files-in-internet-explorer-mode-file-extension-allow-list"></a>Abrir archivos locales en la lista de permitidos de extensión de archivo del modo Internet Explorer
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows, desde la versión 88 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva limita las direcciones URL de archivo:// que se permite que se inicien en el modo Internet Explorer según la extensión de archivo.
 
@@ -16504,19 +16568,19 @@ Si establece esta directiva en el valor especial "*" o no la configuras, se perm
 
 Para más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InternetExplorerIntegrationLocalFileExtensionAllowList
   - Nombre de GP: abrir archivos locales en la lista de permitidos de extensión de archivo en el modo de Internet Explorer
@@ -16524,14 +16588,14 @@ Para más información sobre el modo Internet Explorer, vea [https://go.microsof
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatorio): SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\1 = ".mht"
@@ -16544,17 +16608,17 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationLocalFileShowContextMenu
+  ### <a name="internetexplorerintegrationlocalfileshowcontextmenu"></a>InternetExplorerIntegrationLocalFileShowContextMenu
 
-  #### Mostrar el menú contextual para abrir un vínculo en el modo de Internet Explorer
+  #### <a name="show-context-menu-to-open-a-link-in-internet-explorer-mode"></a>Mostrar el menú contextual para abrir un vínculo en el modo de Internet Explorer
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows, desde la versión 88 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva controla la visibilidad de la opción 'Abrir vínculo en nueva pestaña de modo de Internet Explorer' en el menú contextual de vínculos archivo://.
 
@@ -16566,19 +16630,19 @@ Si establece esta directiva en false o no la configura, no se agregará el eleme
 
 Para más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InternetExplorerIntegrationLocalFileShowContextMenu
   - Nombre de GP: mostrar el menú contextual para abrir un vínculo en el modo de Internet Explorer
@@ -16586,14 +16650,14 @@ Para más información sobre el modo Internet Explorer, vea [https://go.microsof
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: InternetExplorerIntegrationLocalFileShowContextMenu
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -16603,33 +16667,33 @@ Para más información sobre el modo Internet Explorer, vea [https://go.microsof
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationSiteList
+  ### <a name="internetexplorerintegrationsitelist"></a>InternetExplorerIntegrationSiteList
 
-  #### Configurar la lista de sitios del Modo de empresa
+  #### <a name="configure-the-enterprise-mode-site-list"></a>Configurar la lista de sitios del Modo de empresa
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Para obtener instrucciones sobre cómo configurar la experiencia óptima en el modo de Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InternetExplorerIntegrationSiteList
   - Nombre de GP: configurar la lista de sitios del modo de empresa
@@ -16637,14 +16701,14 @@ Para más información sobre el modo Internet Explorer, vea [https://go.microsof
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: InternetExplorerIntegrationSiteList
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://internal.contoso.com/sitelist.xml"
@@ -16654,17 +16718,17 @@ Para más información sobre el modo Internet Explorer, vea [https://go.microsof
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationSiteRedirect
+  ### <a name="internetexplorerintegrationsiteredirect"></a>InternetExplorerIntegrationSiteRedirect
 
-  #### Especificar cómo se comportan las navegaciones "en la página" de los sitios no configurados al iniciarse en las páginas en modo Internet Explorer
+  #### <a name="specify-how-in-page-navigations-to-unconfigured-sites-behave-when-started-from-internet-explorer-mode-pages"></a>Especificar cómo se comportan las navegaciones "en la página" de los sitios no configurados al iniciarse en las páginas en modo Internet Explorer
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 81 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Una navegación "en la página" se inicia desde un vínculo, un script o un formulario en la página actual. También puede ser un redireccionamiento de servidor de un intento de navegación "en la página" anterior. Por otra parte, un usuario puede iniciar una navegación que no sea "en la página", y que sea independiente de la página actual, de varias formas con los controles del explorador. Por ejemplo, con la barra de direcciones, el botón Atrás o un vínculo favorito.
 
@@ -16692,34 +16756,34 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InternetExplorerIntegrationSiteRedirect
   - Nombre de GP: especificar el comportamiento de las navegaciones "en la página" de los sitios no configurados cuando se inician desde las páginas en modo Internet Explorer
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: InternetExplorerIntegrationSiteRedirect
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -16729,17 +16793,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationTestingAllowed
+  ### <a name="internetexplorerintegrationtestingallowed"></a>InternetExplorerIntegrationTestingAllowed
 
-  #### Permitir pruebas del modo Internet Explorer
+  #### <a name="allow-internet-explorer-mode-testing"></a>Permitir pruebas del modo Internet Explorer
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva permite a los usuarios comprobar aplicaciones en el modo de Internet Explorer abriendo una pestaña del modo de Internet Explorer en Microsoft Edge.
 
@@ -16753,19 +16817,19 @@ Si habilita esta directiva, la opción "Abrir sitios en el modo de Internet Expl
 
 Si deshabilita o no configura esta directiva, los usuarios no podrán ver las opciones "Abrir en el modo de Internet Explorer" ni "Abrir en el modo de Edge" en el menú "Más herramientas". Sin embargo, los usuarios pueden configurar estas opciones con la marca --ie-mode-test.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: InternetExplorerIntegrationTestingAllowed
   - Nombre de GP: Permitir pruebas del modo Internet Explorer
@@ -16773,14 +16837,14 @@ Si deshabilita o no configura esta directiva, los usuarios no podrán ver las op
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre de valor: InternetExplorerIntegrationTestingAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -16790,17 +16854,17 @@ Si deshabilita o no configura esta directiva, los usuarios no podrán ver las op
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### IntranetRedirectBehavior
+  ### <a name="intranetredirectbehavior"></a>IntranetRedirectBehavior
 
-  #### Comportamiento de la redirección de intranet
+  #### <a name="intranet-redirection-behavior"></a>Comportamiento de la redirección de intranet
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva configura el comportamiento de la redirección de intranet mediante comprobaciones de interceptación de DNS. Las comprobaciones intentan detectar si el explorador se encuentra detrás de un proxy que redirige los nombres de host desconocidos.
 
@@ -16822,40 +16886,40 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: IntranetRedirectBehavior
   - Nombre de GP: comportamiento de redirección de intranet
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: IntranetRedirectBehavior
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de la clave de preferencias: IntranetRedirectBehavior
   - Valor de ejemplo:
@@ -16866,17 +16930,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### IsolateOrigins
+  ### <a name="isolateorigins"></a>IsolateOrigins
 
-  #### Habilitar el aislamiento de sitio para determinados orígenes
+  #### <a name="enable-site-isolation-for-specific-origins"></a>Habilitar el aislamiento de sitio para determinados orígenes
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica los orígenes para que se ejecuten de forma aislada, en su propio proceso.
 
@@ -16888,19 +16952,19 @@ Si deshabilita esta directiva, las funciones "IsolateOrigins" y "SitePerProcess"
 
 Si no configura esta directiva, el usuario podrá cambiar esta configuración manualmente.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: IsolateOrigins
   - Nombre de GP: habilitar el aislamiento de sitio para orígenes determinados
@@ -16908,20 +16972,20 @@ Si no configura esta directiva, el usuario podrá cambiar esta configuración ma
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: IsolateOrigins
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: IsolateOrigins
   - Valor de ejemplo:
@@ -16932,17 +16996,17 @@ Si no configura esta directiva, el usuario podrá cambiar esta configuración ma
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### LocalProvidersEnabled
+  ### <a name="localprovidersenabled"></a>LocalProvidersEnabled
 
-  #### Permita sugerencias de proveedores locales.
+  #### <a name="allow-suggestions-from-local-providers"></a>Permita sugerencias de proveedores locales.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permitir sugerencias por parte de los proveedores de sugerencias en el dispositivo (proveedores locales), como por ejemplo, los favoritos y el historial de navegación, en la barra de direcciones de Microsoft Edge y en la lista de autosugerencias.
 
@@ -16956,19 +17020,19 @@ Tenga en cuenta que es posible que algunas funciones no estén disponibles si se
 
 Para finalizar la aplicación de esta directiva, es necesario que se reinicie el explorador.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: LocalProvidersEnabled
   - Nombre de GP: permitir las sugerencias de los proveedores locales
@@ -16976,20 +17040,20 @@ Para finalizar la aplicación de esta directiva, es necesario que se reinicie el
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: LocalProvidersEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: LocalProvidersEnabled
   - Valor de ejemplo:
@@ -17000,36 +17064,36 @@ Para finalizar la aplicación de esta directiva, es necesario que se reinicie el
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ManagedConfigurationPerOrigin
+  ### <a name="managedconfigurationperorigin"></a>ManagedConfigurationPerOrigin
 
-  #### Establece valores de configuración administrados para sitios web en orígenes específicos
+  #### <a name="sets-managed-configuration-values-for-websites-to-specific-origins"></a>Establece valores de configuración administrados para sitios web en orígenes específicos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 90 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   La configuración de esta política define el valor de retorno de la API de configuración administrada para un origen determinado.
 
  La API de configuración administrada es una configuración de clave-valor a la que se puede acceder a través de la llamada javascript navigator.device.getManagedConfiguration(). Esta API solo está disponible para los orígenes que corresponden a aplicaciones web instaladas por la fuerza a través [de WebAppInstallForceList](#webappinstallforcelist).
 
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ManagedConfigurationPerOrigin
   - Nombre de GP: establece los valores de configuración administrados para los sitios web en orígenes específicos
@@ -17037,14 +17101,14 @@ Para finalizar la aplicación de esta directiva, es necesario que se reinicie el
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): N/D
   - Nombre del valor: ManagedConfigurationPerOrigin
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
@@ -17061,14 +17125,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
 ]
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [{"managed_configuration_hash": "asd891jedasd12ue9h", "managed_configuration_url": "https://static.contoso.com/configuration.json", "origin": "https://www.contoso.com"}, {"managed_configuration_hash": "djio12easd89u12aws", "managed_configuration_url": "https://static.contoso.com/configuration2.json", "origin": "https://www.example.com"}]
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ManagedConfigurationPerOrigin
   - Valor de ejemplo:
@@ -17097,17 +17161,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ManagedFavorites
+  ### <a name="managedfavorites"></a>ManagedFavorites
 
-  #### Configurar Favoritos
+  #### <a name="configure-favorites"></a>Configurar Favoritos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura una lista de los favoritos administrados.
 
@@ -17117,19 +17181,19 @@ Estos favoritos se ubican en una carpeta que no puede ser modificada por el usua
 
 Los favoritos administrados no se sincronizan con la cuenta del usuario y no pueden ser modificados por las extensiones.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ManagedFavorites
   - Nombre de GP: configurar Favoritos
@@ -17137,14 +17201,14 @@ Los favoritos administrados no se sincronizan con la cuenta del usuario y no pue
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ManagedFavorites
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
@@ -17175,14 +17239,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 ]
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [{"toplevel_name": "My managed favorites folder"}, {"name": "Microsoft", "url": "microsoft.com"}, {"name": "Bing", "url": "bing.com"}, {"children": [{"name": "Microsoft Edge Insiders", "url": "www.microsoftedgeinsider.com"}, {"name": "Microsoft Edge", "url": "www.microsoft.com/windows/microsoft-edge"}], "name": "Microsoft Edge links"}]
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ManagedFavorites
   - Valor de ejemplo:
@@ -17230,17 +17294,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ManagedSearchEngines
+  ### <a name="managedsearchengines"></a>ManagedSearchEngines
 
-  #### Administrar motores de búsqueda
+  #### <a name="manage-search-engines"></a>Administrar motores de búsqueda
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Le permite configurar una lista de hasta 10 motores de búsqueda, de entre los cuales uno debe estar marcado como motor de búsqueda predeterminado.
 No es necesario que especifique la codificación. A partir de Microsoft Edge 80, los parámetros suggest_url y image_search_url son opcionales. El parámetro opcional, image_search_post_params (que consiste en pares de nombres y valores separados por comas), está disponible a partir de Microsoft Edge 80.
@@ -17253,19 +17317,19 @@ Si deshabilita o no configura esta directiva, los usuarios podrán modificar la 
 
 Si la directiva [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) está establecida, entonces se ignorará esta directiva (ManagedSearchEngines). El usuario debe reiniciar su explorador para finalizar la aplicación de esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ManagedSearchEngines
   - Nombre de GP: administrar los motores de búsqueda
@@ -17273,14 +17337,14 @@ Si la directiva [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ManagedSearchEngines
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
@@ -17318,14 +17382,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 ]
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [{"allow_search_engine_discovery": true}, {"is_default": true, "keyword": "example1.com", "name": "Example1", "search_url": "https://www.example1.com/search?q={searchTerms}", "suggest_url": "https://www.example1.com/qbox?query={searchTerms}"}, {"image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}", "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload", "keyword": "example2.com", "name": "Example2", "search_url": "https://www.example2.com/search?q={searchTerms}", "suggest_url": "https://www.example2.com/qbox?query={searchTerms}"}, {"encoding": "UTF-8", "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload", "keyword": "example3.com", "name": "Example3", "search_url": "https://www.example3.com/search?q={searchTerms}", "suggest_url": "https://www.example3.com/qbox?query={searchTerms}"}, {"keyword": "example4.com", "name": "Example4", "search_url": "https://www.example4.com/search?q={searchTerms}"}]
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ManagedSearchEngines
   - Valor de ejemplo:
@@ -17390,17 +17454,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### MaxConnectionsPerProxy
+  ### <a name="maxconnectionsperproxy"></a>MaxConnectionsPerProxy
 
-  #### Número máximo de conexiones simultáneas al servidor proxy
+  #### <a name="maximum-number-of-concurrent-connections-to-the-proxy-server"></a>Número máximo de conexiones simultáneas al servidor proxy
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica el número máximo de conexiones simultáneas al servidor proxy.
 
@@ -17412,19 +17476,19 @@ Se sabe que algunas aplicaciones web consumen muchas conexiones con GETs en espe
 
 Si no configura esta directiva, se usará el valor predeterminado (32).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: MaxConnectionsPerProxy
   - Nombre de GP: número máximo de conexiones simultáneas al servidor proxy
@@ -17432,20 +17496,20 @@ Si no configura esta directiva, se usará el valor predeterminado (32).
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: MaxConnectionsPerProxy
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000020
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: MaxConnectionsPerProxy
   - Valor de ejemplo:
@@ -17456,17 +17520,17 @@ Si no configura esta directiva, se usará el valor predeterminado (32).
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### MediaRouterCastAllowAllIPs
+  ### <a name="mediaroutercastallowallips"></a>MediaRouterCastAllowAllIPs
 
-  #### Permitir que Google Cast se conecte para transmitir dispositivos en todas las direcciones IP
+  #### <a name="allow-google-cast-to-connect-to-cast-devices-on-all-ip-addresses"></a>Permitir que Google Cast se conecte para transmitir dispositivos en todas las direcciones IP
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilite esta directiva para permitir que Google Cast se conecte a los dispositivos Cast a través de todas las direcciones IP y no solo a través de las direcciones privadas RFC1918/RFC4193.
 
@@ -17476,19 +17540,19 @@ De no configurar esta directiva, Google Cast se conectará a los dispositivos de
 
 Si la Directiva [EnableMediaRouter](#enablemediarouter) está deshabilitada, no se aplicará esta Directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: MediaRouterCastAllowAllIPs
   - Nombre de GP: permitir que Google Cast se conecte a los dispositivos de Cast a través de todas las direcciones IP
@@ -17496,20 +17560,20 @@ Si la Directiva [EnableMediaRouter](#enablemediarouter) está deshabilitada, no 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: MediaRouterCastAllowAllIPs
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: MediaRouterCastAllowAllIPs
   - Valor de ejemplo:
@@ -17520,17 +17584,17 @@ Si la Directiva [EnableMediaRouter](#enablemediarouter) está deshabilitada, no 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### MetricsReportingEnabled
+  ### <a name="metricsreportingenabled"></a>MetricsReportingEnabled
 
-  #### Habilitar el uso y los informes de datos relacionados con bloqueos (obsoletos)
+  #### <a name="enable-usage-and-crash-related-data-reporting-obsolete"></a>Habilitar el uso y los informes de datos relacionados con bloqueos (obsoletos)
 
   
   >OBSOLETO: esta directiva está obsoleta y no funciona después de Microsoft Edge 88.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 77, hasta 88
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva ya no es compatible. Se reemplaza por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 y macOS) y Permitir telemetría en Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
@@ -17546,19 +17610,19 @@ Para habilitar esta directiva, debe establecer[SendSiteInfoToImproveServices](#s
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft Active Directory, en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos, o en las instancias de macOS administradas por MDM o unidas a un dominio por MCX.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: MetricsReportingEnabled
   - Nombre de GP: habilitar el uso y los informes de datos relacionados con bloqueos (obsoleto)
@@ -17566,20 +17630,20 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: MetricsReportingEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: MetricsReportingEnabled
   - Valor de ejemplo:
@@ -17590,17 +17654,17 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NativeWindowOcclusionEnabled
+  ### <a name="nativewindowocclusionenabled"></a>NativeWindowOcclusionEnabled
 
-  #### Habilitar oclusión de ventana nativa (en desuso)
+  #### <a name="enable-native-window-occlusion-deprecated"></a>Habilitar oclusión de ventana nativa (en desuso)
 
   >EN DESUSO: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 84 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva está en desuso, use la directiva "[WindowOcclusionEnabled](#windowocclusionenabled)" en su lugar. No funciona en la versión 92 de Microsoft Edge.
 
@@ -17612,19 +17676,19 @@ Si deshabilita esta configuración, Microsoft Edge no detectará cuando una vent
 
 Si no se establece esta directiva, se habilitará la detección de oclusión.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NativeWindowOcclusionEnabled
   - Nombre GP: Habilitar oclusión de ventana nativa (en desuso)
@@ -17632,14 +17696,14 @@ Si no se establece esta directiva, se habilitará la detección de oclusión.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: NativeWindowOcclusionEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -17649,17 +17713,17 @@ Si no se establece esta directiva, se habilitará la detección de oclusión.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NavigationDelayForInitialSiteListDownloadTimeout
+  ### <a name="navigationdelayforinitialsitelistdownloadtimeout"></a>NavigationDelayForInitialSiteListDownloadTimeout
 
-  #### Establecer un tiempo de espera de retardo en la navegación por la etiqueta de la lista de sitios de modo empresarial
+  #### <a name="set-a-timeout-for-delay-of-tab-navigation-for-the-enterprise-mode-site-list"></a>Establecer un tiempo de espera de retardo en la navegación por la etiqueta de la lista de sitios de modo empresarial
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 84 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite establecer un tiempo de espera, en segundos, en las pestañas de Microsoft Edge esperando para navegar hasta que el explorador Descargue la lista de sitios de modo empresarial inicial.
 
@@ -17671,19 +17735,19 @@ Si define el tiempo de espera en esta directiva en un valor mayor que el predete
 
 Si no configura esta Directiva, se usará el tiempo de espera predeterminado de 2 segundos. Este valor predeterminado está sujeto a cambios en el futuro.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NavigationDelayForInitialSiteListDownloadTimeout
   - Nombre de la Directiva de Grupo: establecer un tiempo de espera para retrasar la navegación por la ficha de la lista de sitios de modo empresarial
@@ -17691,14 +17755,14 @@ Si no configura esta Directiva, se usará el tiempo de espera predeterminado de 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: NavigationDelayForInitialSiteListDownloadTimeout
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x0000000a
@@ -17708,17 +17772,17 @@ Si no configura esta Directiva, se usará el tiempo de espera predeterminado de 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NetworkPredictionOptions
+  ### <a name="networkpredictionoptions"></a>NetworkPredictionOptions
 
-  #### Habilitar predicción de red
+  #### <a name="enable-network-prediction"></a>Habilitar predicción de red
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite la predicción de red y evita que los usuarios cambien esta configuración.
 
@@ -17736,19 +17800,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NetworkPredictionOptions
   - Nombre de GP: habilitar la predicción de red
@@ -17756,20 +17820,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: NetworkPredictionOptions
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: NetworkPredictionOptions
   - Valor de ejemplo:
@@ -17780,17 +17844,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### NonRemovableProfileEnabled
+  ### <a name="nonremovableprofileenabled"></a>NonRemovableProfileEnabled
 
-  #### Configurar si un usuario siempre tiene un perfil predeterminado que inicia sesión automáticamente con su cuenta profesional o educativa
+  #### <a name="configure-whether-a-user-always-has-a-default-profile-automatically-signed-in-with-their-work-or-school-account"></a>Configurar si un usuario siempre tiene un perfil predeterminado que inicia sesión automáticamente con su cuenta profesional o educativa
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva determina si un usuario puede quitar el perfil de Microsoft Edge que ha iniciado sesión automáticamente con la cuenta profesional o educativa de un usuario.
 
@@ -17804,19 +17868,19 @@ Esta directiva solo está disponible en las instancias de Windows que están uni
 
 A partir de Microsoft Edge 89, si hay un perfil local existente con la sincronización deshabilitada y el equipo está unido a la máquina, actualizará automáticamente el perfil local al perfil de Azure AD y lo hará no extraíble en lugar de crear un nuevo perfil de Azure AD no extraíble.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: NonRemovableProfileEnabled
   - Nombre de GP: configurar qué usuario tiene un perfil predeterminado para iniciar sesión automáticamente con su cuenta profesional o educativa.
@@ -17824,14 +17888,14 @@ A partir de Microsoft Edge 89, si hay un perfil local existente con la sincroniz
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: NonRemovableProfileEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -17841,17 +17905,17 @@ A partir de Microsoft Edge 89, si hay un perfil local existente con la sincroniz
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### OverrideSecurityRestrictionsOnInsecureOrigin
+  ### <a name="overridesecurityrestrictionsoninsecureorigin"></a>OverrideSecurityRestrictionsOnInsecureOrigin
 
-  #### Controlar el lugar en el que se aplican restricciones de seguridad para orígenes inseguros
+  #### <a name="control-where-security-restrictions-on-insecure-origins-apply"></a>Controlar el lugar en el que se aplican restricciones de seguridad para orígenes inseguros
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica una lista de orígenes (direcciones URL) o patrones de nombres de host (como "*.contoso.com") en los que no se aplican las restricciones de seguridad para orígenes inseguros.
 
@@ -17861,19 +17925,19 @@ Establecer una lista de direcciones URL en esta directiva tiene el mismo efecto 
 
 Para obtener más información sobre contextos seguros, vea https://www.w3.org/TR/secure-contexts/.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: OverrideSecurityRestrictionsOnInsecureOrigin
   - Nombre de GP: controlar el lugar donde se aplican las restricciones de seguridad para orígenes inseguros
@@ -17881,14 +17945,14 @@ Para obtener más información sobre contextos seguros, vea https://www.w3.org/T
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = "http://testserver.contoso.com/"
@@ -17896,7 +17960,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: OverrideSecurityRestrictionsOnInsecureOrigin
   - Valor de ejemplo:
@@ -17910,17 +17974,17 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PaymentMethodQueryEnabled
+  ### <a name="paymentmethodqueryenabled"></a>PaymentMethodQueryEnabled
 
-  #### Permita que los sitios web consulten los métodos de pago disponibles
+  #### <a name="allow-websites-to-query-for-available-payment-methods"></a>Permita que los sitios web consulten los métodos de pago disponibles
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite establecer si los sitios web podrán comprobar si el usuario tiene métodos de pago guardados.
 
@@ -17928,19 +17992,19 @@ Si deshabilita esta directiva, se le informará a los sitios web que utilicen la
 
 Si habilita o no establece esta directiva, los sitios web podrán comprobar si el usuario tiene métodos de pago guardados.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PaymentMethodQueryEnabled
   - Nombre de GP: permitir que los sitios web consulten los métodos de pago disponibles
@@ -17948,20 +18012,20 @@ Si habilita o no establece esta directiva, los sitios web podrán comprobar si e
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PaymentMethodQueryEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PaymentMethodQueryEnabled
   - Valor de ejemplo:
@@ -17972,17 +18036,17 @@ Si habilita o no establece esta directiva, los sitios web podrán comprobar si e
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PersonalizationReportingEnabled
+  ### <a name="personalizationreportingenabled"></a>PersonalizationReportingEnabled
 
-  #### Permita la personalización de anuncios, búsquedas y noticias enviando el historial de exploración a Microsoft
+  #### <a name="allow-personalization-of-ads-search-and-news-by-sending-browsing-history-to-microsoft"></a>Permita la personalización de anuncios, búsquedas y noticias enviando el historial de exploración a Microsoft
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva impide que Microsoft recopile el historial de exploración de un usuario de Microsoft Edge para utilizarlo en la personalización de la publicidad, búsquedas, noticias y otros servicios Microsoft.
 
@@ -17990,19 +18054,19 @@ Esta opción solo está disponible para los usuarios con una cuenta de Microsoft
 
 Si deshabilita esta directiva, los usuarios no podrán cambiar ni reemplazar esta configuración. Si esta directiva está habilitada o no ha sido configurada, Microsoft Edge se establecerá de forma predeterminada en la preferencia del usuario.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PersonalizationReportingEnabled
   - Nombre de GP: permitir la personalización de anuncios, búsquedas y noticias al enviar el historial de exploración a Microsoft.
@@ -18010,20 +18074,20 @@ Si deshabilita esta directiva, los usuarios no podrán cambiar ni reemplazar est
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PersonalizationReportingEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PersonalizationReportingEnabled
   - Valor de ejemplo:
@@ -18034,17 +18098,17 @@ Si deshabilita esta directiva, los usuarios no podrán cambiar ni reemplazar est
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PinningWizardAllowed
+  ### <a name="pinningwizardallowed"></a>PinningWizardAllowed
 
-  #### Permita anclar al Asistente para tareas
+  #### <a name="allow-pin-to-taskbar-wizard"></a>Permita anclar al Asistente para tareas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Microsoft Edge usa el asistente Anclar a la barra de tareas para ayudar a los usuarios a anclar los sitios sugeridos a la barra de tareas. La característica anclar a la barra de tareas está habilitada de forma predeterminada y el usuario podrá acceder a la misma desde el menú Configuración y más.
 
@@ -18054,19 +18118,19 @@ Si deshabilita esta directiva, el asistente para anclar a la barra de tareas se 
 
 Las opciones de configuración del usuario para habilitar o deshabilitar el asistente para anclar a la barra de tareas no están disponibles.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PinningWizardAllowed
   - Nombre de GP: permitir el anclaje del asistente a la barra de tareas
@@ -18074,14 +18138,14 @@ Las opciones de configuración del usuario para habilitar o deshabilitar el asis
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PinningWizardAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -18091,17 +18155,17 @@ Las opciones de configuración del usuario para habilitar o deshabilitar el asis
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ProactiveAuthEnabled
+  ### <a name="proactiveauthenabled"></a>ProactiveAuthEnabled
 
-  #### Habilitar la autenticación proactiva (en desuso)
+  #### <a name="enable-proactive-authentication-deprecated"></a>Habilitar la autenticación proactiva (en desuso)
 
   >EN DESUSO: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva ha quedado en desuso porque no funciona, independientemente del inicio de sesión en el explorador. No funciona en la versión91 de Microsoft Edge. Si quiere configurar el inicio de sesión del explorador, utilice la directiva [BrowserSignin](#browsersignin).
 
@@ -18113,19 +18177,19 @@ Si se deshabilita esta directiva, Microsoft Edge no intentará autenticarse en s
 
 Si no se configura esta directiva, la autenticación proactiva está activada.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ProactiveAuthEnabled
   - Nombre de GP: Habilitar la autenticación proactiva (en desuso)
@@ -18133,20 +18197,20 @@ Si no se configura esta directiva, la autenticación proactiva está activada.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ProactiveAuthEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ProactiveAuthEnabled
   - Valor de ejemplo:
@@ -18157,17 +18221,17 @@ Si no se configura esta directiva, la autenticación proactiva está activada.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PromotionalTabsEnabled
+  ### <a name="promotionaltabsenabled"></a>PromotionalTabsEnabled
 
-  #### Habilitar contenido promocional de pestañas completas
+  #### <a name="enable-full-tab-promotional-content"></a>Habilitar contenido promocional de pestañas completas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla la presentación del contenido de promoción o educación en la pestaña completa. Esta configuración controla la presentación de las páginas de bienvenida que ayudan a los usuarios a iniciar sesión en Microsoft Edge, a elegir su explorador predeterminado o a conocer las características del producto.
 
@@ -18175,19 +18239,19 @@ Si habilita esta directiva (establecida como verdadera) o no la configura, Micro
 
 Si deshabilita (establecido como falso) esta directiva, Microsoft Edge no podrá mostrar a los usuarios el contenido de las pestañas completas.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PromotionalTabsEnabled
   - Nombre de GP: habilitar el contenido promocional de la pestaña completa
@@ -18195,20 +18259,20 @@ Si deshabilita (establecido como falso) esta directiva, Microsoft Edge no podrá
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PromotionalTabsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PromotionalTabsEnabled
   - Valor de ejemplo:
@@ -18219,17 +18283,17 @@ Si deshabilita (establecido como falso) esta directiva, Microsoft Edge no podrá
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### PromptForDownloadLocation
+  ### <a name="promptfordownloadlocation"></a>PromptForDownloadLocation
 
-  #### Pregunte dónde guardar los archivos descargados
+  #### <a name="ask-where-to-save-downloaded-files"></a>Pregunte dónde guardar los archivos descargados
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establece la opción de preguntar dónde guardar un archivo antes de descargarlo.
 
@@ -18237,19 +18301,19 @@ Si habilita esta directiva, se le preguntará al usuario dónde guardar cada arc
 
 Si no configura esta directiva, el usuario podrá cambiar su configuración.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: PromptForDownloadLocation
   - Nombre de GP: Preguntar dónde guardar los archivos descargados
@@ -18257,20 +18321,20 @@ Si no configura esta directiva, el usuario podrá cambiar su configuración.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PromptForDownloadLocation
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: PromptForDownloadLocation
   - Valor de ejemplo:
@@ -18281,17 +18345,17 @@ Si no configura esta directiva, el usuario podrá cambiar su configuración.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### QuicAllowed
+  ### <a name="quicallowed"></a>QuicAllowed
 
-  #### Permitir protocolo QUIC
+  #### <a name="allow-quic-protocol"></a>Permitir protocolo QUIC
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite el uso del protocolo QUIC en Microsoft Edge.
 
@@ -18301,19 +18365,19 @@ Si deshabilita esta directiva, se bloqueará el protocolo QUIC.
 
 QUIC es un protocolo red de la capa de transporte que puede mejorar el rendimiento de las aplicaciones web que usan actualmente el TCP.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: QuicAllowed
   - Nombre de GP: permitir el protocolo QUIC
@@ -18321,20 +18385,20 @@ QUIC es un protocolo red de la capa de transporte que puede mejorar el rendimien
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: QuicAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: QuicAllowed
   - Valor de ejemplo:
@@ -18345,17 +18409,17 @@ QUIC es un protocolo red de la capa de transporte que puede mejorar el rendimien
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### QuickViewOfficeFilesEnabled
+  ### <a name="quickviewofficefilesenabled"></a>QuickViewOfficeFilesEnabled
 
-  #### Administrar la función de archivos de Office QuickView en Microsoft Edge
+  #### <a name="manage-quickview-office-files-capability-in-microsoft-edge"></a>Administrar la función de archivos de Office QuickView en Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 90 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Le permite establecer si los usuarios pueden ver archivos de Office en la Web que no están en OneDrive o SharePoint. (Por ejemplo: documentos de Word, presentaciones de PowerPoint y hojas de cálculo de Excel)
 
@@ -18363,19 +18427,19 @@ Si habilita o no configura esta directiva, estos archivos se pueden ver en Micro
 
 Si deshabilita esta directiva, estos archivos se descargarán para que se puedan ver.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: QuickViewOfficeFilesEnabled
   - Nombre de GP: Administrar la función de archivos de Office QuickView en Microsoft Edge
@@ -18383,20 +18447,20 @@ Si deshabilita esta directiva, estos archivos se descargarán para que se puedan
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): N/D
   - Nombre del valor: QuickViewOfficeFilesEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencia: QuickViewOfficeFilesEnabled
   - Valor de ejemplo:
@@ -18407,17 +18471,17 @@ Si deshabilita esta directiva, estos archivos se descargarán para que se puedan
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RedirectSitesFromInternetExplorerPreventBHOInstall
+  ### <a name="redirectsitesfrominternetexplorerpreventbhoinstall"></a>RedirectSitesFromInternetExplorerPreventBHOInstall
 
-  #### Evita la instalación del BHO para redirigir sitios incompatibles desde Internet Explorer a Microsoft Edge
+  #### <a name="prevent-install-of-the-bho-to-redirect-incompatible-sites-from-internet-explorer-to-microsoft-edge"></a>Evita la instalación del BHO para redirigir sitios incompatibles desde Internet Explorer a Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta configuración le permite especificar si se debe bloquear la instalación del objeto auxiliar del navegador (BHO) que permite redirigir sitios incompatibles de Internet Explorer a Microsoft Edge para sitios que requieran un explorador moderno.
 
@@ -18429,19 +18493,19 @@ El BHO es necesario para que se produzca la redirección no compatible del sitio
 
 Para obtener más información sobre esta Directiva, vea [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RedirectSitesFromInternetExplorerPreventBHOInstall
   - Nombre de GP: Evite la instalación del BHO para redirigir sitios incompatibles de Internet Explorer a Microsoft Edge.
@@ -18449,14 +18513,14 @@ Para obtener más información sobre esta Directiva, vea [https://go.microsoft.c
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombrel del valor: RedirectSitesFromInternetExplorerPreventBHOInstall
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -18466,17 +18530,17 @@ Para obtener más información sobre esta Directiva, vea [https://go.microsoft.c
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RedirectSitesFromInternetExplorerRedirectMode
+  ### <a name="redirectsitesfrominternetexplorerredirectmode"></a>RedirectSitesFromInternetExplorerRedirectMode
 
-  #### Redirigir los sitios incompatibles de Internet Explorer a Microsoft Edge.
+  #### <a name="redirect-incompatible-sites-from-internet-explorer-to-microsoft-edge"></a>Redirigir los sitios incompatibles de Internet Explorer a Microsoft Edge.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta configuración le permite especificar si Internet Explorer va a redirigir las navegaciones a los sitios que requieran un explorador moderno para Microsoft Edge.
 
@@ -18498,19 +18562,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RedirectSitesFromInternetExplorerRedirectMode
   - Nombre de GP: Redirigir automáticamente los sitios incompatibles de Internet Explorer a Microsoft Edge.
@@ -18518,14 +18582,14 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre de valor: RedirectSitesFromInternetExplorerRedirectMode
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -18535,17 +18599,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RelaunchNotification
+  ### <a name="relaunchnotification"></a>RelaunchNotification
 
-  #### Notifique a un usuario que es recomendable reiniciar el explorador, o es necesario para actualizaciones pendientes
+  #### <a name="notify-a-user-that-a-browser-restart-is-recommended-or-required-for-pending-updates"></a>Notifique a un usuario que es recomendable reiniciar el explorador, o es necesario para actualizaciones pendientes
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Notifica a los usuarios que deben reiniciar Microsoft Edge para aplicar una actualización pendiente.
 
@@ -18565,19 +18629,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RelaunchNotification
   - Nombre de GP: notificar al usuario que se recomienda o se requiere el reinicio del navegador para realizar las actualizaciones pendientes
@@ -18585,20 +18649,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: RelaunchNotification
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: RelaunchNotification
   - Valor de ejemplo:
@@ -18609,17 +18673,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RelaunchNotificationPeriod
+  ### <a name="relaunchnotificationperiod"></a>RelaunchNotificationPeriod
 
-  #### Establezca el período de tiempo de las notificaciones de actualización
+  #### <a name="set-the-time-period-for-update-notifications"></a>Establezca el período de tiempo de las notificaciones de actualización
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite establecer el período de tiempo, en milisegundos, en el que se notifica a los usuarios que Microsoft Edge debe ser relanzado para aplicar una actualización pendiente.
 
@@ -18627,19 +18691,19 @@ Durante este período de tiempo, se le informará repetidamente al usuario sobre
 
 Si no se establece, se usa el período predeterminado de 604,8 millones de milisegundos (una semana).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RelaunchNotificationPeriod
   - Nombre de GP: establecer el período de tiempo de las notificaciones de actualización
@@ -18647,20 +18711,20 @@ Si no se establece, se usa el período predeterminado de 604,8 millones de milis
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: RelaunchNotificationPeriod
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x240c8400
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: RelaunchNotificationPeriod
   - Valor de ejemplo:
@@ -18671,34 +18735,34 @@ Si no se establece, se usa el período predeterminado de 604,8 millones de milis
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RendererCodeIntegrityEnabled
+  ### <a name="renderercodeintegrityenabled"></a>RendererCodeIntegrityEnabled
 
-  #### Habilitar integridad de código de representador
+  #### <a name="enable-renderer-code-integrity"></a>Habilitar integridad de código de representador
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si establece la directiva como Habilitada o la deja sin configurar, se activará la Integridad de código de representador.
 Si establece la directiva como Deshabilitada, esto tiene un efecto perjudicial en la seguridad y estabilidad de Microsoft Edge, ya que un código desconocido y posiblemente hostil puede cargarse dentro de los procesos del representador de Microsoft Edge. Solo desactive la directiva si hay problemas de compatibilidad con software de terceros que deba ejecutarse dentro de los procesos del representador de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RendererCodeIntegrityEnabled
   - Nombre de GP: habilitar la integridad de código del representador
@@ -18706,14 +18770,14 @@ Si establece la directiva como Deshabilitada, esto tiene un efecto perjudicial e
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: RendererCodeIntegrityEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -18723,17 +18787,17 @@ Si establece la directiva como Deshabilitada, esto tiene un efecto perjudicial e
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RequireOnlineRevocationChecksForLocalAnchors
+  ### <a name="requireonlinerevocationchecksforlocalanchors"></a>RequireOnlineRevocationChecksForLocalAnchors
 
-  #### Especifique si se necesitan comprobaciones OCSP/CRL en línea para los anclajes de veracidad local
+  #### <a name="specify-if-online-ocspcrl-checks-are-required-for-local-trust-anchors"></a>Especifique si se necesitan comprobaciones OCSP/CRL en línea para los anclajes de veracidad local
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla la solicitud de las comprobaciones de revocación en línea (comprobaciones OCSP/CRL). Si Microsoft Edge no puede obtener información sobre el estado de la revocación, estos certificados se considerarán revocados ("error no recuperable").
 
@@ -18741,19 +18805,19 @@ Si habilita esta directiva, Microsoft Edge siempre realizará una comprobación 
 
 Si no configura o deshabilita esta directiva, entonces Microsoft Edge usará la configuración de comprobación de revocación en línea existente.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RequireOnlineRevocationChecksForLocalAnchors
   - Nombre de GP: especificar si se requieren comprobaciones OCSP/CRL en línea para los anclajes de veracidad locales
@@ -18761,14 +18825,14 @@ Si no configura o deshabilita esta directiva, entonces Microsoft Edge usará la 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: RequireOnlineRevocationChecksForLocalAnchors
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
@@ -18778,17 +18842,17 @@ Si no configura o deshabilita esta directiva, entonces Microsoft Edge usará la 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ResolveNavigationErrorsUseWebService
+  ### <a name="resolvenavigationerrorsusewebservice"></a>ResolveNavigationErrorsUseWebService
 
-  #### Habilite la resolución de errores de navegación con un servicio Web
+  #### <a name="enable-resolution-of-navigation-errors-using-a-web-service"></a>Habilite la resolución de errores de navegación con un servicio Web
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que Microsoft Edge emita una conexión sin datos a un servicio web para sondear las redes en busca de conectividad que se encuentra en lugares como hoteles y aeropuertos con Wi-Fi.
 
@@ -18801,19 +18865,19 @@ Si desactiva esta directiva, Microsoft Edge usará las API nativas para intentar
 Si no configura esta directiva, Microsoft Edge respetará la preferencia de usuario establecida en Servicios en Edge://configuración/privacidad.
 Específicamente, hay un botón de alternancia **Usar un servicio web para ayudar a resolver errores de navegación**, que el usuario puede activar o desactivar. Tenga en cuenta que si ha habilitado esta directiva (ResolveNavigationErrorsUseWebService), la opción **Usar un servicio web para ayudar a resolver los errores de navegación** estará activada, pero el usuario no podrá cambiar la opción con el botón de alternancia. Si ha deshabilitado esta directiva, la configuración **Usar un servicio web para ayudar a resolver los errores de navegación** se desactivará y el usuario no podrá cambiar la configuración con el botón de alternancia.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ResolveNavigationErrorsUseWebService
   - Nombre de GP: habilitar la resolución de errores de navegación con un servicio Web
@@ -18821,20 +18885,20 @@ Específicamente, hay un botón de alternancia **Usar un servicio web para ayuda
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: ResolveNavigationErrorsUseWebService
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ResolveNavigationErrorsUseWebService
   - Valor de ejemplo:
@@ -18845,17 +18909,17 @@ Específicamente, hay un botón de alternancia **Usar un servicio web para ayuda
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RestrictSigninToPattern
+  ### <a name="restrictsignintopattern"></a>RestrictSigninToPattern
 
-  #### Restrinja las cuentas que se pueden usar como cuentas de Microsoft Edge principal
+  #### <a name="restrict-which-accounts-can-be-used-as-microsoft-edge-primary-accounts"></a>Restrinja las cuentas que se pueden usar como cuentas de Microsoft Edge principal
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Determina qué cuentas pueden establecerse como cuentas primarias del explorador en Microsoft Edge (es decir, la cuenta que se elige durante el flujo de confirmación de la sincronización).
 
@@ -18863,19 +18927,19 @@ Si un usuario intenta configurar una cuenta principal para el explorador con un 
 
 Si no se configura esta directiva o la deja en blanco, los usuarios podrán configurar cualquier cuenta como la cuenta principal del explorador en Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RestrictSigninToPattern
   - Nombre de GP: restringir qué cuentas pueden ser usadas como cuentas principales de Microsoft Edge
@@ -18883,20 +18947,20 @@ Si no se configura esta directiva o la deja en blanco, los usuarios podrán conf
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: RestrictSigninToPattern
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 ".*@contoso.com"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: RestrictSigninToPattern
   - Valor de ejemplo:
@@ -18907,17 +18971,17 @@ Si no se configura esta directiva o la deja en blanco, los usuarios podrán conf
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RoamingProfileLocation
+  ### <a name="roamingprofilelocation"></a>RoamingProfileLocation
 
-  #### Configurar el directorio de perfiles móviles
+  #### <a name="set-the-roaming-profile-directory"></a>Configurar el directorio de perfiles móviles
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura el directorio que se usará para almacenar la copia de perfiles móviles de.
 
@@ -18927,19 +18991,19 @@ Para obtener una lista de las variables que puede usar, vea [https://go.microsof
 
 Si no configura esta Directiva, se usará la ruta de acceso del perfil móvil predeterminado.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RoamingProfileLocation
   - Nombre de la Directiva de Grupo: establecer el directorio del perfil móvil
@@ -18947,14 +19011,14 @@ Si no configura esta Directiva, se usará la ruta de acceso del perfil móvil pr
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: RoamingProfileLocation
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "${roaming_app_data}\\edge-profile"
@@ -18964,17 +19028,17 @@ Si no configura esta Directiva, se usará la ruta de acceso del perfil móvil pr
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RoamingProfileSupportEnabled
+  ### <a name="roamingprofilesupportenabled"></a>RoamingProfileSupportEnabled
 
-  #### Permitir el uso de copias móviles para datos de Perfil de Microsoft Edge
+  #### <a name="enable-using-roaming-copies-for-microsoft-edge-profile-data"></a>Permitir el uso de copias móviles para datos de Perfil de Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilite esta directiva para usar perfiles móviles en Windows. La configuración almacenada en perfiles de Microsoft Edge (favoritos y preferencias) también se guarda en un archivo almacenado en la carpeta de Perfil de usuario móvil (o en la ubicación especificada por el administrador mediante la Directiva de [RoamingProfileLocation](#roamingprofilelocation)).
 
@@ -18984,19 +19048,19 @@ Si deshabilita esta directiva o no la configura, solo se usarán los perfiles lo
 
 Consulte [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) para obtener más información sobre el uso de perfiles de usuario móviles.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RoamingProfileSupportEnabled
   - Nombre GP: habilitar el uso de copias móviles para datos de Perfil de Microsoft Edge
@@ -19004,14 +19068,14 @@ Consulte [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: RoamingProfileSupportEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -19021,17 +19085,17 @@ Consulte [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### RunAllFlashInAllowMode
+  ### <a name="runallflashinallowmode"></a>RunAllFlashInAllowMode
 
-  #### Ampliar la configuración de contenido de Adobe Flash a todo el contenido (obsoleto)
+  #### <a name="extend-adobe-flash-content-setting-to-all-content-obsolete"></a>Ampliar la configuración de contenido de Adobe Flash a todo el contenido (obsoleto)
 
   
   >OBSOLETO: esta directiva es obsoleta y no funciona después de Microsoft Edge 87.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 77 hasta 87
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva no funciona porque Microsoft Edge ya no admite Flash.
 
@@ -19041,19 +19105,19 @@ Para controlar qué sitios web están autorizados para ejecutar Adobe Flash, vea
 
 Si deshabilita o no configura esta directiva, es posible que el contenido de Adobe Flash, de otros orígenes (de sitios que no se especifican en las tres directivas mencionadas anteriormente) o el contenido reducido sea bloqueado.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: RunAllFlashInAllowMode
   - Nombre de GP: ampliar la configuración de contenido de Adobe Flash a todo el contenido (obsoleto)
@@ -19061,20 +19125,20 @@ Si deshabilita o no configura esta directiva, es posible que el contenido de Ado
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: RunAllFlashInAllowMode
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: RunAllFlashInAllowMode
   - Valor de ejemplo:
@@ -19085,17 +19149,17 @@ Si deshabilita o no configura esta directiva, es posible que el contenido de Ado
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SSLErrorOverrideAllowed
+  ### <a name="sslerroroverrideallowed"></a>SSLErrorOverrideAllowed
 
-  #### Permita que los usuarios continúen desde la página de advertencia HTTPS
+  #### <a name="allow-users-to-proceed-from-the-https-warning-page"></a>Permita que los usuarios continúen desde la página de advertencia HTTPS
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Microsoft Edge muestra una página de advertencia cuando los usuarios visitan sitios con errores de SSL.
 
@@ -19103,19 +19167,19 @@ Si habilita o no configura (por defecto) esta directiva, los usuarios podrán ha
 
 Si deshabilita esta directiva, se bloqueará a los usuarios para que no puedan hacer clic en ninguna página de advertencia.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SSLErrorOverrideAllowed
   - Nombre de GP: permitir que los usuarios continúen desde la página de advertencia de HTTPS
@@ -19123,20 +19187,20 @@ Si deshabilita esta directiva, se bloqueará a los usuarios para que no puedan h
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: SSLErrorOverrideAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SSLErrorOverrideAllowed
   - Valor de ejemplo:
@@ -19147,17 +19211,17 @@ Si deshabilita esta directiva, se bloqueará a los usuarios para que no puedan h
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SSLErrorOverrideAllowedForOrigins
+  ### <a name="sslerroroverrideallowedfororigins"></a>SSLErrorOverrideAllowedForOrigins
 
-  #### Permitir que los usuarios continúen desde la página de advertencia HTTPS para determinados orígenes
+  #### <a name="allow-users-to-proceed-from-the-https-warning-page-for-specific-origins"></a>Permitir que los usuarios continúen desde la página de advertencia HTTPS para determinados orígenes
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 90 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Microsoft Edge muestra una página de advertencia cuando los usuarios visitan sitios con errores de SSL.
 
@@ -19169,19 +19233,19 @@ Si no configura esta directiva, la directiva [SSLErrorOverrideAllowed](#sslerror
 
 Para obtener información detallada acerca de los patrones de origen válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva. Esta directiva solo coincide según el origen, por lo que cualquier ruta de acceso o consulta en el patrón de dirección URL se ignora.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SSLErrorOverrideAllowedForOrigins
   - Nombre de GP: Permitir que los usuarios continúen desde la página de advertencia HTTPS para determinados orígenes
@@ -19189,14 +19253,14 @@ Para obtener información detallada acerca de los patrones de origen válidos, v
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatorio): SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins
   - Ruta de acceso (recomendada): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\1 = "https://www.example.com"
@@ -19204,7 +19268,7 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SSLErrorOverrideAllowedForOrigins
   - Valor de ejemplo:
@@ -19218,17 +19282,17 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SSLVersionMin
+  ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### Versión de TLS mínima activada
+  #### <a name="minimum-tls-version-enabled"></a>Versión de TLS mínima activada
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establece la versión mínima admitida de TLS. Si no configura esta directiva, Microsoft Edge mostrará un error para TLS 1.0 y TLS 1.1, pero el usuario podrá omitirlo.
 
@@ -19244,19 +19308,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SSLVersionMin
   - Nombre de GP: versión mínima de TLS activada
@@ -19264,20 +19328,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: SSLVersionMin
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "tls1"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SSLVersionMin
   - Valor de ejemplo:
@@ -19288,17 +19352,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SaveCookiesOnExit
+  ### <a name="savecookiesonexit"></a>SaveCookiesOnExit
 
-  #### Guardar cookies cuando se cierra Microsoft Edge
+  #### <a name="save-cookies-when-microsoft-edge-closes"></a>Guardar cookies cuando se cierra Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Cuando esta directiva está habilitada, el conjunto de cookies especificado no se eliminará cuando se cierre el explorador. Esta directiva solo surte efecto cuando:
 - El botón de alternancia en Configuración/Privacidad "Cookies y otros datos de sitio" está configurado y servicios/Borrar datos de exploración está cerrado o
@@ -19313,19 +19377,19 @@ Si habilita esta directiva, la lista de cookies no se eliminará cuando se cierr
 
 Si deshabilita o no configura esta directiva, se usará la configuración personal del usuario.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SaveCookiesOnExit
   - Nombre GP: guardar cookies cuando se cierra Microsoft Edge
@@ -19333,14 +19397,14 @@ Si deshabilita o no configura esta directiva, se usará la configuración person
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta (obligatoria): SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = "https://www.contoso.com"
@@ -19348,7 +19412,7 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: SaveCookiesOnExit
   - Valor de ejemplo:
@@ -19362,17 +19426,17 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SavingBrowserHistoryDisabled
+  ### <a name="savingbrowserhistorydisabled"></a>SavingBrowserHistoryDisabled
 
-  #### Deshabilitar la opción pada guardar el historial del explorador
+  #### <a name="disable-saving-browser-history"></a>Deshabilitar la opción pada guardar el historial del explorador
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Deshabilita la opción de guardar el historial del explorador y evita que los usuarios cambien esta configuración.
 
@@ -19380,19 +19444,19 @@ Si habilita esta directiva, el historial de exploración no se guardará. Esto t
 
 Si deshabilita o no configura esta directiva, se guardará el historial de exploración.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SavingBrowserHistoryDisabled
   - Nombre de GP: deshabilitar la opción para guardar el historial del explorador
@@ -19400,20 +19464,20 @@ Si deshabilita o no configura esta directiva, se guardará el historial de explo
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: SavingBrowserHistoryDisabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SavingBrowserHistoryDisabled
   - Valor de ejemplo:
@@ -19424,34 +19488,34 @@ Si deshabilita o no configura esta directiva, se guardará el historial de explo
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ScreenCaptureAllowed
+  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
 
-  #### Permitir o denegar captura de pantalla
+  #### <a name="allow-or-deny-screen-capture"></a>Permitir o denegar captura de pantalla
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita o no configura esta directiva, una página web podría utilizar las API de uso compartido de pantalla (por ejemplo, getDisplayMedia() o la API de la extensión Desktop Capture) para realizar una captura de pantalla.
 Si deshabilita esta directiva, las llamadas a las API de uso compartido de pantalla fallarán. Por ejemplo, si está usando una reunión en línea basada en web, no funcionará el uso compartido de video o pantalla.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ScreenCaptureAllowed
   - Nombre de GP: permitir o denegar la captura de pantalla
@@ -19459,20 +19523,20 @@ Si deshabilita esta directiva, las llamadas a las API de uso compartido de panta
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ScreenCaptureAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ScreenCaptureAllowed
   - Valor de ejemplo:
@@ -19483,17 +19547,17 @@ Si deshabilita esta directiva, las llamadas a las API de uso compartido de panta
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ScrollToTextFragmentEnabled
+  ### <a name="scrolltotextfragmentenabled"></a>ScrollToTextFragmentEnabled
 
-  #### Habilite el desplazamiento al texto especificado en fragmentos de URL
+  #### <a name="enable-scrolling-to-text-specified-in-url-fragments"></a>Habilite el desplazamiento al texto especificado en fragmentos de URL
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta característica permite que los hipervínculos y la navegación de la barra de direcciones URL se dirijan hacia un texto específico en una página web, al que se desplazará una vez que la página web termine de cargarse.
 
@@ -19501,19 +19565,19 @@ Si habilita o no configura esta directiva, se habilitará el desplazamiento de l
 
 Si deshabilita esta directiva, también se deshabilitará el desplazamiento de la página web hacia determinados fragmentos de texto a través de una dirección URL.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ScrollToTextFragmentEnabled
   - Nombre de GP: habilitar el desplazamiento de texto especificado en los fragmentos de URL
@@ -19521,20 +19585,20 @@ Si deshabilita esta directiva, también se deshabilitará el desplazamiento de l
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ScrollToTextFragmentEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ScrollToTextFragmentEnabled
   - Valor de ejemplo:
@@ -19545,17 +19609,17 @@ Si deshabilita esta directiva, también se deshabilitará el desplazamiento de l
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SearchSuggestEnabled
+  ### <a name="searchsuggestenabled"></a>SearchSuggestEnabled
 
-  #### Permitir sugerencias de búsqueda
+  #### <a name="enable-search-suggestions"></a>Permitir sugerencias de búsqueda
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita las sugerencias de búsqueda web en la barra de direcciones de Microsoft Edge y en la lista de auto-sugerencias e impide que los usuarios cambien esta directiva.
 
@@ -19565,19 +19629,19 @@ Si deshabilita esta directiva, las sugerencias de búsqueda web nunca se usarán
 
 Si no se establece esta directiva, se habilitarán las sugerencias de búsqueda, sin embargo, el usuario podrá cambiarlas.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SearchSuggestEnabled
   - Nombre de GP: permitir las sugerencias de búsqueda
@@ -19585,20 +19649,20 @@ Si no se establece esta directiva, se habilitarán las sugerencias de búsqueda,
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: SearchSuggestEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SearchSuggestEnabled
   - Valor de ejemplo:
@@ -19609,35 +19673,35 @@ Si no se establece esta directiva, se habilitarán las sugerencias de búsqueda,
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SecurityKeyPermitAttestation
+  ### <a name="securitykeypermitattestation"></a>SecurityKeyPermitAttestation
 
-  #### Sitios web o dominios que no necesitan permiso para usar la atestación de clave de seguridad directa
+  #### <a name="websites-or-domains-that-dont-need-permission-to-use-direct-security-key-attestation"></a>Sitios web o dominios que no necesitan permiso para usar la atestación de clave de seguridad directa
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica los sitios web y los dominios que no necesitan un permiso explícito del usuario al solicitar los certificados de atestación de las claves de seguridad. Además, se envía una señal a la clave de seguridad para indicar que puede usar la atestación individual. Sin esto, se le pedirá a los usuarios cada vez que un sitio solicite una consulta para la atestación de las claves de seguridad.
 
 Sitios (como https://contoso.com/some/path) solo coinciden con U2F appIDs. Los dominios (como contoso.com) solo coinciden como ID. de webauthn RP. Para cubrir tanto las API de U2F como de webauthn en un sitio determinado, es necesario enumerar tanto la dirección URL de la aplicación como el dominio.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SecurityKeyPermitAttestation
   - Nombre de GP: sitios web o dominios que no necesitan permiso para usar la atestación directa de la clave de seguridad
@@ -19645,21 +19709,21 @@ Sitios (como https://contoso.com/some/path) solo coinciden con U2F appIDs. Los d
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\SecurityKeyPermitAttestation
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SecurityKeyPermitAttestation
   - Valor de ejemplo:
@@ -19672,33 +19736,33 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SendIntranetToInternetExplorer
+  ### <a name="sendintranettointernetexplorer"></a>SendIntranetToInternetExplorer
 
-  #### Enviar todos los sitios de intranet a Internet Explorer
+  #### <a name="send-all-intranet-sites-to-internet-explorer"></a>Enviar todos los sitios de intranet a Internet Explorer
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Para obtener instrucciones sobre cómo configurar la experiencia óptima en el modo de Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SendIntranetToInternetExplorer
   - Nombre de GP: enviar todos los sitios de intranet a Internet Explorer
@@ -19706,14 +19770,14 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: SendIntranetToInternetExplorer
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -19723,17 +19787,17 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SendSiteInfoToImproveServices
+  ### <a name="sendsiteinfotoimproveservices"></a>SendSiteInfoToImproveServices
 
-  #### Enviar información del sitio para mejorar los servicios Microsoft (obsoleto)
+  #### <a name="send-site-information-to-improve-microsoft-services-obsolete"></a>Enviar información del sitio para mejorar los servicios Microsoft (obsoleto)
 
   
   >OBSOLETO: esta directiva está obsoleta y no funciona después de Microsoft Edge 88.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 77, hasta 88
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva ya no es compatible. Se reemplaza por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 y macOS) y Permitir telemetría en Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
@@ -19747,19 +19811,19 @@ Esta directiva controla el envío de información sobre los sitios web visitados
 
 Para habilitar esta directiva, debe establecer [MetricsReportingEnabled](#metricsreportingenabled) como habilitado. Si [MetricsReportingEnabled](#sendsiteinfotoimproveservices) o [SendSiteInfoToImproveServices](#metricsreportingenabled) no se configura o se deshabilita, estos datos no se enviarán a Microsoft.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SendSiteInfoToImproveServices
   - Nombre de GP: enviar información del sitio para mejorar los servicios Microsoft (obsoleto)
@@ -19767,20 +19831,20 @@ Para habilitar esta directiva, debe establecer [MetricsReportingEnabled](#metric
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: SendSiteInfoToImproveServices
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SendSiteInfoToImproveServices
   - Valor de ejemplo:
@@ -19791,17 +19855,17 @@ Para habilitar esta directiva, debe establecer [MetricsReportingEnabled](#metric
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SensorsAllowedForUrls
+  ### <a name="sensorsallowedforurls"></a>SensorsAllowedForUrls
 
-  #### Permitir el acceso a sensores en sitios específicos
+  #### <a name="allow-access-to-sensors-on-specific-sites"></a>Permitir el acceso a sensores en sitios específicos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Definir una lista de sitios, basándose en patrones de dirección URL, que puedan acceder a sensores —como sensores de luz y de movimiento— y usarlos.
 
@@ -19813,19 +19877,19 @@ Los patrones de dirección URL definidos en esta directiva no pueden entrar en c
 
 Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SensorsAllowedForUrls
   - Nombre de GP: Permitir el acceso a sensores en sitios específicos
@@ -19833,14 +19897,14 @@ Para información detallada sobre los patrones de dirección URL válidos, consu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\SensorsAllowedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.com"
@@ -19848,7 +19912,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SensorsAllowedForUrls
   - Valor de ejemplo:
@@ -19862,17 +19926,17 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SensorsBlockedForUrls
+  ### <a name="sensorsblockedforurls"></a>SensorsBlockedForUrls
 
-  #### Bloquear el acceso a sensores en sitios específicos
+  #### <a name="block-access-to-sensors-on-specific-sites"></a>Bloquear el acceso a sensores en sitios específicos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Definir una lista de sitios, basándose en patrones de dirección URL, que no puedan acceder a sensores, tales como sensores de luz y de movimiento.
 
@@ -19884,19 +19948,19 @@ Los patrones de dirección URL definidos en esta directiva no pueden entrar en c
 
 Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SensorsBlockedForUrls
   - Nombre de GP: Bloquear el acceso a sensores en sitios específicos
@@ -19904,14 +19968,14 @@ Para información detallada sobre los patrones de dirección URL válidos, consu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\SensorsBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\1 = "https://www.contoso.com"
@@ -19919,7 +19983,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de las preferencias: SensorsBlockedForUrls
   - Valor de ejemplo:
@@ -19933,17 +19997,17 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SerialAskForUrls
+  ### <a name="serialaskforurls"></a>SerialAskForUrls
 
-  #### Permitir la API de serie en sitios específicos
+  #### <a name="allow-the-serial-api-on-specific-sites"></a>Permitir la API de serie en sitios específicos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios basada en patrones de dirección URL que pueden solicitar al usuario acceso a un puerto serie.
 
@@ -19955,19 +20019,19 @@ Los patrones de dirección URL definidos en esta directiva no pueden entrar en c
 
 Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SerialAskForUrls
   - Nombre de GP: Permitir la API de serie en sitios específicos
@@ -19975,14 +20039,14 @@ Para información detallada sobre los patrones de dirección URL válidos, consu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\SerialAskForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
@@ -19990,7 +20054,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SerialAskForUrls
   - Valor de ejemplo:
@@ -20004,17 +20068,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SerialBlockedForUrls
+  ### <a name="serialblockedforurls"></a>SerialBlockedForUrls
 
-  #### Bloquear la API de serie en sitios específicos
+  #### <a name="block-the-serial-api-on-specific-sites"></a>Bloquear la API de serie en sitios específicos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios basada en patrones de dirección URL que no pueden solicitar al usuario acceso a un puerto serie.
 
@@ -20026,19 +20090,19 @@ Los patrones de dirección URL en esta directiva no pueden entrar en conflicto c
 
 Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SerialBlockedForUrls
   - Nombre de GP: Bloquear la API de serie en sitios específicos
@@ -20046,14 +20110,14 @@ Para información detallada sobre los patrones de dirección URL válidos, consu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge\SerialBlockedForUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\1 = "https://www.contoso.com"
@@ -20061,7 +20125,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SerialBlockedForUrls
   - Valor de ejemplo:
@@ -20075,17 +20139,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ShowMicrosoftRewards
+  ### <a name="showmicrosoftrewards"></a>ShowMicrosoftRewards
 
-  #### Mostrar las experiencias de MicrosoftRewards
+  #### <a name="show-microsoft-rewards-experiences"></a>Mostrar las experiencias de MicrosoftRewards
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Muestra las notificaciones y la experiencia de Microsoft Rewards.
 Si habilita esta directiva:
@@ -20100,40 +20164,40 @@ Si no se configura esta directiva:
    - Los usuarios con una cuenta de Microsoft (excepto las de AzureAD) en los mercados con recompensas por búsquedas verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
    - La configuración para habilitar las Microsoft Rewards en la configuración de Microsoft Edge se habilitará y se activará.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ShowMicrosoftRewards
   - Nombre de GP: Mostrar las experiencias de Microsoft Rewards
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft\Edge\Recomendado
   - Nombre del valor: ShowMicrosoftRewards
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de la clave de preferencias: ShowMicrosoftRewards
   - Valor de ejemplo:
@@ -20144,36 +20208,36 @@ Si no se configura esta directiva:
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ShowOfficeShortcutInFavoritesBar
+  ### <a name="showofficeshortcutinfavoritesbar"></a>ShowOfficeShortcutInFavoritesBar
 
-  #### Mostrar el acceso directo de Microsoft Office en la barra de favoritos (en desuso)
+  #### <a name="show-microsoft-office-shortcut-in-favorites-bar-deprecated"></a>Mostrar el acceso directo de Microsoft Office en la barra de favoritos (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva no funcionaba como se esperaba debido a cambios en los requisitos operativos. Por lo tanto, está en desuso y no debería utilizarse.
 
 Especifica si se va a incluir un método abreviado para Office.com en la barra de favoritos. Para los usuarios que iniciaron sesión en Microsoft Edge, el método abreviado lleva a los usuarios a sus aplicaciones y documentos de Microsoft Office. Si habilita o no configura esta directiva, los usuarios pueden elegir si ven el método abreviado de teclado cambiando el botón de alternancia en el menú contextual de la barra de favoritos.
 Si deshabilita esta directiva, el método abreviado no se muestra.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ShowOfficeShortcutInFavoritesBar
   - Nombre de GP: mostrar el acceso directo de Microsoft Office en la barra de favoritos (en desuso)
@@ -20181,20 +20245,20 @@ Si deshabilita esta directiva, el método abreviado no se muestra.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: ShowOfficeShortcutInFavoritesBar
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ShowOfficeShortcutInFavoritesBar
   - Valor de ejemplo:
@@ -20205,17 +20269,17 @@ Si deshabilita esta directiva, el método abreviado no se muestra.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### ShowRecommendationsEnabled
+  ### <a name="showrecommendationsenabled"></a>ShowRecommendationsEnabled
 
-  #### Permite las recomendaciones y notificaciones promocionales de Microsoft Edge
+  #### <a name="allow-recommendations-and-promotional-notifications-from-microsoft-edge"></a>Permite las recomendaciones y notificaciones promocionales de Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión 89 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta configuración de directiva permite decidir si los empleados deben recibir recomendaciones y notificaciones de asistencia en el producto por parte de Microsoft Edge.
 
@@ -20223,19 +20287,19 @@ Si habilita o no configura esta opción, los empleados recibirán recomendacione
 
 Si deshabilita esta configuración, los empleados no recibirán ninguna recomendación o notificación de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ShowRecommendationsEnabled
   - Nombre de GP: Permitir las recomendaciones y notificaciones promocionales de Microsoft Edge
@@ -20243,20 +20307,20 @@ Si deshabilita esta configuración, los empleados no recibirán ninguna recomend
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): N/D
   - Nombre del valor: ShowRecommendationsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: ShowRecommendationsEnabled
   - Valor de ejemplo:
@@ -20267,17 +20331,17 @@ Si deshabilita esta configuración, los empleados no recibirán ninguna recomend
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SignedHTTPExchangeEnabled
+  ### <a name="signedhttpexchangeenabled"></a>SignedHTTPExchangeEnabled
 
-  #### Habilite la compatibilidad con el intercambio de HTTP firmado (SXG)
+  #### <a name="enable-signed-http-exchange-sxg-support"></a>Habilite la compatibilidad con el intercambio de HTTP firmado (SXG)
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita la compatibilidad con el Intercambio firmado de HTTP (SXG).
 
@@ -20285,19 +20349,19 @@ Si no se establece o habilita esta directiva, Microsoft Edge aceptará el conten
 
 Si esta directiva está deshabilitada, los intercambios firmados por HTTP no podrán ser cargados.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SignedHTTPExchangeEnabled
   - Nombre de GP: habilitar la compatibilidad con el intercambio firmado de HTTP (SXG)
@@ -20305,20 +20369,20 @@ Si esta directiva está deshabilitada, los intercambios firmados por HTTP no pod
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: SignedHTTPExchangeEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SignedHTTPExchangeEnabled
   - Valor de ejemplo:
@@ -20329,17 +20393,17 @@ Si esta directiva está deshabilitada, los intercambios firmados por HTTP no pod
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SitePerProcess
+  ### <a name="siteperprocess"></a>SitePerProcess
 
-  #### Habilite el aislamiento de sitio para cada sitio
+  #### <a name="enable-site-isolation-for-every-site"></a>Habilite el aislamiento de sitio para cada sitio
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   La directiva "SitePerProcess" puede ser usada para evitar que los usuarios opten por el comportamiento predeterminado de aislar todos los sitios. Tenga en cuenta que también puede usar la directiva [IsolateOrigins](#isolateorigins) para aislar orígenes adicionales más precisos.
 
@@ -20348,19 +20412,19 @@ Si habilita esta directiva, los usuarios no podrán optar por el comportamiento 
 Si deshabilita o no configura esta directiva, el usuario podrá optar por no recibir el aislamiento del sitio.  (Por ejemplo, con la entrada "deshabilitar aislamiento de sitio" en edge://flags.)  Si deshabilita o no configura la directiva, no se desactivará el aislamiento de sitio.
 
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SitePerProcess
   - Nombre de GP: habilitar el aislamiento de sitio en cada uno de los sitios
@@ -20368,20 +20432,20 @@ Si deshabilita o no configura esta directiva, el usuario podrá optar por no rec
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: SitePerProcess
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SitePerProcess
   - Valor de ejemplo:
@@ -20392,17 +20456,17 @@ Si deshabilita o no configura esta directiva, el usuario podrá optar por no rec
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SmartActionsBlockList
+  ### <a name="smartactionsblocklist"></a>SmartActionsBlockList
 
-  #### Bloquear acciones inteligentes para una lista de servicios
+  #### <a name="block-smart-actions-for-a-list-of-services"></a>Bloquear acciones inteligentes para una lista de servicios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión 89 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Enumerar servicios específicos, como PDF, que no muestran acciones inteligentes. (Las acciones inteligentes son acciones, como "definir", que están disponibles en menús contextuales completos o pequeños en Microsoft Edge).
 
@@ -20422,19 +20486,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SmartActionsBlockList
   - Nombre de GP: bloquear acciones inteligentes para una lista de servicios
@@ -20442,21 +20506,21 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList
   - Ruta de acceso (recomendada): SOFTWARE\Policies\Microsoft\Edge\Recommended\SmartActionsBlockList
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencia: SmartActionsBlockList
   - Valor de ejemplo:
@@ -20469,17 +20533,17 @@ SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SpeechRecognitionEnabled
+  ### <a name="speechrecognitionenabled"></a>SpeechRecognitionEnabled
 
-  #### Configure Speech Recognition
+  #### <a name="configure-speech-recognition"></a>Configure Speech Recognition
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Establecer si los sitios web pueden usar la API de voz web de W3C para reconocer el discurso del usuario. La implementación de Microsoft Edge de la API de Speech Web usa los servicios de Azure cognitiva, por lo que los datos de voz abandonarán el equipo.
 
@@ -20489,19 +20553,19 @@ Si deshabilita esta Directiva, el reconocimiento de voz no estará disponible a 
 
 Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - GP unique name: SpeechRecognitionEnabled
   - GP name: Configure Speech Recognition
@@ -20509,20 +20573,20 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Value Name: SpeechRecognitionEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Preference Key Name: SpeechRecognitionEnabled
   - Valor de ejemplo:
@@ -20533,35 +20597,35 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SpellcheckEnabled
+  ### <a name="spellcheckenabled"></a>SpellcheckEnabled
 
-  #### Habilite corrección ortográfica
+  #### <a name="enable-spellcheck"></a>Habilite corrección ortográfica
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita o no configura esta directiva, el usuario podrá usar la revisión ortográfica.
 
 Si deshabilita esta directiva, el usuario no podrá usar la revisión ortográfica y las directivas [SpellcheckLanguage](#spellchecklanguage) y [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist) también estarán deshabilitadas.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SpellcheckEnabled
   - Nombre de GP: habilitar la corrección ortográfica
@@ -20569,20 +20633,20 @@ Si deshabilita esta directiva, el usuario no podrá usar la revisión ortográfi
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: SpellcheckEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SpellcheckEnabled
   - Valor de ejemplo:
@@ -20593,17 +20657,17 @@ Si deshabilita esta directiva, el usuario no podrá usar la revisión ortográfi
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SpellcheckLanguage
+  ### <a name="spellchecklanguage"></a>SpellcheckLanguage
 
-  #### Habilite idiomas de revisión ortográfica específicos
+  #### <a name="enable-specific-spellcheck-languages"></a>Habilite idiomas de revisión ortográfica específicos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita varios idiomas para la revisión ortográfica. Cualquier idioma especificado que no sea reconocido será omitido
 
@@ -20617,19 +20681,19 @@ Si se incluye un idioma tanto en la directiva de "SpellcheckLanguage" como en la
 
 Los idiomas admitidos son: af, bg, ca, cs, cy, da, de, el, en - AU, en - CA, en - GB, en - US, es, es - 419, es - AR, es - ES, es - MX, es - US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt - BR, pt - PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SpellcheckLanguage
   - Nombre de GP: habilitar los idiomas específicos de la revisión ortográfica
@@ -20637,14 +20701,14 @@ Los idiomas admitidos son: af, bg, ca, cs, cy, da, de, el, en - AU, en - CA, en 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = "fr"
@@ -20656,17 +20720,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SpellcheckLanguageBlocklist
+  ### <a name="spellchecklanguageblocklist"></a>SpellcheckLanguageBlocklist
 
-  #### Forzar deshabilitar idioma de revisión ortográfica
+  #### <a name="force-disable-spellcheck-languages"></a>Forzar deshabilitar idioma de revisión ortográfica
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Deshabilitar de forma forzada los lenguajes de revisión ortográfica. Los idiomas no reconocidos en la lista se omitirán.
 
@@ -20680,19 +20744,19 @@ Si se incluye un idioma en alguna de las directivas [SpellcheckLanguage](#spellc
 
 Los idiomas admitidos son: af, bg, ca, cs, da, de, el, en - AU, en - CA, en - GB, en - US, es, es - 419, es - AR, es - ES, es - MX, es - US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt - BR, pt - PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SpellcheckLanguageBlocklist
   - Nombre de GP: Forzar la inhabilitación del idioma de revisión ortográfica
@@ -20700,14 +20764,14 @@ Los idiomas admitidos son: af, bg, ca, cs, da, de, el, en - AU, en - CA, en - GB
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\SpellcheckLanguageBlocklist
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
@@ -20719,17 +20783,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### StricterMixedContentTreatmentEnabled
+  ### <a name="strictermixedcontenttreatmentenabled"></a>StricterMixedContentTreatmentEnabled
 
-  #### Habilitar un tratamiento más estricto para el contenido mixto (obsoleto)
+  #### <a name="enable-stricter-treatment-for-mixed-content-obsolete"></a>Habilitar un tratamiento más estricto para el contenido mixto (obsoleto)
 
   
   >OBSOLETA: Esta directiva está obsoleta y no funciona después de Microsoft Edge 84.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 81, hasta 84
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta política no funciona porque solo tenía la intención de ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web si se determina que es incompatible con un tratamiento de contenido mixto más estricto.
 
@@ -20741,19 +20805,19 @@ Si establece la directiva como falsa, se deshabilitarán las actualizaciones aut
 
 Esta directiva no afecta otros tipos de contenido mixto que no sean audio, vídeo e imágenes.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: StricterMixedContentTreatmentEnabled
   - Nombre de GP: habilitar un tratamiento más estricto para el contenido mixto (obsoleto)
@@ -20761,20 +20825,20 @@ Esta directiva no afecta otros tipos de contenido mixto que no sean audio, víde
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: StricterMixedContentTreatmentEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: StricterMixedContentTreatmentEnabled
   - Valor de ejemplo:
@@ -20785,35 +20849,35 @@ Esta directiva no afecta otros tipos de contenido mixto que no sean audio, víde
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SuppressUnsupportedOSWarning
+  ### <a name="suppressunsupportedoswarning"></a>SuppressUnsupportedOSWarning
 
-  #### Suprimir la advertencia de SO no compatible
+  #### <a name="suppress-the-unsupported-os-warning"></a>Suprimir la advertencia de SO no compatible
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Suprime la advertencia que aparece al ejecutar Microsoft Edge en un equipo o sistema operativo que ya no sea compatible.
 
 Si esta directiva tiene un valor falso o no está establecido, las advertencias aparecerán en los equipos o sistemas operativos que no sean compatibles.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SuppressUnsupportedOSWarning
   - Nombre de GP: suprimir la advertencia de SO no compatible
@@ -20821,20 +20885,20 @@ Si esta directiva tiene un valor falso o no está establecido, las advertencias 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: SuppressUnsupportedOSWarning
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SuppressUnsupportedOSWarning
   - Valor de ejemplo:
@@ -20845,17 +20909,17 @@ Si esta directiva tiene un valor falso o no está establecido, las advertencias 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SyncDisabled
+  ### <a name="syncdisabled"></a>SyncDisabled
 
-  #### Deshabilitar la sincronización de datos con servicios de sincronización de Microsoft
+  #### <a name="disable-synchronization-of-data-using-microsoft-sync-services"></a>Deshabilitar la sincronización de datos con servicios de sincronización de Microsoft
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Deshabilita la sincronización de datos en Microsoft Edge. Esta directiva también evita que se muestren solicitudes de consentimiento de sincronización.
 
@@ -20863,19 +20927,19 @@ Esta directiva deshabilita solo la sincronización en la nube y no afecta a la d
 
 Si no establece o aplica esta directiva como se recomienda, los usuarios podrán activar o desactivar la sincronización. Si aplica esta directiva como obligatoria, los usuarios no podrán activar la sincronización.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SyncDisabled
   - Nombre de GP: deshabilitar la sincronización de datos con servicios de sincronización de Microsoft
@@ -20883,20 +20947,20 @@ Si no establece o aplica esta directiva como se recomienda, los usuarios podrán
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: SyncDisabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SyncDisabled
   - Valor de ejemplo:
@@ -20907,17 +20971,17 @@ Si no establece o aplica esta directiva como se recomienda, los usuarios podrán
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### SyncTypesListDisabled
+  ### <a name="synctypeslistdisabled"></a>SyncTypesListDisabled
 
-  #### Configurar la lista de tipos que se excluyen de la sincronización
+  #### <a name="configure-the-list-of-types-that-are-excluded-from-synchronization"></a>Configurar la lista de tipos que se excluyen de la sincronización
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde la versión 83 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita esta directiva, todos los tipos de datos especificados se excluirán de la sincronización. Esta directiva se puede usar para restringir el tipo de datos cargados en el servicio de sincronización de Microsoft Edge.
 
@@ -20925,19 +20989,19 @@ Puede proporcionar uno de los siguientes tipos de datos para esta directiva: "fa
 
 Los usuarios no podrán reemplazar los tipos de datos deshabilitados.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SyncTypesListDisabled
   - Nombre de GP: configurar la lista de tipos que están excluidos de la sincronización.
@@ -20945,21 +21009,21 @@ Los usuarios no podrán reemplazar los tipos de datos deshabilitados.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\SyncTypesListDisabled
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: SyncTypesListDisabled
   - Valor de ejemplo:
@@ -20972,17 +21036,17 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### TLS13HardeningForLocalAnchorsEnabled
+  ### <a name="tls13hardeningforlocalanchorsenabled"></a>TLS13HardeningForLocalAnchorsEnabled
 
-  #### Habilitar una característica de seguridad TLS 1.3 para los anclajes de veracidad locales (en desuso)
+  #### <a name="enable-a-tls-13-security-feature-for-local-trust-anchors-obsolete"></a>Habilitar una característica de seguridad TLS 1.3 para los anclajes de veracidad locales (en desuso)
 
   
   >OBSOLETA: Esta directiva está obsoleta y no funciona después de Microsoft Edge 85.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS, desde la versión 81 hasta la versión 85
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva está en desuso, ya que solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar los proxis afectados.
 
@@ -20994,19 +21058,19 @@ Si deshabilita esta directiva, Microsoft Edge deshabilitará estas protecciones 
 
 Se puede usar esta directiva para comprobar los proxis afectados y actualizarlos. Se espera que los servidores afectados den error en las conexiones con el código de error: ERR_TLS13_DOWNGRADE_DETECTED.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: TLS13HardeningForLocalAnchorsEnabled
   - Nombre GP: habilitar una característica de seguridad TLS 1.3 para los anclajes de veracidad locales (en desuso)
@@ -21014,20 +21078,20 @@ Se puede usar esta directiva para comprobar los proxis afectados y actualizarlos
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: TLS13HardeningForLocalAnchorsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: TLS13HardeningForLocalAnchorsEnabled
   - Valor de ejemplo:
@@ -21038,17 +21102,17 @@ Se puede usar esta directiva para comprobar los proxis afectados y actualizarlos
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### TLSCipherSuiteDenyList
+  ### <a name="tlsciphersuitedenylist"></a>TLSCipherSuiteDenyList
 
-  #### Especificar los conjuntos de cifrado TLS para deshabilitarlos
+  #### <a name="specify-the-tls-cipher-suites-to-disable"></a>Especificar los conjuntos de cifrado TLS para deshabilitarlos
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 85 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configure la lista de conjuntos de cifrado que se deshabilitan en conexiones TLS.
 
@@ -21062,19 +21126,19 @@ La TLS_AES_128_GCM_SHA256 del conjunto de cifrado TLS 1,3 (0x1301) es necesaria 
 
 Esta Directiva no afecta a las conexiones basadas en QUIC. QUIC puede apagarse a través de la Directiva de [QuicAllowed](#quicallowed).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: TLSCipherSuiteDenyList
   - Nombre de GP: especifique los conjuntos de cifrado TLS para deshabilitarlos.
@@ -21082,14 +21146,14 @@ Esta Directiva no afecta a las conexiones basadas en QUIC. QUIC puede apagarse a
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - Ruta de acceso (recomendado): N/D
+  - Ruta de acceso (recomendada): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = "0x1303"
@@ -21098,7 +21162,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: TLSCipherSuiteDenyList
   - Valor de ejemplo:
@@ -21113,17 +21177,17 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### TabFreezingEnabled
+  ### <a name="tabfreezingenabled"></a>TabFreezingEnabled
 
-  #### Permitir el bloqueo de las pestañas en segundo plano
+  #### <a name="allow-freezing-of-background-tabs"></a>Permitir el bloqueo de las pestañas en segundo plano
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 79 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla si Microsoft Edge puede congelar las pestañas que están en segundo plano durante al menos 5 minutos.
 
@@ -21133,19 +21197,19 @@ Si habilita o no configura esta directiva, las pestañas que han estado en segun
 
 Si desactiva esta directiva, no se congelarán las pestañas.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: TabFreezingEnabled
   - Nombre de GP: permitir el bloqueo de las pestañas en segundo plano
@@ -21153,20 +21217,20 @@ Si desactiva esta directiva, no se congelarán las pestañas.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: TabFreezingEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: TabFreezingEnabled
   - Valor de ejemplo:
@@ -21177,17 +21241,17 @@ Si desactiva esta directiva, no se congelarán las pestañas.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### TargetBlankImpliesNoOpener
+  ### <a name="targetblankimpliesnoopener"></a>TargetBlankImpliesNoOpener
 
-  #### No establezca window.opener para vínculos destinados a _blank
+  #### <a name="do-not-set-windowopener-for-links-targeting-_blank"></a>No establezca window.opener para vínculos destinados a _blank
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilitas esta directiva o la dejas sin establecer, la propiedad window.opener se establece en null a menos que el delimitador especifique rel="opener".
 
@@ -21195,19 +21259,19 @@ Si deshabilitas esta directiva, los elementos emergentes de destino _blank puede
 
 Esta directiva estará obsoleta en La versión 95 de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: TargetBlankImpliesNoOpener
   - Nombre de GP: no establecer window.opener para vínculos destinados a _blank
@@ -21215,20 +21279,20 @@ Esta directiva estará obsoleta en La versión 95 de Microsoft Edge.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendado): N/D
+  - Ruta de acceso (recomendada): N/D
   - Nombre del valor: TargetBlankImpliesNoOpener
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de la clave de preferencia: TargetBlankImpliesNoOpener
   - Valor de ejemplo:
@@ -21239,33 +21303,33 @@ Esta directiva estará obsoleta en La versión 95 de Microsoft Edge.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### TaskManagerEndProcessEnabled
+  ### <a name="taskmanagerendprocessenabled"></a>TaskManagerEndProcessEnabled
 
-  #### Habilitar los procesos de finalización en el administrador de tareas del explorador
+  #### <a name="enable-ending-processes-in-the-browser-task-manager"></a>Habilitar los procesos de finalización en el administrador de tareas del explorador
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita o no configura esta directiva, los usuarios podrán detener los procesos en el administrador de tareas del explorador. Si la deshabilita, los usuarios no podrán detener los procesos y el botón Detener proceso estará deshabilitado en el administrador de tareas del explorador.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: TaskManagerEndProcessEnabled
   - Nombre GP: habilitar los procesos finales en el administrador de tareas del explorador
@@ -21273,20 +21337,20 @@ Esta directiva estará obsoleta en La versión 95 de Microsoft Edge.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: TaskManagerEndProcessEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: TaskManagerEndProcessEnabled
   - Valor de ejemplo:
@@ -21297,17 +21361,17 @@ Esta directiva estará obsoleta en La versión 95 de Microsoft Edge.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### TotalMemoryLimitMb
+  ### <a name="totalmemorylimitmb"></a>TotalMemoryLimitMb
 
-  #### Establecer el límite en megabytes de memoria que puede utilizar una única instancia de Microsoft Edge.
+  #### <a name="set-limit-on-megabytes-of-memory-a-single-microsoft-edge-instance-can-use"></a>Establecer el límite en megabytes de memoria que puede utilizar una única instancia de Microsoft Edge.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configure la cantidad de memoria que una sola instancia de Microsoft Edge puede usar antes de que las pestañas empiecen a ser descartadas para ahorrar memoria. La memoria usada por la pestaña se liberará y la pestaña tendrá que volver a cargarse cuando se cambie a.
 
@@ -21315,19 +21379,19 @@ Si habilita esta directiva, el navegador comenzará a descartar las pestañas pa
 
 Si no establece esta directiva, el explorador solo intentará ahorrar memoria cuando haya detectado que la cantidad de memoria física de su equipo es insuficiente.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: TotalMemoryLimitMb
   - Nombre de GP: establecer el límite de megabytes de memoria que puede usar una sola instancia de Microsoft Edge.
@@ -21335,20 +21399,20 @@ Si no establece esta directiva, el explorador solo intentará ahorrar memoria cu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: TotalMemoryLimitMb
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000800
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: TotalMemoryLimitMb
   - Valor de ejemplo:
@@ -21359,17 +21423,17 @@ Si no establece esta directiva, el explorador solo intentará ahorrar memoria cu
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### TrackingPrevention
+  ### <a name="trackingprevention"></a>TrackingPrevention
 
-  #### Bloquear el seguimiento de la actividad de exploración de los usuarios en la web
+  #### <a name="block-tracking-of-users-web-browsing-activity"></a>Bloquear el seguimiento de la actividad de exploración de los usuarios en la web
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 78 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Le permite decidir si desea bloquear el acceso a los sitios web que quieran rastrear la actividad de los usuarios.
 
@@ -21387,19 +21451,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: TrackingPrevention
   - Nombre de GP: bloquear el seguimiento de la actividad de exploración de los usuarios en la web
@@ -21407,20 +21471,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: TrackingPrevention
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000002
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: TrackingPrevention
   - Valor de ejemplo:
@@ -21431,17 +21495,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### TranslateEnabled
+  ### <a name="translateenabled"></a>TranslateEnabled
 
-  #### Habilitar la traducción
+  #### <a name="enable-translate"></a>Habilitar la traducción
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita el servicio de traducción integrada de Microsoft en Microsoft Edge.
 
@@ -21451,19 +21515,19 @@ Al deshabilitar esta directiva también se deshabilitarán todas las caracterís
 
 Si no configura la directiva, los usuarios podrán elegir si desean usar la funcionalidad de traducción o no.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: TranslateEnabled
   - Nombre de GP: habilitar la traducción
@@ -21471,20 +21535,20 @@ Si no configura la directiva, los usuarios podrán elegir si desean usar la func
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
   - Nombre del valor: TranslateEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: TranslateEnabled
   - Valor de ejemplo:
@@ -21495,17 +21559,17 @@ Si no configura la directiva, los usuarios podrán elegir si desean usar la func
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### URLAllowlist
+  ### <a name="urlallowlist"></a>URLAllowlist
 
-  #### Definir una lista de direcciones URL permitidas
+  #### <a name="define-a-list-of-allowed-urls"></a>Definir una lista de direcciones URL permitidas
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   El establecimiento de la Directiva permite tener acceso a las direcciones URL indicadas, como excepciones para [URLBlocklist](#urlblocklist).
 
@@ -21521,19 +21585,19 @@ Esta directiva también permite al explorador invocar automáticamente aplicacio
 
 Si no configura esta Directiva, no hay ninguna excepción a la lista de bloqueados en la Directiva [URLBlocklist](#urlblocklist).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: URLAllowlist
   - Nombre de GP: definir una lista de direcciones URL permitidas
@@ -21541,14 +21605,14 @@ Si no configura esta Directiva, no hay ninguna excepción a la lista de bloquead
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\URLAllowlist
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = "contoso.com"
@@ -21559,7 +21623,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: URLAllowlist
   - Valor de ejemplo:
@@ -21576,17 +21640,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### URLBlocklist
+  ### <a name="urlblocklist"></a>URLBlocklist
 
-  #### Bloquear el acceso a una lista de direcciones URL
+  #### <a name="block-access-to-a-list-of-urls"></a>Bloquear el acceso a una lista de direcciones URL
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Define una lista de sitios basada en los patrones de dirección URL que están bloqueados (sus usuarios no pueden cargarlos).
 
@@ -21600,19 +21664,19 @@ Esta Directiva no impide que la página se actualice dinámicamente a través de
 
 Si no configura esta Directiva, no se bloquea ninguna dirección URL.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: URLBlocklist
   - Nombre de GP: bloquear el acceso a una lista de direcciones URL
@@ -21620,14 +21684,14 @@ Si no configura esta Directiva, no se bloquea ninguna dirección URL.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\URLBlocklist
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = "contoso.com"
@@ -21641,7 +21705,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: URLBlocklist
   - Valor de ejemplo:
@@ -21661,17 +21725,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### UpdatePolicyOverride
+  ### <a name="updatepolicyoverride"></a>UpdatePolicyOverride
 
-  #### Especifica cómo Microsoft Edge Update controla las actualizaciones disponibles de Microsoft Edge
+  #### <a name="specifies-how-microsoft-edge-update-handles-available-updates-from-microsoft-edge"></a>Especifica cómo Microsoft Edge Update controla las actualizaciones disponibles de Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En macOS desde 89 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita esta directiva, Microsoft Edge Update trata las actualizaciones de Microsoft Edge de acuerdo con la configuración de las siguientes opciones:
 
@@ -21692,19 +21756,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: sí
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de la clave de preferencias: UpdatePolicyOverride
   - Valor de ejemplo:
@@ -21715,19 +21779,19 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### UserAgentClientHintsEnabled
+  ### <a name="useragentclienthintsenabled"></a>UserAgentClientHintsEnabled
 
-  #### Habilitar la característica User-Agent Client Hints (en desuso)
+  #### <a name="enable-the-user-agent-client-hints-feature-deprecated"></a>Habilitar la característica User-Agent Client Hints (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
-  Esta directiva está en desuso porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web cuando se compruebe que es incompatible con característica User-Agent Client Hints. No funciona en la versión 89 de Microsoft Edge.
+  Esta directiva está en desuso porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web cuando se compruebe que es incompatible con característica User-Agent Client Hints. No funcionará en Microsoft Edge versión 93.
 
 Cuando se habilita la característica User-Agent Client Hints se envían encabezados de solicitud granulares que ofrecen información sobre el explorador del usuario (por ejemplo, la versión del explorador) y el entorno (por ejemplo, la arquitectura del sistema).
 
@@ -21735,19 +21799,19 @@ Esta es una característica aditiva, pero los nuevos encabezados pueden romper a
 
 Si habilita o no configura esta directiva, se habilitará la característica User-Agent Client Hints. Si deshabilita esta directiva, esta característica no estará disponible.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: UserAgentClientHintsEnabled
   - Nombre GP: habilitar la característica User-Agent Client Hints (en desuso)
@@ -21755,20 +21819,20 @@ Si habilita o no configura esta directiva, se habilitará la característica Use
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: UserAgentClientHintsEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: UserAgentClientHintsEnabled
   - Valor de ejemplo:
@@ -21779,17 +21843,17 @@ Si habilita o no configura esta directiva, se habilitará la característica Use
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### UserDataDir
+  ### <a name="userdatadir"></a>UserDataDir
 
-  #### Establecer el directorio de datos del usuario
+  #### <a name="set-the-user-data-directory"></a>Establecer el directorio de datos del usuario
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configure el directorio que se usará para almacenar los datos del usuario.
 
@@ -21801,19 +21865,19 @@ Para evitar la pérdida de datos u otros errores, no configure esta directiva en
 
 Vea [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041) para obtener una lista de las variables que se pueden usar.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: Actualización
   - Nombre de GP: establecer el directorio de datos del usuario
@@ -21821,20 +21885,20 @@ Vea [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: UserDataDir
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "${users}/${user_name}/Edge"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: UserDataDir
   - Valor de ejemplo:
@@ -21845,17 +21909,17 @@ Vea [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/f
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### UserDataSnapshotRetentionLimit
+  ### <a name="userdatasnapshotretentionlimit"></a>UserDataSnapshotRetentionLimit
 
-  #### Limita el número de instantáneas de datos de usuario que se conservan para su uso en caso de reversión de emergencia
+  #### <a name="limits-the-number-of-user-data-snapshots-retained-for-use-in-case-of-emergency-rollback"></a>Limita el número de instantáneas de datos de usuario que se conservan para su uso en caso de reversión de emergencia
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 86 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Después de cada actualización de la versión principal, Microsoft Edge creará una instantánea de las partes de los datos de exploración del usuario que se usarán en caso de una emergencia posterior que requiera la reversión temporal de la versión. Si se lleva a cabo una reversión temporal en una versión de la cual el usuario tenga la instantánea correspondiente, se restaurarán los datos de la instantánea. Así, los usuarios pueden conservar configuraciones tales como marcadores y datos del autorrelleno.
 
@@ -21863,19 +21927,19 @@ Si no establece esta directiva, se usará el valor predeterminado de 3 instantá
 
 Si define esta directiva, las instantáneas antiguas se eliminarán según sea necesario para respetar el límite que usted establezca. Si establece esta directiva en 0, no se realizará ninguna instantánea.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Integer
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: UserDataSnapshotRetentionLimit
   - Nombre de GP: Limita el número de instantáneas de datos de usuario que se conservan para su uso en caso de reversión de emergencia
@@ -21883,14 +21947,14 @@ Si define esta directiva, las instantáneas antiguas se eliminarán según sea n
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre de valor: UserDataSnapshotRetentionLimit
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000003
@@ -21900,17 +21964,17 @@ Si define esta directiva, las instantáneas antiguas se eliminarán según sea n
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### UserFeedbackAllowed
+  ### <a name="userfeedbackallowed"></a>UserFeedbackAllowed
 
-  #### Permitir comentarios de los usuarios
+  #### <a name="allow-user-feedback"></a>Permitir comentarios de los usuarios
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Microsoft Edge usa la característica de Comentarios de Edge (habilitada de forma predeterminada) para permitir que los usuarios envíen comentarios, sugerencias o encuestas a los clientes e informen sobre cualquier problema con el explorador. Asimismo, de forma predeterminada, los usuarios no pueden deshabilitar (desactivar) la característica de comentarios de Microsoft Edge.
 
@@ -21918,19 +21982,19 @@ Si habilita esta directiva o no la configura los usuarios podrán invocar la car
 
 Si deshabilita esta directiva, los usuarios no podrán invocar la característica de comentarios de Microsoft Edge
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: UserFeedbackAllowed
   - Nombre de GP: permitir comentarios de los usuarios
@@ -21938,20 +22002,20 @@ Si deshabilita esta directiva, los usuarios no podrán invocar la característic
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: UserFeedbackAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: UserFeedbackAllowed
   - Valor de ejemplo:
@@ -21962,17 +22026,17 @@ Si deshabilita esta directiva, los usuarios no podrán invocar la característic
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### VerticalTabsAllowed
+  ### <a name="verticaltabsallowed"></a>VerticalTabsAllowed
 
-  #### Configura la disponibilidad de un diseño vertical para pestañas en el lateral del explorador
+  #### <a name="configures-availability-of-a-vertical-layout-for-tabs-on-the-side-of-the-browser"></a>Configura la disponibilidad de un diseño vertical para pestañas en el lateral del explorador
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configura si un usuario puede acceder a un diseño alternativo en el que las pestañas se alinean verticalmente en el lateral del explorador, en lugar de en la parte superior.
 Cuando hay varias pestañas abiertas, este diseño proporciona una mejor visualización y administración de las pestañas. Hay una mejor visibilidad de los títulos de los sitios, es más fácil explorar los iconos alineados y hay más espacio para administrar y cerrar las pestañas.
@@ -21982,19 +22046,19 @@ Si deshabilita esta directiva, el diseño de pestañas verticales no estará dis
 Si habilita o no establece esta directiva, el diseño de pestañas seguirá estando en la parte superior, pero un usuario tendrá la opción de activar las pestañas verticales en el lateral.
 
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: VerticalTabsAllowed
   - Nombre de GP: configura la disponibilidad de un diseño vertical para pestañas en el lateral del explorador.
@@ -22002,20 +22066,20 @@ Si habilita o no establece esta directiva, el diseño de pestañas seguirá esta
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: VerticalTabsAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de la clave de preferencias: VerticalTabsAllowed
   - Valor de ejemplo:
@@ -22026,17 +22090,17 @@ Si habilita o no establece esta directiva, el diseño de pestañas seguirá esta
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### VideoCaptureAllowed
+  ### <a name="videocaptureallowed"></a>VideoCaptureAllowed
 
-  #### Permitir o bloquear captura de vídeo
+  #### <a name="allow-or-block-video-capture"></a>Permitir o bloquear captura de vídeo
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Controla si los sitios pueden capturar vídeo.
 
@@ -22046,19 +22110,19 @@ Si deshabilita esta directiva, no se le harán solicitudes al usuario y la captu
 
 Esta directiva afecta todos los tipos de entradas de vídeo, no solo a la cámara integrada.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: VideoCaptureAllowed
   - Nombre de GP: permitir o bloquear captura de vídeo
@@ -22066,20 +22130,20 @@ Esta directiva afecta todos los tipos de entradas de vídeo, no solo a la cámar
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: VideoCaptureAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: VideoCaptureAllowed
   - Valor de ejemplo:
@@ -22090,33 +22154,33 @@ Esta directiva afecta todos los tipos de entradas de vídeo, no solo a la cámar
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### VideoCaptureAllowedUrls
+  ### <a name="videocaptureallowedurls"></a>VideoCaptureAllowedUrls
 
-  #### Sitios que pueden acceder a dispositivos de captura de vídeo sin solicitar permiso
+  #### <a name="sites-that-can-access-video-capture-devices-without-requesting-permission"></a>Sitios que pueden acceder a dispositivos de captura de vídeo sin solicitar permiso
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especificar sitios web basándose en modelos URL que pueden usar dispositivos de captura de vídeo sin pedir permiso al usuario. Los patrones en esta lista se hacen coincidir con el origen de seguridad de la dirección URL que realiza la solicitud. Si coinciden, el sitio recibe acceso automáticamente a los dispositivos de captura de vídeo.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: VideoCaptureAllowedUrls
   - Nombre de GP: sitios que pueden acceder a dispositivos de captura de vídeo sin solicitar permiso
@@ -22124,14 +22188,14 @@ Esta directiva afecta todos los tipos de entradas de vídeo, no solo a la cámar
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\VideoCaptureAllowedUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contoso.com/"
@@ -22139,7 +22203,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: VideoCaptureAllowedUrls
   - Valor de ejemplo:
@@ -22153,17 +22217,17 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WPADQuickCheckEnabled
+  ### <a name="wpadquickcheckenabled"></a>WPADQuickCheckEnabled
 
-  #### Establecer la optimización de WPAD
+  #### <a name="set-wpad-optimization"></a>Establecer la optimización de WPAD
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Le permite deshabilitar la optimización WPAD (detección automática de proxy web) en Microsoft Edge.
 
@@ -22173,19 +22237,19 @@ Si habilita o no configura la directiva, la optimización de WPAD se habilitará
 
 Independientemente de si esta directiva está habilitada, los usuarios no podrán cambiar la configuración de la optimización de WPAD.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WPADQuickCheckEnabled
   - Nombre de GP: establecer optimización WPAD
@@ -22193,20 +22257,20 @@ Independientemente de si esta directiva está habilitada, los usuarios no podrá
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WPADQuickCheckEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: WPADQuickCheckEnabled
   - Valor de ejemplo:
@@ -22217,17 +22281,17 @@ Independientemente de si esta directiva está habilitada, los usuarios no podrá
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebAppInstallForceList
+  ### <a name="webappinstallforcelist"></a>WebAppInstallForceList
 
-  #### Configurar la lista de aplicaciones web instaladas por la fuerza.
+  #### <a name="configure-list-of-force-installed-web-apps"></a>Configurar la lista de aplicaciones web instaladas por la fuerza.
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Configure esta directiva para especificar una lista de aplicaciones web que se instalan de forma silenciosa, sin interacción del usuario, y qué usuarios no pueden desinstalar o desactivar.
 
@@ -22240,19 +22304,19 @@ y 3 miembros opcionales:
 
 - fallback_app_name (a partir de Microsoft Edge 90, permite invalidar el nombre de la aplicación si no es una aplicación web progresiva (PWA) o el nombre de la aplicación que se instala temporalmente si es una PWA, pero la autenticación es necesaria antes de que se pueda completar la instalación).
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Diccionario
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebAppInstallForceList
   - Nombre de GP: configurar la lista de aplicaciones web instaladas a la fuerza.
@@ -22260,14 +22324,14 @@ y 3 miembros opcionales:
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WebAppInstallForceList
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
@@ -22288,14 +22352,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 ]
 ```
 
-  ##### Valor de ejemplo de Compact:
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: WebAppInstallForceList
   - Valor de ejemplo:
@@ -22330,35 +22394,35 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebCaptureEnabled
+  ### <a name="webcaptureenabled"></a>WebCaptureEnabled
 
-  #### Habilitar la característica de captura Web en Microsoft Edge
+  #### <a name="enable-web-capture-feature-in-microsoft-edge"></a>Habilitar la característica de captura Web en Microsoft Edge
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita la característica de captura Web en Microsoft Edge que permite a los usuarios capturar contenido web y realizar anotaciones en la captura con las herramientas de entrada de lápiz.
 Si habilita esta Directiva o no la configura, la opción de captura web aparece en el menú contextual, en la configuración y en el menú más y mediante el método abreviado de teclado, CTRL + MAYÚS + S.
 Si deshabilita esta Directiva, los usuarios no podrán acceder a la característica de captura Web en Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebCaptureEnabled
   - Nombre GP: habilitar la característica de captura Web en Microsoft Edge
@@ -22366,20 +22430,20 @@ Si deshabilita esta Directiva, los usuarios no podrán acceder a la característ
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WebCaptureEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de preferencias: WebCaptureEnabled
   - Valor de ejemplo:
@@ -22390,17 +22454,17 @@ Si deshabilita esta Directiva, los usuarios no podrán acceder a la característ
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebComponentsV0Enabled
+  ### <a name="webcomponentsv0enabled"></a>WebComponentsV0Enabled
 
-  #### Nombre de GP: volver a habilitar la API de componentes web v0 hasta M84.
+  #### <a name="re-enable-web-components-v0-api-until-m84-obsolete"></a>Nombre de GP: volver a habilitar la API de componentes web v0 hasta M84.
 
   
   >OBSOLETA: Esta directiva está obsoleta y no funciona después de Microsoft Edge 84.
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde el 80 hasta el 84
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta Directiva no funciona porque esta directiva permitió que estas características se habiliten de forma selectiva hasta la versión 85 de Microsoft Edge. Las API de los componentes Web v0 (Shadow DOM v0, elementos personalizados v0, e importaciones de HTML) fueron deshabilitas en 2018, y han sido deshabilitas de forma predeterminada empezando por M80.
 
@@ -22408,40 +22472,40 @@ Si configura esta directiva como verdadera, se habilitarán las características
 
 Si establece esta directiva como falsa o no la establece, las características de los componentes Web v0 se deshabilitarán de forma predeterminada, comenzando por M80.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebComponentsV0Enabled
   - Nombre GP: vuelva a habilitar los componentes Web API V0 hasta M84 (obsoleto)
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WebComponentsV0Enabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: WebComponentsV0Enabled
   - Valor de ejemplo:
@@ -22452,17 +22516,17 @@ Si establece esta directiva como falsa o no la establece, las características d
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebDriverOverridesIncompatiblePolicies
+  ### <a name="webdriveroverridesincompatiblepolicies"></a>WebDriverOverridesIncompatiblePolicies
 
-  #### Permitir que WebDriver reemplace las directivas incompatibles (en desuso)
+  #### <a name="allow-webdriver-to-override-incompatible-policies-deprecated"></a>Permitir que WebDriver reemplace las directivas incompatibles (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde el 77 hasta el 84
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta Directiva no funciona porque Webdriver ya es compatible con todas las directivas existentes.
 
@@ -22473,19 +22537,19 @@ En este momento, esta directiva deshabilita las directivas de [SitePerProcess](#
 Si la directiva está habilitada, WebDriver podrá anular las directivas de incompatibilidad.
 Si la directiva está deshabilitada o no está configurada, WebDriver no podrá anular las directivas que no sean compatibles.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebDriverOverridesIncompatiblePolicies
   - Nombre de GP: permitir que WebDriver reemplace las que no sean compatibles (en desuso)
@@ -22493,20 +22557,20 @@ Si la directiva está deshabilitada o no está configurada, WebDriver no podrá 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WebDriverOverridesIncompatiblePolicies
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de clave de la preferencia: WebDriverOverridesIncompatiblePolicies
   - Valor de ejemplo:
@@ -22517,36 +22581,36 @@ Si la directiva está deshabilitada o no está configurada, WebDriver no podrá 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebRtcAllowLegacyTLSProtocols
+  ### <a name="webrtcallowlegacytlsprotocols"></a>WebRtcAllowLegacyTLSProtocols
 
-  #### Permitir degradación de TLS/DTLS heredado en WebRTC (obsoleto)
+  #### <a name="allow-legacy-tlsdtls-downgrade-in-webrtc-deprecated"></a>Permitir degradación de TLS/DTLS heredado en WebRTC (obsoleto)
 
   >EN DESUSO: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y macOS desde la versión88.
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Si habilita esta directiva, las conexiones del mismo nivel de WebRTC pueden degradarse a versiones obsoletas de los protocolos TLS/DTLS (DTLS 1.0, TLS 1.0 y TLS 1.1).
 Si deshabilita o no establece esta directiva, estas versiones de TLS/DTLS se deshabilitan.
 
 Esta directiva es temporal y se quitará en una versión futura de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebRtcAllowLegacyTLSProtocols
   - Nombre de GP: permitir degradación de TLS/DTLS heredado en WebRTC (obsoleto)
@@ -22554,20 +22618,20 @@ Esta directiva es temporal y se quitará en una versión futura de Microsoft Edg
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WebRtcAllowLegacyTLSProtocols
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000000
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre de la clave de preferencias: WebRtcAllowLegacyTLSProtocols
   - Valor de ejemplo:
@@ -22578,17 +22642,17 @@ Esta directiva es temporal y se quitará en una versión futura de Microsoft Edg
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebRtcLocalIpsAllowedUrls
+  ### <a name="webrtclocalipsallowedurls"></a>WebRtcLocalIpsAllowedUrls
 
-  #### Administrar la exposición de la dirección IP local por WebRTC
+  #### <a name="manage-exposure-of-local-ip-addressess-by-webrtc"></a>Administrar la exposición de la dirección IP local por WebRTC
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 80 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Especifica una lista de orígenes (direcciones URL) o patrones de nombre de host (como "*contoso.com*") para que la dirección IP local pueda ser mostrada por WebRTC.
 
@@ -22600,19 +22664,19 @@ Si deshabilita o no configura esta directiva, y edge://flags/#enable-webrtc-hide
 
 Tenga en cuenta que esta directiva reduce la protección de las direcciones IP locales que los administradores podrían necesitar.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebRtcLocalIpsAllowedUrls
   - Nombre de GP: administrar la exposición de la dirección IP local por WebRTC
@@ -22620,14 +22684,14 @@ Tenga en cuenta que esta directiva reduce la protección de las direcciones IP l
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Edge\WebRtcLocalIpsAllowedUrls
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.contoso.com"
@@ -22635,7 +22699,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: WebRtcLocalIpsAllowedUrls
   - Valor de ejemplo:
@@ -22649,17 +22713,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebRtcLocalhostIpHandling
+  ### <a name="webrtclocalhostiphandling"></a>WebRtcLocalhostIpHandling
 
-  #### Restringir la exposición de la dirección IP local por WebRTC
+  #### <a name="restrict-exposure-of-local-ip-address-by-webrtc"></a>Restringir la exposición de la dirección IP local por WebRTC
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Le permite establecer si WebRTC mostrará o no la dirección IP local del usuario.
 
@@ -22681,19 +22745,19 @@ Asignación de opciones de directiva:
 
 Use la información anterior al configurar esta directiva.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebRtcLocalhostIpHandling
   - Nombre de GP: restringir la exposición de la dirección IP local de la WebRTC
@@ -22701,20 +22765,20 @@ Use la información anterior al configurar esta directiva.
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WebRtcLocalhostIpHandling
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "default"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: WebRtcLocalhostIpHandling
   - Valor de ejemplo:
@@ -22725,17 +22789,17 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebRtcUdpPortRange
+  ### <a name="webrtcudpportrange"></a>WebRtcUdpPortRange
 
-  #### Restringir el rango de puertos UDP locales usados por WebRTC
+  #### <a name="restrict-the-range-of-local-udp-ports-used-by-webrtc"></a>Restringir el rango de puertos UDP locales usados por WebRTC
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows y MacOS desde 77 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Restringe el intervalo de puertos UDP usado por WebRTC a un intervalo de puertos específico (incluyendo los puntos de conexión).
 
@@ -22743,19 +22807,19 @@ Debe especificar el intervalo de puertos UDP locales que WebRTC puede usar al co
 
 Si no configura esta directiva, o si la establece con una cadena vacía o un intervalo de puertos no válido, WebRTC podrá usar cualquier puerto UDP local disponible.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Cadena
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebRtcUdpPortRange
   - Nombre de GP: restringir el rango de puertos locales UDP usados por WebRTC
@@ -22763,20 +22827,20 @@ Si no configura esta directiva, o si la establece con una cadena vacía o un int
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WebRtcUdpPortRange
   - Tipo de valor: REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 "10000-11999"
 ```
 
-  #### Información y configuración de Mac
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de preferencia: WebRtcUdpPortRange
   - Valor de ejemplo:
@@ -22787,17 +22851,17 @@ Si no configura esta directiva, o si la establece con una cadena vacía o un int
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebWidgetAllowed
+  ### <a name="webwidgetallowed"></a>WebWidgetAllowed
 
-  #### Habilitar el widget web
+  #### <a name="enable-the-web-widget"></a>Habilitar el widget web
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows, desde la versión 88 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita el widget web. Cuando se habilita, los usuarios pueden usar el widget para buscar la web desde su escritorio o desde una aplicación. El widget ofrece un cuadro de búsqueda en el que se muestran las web sugeridas y abre todas las búsquedas web en Microsoft Edge. El cuadro de búsqueda ofrece búsquedas (con tecnología de Bing) y sugerencias de direcciones URL. El widget también incluye iconos de fuentes en los que los usuarios pueden clicar y ver más información sobre msn.com en una nueva ventana o pestaña del explorador Microsoft Edge. Los iconos de las fuentes pueden incluir anuncios. El widget se puede iniciar desde la configuración de Microsoft Edge o desde el menú "Más herramientas" de Microsoft Edge.
 
@@ -22814,19 +22878,19 @@ La opción de iniciar el widget desde Configuración de Microsoft Edge estará d
 La opción para que le widget se inicie en el momento del arranque de Windows (inicio automático) estará deshabilitada.
 La opción de iniciar el widget desde el menú "Más herramientas" de Microsoft Edge estará deshabilitada.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebWidgetAllowed
   - Nombre de GP: habilitar el widget web
@@ -22834,14 +22898,14 @@ La opción de iniciar el widget desde el menú "Más herramientas" de Microsoft 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WebWidgetAllowed
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -22851,17 +22915,17 @@ La opción de iniciar el widget desde el menú "Más herramientas" de Microsoft 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WebWidgetIsEnabledOnStartup
+  ### <a name="webwidgetisenabledonstartup"></a>WebWidgetIsEnabledOnStartup
 
-  #### Permitir el widget web al arrancar Windows
+  #### <a name="allow-the-web-widget-at-windows-startup"></a>Permitir el widget web al arrancar Windows
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows, desde la versión 88 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Permite que el widget web empiece a iniciarse al arrancar Windows.
 
@@ -22874,19 +22938,19 @@ La opción para iniciar el widget al arrancar Windows se deshabilitará y se des
 Si no configura esta directiva: el widget web no se iniciará al arrancar Windows en ninguno de los perfiles.
 La opción para iniciar el widget al arrancar Windows estará desactivado en la configuración de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WebWidgetIsEnabledOnStartup
   - Nombre de GP: permitir el widget web al arrancar Windows
@@ -22894,14 +22958,14 @@ La opción para iniciar el widget al arrancar Windows estará desactivado en la 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WebWidgetIsEnabledOnStartup
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -22911,17 +22975,17 @@ La opción para iniciar el widget al arrancar Windows estará desactivado en la 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WinHttpProxyResolverEnabled
+  ### <a name="winhttpproxyresolverenabled"></a>WinHttpProxyResolverEnabled
 
-  #### Usar la resolución del proxy de Windows (en desuso)
+  #### <a name="use-windows-proxy-resolver-deprecated"></a>Usar la resolución del proxy de Windows (en desuso)
 
   >En desuso: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 84 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva está en desuso, ya que se reemplazará por una característica similar en una versión futura; puede consultar https://crbug.com/1032820.
 
@@ -22933,19 +22997,19 @@ Si habilita esta Directiva, se usará la resolución del proxy de Windows.
 
 Si deshabilita o no configura esta Directiva, se usará la resolución de proxy de Microsoft Edge.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: no es necesario reiniciar el explorador
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WinHttpProxyResolverEnabled
   - Nombre GP: usar la resolución del proxy de Windows (en desuso)
@@ -22953,14 +23017,14 @@ Si deshabilita o no configura esta Directiva, se usará la resolución de proxy 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: WinHttpProxyResolverEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -22970,17 +23034,17 @@ Si deshabilita o no configura esta Directiva, se usará la resolución de proxy 
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ### WindowOcclusionEnabled
+  ### <a name="windowocclusionenabled"></a>WindowOcclusionEnabled
 
-  #### Habilitar oclusión de ventana
+  #### <a name="enable-window-occlusion"></a>Habilitar oclusión de ventana
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 89 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Habilita la oclusión de ventana en Microsoft Edge.
 
@@ -22990,19 +23054,19 @@ Si deshabilita esta configuración, Microsoft Edge no detectará cuando una vent
 
 Si no se establece esta directiva, se habilitará la detección de ventanas ocultas.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Booleano
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: WindowOcclusionEnabled
   - Nombre de GP: Habilitar oclusión de ventana
@@ -23010,14 +23074,14 @@ Si no se establece esta directiva, se habilitará la detección de ventanas ocul
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): N/D
   - Nombre del valor: WindowOcclusionEnabled
   - Tipo de valor: REG_DWORD
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 0x00000001
@@ -23028,7 +23092,7 @@ Si no se establece esta directiva, se habilitará la detección de ventanas ocul
   [Volver al principio](#microsoft-edge---policies)
 
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

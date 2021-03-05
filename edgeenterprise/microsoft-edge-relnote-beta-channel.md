@@ -3,23 +3,26 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: e2a2933e7edf3456bcb33e70d6db7a36ab72aa07
-ms.sourcegitcommit: 6603dc23d8e7ff46df76bc6aa48b93a0b435fe7d
+ms.openlocfilehash: e5096d437f8b70ed94add8341db1cdb1d4b69b84
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11385631"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393633"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
 Estas notas de versión proporcionan información sobre las nuevas características y las actualizaciones no relacionadas con la seguridad que se incluyen en el canal beta de Microsoft Edge. Las versiones archivadas de estas notas de la versión están [aquí](microsoft-edge-relnote-archive-beta-channel.md).
+
+> [!NOTE]
+> Hemos actualizado la [versión 89.0.774.18: 3 de febrero](#version-89077418-february-3) del canal Microsoft Edge Beta para reflejar las características que han llegado.
 
 ## <a name="version-89077445-march-3"></a>Versión 89.0.774.45: 3 de marzo
 
@@ -58,18 +61,9 @@ Se han corregido varios errores y problemas de rendimiento.
 
 - **Mejoras en la experiencia de selección de texto en documentos PDF**. Los usuarios obtendrán una experiencia de selección de texto coherente y más fluida en todos los documentos PDF abiertos en Microsoft Edge a partir de la versión 89.
 
-- **La advertencia "Deshabilitar extensiones del modo de desarrollador" puede descartarse permanentemente**. Comenzando por la versión 89 de Microsoft Edge, puede desactivar la advertencia "Deshabilitar extensiones de modo de desarrollador" seleccionando la opción "No volver a mostrar esto".
+- **El campo Fecha de nacimiento ahora es compatible con la función Autorrellenar.** Actualmente, Microsoft Edge le ayuda a ahorrar tiempo y esfuerzo al rellenar formularios y crear cuentas en línea rellenando automáticamente los datos como direcciones, nombres, números de teléfono, etc. Empezando por la versión 89 de Microsoft Edge, agregamos compatibilidad con otro campo que puede guardar y rellenar automáticamente: la fecha de nacimiento. Puede ver, editar y eliminar esta información en cualquier momento en la configuración de su perfil.
 
-- **Administrar las extensiones desde la barra de herramientas**. El nuevo menú de extensiones de la barra de herramientas le permite ocultar y anclar extensiones fácilmente. Los vínculos rápidos para administrar extensiones y buscar nuevas le permitirán encontrar fácilmente nuevas extensiones y administrar las existentes.
-
-- **Compatibilidad con la búsqueda en lenguaje natural en la barra de direcciones, la página de búsqueda de historial y el centro del historial**. Comenzando por la versión 89 de Microsoft Edge, la búsqueda de un artículo o sitio web le será más fácil con la búsqueda en lenguaje natural en la barra de direcciones, la página de historial y el centro del historial. Los usuarios pueden buscar contenido, descripción e intervalos de tiempo de páginas visualizadas previamente (por ejemplo, "receta de pastel de la semana pasada") además de coincidencias de palabras clave del título o la URL.
-
-- **Productividad:**
-
-  - El campo Fecha de nacimiento ahora es compatible con la función Autorrellenar. Actualmente, Microsoft Edge le ayuda a ahorrar tiempo y esfuerzo al rellenar formularios y crear cuentas en línea rellenando automáticamente los datos como direcciones, nombres, números de teléfono, etc. Empezando por la versión 89 de Microsoft Edge, agregamos compatibilidad con otro campo que puede guardar y rellenar automáticamente: la fecha de nacimiento. Puede ver, editar y eliminar esta información en cualquier momento en la configuración de su perfil.
-  - Extender las sugerencias de Autorrellenar para incluir contenido del Portapapeles. El contenido del Portapapeles se analiza cuando selecciona un campo de perfil o dirección (por ejemplo, teléfono, correo electrónico, código postal, ciudad, estado, etc.) para mostrarlo como sugerencias de autorrelleno.
-
-- **Compatibilidad con el bloqueo de reproducción automática de vídeo**. Comenzando por la versión 89 de Microsoft Edge, los usuarios tendrán la opción de impedir que el contenido multimedia se reproduzca automáticamente.
+- **Compatibilidad con la búsqueda en lenguaje natural en la barra de direcciones, la página de búsqueda de historial y el centro del historial**. Comenzando por la versión 89 de Microsoft Edge, la búsqueda de un artículo o sitio web le será más fácil con la búsqueda en lenguaje natural en la barra de direcciones, la página de historial y el centro del historial. Los usuarios pueden buscar contenido, descripción e intervalos de tiempo de páginas visualizadas previamente (por ejemplo, "receta de pastel de la semana pasada") además de coincidencias de palabras clave del título o la URL. Esta característica se limita a un grupo de usuarios seleccionados al azar que han permitido la experimentación. Estos usuarios proporcionan comentarios al equipo de características.
 
 ### <a name="policy-updates"></a>Actualizaciones de directiva
 
