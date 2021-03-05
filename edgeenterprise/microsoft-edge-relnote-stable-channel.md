@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/01/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 3eab05fcb88bcde38de8eb02b50796fcdda12866
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+ms.openlocfilehash: 24fc6e567073f98cdadcfc3fa61c20c1ad5f1ab5
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385008"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393708"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -27,16 +27,66 @@ Estas notas de versión proporcionan información sobre las nuevas característi
  Para entender los canales de Microsoft Edge, vea la [Información general sobre los canales de Microsoft Edge](microsoft-edge-channels.md).
 
 > [!NOTE]
-> Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para obtener más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+> Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 
+<!-- begin major 89 -->
+## <a name="version-89077445-march-4"></a>Versión 89.0.774.45: 4 de marzo
 
+> [!IMPORTANT]
+> Esta actualización contiene [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#march-4-2021).
+
+### <a name="resolved-issues"></a>Problemas resueltos
+
+- **Correcciones y actualizaciones de los métodos abreviados del menú Inicio y la barra de tareas:**
+  - Al hacer clic con el botón derecho en el acceso directo de Microsoft Edge en el menú Inicio, se mostrará correctamente la opción de desanclar Microsoft Edge de la barra de tareas cuando esté anclado.
+  - Los diseños de inicio que incluyen una [configuración de barra de tareas](https://docs.microsoft.com/windows/configuration/configure-windows-10-taskbar) para anclar Microsoft Edge a la barra de tareas ya no crearán un segundo acceso directo de Microsoft Edge anclado a la barra de tareas.
+  - Las organizaciones que usen perfiles de itinerancia de Windows ya no verán un icono en blanco en lugar del icono de Microsoft Edge en la barra de tareas cuando sus usuarios inicien sesión en Windows.
+
+### <a name="feature-updates"></a>Actualizaciones de características
+
+- **El modo de pantalla completa habilita funcionalidades de bloqueo adicionales**. Empezando por la versión 89 de Microsoft Edge, hemos agregado funcionalidades de bloqueo adicionales en el modo de pantalla completa para que los clientes puedan hacer el trabajo con una experiencia más productiva y segura. [Más información](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
+
+- **La herramienta Enterprise Mode Site List Manager estará disponible en el explorador a través de la página *edge://compat***. Puede usar esta herramienta para crear, editar y exportar el XML de lista de sitios para el modo de Internet Explorer en Microsoft Edge. Puede habilitar el acceso a esta herramienta según sea necesario con la directiva de grupo. [Más información](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
+
+- **Mejorar el rendimiento del explorador con pestañas en suspensión**. Las pestañas en suspensión mejoran el rendimiento del explorador al poner pestañas inactivas en reposo para liberar recursos del sistema, como la memoria y la CPU, de modo que las pestañas activas u otras aplicaciones puedan usarlos. Los usuarios pueden impedir que los sitios entren en suspensión y configurar el período de tiempo antes de que la pestaña inactiva se suspenda. Para mantener a los usuarios en su flujo, también se utiliza la [heurística](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434) para evitar que determinados sitios pasen al modo suspensión, como los sitios de intranet. Esta característica se puede administrar con directivas de grupo.
+
+- **Restablecer manualmente los datos de sincronización de Microsoft Edge en la nube**. Estamos incorporando un método para restablecer los datos de sincronización de Microsoft Edge desde el producto. Esto garantiza que los datos se eliminen de los servicios Microsoft, así como también resuelve ciertos problemas del producto que anteriormente requerían un vale de soporte técnico.
+
+- **Mejoras en la experiencia de selección de texto en documentos PDF**. Los usuarios obtendrán una experiencia de selección de texto coherente y más fluida en todos los documentos PDF abiertos en Microsoft Edge a partir de la versión 89.
+
+- **El campo Fecha de nacimiento ahora es compatible con la función Autorrellenar.** Actualmente, Microsoft Edge le ayuda a ahorrar tiempo y esfuerzo al rellenar formularios y crear cuentas en línea rellenando automáticamente los datos como direcciones, nombres, números de teléfono, etc. Empezando por la versión 89 de Microsoft Edge, agregamos compatibilidad con otro campo que puede guardar y rellenar automáticamente: la fecha de nacimiento. Puede ver, editar y eliminar esta información en cualquier momento en la configuración de su perfil.
+
+### <a name="policy-updates"></a>Actualizaciones de directiva
+
+#### <a name="new-policies"></a>Nuevas directivas
+
+Se han agregado siete directivas nuevas. Descargue las plantillas administrativas actualizadas desde la [Página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se han agregado las siguientes directivas nuevas.
+
+- [BrowsingDataLifetime](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#browsingdatalifetime): configuración de la duración de los datos de exploración
+- [MAMEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mamenabled): administración de aplicaciones móviles habilitada
+- [DefinePreferredLanguages](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#definepreferredlanguages): define una lista ordenada de idiomas preferidos que los sitios web deben mostrar si el sitio admite el idioma
+- [ShowRecommendationsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showrecommendationsenabled): permite las recomendaciones y notificaciones promocionales de Microsoft Edge
+- [PrintingAllowedBackgroundsModesModes](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingallowedbackgroundgraphicsmodes): restringe el modo de impresión de gráficos de fondo
+- [PrintingBackgroundGraphicsDefault](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingbackgroundgraphicsdefault): modo de impresión de gráficos de fondo predeterminados
+- [SmartActionsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartactionsblocklist): bloquea acciones inteligentes de una lista de servicios
+
+#### <a name="obsoleted-policies"></a>Directivas obsoletas
+
+Las siguientes directivas están obsoletas.
+
+- [ForceLegacyDefaultReferrerPolicy](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcelegacydefaultreferrerpolicy): usa una directiva de referencia predeterminada de no-referrer-when-downgrade
+- [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled): habilita el uso y los informes de datos relacionados con bloqueos
+- [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices): envía información de sitios para mejorar los servicios Microsoft
+<!-- end major 89 -->
 ## <a name="version-88070581-february-25"></a>Versión 88.0.705.81: 25 de febrero
 
 Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-88070574-february-17"></a>Versión 88.0.705.74: 17 de febrero
 
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021).
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021).
 
 ## <a name="version-88070568-february-11"></a>Versión 88.0.705.68: 11 de febrero
 
@@ -44,11 +94,14 @@ Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-88070563-february-5"></a>Versión 88.0.705.63: 5 de febrero
 
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021). Esta actualización contiene [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad.
+> [!IMPORTANT]
+> Esta actualización contiene [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad.
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021).
 
 ## <a name="version-88070562-february-4"></a>Versión 88.0.705.62: 4 de febrero
 
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021).
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021).
 
 Se han corregido varios errores y problemas de rendimiento.
 
@@ -62,7 +115,7 @@ Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-88070550-january-21"></a>Versión 88.0.705.50: 21 de enero
 
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-21-2021).
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-21-2021).
 
 <!--- begin major 88  --->
 ### <a name="feature-updates"></a>Actualizaciones de características
@@ -161,7 +214,7 @@ Se han agregado dieciocho directivas nuevas. Descargue las Plantillas administra
 <!--- end major 88  --->
 ## <a name="version-87066475-january-7"></a>Versión 87.0.664.75: 7 de enero
 
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-7-2021).
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-7-2021).
 
 ## <a name="version-87066466-december-17"></a>Versión 87.0.664.66: 17 de diciembre
 
@@ -173,7 +226,7 @@ Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-87066457-december-7"></a>Versión 87.0.664.57: 7 de diciembre
 
-Se han corregido varios errores y problemas de rendimiento. Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020).
+Se han corregido varios errores y problemas de rendimiento. Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020).
 
 ## <a name="version-87066455-december-3"></a>Versión 87.0.664.55: 3 de diciembre
 
@@ -192,7 +245,7 @@ Se han corregido varios errores y problemas de rendimiento.
 <!-- begin major 87 --->
 ## <a name="version-87066441-november-19"></a>Versión 87.0.664.41: 19 de noviembre
 
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-19-2020).
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-19-2020).
 
 ### <a name="feature-updates"></a>Actualizaciones de características
 
@@ -246,15 +299,21 @@ Se han agregado diez directivas nuevas. Descargue las plantillas administrativas
 
 ## <a name="version-86062269-november-13"></a>Versión 86.0.622.69: 13 de noviembre
 
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-13-2020). Esta actualización contiene [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) y [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), que han sido reportados por el equipo de Chromium como si fueran una vulnerabilidad de seguridad.
+> [!IMPORTANT]
+> Esta actualización contiene [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) y [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), que han sido reportados por el equipo de Chromium como una vulnerabilidad de seguridad.
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-13-2020).
 
 ## <a name="version-86062268-november-11"></a>Versión 86.0.622.68: 11 de noviembre
 
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-11-2020)
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-11-2020).
 
 ## <a name="version-86062263-november-4"></a>Versión 86.0.622.63: 4 de noviembre
 
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020). Esta actualización contiene [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad.
+> [!IMPORTANT]
+> Esta actualización contiene [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad.
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020).
 
 ## <a name="version-86062261-november-2"></a>Versión 86.0.622.61: 2 de noviembre
 
@@ -270,7 +329,7 @@ Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-86062251-october-22"></a>Versión 86.0.622.51: 22 de octubre
 
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-22-2020)
+Las actualizaciones de seguridad del canal estable se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-22-2020).
 
 ## <a name="version-86062248-october-20"></a>Versión 86.0.622.48: 20 de octubre
 
@@ -280,106 +339,7 @@ Se han corregido varios errores y problemas de rendimiento.
 
 Se han corregido varios errores y problemas de rendimiento.
 
-<!-- begin major 86 -->
-## <a name="version-86062238-october-9"></a>Versión 86.0.622.38: 9 de octubre
-
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-9-2020)
-
-### <a name="feature-updates"></a>Actualizaciones de características
-
-* **Volver a la versión anterior de Microsoft Edge.** La característica de restauración permite a los administradores volver a una versión en buen estado y conocida de Microsoft Edge si hay algún problema en la versión más reciente de Microsoft Edge. **Nota:** versión estable 86.0.622.38 es la primera versión a la que se puede revertir, lo que significa que la versión estable 87 es la primera versión preparada para la reversión. [Más información](edge-learnmore-rollback.md).
-
-* **Ejecutar la habilitación de Sincronización de forma predeterminada en toda la empresa.**  Los administradores pueden habilitar la sincronización para cuentas de Azure Active Directory (Azure AD) de forma predeterminada con la directiva [ForceSync](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcesync).
-
-* **Cambio de perfil automático en Windows 7 y 8.1.** El cambio de perfil automático que se encuentra disponible actualmente en Microsoft Edge en Windows 10 ha sido extendido a otros Windows de nivel inferior (Windows 7 y 8.1). Para obtener más información, consulte la publicación en el blog [cambio de perfil automático](https://blogs.windows.com/msedgedev/2020/04/30/automatic-profile-switching/).
-
-* **Cookies con SameSite=Lax de manera predeterminada**. Para mejorar la seguridad y la privacidad Web, las cookies usarán ahora [SameSite=Lax](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite) de manera predeterminada. Esto significa que las cookies se enviarán solo como cookies de origen y se omitirán para las solicitudes que se envíen a terceros. Este cambio puede provocar un impacto en la compatibilidad en aquellos sitios web que necesitan cookies para recursos de terceros para funcionar correctamente. Para permitir el envío de cookies, los desarrolladores web pueden marcar cookies que deberían establecerse y recibirse en contextos de terceros agregando atributos `SameSite=none` y `Secure` explícitos al establecer la cookie. Las empresas que quieran excluir determinados sitios de este cambio pueden usar la directiva [LegacySameSiteCookieBehaviorEnabledForDomainList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabledfordomainlist) y las que quieran que ningún sitio sufra el cambio, pueden valerse de la directiva [LegacySameSiteCookieBehaviorEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled).
-
-* **Quitar la API de caché de aplicaciones HTML5.**  A partir de la versión 86 de Microsoft Edge, la API de caché de aplicaciones heredada que permite el uso sin conexión de páginas web se quita de Microsoft Edge. Los desarrolladores web deben revisar la documentación [WebDev](https://web.dev/appcache-removal/) para obtener información sobre cómo reemplazar la API de caché de aplicaciones con trabajos de servicio.  Importante: Puede solicitar un [token de AppCache OriginTrial](https://developers.chrome.com/origintrials/#/view_trial/1776670052997660673) que permite a los sitios seguir usando la API de caché de aplicaciones obsoleta hasta la versión 90 de Microsoft Edge.
-
-* **Privacidad y seguridad:**
-
-  * Reemplazar las directivas [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) y [SendSiteInformationToImproveServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) para las versiones anteriores de Windows y macOS. Estas directivas están en desuso en la versión 86 de Microsoft Edge y quedarán obsoletas en Microsoft Edge versión 89.<br>
-Estas directivas se reemplazarán por [Permitir telemetría](https://go.microsoft.com/fwlink/?linkid=2099569) en Windows 10 y la nueva directiva [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) para las demás plataformas. Esto permitirá que los usuarios administren los datos de diagnóstico que se envían a Microsoft para Windows 7, 8, 8.1 y macOS.
-  * Soporte de DNS seguro (DNS a través de HTTPS).  A partir de la versión 86 de Microsoft Edge, está disponible la configuración para controlar el DNS seguro en los dispositivos no administrados. Estas opciones de configuración no son accesibles para los usuarios de dispositivos administrados, pero los administradores de TI pueden habilitar o deshabilitar el DNS seguro con la directiva de grupo [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode).
-
-* **modo de Internet Explorer:** permitir que los usuarios usen la interfaz de usuario (UI) de Microsoft Edge para probar los sitios en el modo de Internet Explorer. A partir de la versión 86 de Microsoft Edge, los administradores pueden habilitar la opción de interfaz de usuario para cargar una pestaña en el modo de Internet Explorer con propósitos de prueba o como medida provisional, hasta que los sitios se agreguen al XML de la lista de sitios.
-
-* **Actualizaciones para PDF:**
-
-  * Tabla de contenido para documentos PDF. A partir de la versión 86, Microsoft Edge ha agregado soporte con la tabla de contenidos, que permite a los usuarios desplazarse de manera sencilla por los documentos PDF.
-  * Acceso a todas las funciones PDF en pantallas pequeñas. Obtenga acceso a todas las funciones del lector de PDF para Microsoft Edge en los dispositivos con tamaños de pantalla reducidos.
-  * Compatibilidad con el lápiz para resaltar en archivos PDF. Con esta actualización, los usuarios pueden usar el lápiz digital para resaltar texto directamente en archivos PDF, de la misma forma que lo harían con un subrayador o resaltador y una hoja en físico.
-  * Se ha mejorado el desplazamiento de PDF. Ahora podrá experimentar un desplazamiento sin interrupciones mientras navega por documentos largos en PDF.
-
-* **Los usuarios verán sugerencias de autocompletar al empezar a escribir una consulta de búsqueda en el sitio web de complementos de Microsoft Edge.** Autocompletar ayudará a los usuarios a realizar de manera rápida sus búsquedas sin tener que escribir el nombre completo del elemento que estén buscando. Esto puede ser útil, ya que los usuarios no tendrán que recordar la escritura correcta y podrán elegir entre las opciones disponibles que se muestran.
-
-* **Agregar una imagen personalizada a la página de nueva pestaña (NTP) con una directiva de grupo.** A partir de la versión 86 de Microsoft Edge, la NTP tiene la opción de reemplazar la imagen predeterminada por una imagen personalizada proporcionada por el usuario. La directiva de grupo admite también la capacidad para administrar las propiedades de esta imagen.
-
-* **Hacer coincidir los métodos abreviados de teclado personalizados con el VS Code.** Ahora las DevTools de Microsoft Edge permiten personalizar los métodos abreviados de teclado en las DevTools para que coincidan con su editor/IDE. (En Microsoft Edge 84, agregamos la capacidad de hacer coincidir los métodos abreviados del teclado de las DevTools con el VS Code).
-
-* **Elimine las descargas en el disco con el administrador de descargas.** Ahora los usuarios pueden eliminar los archivos descargados en su disco sin salir del explorador. La nueva funcionalidad Eliminar descargas se encuentra en el menú emergente del estante de descargas o de la página de descargas.
-
-### <a name="policy-updates"></a>Actualizaciones de directiva
-
-#### <a name="new-policies"></a>Nuevas directivas
-
-Ha sido agregado veinticuatro directivas nuevas. Descargue las plantillas administrativas actualizadas desde la [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Se han agregado las siguientes directivas nuevas.
-
-- [CollectionsServicesAndExportsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#collectionsservicesandexportsblocklist): Bloquear el acceso a una lista especificada de servicios y destinos de exportación en Colecciones.
-- [DefaultFileSystemReadGuardSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultfilesystemreadguardsetting) controle el uso de la API del sistema de archivos para su lectura.
-- [DefaultFileSystemWriteGuardSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultfilesystemwriteguardsetting) controle el uso de la API del sistema de archivos para su escritura.
-- [DefaultSensorsSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultsensorssetting): Configuración predeterminada de sensores.
-- [DefaultSerialGuardSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultserialguardsetting): Controlar el uso de la API de serie.
-- [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata): enviar datos de diagnóstico necesarios y opcionales sobre el uso del explorador.
-- [EnterpriseModeSiteListManagerAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enterprisemodesitelistmanagerallowed): Permitir el acceso a la herramienta Enterprise Mode Site List Manager
-- [FileSystemReadAskForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemreadaskforurls): permitir el acceso de lectura a través de la API del sistema de archivos en estos sitios.
-- [FileSystemReadBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemreadblockedforurls) -bloquear el acceso de lectura a través de la API del sistema de archivos en estos sitios.
-- [FileSystemWriteAskForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemwriteaskforurls) : permitir el acceso de escritura a los archivos y directorios en estos sitios.
-- [FileSystemWriteBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#filesystemwriteblockedforurls) : bloquear el acceso de escritura a los archivos y directorios en estos sitios.
-- [ForceSync](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcesync): Forzar la sincronización de los datos del explorador y no mostrar la solicitud de consentimiento de sincronización.
-- [InsecureFormsWarningsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#insecureformswarningsenabled) : Habilitar advertencias para formularios no seguros.
-- [InternetExplorerIntegrationTestingAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed): Permitir probar el modo de Internet Explorer.
-- [SpotlightExperiencesAndRecommendationsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#spotlightexperiencesandrecommendationsenabled): Decidir si los usuarios pueden recibir imágenes de fondo y texto personalizados, sugerencias, notificaciones y recomendaciones para los servicios de Microsoft.
-- [NewTabPageAllowedBackgroundTypes](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpageallowedbackgroundtypes): Configurar los tipos de fondo permitidos para el diseño de página de nueva pestaña.
-- [SaveCookiesOnExit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savecookiesonexit): Guardar cookies cuando se cierra Microsoft Edge.
-- [SensorsAllowedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sensorsallowedforurls): Permitir el acceso a sensores en sitios específicos.
-- [SensorsBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sensorsblockedforurls): Bloquear el acceso a sensores en sitios específicos.
-- [SerialAskForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#serialaskforurls): Permitir la API de serie en sitios específicos.
-- [SerialBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#serialblockedforurls): Bloquear la API de serie en sitios específicos.
-- [UserAgentClientHintsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled): Habilitar la característica User-Agent Client Hints (en desuso).
-- [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#userdatasnapshotretentionlimit): Limitar el número de instantáneas de datos de usuario que se conservan para su uso en caso de reversión de emergencia.
-
-#### <a name="deprecated-policies"></a>Directivas obsoletas
-
-- [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled): habilitar el uso y los informes de datos relacionados con bloqueos.
-- [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices): enviar información de sitios para mejorar los servicios Microsoft.
-
-#### <a name="obsoleted-policy"></a>Directiva obsoleta
-
-[TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled): habilitar una característica de seguridad TLS 1.3 para anclajes de veracidad locales.
-
-## <a name="version-85056470-october-6"></a>Versión 85.0.564.70: 6 de octubre
-
-Se han corregido varios errores y problemas de rendimiento.
-
-## <a name="version-85056468-october-1"></a>Versión 85.0.564.68: 1 de octubre
-
-Se han corregido varios errores y problemas de rendimiento.
-
-## <a name="version-85056463-september-23"></a>Versión 85.0.564.63: 23 de septiembre
-
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-23-2020)
-
-## <a name="version-85056451-september-9"></a>Versión 85.0.564.51: 9 de septiembre
-
-Las actualizaciones de seguridad se muestran [aquí](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-9-2020)
-
-## <a name="version-85056444-august-31"></a>Versión 85.0.564.44: 31 de agosto
-
-Se han corregido varios errores y problemas de rendimiento.
-
-<!-- 85.0.564.41: August 27 -->
+<!-- Archive from 86.0.622.38-october-9 to beta 86.0.62.215-september-14  ->
 <!-- Archived to version 84.0.522.40: July 16 -->
 
 ## <a name="see-also"></a>Consulte también

@@ -3,7 +3,7 @@ title: Documentación de directiva de WebView2 de Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/17/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,24 +11,23 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 2e3258a0427a7fb280023ddc1518f12869f9c791
-ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
+ms.openlocfilehash: b362ac7b7addde044155428f61b7fb35d68f3e80
+ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "11340590"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11388735"
 ---
-# Microsoft Edge WebView2: directivas
+# <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2: directivas
 
 La versión más reciente de Microsoft Edge WebView2 incluye las siguientes directivas. Puede usar estas directivas para configurar cómo se ejecuta Microsoft Edge WebView2 en su organización.
 
 Para obtener información sobre un conjunto adicional de directivas usadas para controlar cómo y cuándo se actualiza Microsoft Edge WebView2, vea la [referencia de directiva de actualización de Microsoft Edge](microsoft-edge-update-policies.md).
 
-
 > [!NOTE]
 > Este artículo es aplicable para Microsoft Edge, versión 87 o posterior.
 
-## Directivas disponibles
+## <a name="available-policies"></a>Directivas disponibles
 
 En estas tablas se muestran todas las directivas de grupo disponibles en esta versión de Microsoft Edge WebView2. Usa los vínculos de la tabla para obtener más detalles sobre directivas específicas.
 
@@ -36,7 +35,7 @@ En estas tablas se muestran todas las directivas de grupo disponibles en esta ve
 |-|-|
 |[Configuración de invalidación de Loader](#loader-override-settings)|
 
-### [*Configuración de invalidación de Loader*](#loader-override-settings-policies)
+### [*<a name="loader-override-settings"></a>Configuración de invalidación de Loader*](#loader-override-settings-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -46,39 +45,39 @@ En estas tablas se muestran todas las directivas de grupo disponibles en esta ve
 
 
 
-  ## Directivas de configuración de invalidación de Loader
+  ## <a name="loader-override-settings-policies"></a>Directivas de configuración de invalidación de Loader
 
   [Volver al principio](#microsoft-edge-webview2---policies)
 
-  ### BrowserExecutableFolder
+  ### <a name="browserexecutablefolder"></a>BrowserExecutableFolder
 
-  #### Configure la ubicación de la carpeta ejecutable del explorador
+  #### <a name="configure-the-location-of-the-browser-executable-folder"></a>Configure la ubicación de la carpeta ejecutable del explorador
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   Esta directiva configura las aplicaciones de WebView2 para usar el tiempo de ejecución de WebView2 en la ruta de acceso especificada. La carpeta debe contener los siguientes archivos: msedgewebview2. exe, msedge. dll, etc.
 
 Para establecer el valor de la ruta de acceso de la carpeta, especifique un par de valor y nombre de valor. Configure el nombre de valor en el ID. del modelo de usuario de la aplicación o en el nombre del archivo ejecutable. Puede usar el carácter comodín "*" como nombre de valor para aplicar a todas las aplicaciones.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: BrowserExecutableFolder
   - Nombre GP: configure la ubicación de la carpeta ejecutable del explorador.
@@ -86,14 +85,14 @@ Para establecer el valor de la ruta de acceso de la carpeta, especifique un par 
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo ADMX de GP: MSEdgeWebView2. ADMX
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta (obligatoria): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: lista de REG_SZ
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
@@ -104,17 +103,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 
   [Volver al principio](#microsoft-edge-webview2---policies)
 
-  ### ReleaseChannelPreference
+  ### <a name="releasechannelpreference"></a>ReleaseChannelPreference
 
-  #### Establezca las preferencias de pedido de búsqueda de canal de publicación
+  #### <a name="set-the-release-channel-search-order-preference"></a>Establezca las preferencias de pedido de búsqueda de canal de publicación
 
   
   
-  #### Versiones compatibles:
+  #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 87 o posterior
 
-  #### Descripción
+  #### <a name="description"></a>Descripción
 
   El orden de búsqueda por canal predeterminado es WebView2 Runtime, Beta, Dev y Canarias.
 
@@ -122,19 +121,19 @@ Para invertir el orden de búsqueda predeterminado, establezca esta directiva en
 
 Para establecer el valor de las preferencias de canal de liberación, especifique un nombre de valor y un par de valores. Configure el nombre de valor en el ID. del modelo de usuario de la aplicación o en el nombre del archivo ejecutable. Puede usar el carácter comodín "*" como nombre de valor para aplicar a todas las aplicaciones.
 
-  #### Características admitidas:
+  #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
   - Puede ser recomendable: no
   - Actualización de directiva dinámica: sí
 
-  #### Tipo de datos:
+  #### <a name="data-type"></a>Tipo de datos:
 
   - Lista de cadenas
 
-  #### Información y configuración de Windows
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
 
-  ##### Información de directiva de grupo (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: ReleaseChannelPreference
   - Nombre GP: establecer el canal de lanzamiento de preferencias de pedido de búsqueda
@@ -142,14 +141,14 @@ Para establecer el valor de las preferencias de canal de liberación, especifiqu
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo ADMX de GP: MSEdgeWebView2. ADMX
 
-  ##### Configuración del Registro de Windows
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta (obligatoria): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - Ruta de acceso (recomendado): N/D
   - Nombre del valor: lista de REG_SZ
   - Tipo de valor: lista de REG_SZ
 
-  ##### Valor de ejemplo:
+  ##### <a name="example-value"></a>Valor de ejemplo:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
@@ -161,7 +160,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, V
   [Volver al principio](#microsoft-edge-webview2---policies)
 
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
