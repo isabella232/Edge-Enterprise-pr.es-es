@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Preguntas más frecuentes (p + f) sobre Edge en la empresa
+  title: Preguntas más frecuentes (P+F) sobre Microsoft Edge en la empresa
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
@@ -10,38 +10,38 @@ metadata:
   ms.prod: microsoft-edge
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
-  description: Preguntas más frecuentes (p + f) sobre la implementación de Microsoft Edge en la empresa
-  ms.openlocfilehash: 59a47c7a37629e94ff50d6319fb96e8bf45f7f63
-  ms.sourcegitcommit: d1ecab8d3d9f7a369c2690c0e6eaa9b12520ae46
+  description: Preguntas más frecuentes sobre la implementación de Microsoft Edge en la empresa
+  ms.openlocfilehash: d7098666c67d1b88fc6f7e0910c8793315e750cc
+  ms.sourcegitcommit: 0bd67aa982613f663e6840929a769fc88d5a6b4d
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 12/18/2020
-  ms.locfileid: "11236817"
-title: Preguntas más frecuentes (p + f) sobre Microsoft Edge en la empresa
+  ms.lasthandoff: 03/05/2021
+  ms.locfileid: "11393783"
+title: Preguntas más frecuentes sobre Microsoft Edge en la empresa
 summary: >
   > [!NOTE]
 
   > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 sections:
-- name: Omiso
+- name: Omitido
   questions:
   - question: ¿Cómo puedo saber qué versión de MicrosoftEdge tengo?
     answer: >
-      En la esquina superior derecha de Microsoft Edge, seleccione el icono de puntos suspensivos (**...**) y, a continuación, seleccione **configuración**. Selecciona **Acerca de Microsoft Edge** para ver la versión de Microsoft Edge.
+      En la esquina superior derecha de Microsoft Edge, seleccione el icono de puntos suspensivos (**...**) y, a continuación, **seleccione Configuración**. Selecciona **Acerca de Microsoft Edge** para ver la versión de Microsoft Edge.
   - question: ¿Seguirá recibiendo actualizaciones InternetExplorer11?
     answer: >
-      Nos comprometemos a conservar Internet Explorer como un explorador con soporte, confiable y seguro. Internet Explorer sigue siendo un componente de Windows y sigue el ciclo de vida del soporte técnico del sistema operativo en el que está instalado. Para obtener más información, consulta [Preguntas frecuentes del ciclo de vida: Internet Explorer](https://support.microsoft.com/help/17454/). Si bien continuamos ofreciendo soporte y actualizando Internet Explorer, las últimas funciones y actualizaciones de la plataforma solo estarán disponibles en Microsoft Edge.
+      Nos comprometemos a conservar Internet Explorer como un explorador con soporte, confiable y seguro. Internet Explorer sigue siendo un componente de Windows y sigue el ciclo de vida de soporte técnico del sistema operativo en el que está instalado. Para obtener más información, consulta [Preguntas frecuentes del ciclo de vida: Internet Explorer](https://support.microsoft.com/help/17454/). Si bien continuamos ofreciendo soporte y actualizando Internet Explorer, las últimas funciones y actualizaciones de la plataforma solo estarán disponibles en Microsoft Edge.
   - question: ¿Puedo ejecutar la versión actual de Microsoft Edge (versión heredada) en paralelo al probar la nueva versión?
     answer: >
-      Sí, no hay ningún problema. A partir del 15 de enero de 2020, la nueva versión de Microsoft Edge (basadas en Chromium) se distribuirá a los dispositivos de las ediciones Home y Pro que ejecuten Windows 10, versión 1803 o posterior. Los dispositivos unidos a un dominio están excluidos de esta actualización. Para más información, consulta [Introducción a las actualizaciones de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview). Puede tener una instalación en paralelo de Microsoft Edge heredada mientras evalúa la siguiente versión de Microsoft Edge. Para obtener más información, consulta [Cómo obtener acceso a la versión anterior de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-sysupdate-access-old-edge). Además, cada uno de los nuevos canales de Microsoft Edge también admite instalaciones en paralelo. Para más información, consulta [Introducción a los canales de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
+      Sí, no hay ningún problema. A partir del 15 de enero de 2020, la nueva versión de Microsoft Edge (basadas en Chromium) se distribuirá a los dispositivos de las ediciones Home y Pro que ejecuten Windows 10, versión 1803 o posterior. Los dispositivos unidos a un dominio están excluidos de esta actualización. Para más información, consulta [Introducción a las actualizaciones de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview). Puede tener una instalación en paralelo de Microsoft Edge Legacy mientras evalúa la siguiente versión de Microsoft Edge. Para obtener más información, consulta [Cómo obtener acceso a la versión anterior de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-sysupdate-access-old-edge). Además, cada uno de los nuevos canales de Microsoft Edge también admite instalaciones en paralelo. Para más información, consulta [Introducción a los canales de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
   - question: ¿MicrosoftEdge (basado en Chromium) admite los controles ActiveX y BHO como Silverlight o Java?
     answer: >
-      No. Microsoft Edge no admite controles ActiveX ni objetos de ayuda de explorador (BHO) como Silverlight o Java. Sin embargo, si está ejecutando aplicaciones web que usen controles ActiveX, BHO o modos de documentos heredados en Internet Explorer 11, puede configurarlos para que se ejecuten en modo IE en el nuevo Microsoft Edge. Para obtener más información, consulte [Configurar el modo IE en Microsoft Edge](https://docs.microsoft.com/DeployEdge/edge-ie-mode).
-  - question: ¿Se trasladarán los favoritos de la versión actual de Microsoft Edge o ¿tendré que volver a agregarlos?
-    answer: "Actualmente, Microsoft Edge admite importar desde instalaciones existentes de Microsoft Edge, Chrome, Internet Explorer y Firefox (en Win10). Las siguientes opciones de configuración son compatibles para importar: marcadores, historial, contraseñas y Autorrellenar (pagos, direcciones y formularios genéricos). Puedes elegir importar desde la experiencia de primera ejecución o desde la configuración del explorador.  \n"
+      No. Microsoft Edge no admite controles ActiveX o objetos de ayuda del explorador (BHO) como Silverlight o Java. Sin embargo, si está ejecutando aplicaciones web que usen controles ActiveX, BHO o modos de documentos heredados en Internet Explorer 11, puede configurarlos para que se ejecuten en modo IE en el nuevo Microsoft Edge. Para obtener más información, consulte [Configurar el modo IE en Microsoft Edge](https://docs.microsoft.com/DeployEdge/edge-ie-mode).
+  - question: ¿Se pasarán los favoritos desde la versión actual de Microsoft Edge o tengo que volver a agregarlos?
+    answer: "Actualmente, Microsoft Edge admite importar desde instalaciones existentes de Microsoft Edge, Chrome, Internet Explorer y Firefox (en Win10). Se admiten las siguientes opciones de configuración para importar: Marcadores, Historial, Contraseñas y Autorrelleno (pagos, direcciones y formularios genéricos). Puedes elegir importar desde la experiencia de primera ejecución o desde la configuración del explorador.  \n"
   - question: ¿Cuál es la diferencia entre los canales/compilaciones estable, Beta, Dev y Canary?
     answer: >
-      El canal estable de la próxima versión de Microsoft Edge es el canal más estable que ofrecemos, con las funciones orientadas a empresas preparadas para [ejecutar proyectos piloto y evaluar](https://aka.ms/EdgeEnterprise) en toda la organización. El canal beta te permite validar la próxima versión estable con un conjunto representativo de usuarios. Los canales estable y beta se actualizan aproximadamente cada seis semanas. Los canales de desarrollo y de la Canarias siguen actualizándose semanal y todos los días, respectivamente. Los instaladores sin conexión (archivos MSI y PKG) solo están disponibles para los canales Stable, beta y dev. Para más información, consulta [Introducción a los canales de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
+      El canal estable de la próxima versión de Microsoft Edge es el canal más estable que ofrecemos, con las funciones orientadas a empresas preparadas para [ejecutar proyectos piloto y evaluar](https://aka.ms/EdgeEnterprise) en toda la organización. El canal beta te permite validar la próxima versión estable con un conjunto representativo de usuarios. Los canales Estable y Beta se actualizan aproximadamente cada seis semanas. Los canales Dev y Canary siguen actualizando semanalmente y diariamente, respectivamente. Los instaladores sin conexión (MSIs y archivos PKG) solo están disponibles para los canales Stable, Beta y Dev. Para más información, consulta [Introducción a los canales de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
   - question: ¿Qué tipo de compatibilidad con extensiones tengo con la nueva versión de Microsoft Edge?
     answer: >
       Microsoft Edge admite extensiones de [Complementos de Microsoft Edge Insider](https://go.microsoft.com/fwlink/?linkid=2081222) y [Chrome Web Store](https://go.microsoft.com/fwlink/?linkid=2072338).
@@ -54,8 +54,10 @@ sections:
 
 
       Las actualizaciones manuales se pueden realizar con una herramienta de administración de configuración, como [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+  - question: ¿Se admiten las preferencias maestras?
+    answer: "No, no se admiten las preferencias maestras. \n"
 additionalContent: >-
-  ## Consulte también
+  ## <a name="see-also"></a>Consulte también
 
   - [Página de aterrizaje de documentación de Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
 
