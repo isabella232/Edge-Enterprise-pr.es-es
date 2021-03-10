@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 24fc6e567073f98cdadcfc3fa61c20c1ad5f1ab5
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: 96525327c75231974e2e2976c1b811dee3a6b03e
+ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393708"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "11400173"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -28,6 +28,10 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!NOTE]
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077448-march-8"></a>Versión 89.0.774.48: 8 de marzo
+
+Se han corregido varios errores y problemas de rendimiento.
 
 <!-- begin major 89 -->
 ## <a name="version-89077445-march-4"></a>Versión 89.0.774.45: 4 de marzo
@@ -53,6 +57,8 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](https://d
 - **Mejorar el rendimiento del explorador con pestañas en suspensión**. Las pestañas en suspensión mejoran el rendimiento del explorador al poner pestañas inactivas en reposo para liberar recursos del sistema, como la memoria y la CPU, de modo que las pestañas activas u otras aplicaciones puedan usarlos. Los usuarios pueden impedir que los sitios entren en suspensión y configurar el período de tiempo antes de que la pestaña inactiva se suspenda. Para mantener a los usuarios en su flujo, también se utiliza la [heurística](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434) para evitar que determinados sitios pasen al modo suspensión, como los sitios de intranet. Esta característica se puede administrar con directivas de grupo.
 
 - **Restablecer manualmente los datos de sincronización de Microsoft Edge en la nube**. Estamos incorporando un método para restablecer los datos de sincronización de Microsoft Edge desde el producto. Esto garantiza que los datos se eliminen de los servicios Microsoft, así como también resuelve ciertos problemas del producto que anteriormente requerían un vale de soporte técnico.
+
+- **Habilitación inteligente del inicio de sesión único (SSO) para todas las cuentas Windows Azure Active Directory (Azure AD) para usuarios con un único perfil de Microsoft Edge que no sea de Azure AD**.  Activa automáticamente esta configuración para los usuarios que podrían beneficiarse más de esta característica. Si un usuario solo tiene un perfil de Microsoft Edge (y no es de Azure AD o el Modo Niños), la configuración se activa automáticamente cuando se inicie Microsoft Edge. Esta alternancia automática también se desactivará automáticamente si más adelante un usuario decide iniciar sesión en un perfil de Microsoft Edge diferente con una cuenta de Azure AD. Los usuarios pueden actualizar manualmente sus preferencias para esta característica en **Configuración > Perfiles >Preferencias de perfil > Permitir el inicio de sesión único para sitios profesionales o educativos con este perfil**.
 
 - **Mejoras en la experiencia de selección de texto en documentos PDF**. Los usuarios obtendrán una experiencia de selección de texto coherente y más fluida en todos los documentos PDF abiertos en Microsoft Edge a partir de la versión 89.
 
