@@ -3,26 +3,30 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/08/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: 53e9963881d59cacb49e772ccec7a29adf69365a
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: 24fbf10b0b32ef4e64c74fdeaa4831bf01df7a87
+ms.sourcegitcommit: 6d37cd6dc8618742f4729fc901fc66829dab462e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400174"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406251"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
 Estas notas de versión proporcionan información sobre las nuevas características y las actualizaciones no relacionadas con la seguridad que se incluyen en el canal beta de Microsoft Edge. Las versiones archivadas de estas notas de la versión están [aquí](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> Hemos actualizado la [versión 89.0.774.18: 3 de febrero](#version-89077418-february-3) del canal Microsoft Edge Beta para reflejar las características que han llegado.
+> Hemos actualizado la [versión 89.0.774.18: 3 de febrero](#version-89077418-february-3) de Microsoft Edge Beta para reflejar las características que han llegado.
+
+## <a name="version-89077450-march-10"></a>Versión 89.0.774.50: 10 de marzo
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-89077448-march-8"></a>Versión 89.0.774.48: 8 de marzo
 
@@ -47,6 +51,7 @@ Se han corregido varios errores y problemas de rendimiento.
 ## <a name="version-89077423-february-8"></a>Versión 89.0.774.23: 8 de febrero
 
 Se han corregido varios errores y problemas de rendimiento.
+
 <!-- begin major 89 -->
 ## <a name="version-89077418-february-3"></a>Versión 89.0.774.18: 3 de febrero
 

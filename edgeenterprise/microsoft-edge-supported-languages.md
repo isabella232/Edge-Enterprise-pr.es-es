@@ -3,23 +3,23 @@ title: Compatibilidad con idiomas de Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 03/01/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Compatibilidad con idiomas de Microsoft Edge
-ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+description: Compatibilidad con el idioma para mostrar de Microsoft Edge para Windows y macOS.
+ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
+ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11384998"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406165"
 ---
 # <a name="microsoft-edge-language-support"></a>Compatibilidad con idiomas de Microsoft Edge
 
-En este artículo se muestra cómo puedes usar la configuración de Microsoft Edge para agregar un idioma compatible al explorador. Microsoft Edge admite 96 idiomas en Windows y 91 idiomas en macOS.
+En este artículo se muestra cómo puede usar la configuración de Microsoft Edge para agregar un idioma compatible al explorador. Microsoft Edge admite 84 idiomas para mostrar en Windows y 81 idiomas para mostrar en macOS.
 
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 78 o posterior.
@@ -56,11 +56,11 @@ Dependiendo del idioma, aparecerán una o varias de las siguientes acciones:
 Además de usar un idioma extranjero en el navegador, puedes usar la extensión [Traductor para Microsoft Edge](https://www.microsoft.com/p/translator-for-microsoft-edge/9nblggh4n4n3) para traducir páginas web y selecciones de texto a idiomas extranjeros, para más de 60 idiomas.
 
 > [!NOTE]
-> Si la extensión de traductor no funciona después de la instalación, reinicia Microsoft Edge. Si la extensión sigue sin funcionar, facilita comentarios a través de Centro de opiniones.
+> Si la extensión de traductor no funciona después de la instalación, reinicia Microsoft Edge. Si la extensión sigue sin funcionar, envíenos comentarios a través del Centro de opiniones.
 
-## <a name="supported-languages"></a>Idiomas admitidos
+## <a name="supported-display-languages"></a>Idiomas para mostrar compatibles
 
-En la tabla siguiente se enumeran los idiomas que admite Microsoft Edge.
+En la tabla siguiente se enumeran los idiomas para mostrar compatibles con Microsoft Edge.
 
 > [!NOTE]
 > Los idiomas que no admite Microsoft Edge en macOS se indican con un asterisco (*) después del país o la región.  

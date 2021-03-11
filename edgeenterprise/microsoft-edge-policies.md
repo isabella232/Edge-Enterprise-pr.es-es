@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 130ed008a190edb92649beb658084c157ebade50
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388728"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406381"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
@@ -29,29 +29,36 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
-## <a name="new-policies"></a>Nuevas directivas
+## <a name="new-and-deprecated-policies"></a>Directivas nuevas y en desuso
 
-En la siguiente tabla, se muestran las nuevas directivas para esta actualización.
+En la tabla siguiente se enumeran las directivas nuevas y en desuso para esta actualización.
 
-| Nombre | Título |
+|Nombre|Título|
 |--|--|
-|[PrintRasterizationMode](#printrasterizationmode)|Modo de rasterización de impresión|
+|[SSLVersionMin](#sslversionmin)|Versión mínima de TLS habilitada (en desuso)|
 
 ## <a name="available-policies"></a>Directivas disponibles
 
 Estas tablas enumeran todas las directivas de grupo relacionadas con el explorador disponibles en esta versión de Microsoft Edge. Usa los vínculos de la tabla para obtener más detalles sobre directivas específicas.
 
-|||
-|-|-|
-|[Configuración de Protección de aplicaciones](#application-guard-settings)|[Transmitir](#cast)|
-|[Configuración del Contenido](#content-settings)|[Proveedor de búsquedas predeterminado](#default-search-provider)|
-|[Extensions](#extensions)|[Autenticación HTTP](#http-authentication)|
-|[Configuración de pantalla completa](#kiosk-mode-settings)|[Capacidad de administración](#manageability)|
-|[Mensajería nativa](#native-messaging)|[Administrador de contraseñas y protección](#password-manager-and-protection)|
-|[Rendimiento](#performance)|[Impresión](#printing)|
-|[Servidor proxy](#proxy-server)|[Configuración de pestañas en estado de reposo](#sleeping-tabs-settings)|
-|[Configuración de SmartScreen](#smartscreen-settings)|[Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)|
-|[Adicional](#additional)|
+- [Configuración de Protección de aplicaciones](#application-guard-settings)
+- [Transmitir](#cast)
+- [Configuración del Contenido](#content-settings)
+- [Proveedor de búsquedas predeterminado](#default-search-provider)
+- [Extensions](#extensions)
+- [Autenticación HTTP](#http-authentication)
+- [Configuración de pantalla completa](#kiosk-mode-settings)
+- [Capacidad de administración](#manageability)
+- [Mensajería nativa](#native-messaging)
+- [Administrador de contraseñas y protección](#password-manager-and-protection)
+- [Rendimiento](#performance)
+- [Impresión](#printing)
+- [Servidor proxy](#proxy-server)
+- [Configuración de pestañas en estado de reposo](#sleeping-tabs-settings)
+- [Configuración de SmartScreen](#smartscreen-settings)
+- [Inicio, página principal y página de pestaña nueva](#startup-home-page-and-new-tab-page)
+- [Adicional](#additional)
+
 
 ### [*<a name="application-guard-settings"></a>Configuración de Protección de aplicaciones*](#application-guard-settings-policies)
 
@@ -395,7 +402,7 @@ y sugerencias para los servicios Microsoft|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Ampliar la configuración de contenido de Adobe Flash a todo el contenido (obsoleto)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Permitir que los usuarios continúen desde la página de advertencia HTTPS|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Permitir que los usuarios continúen desde la página de advertencia HTTPS para determinados orígenes|
-|[SSLVersionMin](#sslversionmin)|Versión de TLS mínima activada|
+|[SSLVersionMin](#sslversionmin)|Versión mínima de TLS habilitada (en desuso)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Guardar cookies cuando se cierra Microsoft Edge|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Deshabilitar la opción pada guardar el historial del explorador|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Permitir o denegar captura de pantalla|
@@ -1895,7 +1902,7 @@ Dejar la directiva sin establecer significa que [DefaultFileSystemReadGuardSetti
 
 Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Ninguna de las directivas tiene prioridad si una dirección URL coincide con ambas.
 
-Para información detallada sobre los patrones de dirección URL válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -1964,7 +1971,7 @@ Si no define esta directiva, [DefaultFileSystemReadGuardSetting](#defaultfilesys
 
 Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemReadAskForUrls](#filesystemreadaskforurls). Ninguna de las directivas tiene prioridad si una dirección URL coincide con ambas.
 
-Para información detallada sobre los patrones de dirección URL válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2033,7 +2040,7 @@ Si no define esta directiva, [DefaultFileSystemWriteGuardSetting](#defaultfilesy
 
 Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Ninguna de las directivas tiene prioridad si una dirección URL coincide con ambas.
 
-Para información detallada sobre los patrones de dirección URL válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2102,7 +2109,7 @@ Si no define esta directiva, [DefaultFileSystemWriteGuardSetting](#defaultfilesy
 
 Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Ninguna de las directivas tiene prioridad si una dirección URL coincide con ambas.
 
-Para información detallada sobre los patrones de dirección URL válidos, consulte https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2169,6 +2176,8 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 Si no configura esta directiva, se utiliza el valor predeterminado global para todos los sitios, ya sea de la directiva [DefaultImagesSetting](#defaultimagessetting) (si está establecida) o de la configuración personal del usuario.
 
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
+
   #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
@@ -2233,6 +2242,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
   Define una lista de sitios, basada en los patrones de dirección URL que pueden mostrar imagenes.
 
 Si no se configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultImagesSetting](#defaultimagessetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
+
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2299,6 +2310,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 Si no configura esta directiva, el contenido mixto bloqueable será bloqueado y opcionalmente el contenido mixto bloqueable será actualizado. Sin embargo, se permitirá a los usuarios establecer excepciones para permitir contenido mixto inseguro para determinados sitios.
 
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
+
   #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
@@ -2363,6 +2376,8 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
   Crea una lista de patrones de URL para especificar los sitios a los que no se les permite mostrar contenido mixto (es decir, contenido HTTP en sitios HTTPS) bloqueable (es decir, activo) y para los que se deshabilitarán opcionalmente las actualizaciones de contenido mixto bloqueable.
 
 Si no configura esta directiva, el contenido mixto bloqueable será bloqueado y opcionalmente el contenido mixto bloqueable será actualizado. Sin embargo, se permitirá a los usuarios establecer excepciones para permitir contenido mixto inseguro para determinados sitios.
+
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -9129,9 +9144,9 @@ Si habilita o no configura esta directiva, los usuarios podrán jugar al juego d
 
   #### <a name="description"></a>Descripción
 
-  Esta directiva está en desuso porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web cuando se ha comprobado que es incompatible con el cambio para no permitir solicitudes de XHR sincrónicas durante el descarte de la página. No funciona en la versión 88 de Microsoft Edge.
+  Esta directiva está en desuso porque solo pretende ser un mecanismo a corto plazo para dar a las empresas más tiempo para actualizar su contenido web cuando se ha comprobado que es incompatible con el cambio para no permitir solicitudes de XHR sincrónicas durante el descarte de la página. No funcionará en Microsoft Edge versión 93.
 
-Esta directiva le permite especificar que una página puede enviar solicitudes de XHR sincrónico durante el descarte de la página.
+Esta directiva le permite especificar que una página puede enviar solicitudes de XHR sincrónicas durante el descarte de la página.
 
 Si habilita esta directiva, las páginas podrán enviar solicitudes de XHR sincronizadas durante el descarte de la página.
 
@@ -11052,7 +11067,7 @@ Si habilita esta directiva, se usará el cliente DNS integrado si está disponib
 
 Si deshabilita esta directiva, solo se usará el cliente DNS integrado cuando DNS a través de HTTPS esté en uso.
 
-Si no configura esta directiva, el cliente DNS integrado estará habilitado de forma predeterminada.
+Si no configura esta directiva, el cliente DNS integrado está habilitado de forma predeterminada en macOS y Android (cuando no están habilitados DNS privado ni VPN).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -11112,7 +11127,7 @@ Si no configura esta directiva, el cliente DNS integrado estará habilitado de f
 
   Esta directiva es obsoleta porque tiene por objeto servir únicamente como mecanismo a corto plazo para que las empresas dispongan de más tiempo para actualizar sus entornos e informar de los problemas si se comprueba que son incompatibles con el verificador de certificados incorporado.
 
-No funcionará en la versión 87 de Microsoft Edge cuando se planee la eliminación del soporte técnico para el comprobador de certificados heredado en Mac OS X.
+No funcionará en Microsoft Edge versión 92, cuando se planea quitar la compatibilidad con el comprobador de certificados heredado en Mac OS X.
 
 
   #### <a name="supported-features"></a>Características admitidas:
@@ -19284,9 +19299,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### <a name="minimum-tls-version-enabled"></a>Versión de TLS mínima activada
+  #### <a name="minimum-tls-version-enabled-deprecated"></a>Versión mínima de TLS habilitada (en desuso)
 
-  
+  >EN DESUSO: esta directiva está en desuso. Actualmente se admite pero quedará obsoleto en una versión futura.
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
@@ -19294,7 +19309,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>Descripción
 
-  Establece la versión mínima admitida de TLS. Si no configura esta directiva, Microsoft Edge mostrará un error para TLS 1.0 y TLS 1.1, pero el usuario podrá omitirlo.
+  La compatibilidad para suprimir la advertencia de TLS 1.0/1.1 se quitará de Microsoft Edge a partir de la versión 91 (en torno a mayo de 2021) y esta directiva dejará de funcionar.
+
+Establece la versión mínima admitida de TLS. Si no configura esta directiva, Microsoft Edge mostrará un error para TLS 1.0 y TLS 1.1, pero el usuario podrá omitirlo.
 
 Si habilita esta Directiva, Microsoft Edge no usará ninguna versión de SSL/TLS inferior a la versión especificada. Los valores no reconocidos serán ignorados.
 
@@ -19323,8 +19340,8 @@ Use la información anterior al configurar esta directiva.
   ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: SSLVersionMin
-  - Nombre de GP: versión mínima de TLS activada
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
+  - Nombre de GP: versión mínima de TLS habilitada (en desuso)
+  - Ruta de acceso de GP (obligatoria): plantillas administrativas/Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
