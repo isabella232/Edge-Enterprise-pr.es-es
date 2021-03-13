@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/10/2021
+ms.date: 03/12/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
-ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
+ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
+ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "11406381"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408652"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
@@ -26,16 +26,9 @@ Para obtener información sobre un conjunto adicional de directivas utilizadas p
 
 Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com/download/details.aspx?id=55319) para la configuración básica de seguridad recomendada para Microsoft Edge. Para más información, vea el [Blog de líneas base de seguridad de Microsoft](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
+
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
-
-## <a name="new-and-deprecated-policies"></a>Directivas nuevas y en desuso
-
-En la tabla siguiente se enumeran las directivas nuevas y en desuso para esta actualización.
-
-|Nombre|Título|
-|--|--|
-|[SSLVersionMin](#sslversionmin)|Versión mínima de TLS habilitada (en desuso)|
 
 ## <a name="available-policies"></a>Directivas disponibles
 
