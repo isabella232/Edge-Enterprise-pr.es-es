@@ -3,32 +3,33 @@ title: Preguntas más frecuentes sobre el modo IE
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/02/2021
+ms.date: 03/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Preguntas más frecuentes y solución de problemas de Microsoft Edge con el modo IE
-ms.openlocfilehash: aeae79dfd1745c754fb5ab690338f87fd25c080b
-ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
+ms.openlocfilehash: 565af265811e0e4814d82859f638ae9abcd0a014
+ms.sourcegitcommit: ef30fe37d0d115af0d4402c9005f5d0d1ba54b6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "11312596"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "11431817"
 ---
-# Preguntas más frecuentes sobre el modo IE
+# <a name="ie-mode-faq"></a>Preguntas más frecuentes sobre el modo IE
 
 Este artículo proporciona sugerencias para la solución de problemas y otras preguntas más frecuentes sobre Microsoft Edge, versión 77 o posterior.
 
 > [!NOTE]
 > Este artículo se aplica a los canales de Microsoft Edge **Estable**, **Beta** y **Dev**, versión 77 o posterior.
 
-## Solucionar el modo IE
+
+## <a name="troubleshoot-ie-mode"></a>Solucionar el modo IE
 
 Usa la información de esta sección para diagnosticar y corregir problemas del modo IE.
 
-### Información de diagnóstico del modo Internet Explorer
+### <a name="internet-explorer-mode-diagnostic-information"></a>Información de diagnóstico del modo Internet Explorer
 
 Puede obtener información de diagnóstico del modo Internet Explorer en la pestaña Compatibilidad de Microsoft Edge. Para abrir esta pestaña y ver la página de diagnósticos del modo de Internet Explorer, vaya a *edge://compat/iediagnostic*. Es probable que se muestren mensajes de diagnóstico en esta página. En esta página también incluye información de configuración para las siguientes categorías:
 
@@ -38,7 +39,7 @@ Puede obtener información de diagnóstico del modo Internet Explorer en la pest
 - **Línea de comandos**. Muestra la cadena de línea de comandos y los modificadores que se usan para iniciar Microsoft Edge.
 - **Configuración de directiva de grupo**. Muestra si el modo IE se configura con directivas de grupo y las directivas que se aplican.
 
-### Mensaje de error: "Para abrir esta página en modo Internet Explorer, vuelve a instalar Microsoft Edge con privilegios de administrador".
+### <a name="error-message-to-open-this-page-in-internet-explorer-mode-reinstall-microsoft-edge-with-administrator-privileges"></a>Mensaje de error: "Para abrir esta página en modo Internet Explorer, vuelve a instalar Microsoft Edge con privilegios de administrador".
 
 Es posible que vea este error si no tiene todas las actualizaciones de Windows necesarias. Consulte los requisitos previos listados en [acerca del modo de IE](https://docs.microsoft.com/deployedge/edge-ie-mode) para las versiones requeridas de Windows y Microsoft Edge.
 
@@ -55,39 +56,39 @@ Soluciones posibles:
 
 Para comprobar que Microsoft Edge está instalado en el nivel del sistema, escriba "edge://version" en la barra de direcciones de Microsoft Edge. La ruta de acceso del archivo ejecutable mostrará una ruta de acceso que comenzará por *C:\Archivos de programa*, lo que indica una instalación del sistema. Si la ruta del archivo ejecutable comienza por "C:\Usuarios", desinstale y vuelva a instalar Microsoft Edge con privilegios de administrador.
 
-### Mensaje de error: "Para abrir esta página en modo IE, prueba a reiniciar Microsoft Edge".
+### <a name="error-message-to-open-this-page-in-ie-mode-try-restarting-microsoft-edge"></a>Mensaje de error: "Para abrir esta página en modo IE, prueba a reiniciar Microsoft Edge".
 
 Es posible que vea este error si se ha producido un error inesperado en Internet Explorer. Por lo general, el reinicio de Microsoft Edge soluciona este error.
 
-### Mensaje de error: "Desactive la depuración remota para abrir este sitio en modo IE, o si no, probablemente no funcionará según lo esperado".
+### <a name="error-message-turn-off-remote-debugging-to-open-this-site-in-ie-mode-otherwise-it-might-not-work-as-expected"></a>Mensaje de error: "Desactive la depuración remota para abrir este sitio en modo IE, o si no, probablemente no funcionará según lo esperado".
 
 Es probable que vea este error si realiza la depuración de forma remota y navega a una página web configurada para ejecutarse en modo IE. Puede continuar, pero la página se mostrará con Microsoft Edge.
 
-### Mensaje de error: "Error: no se pudo recuperar la lista de sitios de EMIE".
+### <a name="error-message-error-could-not-retrieve-emie-site-list"></a>Mensaje de error: "Error: no se pudo recuperar la lista de sitios de EMIE".
 
 Es posible que veas este error en la página *edge://compat/enterprise* indicando que no se pudo descargar la lista de sitios. A partir de la versión 87 de Microsoft Edge, cuando las cookies se bloquean para solicitudes de terceros usando la directiva [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) la autenticación HTTP también está prohibida. Puedes permitir cookies para el dominio específico que hospeda la Lista de sitios del modo de empresa usando la directiva [CookiesAllowedForURls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) para asegurarte de que las descargas de listas de sitios son correctas.
 
-## Preguntas más frecuentes
+## <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
-### ¿Reemplazará el modo IE a Internet Explorer 11?
+### <a name="will-ie-mode-replace-internet-explorer-11"></a>¿Reemplazará el modo IE a Internet Explorer 11?
 
 Nos comprometemos a conservar Internet Explorer como un explorador con soporte, confiable y seguro. Internet Explorer sigue siendo un componente de Windows y sigue el ciclo de vida de soporte técnico del SO en el que está instalado. Para obtener más detalles, consulta [Preguntas frecuentes del ciclo de vida: Internet Explorer](https://support.microsoft.com/help/17454/). Si bien Microsoft continúa ofreciendo soporte y actualizando Internet Explorer, las últimas funciones y actualizaciones de la plataforma solo estarán disponibles en Microsoft Edge.
 
-### ¿Puedo usar "Abrir con el Explorador" o "Ver en el Explorador de archivos" en SharePoint con el modo IE?
+### <a name="can-i-use-open-with-explorer-or-view-in-file-explorer-in-sharepoint-with-ie-mode"></a>¿Puedo usar "Abrir con el Explorador" o "Ver en el Explorador de archivos" en SharePoint con el modo IE?
 
 Sí, si esto funciona en Internet Explorer 11 independiente, funcionará en el modo IE. Sin embargo, en lugar de usar la opción Abrir con el explorador, el enfoque recomendado para administrar archivos y carpetas por fuera de SharePoint es [sincronizar los archivos de SharePoint](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88) o [mover o copiar archivos en SharePoint](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc).
 
-### ¿Es compatible el modo IE en Microsoft Edge con la opción *no combinar* que era compatible con Internet Explorer 11?
+### <a name="does-ie-mode-on-microsoft-edge-support-the-nomerge-option-that-was-supported-in-internet-explorer-11"></a>¿Es compatible el modo IE en Microsoft Edge con la opción *no combinar* que era compatible con Internet Explorer 11?
 
 No hay ninguna línea de comandos explícita en Microsoft Edge que refleje la opción *no combinar*, pero existen un par de alternativas que recomendamos para ofrecer esta funcionalidad.
 
 1. Usar perfiles en Microsoft Edge: cada perfil se asigna a una sesión de IE diferente para las páginas en modo IE, por lo que se comporta de la misma forma que la opción *no combinar*.
 2. Usa la línea de comandos `--user-data-dir=<path>`, pero con una ruta de acceso diferente para cada sesión. Si es necesario, puedes crear una utilidad que el usuario puede ejecutar y que inicia Microsoft Edge y cambia la ruta de acceso de la sesión.
 
-Si las opciones anteriores no son adecuadas para el escenario en cuestión, puedes ponerte en contacto con uno de nuestros canales de comentarios: soporte técnico de Microsoft, el [foro TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise) o [UserVoice de Microsoft Edge](https://microsoftedge.uservoice.com/forums/928825-enterprise).
+Si las opciones anteriores no son adecuadas para el escenario en cuestión, puedes enviarnos un comentario en uno de nuestros canales: Soporte técnico de Microsoft o el [foro TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
 
-### ¿Puedo guardar vínculos como páginas web en el modo Internet Explorer?
- 
+### <a name="can-i-save-links-as-webpages-in-internet-explorer-mode"></a>¿Puedo guardar vínculos como páginas web en el modo Internet Explorer?
+
 Sí, puede habilitar la opción de Guardar destino como en el menú contextual del modo Internet Explorer en Microsoft Edge. Para hacerlo, configure la directiva de grupo *"Permitir la opción Guardar destino como en el modo Internet Explorer"* que se encuentra en *Configuración del equipo > Plantillas administrativas > Componentes de Windows > Internet Explorer*.
 El mecanismo de guardado funciona de la misma manera que en Internet Explorer y, si el destino está guardado como archivo HTML, al volver a abrir el archivo se representará la página en Microsoft Edge.
  
@@ -100,7 +101,7 @@ Tenga en cuenta que esta funcionalidad requiere las siguientes actualizaciones m
 - Windows 10, versión 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
 
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Acerca del modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
