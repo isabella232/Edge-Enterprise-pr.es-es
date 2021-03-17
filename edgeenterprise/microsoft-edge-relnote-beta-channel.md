@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/15/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: 6682bbc1ea92a8b78a82507424814e2f3db4fcfd
-ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
+ms.openlocfilehash: 3c1b87b2ecaf68acf0bca447553b25d0b202e7ea
+ms.sourcegitcommit: ceecf4d9baf9dc677652ca07a6d2f2e17ef5b3b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "11409247"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "11440311"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
@@ -23,6 +23,50 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!NOTE]
 > Hemos actualizado la [versión 89.0.774.18: 3 de febrero](#version-89077418-february-3) de Microsoft Edge Beta para reflejar las características que han llegado.
+
+<!-- begin major 90 -->
+## <a name="version-90081808-march-16"></a>Versión 90.0.818.08: 16 de marzo
+
+### <a name="feature-updates"></a>Actualizaciones de características
+
+- **El inicio de sesión único (SSO) ya está disponible para las cuentas de Azure Active Directory (Azure AD) y las cuentas de Microsoft (MSA) en macOS.** Un usuario que haya iniciado sesión en Microsoft Edge en macOS ahora tendrá la sesión iniciada de manera automática en los sitios web que estén configurados para permitir el inicio de sesión único con cuentas profesionales y de Microsoft (por ejemplo, bing.com, office.com, msn.com y outlook.com).
+
+- **Impresión:**
+
+  - **Modo de rasterización de impresión nuevo para las impresoras que no son PostScript**. A partir de la versión 90 de Microsoft Edge, los administradores pueden usar una nueva directiva para definir el modo de rasterización de impresión para sus usuarios. Esta directiva controla la forma en que Microsoft Edge imprime en impresoras que no sean PostScript en Windows.  En ocasiones, es necesario rasterizar los trabajos de impresión de impresoras que no sean PostScript para que se impriman correctamente. Las opciones de impresión son Completa y Rápida.
+
+  - **Opciones de escala de página adicionales para la impresión**. Los usuarios ahora pueden personalizar el ajuste de escala al imprimir páginas web y documentos PDF con opciones adicionales. La opción "Ajustar a la página" garantiza que la página web o el documento se ajusta al espacio disponible en el "Tamaño de papel" seleccionado para la impresión. La opción "Tamaño real" garantiza que no se imprima ningún cambio en el tamaño del contenido, independientemente de la opción "Tamaño de papel" seleccionada.
+
+- **Productividad:**
+
+  - **Las sugerencias de Autorrellenar se extienden para incluir contenido de campos de dirección del portapapeles**. El contenido del Portapapeles se analiza cuando hace clic en un campo de perfil o dirección (por ejemplo, teléfono, correo electrónico, código postal, ciudad, estado, etc.) para mostrarlo como sugerencias de autorrelleno.
+
+  - **Los usuarios pueden buscar sugerencias de autorrellenar incluso si no se detecta un formulario o campo**. Ahora, si tiene guardada la información en Microsoft Edge, las sugerencias de autorrelleno aparecerán automáticamente y le ayudarán a ahorrar tiempo al rellenar formularios. En casos en los que autorrellenar no encuentra un formulario, o si quiere capturar datos en formularios que normalmente no tienen autorrellenar (como formularios temporales), puede buscar la información con autorrellenar.
+
+- **Descarga de Access desde un control flotante de la barra de menús**. Las descargas se mostrarán en la esquina superior derecha con todas las descargas activas en un solo lugar. Este menú se puede descartar fácilmente para que los usuarios puedan continuar explorando sin interrupciones y pueden supervisar el progreso de descarga general directamente desde la barra de herramientas. [Más información](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
+
+- **Mejoras en la representación de fuentes**. Empezando por la versión 90 de Microsoft Edge, hemos realizado mejoras en la representación de texto para mejorar la claridad y reducir el efecto borroso. Parte de las mejoras en la representación de fuentes llegarán en la versión beta 90, pero están deshabilitadas de forma predeterminada.
+
+
+### <a name="policy-updates"></a>Actualizaciones de directiva
+
+#### <a name="new-policies"></a>Nuevas directivas
+
+Se han agregado siete directivas nuevas. Descargue las Plantillas administrativas actualizadas desde la [página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se agregaron las siguientes directivas nuevas:
+
+- [ApplicationGuardFavoritesSyncEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled): sincronización de favoritos de Protección de aplicaciones habilitada
+- [ManagedConfigurationPerOrigin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin): establece valores de configuración administrados para sitios web de orígenes específicos.
+- [PrintRasterizationMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printrasterizationmode): modo de rasterización de impresión
+- [QuickViewOfficeFilesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled): administrar la funcionalidad de archivos de Office QuickView en Microsoft Edge
+- [SSLErrorOverrideAllowedForOrigins](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins): permitir a los usuarios continuar desde la página de advertencia HTTPS de orígenes específicos
+- [WindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowocclusionenabled): habilitar la ocultación de ventanas
+- [WindowsHelloForHTTPAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled): Windows Hello para autenticación HTTP habilitado
+
+#### <a name="deprecated-policies"></a>Directivas en desuso
+
+- [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled): habilitar la ocultación de ventanas nativas
+- [SSLVersionMin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslversionmin): versión mínima de TLS habilitada
+<!-- end major 90 -->
 
 ## <a name="version-89077454-march-13"></a>Versión 89.0.774.54: 13 de marzo
 
