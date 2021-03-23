@@ -3,19 +3,19 @@ title: Configurar el modo de pantalla completa en Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Obtenga información sobre las características del modo de pantalla completa y sobre cómo configurar las opciones del modo de pantalla completa de Microsoft Edge.
-ms.openlocfilehash: 9f2ce26f2c505ba3fc9e2e05b057e5d5df8257fe
-ms.sourcegitcommit: 8da3a4de1a14514014b6d7b103ba79f2ace48044
+ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388549"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442490"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurar el modo de pantalla completa en Microsoft Edge
 
@@ -24,7 +24,10 @@ En este artículo se describe cómo configurar las opciones de pantalla completa
 > [!NOTE]
 > Este artículo es aplicable para Microsoft Edge, versión 87 o posterior.
 
-## <a name="overview"></a>Introducción
+> [!IMPORTANT]
+> Invocar características de pantalla completa de Microsoft Edge en Windows 10 con los argumentos de línea de comandos proporcionados en [Usar características de pantalla completa](#use-kiosk-mode-features).
+
+## <a name="overview"></a>Información general
 
 El modo de pantalla completa de Microsoft Edge ofrece dos experiencias de bloqueo del explorador para que las organizaciones puedan crear, administrar y proporcionar la mejor experiencia para sus clientes. Están disponibles las siguientes experiencias de bloqueo:  
 
@@ -209,9 +212,9 @@ La configuración de Windows es la manera más sencilla de configurar uno o dos 
 
 ## <a name="functional-limitations"></a>Limitaciones funcionales
 
-Con el lanzamiento de esta vista previa de la modalidad de pantalla completa, continuamos trabajando para mejorar el producto y agregar nuevas características.
+Con el lanzamiento de esta versión de vista previa de la modalidad de pantalla completa, continuamos trabajando para mejorar el producto y agregar nuevas características.
 
-Se recomienda desactivar:
+Actualmente no admitimos las siguientes características y le recomendamos que las desactive:
 
 - [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
 - [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
@@ -224,8 +227,9 @@ Se recomienda desactivar:
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Extensiones](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
 - [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
 
-## <a name="roadmap"></a>Guía básica
+## <a name="roadmap"></a>Plan de desarrollo
 
 ### <a name="in-early-2021"></a>A principios de 2021
 

@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/12/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
-ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
+ms.openlocfilehash: 4935b927081ef1823ecf36b922948992926d4005
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2021
-ms.locfileid: "11408652"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442480"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
@@ -29,6 +29,16 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
+
+## <a name="new-policies"></a>Nuevas directivas
+
+En la siguiente tabla, se muestran las nuevas directivas para esta actualización.
+
+|Nombre|Título|
+|--|--|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Permitir vínculos rápidos en la página de pestaña nueva|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Obtener la duración de keepalive al apagar  |
+
 
 ## <a name="available-policies"></a>Directivas disponibles
 
@@ -230,7 +240,8 @@ y sugerencias para los servicios Microsoft|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Ocultar los sitios principales predeterminados de la nueva ficha|
 |[NewTabPageLocation](#newtabpagelocation)|Configurar la dirección URL de la ficha|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Establecer una nueva ficha de vínculos rápidos|
-|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Habilitar precarga de la página de nueva pestaña para procesamiento más rápido|
+|[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Habilitar precarga de la página de pestaña nueva para procesamiento más rápido|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Permitir vínculos rápidos en la página de pestaña nueva|
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configurar la experiencia de la nueva ficha de Microsoft Edge (en desuso)|
 |[RestoreOnStartup](#restoreonstartup)|Acción que se realizará en el inicio|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Sitios que se abren cuando el explorador se inicia|
@@ -322,6 +333,7 @@ y sugerencias para los servicios Microsoft|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Mostrar la casilla "abrir siempre" en el cuadro de diálogo de protocolo externo|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Permitir a los usuarios configurar la seguridad infantil y el modo niños|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Habilitar la barra de favoritos|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Obtener la duración de keepalive al apagar  |
 |[ForceBingSafeSearch](#forcebingsafesearch)|Forzar la búsqueda segura de Bing|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Configurar si Microsoft Edge debe seleccionar automáticamente un certificado cuando haya múltiples coincidencias de certificados para un sitio configurado con "AutoSelectCertificateForUrls"|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Permitir el uso de perfiles efímeros|
@@ -8454,6 +8466,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### <a name="newtabpagequicklinksenabled"></a>NewTabPageQuickLinksEnabled
+
+  #### <a name="allow-quick-links-on-the-new-tab-page"></a>Permitir vínculos rápidos en la página de pestaña nueva
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde 91 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Si habilita o no configura esta directiva, Microsoft Edge muestra vínculos rápidos en la página de pestaña nueva y el usuario puede interactuar con el control, activando y desactivando los vínculos rápidos. Habilitar esta directiva no obliga a que los vínculos rápidos sean visibles: el usuario puede seguir activando y desactivando los vínculos rápidos.
+
+Si deshabilita esta directiva, Microsoft Edge ocultará los vínculos rápidos en la página de pestaña nueva y deshabilitará el control de vínculos rápidos en el menú lateral de configuración de NTP.
+
+Esta directiva solo se aplica a los perfiles de usuario local de Microsoft Edge, a los perfiles que han iniciado sesión con una cuenta Microsoft y a los perfiles que han iniciado sesión con Active Directory. Para configurar la página de nueva pestaña empresarial para los perfiles que han iniciado sesión con Azure Active Directory, use el portal de administración de M365.
+
+Directiva relacionada: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Booleano
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: NewTabPageQuickLinksEnabled
+  - Nombre de GP: Permitir vínculos rápidos en la página de pestaña nueva
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Inicio, página principal y página de pestaña nueva
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/D
+  - Nombre del valor: NewTabPageQuickLinksEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre de clave de preferencia: NewTabPageQuickLinksEnabled
+  - Valor de ejemplo:
+``` xml
+<true/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### <a name="newtabpagesetfeedtype"></a>NewTabPageSetFeedType
 
   #### <a name="configure-the-microsoft-edge-new-tab-page-experience-deprecated"></a>Configurar la experiencia de la nueva ficha de Microsoft Edge (en desuso)
@@ -14376,6 +14452,68 @@ Si no se configura esta directiva, el usuario podrá optar por usar la barra de 
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### <a name="fetchkeepalivedurationonshutdown"></a>FetchKeepaliveDurationOnShutdown
+
+  #### <a name="fetch-keepalive-duration-on-shutdown"></a>Obtener la duración de keepalive al apagar  
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde 90 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Controla la duración (en segundos) que se permiten las solicitudes keepalive para evitar que el explorador complete el apagado.
+
+Si configura esta directiva, el explorador bloqueará el apagado mientras procesa las solicitudes de keepalive pendientes (vea https://fetch.spec.whatwg.org/#request-keepalive-flag) hasta el período máximo de tiempo especificado por esta directiva.
+
+Si deshabilita o no configura esta directiva, se usará el valor predeterminado de 0 segundos y las solicitudes de keepalive pendientes se cancelarán inmediatamente durante el cierre del explorador.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: FetchKeepaliveDurationOnShutdown
+  - Nombre de GP: Obtener la duración de keepalive al apagar  
+  - Ruta de acceso de GP (obligatoria): plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/D
+  - Nombre del valor: FetchKeepaliveDurationOnShutdown
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre de clave de preferencia: FetchKeepaliveDurationOnShutdown
+  - Valor de ejemplo:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### <a name="forcebingsafesearch"></a>ForceBingSafeSearch
 
   #### <a name="enforce-bing-safesearch"></a>Forzar la búsqueda segura de Bing
@@ -15102,7 +15240,11 @@ Los términos de búsqueda populares de una sola palabra requerirán de la selec
 
   #### <a name="description"></a>Descripción
 
-  Los nombres de host que se especifiquen en esta lista estarán exentos de la comprobación de directivas de HSTS, que podrían actualizar las solicitudes de "http://" a "https://". En esta directiva solo se permiten nombres de host de una sola etiqueta. Los nombres de host deben tener un nombre canónico. Todos los IDN deben ser convertidos a su formato de etiqueta A, y todas las letras ASCII deben estar en minúsculas. Esta directiva solo se aplicará a los nombres de host mencionados específicamente; sin embargo, no se aplicará a los subdominios nombrados en la lista.
+  Al establecer la directiva, se especifica una lista de nombres de host que omiten actualizaciones de HSTS precargado de http a https.
+
+Solo se permiten nombres de host de una etiqueta en esta directiva, y esta directiva solo se aplica a entradas estáticas precargadas por HSTS (por ejemplo, "aplicación", "nuevo", "búsqueda", "reproducir"). Esta directiva no impide las actualizaciones de HSTS para los servidores que han solicitado de forma dinámica actualizaciones de HSTS con un encabezado de respuesta de seguridad de transporte estricto.
+
+Los nombres de host proporcionados tienen que ser canónicos: los IDN deben convertirse a su formato de etiqueta A y todas las letras ASCII deben ser minúsculas. Esta directiva solo se aplica a los nombres de host específicos de una sola etiqueta especificados, no a los subdominios de esos nombres.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -16819,9 +16961,11 @@ Los usuarios lo pueden hacer desde la opción "Abrir sitios en el modo de Intern
 
 Además, los usuarios pueden probar sus aplicaciones en un explorador moderno sin desinstalarlas de la lista de sitios con la opción "Abrir sitios en modo de Edge".
 
-Esta configuración funciona conjuntamente con: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) establecida en "IEMode" y la directiva [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) donde la lista tiene al menos una entrada.
+Esta configuración funciona junto con: [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) establecido en 'IEMode'.
+   
+                                                                                                                         
 
-Si habilita esta directiva, la opción "Abrir sitios en el modo de Internet Explorer" estará visible en "Más herramientas". Los usuarios pueden visualizar sus sitios en el modo de Internet Explorer en esta pestaña. En "Más herramientas" estará visible otra opción para "Abrir sitios en modo de Edge" para ayudar a probar sitios en un explorador moderno sin desistalarlos de la lista de sitios.
+Si habilita esta directiva, la opción 'Abrir sitios en el modo de Internet Explorer' estará visible en "Más herramientas". Los usuarios pueden visualizar sus sitios en el modo de Internet Explorer en esta pestaña. En "Más herramientas" estará visible otra opción para "Abrir sitios en modo de Edge" para ayudar a probar sitios en un explorador moderno sin desistalarlos de la lista de sitios.
 
 Si deshabilita o no configura esta directiva, los usuarios no podrán ver las opciones "Abrir en el modo de Internet Explorer" ni "Abrir en el modo de Edge" en el menú "Más herramientas". Sin embargo, los usuarios pueden configurar estas opciones con la marca --ie-mode-test.
 
