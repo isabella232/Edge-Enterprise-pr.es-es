@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/15/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 7d08aa1d9cf1f3e04861561169d2f6a01772e5f2
-ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
+ms.openlocfilehash: a0f33300d39f5ecaf48de114697c593a391dc052
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "11409255"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442390"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -27,9 +27,13 @@ Estas notas de versión proporcionan información sobre las nuevas característi
  Para entender los canales de Microsoft Edge, vea la [Información general sobre los canales de Microsoft Edge](microsoft-edge-channels.md).
 
 > [!NOTE]
-> Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+> Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de MicrosoftEdge](microsoft-edge-update-progressive-rollout.md).
 
-## <a name="version-89077454-march-13"></a>Versión 89.0.774.54: 13 de marzo
+## <a name="version-89077457-march-18"></a>Versión89.0.774.57: 18 de marzo
+
+Se han corregido varios errores y problemas de rendimiento.
+
+## <a name="version-89077454-march-13"></a>Versión89.0.774.54: 13 de marzo
 
 > [!IMPORTANT]
 > Esta actualización contiene [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193). El equipo de Chromium ha indicado que tiene una vulnerabilidad de seguridad ampliamente conocida. Para más información, vea la [Guía de actualización de Seguridad](https://msrc.microsoft.com/update-guide).
