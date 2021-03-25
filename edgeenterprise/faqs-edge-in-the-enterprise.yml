@@ -11,12 +11,12 @@ metadata:
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
   description: Preguntas más frecuentes sobre la implementación de Microsoft Edge en la empresa
-  ms.openlocfilehash: d7098666c67d1b88fc6f7e0910c8793315e750cc
-  ms.sourcegitcommit: 0bd67aa982613f663e6840929a769fc88d5a6b4d
+  ms.openlocfilehash: 6a0a3c508f36318c080b6ccc62271b0d79bb9630
+  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/05/2021
-  ms.locfileid: "11393783"
+  ms.lasthandoff: 03/24/2021
+  ms.locfileid: "11448154"
 title: Preguntas más frecuentes sobre Microsoft Edge en la empresa
 summary: >
   > [!NOTE]
@@ -33,15 +33,15 @@ sections:
       Nos comprometemos a conservar Internet Explorer como un explorador con soporte, confiable y seguro. Internet Explorer sigue siendo un componente de Windows y sigue el ciclo de vida de soporte técnico del sistema operativo en el que está instalado. Para obtener más información, consulta [Preguntas frecuentes del ciclo de vida: Internet Explorer](https://support.microsoft.com/help/17454/). Si bien continuamos ofreciendo soporte y actualizando Internet Explorer, las últimas funciones y actualizaciones de la plataforma solo estarán disponibles en Microsoft Edge.
   - question: ¿Puedo ejecutar la versión actual de Microsoft Edge (versión heredada) en paralelo al probar la nueva versión?
     answer: >
-      Sí, no hay ningún problema. A partir del 15 de enero de 2020, la nueva versión de Microsoft Edge (basadas en Chromium) se distribuirá a los dispositivos de las ediciones Home y Pro que ejecuten Windows 10, versión 1803 o posterior. Los dispositivos unidos a un dominio están excluidos de esta actualización. Para más información, consulta [Introducción a las actualizaciones de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview). Puede tener una instalación en paralelo de Microsoft Edge Legacy mientras evalúa la siguiente versión de Microsoft Edge. Para obtener más información, consulta [Cómo obtener acceso a la versión anterior de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-sysupdate-access-old-edge). Además, cada uno de los nuevos canales de Microsoft Edge también admite instalaciones en paralelo. Para más información, consulta [Introducción a los canales de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
+      Sí, no hay ningún problema. A partir del 15 de enero de 2020, la nueva versión de Microsoft Edge (basadas en Chromium) se distribuirá a los dispositivos de las ediciones Home y Pro que ejecuten Windows 10, versión 1803 o posterior. Los dispositivos unidos a un dominio están excluidos de esta actualización. Para más información, consulta [Introducción a las actualizaciones de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview). Puede tener una instalación en paralelo de Microsoft Edge Legacy mientras evalúa la siguiente versión de Microsoft Edge. Para obtener más información, consulta [Cómo obtener acceso a la versión anterior de Microsoft Edge](./microsoft-edge-sysupdate-access-old-edge.md). Además, cada uno de los nuevos canales de Microsoft Edge también admite instalaciones en paralelo. Para más información, consulta [Introducción a los canales de Microsoft Edge](./microsoft-edge-channels.md).
   - question: ¿MicrosoftEdge (basado en Chromium) admite los controles ActiveX y BHO como Silverlight o Java?
     answer: >
-      No. Microsoft Edge no admite controles ActiveX o objetos de ayuda del explorador (BHO) como Silverlight o Java. Sin embargo, si está ejecutando aplicaciones web que usen controles ActiveX, BHO o modos de documentos heredados en Internet Explorer 11, puede configurarlos para que se ejecuten en modo IE en el nuevo Microsoft Edge. Para obtener más información, consulte [Configurar el modo IE en Microsoft Edge](https://docs.microsoft.com/DeployEdge/edge-ie-mode).
+      No. Microsoft Edge no admite controles ActiveX o objetos de ayuda del explorador (BHO) como Silverlight o Java. Sin embargo, si está ejecutando aplicaciones web que usen controles ActiveX, BHO o modos de documentos heredados en Internet Explorer 11, puede configurarlos para que se ejecuten en modo IE en el nuevo Microsoft Edge. Para obtener más información, consulte [Configurar el modo IE en Microsoft Edge](./edge-ie-mode.md).
   - question: ¿Se pasarán los favoritos desde la versión actual de Microsoft Edge o tengo que volver a agregarlos?
     answer: "Actualmente, Microsoft Edge admite importar desde instalaciones existentes de Microsoft Edge, Chrome, Internet Explorer y Firefox (en Win10). Se admiten las siguientes opciones de configuración para importar: Marcadores, Historial, Contraseñas y Autorrelleno (pagos, direcciones y formularios genéricos). Puedes elegir importar desde la experiencia de primera ejecución o desde la configuración del explorador.  \n"
   - question: ¿Cuál es la diferencia entre los canales/compilaciones estable, Beta, Dev y Canary?
     answer: >
-      El canal estable de la próxima versión de Microsoft Edge es el canal más estable que ofrecemos, con las funciones orientadas a empresas preparadas para [ejecutar proyectos piloto y evaluar](https://aka.ms/EdgeEnterprise) en toda la organización. El canal beta te permite validar la próxima versión estable con un conjunto representativo de usuarios. Los canales Estable y Beta se actualizan aproximadamente cada seis semanas. Los canales Dev y Canary siguen actualizando semanalmente y diariamente, respectivamente. Los instaladores sin conexión (MSIs y archivos PKG) solo están disponibles para los canales Stable, Beta y Dev. Para más información, consulta [Introducción a los canales de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
+      El canal estable de la próxima versión de Microsoft Edge es el canal más estable que ofrecemos, con las funciones orientadas a empresas preparadas para [ejecutar proyectos piloto y evaluar](https://aka.ms/EdgeEnterprise) en toda la organización. El canal beta te permite validar la próxima versión estable con un conjunto representativo de usuarios. Los canales Estable y Beta se actualizan aproximadamente cada seis semanas. Los canales Dev y Canary siguen actualizando semanalmente y diariamente, respectivamente. Los instaladores sin conexión (MSIs y archivos PKG) solo están disponibles para los canales Stable, Beta y Dev. Para más información, consulta [Introducción a los canales de Microsoft Edge](./microsoft-edge-channels.md).
   - question: ¿Qué tipo de compatibilidad con extensiones tengo con la nueva versión de Microsoft Edge?
     answer: >
       Microsoft Edge admite extensiones de [Complementos de Microsoft Edge Insider](https://go.microsoft.com/fwlink/?linkid=2081222) y [Chrome Web Store](https://go.microsoft.com/fwlink/?linkid=2072338).
@@ -53,12 +53,12 @@ sections:
       Sí. En el [Catálogo de Microsoft Update](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) hay paquetes que puede usar para la implementación inicial de la nueva versión de Microsoft Edge a través de WSUS. Después de la implementación inicial, las actualizaciones automáticas se configuran de forma predeterminada. Para obtener más información, consulte [Actualización en WSUS para la nueva versión de Microsoft Edge para Windows 10, versiones 1809, 1903, 1909 y 2004: 29 de octubre de 2020](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge).
 
 
-      Las actualizaciones manuales se pueden realizar con una herramienta de administración de configuración, como [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+      Las actualizaciones manuales se pueden realizar con una herramienta de administración de configuración, como [ConfigMgr](/configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json).
   - question: ¿Se admiten las preferencias maestras?
     answer: "No, no se admiten las preferencias maestras. \n"
 additionalContent: >-
-  ## <a name="see-also"></a>Consulte también
+  ## <a name="see-also"></a>Consulta también
 
-  - [Página de aterrizaje de documentación de Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
+  - [Página de aterrizaje de documentación de Microsoft Edge](./index.yml)
 
   - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

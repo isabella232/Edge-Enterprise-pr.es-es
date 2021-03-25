@@ -10,16 +10,16 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar Microsoft Edge con Administración de dispositivos móviles.
-ms.openlocfilehash: dda35199f653b3dfb8f20b33b068c59621222b36
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: c9a725b5d0e820fb907150a8f83eeb17291b9f6a
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981067"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447554"
 ---
-# Configurar Microsoft Edge con Administración de dispositivos móviles
+# <a name="configure-microsoft-edge-using-mobile-device-management"></a>Configurar Microsoft Edge con Administración de dispositivos móviles
 
-En este artículo se explica cómo configurar Microsoft Edge en Windows 10 con [Administración de dispositivos móviles (MDM)](https://docs.microsoft.com/windows/client-management/mdm/), mediante [Ingesta ADMX](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). Este artículo describe también:
+En este artículo se explica cómo configurar Microsoft Edge en Windows 10 con [Administración de dispositivos móviles (MDM)](/windows/client-management/mdm/), mediante [Ingesta ADMX](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). Este artículo describe también:
 
 - Cómo [crear un identificador uniforme de recursos Open Mobile Alliance (OMA-URI) para directivas de Microsoft Edge](#create-an-oma-uri-for-microsoft-edge-policies).
 - Cómo [configurar Microsoft Edge en Intune usando la ingesta ADMX y OMA-URI personalizado](#configure-microsoft-edge-in-intune-using-admx-ingestion).
@@ -27,7 +27,7 @@ En este artículo se explica cómo configurar Microsoft Edge en Windows 10 con [
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Windows 10, con los siguientes requisitos mínimos del sistema:
 
@@ -36,9 +36,9 @@ Windows 10, con los siguientes requisitos mínimos del sistema:
 - Windows 10, versión 1803 con [KB4512509](https://support.microsoft.com/help/4512509/) y [KB4519978](https://support.microsoft.com/help/4519978) instaladas
 - Windows 10, versión 1709 con [KB4516071](https://support.microsoft.com/help/4516071/) y [KB4520006](https://support.microsoft.com/help/4520006) instaladas
 
-## Introducción
+## <a name="overview"></a>Introducción
 
-Puedes configurar Microsoft Edge en Windows 10 usando MDM con tu proveedor de administración de movilidad empresarial (EMM) o MDM preferido que admita [Ingesta ADMX](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration).
+Puedes configurar Microsoft Edge en Windows 10 usando MDM con tu proveedor de administración de movilidad empresarial (EMM) o MDM preferido que admita [Ingesta ADMX](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration).
 
 La configuración de Microsoft Edge con MDM es un proceso de dos partes:
 
@@ -49,7 +49,7 @@ La configuración de Microsoft Edge con MDM es un proceso de dos partes:
 
 2. [Creación de un OMA-URI para una directiva de Microsoft Edge](#create-an-oma-uri-for-microsoft-edge-policies).
 
-## Crear un OMA-URI para directivas de Microsoft Edge
+## <a name="create-an-oma-uri-for-microsoft-edge-policies"></a>Crear un OMA-URI para directivas de Microsoft Edge
 
 En las siguientes secciones se describe cómo crear la ruta de acceso OMA-URI y buscar y definir el valor en formato XML para las directivas de explorador obligatorias y recomendadas.
 
@@ -61,7 +61,7 @@ Hay tres pasos para definir el OMA-URI:
 2. [Especificar el tipo de datos OMA-URI](#specify-the-data-type)
 3. [Establecer el valor OMA-URI](#set-the-value-for-a-browser-policy)
 
-### Crear la ruta OMA-URI
+### <a name="create-the-oma-uri-path"></a>Crear la ruta OMA-URI
 
 Usa la fórmula siguiente como guía para crear las rutas de acceso OMA-URI. <br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`* <br/><br/>
@@ -71,9 +71,9 @@ Usa la fórmula siguiente como guía para crear las rutas de acceso OMA-URI. <br
 | \<ADMXIngestName> | Usa "Edge" o lo que hayas definido al ingerir la plantilla administrativa. Por ejemplo, si usaste "./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/MicrosoftEdge/Policy/EdgeAdmx", usa "MicrosoftEdge".<br/><br/> El `<ADMXIngestionName>` debe coincidir con lo usado al ingerir el archivo ADMX. |
 | \<ADMXNamespace>  | "microsoft_edge" o "microsoft_edge_recommended", en función de si estás estableciendo una directiva obligatoria o recomendada. |
 | \<ADMXCategory>   | La "parentCategory" de la directiva se define en el archivo ADMX. Omite la `<ADMXCategory>` si la directiva no está agrupada (no está definida "parentCategory"). |
-| \<PolicyName>     | El nombre de la directiva se puede encontrar en el artículo [Referencia de directivas de explorador](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies) . |
+| \<PolicyName>     | El nombre de la directiva se puede encontrar en el artículo [Referencia de directivas de explorador](./microsoft-edge-policies.md) . |
 
-#### Ejemplos de rutas de URI:
+#### <a name="uri-path-example"></a>Ejemplos de rutas de URI:
 
 Para este ejemplo, supongamos que el nodo `<ADMXIngestName>` se denominó “Edge" y que estás estableciendo una directiva obligatoria. La ruta de acceso URI sería:<br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~<ADMXCategory>/<PolicyName>`*
@@ -89,22 +89,22 @@ Si la directiva está en un grupo, sigue estos pasos:
 4. Reemplaza `<ADMXCategory>` por el valor del atributo *ref* para crear la ruta URI. La ruta URI sería:<br/><br/>
 *`/Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~Extensions/ExtensionInstallForcelist`*
 
-### Especificar el tipo de datos
+### <a name="specify-the-data-type"></a>Especificar el tipo de datos
 
 El tipo de datos OMA-URI siempre es “String”.
 
-### Establecer el valor de una directiva de explorador
+### <a name="set-the-value-for-a-browser-policy"></a>Establecer el valor de una directiva de explorador
 
-En esta sección se describe cómo establecer el valor en formato XML para cada tipo de datos. Ve a la [Referencia de directivas de explorador](https://docs.microsoft.com/deployedge/microsoft-edge-policies) para buscar el tipo de datos de la directiva.
+En esta sección se describe cómo establecer el valor en formato XML para cada tipo de datos. Ve a la [Referencia de directivas de explorador](./microsoft-edge-policies.md) para buscar el tipo de datos de la directiva.
 
 > [!NOTE]
 > Para los tipos de datos que no sean booleanos, el valor siempre comienza por `<enabled/>`.
 
-#### Tipo de datos booleano
+#### <a name="boolean-data-type"></a>Tipo de datos booleano
 
 Para las directivas que sean tipos booleanos, usa `<enabled/>` o `<disabled/>`.
 
-#### Tipo de datos enteros
+#### <a name="integer-data-type"></a>Tipo de datos enteros
 
 El valor siempre debe comenzar con el elemento `<enabled/>`, seguido de `<data id="[valueName]" value="[decimal value]"/>`.
 
@@ -119,7 +119,7 @@ Para buscar el nombre de valor y el valor decimal de una página de nueva pesta�
 Para abrir la página de nueva pestaña en el inicio, usa:<br>
 `<enabled/> <data id="RestoreOnStartup" value="5"/>`
 
-#### Lista de tipos de datos de cadena
+#### <a name="list-of-strings-data-type"></a>Lista de tipos de datos de cadena
 
 El valor siempre debe comenzar con el elemento `<enabled/>`, seguido de `<data id="[listID]" value="[string 1];[string 2];[string 3]"/>`.
 
@@ -136,7 +136,7 @@ Para buscar el listID y definir el valor para bloquear una dirección URL, sigue
 Por ejemplo, para bloquear el acceso a `contoso.com` y `https://ssl.server.com`:<br>
 `<enabled/> <data id=" URLBlocklistDesc" value="contoso.com;https://ssl.server.com"/>`
 
-#### Diccionario de tipos de datos de cadena
+#### <a name="dictionary-or-string-data-type"></a>Diccionario de tipos de datos de cadena
 
 El valor siempre debe comenzar por `<enabled/>`, seguido de `<data id="[textID]" value="[string]"/>`.
 
@@ -150,11 +150,11 @@ Para buscar el textID y definir el valor establecido para la configuración regi
 Para establecer la configuración regional en "es-US" con la directiva "ApplicationLocaleValue":<br>
 `<enabled/> <data id="ApplicationLocaleValue" value="es-US"/>`
 
-### Crear el OMA-URI para una directiva recomendada
+### <a name="create-the-oma-uri-for-a-recommended-policies"></a>Crear el OMA-URI para una directiva recomendada
 
 La definición de la ruta URI para las directivas recomendadas depende de la directiva que quieras configurar.
 
-#### Para definir la ruta URI para una directiva recomendada
+#### <a name="to-define-the-uri-path-for-a-recommended-policy"></a>Para definir la ruta URI para una directiva recomendada
 
 Usa la fórmula de ruta URI (*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`*) y los siguientes pasos para definir la ruta URI:
 
@@ -179,27 +179,27 @@ Usa la fórmula de ruta URI (*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestNam
 
 4. El `<PolicyName>` es el nombre de la directiva con "_recommended" puesto al final.
 
-#### Ejemplos de ruta OMA-URI para directivas recomendadas
+#### <a name="oma-uri-path-examples-for-recommended-policies"></a>Ejemplos de ruta OMA-URI para directivas recomendadas
 
 La siguiente tabla muestra ejemplos de rutas OMA-URI para las directivas recomendadas.
 
 |              Directiva               |             OMA-URI                      |
 |-----------------------------------|------------------------------------------|
-| [RegisteredProtocolHandlers](https://docs.microsoft.com/deployedge/microsoft-edge-policies#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
-| [PasswordManagerEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
-| [PrintHeaderFooter](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printheaderfooter)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Printing_recommended/PrintHeaderFooter_recommended`                        |
-| [SmartScreenEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreenenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~SmartScreen_recommended/SmartScreenEnabled_recommended`                        |
-| [HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/HomepageLocation_recommended`                        |
-| [ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
-| [FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
+| [RegisteredProtocolHandlers](./microsoft-edge-policies.md#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
+| [PasswordManagerEnabled](./microsoft-edge-policies.md#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
+| [PrintHeaderFooter](./microsoft-edge-policies.md#printheaderfooter)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Printing_recommended/PrintHeaderFooter_recommended`                        |
+| [SmartScreenEnabled](./microsoft-edge-policies.md#smartscreenenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~SmartScreen_recommended/SmartScreenEnabled_recommended`                        |
+| [HomePageLocation](./microsoft-edge-policies.md#homepagelocation)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/HomepageLocation_recommended`                        |
+| [ShowHomeButton](./microsoft-edge-policies.md#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
+| [FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
 
-### Ejemplos de OMA-URI
+### <a name="oma-uri-examples"></a>Ejemplos de OMA-URI
 
 Ejemplos de OMA-URI con su ruta URI, tipo y un valor de ejemplo.
 
-#### Ejemplos de tipo de datos booleano
+#### <a name="boolean-data-type-examples"></a>Ejemplos de tipo de datos booleano
 
-*[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ShowHomeButton):*
+*[ShowHomeButton](./microsoft-edge-policies.md#ShowHomeButton):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -208,7 +208,7 @@ Ejemplos de OMA-URI con su ruta URI, tipo y un valor de ejemplo.
 | tipo    | Cadena                                                                               |
 | Valor   | `<enabled/>`                                                                          |
 
-*[DefaultSearchProviderEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DefaultSearchProviderEnabled):*
+*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#DefaultSearchProviderEnabled):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -217,9 +217,9 @@ Ejemplos de OMA-URI con su ruta URI, tipo y un valor de ejemplo.
 | tipo    | Cadena                                                                               |
 | Valor   | `<disable/>`                                                                          |
 
-### Ejemplos de tipo de datos enteros
+### <a name="integer-data-type-examples"></a>Ejemplos de tipo de datos enteros
 
-*[AutoImportAtFirstRun](https://docs.microsoft.com/deployedge/microsoft-edge-policies#AutoImportAtFirstRun):*
+*[AutoImportAtFirstRun](./microsoft-edge-policies.md#AutoImportAtFirstRun):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -228,7 +228,7 @@ Ejemplos de OMA-URI con su ruta URI, tipo y un valor de ejemplo.
 | tipo    | Cadena                                                                               |
 | Valor   | `<enabled/><data id="AutoImportAtFirstRun" value="1"/>`                             |
 
-*[DefaultImagesSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DefaultImagesSetting):*
+*[DefaultImagesSetting](./microsoft-edge-policies.md#DefaultImagesSetting):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -237,7 +237,7 @@ Ejemplos de OMA-URI con su ruta URI, tipo y un valor de ejemplo.
 | tipo    | Cadena                                                                               |
 | Valor   | `<enabled/><data id="DefaultImagesSetting" value="2"/>`                             |
 
-*[DiskCacheSize](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DiskCacheSize):*
+*[DiskCacheSize](./microsoft-edge-policies.md#DiskCacheSize):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -246,9 +246,9 @@ Ejemplos de OMA-URI con su ruta URI, tipo y un valor de ejemplo.
 | tipo    | Cadena                                                                               |
 | Valor   | `<enabled/><data id="DiskCacheSize" value="1000000"/>`                               |
 
-#### Lista de ejemplos de tipos de datos de cadena
+#### <a name="list-of-strings-data-type-examples"></a>Lista de ejemplos de tipos de datos de cadena
 <!--
-*[NotificationsAllowedForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#NotificationsAllowedForUrls):*
+*[NotificationsAllowedForUrls](./microsoft-edge-policies.md#NotificationsAllowedForUrls):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -257,7 +257,7 @@ Ejemplos de OMA-URI con su ruta URI, tipo y un valor de ejemplo.
 | Type    | String                                                                               |
 | Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                               |
 -->
-*[RestoreOnStartupURLS](https://docs.microsoft.com/deployedge/microsoft-edge-policies#RestoreOnStartupURLS):*
+*[RestoreOnStartupURLS](./microsoft-edge-policies.md#RestoreOnStartupURLS):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -266,7 +266,7 @@ Ejemplos de OMA-URI con su ruta URI, tipo y un valor de ejemplo.
 | Tipo    | Cadena                                                                               |
 | Valor   | `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com"/>`<br>Para elementos de lista múltiples: `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com&#xF000;2&#xF000;http://www.microsoft.com"/>`  |
 
-*[ExtensionInstallForcelist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ExtensionInstallForcelist):*
+*[ExtensionInstallForcelist](./microsoft-edge-policies.md#ExtensionInstallForcelist):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -275,9 +275,9 @@ Ejemplos de OMA-URI con su ruta URI, tipo y un valor de ejemplo.
 | Tipo    | Cadena                                                                               |
 | Valor   | `<enabled/><data id="ExtensionInstallForcelistDesc" value="1&#xF000;gbchcmhmhahfdphkhkmpfmihenigjmpp;https://extensionwebstorebase.edgesv.net/v1/crx"/>`                               |
 
-#### Ejemplo de diccionario y tipo de datos de cadena
+#### <a name="dictionary-and-string-data-type-example"></a>Ejemplo de diccionario y tipo de datos de cadena
 
-*[ProxyMode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ProxyMode):*
+*[ProxyMode](./microsoft-edge-policies.md#ProxyMode):*
 
 | Campo   | Valor                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -286,9 +286,9 @@ Ejemplos de OMA-URI con su ruta URI, tipo y un valor de ejemplo.
 | Tipo    | Cadena                                                                               |
 | Valor   | `<enabled/><data id="ProxyMode" value="auto_detect"/>`                               |
 
-## Configurar Microsoft Edge en intune usando la ingesta ADMX
+## <a name="configure-microsoft-edge-in-intune-using-admx-ingestion"></a>Configurar Microsoft Edge en intune usando la ingesta ADMX
 
-La manera recomendada de configurar Microsoft Edge con Microsoft Intune es usar el perfil de plantillas administrativas, tal y como se describe en [Configurar las opciones de la directiva de Microsoft Edge con Microsoft Intune](https://docs.microsoft.com/deployedge/configure-edge-with-intune)c Si deseas evaluar una directiva que actualmente no está disponible en las plantillas administrativas de Microsoft Edge en intune, puedes configurar Microsoft Edge usando una [configuración personalizada para dispositivos con Windows 10 en intune](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10).
+La manera recomendada de configurar Microsoft Edge con Microsoft Intune es usar el perfil de plantillas administrativas, tal y como se describe en [Configurar las opciones de la directiva de Microsoft Edge con Microsoft Intune](./configure-edge-with-intune.md)c Si deseas evaluar una directiva que actualmente no está disponible en las plantillas administrativas de Microsoft Edge en intune, puedes configurar Microsoft Edge usando una [configuración personalizada para dispositivos con Windows 10 en intune](/intune/configuration/custom-settings-windows-10).
 
 Esta sección describe cómo:
 
@@ -298,7 +298,7 @@ Esta sección describe cómo:
 > [!IMPORTANT]
 > Como procedimiento recomendado, no uses un perfil OMA-URI personalizado y un perfil de plantillas de administración para configurar la misma opción de Microsoft Edge en Intune. Si implementas la misma directiva con un OMA-URI personalizado y un perfil de plantilla administrativa, pero con valores diferentes, los usuarios obtendrán resultados impredecibles. Te recomendamos encarecidamente que quites tu perfil de OMA-URI antes de usar un perfil de plantillas de administración.
 
-### Ingerir el archivo ADMX de Microsoft Edge en Intune
+### <a name="ingest-the-microsoft-edge-admx-file-into-intune"></a>Ingerir el archivo ADMX de Microsoft Edge en Intune
 
 En esta sección se describe cómo ingerir la plantilla administrativa de Microsoft Edge (archivo **msedge.admx**) en Intune.
 
@@ -347,7 +347,7 @@ Para ingerir el archivo ADMX, sigue estos pasos:
 > [!NOTE]
 > You can use the preceding steps to ingest the msedgeupate.admx policy template file.
 -->
-### Establecer una Directiva con OMA-URI personalizado en Intune
+### <a name="set-a-policy-using-custom-oma-uri-in-intune"></a>Establecer una Directiva con OMA-URI personalizado en Intune
 
 > [!NOTE]
 > Antes de seguir los pasos de esta sección, debes completar los pasos descritos en [Ingerir el archivo ADMX de Microsoft Edge en Intune](#ingest-the-microsoft-edge-admx-file-into-intune).
@@ -379,17 +379,17 @@ Para ingerir el archivo ADMX, sigue estos pasos:
 8. En **Configuración OMA-URI personalizada**, haz click en **Aceptar**.
 9. En el perfil "**Configuración ingerida de ADMX de Microsoft Edge - Propiedades**" (o el nombre que hayas usado), haz clic en **Guardar**.
 
-Después de crear el perfil y establecer las propiedades, tendrás que [asignar el perfil en Microsoft Intune](https://docs.microsoft.com/intune/configuration/device-profile-assign).
+Después de crear el perfil y establecer las propiedades, tendrás que [asignar el perfil en Microsoft Intune](/intune/configuration/device-profile-assign).
 
-#### Confirmar que se ha establecido la directiva
+#### <a name="confirm-that-the-policy-was-set"></a>Confirmar que se ha establecido la directiva
 
 Usa los siguientes pasos para confirmar que la directiva de Microsoft Edge usa el perfil que has creado. (Deja tiempo a Microsoft Intune para propagar la directiva a un dispositivo que hayas asignado en el ejemplo de perfil "Configuración ingerida de ADMX de Microsoft Edge").
 
 1. Abre Microsoft Edge y ve a *edge://policy*.
 2. En la página **Directivas**, mira a ver si se enumera la directiva que estableciste en el perfil.
-3. Si no aparece la directiva, consulta [Diagnosticar errores de MDM en Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) o [Solucionar problemas de configuración de directiva](#troubleshoot-a-policy-setting).
+3. Si no aparece la directiva, consulta [Diagnosticar errores de MDM en Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) o [Solucionar problemas de configuración de directiva](#troubleshoot-a-policy-setting).
 
-#### Solucionar problemas de configuración de directiva
+#### <a name="troubleshoot-a-policy-setting"></a>Solucionar problemas de configuración de directiva
 
 Si una directiva de Microsoft Edge no surte efecto, sigue los pasos que se indican a continuación:
 
@@ -398,13 +398,13 @@ Abre la página *edge://policy* en el dispositivo de destino (un dispositivo al 
 - Comprueba que la directiva esté en el Registro y que sea correcta. En el dispositivo de destino, abre el Editor del Registro de Windows 10 (**tecla Windows+ r**, introduce “*regedit*” y ,a continuación, presiona **Entrar**). Comprueba que la directiva esté definida correctamente en la ruta *\Software\Policies\ Microsoft\Edge*. Si no aparece la directiva en la ruta prevista, la directiva no se ha insertado correctamente en el dispositivo.
 - Comprueba que la ruta OMA-URI sea correcta y que el valor sea una cadena XML válida. Si alguno de estos valores es incorrecto, la directiva no se insertará en el dispositivo de destino.
 
-Para obtener más sugerencias sobre la solución de problemas, consulta [Configurar Microsoft Intune](https://docs.microsoft.com/intune/fundamentals/setup-steps) y [Sincronizar dispositivos](https://docs.microsoft.com/intune/remote-actions/device-sync).
+Para obtener más sugerencias sobre la solución de problemas, consulta [Configurar Microsoft Intune](/intune/fundamentals/setup-steps) y [Sincronizar dispositivos](/intune/remote-actions/device-sync).
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar la directiva de Microsoft Edge con Microsoft Intune](configure-edge-with-intune.md)
-- [Administración de dispositivos móviles](https://docs.microsoft.com/windows/client-management/mdm/)
-- [Usar la configuración personalizada para dispositivos con Windows 10 en Intune](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10)
-- [Configuración de directiva de aplicaciones de Win32 y Puente de dispositivo de escritorio](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
-- [Descripción de las directivas respaldadas por ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)
+- [Administración de dispositivos móviles](/windows/client-management/mdm/)
+- [Usar la configuración personalizada para dispositivos con Windows 10 en Intune](/intune/configuration/custom-settings-windows-10)
+- [Configuración de directiva de aplicaciones de Win32 y Puente de dispositivo de escritorio](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
+- [Descripción de las directivas respaldadas por ADMX](/windows/client-management/mdm/understanding-admx-backed-policies)

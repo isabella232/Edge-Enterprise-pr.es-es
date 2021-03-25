@@ -10,19 +10,19 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Redirección de Internet Explorer a Microsoft Edge por motivos de compatibilidad con sitios web modernos
-ms.openlocfilehash: c9c64a55df3aeecaebaab3675296c5594612b94f
-ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
+ms.openlocfilehash: ffb295b5c844d15fee2b0fa23e78be9cd34ef03f
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175203"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447594"
 ---
-# Redirección de Internet Explorer a Microsoft Edge por motivos de compatibilidad con sitios web modernos
+# <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>Redirección de Internet Explorer a Microsoft Edge por motivos de compatibilidad con sitios web modernos
 
 > [!NOTE]
 > Este artículo es aplicable para Microsoft Edge, versión 87 o posterior.
 
-## Introducción
+## <a name="overview"></a>Introducción
 
 Muchos sitios web modernos tienen diseños que no son compatibles con Internet Explorer. Siempre que un usuario de Internet Explorer visite un sitio público incompatible, recibirá un mensaje en el que se indicará que el sitio no es compatible con el explorador y tendrá que cambiar de forma manual a otro explorador.
 
@@ -31,9 +31,9 @@ La necesidad de cambiar manualmente a otro navegador diferente, cambia a partir 
 Cuando un usuario se dirige a un sitio que no es compatible con Internet Explorer, se le redirigirá automáticamente a Microsoft Edge. En este artículo se describe la experiencia de usuario para la redirección y las directivas de grupo que se usan para configurar o deshabilitar el redireccionamiento automático.
 
 > [!NOTE]
-> Microsoft mantiene una lista de todos los sitios que se sabe que son incompatibles con Internet Explorer. Para obtener más información, vea [Solicitar actualizaciones a la lista de sitios incompatibles](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+> Microsoft mantiene una lista de todos los sitios que se sabe que son incompatibles con Internet Explorer. Para obtener más información, vea [Solicitar actualizaciones a la lista de sitios incompatibles](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 
-## Experiencia de redirección
+## <a name="redirection-experience"></a>Experiencia de redirección
 
 En el redireccionamiento a Microsoft Edge, los usuarios se muestran en el cuadro de diálogo único en la siguiente captura de pantalla. Este cuadro de diálogo explica por qué se les redirige y pide consentimiento para copiar los datos de exploración y las preferencias de Internet Explorer en Microsoft Edge. Se importarán los siguientes datos de examen: favoritos, contraseñas, motores de búsqueda, pestañas abiertas, historial, configuración, cookies y la Página principal.
 
@@ -56,7 +56,7 @@ Cuando se redirige un sitio de Internet Explorer a Microsoft Edge, la pestaña d
 > [!NOTE]
 > Después de que un usuario redireccionamiento pueda volver a usar Internet Explorer para los sitios que no están en la lista de compatibilidad de Internet Explorer.  
 
-## Directivas para configurar el redireccionamiento a Microsoft Edge
+## <a name="policies-to-configure-redirection-to-microsoft-edge"></a>Directivas para configurar el redireccionamiento a Microsoft Edge
 
 > [!NOTE]
 > Estas directivas estarán disponibles como actualizaciones de archivos ADMX en el 26 de octubre de 2020, y estarán disponibles en Intune el 9 de noviembre de 2020.
@@ -67,7 +67,7 @@ Se deben configurar tres directivas de grupo para habilitar el redireccionamient
 - RedirectSitesFromInternetExplorerRedirectMode
 - HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
-### Directiva: RedirectSitesFromInternetExplorerPreventBHOInstall
+### <a name="policy-redirectsitesfrominternetexplorerpreventbhoinstall"></a>Directiva: RedirectSitesFromInternetExplorerPreventBHOInstall
 
 El redireccionamiento de Internet Explorer a Microsoft Edge necesita un objeto de aplicación auxiliar de Internet Explorer (BHO) denominado "IEtoEdge BHO". La Directiva **RedirectSitesFromInternetExplorerPreventBHOInstall** controla si este BHO está instalado.  
 
@@ -76,7 +76,7 @@ El redireccionamiento de Internet Explorer a Microsoft Edge necesita un objeto d
 
 Además de requerir el BHO, hay una dependencia en **RedirectSitesFromInternetExplorerRedirectMode**, que se debe establecer en "Redirigir los sitios de acuerdo con la lista se sitios incompatibles" o en "No configurado".
 
-### Directiva: RedirectSitesFromInternetExplorerRedirectMode
+### <a name="policy-redirectsitesfrominternetexplorerredirectmode"></a>Directiva: RedirectSitesFromInternetExplorerRedirectMode
 
  Esta Directiva corresponde al Microsoft Edge **explorador predeterminado** la configuración "permitir que Internet Explorer abra sitios en Microsoft Edge". Para obtener acceso a esta configuración, vaya a la *edge://settings/defaultbrowser* URL.  
 
@@ -88,9 +88,9 @@ Además de requerir el BHO, hay una dependencia en **RedirectSitesFromInternetEx
 >
 >Si se encuentra en un dispositivo inscrito en un dominio Unido o en la administración de dispositivos móviles (MDM), no verá esta opción.
 >
-> En su lugar, si quiere permitir que los usuarios carguen los sitios en el modo de Internet Explorer, puede hacerlo configurando la Directiva [permitir la realización de pruebas en el modo de Internet Explorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allow-internet-explorer-mode-testing).
+> En su lugar, si quiere permitir que los usuarios carguen los sitios en el modo de Internet Explorer, puede hacerlo configurando la Directiva [permitir la realización de pruebas en el modo de Internet Explorer](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing).
 
-### Directiva: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
+### <a name="policy-hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>Directiva: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
 Esta directiva configura la experiencia de usuario para la redirección del sitio no compatible con Microsoft Edge.  
 
@@ -100,7 +100,7 @@ Esta directiva configura la experiencia de usuario para la redirección del siti
   > [!NOTE]
   > Los datos de búsqueda de usuarios se importarán cada vez que un usuario encuentre un nuevo redireccionamiento. Sin embargo, esto solo se produce si el usuario se ha enviado a la importación en el cuadro de diálogo redirección único.
 
-## Deshabilitar la redirección a Microsoft Edge
+## <a name="disable-redirection-to-microsoft-edge"></a>Deshabilitar la redirección a Microsoft Edge
 
 Si desea deshabilitar la redirección antes de actualizar a la versión estable 87 de Microsoft Edge, siga el procedimiento siguiente:
 
@@ -111,8 +111,8 @@ Si desea deshabilitar la redirección después de actualizar a la versión estab
 1. Configure la directiva **RedirectSitesFromInternetExplorerRedirectMode** en **Habilitada** Y, a continuación, en la lista desplegable en Opciones: Redirigir los sitios incompatibles de Internet Explorer a Microsoft Edge, seleccione **Deshabilitar**. Esta configuración dejará de redirigirse tan pronto como se aplique la drectiva.
 2. Configure la Directiva **RedirectSitesFromInternetExplorerPreventBHOInstall** en **Activada**. Se desinstalará el BHO después de la siguiente actualización de Microsoft Edge.
 
-## Vea también
+## <a name="see-also"></a>Vea también
 
-- [Solicitar actualizaciones a la lista de sitios incompatibles](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+- [Solicitar actualizaciones a la lista de sitios incompatibles](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Directivas de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
+- [Directivas de Microsoft Edge](./microsoft-edge-policies.md)

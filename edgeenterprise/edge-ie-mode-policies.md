@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar directivas de modo IE
-ms.openlocfilehash: 2d2ded3a3fb338bdf2d815d681b52249007945ac
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e33aa57b7877d50fe6a5d9e9a888d05c366b0ef0
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981090"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447364"
 ---
-# Configurar directivas de modo IE
+# <a name="configure-ie-mode-policies"></a>Configurar directivas de modo IE
 
 Este artículo explica cómo se configuran las directivas de modo IE.
 
@@ -31,13 +31,13 @@ La configuración del modo IE requiere tres pasos:
 3. (Opcional) [Redirigir sitios de IE a Microsoft Edge](#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
-> Las directivas para habilitar el modo IE se pueden configurar con Intune. Para obtener más información, consulta [Agregar Microsoft Edge a Microsoft Intune](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json) y [Configurar las directivas de Microsoft Edge con Microsoft Intune](https://docs.microsoft.com/DeployEdge/configure-edge-with-intune).
+> Las directivas para habilitar el modo IE se pueden configurar con Intune. Para obtener más información, consulta [Agregar Microsoft Edge a Microsoft Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) y [Configurar las directivas de Microsoft Edge con Microsoft Intune](./configure-edge-with-intune.md).
 
-## Configurar la integración de Internet Explorer
+## <a name="configure-internet-explorer-integration"></a>Configurar la integración de Internet Explorer
 
 Se puede configurar Internet Explorer para abrirlo directamente desde Microsoft Edge (modo IE). También se puede configurar Internet Explorer para abrirlo con una ventana independiente de Internet Explorer 11. La mayoría de los usuarios prefieren abrir los sitios directamente desde Microsoft Edge en modo IE.
 
-### Habilitar la integración de Internet Explorer mediante la directiva de grupo
+### <a name="enable-internet-explorer-integration-using-group-policy"></a>Habilitar la integración de Internet Explorer mediante la directiva de grupo
 
 1. Descarga u usa la última [plantilla administrativa de Microsoft Edge](https://www.microsoft.com/en-us/edge/business/download).
 2. Abre el Editor de directivas de grupo.
@@ -53,14 +53,14 @@ Se puede configurar Internet Explorer para abrirlo directamente desde Microsoft 
    > Establecer la directiva en **Deshabilitado** implica que la directiva deshabilita el modo IE, pero puede establecerse con las opciones de línea de comandos o edge://flags.
 7. Haz clic en **Aceptar** o en **Aplicar** para guardar esta configuración de directiva.
 
-## Redirigir sitios de Microsoft Edge al modo IE
+## <a name="redirect-sites-from-microsoft-edge-to-ie-mode"></a>Redirigir sitios de Microsoft Edge al modo IE
 
 Hay 2 opciones para identificar qué sitios deben abrirse en modo IE:
 
 - (Recomendado) [Configurar sitios en la lista de sitios de empresa](#configure-sites-on-the-enterprise-site-list)
 - [Configurar todos los sitios de intranet](#configure-all-intranet-sites)
 
-### Configurar los sitios de la lista de sitios de empresa
+### <a name="configure-sites-on-the-enterprise-site-list"></a>Configurar los sitios de la lista de sitios de empresa
 
 Puedes usar las siguientes directivas de grupo para configurar sitios específicos a abrir en modo IE:
 
@@ -71,10 +71,10 @@ Puedes usar las siguientes directivas de grupo para configurar sitios específic
 
 Para obtener más información sobre la lista de sitios de modo de empresa, consulta:
 
-- [Usar Enterprise Mode Site List Manager](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [Agregar varios sitios a la lista de sitios del modo de empresa mediante un archivo y la herramienta Enterprise Mode Site List Manager (esquema v.2)](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
+- [Usar Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
+- [Agregar varios sitios a la lista de sitios del modo de empresa mediante un archivo y la herramienta Enterprise Mode Site List Manager (esquema v.2)](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
 
-### Configurar usando la directiva de listas de sitios web de IE de modo de empresa
+### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>Configurar usando la directiva de listas de sitios web de IE de modo de empresa
 
 El modo IE puede usar la directiva existente que configura la Lista de sitios de empresas para Internet Explorer, lo que le permite crear y mantener una lista única.
 
@@ -90,7 +90,7 @@ El modo IE puede usar la directiva existente que configura la Lista de sitios de
     - Archivo local: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. Haz clic en **Aceptar** o **Aplicar** para guardar esta configuración.
 
-### Configurar con la directiva configurar el modo de empresa de lista de sitios
+### <a name="configure-using-the-configure-the-enterprise-mode-site-list-policy"></a>Configurar con la directiva configurar el modo de empresa de lista de sitios
 
 También es posible configurar el modo IE con una directiva independiente para Microsoft Edge. Esta directiva adicional permite anular la lista de sitios de Internet Explorer. Por ejemplo, algunas organizaciones dirigirán la lista de sitios de producción a todos los usuarios. Después, será posible implementar la lista de sitios piloto para un pequeño grupo de usuarios que usen esta directiva.
 
@@ -106,7 +106,7 @@ También es posible configurar el modo IE con una directiva independiente para M
     - Archivo local: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. Haz clic en **Aceptar** o **Aplicar** para guardar esta configuración.
 
-### Configurar todos los sitios de intranet
+### <a name="configure-all-intranet-sites"></a>Configurar todos los sitios de intranet
 
 El modo IE se puede configurar como "para todos los sitios" en la zona Intranet local. Es posible quitar sitios individuales del modo IE con una lista de sitios de modo de empresa.
 
@@ -119,7 +119,7 @@ El modo IE se puede configurar como "para todos los sitios" en la zona Intranet 
 3. Haz doble clic en **Enviar todos los sitios de intranet a Internet Explorer**.
 4. Selecciona **Habilitado** y luego haz clic en **Aceptar** o **Aplicar** para guardar la configuración de directiva.
 
-## Redirigir sitios de IE a Microsoft Edge
+## <a name="redirect-sites-from-ie-to-microsoft-edge"></a>Redirigir sitios de IE a Microsoft Edge
 
 Es posible impedir que los usuarios usen Internet Explorer para los sitios que no lo necesiten. Internet Explorer puede redirigir sitios automáticamente a Microsoft Edge si no están en la lista de sitios.
 
@@ -138,8 +138,8 @@ Es posible impedir que los usuarios usen Internet Explorer para los sitios que n
    - Microsoft Edge versión 45 o anterior
 9. Haz clic en **Aceptar** o **Aplicar** para guardar esta configuración.
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Acerca del modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Información adicional del modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Acerca del modo IE](./edge-ie-mode.md)
+- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

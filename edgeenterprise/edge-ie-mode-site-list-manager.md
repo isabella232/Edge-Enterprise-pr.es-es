@@ -10,37 +10,37 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Habilitar y usar Enterprise Site List Manager en Microsoft Edge '
-ms.openlocfilehash: 9700c2b78bba514525c4d80d211ef744dd175d2f
-ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
+ms.openlocfilehash: 51d431f838bcb385a5cd8f4ef85651e9254aed62
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "11312586"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447354"
 ---
-# Enterprise Site List Manager en Microsoft Edge
+# <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Enterprise Site List Manager en Microsoft Edge
 
 En este artículo, se explica cómo usar y habilitar el acceso de Enterprise Site List Manager en Microsoft Edge para crear, editar y exportar la lista de sitios del Modo de empresa para el modo Internet Explorer.
 
 > [!NOTE]
 > Este artículo se aplica a la versión 89 de Microsoft Edge o posteriores. 
 
-## Información general
+## <a name="overview"></a>Información general
 
 Enterprise Site List Manager es una versión dentro del explorador de la [herramienta independiente Enterprise Mode Site List Manager](https://www.microsoft.com/download/details.aspx?id=49974) que le permite crear, editar y exportar la lista de sitios de la organización.
 
 Las futuras mejoras en la herramienta para el modo Internet Explorer estarán disponibles a través de Enterprise Site List Manager en Microsoft Edge. La herramienta independiente seguirá estando disponible en el Centro de descargas, pero no recibirá ninguna actualización de características.
 
-## Habilitar el acceso a Enterprise Site List Manager
+## <a name="enabling-access-to-enterprise-site-list-manager"></a>Habilitar el acceso a Enterprise Site List Manager
 
-Puede configurar el acceso a la herramienta mediante la directiva de grupo [EnterpriseModeSiteListManagerAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enterprisemodesitelistmanagerallowed).
+Puede configurar el acceso a la herramienta mediante la directiva de grupo [EnterpriseModeSiteListManagerAllowed](./microsoft-edge-policies.md#enterprisemodesitelistmanagerallowed).
 
 Si está habilitada, los usuarios verán una opción denominada Enterprise Site List Manager en el panel de navegación izquierdo en *edge://compat*. Si está deshabilitado, los usuarios no verán el punto de entrada a Enterprise Site List Manager en el panel de navegación izquierdo. Este es el comportamiento predeterminado.
 
-## Usar Enterprise Site List Manager
+## <a name="using-the-enterprise-site-list-manager"></a>Usar Enterprise Site List Manager
 
-La herramienta Enterprise Site List Manager usa la versión 2 del esquema. Si importa la versión 1 del esquema a Enterprise Site List Manager (esquema v.2), se guardará el archivo XML en la versión 2 del esquema. Consulte la [Guía del esquema v.2 del Modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+La herramienta Enterprise Site List Manager usa la versión 2 del esquema. Si importa la versión 1 del esquema a Enterprise Site List Manager (esquema v.2), se guardará el archivo XML en la versión 2 del esquema. Consulte la [Guía del esquema v.2 del Modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
-### Agregar sitios únicos a la lista de sitios  
+### <a name="add-single-sites-to-your-site-list"></a>Agregar sitios únicos a la lista de sitios  
 
 Siga estos pasos para agregar sitios individuales a la lista de sitios.
 
@@ -52,9 +52,9 @@ Siga estos pasos para agregar sitios individuales a la lista de sitios.
 3. Seleccione una de las siguientes opciones en la lista**Abrir en** :
 
    - **IE11**. Abre el sitio en la aplicación IE11.
-   - **Modo IE**. Abre el sitio en modo Internet Explorer en Microsoft Edge si está habilitado y, en caso contrario, en la aplicación IE11. Consulte  [Modo Internet Explorer en Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode).
+   - **Modo IE**. Abre el sitio en modo Internet Explorer en Microsoft Edge si está habilitado y, en caso contrario, en la aplicación IE11. Consulte  [Modo Internet Explorer en Microsoft Edge](./edge-ie-mode.md).
    - **MSEdge**. Abre el sitio en Microsoft Edge.
-   - **Configurable**. Permite que el sitio participe en la determinación del motor en el modo IE. Consulte [Sitios configurables en modo IE](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode).
+   - **Configurable**. Permite que el sitio participe en la determinación del motor en el modo IE. Consulte [Sitios configurables en modo IE](./edge-learnmore-configurable-sites-ie-mode.md).
    - **Ninguno**. Se abre en el explorador que elija el usuario.  
 
 4. En  **Modo de compatibilidad**, elija una de las siguientes opciones:
@@ -66,13 +66,13 @@ Siga estos pasos para agregar sitios individuales a la lista de sitios.
 
    La ruta de acceso dentro de un dominio puede requerir un modo de compatibilidad distinto del propio dominio. Por ejemplo, el dominio podría verse bien en el explorador predeterminado IE11, pero la ruta de acceso puede tener problemas y requerir el uso del Modo de empresa. Si ha agregado el dominio anteriormente, su opción de compatibilidad original seguirá estando seleccionada. Sin embargo, si el dominio es nuevo, el  **Modo de empresa en IE8**  se selecciona de manera automática.
 
-   El Modo de empresa tiene prioridad sobre los modos de documento, por lo que los sitios que ya están incluidos en la lista de sitios del Modo de empresa no se verán afectados por esta actualización y seguirán cargándose en el Modo de empresa, como de costumbre. Para obtener información más específica acerca de los modos del documento, consulte  [Corregir problemas de compatibilidad web con los modos del documento y la lista de sitios del Modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/fix-compat-issues-with-doc-modes-and-enterprise-mode-site-list).
+   El Modo de empresa tiene prioridad sobre los modos de documento, por lo que los sitios que ya están incluidos en la lista de sitios del Modo de empresa no se verán afectados por esta actualización y seguirán cargándose en el Modo de empresa, como de costumbre. Para obtener información más específica acerca de los modos del documento, consulte  [Corregir problemas de compatibilidad web con los modos del documento y la lista de sitios del Modo de empresa](/internet-explorer/ie11-deploy-guide/fix-compat-issues-with-doc-modes-and-enterprise-mode-site-list).
 
-5. La casilla **Permitir redireccionamiento** se aplica al tratamiento de redireccionamientos del lado del servidor. Si marca esta casilla, se abrirán los redireccionamientos del lado del servidor en el explorador especificado por la etiqueta de apertura. Para más información, consulte  [aquí](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-attributes).
+5. La casilla **Permitir redireccionamiento** se aplica al tratamiento de redireccionamientos del lado del servidor. Si marca esta casilla, se abrirán los redireccionamientos del lado del servidor en el explorador especificado por la etiqueta de apertura. Para más información, consulte  [aquí](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance#updated-schema-attributes).
 6. Escriba los comentarios sobre el sitio web en el cuadro de **Comentario**. Los administradores solo pueden ver los comentarios mientras están en esta herramienta, y estos comentarios se conservan en el XML de la lista de sitios.
 7. Haga clic en  **Agregar** para agregar el sitio a la lista de sitios.
 
-### Exportar lista de sitios a XML
+### <a name="export-site-list-to-xml"></a>Exportar lista de sitios a XML
 
 Después de crear la lista de sitios en Enterprise Site List Manager, puede exportar el contenido a un archivo Enterprise Mode (.EMIE) o XML. 
 
@@ -85,21 +85,21 @@ Para exportar la lista de sitios, siga estos pasos:
 2. Escriba un **número de versión** y un **nombre de archivo**.
 3. Haga clic en **Exportar**.
 
-Puede guardar el archivo localmente o en un recurso compartido de red. No obstante, debe estar seguro de implementarlo en la ubicación especificada en la clave del Registro. Para obtener más información, consulte  [Activar el modo Internet Explorer y usar una lista de sitios](https://docs.microsoft.com/deployedge/edge-ie-mode-policies).
+Puede guardar el archivo localmente o en un recurso compartido de red. No obstante, debe estar seguro de implementarlo en la ubicación especificada en la clave del Registro. Para obtener más información, consulte  [Activar el modo Internet Explorer y usar una lista de sitios](./edge-ie-mode-policies.md).
 
-### Importar varios sitios a la lista de sitios
+### <a name="import-multiple-sites-to-your-site-list"></a>Importar varios sitios a la lista de sitios
 
 Después de crear el archivo .xml, puede agregar sitios de manera masiva al editor con **Importar desde XML**.
 
 Si desea reemplazar todo el contenido del editor, haga clic en los puntos suspensivos (...) y, a continuación, elija **Borrar lista**. Después de limpiar el editor, siga estos pasos para importar el sitio.
 
 1. En Enterprise Site List Manager, haga clic en **Importar desde XML**. 
-2. Haga clic en **Elegir archivo** para seleccionar la lista de sitios para agregar los sitios incluidos a la herramienta. Seleccione la lista de sitios que desea agregar y, a continuación, haga clic en **Abrir**. Los formatos admitidos para importar son .xml, .emie o .txt que contengan el esquema v.2 para la lista de sitios del Modo de empresa. Consulte la [Guía del esquema v.2 del Modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+2. Haga clic en **Elegir archivo** para seleccionar la lista de sitios para agregar los sitios incluidos a la herramienta. Seleccione la lista de sitios que desea agregar y, a continuación, haga clic en **Abrir**. Los formatos admitidos para importar son .xml, .emie o .txt que contengan el esquema v.2 para la lista de sitios del Modo de empresa. Consulte la [Guía del esquema v.2 del Modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 3. Haga clic en  **Cargar**  para agregar los sitios desde el archivo TP al editor.
 
-Puede guardar el archivo localmente o en un recurso compartido de red. No obstante, debe estar seguro de implementarlo en la ubicación especificada en la clave del Registro. Para obtener más información, consulte  [Activar el modo Internet Explorer y usar una lista de sitios](https://docs.microsoft.com/deployedge/edge-ie-mode-policies).
+Puede guardar el archivo localmente o en un recurso compartido de red. No obstante, debe estar seguro de implementarlo en la ubicación especificada en la clave del Registro. Para obtener más información, consulte  [Activar el modo Internet Explorer y usar una lista de sitios](./edge-ie-mode-policies.md).
 
-### Editar sitios en la lista de sitios
+### <a name="edit-sites-in-your-site-list"></a>Editar sitios en la lista de sitios
 
  Puede editar atributos de entradas de sitio existentes en Enterprise Site List Manager. También puede agregar, quitar o suprimir comentarios asociados.
 
@@ -111,21 +111,21 @@ Puede guardar el archivo localmente o en un recurso compartido de red. No obstan
 
 3. Haga clic en **Exportar a XML** y guarde el archivo actualizado.
 
-Puede guardar el archivo localmente o en un recurso compartido de red. No obstante, debe estar seguro de implementarlo en la ubicación especificada en la clave del Registro. Para obtener más información, consulte  [Activar el modo Internet Explorer y usar una lista de sitios](https://docs.microsoft.com/deployedge/edge-ie-mode-policies).
+Puede guardar el archivo localmente o en un recurso compartido de red. No obstante, debe estar seguro de implementarlo en la ubicación especificada en la clave del Registro. Para obtener más información, consulte  [Activar el modo Internet Explorer y usar una lista de sitios](./edge-ie-mode-policies.md).
 
-### Obtener una vista previa de la lista de sitios en formato XML
+### <a name="preview-your-site-list-in-xml-format"></a>Obtener una vista previa de la lista de sitios en formato XML
 
 Puede obtener una vista previa de los sitios en el editor en formato XML antes de exportar y guardar el archivo en la ubicación de la lista de sitios. Haga clic en **Vista previa XML** para abrir el archivo en una pestaña nueva.
 
-### Buscar en Enterprise Site List Manager
+### <a name="search-in-the-enterprise-site-list-manager"></a>Buscar en Enterprise Site List Manager
 
 Puede realizar una búsqueda para ver si un sitio específico ya aparece en la lista de sitios, de modo que no intente agregarlo de nuevo.
 
 Para buscar, escriba parte de la dirección URL en el cuadro de búsqueda  **Filtrar sitios por dirección URL** en la esquina superior derecha del editor.
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Acerca del modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Guía del esquema v.2 del Modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
-- [Información adicional del modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Acerca del modo IE](./edge-ie-mode.md)
+- [Guía del esquema v.2 del Modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
+- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

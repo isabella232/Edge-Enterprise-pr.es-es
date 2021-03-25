@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Usar Detección de sitio empresarial para preparar para el modo IE
-ms.openlocfilehash: 9ec748686b83466cd1c7d92fcc7fdc0f0d136977
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 2557544a93222b03aaa0961149aa0d3c5d7d8806
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981155"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447724"
 ---
-# Guía paso a paso para la Detección de sitio empresarial
+# <a name="enterprise-site-discovery-step-by-step-guide"></a>Guía paso a paso para la Detección de sitio empresarial
 
 Este artículo proporciona una guía paso a paso para usar la Detección de sitio empresarial con Administrador de configuración de Microsoft Endpoint.
 
@@ -29,7 +29,7 @@ Detección del sitio empresarial puede ayudarte a configurar la Lista de sitios 
 > [!NOTE]
 > Este artículo se aplica a los canales de Microsoft Edge **Estable**, **Beta** y **Dev**, versión 77 o posterior.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 En esta guía se presupone que está familiarizado con el uso de Administrador de configuración de Microsoft Endpoint y que tiene instaladas las siguientes funciones y servicios:
 
@@ -37,20 +37,20 @@ En esta guía se presupone que está familiarizado con el uso de Administrador d
 2. Microsoft SQL Server Reporting Services
 3. (Opcional) Rol de punto de servicios de creación de informes de Configuration Manager configurado
 
-## Descargar herramientas de Detección de sitio empresarial
+## <a name="download-enterprise-site-discovery-tools"></a>Descargar herramientas de Detección de sitio empresarial
 
 Descarga las herramientas siguientes:
 
 - [Paquete de configuración e instalación de Detección del sitio empresarial](https://go.microsoft.com/fwlink/p/?LinkId=517719)
 - [Creador de informes de Microsoft](https://www.microsoft.com/download/details.aspx?id=53613)
 
-## Habilitar la Detección de sitio empresarial
+## <a name="enable-enterprise-site-discovery"></a>Habilitar la Detección de sitio empresarial
 
 Para poder conectarte al Instrumental de administración de Windows (WMI) y recuperar los datos de detección del sitio, primero tienes que implementar el proveedor de clase WMI en el dispositivo.
 
 Desde el **paquete de configuración e instalación del sitio empresarial**, extrae el contenido en una carpeta del recurso compartido de la biblioteca de software definitiva. Ejemplo: **\\\\DSL\\EnterpriseSiteDiscovery**.
 
-Después, crea un paquete en el Administrador de configuración de Microsoft Endpoint, tal y como se describe en la [documentación](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs), seleccionando las opciones siguientes:
+Después, crea un paquete en el Administrador de configuración de Microsoft Endpoint, tal y como se describe en la [documentación](/configmgr/apps/deploy-use/packages-and-programs), seleccionando las opciones siguientes:
 
 - En la página **Paquete**, selecciona **Nombre** y especifica el nombre **Habilitar la detección del sitio**
 - En la página **Paquete**, selecciona **Este paquete contiene los archivos de origen**
@@ -68,11 +68,11 @@ Después, crea un paquete en el Administrador de configuración de Microsoft End
 Después de crear el paquete, haz doble clic en el nombre del paquete **Habilitar detección de sitio** para ver sus propiedades. En la propiedad **Después de ejecutar**, selecciona **Configuration Manager reinicia el equipo**. Se iniciará la recopilación de datos WMI cuando se reinicien los dispositivos.
 
 > [!NOTE]
-> Puedes configurar la cantidad de tiempo que un usuario tiene para reiniciar el dispositivo, como se describe en la [documentación de configuración del cliente](https://docs.microsoft.com/configmgr/core/clients/deploy/about-client-settings#computer-restart).
+> Puedes configurar la cantidad de tiempo que un usuario tiene para reiniciar el dispositivo, como se describe en la [documentación de configuración del cliente](/configmgr/core/clients/deploy/about-client-settings#computer-restart).
 
-## Configurar la Detección de sitio empresarial a través de la directiva de grupo
+## <a name="configure-enterprise-site-discovery-via-group-policy"></a>Configurar la Detección de sitio empresarial a través de la directiva de grupo
 
-Con la Detección de sitio empresarial habilitada, puedes configurar los datos que recopilarás. Ten en cuenta los requisitos de las leyes y normativas locales como se describe [aquí](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
+Con la Detección de sitio empresarial habilitada, puedes configurar los datos que recopilarás. Ten en cuenta los requisitos de las leyes y normativas locales como se describe [aquí](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected).
 
 1. Abre el Editor de directivas de grupo.
 2. Haz clic en **Configuración del equipo** > **Plantillas administrativas** > **Componentes de Windows** > **Internet Explorer**. 
@@ -103,7 +103,7 @@ Puedes limitar los dominios en los que recopilas datos del sitio:
 3. Escribe los dominios para los que quieres recopilar datos, un dominio por línea.
 4. Haz clic en **Aceptar** o **Aplicar** para guardar esta configuración de directiva.
 
-## Recopilar datos de Detección de sitio con Configuration Manager
+## <a name="collect-site-discovery-data-using-configuration-manager"></a>Recopilar datos de Detección de sitio con Configuration Manager
 
 Ahora que tus dispositivos generan datos, es el momento de recopilar estos datos en Configuration Manager.
 
@@ -121,16 +121,16 @@ Ahora que tus dispositivos generan datos, es el momento de recopilar estos datos
 
 Cuando el cliente actualiza la configuración desde el punto de administración, se notificarán los datos cuando se ejecute el siguiente inventario de hardware (de manera predeterminada, cada siete días).
 
-## Importar informes de Detección de sitio
+## <a name="import-site-discovery-reports"></a>Importar informes de Detección de sitio
 
 El paquete de tección de sitio empresarial incluye dos informes de ejemplo. Un informe muestra los sitios que usan los controles ActiveX y otro muestra los sitios que usan modos de documentos heredados.
 
-### Configura el informe de muestra de Detección de sitio
+### <a name="configure-the-site-discovery-sample-report"></a>Configura el informe de muestra de Detección de sitio
 
 Usa el siguiente procedimiento para crear un informe de ejemplo que use tres orígenes de datos: los sitios que visita el usuario, información sobre su sistema y los modos de documento que usan los sitios. Este informe te ayuda a identificar los sitios que pueden depender de modos de documentos heredados.
 
 1. Copia el informe **SCCM_Report-Site_Discovery.rdl** al servidor de Configuration Manager.
-2. Instala el [Generador de informes de Microsoft](https://docs.microsoft.com/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Instala el [Generador de informes de Microsoft](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
 3. Haz doble clic en **SCCM_Report-Site_Discovery.rdl** para abrir el informe en el Generador de informes.
 4. La primera vez que intentas abrir el informe, intentará ponerse en contacto con el servidor en el que se creó. Cuando se te pida **Conectar al servidor de informes**, haz clic en **No**.
 5. Cuando se abra el informe, expande **Orígenes de datos** y haz doble clic en **DataSource1**.
@@ -147,12 +147,12 @@ Usa el siguiente procedimiento para crear un informe de ejemplo que use tres or�
 16. Cierra el generador de informes de Microsoft.
 17. Cambia el nombre del archivo por **Detección de sitio.rdl**
 
-### Configurar el informe de ejemplo de ActiveX
+### <a name="configure-the-activex-sample-report"></a>Configurar el informe de ejemplo de ActiveX
 
 Usa el siguiente procedimiento para crear un informe de ejemplo que use un origen de datos: los sitios que usan controles ActiveX. Ya que Internet Explorer es el único explorador que admite controles ActiveX, estos sitios pueden requerir el modo IE.
 
 1. Copia el informe **Informe de muestra SCCM: ActiveX.rdl** en el servidor de Configuration Manager.
-2. Instala el [Generador de informes de Microsoft](https://docs.microsoft.com/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
+2. Instala el [Generador de informes de Microsoft](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15).
 3. Haz doble clic en **Informe de muestra SCCM: ActiveX.rdl** para abrir el informe en el generador de informes.
 4. La primera vez que intentas abrir el informe, intentará ponerse en contacto con el servidor en el que se creó. Cuando se te pida **Conectar al servidor de informes**, haz clic en **No**.
 5. Cuando se abra el informe, expande **Orígenes de datos** y haz doble clic en **AutoGen__5C6358F2_4BB6_4a1b_A16E_8D96795D8602_**.
@@ -167,7 +167,7 @@ Usa el siguiente procedimiento para crear un informe de ejemplo que use un orige
 14. Cierra el generador de informes de Microsoft.
 15. Cambia el nombre del archivo a **ActiveX**
 
-### Cargar informes configurados a Microsoft SQL Server Reporting Services
+### <a name="upload-configured-reports-to-microsoft-sql-server-reporting-services"></a>Cargar informes configurados a Microsoft SQL Server Reporting Services
 
 Una vez que hayas configurado los informes para tu entorno, cárgalos en el servidor de informes.
 
@@ -181,16 +181,16 @@ Una vez que hayas configurado los informes para tu entorno, cárgalos en el serv
 8. Selecciona el informe **Detección de sitio** y haz clic en **Aceptar**.
 9. Repite los pasos 7 y 8 para el informe de **ActiveX**.
 
-### Ver informes en Configuration Manager
+### <a name="view-reports-in-configuration-manager"></a>Ver informes en Configuration Manager
 
 Ahora que has personalizado y cargado los informes, puedes verlos en Configuration Manager.
 
 1. En la consola de Configuration Manager, elige **Supervisar** > **Creación de informes** > **Informes** > **Detección de sitio empresarial**
 2. Haz doble clic en un informe para verlo.
 
-## Deshabilitar la Detección de sitio empresarial
+## <a name="disable-enterprise-site-discovery"></a>Deshabilitar la Detección de sitio empresarial
 
-Cuando hayas terminado de recopilar datos, debes deshabilitar la detección de sitio empresarial. Crea un segundo paquete para deshabilitar la detección de sitio empresarial en el Administrador de configuración de Microsoft Endpoint, tal como se describe en la [documentación](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs), seleccionando las opciones siguientes:
+Cuando hayas terminado de recopilar datos, debes deshabilitar la detección de sitio empresarial. Crea un segundo paquete para deshabilitar la detección de sitio empresarial en el Administrador de configuración de Microsoft Endpoint, tal como se describe en la [documentación](/configmgr/apps/deploy-use/packages-and-programs), seleccionando las opciones siguientes:
 
 - En la página **Paquete**, selecciona **Nombre** y especifica el nombre **Deshabilitar la detección de sitio**
 - En la página **Paquete**, selecciona **Este paquete contiene los archivos de origen**
@@ -203,9 +203,9 @@ Cuando hayas terminado de recopilar datos, debes deshabilitar la detección de s
 - En la página **Programa estándar**, selecciona la opción para ejecutar **Oculto**
 - En la página **Programa estándar**, en **El programa se puede ejecutar**, selecciona la opción **Independientemente de si un usuario ha iniciado sesión**
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Acerca del modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Información adicional del modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Información adicional de Detección de sitio empresarial](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
+- [Acerca del modo IE](./edge-ie-mode.md)
+- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Información adicional de Detección de sitio empresarial](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)

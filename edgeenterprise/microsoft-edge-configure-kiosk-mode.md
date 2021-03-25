@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Obtenga información sobre las características del modo de pantalla completa y sobre cómo configurar las opciones del modo de pantalla completa de Microsoft Edge.
-ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 9d76bfcaebeaf56e627a401cc4f0375bce9d17a3
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442490"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448134"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurar el modo de pantalla completa en Microsoft Edge
 
@@ -48,17 +48,17 @@ En la tabla siguiente se enumeran las características compatibles con el modo d
 |-|-|-|-|-|
 |Navegación de InPrivate|esté|esté|89|esté|
 |Restablecer por inactividad|esté|esté|89|Y|
-|[Barra de direcciones de solo lectura](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (directiva) |N|esté |89|N|
-|[Eliminar descargas al salir](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (directiva)  | esté|esté |89|N|
+|[Barra de direcciones de solo lectura](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (directiva) |N|esté |89|N|
+|[Eliminar descargas al salir](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (directiva)  | esté|esté |89|N|
 |F11 bloqueado (entrada y salida en pantalla completa) | esté | esté | 89 |esté|
 |F12 bloqueado (Iniciar Herramientas de desarrollo) | esté | esté | 89 |Y|
 | Soporte con varias pestañas | N| esté| 89|Y|
-|[Permitir compatibilidad con direcciones URL](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (directiva)|esté|esté|89|N|
-|[Bloquear compatibilidad con direcciones URL](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (directiva)|Y|esté|89|N|
-|[Mostrar el botón Inicio](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (directiva)|N|esté|89|Y|
-|[Administrar favoritos](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (directiva)|N|esté|89|Y|
-|[Habilitar impresora](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (directiva)|Y|esté|89|Y|
-|[Configurar la nueva dirección URL de la página de pestaña](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (directiva)|N|esté||S|
+|[Permitir compatibilidad con direcciones URL](./microsoft-edge-policies.md#urlallowlist) (directiva)|esté|esté|89|N|
+|[Bloquear compatibilidad con direcciones URL](./microsoft-edge-policies.md#urlblocklist) (directiva)|Y|esté|89|N|
+|[Mostrar el botón Inicio](./microsoft-edge-policies.md#showhomebutton) (directiva)|N|esté|89|Y|
+|[Administrar favoritos](./microsoft-edge-policies.md#managedfavorites) (directiva)|N|esté|89|Y|
+|[Habilitar impresora](./microsoft-edge-policies.md#printingenabled) (directiva)|Y|esté|89|Y|
+|[Configurar la nueva dirección URL de la página de pestaña](./microsoft-edge-policies.md#newtabpagelocation) (directiva)|N|esté||S|
 |Botón Finalizar sesión * | N| esté| 89|Y|
 |Todas las direcciones URL internas de Microsoft Edge están bloqueadas, excepto *edge://downloads* y *edge://print* |N|esté|89|S|
 | CTRL+N bloqueado (abrir una nueva ventana) * | S | esté | 89 |Y|
@@ -66,7 +66,7 @@ En la tabla siguiente se enumeran las características compatibles con el modo d
 |La configuración y más (...) mostrará solo las opciones necesarias  |esté |esté |89 |esté|
 |Restringir el inicio de otras aplicaciones desde el explorador|Y|esté|90/91|Y|
 |Bloqueo de la configuración de impresión de la interfaz de usuario|Y|esté|90/91|Y|
-|[Establecer la página de la nueva pestaña como página principal](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (directiva)|-|-|TBD|S|
+|[Establecer la página de la nueva pestaña como página principal](./microsoft-edge-policies.md#homepageisnewtabpage) (directiva)|-|-|TBD|S|
 
 > [!NOTE]
 > Las características seguidas de "*" solo están habilitadas en un escenario de aplicación única de acceso asignado.
@@ -124,25 +124,25 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ## <a name="support-policies-for-kiosk-mode"></a>Directivas de soporte técnico para el modo de pantalla completa
 
-Usa cualquiera de las directivas de Microsoft Edge que se enumeran en la tabla siguiente para mejorar la experiencia de pantalla completa del tipo de pantalla completa de Microsoft Edge que configures. Para más información sobre estas directivas, consulta [Microsoft Edge: referencia de directiva de explorador](https://docs.microsoft.com/deployedge/microsoft-edge-policies).
+Usa cualquiera de las directivas de Microsoft Edge que se enumeran en la tabla siguiente para mejorar la experiencia de pantalla completa del tipo de pantalla completa de Microsoft Edge que configures. Para más información sobre estas directivas, consulta [Microsoft Edge: referencia de directiva de explorador](./microsoft-edge-policies.md).
 
 > [!NOTE]
 > La configuración de directivas no está limitada a las directivas enumeradas en la tabla siguiente, pero se deben probar directivas adicionales para garantizar que la funcionalidad del modo de pantalla completa no se vea afectada negativamente.
 
 |Directiva de grupo|Señalización digital\interactiva|Exploración pública de una sola aplicación|
 |--|--|--|
-|[Impresión](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printing-policies) | esté|esté |
-|[HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation) |N | esté|
-|[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton) |N | esté|
-|[NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) |N |esté |
-|[FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled) |N |esté |
-|[URLAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |esté |esté |
-|[URLBlocklist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |esté | esté|
-|[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | esté|
-|[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | esté|
-|[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|esté |
-|[Configuración de SmartScreen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |esté |Y |
-|[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|Y|esté|
+|[Impresión](./microsoft-edge-policies.md#printing-policies) | esté|esté |
+|[HomePageLocation](./microsoft-edge-policies.md#homepagelocation) |N | esté|
+|[ShowHomeButton](./microsoft-edge-policies.md#showhomebutton) |N | esté|
+|[NewTabPageLocation](./microsoft-edge-policies.md#newtabpagelocation) |N |esté |
+|[FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled) |N |esté |
+|[URLAllowlist](./microsoft-edge-policies.md#urlallowlist) |esté |esté |
+|[URLBlocklist](./microsoft-edge-policies.md#urlblocklist) |esté | esté|
+|[ManagedSearchEngines](./microsoft-edge-policies.md#managedsearchengines) |N | esté|
+|[UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed) |N | esté|
+|[VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) | N|esté |
+|[Configuración de SmartScreen](./microsoft-edge-policies.md#smartscreen-settings-policies) |esté |Y |
+|[EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)|Y|esté|
 
 ## <a name="microsoft-edge-with-assigned-access"></a>Microsoft Edge con acceso asignado
 
@@ -154,11 +154,11 @@ El modo de pantalla completa de Microsoft Edge con una sola aplicación de acces
 
 **¿Cómo puedo obtener la vista previa de Windows Insider?**
 
-Para instalar una versión preliminar de Windows 10 Insider en un PC, sigue las instrucciones que se indican en  [Introducción a las versiones preliminares de Windows 10 Insider](https://docs.microsoft.com/windows-insider/get-started).
+Para instalar una versión preliminar de Windows 10 Insider en un PC, sigue las instrucciones que se indican en  [Introducción a las versiones preliminares de Windows 10 Insider](/windows-insider/get-started).
 
 ### <a name="multi-app-kiosk"></a>Pantalla completa de varias aplicaciones
 
-Microsoft Edge se puede ejecutar con [acceso asignado a varias aplicaciones](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) en Windows 10, que es el equivalente del tipo de pantalla completa de "Exploración normal" de Microsoft Edge (versión anterior). Para configurar Microsoft Edge con acceso asignado de varias aplicaciones, sigue las instrucciones sobre cómo configurar una [pantalla completa de varias aplicaciones.](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) (El AUMID para el canal estable de Microsoft Edge es **MSEdge**).
+Microsoft Edge se puede ejecutar con [acceso asignado a varias aplicaciones](/windows/configuration/lock-down-windows-10-to-specific-apps) en Windows 10, que es el equivalente del tipo de pantalla completa de "Exploración normal" de Microsoft Edge (versión anterior). Para configurar Microsoft Edge con acceso asignado de varias aplicaciones, sigue las instrucciones sobre cómo configurar una [pantalla completa de varias aplicaciones.](/windows/configuration/lock-down-windows-10-to-specific-apps) (El AUMID para el canal estable de Microsoft Edge es **MSEdge**).
 
 Al usar Microsoft Edge con acceso asignado de varias aplicaciones, puede configurar la pantalla completa de Microsoft Edge para usar las [directivas de explorador de Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) para configurar la experiencia de exploración para satisfacer sus requisitos únicos.
 
@@ -166,7 +166,7 @@ Al usar Microsoft Edge con acceso asignado de varias aplicaciones, puede configu
 
 La configuración de Windows es la manera más sencilla de configurar uno o dos dispositivos de quiosco de aplicación única. Usa los siguientes pasos para configurar un equipo de quiosco de una sola aplicación.
 
-1. Instala la última versión preliminar de Windows 10 Insider, versiones 20215 o superiores. Sigue las instrucciones que se indican en [Introducción a las compilaciones preliminares de Windows 10 Insider](https://docs.microsoft.com/windows-insider/get-started).
+1. Instala la última versión preliminar de Windows 10 Insider, versiones 20215 o superiores. Sigue las instrucciones que se indican en [Introducción a las compilaciones preliminares de Windows 10 Insider](/windows-insider/get-started).
 2. Para probar las características más recientes, puede descargar el [canal Microsoft Edge Beta](https://www.microsoftedgeinsider.com/download) más reciente, versión 89 o posterior.
 3. En el ordenador quiosco, abra la configuración de Windows y escriba "quiosco" en el campo de búsqueda. Selecciona  **Configurar un quiosco (acceso asignado)**, como se muestra en la siguiente captura de pantalla, para abrir el cuadro de diálogo de creación del quiosco.
 
@@ -216,18 +216,18 @@ Con el lanzamiento de esta versión de vista previa de la modalidad de pantalla 
 
 Actualmente no admitimos las siguientes características y le recomendamos que las desactive:
 
-- [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
-- [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
-- [ManagedFavorites](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedfavorites)
-- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled)
-- [EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
-- [DefaultPopupsSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultpopupssetting)
-- [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
-- [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
-- [Extensiones](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
-- [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
+- [InPrivateModeAvailability](./microsoft-edge-policies.md#inprivatemodeavailability)
+- [IsolateOrigins](./microsoft-edge-policies.md#isolateorigins)
+- [ManagedFavorites](./microsoft-edge-policies.md#managedfavorites)
+- [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled)
+- [EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
+- [DefaultPopupsSetting](./microsoft-edge-policies.md#defaultpopupssetting)
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled)
+- [InternetExplorerIntegrationLevel](./microsoft-edge-policies.md#internetexplorerintegrationlevel)
+- [Extensiones](./microsoft-edge-policies.md#extensions-policies)
+- [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 
 ## <a name="roadmap"></a>Plan de desarrollo
 
@@ -245,5 +245,5 @@ Agregaremos las siguientes características y soporte:
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Planear su implementación de Microsoft Edge](deploy-edge-plan-deployment.md)
-- [Configurar quioscos multimedia y señales digitales en las ediciones de escritorio de Windows](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Configurar quioscos multimedia y señales digitales en las ediciones de escritorio de Windows](/windows/configuration/kiosk-methods)
 - [Planear la transición al modo de pantalla completa](microsoft-edge-kiosk-mode-transition-plan.md)

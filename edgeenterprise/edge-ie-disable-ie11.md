@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Obtenga información sobre cómo deshabilitar Internet Explorer 11 y usar el modo de Internet Explorer en Microsoft Edge.
-ms.openlocfilehash: a0486c2965b1868db67b6de1423f279905074410
-ms.sourcegitcommit: f34ff11499a2b96941e704103bdd959d19e3d7e7
+ms.openlocfilehash: 89fa6f81879be851f0036990a41e36e1eaee7fca
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400610"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447394"
 ---
 # <a name="disable-internet-explorer-11"></a>Deshabilitar Internet Explorer 11
 
@@ -45,7 +45,7 @@ Para las organizaciones que necesitan Internet Explorer 11 (IE11) para compatibi
 Después de configurar el modo IE, puede deshabilitar IE11 como explorador independiente **sin afectar a la funcionalidad del modo IE** toda la organización mediante directivas de grupo.
 
 > [!NOTE]
-> Si necesita la aplicación independiente IE11 para sitios específicos y quiere redirigir todo el tráfico del explorador a Microsoft Edge, puede configurar la política[Enviar todos los sitios que no están incluidos en la lista de sitios a Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge) para redirigir sitios de IE a Microsoft Edge.
+> Si necesita la aplicación independiente IE11 para sitios específicos y quiere redirigir todo el tráfico del explorador a Microsoft Edge, puede configurar la política[Enviar todos los sitios que no están incluidos en la lista de sitios a Microsoft Edge](./edge-ie-mode-policies.md#redirect-sites-from-ie-to-microsoft-edge) para redirigir sitios de IE a Microsoft Edge.
 
 ## <a name="user-experience-after-redirecting-traffic-to-microsoft-edge"></a>Experiencia del usuario después de redirigir tráfico a Microsoft Edge
 
@@ -67,7 +67,7 @@ Si la lista de sitios del modo de empresa contiene aplicaciones que están confi
 
 Para deshabilitar Internet Explorer 11 con una directiva de grupo, siga estos pasos:
 
-1. Asegúrese de que tiene las actualizaciones del sistema operativo necesarias previamente. Este paso actualizará los archivos ADMX directamente en el equipo (específicamente inetres.adml e inetres.admx). Tenga en cuenta que si quiere actualizar la Tienda central, deberá copiar los archivos .adml y .admx de una máquina que tenga las actualizaciones previas. Para más información, consulte [Crear y administrar la Tienda central](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+1. Asegúrese de que tiene las actualizaciones del sistema operativo necesarias previamente. Este paso actualizará los archivos ADMX directamente en el equipo (específicamente inetres.adml e inetres.admx). Tenga en cuenta que si quiere actualizar la Tienda central, deberá copiar los archivos .adml y .admx de una máquina que tenga las actualizaciones previas. Para más información, consulte [Crear y administrar la Tienda central](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Abra el editor de directivas de grupo.
 3. Vaya a ***configuración del equipo/Plantillas administrativas/Componentes de Windows/Internet Explorer***. 
 4. Haga doble clic en **Deshabilitar Internet Explorer 11 como explorador independiente**.
@@ -83,5 +83,5 @@ Para deshabilitar Internet Explorer 11 con una directiva de grupo, siga estos pa
 ## <a name="see-also"></a>Vea también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Acerca del modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Información adicional del modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Acerca del modo IE](./edge-ie-mode.md)
+- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

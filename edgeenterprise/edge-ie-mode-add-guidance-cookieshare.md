@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Como compartir cookies de Microsoft Edge a Internet Explorer '
-ms.openlocfilehash: ddd9d34b5e2b0ee49093734da82e4a4fa7aa6a69
-ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
+ms.openlocfilehash: d94c1337b7a3dbee789efb16e9c8b0a5ebc2c23b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "11238187"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447744"
 ---
-# Compartir cookies de Microsoft Edge a Internet Explorer
+# <a name="cookie-sharing-from-microsoft-edge-to-internet-explorer"></a>Compartir cookies de Microsoft Edge a Internet Explorer
 
 Este artículo explica cómo configurar el uso compartido de cookies de sesión de un proceso de Microsoft Edge al proceso de Internet Explorer, mientras se usa el modo de Internet Explorer.
 
 > [!NOTE]
 > Este artículo es aplicable para Microsoft Edge, versión 87 o posterior.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 - Actualizaciones de Windows
 
@@ -35,9 +35,9 @@ Este artículo explica cómo configurar el uso compartido de cookies de sesión 
   - Windows 10, versión 1803 (KB4577032 o superior)
 
 - Microsoft Edge, versión 87 o posterior
-- [Modo IE](https://aka.ms/iemodeonedge) configurado con la lista de sitios del Modo de empresa
+- [Modo IE](./edge-ie-mode.md) configurado con la lista de sitios del Modo de empresa
 
-## Introducción
+## <a name="overview"></a>Introducción
 
 Una configuración común en las organizaciones de gran tamaño consiste en tener una aplicación que funcione en un vínculo de explorador moderno a otra aplicación, que se puede configurar para abrir en modo de Internet Explorer con el inicio de sesión único (SSO) habilitado como parte del flujo de trabajo.
 
@@ -46,13 +46,13 @@ De forma predeterminada, los procesos de Microsoft Edge e Internet Explorer no c
 > [!NOTE]
 > Las cookies solo pueden ser compartidas de Microsoft Edge a Internet Explorer. No es posible compartir cookies de sesión de en inverso (de Internet Explorer a Microsoft Edge).
 
-## Cómo funciona el uso compartido de cookies
+## <a name="how-cookie-sharing-works"></a>Cómo funciona el uso compartido de cookies
 
 Se ha ampliado el XML de la lista de sitios de modo empresarial para permitir que otros elementos especifiquen cookies que se requieren compartir desde una sesión de Microsoft Edge con Internet Explorer.  
 
 La primera vez que se crea una pestaña en modo de Internet Explorer en una sesión de Microsoft Edge, todas las cookies correspondientes se comparten en la sesión de Internet Explorer. Por lo tanto, cada vez que se agregue, elimine o modifique un cookie que coincida con una regla, se enviará como una actualización de la sesión de Internet Explorer. Cuando se actualiza la lista de sitios, el conjunto de cookies compartidas también vuelve a evaluarse.
 
-### Elementos de esquema actualizados
+### <a name="updated-schema-elements"></a>Elementos de esquema actualizados
 
 En la siguiente tabla se describe el elemento de \<shared-cookie\> agregado para admitir la característica de uso compartido de cookies.
 
@@ -61,7 +61,7 @@ En la siguiente tabla se describe el elemento de \<shared-cookie\> agregado para
 | \<shared-cookie **domain**=".contoso.com" **name**="cookie1"\>\</shared-cookie\><br><br>O bien,<br><br>\<shared-cookie **host**="subdomain.contoso.com" **name**="cookie2"\>\</shared-cookie\>   |**(obligatorio)** un elemento de \<shared-cookie\> requiere, como mínimo, un *de dominio* (para las cookies del dominio) o un atributo *host* (solo para cookies de host) y un atributo *nombre* .<br>Deben ser coincidencias exactas con el dominio y el nombre de la cookie respectivamente. **Nota** los subdominios no coinciden.<br><br>El atributo *dominio* se usa para las cookies de dominio (y se permite un punto inicial, pero es opcional).<br>El atributo *host* se usa para las cookies solo de host (y un punto inicial es un error). Especifica ninguno o ambos producirá un error.<br>* Un cookie es una cookie de dominio si se especificó un dominio en la cadena de la cookie (a través de un encabezado o documento de respuesta cookie Set HTTP. cookie JS API). Las cookies de dominio se aplican a los dominios y subdominios especificados. Si un dominio no es establecido en la cadena cookie, el cookie es un cookie solo para host y solo se aplica al host específico en el que se haya establecido. Tenga en cuenta que algunas clases de direcciones URL, como nombres de host de una sola palabra (como, por ejemplo, http://intranetsite) y direcciones IP (por ejemplo, http://10.0.0.1) solo pueden establecer cookies solo de anfitrión.    |
 | \<shared-cookie **host**="subdomain.contoso.com" **name**="cookie2" **path**="/a/b/c"\>\</shared-cookie\>  | **(opcional)** un atributo *path* puede ser especificado Si no se especifica ningún atributo Path (o si el atributo path está vacío), las cookies que coinciden con Domain/host y Name coinciden con la Directiva, independientemente de la ruta de acceso (regla comodín).<br><br>Si se especifica una ruta de acceso, debe ser una coincidencia exacta.<br>Si un cookie coincide con una regla con una ruta de acceso, tiene prioridad sobre una regla sin una ruta de acceso. |
 
-#### Ejemplo de uso compartido
+#### <a name="sharing-example"></a>Ejemplo de uso compartido
 
 ```xml
 <site-list version="1">
@@ -71,9 +71,9 @@ En la siguiente tabla se describe el elemento de \<shared-cookie\> agregado para
 </site-list>
 ```
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
-- [Acerca del modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Información de sitios configurables](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode)
-- [Información adicional del modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Acerca del modo IE](./edge-ie-mode.md)
+- [Información de sitios configurables](./edge-learnmore-configurable-sites-ie-mode.md)
+- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

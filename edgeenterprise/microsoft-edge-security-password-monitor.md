@@ -10,41 +10,41 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Monitor de contraseñas habilitado automáticamente para usuarios
-ms.openlocfilehash: 2f796f0cd1bbb437f83d04a8bd59586ef7b6a982
-ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
+ms.openlocfilehash: d1995735ac7558c1608d427aac70081d4afed3a0
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "11304540"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447284"
 ---
-# Monitor de contraseñas habilitado automáticamente para usuarios
+# <a name="password-monitor-auto-enabled-for-users"></a>Monitor de contraseñas habilitado automáticamente para usuarios
 
 En este artículo se describe cómo se activará el Monitor de contraseñas en Microsoft Edge para los usuarios seleccionados y se ofrecen a los administradores los pasos para controlar cómo se habilita la monitorización.
 
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 88 o posterior.
 
-## Introducción, ventajas y disponibilidad
+## <a name="introduction-benefits-and-availability"></a>Introducción, ventajas y disponibilidad
 
 El Monitor de contraseñas ayuda a los usuarios de Microsoft Edge a proteger sus cuentas en línea informándoles si alguna de sus contraseñas ha sido encontrada en una filtración en línea. Las filtraciones en línea o las infracciones de datos ocurren cuando los usuarios malintencionados roban datos de sitios web o aplicaciones de terceros. Para más información, consulte el documento [Monitor de contraseñas: Proteger contraseñas en Microsoft Edge](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/)  en el blog de Microsoft Research.
 
-### Ventajas
+### <a name="benefits"></a>Ventajas
 
 Debido a la frecuencia y el ámbito de estos ataques en línea, tener este tipo de protección se ha vuelto algo necesario para todos los usuarios. Microsoft Edge tiene la capacidad integrada de comprobar de forma segura las contraseñas guardadas de los usuarios frente a contraseñas que se sabe que están en peligro y les avisa si se encuentra una coincidencia.  
 
-### Disponibilidad
+### <a name="availability"></a>Disponibilidad
 
 El Monitor de contraseñas está disponible en el Canal estable, versión 88, a partir del 21/1. El lanzamiento será gradual y podrían pasar algunas semanas antes de que vea el siguiente mensaje y control en la página **Configuración** > **Perfil** > **Contraseña**.
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Opción para habilitar el Monitor de contraseñas":::
 
-## Configurar la directiva de grupo para el Monitor de contraseñas
+## <a name="configure-group-policy-for-password-monitor"></a>Configurar la directiva de grupo para el Monitor de contraseñas
 
-Esta característica se controla mediante la directiva de grupo [PasswordMonitorAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#passwordmonitorallowed).
+Esta característica se controla mediante la directiva de grupo [PasswordMonitorAllowed](./microsoft-edge-policies.md#passwordmonitorallowed).
 
 Una vez habilitada la directiva, los usuarios aún necesitan dar su consentimiento para activar la característica. El consentimiento es necesario porque la característica contiene los datos personales y confidenciales del usuario (contraseñas). Si la característica está deshabilitada mediante la directiva de grupo, los usuarios no podrán invalidar esta configuración.  
 
-## Habilitar el Monitor de contraseñas para los usuarios
+## <a name="enabling-password-monitor-for-users"></a>Habilitar el Monitor de contraseñas para los usuarios
 
 Una vez habilitada la directiva de monitor de contraseñas, hay diferentes formas de que la característica esté disponible para los usuarios.
 
@@ -63,7 +63,7 @@ Una vez habilitada la directiva de monitor de contraseñas, hay diferentes forma
    
 - Activación directa. Los usuarios pueden ir a **Configuración** > **Contraseñas** en cualquier momento y Activar o Desactivar la característica.
 
-## Escenarios de usuario con el Monitor de contraseña habilitado automáticamente
+## <a name="user-scenarios-with-password-monitor-auto-enabled"></a>Escenarios de usuario con el Monitor de contraseña habilitado automáticamente
 
 En la tabla siguiente se muestran escenarios en los que el Monitor de contraseñas está habilitado automáticamente y cómo funcionará en los dispositivos de usuarios.
 
@@ -80,9 +80,9 @@ Además, si los usuarios han iniciado sesión con una cuenta de trabajo restring
 - La Sincronización de contraseñas está deshabilitada
 - El uso compartido de datos con servidores de Microsoft está deshabilitado
 
-## Preguntas más frecuentes
+## <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
-### ¿Cómo puedo deshabilitar el Monitor de contraseñas para mi organización?
+### <a name="how-can-password-monitor-be-disabled-for-my-organization"></a>¿Cómo puedo deshabilitar el Monitor de contraseñas para mi organización?
 
 Puede deshabilitar el Monitor de contraseñas de su organización mediante las siguientes acciones:
 - Usar la directiva de grupo PasswordMonitorAllowed.
@@ -91,10 +91,10 @@ Puede deshabilitar el Monitor de contraseñas de su organización mediante las s
   > [!NOTE]
   > El Monitor de contraseñas puede funcionar incluso si la Sincronización de contraseñas está deshabilitada, siempre y cuando el usuario haya dado su consentimiento explícito para activar la característica o la haya activado por sí mismo a través de Configuración.
 
-### ¿Qué sucede si un usuario para el que se ha habilitado automáticamente la característica desactiva el Monitor de contraseñas a través de Configuración?
+### <a name="what-happens-if-a-user-for-whom-the-feature-has-been-auto-enabled-turns-password-monitor-off-via-settings"></a>¿Qué sucede si un usuario para el que se ha habilitado automáticamente la característica desactiva el Monitor de contraseñas a través de Configuración?
 
 Se respeta la configuración del usuario y la característica permanecerá deshabilitada para ese usuario. Sin embargo, es posible que se le vuelva a mostrar un cuadro de diálogo de consentimiento en caso de que nunca antes haya respondido a la petición de consentimiento.
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

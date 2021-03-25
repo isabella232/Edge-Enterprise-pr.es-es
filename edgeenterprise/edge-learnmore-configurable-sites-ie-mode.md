@@ -10,18 +10,18 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge y sitios configurables en modo IE
-ms.openlocfilehash: a846d71d63a4f837041acc9b601f704999bb826a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1bffdef8c88b7a83d999b29763fcca258102ed51
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981188"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447334"
 ---
-# Obtenga información sobre los sitios configurables en modo IE
+# <a name="learn-about-configurable-sites-in-ie-mode"></a>Obtenga información sobre los sitios configurables en modo IE
 
 En este artículo, se explica la característica de sitios configurables de la lista de sitios del Modo de empresa al usar el modo IE en Microsoft Edge.
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 - Actualizaciones de Windows
 
@@ -34,17 +34,17 @@ En este artículo, se explica la característica de sitios configurables de la l
   - Windows 8.1 (KB4556798 o superior)
 
 - Microsoft Edge, versión 83 o posterior
-- [Modo IE](https://aka.ms/iemodeonedge) configurado con la lista de sitios del Modo de empresa
+- [Modo IE](./edge-ie-mode.md) configurado con la lista de sitios del Modo de empresa
 
-## Introducción
+## <a name="overview"></a>Introducción
 
 La configuración de sitios que necesitan el modo IE en la lista de sitios del Modo de empresa funcionará correctamente para la mayoría de los entornos con aplicaciones heredadas. Sin embargo, en algunos casos, este método no es el más adecuado para configurar un subconjunto de sitios para abrirlo en modo IE sin representar un dominio completo en modo IE. Por ejemplo, este método no es el más adecuado cuando el entorno contiene tanto aplicaciones modernas como heredadas que se ejecutan en un único servidor y usted quiere tener flexibilidad para representar en modo IE solo las aplicaciones heredadas, y para representar las aplicaciones restantes en el modo de Microsoft Edge.
 
 La solución consiste en usar la característica de sitios configurables de la lista de sitios del Modo de empresa. Cuando la característica está habilitada, Microsoft Edge permite a los sitios con la etiqueta "configurable" participar en la determinación del motor en modo IE.
 
-## Funcionamiento de los sitios configurables
+## <a name="how-configurable-sites-works"></a>Funcionamiento de los sitios configurables
 
-### Cambio automático del motor de Microsoft Edge al motor en modo IE
+### <a name="automatic-switching-from-the-microsoft-edge-engine-to-the-ie-mode-engine"></a>Cambio automático del motor de Microsoft Edge al motor en modo IE
 
 Para usar la característica de sitios configurables, necesitará uno o más sitios de la lista de sitios del Modo de empresa para tener la opción `<open-in>Configurable</open-in>`.
 
@@ -67,7 +67,7 @@ Cuando la característica de sitios configurables está habilitada, sucede lo si
    > [!NOTE]
    > La respuesta de redirección está sujeta al almacenamiento en caché, según el comportamiento normal de almacenamiento en caché de HTTP de Microsoft Edge para redirecciones.
 
-### Volver a cambiar el motor del modo IE al motor de Microsoft Edge
+### <a name="switching-back-from-ie-mode-engine-to-microsoft-edge-engine"></a>Volver a cambiar el motor del modo IE al motor de Microsoft Edge
 
 Al habilitar los sitios configurables en Microsoft Edge, se habilitan automáticamente los siguientes comportamientos en las pestañas del modo IE:
 
@@ -81,8 +81,8 @@ Al habilitar los sitios configurables en Microsoft Edge, se habilitan automátic
 > [!TIP]
 > Ambos motores de exploración envían el mismo encabezado de solicitud "`X-InternetExplorerModeConfigurable: 1`" a sitios configurables. Debe usar el encabezado de solicitud de agente de usuario para distinguir las solicitudes del modo de Microsoft Edge de las del modo IE, para evitar el redireccionamiento cuando el sitio ya se está cargando en el motor adecuado.
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
-- [Acerca del modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Información adicional del modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Acerca del modo IE](./edge-ie-mode.md)
+- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

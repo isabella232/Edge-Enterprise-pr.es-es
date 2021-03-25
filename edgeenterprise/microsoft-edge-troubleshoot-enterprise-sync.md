@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Instrucciones y herramientas que un administrador de Microsoft Edge puede usar para solucionar los problemas comunes de sincronización de la empresa
-ms.openlocfilehash: 767b26c74e91213b407e8264a8ed185f38dfc2e9
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: 49fb0c5fc555e4f7ad4c728477387e931a5fbb5f
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400211"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447164"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Diagnosticar y corregir problemas de sincronización de Microsoft Edge
 
@@ -49,10 +49,10 @@ Si se produce este error en una cuenta de Azure Active Directory, o si aparece D
 > [!NOTE]
 > Como el origen de este error suele ser un cambio de configuración en una cuenta empresarial de Azure Active Directory, estos pasos de solución de problemas solo los puede realizar un administrador de inquilinos y no los usuarios finales.
 
-1. Comprueba que el inquilino empresarial tenga una suscripción compatible con M365. Aquí se proporciona la lista actual de los tipos de suscripción [aquí](https://docs.microsoft.com/azure/information-protection/activate-office365). Si el inquilino no tiene una suscripción compatible, puede comprar Azure Information Protection por separado o actualizar a una de las suscripciones compatibles.
-2. Si hay disponible una suscripción compatible, compruebe que el inquilino tenga disponible Azure Information Protection (AIP). Las instrucciones para comprobar el estado de AIP y, si es necesario, activar AIP [aquí](https://docs.microsoft.com/azure/information-protection/activate-office365).
-3. Si el paso 2 muestra que AIP está activo pero la sincronización sigue sin funcionar, activa la itinerancia de estado empresarial (ESR). [Aquí](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable) se indican las instrucciones para habilitar ESR. Ten en cuenta que ESR no necesita mantenerse activa. Puede desactivar ESR si este paso soluciona el problema.
-4. Confirme que Azure Information Protection no tiene un ámbito a través de una directiva de incorporación. Puede usar el applet [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) de PowerShell para ver si el ámbito está habilitado. Los dos ejemplos siguientes muestran una configuración sin ámbito y una configuración con ámbito para un grupo de seguridad específico.
+1. Comprueba que el inquilino empresarial tenga una suscripción compatible con M365. Aquí se proporciona la lista actual de los tipos de suscripción [aquí](/azure/information-protection/activate-office365). Si el inquilino no tiene una suscripción compatible, puede comprar Azure Information Protection por separado o actualizar a una de las suscripciones compatibles.
+2. Si hay disponible una suscripción compatible, compruebe que el inquilino tenga disponible Azure Information Protection (AIP). Las instrucciones para comprobar el estado de AIP y, si es necesario, activar AIP [aquí](/azure/information-protection/activate-office365).
+3. Si el paso 2 muestra que AIP está activo pero la sincronización sigue sin funcionar, activa la itinerancia de estado empresarial (ESR). [Aquí](/azure/active-directory/devices/enterprise-state-roaming-enable) se indican las instrucciones para habilitar ESR. Ten en cuenta que ESR no necesita mantenerse activa. Puede desactivar ESR si este paso soluciona el problema.
+4. Confirme que Azure Information Protection no tiene un ámbito a través de una directiva de incorporación. Puede usar el applet [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) de PowerShell para ver si el ámbito está habilitado. Los dos ejemplos siguientes muestran una configuración sin ámbito y una configuración con ámbito para un grupo de seguridad específico.
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
@@ -71,9 +71,9 @@ Si se produce este error en una cuenta de Azure Active Directory, o si aparece D
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   Si el ámbito está habilitado, el usuario afectado debe agregarse al grupo de seguridad del ámbito o debería quitarse. En el ejemplo siguiente, la integración tiene ámbito AIP para el grupo de seguridad indicado y el ámbito debe quitarse con el sub applet set-AadrmOnboardingControlPolicy[](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell de [.](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps)
+   Si el ámbito está habilitado, el usuario afectado debe agregarse al grupo de seguridad del ámbito o debería quitarse. En el ejemplo siguiente, la integración tiene ámbito AIP para el grupo de seguridad indicado y el ámbito debe quitarse con el sub applet set-AadrmOnboardingControlPolicy[](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell de [.](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps)
 
-5. Confirma que IP DomainService esté activado en el espacio empresarial. El applet de PowerShell [Get-AadrmConfiguración](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) muestra el estado del servicio.
+5. Confirma que IP DomainService esté activado en el espacio empresarial. El applet de PowerShell [Get-AadrmConfiguración](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) muestra el estado del servicio.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Comprueba si IPCv3Service está habilitado.":::
 
@@ -99,7 +99,7 @@ Si se produce este error en una cuenta de Azure Active Directory, o si aparece D
       - [https://api.aadrm.com](https://api.aadrm.com)(para la mayoría de los espacios empresariales)
       - [https://api.aadrm.de](https://api.aadrm.de)(para los espacios empresariales de Alemania)
       - [https://api.aadrm.cn](https://api.aadrm.cn)(para los espacios empresariales de China)
-   - [Puntos de conexión del Servicio de notificaciones de Windows](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
+   - [Puntos de conexión del Servicio de notificaciones de Windows](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 
 5. Si el problema aún no está arreglado, contacta el [soporte técnico de Microsoft Edge](https://www.microsoftedgeinsider.com/support).
 
@@ -116,7 +116,7 @@ Este error está visible en la parte inferior de **Escribir información** en *e
 
 ### <a name="issue-sync-has-been-turned-off-by-your-administrator"></a>Problema: "Tu administrador ha desactivado la sincronización."
 
-Asegúrese de que las [Directiva SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled)  no esté establecida.
+Asegúrese de que las [Directiva SyncDisabled](./microsoft-edge-policies.md#syncdisabled)  no esté establecida.
 
 ## <a name="see-also"></a>Vea también
 

@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar las opciones de directiva de Microsoft Edge en macOS con un .plist
-ms.openlocfilehash: abe110ab3589cc9276f28590273ece2d372be3b8
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
+ms.openlocfilehash: 3f297c11d8009c85a1bc5e17447681ee2b9ef1e2
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194697"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447454"
 ---
-# Configurar las opciones de directiva de Microsoft Edge en macOS con un .plist
+# <a name="configure-microsoft-edge-policy-settings-for-macos-using-a-plist"></a>Configurar las opciones de directiva de Microsoft Edge en macOS con un .plist
 
 En este artículo se describe cómo configurar Microsoft Edge en macOS con un archivo de lista de propiedades (.plist). Obtendrá información sobre cómo crear este archivo e implementarlo en Microsoft Intune.
 
@@ -26,7 +26,7 @@ Para obtener más información, consulta [Acerca de los archivos de lista de pro
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
-## Configurar las directivas de Microsoft Edge en macOS
+## <a name="configure-microsoft-edge-policies-on-macos"></a>Configurar las directivas de Microsoft Edge en macOS
 
 El primer paso es crear el archivo plist. Puedes crear el archivo plist con cualquier editor de texto o puedes usar [Terminal para crear el perfil de configuración](#create-a-configuration-profile-using-terminal). Sin embargo, es más fácil crear y editar un archivo plist con una herramienta que te dé formato al código XML. *Xcode* es un entorno de desarrollo integrado gratuito que puedes obtener desde una de las siguientes ubicaciones:
 
@@ -42,7 +42,7 @@ El siguiente paso después de crear el contenido del archivo plist, es asignarle
 
 El último paso es implementar el archivo plist en los dispositivos Mac de los usuarios con el proveedor de MDM que prefieras, como Microsoft Intune. Para obtener instrucciones, consulta [Implementar el archivo plist](#deploy-your-plist).
 
-### Crear un perfil de configuración con Terminal
+### <a name="create-a-configuration-profile-using-terminal"></a>Crear un perfil de configuración con Terminal
 
 1. En Terminal, usa el siguiente comando para crear un archivo plist para Microsoft Edge en el escritorio, con la configuración que prefieras:
 
@@ -61,13 +61,13 @@ Después de convertir el archivo, comprueba que los datos de la directiva sean c
 > [!NOTE]
 > Solo los pares de clave y valor deben encontrarse en el contenido del archivo plist o xml. Antes de cargar el archivo en Intune, elimine todos los valores de \<plist> y \<dict> los encabezados XML del archivo. El archivo solo debe contener pares de clave y valor.
 
-## Implementar el archivo plist
+## <a name="deploy-your-plist"></a>Implementar el archivo plist
 
-Para Microsoft Intune, crea un nuevo perfil de configuración de dispositivo destinado a la plataforma macOS y selecciona el tipo de perfil del *Archivo de preferencias*. Elige como destino **com.microsoft.Edge** como nombre de dominio preferente y carga el plist. Para obtener más información, consulta [Agregar un archivo de lista de propiedades a dispositivos macOS con Microsoft Intune](https://docs.microsoft.com/intune/configuration/preference-file-settings-macos).
+Para Microsoft Intune, crea un nuevo perfil de configuración de dispositivo destinado a la plataforma macOS y selecciona el tipo de perfil del *Archivo de preferencias*. Elige como destino **com.microsoft.Edge** como nombre de dominio preferente y carga el plist. Para obtener más información, consulta [Agregar un archivo de lista de propiedades a dispositivos macOS con Microsoft Intune](/intune/configuration/preference-file-settings-macos).
 
 Para Jamf, carga el archivo .plist como una carga de *Configuración personalizada*.
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para macOS con Jamf](configure-microsoft-edge-on-mac-jamf.md)

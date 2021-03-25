@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Preguntas más frecuentes y solución de problemas de Microsoft Edge con el modo IE
-ms.openlocfilehash: 565af265811e0e4814d82859f638ae9abcd0a014
-ms.sourcegitcommit: ef30fe37d0d115af0d4402c9005f5d0d1ba54b6c
+ms.openlocfilehash: f5279caddb5d3dfabaf04be6bd927f7095be1fc9
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11431817"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447734"
 ---
 # <a name="ie-mode-faq"></a>Preguntas más frecuentes sobre el modo IE
 
@@ -41,7 +41,7 @@ Puede obtener información de diagnóstico del modo Internet Explorer en la pest
 
 ### <a name="error-message-to-open-this-page-in-internet-explorer-mode-reinstall-microsoft-edge-with-administrator-privileges"></a>Mensaje de error: "Para abrir esta página en modo Internet Explorer, vuelve a instalar Microsoft Edge con privilegios de administrador".
 
-Es posible que vea este error si no tiene todas las actualizaciones de Windows necesarias. Consulte los requisitos previos listados en [acerca del modo de IE](https://docs.microsoft.com/deployedge/edge-ie-mode) para las versiones requeridas de Windows y Microsoft Edge.
+Es posible que vea este error si no tiene todas las actualizaciones de Windows necesarias. Consulte los requisitos previos listados en [acerca del modo de IE](./edge-ie-mode.md) para las versiones requeridas de Windows y Microsoft Edge.
 
 Si ya ha instalado todas las actualizaciones de Windows necesarias, es posible que vea este error si:
 
@@ -66,7 +66,7 @@ Es probable que vea este error si realiza la depuración de forma remota y naveg
 
 ### <a name="error-message-error-could-not-retrieve-emie-site-list"></a>Mensaje de error: "Error: no se pudo recuperar la lista de sitios de EMIE".
 
-Es posible que veas este error en la página *edge://compat/enterprise* indicando que no se pudo descargar la lista de sitios. A partir de la versión 87 de Microsoft Edge, cuando las cookies se bloquean para solicitudes de terceros usando la directiva [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) la autenticación HTTP también está prohibida. Puedes permitir cookies para el dominio específico que hospeda la Lista de sitios del modo de empresa usando la directiva [CookiesAllowedForURls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) para asegurarte de que las descargas de listas de sitios son correctas.
+Es posible que veas este error en la página *edge://compat/enterprise* indicando que no se pudo descargar la lista de sitios. A partir de la versión 87 de Microsoft Edge, cuando las cookies se bloquean para solicitudes de terceros usando la directiva [BlockThirdPartyCookies](./microsoft-edge-policies.md#blockthirdpartycookies) la autenticación HTTP también está prohibida. Puedes permitir cookies para el dominio específico que hospeda la Lista de sitios del modo de empresa usando la directiva [CookiesAllowedForURls](./microsoft-edge-policies.md#cookiesallowedforurls) para asegurarte de que las descargas de listas de sitios son correctas.
 
 ## <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
@@ -104,5 +104,5 @@ Tenga en cuenta que esta funcionalidad requiere las siguientes actualizaciones m
 ## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Acerca del modo IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Información adicional del modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Acerca del modo IE](./edge-ie-mode.md)
+- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

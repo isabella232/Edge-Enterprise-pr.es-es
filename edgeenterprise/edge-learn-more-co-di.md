@@ -10,26 +10,26 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprende sobre ClickOnce y DirectInvoke en Microsoft Edge.
-ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
-ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
+ms.openlocfilehash: 1103c4f5c071b0d04c347a7c7c9fbc5556c4c0fb
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11012800"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447674"
 ---
-# Conocer las funciones de ClickOnce y DirectInvoke en Microsoft Edge
+# <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Conocer las funciones de ClickOnce y DirectInvoke en Microsoft Edge
 
 ClickOnce y DirectInvoke son funciones disponibles en IE y Microsoft Edge (versión 45 y versiones anteriores) que admiten el uso de un controlador de archivos para descargar archivos desde un sitio web. Aunque sirven para fines diferentes, ambas funciones permiten que los sitios web especifiquen que un archivo solicitado para descarga se pasa a un controlador de archivos en el dispositivo del usuario. El controlador de archivos nativo de Windows controla las solicitudes de ClickOnce. Las solicitudes DirectInvoke se controlan mediante un controlador de archivos registrado especificado mediante el sitio web que hospeda el archivo.
 
 Para obtener más información sobre estas funciones, consulta:
 
-- [ClickOnce](https://docs.microsoft.com/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
+- [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
 - [DirectInvoke]( https://technet.microsoft.com/learning/jj215788(v=vs.94).aspx)
 
 > [!NOTE]
 > Actualmente, Chromium no proporciona compatibilidad nativa para ClickOnce ni DirectInvoke.
 
-## Introducción: requisitos previos y proceso
+## <a name="overview-prerequisites-and-process"></a>Introducción: requisitos previos y proceso
 
 Para que ClickOnce y DirectInvoke funcionen como se espera y para que el controlador de archivos se solicite correctamente, el controlador de archivos debe estar registrado en el sistema operativo como compatible con ClickOnce o DirectInvoke. Este registro suele producirse cuando está instalado el sistema operativo original o cuando un programa nuevo que está instalado solicita la capacidad de usar DirectInvoke para actualizaciones.
 
@@ -43,7 +43,7 @@ Cuando un sitio web recibe una solicitud de descarga que requiera ClickOnce o Di
   > [!NOTE]
   > La dirección URL se usa para determinar el origen del archivo, así como los parámetros que se deben usar para acceder al archivo.  Por ejemplo: puntos de conexión, un manifiesto o metadatos.
 
-## Casos de uso
+## <a name="use-cases"></a>Casos de uso
 
 Los siguientes casos de uso son representativos.
 
@@ -51,7 +51,7 @@ Puedes usar ClickOnce para implementar y actualizar fácilmente software en disp
 
 Los casos de uso de DirectInvoke dependen del propósito del sitio web que solicita DirectInvoke. Por ejemplo, la función de edición de archivos colaborativa de Microsoft Word. En lugar de hacer clic en un vínculo y descargar toda la copia de un documento en el que estás trabajando con tus colegas, DirectInvoke te permite descargar las partes del documento que se han cambiado. Esta estrategia reduce la cantidad de datos transferidos y puede reducir el tiempo necesario para abrir el documento.  
 
-## Compatibilidad actual de ClickOnce y DirectInvoke en Microsoft Edge
+## <a name="current-support-for-clickonce-and-directinvoke-in-microsoft-edge"></a>Compatibilidad actual de ClickOnce y DirectInvoke en Microsoft Edge
 
 Compatibilidad con ClickOnce y DirectInvoke:
 
@@ -62,7 +62,7 @@ Compatibilidad con ClickOnce y DirectInvoke:
 
 - ClickOnce y DirectInvoke no son compatibles con ninguna otra plataforma que no sea Windows.
 
-## Seguridad de administración de archivos de ClickOnce y DirectInvoke
+## <a name="clickonce-and-directinvoke-file-handling-security"></a>Seguridad de administración de archivos de ClickOnce y DirectInvoke
 
 ClickOnce y DirectInvoke están protegidos por el servicio de análisis de reputación de direcciones URL de SmartScreen de Microsoft Defender.
 
@@ -85,15 +85,15 @@ El segundo elemento emergente solo aparece si:
 > [!NOTE]
 > Si se deshabilitan ClickOnce o DirectInvoke, los archivos solicitados se tratan como descargas normales y, si están marcados como no seguros, se registrarán como no seguros. Esto es coherente con el tratamiento de otras descargas no seguras.
 
-## Directivas ClickOnce y DirectInvoke
+## <a name="clickonce-and-directinvoke-policies"></a>Directivas ClickOnce y DirectInvoke
 
-Hay dos directivas de grupo que puedes usar para habilitar o deshabilitar ClickOnce y DirectInvoke para los usuarios de empresa. Estas dos directivas son [ClickOnceEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#clickonceenabled) y [DirectInvokeEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#directinvokeenabled). Estas dos directivas se etiquetan en el Editor de directivas de grupo como "Permitir que los usuarios abran archivos mediante el protocolo ClickOnce" y "Permitir que los usuarios abran archivos mediante el protocolo DirectInvoke", respectivamente.
+Hay dos directivas de grupo que puedes usar para habilitar o deshabilitar ClickOnce y DirectInvoke para los usuarios de empresa. Estas dos directivas son [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) y [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). Estas dos directivas se etiquetan en el Editor de directivas de grupo como "Permitir que los usuarios abran archivos mediante el protocolo ClickOnce" y "Permitir que los usuarios abran archivos mediante el protocolo DirectInvoke", respectivamente.
 
-## Comportamiento ClickOnce y DirectInvoke
+## <a name="clickonce-and-directinvoke-behavior"></a>Comportamiento ClickOnce y DirectInvoke
 
 En los siguientes ejemplos se muestra el control de archivos cuando se habilitan o deshabilitan ClickOnce y DirectInvoke.
 
-### ClickOnce habilitado
+### <a name="clickonce-enabled"></a>ClickOnce habilitado
 
 1. Un usuario abre un vínculo a una página que solicita soporte de ClickOnce y recibe el aviso de la siguiente captura de pantalla.
 
@@ -110,13 +110,13 @@ En los siguientes ejemplos se muestra el control de archivos cuando se habilitan
    > [!NOTE]
    > La interfaz, los mensajes y las opciones mostradas mediante el controlador de archivos de ClickOnce variará según el tipo y la configuración del archivo al que se accede.
 
-### ClickOnce deshabilitado
+### <a name="clickonce-disabled"></a>ClickOnce deshabilitado
 
 1. Cuando un usuario abre un vínculo a una página que solicita compatibilidad con ClickOnce, verá un mensaje en la bandeja de descarga similar al que se muestra en la siguiente captura de pantalla.
 
    ![Aviso de descarga de archivo](./media/edge-learn-more-co-di/edge-clickonce-disabled-1.png)
 
-### DirectInvoke habilitado
+### <a name="directinvoke-enabled"></a>DirectInvoke habilitado
 
 1. Un usuario abre un vínculo a una página que solicita soporte de DirectInvoke y recibe el aviso de la siguiente captura de pantalla.
 
@@ -127,14 +127,14 @@ En los siguientes ejemplos se muestra el control de archivos cuando se habilitan
    > [!NOTE]
    > La interfaz, los mensajes y las opciones mostradas mediante el controlador de archivos de DirectInvoke variará según el tipo y la configuración del archivo al que se accede.
 
-### DirectInvoke deshabilitado
+### <a name="directinvoke-disabled"></a>DirectInvoke deshabilitado
 
 1. Cuando un usuario abre un vínculo a una página que solicita soporte de DirectInvoke, DirectInvoke se comporta del mismo modo que cuando se deshabilita ClickOnce. Aparecerá un mensaje en la bandeja de descargas similar al que se muestra en la siguiente captura de pantalla.
 
    ![Aviso de abrir archivo](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 
-- [Seguridad e implementación de ClickOnce](https://go.microsoft.com/fwlink/?linkid=2099880)
-- [DirectInvoke en Internet Explorer](https://go.microsoft.com/fwlink/?linkid=2099871)
+- [Seguridad e implementación de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [DirectInvoke en Internet Explorer](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85))
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

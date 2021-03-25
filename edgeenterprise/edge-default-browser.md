@@ -10,23 +10,23 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprende a establecer Microsoft Edge como explorador predeterminado
-ms.openlocfilehash: c8cc45e0fe42dcbbd828dd81ae568f141cda2985
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9151294c34cb2252a7fb32e660c1e3d9e64b5f76
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981092"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447764"
 ---
-# Establecer Microsoft Edge como explorador predeterminado
+# <a name="set-microsoft-edge-as-the-default-browser"></a>Establecer Microsoft Edge como explorador predeterminado
 
 En este artículo se explica como puedes establecer Microsoft Edge como explorador predeterminado en Windows y macOS.
 
 > [!NOTE]
-> Este artículo se aplica a Microsoft Edge, versión 77 o posterior, en Windows 8 y Windows 10. Para Windows 7 y macOS, consulta la directiva [Establecer Microsoft Edge como explorador predeterminado](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultbrowsersettingenabled).
+> Este artículo se aplica a Microsoft Edge, versión 77 o posterior, en Windows 8 y Windows 10. Para Windows 7 y macOS, consulta la directiva [Establecer Microsoft Edge como explorador predeterminado](./microsoft-edge-policies.md#defaultbrowsersettingenabled).
 
-## Introducción
+## <a name="introduction"></a>Introducción
 
-Puedes usar la directiva de grupo **Establecer un archivo de configuración de asociaciones predeterminadas**, o la configuración de Administración de dispositivos móviles [DefaultAssociationsConfiguration](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) para establecer Microsoft Edge como explorador predeterminado para la organización.
+Puedes usar la directiva de grupo **Establecer un archivo de configuración de asociaciones predeterminadas**, o la configuración de Administración de dispositivos móviles [DefaultAssociationsConfiguration](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) para establecer Microsoft Edge como explorador predeterminado para la organización.
 
 Para establecer el canal estable de Microsoft Edge como explorador predeterminado para los archivos html, los vínculos http/https y los archivos PDF, usa el siguiente ejemplo de archivo de asociación de aplicaciones:
 
@@ -48,11 +48,11 @@ Para establecer el canal estable de Microsoft Edge como explorador predeterminad
 > [!NOTE]
 > Las asociaciones de archivo predeterminadas no se aplican si Microsoft Edge no está instalado en el dispositivo de destino. En este escenario, se pide al usuario que seleccione su aplicación predeterminada cuando abre un vínculo o un archivo htm/html.
 
-## Establecer Microsoft Edge como explorador predeterminado en dispositivos unidos al dominio
+## <a name="set-microsoft-edge-as-the-default-browser-on-domain-joined-devices"></a>Establecer Microsoft Edge como explorador predeterminado en dispositivos unidos al dominio
 
-Puedes establecer Microsoft Edge como explorador predeterminado en dispositivos unidos al dominio configurando la directiva de grupo **Establecer un archivo de configuración de asociaciones predeterminado**. Activar esta directiva de grupo requiere crear y almacenar un archivo de configuración de asociaciones predeterminado. Este archivo se almacena localmente o en un recurso compartido de red. Para obtener más información sobre cómo crear este archivo, consulta [Exportar o importar asociaciones de aplicaciones predeterminadas](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
+Puedes establecer Microsoft Edge como explorador predeterminado en dispositivos unidos al dominio configurando la directiva de grupo **Establecer un archivo de configuración de asociaciones predeterminado**. Activar esta directiva de grupo requiere crear y almacenar un archivo de configuración de asociaciones predeterminado. Este archivo se almacena localmente o en un recurso compartido de red. Para obtener más información sobre cómo crear este archivo, consulta [Exportar o importar asociaciones de aplicaciones predeterminadas](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
 
-### Para configurar la directiva de grupo para un archivo de configuración de asociaciones de protocolos y tipos de archivo predeterminados:
+### <a name="to-configure-the-group-policy-for-a-default-file-type-and-protocol-associations-configuration-file"></a>Para configurar la directiva de grupo para un archivo de configuración de asociaciones de protocolos y tipos de archivo predeterminados:
 
 1. Abre el editor de directiva de grupo y ve a **Computer Configuration\Administrative Templates\Windows Components\File Explorer**.
 2. Selecciona **Definir un archivo de configuración de asociaciones predeterminadas**.
@@ -67,9 +67,9 @@ En el ejemplo de la siguiente captura de pantalla se muestra un archivo de asoci
    > [!NOTE]
    > Si esta opción está habilitada y el dispositivo del usuario está unido a un dominio, el archivo de configuración de asociaciones se procesará la próxima vez que el usuario inicie sesión.
 
-## Establecer Microsoft Edge como explorador predeterminado en dispositivos unidos a Azure Active Directory
+## <a name="set-microsoft-edge-as-the-default-browser-on-azure-active-directory-joined-devices"></a>Establecer Microsoft Edge como explorador predeterminado en dispositivos unidos a Azure Active Directory
 
-Para establecer Microsoft Edge como explorador predeterminado en dispositivos unidos a Azure Active Directory, sigue los pasos de configuración de Administración de dispositivos móviles [DefaultAssociationsConfiguration](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) usando el siguiente archivo de asociación de aplicaciones como ejemplo.
+Para establecer Microsoft Edge como explorador predeterminado en dispositivos unidos a Azure Active Directory, sigue los pasos de configuración de Administración de dispositivos móviles [DefaultAssociationsConfiguration](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) usando el siguiente archivo de asociación de aplicaciones como ejemplo.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -85,20 +85,20 @@ Para establecer Microsoft Edge como explorador predeterminado en dispositivos un
 > [!NOTE]
 > Para establecer Microsoft Edge Beta como explorador predeterminado, establece **ApplicationName** en "Microsoft Edge Beta" y **ProgId** en "MSEdgeBHTML". Para establecer Microsoft Edge Dev como explorador predeterminado, establece **ApplicationName** en "Microsoft Edge Dev" y **ProgId** en "MSEdgeDHTML".
 
-## Establecer Microsoft Edge como explorador predeterminado en macOS
+## <a name="set-microsoft-edge-as-the-default-browser-on-macos"></a>Establecer Microsoft Edge como explorador predeterminado en macOS
 
 Intentar establecer mediante programación el explorador predeterminado en macOS hace que aparezca un aviso al usuario final. Este aviso es una característica de seguridad de macOS que puede quitarse de manera automatizada únicamente mediante AppleScript.
 
-Debido a esta limitación, existen dos métodos principales para establecer Microsoft Edge como explorador predeterminado en macOS. La primera opción es reinstalar en el dispositivo una imagen de macOS donde Microsoft Edge ya se haya establecido como explorador predeterminado. La otra opción es usar la directiva [Establecer Microsoft Edge como explorador predeterminado](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultbrowsersettingenabled) , que pide al usuario establecer Microsoft Edge como explorador predeterminado.
+Debido a esta limitación, existen dos métodos principales para establecer Microsoft Edge como explorador predeterminado en macOS. La primera opción es reinstalar en el dispositivo una imagen de macOS donde Microsoft Edge ya se haya establecido como explorador predeterminado. La otra opción es usar la directiva [Establecer Microsoft Edge como explorador predeterminado](./microsoft-edge-policies.md#defaultbrowsersettingenabled) , que pide al usuario establecer Microsoft Edge como explorador predeterminado.
 
 Al usar cualquiera de estos métodos, el usuario sigue pudiendo cambiar el explorador predeterminado. Esto se debe a motivos de seguridad, la preferencia de explorador predeterminado no se puede bloquear mediante programación. Por este motivo, se recomienda implementar la directiva **Establecer Microsoft Edge como explorador predeterminado** incluso si crea una imagen como Microsoft Edge como explorador predeterminado. Si la directiva se establece, y un usuario cambia el explorador predeterminado de Microsoft Edge, la próxima vez que abra Microsoft Edge se le pedirá que lo establezca como predeterminado.
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 
-- [Planear tu implementación de Microsoft Edge](https://docs.microsoft.com/DeployEdge/deploy-edge-plan-deployment)
+- [Planear tu implementación de Microsoft Edge](./deploy-edge-plan-deployment.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Establecer Microsoft Edge como explorador predeterminado (Windows 7 y macOS)](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultbrowsersettingenabled)
-- [Windows 10: ¿Cómo configurar asociaciones de archivos para profesionales de TI?](https://docs.microsoft.com/archive/blogs/windowsinternals/windows-10-how-to-configure-file-associations-for-it-pros)
-- [Exportar o importar asociaciones de aplicaciones predeterminadas](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)
-  - [Introducción a DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/what-is-dism)
-  - [DISM: Administración y mantenimiento de imágenes de implementación](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism---deployment-image-servicing-and-management-technical-reference-for-windows)
+- [Establecer Microsoft Edge como explorador predeterminado (Windows 7 y macOS)](./microsoft-edge-policies.md#defaultbrowsersettingenabled)
+- [Windows 10: ¿Cómo configurar asociaciones de archivos para profesionales de TI?](/archive/blogs/windowsinternals/windows-10-how-to-configure-file-associations-for-it-pros)
+- [Exportar o importar asociaciones de aplicaciones predeterminadas](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)
+  - [Introducción a DISM](/windows-hardware/manufacture/desktop/what-is-dism)
+  - [DISM: Administración y mantenimiento de imágenes de implementación](/windows-hardware/manufacture/desktop/dism---deployment-image-servicing-and-management-technical-reference-for-windows)

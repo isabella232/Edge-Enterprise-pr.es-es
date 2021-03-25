@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configuraciones y experimentación de Microsoft Edge
-ms.openlocfilehash: f66da4075c33c1f375dfb593c1a1bd2b4a139833
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: aef19fd9c119926a934a1ab00009a89ce2fe31fc
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981100"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447774"
 ---
-# Configuraciones y experimentación de Microsoft Edge
+# <a name="microsoft-edge-configurations-and-experimentation"></a>Configuraciones y experimentación de Microsoft Edge
 
 En este artículo se describe la interacción entre Microsoft Edge y el servicio de experimentación y configuración (ECS). Microsoft Edge se comunica con este servicio para solicitar y recibir distintos tipos de cargas. Estas cargas incluyen configuraciones, implementaciones de funciones y experimentos.
 
@@ -27,23 +27,23 @@ En este artículo se describe la interacción entre Microsoft Edge y el servicio
 > [!NOTE]
 > Esto se aplica a Microsoft Edge, versión 77 o posterior.
 
-## Configuraciones
+## <a name="configurations"></a>Configuraciones
 
 Las configuraciones son la carga pensada para garantizar el cumplimiento del estado, la seguridad y la privacidad del producto, y tienen el mismo valor para todos los usuarios (en función de las plataformas y los canales). Esto podría ser habilitar una marca de función para una acción de dominio, y también puede usarse para deshabilitar una marca de función en el caso de un error.
 
-## Lanzamiento de funciones controladas
+## <a name="controlled-feature-rollout"></a>Lanzamiento de funciones controladas
 
 La implementación de funciones controlada (CFR) es un procedimiento para aumentar lentamente el tamaño del grupo de usuarios que recibe una función. Al distribuir una nueva función a un subconjunto seleccionado aleatoriamente de la población de usuarios, es posible comparar los comentarios de los usuarios con un grupo de controles de igual tamaño sin la característica para medir el impacto de la función.
 
-## Experimentos
+## <a name="experiments"></a>Experimentos
 
 Las compilaciones de Microsoft Edge tienen características y funciones que aún están en desarrollo o que son experimentales. Los experimentos son como CFR, pero el tamaño del grupo de usuarios es mucho más pequeño para probar el nuevo concepto. Estas funciones se ocultan de manera predeterminada hasta que se lanza la función o finaliza el experimento. Las marcas de experimento se usan para habilitar y deshabilitar estas funciones.
 
-## Acerca del ECS
+## <a name="about-the-ecs"></a>Acerca del ECS
 
 En todos los escenarios anteriores, el servicio proporciona los valores de marca de funciones al cliente del explorador, para que puedan aplicarse. En función de la actualización, las configuraciones se aplican inmediatamente o cuando el usuario reinicia el explorador.
 
-La interacción de Microsoft Edge con este servicio se controla mediante la configuración de la directiva [ExperimentationAndConfigurationServiceControl](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#experimentationandconfigurationservicecontrol). Puedes configurar las opciones de directiva para:
+La interacción de Microsoft Edge con este servicio se controla mediante la configuración de la directiva [ExperimentationAndConfigurationServiceControl](./microsoft-edge-policies.md#experimentationandconfigurationservicecontrol). Puedes configurar las opciones de directiva para:
 
 - Solo recuperar configuraciones
 - Recuperar configuraciones y experimentos
@@ -52,7 +52,7 @@ La interacción de Microsoft Edge con este servicio se controla mediante la conf
   > [!CAUTION]
   > Si deshabilitas las comunicaciones con el servicio, esto afectará a la capacidad de Microsoft para responder a un error grave de manera puntual.
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoftedgeinsider.com/enterprise)
-- [Página de aterrizaje de documentación de Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
+- [Página de aterrizaje de documentación de Microsoft Edge](./index.yml)

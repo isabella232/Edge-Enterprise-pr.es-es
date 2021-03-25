@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Descargas de contenido mixto en Microsoft Edge
-ms.openlocfilehash: 57da17a8684b97aad88e7837ff9d070f6862357b
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 13cc9d935dfe415039078b2ca794945b4fa2d1a3
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981131"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447274"
 ---
-# Obtén más información sobre las descargas de contenido mixto en Microsoft Edge
+# <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Obtén más información sobre las descargas de contenido mixto en Microsoft Edge
 
 En este artículo se explican las descargas de contenido mixto y cómo Microsoft Edge las maneja.
 
 >[!NOTE]
 >Este artículo se aplica a Microsoft Edge, versión 85 o posterior.
 
-## ¿Qué son las descargas de contenido mixto?
+## <a name="what-are-mixed-content-downloads"></a>¿Qué son las descargas de contenido mixto?
 
 Se produce una descarga de contenido mixto cuando inicias una descarga desde una página HTML que se cargó a través de una conexión HTTPS segura, pero se produce una de las siguientes condiciones:
 
@@ -33,7 +33,7 @@ Se produce una descarga de contenido mixto cuando inicias una descarga desde una
 
 En cualquier de los dos escenarios se produce la descarga de contenido mixto porque la solicitud se realizó mediante una conexión de HTTPS segura y el contenido, tanto HTTP como HTTPS, se invoca cuando llega al destino final de descarga. Los exploradores modernos muestran advertencias sobre este tipo de contenido para indicar al usuario que esa descarga podría transferirse de forma insegura, aunque la página original a la que se accedió era segura.
 
-## Advertencias de descarga y opciones de usuario
+## <a name="download-warnings-and-user-options"></a>Advertencias de descarga y opciones de usuario
 
 La advertencia de descarga garantiza que los usuarios sepan que el archivo que se está descargando podría ser leído por atacantes malintencionados en su red. Esta advertencia permite a los usuarios tomar decisiones fundamentadas sobre si se debe descargar el archivo.
 
@@ -56,17 +56,17 @@ Si el usuario decide mantener la descarga, se le pedirá que confirme la acción
 
  ![Elegir el modo Internet Explorer](./media/edge-learnmore-mixed-content-downloads/edge-mixed-content-download-override.png)
 
-## Directivas de apoyo
+## <a name="supporting-policies"></a>Directivas de apoyo
 
-Las empresas que deseen excluir el bloqueo de contenido mixto en sitios web específicos, pueden usar la directiva [InsecureContentAllowedForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#insecurecontentallowedforurls) para ello.
+Las empresas que deseen excluir el bloqueo de contenido mixto en sitios web específicos, pueden usar la directiva [InsecureContentAllowedForUrls](./microsoft-edge-policies.md#insecurecontentallowedforurls) para ello.
 
-## Licencia de contenido
+## <a name="content-license"></a>Licencia de contenido
 
 > [!NOTE]
 > Algunas partes de esta página son modificaciones que se basan en trabajo creado y compartido por Chromium.org y que se usan de acuerdo con los términos descritos en la [Licencia internacional de Creative Commons Atribution 4.0](http://creativecommons.org/licenses/by/4.0/). La página original se puede encontrar [aquí](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este trabajo dispone de licencia conforme a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licencia internacional de Creative Commons Attribution 4.0</a>.
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

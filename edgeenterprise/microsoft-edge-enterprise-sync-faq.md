@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Preguntas más frecuentes sobre la sincronización empresarial de Microsoft Edge.
-ms.openlocfilehash: 51f6dfc4cd8f308815ee111c30d5501ec0e44f59
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: e25ee985f65ee61dda5cacece73d43be7f1e6d7d
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400212"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447874"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>Preguntas frecuentes sobre sincronización empresarial de Microsoft Edge
 
@@ -25,11 +25,11 @@ Este artículo responde a las preguntas más frecuentes acerca de la sincronizac
 
 ### <a name="is-the-synced-data-encrypted"></a>¿Se cifran los datos sincronizados?
 
-Los datos se cifran en el transporte con TLS 1.2 o superior. Todos los tipos de datos también se cifran en reposo en el servicio de Microsoft con AES128. Todos los tipos de datos, excepto los que se usan para la sincronización de pestañas abiertas e historial, también se cifran antes de salir del dispositivo del usuario con claves administradas a través de [Azure Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern).
+Los datos se cifran en el transporte con TLS 1.2 o superior. Todos los tipos de datos también se cifran en reposo en el servicio de Microsoft con AES128. Todos los tipos de datos, excepto los que se usan para la sincronización de pestañas abiertas e historial, también se cifran antes de salir del dispositivo del usuario con claves administradas a través de [Azure Information Protection](./microsoft-edge-policies.md#restrictsignintopattern).
 
 ### <a name="why-dont-open-tab-and-history-data-have-more-client-side-encryption"></a>¿Por qué las pestañas abiertas y los datos del historial no tienen un cifrado adicional del lado del cliente?
 
-Para reducir la utilización de recursos en los dispositivos de los usuarios finales, los datos del historial se generan del lado del servidor en función de los datos de itinerancia de las pestaña abiertas. Este proceso no sería posible con el cifrado de datos del lado del cliente. Para deshabilitar la sincronización de pestañas abiertas e historial, aplique las directivas [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) o [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled).
+Para reducir la utilización de recursos en los dispositivos de los usuarios finales, los datos del historial se generan del lado del servidor en función de los datos de itinerancia de las pestaña abiertas. Este proceso no sería posible con el cifrado de datos del lado del cliente. Para deshabilitar la sincronización de pestañas abiertas e historial, aplique las directivas [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) o [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled).
 
 ### <a name="can-tenant-admins-bring-their-own-key"></a>¿Los administradores de espacios empresariales pueden poner su propia clave?
 
@@ -63,7 +63,7 @@ No. ESR se puede usar para habilitar la sincronización, pero la sincronización
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>¿Microsoft Edge admitirá en algún momento la sincronización entre Microsoft Edge e IE?
 
-No hay planes para admitir esta sincronización. Si aún necesita Internet Explorer (IE) en su entorno para usar aplicaciones heredadas, considere la posibilidad de usar el [nuevo modo de IE](https://docs.microsoft.com/deployedge/edge-ie-mode).
+No hay planes para admitir esta sincronización. Si aún necesita Internet Explorer (IE) en su entorno para usar aplicaciones heredadas, considere la posibilidad de usar el [nuevo modo de IE](./edge-ie-mode.md).
 
 ### <a name="will-microsoft-edge-sync-with-microsoft-edge-legacy"></a>¿Microsoft Edge se sincronizará con Microsoft Edge (versión anterior)?
 
@@ -73,7 +73,7 @@ No lo hará. Creemos que la conexión de estos dos ecosistemas provocará un com
 
 ### <a name="is-it-possible-to-stop-my-users-from-syncing-with-a-personal-tenant"></a>¿Es posible impedir que los usuarios sincronicen con un espacio empresarial personal?
 
-No directamente, pero puede determinar qué perfiles pueden iniciar sesión en Microsoft Edge mediante la directiva [RestrictSigninToPattern](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern).
+No directamente, pero puede determinar qué perfiles pueden iniciar sesión en Microsoft Edge mediante la directiva [RestrictSigninToPattern](./microsoft-edge-policies.md#restrictsignintopattern).
 
 ## <a name="see-also"></a>Consulta también
 

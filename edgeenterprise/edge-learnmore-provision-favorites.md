@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprovisionar favoritos en Microsoft Edge
-ms.openlocfilehash: 94bd42573bdbc0fd1b971ded1c82e5fe152acc54
-ms.sourcegitcommit: 854dd73eb168960c0eb4b483f81a8efe88806a64
+ms.openlocfilehash: 67627fa10806435d76cecae00f79867bc5af03df
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "11088724"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447604"
 ---
-# Aprovisionar favoritos en Microsoft Edge
+# <a name="provision-favorites-for-microsoft-edge"></a>Aprovisionar favoritos en Microsoft Edge
 
 Hemos realizado mejoras en el aprovisionamiento de favoritos basándonos en los comentarios de los clientes. A partir de la versión 85 de Microsoft Edge, los administradores ya no tienen que diseñar manualmente un archivo para aprovisionar favoritos. Los administradores pueden agregar favoritos y carpetas mediante la interfaz de usuario de Microsoft Edge para generar un archivo que puede exportarse a una directiva de grupo.
 
-En este artículo se describe cómo aprovisionar un conjunto de favoritos y de carpetas en la organización. Puede usar la directiva [Configurar favoritos](https://docs.microsoft.com//DeployEdge/microsoft-edge-policies#configure-favorites) para aprovisionar favoritos y carpetas.
+En este artículo se describe cómo aprovisionar un conjunto de favoritos y de carpetas en la organización. Puede usar la directiva [Configurar favoritos](//DeployEdge/microsoft-edge-policies#configure-favorites) para aprovisionar favoritos y carpetas.
 
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 85 o posterior.
 
-## Requisitos previos y recomendaciones
+## <a name="prerequisites-and-recommendations"></a>Requisitos previos y recomendaciones
 
 - La versión 85 de Microsoft Edge con la plantilla administrativa adecuada instalada para las directivas de grupo.
 - Le recomendamos usar un perfil nuevo en Microsoft Edge para aprovisionar estos favoritos. Todos los favoritos que se guarden con el perfil se incluirán en la exportación.  
 
-## Aprovisionar favoritos y carpetas
+## <a name="provision-favorites-and-folders"></a>Aprovisionar favoritos y carpetas
 
 Siga los siguientes pasos para aprovisionar favoritos y carpetas para los usuarios.
 
@@ -66,6 +66,6 @@ Siga los siguientes pasos para aprovisionar favoritos y carpetas para los usuari
 
 7. Haga clic en **Aceptar** o **Aplicar** para guardar la configuración de la directiva.
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

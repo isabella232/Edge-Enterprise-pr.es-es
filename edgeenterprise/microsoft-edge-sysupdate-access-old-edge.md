@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Obtén información acerca de cómo obtener acceso a la versión heredada de Microsoft Edge.
-ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: b521ab9ea093b62db7268e6bf2f4d656b3dc8d4b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313900"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447094"
 ---
-# Obtener acceso a la versión heredada de Microsoft Edge tras la instalación de la nueva versión de Microsoft Edge
+# <a name="access-microsoft-edge-legacy-after-installing-the-new-version-of-microsoft-edge"></a>Obtener acceso a la versión heredada de Microsoft Edge tras la instalación de la nueva versión de Microsoft Edge
 
 Microsoft Edge (versión anterior) dejará de recibir actualizaciones de seguridad el 9 de marzo de 2021. Puede acceder a Microsoft Edge (versión anterior) hasta el 13 de abril. Para más información, vea la [entrada de blog](https://aka.ms/EdgeLegacyEOS) del Equipo de producto de Microsoft Edge.
 
@@ -34,13 +34,13 @@ Si bien la mayoría de las organizaciones querrán reemplazar Microsoft Edge her
 >
 > La aplicación de Microsoft Edge (versión anterior) llegará al fin de soporte el 9 de marzo de 2021 para dar paso al nuevo Microsoft Edge. Esto significa que Microsoft Edge (versión anterior) no recibirá actualizaciones de seguridad después de esa fecha. Este cambio se aplica a todas las experiencias que se ejecutan en la aplicación de escritorio de Microsoft Edge (versión anterior). [Más información](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
-## Antes de comenzar
+## <a name="before-you-begin"></a>Antes de comenzar
 > [!NOTE]
 > A partir de la versión 20H2 de Windows 10, se dejará de incluir Microsoft Edge (versión anterior). A partir de esta versión de Windows 10, no se admite la experiencia en paralelo.
 
 Los procedimientos descritos en este artículo se aplican a los sistemas que se han actualizado con las últimas actualizaciones de seguridad. Cuando se instale la nueva versión de Microsoft Edge, se ocultará la versión antigua (Microsoft Edge [versión heredada]). De manera predeterminada, todos los intentos de iniciar la versión anterior redirigirán al usuario a la versión recientemente instalada de Microsoft Edge. En este artículo se describe cómo puede seguir usando Microsoft Edge heredado después de instalar Microsoft Edge.
 
-## Inicio rápido: experiencia en paralelo con el canal Microsoft Edge Beta y Microsoft Edge (versión anterior)
+## <a name="quickstart-side-by-side-experience-with-microsoft-edge-beta-channel-and-microsoft-edge-legacy"></a>Inicio rápido: experiencia en paralelo con el canal Microsoft Edge Beta y Microsoft Edge (versión anterior)
 
 Antes de usar las instrucciones detalladas de este artículo, tenga en cuenta los dos pasos siguientes para permitir que los usuarios ejecuten Microsoft Edge (versión anterior) y el [canal Microsoft Edge Beta](microsoft-edge-channels.md) en paralelo.
 
@@ -52,13 +52,13 @@ Antes de usar las instrucciones detalladas de este artículo, tenga en cuenta lo
 
 Esta solución es menos compleja y requiere menos administración que la solución detallada descrita en este artículo. Sin embargo, esto significa que ejecutará el canal Beta en lugar del canal estable.
 
-## Experiencia en paralelo con el canal estable de Microsoft Edge y Microsoft Edge (versión anterior)
+## <a name="side-by-side-experience-with-microsoft-edge-stable-channel-and-microsoft-edge-legacy"></a>Experiencia en paralelo con el canal estable de Microsoft Edge y Microsoft Edge (versión anterior)
 
 Si instala el canal estable de la siguiente versión de Microsoft Edge en el nivel del sistema, se ocultará la versión actual (Microsoft Edge heredado). Si desea permitir que los usuarios vean las dos versiones de Microsoft Edge en paralelo en Windows, puede habilitar esta experiencia si configura la directiva de grupo **Permitir la experiencia de exploradores Microsoft Edge en paralelo** como **Habilitada**.
 
-Esta directiva de grupo se documenta [aquí](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#allowsxs)
+Esta directiva de grupo se documenta [aquí](./microsoft-edge-update-policies.md#allowsxs)
 
-### Para configurar la directiva de experiencia de explorador en paralelo:
+### <a name="to-set-up-the-side-by-side-browser-experience-policy"></a>Para configurar la directiva de experiencia de explorador en paralelo:
 
 1. Instale las definiciones de directiva desde [Microsoft Edge para la empresa](https://www.microsoft.com/edge/business/download).
 
@@ -86,7 +86,7 @@ Al configurar esta directiva, se establecerá la siguiente clave de registro en 
 - Nombre del valor: `Allowsxs`
 - Tipo de valor: `'REG_DWORD'`
 
-#### Instrucciones de prácticas recomendadas
+#### <a name="best-practice-guidance"></a>Instrucciones de prácticas recomendadas
 
 Para disfrutar de la mejor experiencia **Permitir la experiencia de exploradores Microsoft Edge en paralelo** debería estar habilitada antes de que se implemente la nueva versión de Microsoft Edge en los dispositivos de los usuarios.
 
@@ -100,7 +100,7 @@ Si la directiva de grupo está habilitada después de implementar Microsoft Edge
 2. Microsoft Edge (versión heredada) tendrá que volverse a anclar a Inicio o a la barra de tareas porque el anclaje se migra cuando se implementa la nueva versión de Microsoft Edge.
 3. Los sitios que se anclaron a Inicio o a la barra de tareas para Microsoft Edge (versión heredada) se migrarán a la nueva versión de Microsoft Edge.
 
-## Información adicional
+## <a name="additional-information"></a>Información adicional
 
 Una vez que se han actualizado por completo los sistemas y se ha instalado el canal estable de la próxima versión de Microsoft Edge, se establecen la siguiente clave del Registro y valor:
 
@@ -110,7 +110,7 @@ Una vez que se han actualizado por completo los sistemas y se ha instalado el ca
   > [!IMPORTANT]
   > Esta clave se sobrescribe cada vez que se actualiza el canal estable Microsoft Edge. Como práctica recomendada, se aconseja que NO elimines esta clave para permitir que los usuarios accedan a las dos versiones de Microsoft Edge.
 
-## Consulta también
+## <a name="see-also"></a>Consulta también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Actualizaciones de Windows para compatibilidad con Microsoft Edge](microsoft-edge-sysupdate-windows-updates.md)
