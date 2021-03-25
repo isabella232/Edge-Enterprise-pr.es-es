@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Actualizaciones de Windows para Microsoft Edge
-ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: 880e5a591ee23ff852981e73fe4fc4cd815be9ad
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313910"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447154"
 ---
-# <span data-ttu-id="15934-103">Actualizaciones de Windows para admitir la próxima versión de Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="15934-103">Windows updates to support the next version of Microsoft Edge</span></span>
+# <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a><span data-ttu-id="15934-103">Actualizaciones de Windows para admitir la próxima versión de Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="15934-103">Windows updates to support the next version of Microsoft Edge</span></span>
 
 <span data-ttu-id="15934-104">En este artículo se describe cómo se actualizará Windows para admitir la próxima versión de Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="15934-104">This article describes how Windows will be updated to support the next version of Microsoft Edge.</span></span>
 
@@ -27,11 +27,11 @@ ms.locfileid: "11313910"
 > [!NOTE]
 > <span data-ttu-id="15934-106">Este artículo se aplica al canal Estable de Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="15934-106">This article applies to the Microsoft Edge Stable channel.</span></span>
 
-## <span data-ttu-id="15934-107">Microsoft Edge y el ciclo de versión de Windows</span><span class="sxs-lookup"><span data-stu-id="15934-107">Microsoft Edge and the Windows release cycle</span></span>
+## <a name="microsoft-edge-and-the-windows-release-cycle"></a><span data-ttu-id="15934-107">Microsoft Edge y el ciclo de versión de Windows</span><span class="sxs-lookup"><span data-stu-id="15934-107">Microsoft Edge and the Windows release cycle</span></span>
 
 <span data-ttu-id="15934-108">La próxima versión de Microsoft Edge ofrece funcionalidades de actualización más frecuentes y flexibles.</span><span class="sxs-lookup"><span data-stu-id="15934-108">The next version of Microsoft Edge features more frequent and more flexible updating capabilities.</span></span> <span data-ttu-id="15934-109">Dado que las versiones del explorador no están unidas a las versiones principales de Windows, se realizarán cambios en el sistema operativo para garantizar que la próxima versión de Microsoft Edge se adapte perfectamente a Windows.</span><span class="sxs-lookup"><span data-stu-id="15934-109">Because browser releases aren't bound to the Windows major releases, changes will be made to the operating system to ensure that the next version of Microsoft Edge fits seamlessly into Windows.</span></span> <span data-ttu-id="15934-110">Como resultado, las actualizaciones de características se publicarán en un ciclo de 6 semanas (aproximadamente).</span><span class="sxs-lookup"><span data-stu-id="15934-110">As a result, feature updates will be released on a 6-week cycle (approximately).</span></span> <span data-ttu-id="15934-111">Las actualizaciones de seguridad y compatibilidad se publicarán según sea necesario.</span><span class="sxs-lookup"><span data-stu-id="15934-111">Security and compatibility updates will be shipped as needed.</span></span>
 
-## <span data-ttu-id="15934-112">Actualizaciones y experiencia del usuario</span><span class="sxs-lookup"><span data-stu-id="15934-112">Updates and the user experience</span></span>
+## <a name="updates-and-the-user-experience"></a><span data-ttu-id="15934-112">Actualizaciones y experiencia del usuario</span><span class="sxs-lookup"><span data-stu-id="15934-112">Updates and the user experience</span></span>
 
 <span data-ttu-id="15934-113">Las actualizaciones no cambiarán la experiencia del usuario hasta que se instale el canal Estable de la próxima versión de Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="15934-113">Updates won’t change the user experience until the Stable channel of the next version of Microsoft Edge is installed.</span></span> <span data-ttu-id="15934-114">La instalación de Microsoft Edge Beta, Dev o Canary no desencadenará ningún cambio en Windows.</span><span class="sxs-lookup"><span data-stu-id="15934-114">Installing Microsoft Edge Beta, Dev, or Canary won’t trigger any changes in Windows.</span></span> <span data-ttu-id="15934-115">Estas versiones del explorador se instalarán junto con los exploradores existentes.</span><span class="sxs-lookup"><span data-stu-id="15934-115">These browser releases will be installed alongside existing browsers.</span></span>
 
@@ -52,11 +52,11 @@ ms.locfileid: "11313910"
 
 - <span data-ttu-id="15934-128">Microsoft Edge dejará de estar registrado para los libros y protocolos XML que no sean compatibles con la próxima versión de Microsoft Edge.</span><span class="sxs-lookup"><span data-stu-id="15934-128">Microsoft Edge will de-register for the books and XML protocols that the next version of Microsoft Edge doesn't support.</span></span> <span data-ttu-id="15934-129">Los usuarios que intenten abrir estos protocolos obtendrán un diálogo que les pedirá elegir una aplicación predeterminada.</span><span class="sxs-lookup"><span data-stu-id="15934-129">Users attempting to open these protocols will get a dialog that prompts them to choose a default app.</span></span> <span data-ttu-id="15934-130">Obtén más información sobre los cambios en el soporte de libros en [Descargar una aplicación ePub para seguir leyendo libros electrónicos](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0).</span><span class="sxs-lookup"><span data-stu-id="15934-130">Learn more about changes to books support at [Download an ePub app to keep reading e-books](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0).</span></span>
 
-## <span data-ttu-id="15934-131">Línea de tiempo</span><span class="sxs-lookup"><span data-stu-id="15934-131">Timeline</span></span>
+## <a name="timeline"></a><span data-ttu-id="15934-131">Línea de tiempo</span><span class="sxs-lookup"><span data-stu-id="15934-131">Timeline</span></span>
 
 <span data-ttu-id="15934-132">Los cambios necesarios para admitir la experiencia descrita se entregarán con tres actualizaciones para las diferentes versiones de Windows.</span><span class="sxs-lookup"><span data-stu-id="15934-132">The changes needed to support the described experience will be delivered with three updates for different versions of Windows.</span></span>
 
-### <span data-ttu-id="15934-133">Versiones 1903 y 1909 de Windows</span><span class="sxs-lookup"><span data-stu-id="15934-133">Windows versions 1903 and 1909</span></span>
+### <a name="windows-versions-1903-and-1909"></a><span data-ttu-id="15934-133">Versiones 1903 y 1909 de Windows</span><span class="sxs-lookup"><span data-stu-id="15934-133">Windows versions 1903 and 1909</span></span>
 
 - <span data-ttu-id="15934-134">El primer conjunto de cambios en la actualización opcional de julio de 2019, distribuida con la actualización de seguridad de agosto de 2019.</span><span class="sxs-lookup"><span data-stu-id="15934-134">First set of changes in optional July 2019 update, delivered with the August 2019 security update.</span></span>
 - <span data-ttu-id="15934-135">El segundo conjunto de cambios en la actualización opcional de agosto de 2019, distribuida con la actualización de seguridad de septiembre de 2019.</span><span class="sxs-lookup"><span data-stu-id="15934-135">Second set of changes in the optional August 2019 update, delivered with the September 2019 security update.</span></span>
@@ -69,7 +69,7 @@ ms.locfileid: "11313910"
   > [!NOTE]
   > <span data-ttu-id="15934-138">Esta es la actualización en la que Microsoft Edge dejará de admitir libros electrónicos.</span><span class="sxs-lookup"><span data-stu-id="15934-138">This is the update where Microsoft Edge will no longer support eBooks.</span></span>
 
-### <span data-ttu-id="15934-139">Versiones 1709, 1803 y 1809 de Windows</span><span class="sxs-lookup"><span data-stu-id="15934-139">Windows versions 1709, 1803, and 1809</span></span>
+### <a name="windows-versions-1709-1803-and-1809"></a><span data-ttu-id="15934-139">Versiones 1709, 1803 y 1809 de Windows</span><span class="sxs-lookup"><span data-stu-id="15934-139">Windows versions 1709, 1803, and 1809</span></span>
 
 - <span data-ttu-id="15934-140">El primer conjunto de cambios en una actualización opcional de agosto de 2019, distribuida con la actualización de seguridad de septiembre de 2019.</span><span class="sxs-lookup"><span data-stu-id="15934-140">First set of changes in an optional August 2019 update, delivered with the September 2019 security update.</span></span>
 - <span data-ttu-id="15934-141">El segundo conjunto de cambios en una actualización opcional de septiembre de 2019, distribuida con la actualización de seguridad de octubre de 2019.</span><span class="sxs-lookup"><span data-stu-id="15934-141">Second set of changes in an optional September 2019 update, delivered with the October 2019 security update.</span></span>
@@ -91,7 +91,7 @@ ms.locfileid: "11313910"
 | <span data-ttu-id="15934-155">Versión 1809</span><span class="sxs-lookup"><span data-stu-id="15934-155">Version 1809</span></span>  | [<span data-ttu-id="15934-156">KB4523205</span><span class="sxs-lookup"><span data-stu-id="15934-156">KB4523205</span></span>](https://support.microsoft.com/help/4523205/windows-10-update-kb4523205) | [<span data-ttu-id="15934-157">Actualización acumulativa de Windows 10, versión 1809</span><span class="sxs-lookup"><span data-stu-id="15934-157">Cumulative Update for Windows 10 Version 1809</span></span>](https://www.catalog.update.microsoft.com/Search.aspx?q=4523205) |
 | <span data-ttu-id="15934-158">Versiones 1903 y 1909</span><span class="sxs-lookup"><span data-stu-id="15934-158">Version 1903 and 1909</span></span> |[<span data-ttu-id="15934-159">KB4517389</span><span class="sxs-lookup"><span data-stu-id="15934-159">KB4517389</span></span>](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [<span data-ttu-id="15934-160">Actualización acumulativa de Windows 10, versiones 1903 y 1909</span><span class="sxs-lookup"><span data-stu-id="15934-160">Cumulative Update for Windows 10 Version 1903 and 1909</span></span>](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
 
-## <span data-ttu-id="15934-161">Consulta también</span><span class="sxs-lookup"><span data-stu-id="15934-161">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15934-161">Consulta también</span><span class="sxs-lookup"><span data-stu-id="15934-161">See also</span></span>
 
 - [<span data-ttu-id="15934-162">Página de aterrizaje de Microsoft Edge Enterprise</span><span class="sxs-lookup"><span data-stu-id="15934-162">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
-- [<span data-ttu-id="15934-163">Documentación de Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="15934-163">Microsoft Edge documentation</span></span>](https://docs.microsoft.com/DeployEdge/)
+- [<span data-ttu-id="15934-163">Documentación de Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="15934-163">Microsoft Edge documentation</span></span>](./index.yml)
