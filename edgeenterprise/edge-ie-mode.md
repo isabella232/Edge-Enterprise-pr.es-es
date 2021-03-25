@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprende a usar Microsoft Edge con modo IE.
-ms.openlocfilehash: bcb25e0f104d4a9b64ee8fd7bf29b12bb24b4724
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ecb4bffc5afdde3a8891d1eaa6e28508205ab097
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981154"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447344"
 ---
-# Acerca del modo IE
+# <a name="about-ie-mode"></a>Acerca del modo IE
 
 Este artículo proporciona información general y los requisitos previos para usar Microsoft Edge con el modo IE.
 
 > [!NOTE]
 > Este artículo se aplica a los canales de Microsoft Edge **Estable**, **Beta** y **Dev**, versión 77 o posterior.
 
-## ¿Qué es el modo IE?
+## <a name="what-is-ie-mode"></a>¿Qué es el modo IE?
 
 El modo IE en Microsoft Edge hace que sea más fácil usar todos los sitios que su organización necesita en un único explorador. Usa el motor de Chromium integrado para sitios modernos y usa el motor Trident MSHTML de Internet Explorer 11 (IE11) para sitios heredados.
 
@@ -41,22 +41,22 @@ Solo los sitios que configure específicamente (mediante Directiva) usarán el m
   > Solo se procesa una lista de sitios de modo de empresa. La Directiva de lista de sitios de Microsoft Edge tiene prioridad sobre la Directiva de lista de sitios de Internet Explorer.
 - Todos los sitios de intranet cuando la **directiva de grupo Enviar todos los sitios de intranet a Internet Explorer** está habilitada (Microsoft Edge 77 o posterior).
 
-### El modo IE admite las siguientes funciones de Internet Explorer
+### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>El modo IE admite las siguientes funciones de Internet Explorer
 
 - Todos los modos de documento y modos de empresa
 - Controles ActiveX (como Java o Silverlight)
 - Objetos auxiliares de explorador 
 - Configuración y directivas de grupo de Internet Explorer que afectan a la configuración de zonas de seguridad y al modo protegido
-- Las herramientas de desarrollo F12 para IE, cuando se inicia con [IEChooser](https://docs.microsoft.com/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
+- Las herramientas de desarrollo F12 para IE, cuando se inicia con [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
 - Extensiones de Microsoft Edge (no se admiten las extensiones que interactúan directamente con el contenido de la página de Internet Explorer).
 
-### El modo IE no admite las siguientes funciones de Internet Explorer
+### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>El modo IE no admite las siguientes funciones de Internet Explorer
 
 - Barras de herramientas de Internet Explorer
 - Configuración y directivas de grupo de Internet Explorer que afectan al menú de navegación (por ejemplo, motores de búsqueda y páginas principales).
 - Herramientas de desarrollo de IE11 or Microsoft Edge F12
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Los siguientes requisitos previos se aplican al uso de Microsoft Edge con modo IE.
 
@@ -87,10 +87,10 @@ Los siguientes requisitos previos se aplican al uso de Microsoft Edge con modo I
   > [!IMPORTANT]
   > ** Windows 7 y Windows Server 2008 R2 serán compatibles con Microsoft Edge incluso después de que estos sistemas operativos queden sin soporte. Para que el modo IE sea compatible con estos sistemas operativos, los dispositivos deberán tener las [Actualizaciones de seguridad extendidas para Windows](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Recomendamos que actualice a un sistema operativo compatible lo antes posible para mantener la seguridad. El soporte técnico de Microsoft Edge para las actualizaciones de seguridad extendidas se debe considerar un puente temporal para obtener un estado de SO compatible.
 
-2. Plantilla administrativa de Microsoft Edge. Para obtener más información, consulta [Configurar Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge).
+2. Plantilla administrativa de Microsoft Edge. Para obtener más información, consulta [Configurar Microsoft Edge](./configure-microsoft-edge.md).
 3. Internet Explorer11 habilitado en Características de Windows.
 
-## Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Información adicional del modo de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
