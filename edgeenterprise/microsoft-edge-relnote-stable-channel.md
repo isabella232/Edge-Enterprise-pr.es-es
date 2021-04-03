@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 03/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 94d8d621ecac3764ecf13194efb55cfbbf80b70b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447994"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470278"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -28,6 +28,10 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!NOTE]
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de MicrosoftEdge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077463-march-25"></a>Versión 89.0.774.63: 25 de marzo
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-89077457-march-18"></a>Versión89.0.774.57: 18 de marzo
 
@@ -83,7 +87,7 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](./microso
 
 #### <a name="new-policies"></a>Nuevas directivas
 
-Se han agregado siete directivas nuevas. Descargue las plantillas administrativas actualizadas desde la [Página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se han agregado las siguientes directivas nuevas.
+Se han agregado siete directivas nuevas. Descargue las Plantillas administrativas actualizadas desde la [página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se han agregado las siguientes directivas nuevas.
 
 - [BrowsingDataLifetime](./microsoft-edge-policies.md#browsingdatalifetime): configuración de la duración de los datos de exploración
 - [MAMEnabled](./microsoft-edge-policies.md#mamenabled): administración de aplicaciones móviles habilitada
@@ -107,7 +111,7 @@ Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-88070574-february-17"></a>Versión 88.0.705.74: 17 de febrero
 
-Las actualizaciones de seguridad del canal estable se muestran [aquí](./microsoft-edge-relnotes-security.md#February-17-2021).
+Las actualizaciones de seguridad del canal estable se muestran [aquí](./microsoft-edge-relnotes-security.md#february-17-2021).
 
 ## <a name="version-88070568-february-11"></a>Versión 88.0.705.68: 11 de febrero
 
@@ -118,11 +122,11 @@ Se han corregido varios errores y problemas de rendimiento.
 > [!IMPORTANT]
 > Esta actualización contiene [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad.
 
-Las actualizaciones de seguridad del canal estable se muestran [aquí](./microsoft-edge-relnotes-security.md#February-5-2021).
+Las actualizaciones de seguridad del canal estable se muestran [aquí](./microsoft-edge-relnotes-security.md#february-5-2021).
 
 ## <a name="version-88070562-february-4"></a>Versión 88.0.705.62: 4 de febrero
 
-Las actualizaciones de seguridad del canal estable se muestran [aquí](./microsoft-edge-relnotes-security.md#February-4-2021).
+Las actualizaciones de seguridad del canal estable se muestran [aquí](./microsoft-edge-relnotes-security.md#february-4-2021).
 
 Se han corregido varios errores y problemas de rendimiento.
 

@@ -3,26 +3,30 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/22/2021
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: 9d9bec56a3629f18f7a9f64553858558a2864100
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 60294cc247e7c5af85d6fa28b9d3f201755109c6
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447574"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470268"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
 Estas notas de versión proporcionan información sobre las nuevas características y las actualizaciones no relacionadas con la seguridad que se incluyen en el canal beta de Microsoft Edge. Las versiones archivadas de estas notas de la versión están [aquí](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> Hemos actualizado la [versión 89.0.774.18: 3 de febrero](#version-89077418-february-3) de Microsoft Edge Beta para reflejar las características que han llegado.
+> Hemos actualizado la nota de la [versión 89.0.774.18: 3 de febrero](#version-89077418-february-3) de Microsoft Edge Beta para reflejar las características que han llegado.
+
+## <a name="version-90081822-march-29"></a>Versión 90.0.818.22: 29 de marzo
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-90081814-march-22"></a>Versión 90.0.818.14: 22 de marzo
 

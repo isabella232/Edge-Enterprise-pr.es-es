@@ -1,40 +1,40 @@
 ---
-title: Configurar sitios en la lista de sitios de modo de empresa
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/28/2020
+title: Estrategia de configuración del sitio de la empresa
+ms.author: shisub
+author: shisub
+manager: srugh
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Configurar la lista de sitios de empresas
-ms.openlocfilehash: 9b1943e4d50dcc770b4a634b99ecbd001d1ffbcc
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Una guía paso a paso para configurar la lista de sitios en modo empresa para el modo de Internet Explorer..
+ms.openlocfilehash: 1d0b80950439fce77513413c3f5d1143538487d1
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447654"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470158"
 ---
-# <a name="configure-sites-on-the-enterprise-mode-site-list"></a>Configurar sitios en la lista de sitios de modo de empresa
+# <a name="enterprise-site-configuration-strategy"></a>Estrategia de configuración del sitio de la empresa
 
-En este artículo se describen los cambios en la lista de sitios de modo de empresa que admiten la configuración de Internet Explorer para Microsoft Edge, versión 77 y posteriores.
+En este artículo se describen los cambios realizados en la lista de sitios en modo empresa para la compatibilidad del modo de Internet Explorer con Microsoft Edge versión 77 y posteriores.
 
 Para obtener más información sobre el esquema para el archivo XML de lista de sitios en el modo de empresa, consulte la [Guía de esquema de modo de empresa v.2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 > [!NOTE]
-> Este artículo se aplica a los canales de Microsoft Edge **Estable**, **Beta** y **Dev**, versión 77 o posterior.
+> Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
+<!--
+## Updated schema elements
 
-## <a name="updated-schema-elements"></a>Elementos de esquema actualizados
+The following table describes the \<open-in app\> element added to the v.2 of the Enterprise Mode schema:
 
-En la siguiente tabla se describe el elemento \<open-in app\> añadido a la v.2 del esquema del Modo de empresa:
-
-| **Elemento** | **Descripción** |
+| **Element** | **Description** |
 | --- | --- |
-| \<open-in app="**true**"\> | Un elemento secundario que controla qué explorador se usa para sitios. Este elemento es necesario para los sitios que necesitan **abrirse en IE11**.|
+| \<open-in app="**true**"\> | A child element that controls what browser is used for sites. This element is required for sites that need to **open in IE11**.|
 
-**Por ejemplo:**
+**Example:**
 
 ``` xml
 <site url="contoso.com">
@@ -44,22 +44,41 @@ En la siguiente tabla se describe el elemento \<open-in app\> añadido a la v.2 
 </site>
 ```
 
-La siguiente tabla muestra los posibles valores del elemento \<open-in\>:
+The following table shows the possible values of the \<open-in\> element:
 
-| **Valor** | **Descripción** |
+| **Value** | **Description** |
 | --- | --- |
-| **\<open-in\>IE11\</open-in\>** | Abra el sitio en modo IE o en una ventana de IE11 completa. Para habilitar el modo IE, consulte [configurar las directivas de modo IE](./edge-ie-mode-policies.md)|
-| **\<open-in app="**true**"\>IE11\</open-in\>** | Abre el sitio en una ventana de IE11 completa. |
-| **\<open-in\>MSEdge\</open-in\>** | Abre el sitio en Microsoft Edge. |
-| **\<open-in\>Ninguno o no especificado\</open-in\>** | Abre el sitio en el explorador predeterminado o en el explorador donde el usuario se desplaza al sitio. |
-|**\<open-in\>Configurable\</open-in\>** | Permite al sitio participar en la determinación del motor en modo IE. Para más información, consulte [Información sobre los sitios configurables en modo IE](edge-learnmore-configurable-sites-ie-mode.md).  |
+| **\<open-in\>IE11\</open-in\>** | Opens the site in IE mode or a full IE11 window. To enable IE mode, see [Configure IE mode policies](./edge-ie-mode-policies.md)|
+| **\<open-in app="**true**"\>IE11\</open-in\>** | Opens the site in a full IE11 window |
+| **\<open-in\>MSEdge\</open-in\>** | Opens the site in Microsoft Edge |
+| **\<open-in\>None or not specified\</open-in\>** | Opens the site in the default browser or in the browser where the user navigated to the site. |
+|**\<open-in\>Configurable\</open-in\>** | Allows the site to participate in IE mode engine determination. To learn more, see [Learn about Configurable sites in IE mode](edge-learnmore-configurable-sites-ie-mode.md).  |
 
 >[!NOTE]
-> El atributo app=**"true"** solo se reconoce cuando está asociado a _'open-in' IE11_. Agregarlo a los otros elementos 'open-in' no cambiará el comportamiento del explorador.   
+> The attribute app=**"true"** is only recognized when associated to _'open-in' IE11_. Adding it to the other 'open-in' elements won't change browser behavior.   -->
+
+## <a name="configuration-strategy"></a>Estrategia de configuración
+
+Los siguientes pasos forman parte de una estrategia de configuración del sitio para el modo IE:
+1. Prepare su lista de sitios
+2. Configurar los sitios neutros
+3. (Opcional) Utilizar el uso compartido de cookies si es necesario
+
+<!--
+Step 1.  – if you don’t have one use Site Discovery Step-by-Step
+Step 2 – Neutral sites + sticky mode
+        Use more examples and explain sticky mode better
+Step 3 – If that doesn’t cover your needs, then use Cookie sharing -->
+
+## <a name="prepare-your-site-list"></a>Prepare su lista de sitios
+
+Si ya tiene una lista de sitios en modo de empresa para IE11 o Microsoft Edge Legacy, puede reutilizarla para configurar el modo IE.
+
+Sin embargo, si no tiene una lista de sitios, puede utilizar la [herramienta Enterprise Site Discovery](https://docs.microsoft.com/deployedge/edge-ie-mode-site-discovery)para rellenar su lista de sitios.
 
 ## <a name="configure-neutral-sites"></a>Configurar los sitios neutros
 
-Para que el modo de IE funcione correctamente, la autenticación y los servidores de inicio de sesión único tendrán que configurarse explícitamente como sitios neutrales. Si no, las páginas en modo IE intentarán redirigir a Microsoft Edge y se producirá un error de autenticación.
+Para que el modo IE funcione correctamente, los servidores de autenticación / Inicio de sesión único (SSO) tendrán que ser configurados explícitamente como sitios neutrales. De lo contrario, las páginas del modo IE intentarán redirigir a Microsoft Edge, y la autenticación fallará.
 
 Un sitio neutral usará el explorador en el que se inició el desplazamiento, ya sea en el modo de Microsoft Edge o el modo de IE. La configuración de los sitios neutros garantiza que todas las aplicaciones que utilicen los mismos servidores de autenticación, tanto modernos como heredados, sigan funcionando.
 
@@ -73,10 +92,14 @@ Para configurar sitios neutros, configure la lista desplegable *Abrir en* como "
 </site>
 ```
 
-Para identificar servidores de autenticación, inspeccione el tráfico de red de una aplicación con las herramientas para desarrolladores de IE11. Si necesita más tiempo para identificar los servidores de autenticación, puede configurar una directiva para mantener toda la navegación en la página en modo IE. Para minimizar el uso del modo IE, deshabilite esta configuración una vez que haya identificado y agregado los servidores de autenticación en la lista de sitios. Para obtener más información, consulte [configurar la navegación en la página para permanecer en el modo IE](./microsoft-edge-policies.md#internetexplorerintegrationsiteredirect).
+Para identificar los servidores de autenticación, inspeccione el tráfico de red de una aplicación utilizando las herramientas de desarrollo de IE11. Si necesita más tiempo para identificar sus servidores de autenticación, puede configurar una directiva para mantener todas las navegaciones dentro de la página en modo IE para permitir que sus usuarios continúen sus flujos de trabajo sin interrupción. Para minimizar el uso del modo IE cuando sea innecesario, desactive esta configuración una vez que haya identificado y agregado sus servidores de autenticación a la lista de sitios. Para obtener más información, consulte [Mantener la navegación en la página en modo IE](https://docs.microsoft.com/deployedge/edge-learnmore-inpage-nav).
 
 >[!NOTE]
-   >El esquema v. 1 del modo de empresa no se admite para la integración de modo IE. Si estás usando actualmente el esquema v. 1 con Internet Explorer 11, debes actualizar al esquema v. 2. Para obtener más información, consulta [Guía del esquema v.2 del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+   >El esquema v. 1 del modo de empresa no se admite para la integración de modo IE. Si estás usando actualmente el esquema v. 1 con Internet Explorer 11, debes actualizar al esquema v. 2. Para obtener más información, consulte [Guía sobre el esquema del Modo de empresa v.2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+
+## <a name="optional-use-cookie-sharing-if-necessary"></a>(Opcional) Utilizar el uso compartido de cookies si es necesario
+
+De forma predeterminada, los procesos de Microsoft Edge e Internet Explorer no comparten las cookies de sesión, y esta falta de compartición puede ser un inconveniente en algunos casos mientras se utiliza el modo IE. Por ejemplo, cuando un usuario tiene que volver a autenticarse en modo IE cuando previamente está acostumbrado a hacerlo o cuando al cerrar la sesión de Microsoft Edge no se cierra la sesión en modo Internet Explorer para las transacciones críticas. En estos escenarios, puede configurar cookies específicas establecidas por SSO para que se envíen desde Microsoft Edge a Internet Explorer, de modo que la experiencia de autenticación sea más fluida al eliminar la necesidad de volver a autenticar. Para obtener más información, consulte [Compartir cookies de Microsoft Edge a Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 ## <a name="see-also"></a>Consulte también
 
