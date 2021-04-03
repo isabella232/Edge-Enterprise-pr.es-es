@@ -3,23 +3,25 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/25/2021
+ms.date: 04/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 31aaad801f4632985d7fc9d043155f2eb82ed046
+ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470278"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "11470908"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
 Estas notas de versión proporcionan información sobre las nuevas características y las actualizaciones no relacionadas con la seguridad que se incluyen en el canal estable de Microsoft Edge.
+
+
 
 - Todas las actualizaciones de seguridad se muestran [aquí](microsoft-edge-relnotes-security.md).
 - Las notas de la versión archivadas para el Canal estable de Microsoft Edge se encuentran [aquí](microsoft-edge-relnote-archive-stable-channel.md).
@@ -28,6 +30,10 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!NOTE]
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de MicrosoftEdge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077468-april-1"></a>Versión 89.0.774.68: 1 de abril
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](./microsoft-edge-relnotes-security.md#april-1-2021).
 
 ## <a name="version-89077463-march-25"></a>Versión 89.0.774.63: 25 de marzo
 
@@ -87,7 +93,7 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](./microso
 
 #### <a name="new-policies"></a>Nuevas directivas
 
-Se han agregado siete directivas nuevas. Descargue las Plantillas administrativas actualizadas desde la [página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se han agregado las siguientes directivas nuevas.
+Se han agregado siete directivas nuevas. Descargue las plantillas administrativas actualizadas desde la [Página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se han agregado las siguientes directivas nuevas.
 
 - [BrowsingDataLifetime](./microsoft-edge-policies.md#browsingdatalifetime): configuración de la duración de los datos de exploración
 - [MAMEnabled](./microsoft-edge-policies.md#mamenabled): administración de aplicaciones móviles habilitada

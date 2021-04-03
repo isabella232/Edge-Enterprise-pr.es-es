@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/24/2021
+ms.date: 04/01/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 2204f1062699095e66707858646014daefc9322a
-ms.sourcegitcommit: e17de92b1fe9637cc7476e5c953bb8131ca2fbe1
+ms.openlocfilehash: 79996cdbee3099fbb3a3d17b982b84a05f5a5066
+ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "11448437"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "11470898"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
@@ -35,7 +35,7 @@ En la siguiente tabla, se muestran las nuevas directivas para esta actualizació
 
 |Nombre|Título|
 |--|--|
-|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Permitir contenido de Microsoft News en la página de nueva pestaña|
+|[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Identificación del tráfico de la protección de la aplicación|
 
 ## <a name="available-policies"></a>Directivas disponibles
 
@@ -66,6 +66,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Contenedor proxy de la Protección de aplicaciones|
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|Sincronización de favoritos de Protección de aplicaciones habilitada|
+|[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Identificación del tráfico de la protección de la aplicación|
 ### [*<a name="cast"></a>Transmitir*](#cast-policies)
 
 |Nombre de directiva|Título|
@@ -504,7 +505,7 @@ Si elige el valor 'fixed_servers' como 'ProxyMode', se utiliza el campo 'ProxySe
 
 Si elige el valor 'pac_script' como 'ProxyMode', se utiliza el campo 'ProxyPacUrl'.
 
-Para obtener más información acerca de cómo identificar el tráfico de Protección de aplicaciones mediante proxy doble, visite [https://go.microsoft.com/fwlink/?linkid=2134653](./microsoft-edge-security-windows-defender-application-guard.md).
+Para obtener más información acerca de cómo identificar el tráfico de Protección de aplicaciones mediante proxy doble, visite [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -599,6 +600,59 @@ Si deshabilita o no configura esta directiva, los favoritos del host no se compa
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
   - Ruta de acceso (recomendada): N/D
   - Nombre de valor: ApplicationGuardFavoritesSyncEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="applicationguardtrafficidentificationenabled"></a>ApplicationGuardTrafficIdentificationEnabled
+
+  #### <a name="application-guard-traffic-identification"></a>Identificación del tráfico de la protección de la aplicación
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows desde la versión 91 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Si habilita o no configura esta directiva, Application Guard agregará un encabezado HTTP adicional (X-MS-ApplicationGuard-Initiated) a todas las solicitudes HTTP salientes realizadas desde el contenedor Application Guard.
+
+Si deshabilita esta directiva, el encabezado adicional no se agregará al tráfico.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Booleano
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: ApplicationGuardTrafficIdentificationEnabled
+  - Nombre de GP: Protección de aplicaciones Identificación del tráfico
+  - Ruta de GP (obligatorio): Plantillas administrativas/Microsoft Edge/Configuración de la Protección de aplicaciones
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendado): N/A
+  - Nombre del valor: ApplicationGuardTrafficIdentificationEnabled
   - Tipo de valor: REG_DWORD
 
   ##### <a name="example-value"></a>Valor de ejemplo:
@@ -844,7 +898,7 @@ Tenga en cuenta que no puede haber patrones de dirección URL conflictivos estab
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * no es un valor aceptado para esta directiva.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
 Para impedir que se eliminen las cookies al salir, configure la directiva [SaveCookiesOnExit](#savecookiesonexit) .
 
@@ -923,7 +977,7 @@ Tenga en cuenta que no puede haber patrones de dirección URL conflictivos estab
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Para obtener información detallada sobre los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) . * no es un valor aceptado para esta directiva.
+Para obtener información detallada sobre los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -1002,7 +1056,7 @@ Tenga en cuenta que no puede haber patrones de dirección URL conflictivos estab
 
 - CookiesSessionOnlyForUrls
 
-Para obtener información detallada sobre los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) . * no es un valor aceptado para esta directiva.
+Para obtener información detallada sobre los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * no es un valor aceptado para esta directiva.
 
 Si establece la directiva [RestoreOnStartup](#restoreonstartup) para restaurar las direcciones URL de sesiones anteriores, esta directiva se ignorará y las cookies se almacenarán de forma permanente para esos sitios.
 
@@ -1905,7 +1959,7 @@ Dejar la directiva sin establecer significa que [DefaultFileSystemReadGuardSetti
 
 Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Ninguna de las directivas tiene prioridad si una dirección URL coincide con ambas.
 
-Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * no es un valor aceptado para esta directiva.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -1974,7 +2028,7 @@ Si no define esta directiva, [DefaultFileSystemReadGuardSetting](#defaultfilesys
 
 Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemReadAskForUrls](#filesystemreadaskforurls). Ninguna de las directivas tiene prioridad si una dirección URL coincide con ambas.
 
-Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * no es un valor aceptado para esta directiva.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2043,7 +2097,7 @@ Si no define esta directiva, [DefaultFileSystemWriteGuardSetting](#defaultfilesy
 
 Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Ninguna de las directivas tiene prioridad si una dirección URL coincide con ambas.
 
-Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * no es un valor aceptado para esta directiva.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2112,7 +2166,7 @@ Si no define esta directiva, [DefaultFileSystemWriteGuardSetting](#defaultfilesy
 
 Los patrones de dirección URL no pueden entrar en conflicto con [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Ninguna de las directivas tiene prioridad si una dirección URL coincide con ambas.
 
-Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * no es un valor aceptado para esta directiva.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2179,7 +2233,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 Si no configura esta directiva, se utiliza el valor predeterminado global para todos los sitios, ya sea de la directiva [DefaultImagesSetting](#defaultimagessetting) (si está establecida) o de la configuración personal del usuario.
 
-Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * no es un valor aceptado para esta directiva.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2246,7 +2300,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 Si no se configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultImagesSetting](#defaultimagessetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
 
-Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * no es un valor aceptado para esta directiva.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2313,7 +2367,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 Si no configura esta directiva, el contenido mixto bloqueable será bloqueado y opcionalmente el contenido mixto bloqueable será actualizado. Sin embargo, se permitirá a los usuarios establecer excepciones para permitir contenido mixto inseguro para determinados sitios.
 
-Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * no es un valor aceptado para esta directiva.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2380,7 +2434,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 Si no configura esta directiva, el contenido mixto bloqueable será bloqueado y opcionalmente el contenido mixto bloqueable será actualizado. Sin embargo, se permitirá a los usuarios establecer excepciones para permitir contenido mixto inseguro para determinados sitios.
 
-Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * no es un valor aceptado para esta directiva.
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2714,7 +2768,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   Permite crear una lista de patrones de url para especificar los sitios que están autorizados a mostrar notificaciones.
 
-Si no establece esta directiva, se utilizará el valor predeterminado global para todos los sitios. Este valor predeterminado será de la directiva[DefaultNotificationsSetting](#defaultnotificationssetting)de configuración de notificaciones predeterminadas, si está establecida, o de la configuración personal del usuario. Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Si no establece esta directiva, se utilizará el valor predeterminado global para todos los sitios. Este valor predeterminado será de la directiva[DefaultNotificationsSetting](#defaultnotificationssetting)de configuración de notificaciones predeterminadas, si está establecida, o de la configuración personal del usuario. Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2779,7 +2833,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
   Permite crear una lista de patrones de url para especificar los sitios que no están autorizados a mostrar notificaciones.
 
-Si no establece esta directiva, se utilizará el valor predeterminado global para todos los sitios. Este valor predeterminado será de la directiva[DefaultNotificationsSetting](#defaultnotificationssetting)de configuración de notificaciones predeterminadas, si está establecida, o de la configuración personal del usuario. Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Si no establece esta directiva, se utilizará el valor predeterminado global para todos los sitios. Este valor predeterminado será de la directiva[DefaultNotificationsSetting](#defaultnotificationssetting)de configuración de notificaciones predeterminadas, si está establecida, o de la configuración personal del usuario. Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2848,7 +2902,7 @@ Defina una lista de sitios, basada en patrones de dirección URL, que pueden eje
 
 Si no configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultPluginsSetting](#defaultpluginssetting) (si está establecido) o la configuración personal del usuario.
 
-Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Sin embargo, a partir de M85, las tramas con los caracteres comodín '\*' y '[\*.]' en el host ya no son compatibles con esta directiva.
+Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, las tramas con los caracteres comodín '\*' y '[\*.]' en el host ya no son compatibles con esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -2917,7 +2971,7 @@ Define una lista de sitios basada en los patrones de dirección URL que están b
 
 Si no configura esta directiva, se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultPluginsSetting](#defaultpluginssetting) (si está establecido) o la configuración personal del usuario.
 
-Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Sin embargo, a partir de M85, las tramas con los caracteres comodín '\*' y '[\*.]' en el host ya no son compatibles con esta directiva.
+Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Sin embargo, a partir de M85, las tramas con los caracteres comodín '\*' y '[\*.]' en el host ya no son compatibles con esta directiva.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -3360,7 +3414,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
 Si no configura esta directiva se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
 
-Los patrones de dirección URL definidos en esta directiva no pueden entrar en conflicto con los configurados en la directiva [WebUsbBlockedForUrls](#webusbblockedforurls), no se puede permitir ni bloquear una dirección URL. Para información detallada sobre los patrones de url válidos, consulte[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Los patrones de dirección URL definidos en esta directiva no pueden entrar en conflicto con los configurados en la directiva [WebUsbBlockedForUrls](#webusbblockedforurls), no se puede permitir ni bloquear una dirección URL. Para información detallada sobre los patrones de url válidos, consulte[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -3427,7 +3481,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 Si no configura esta directiva se utilizará para todos los sitios el valor global predeterminado de la directiva [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) (si está establecido) o la configuración personal del usuario para todos los sitios.
 
-Los patrones de dirección URL en esta directiva no pueden entrar en conflicto con los configurados en la directiva [WebUsbAskForUrls](#webusbaskforurls). No puede permitir y bloquear una dirección URL.  Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Los patrones de dirección URL en esta directiva no pueden entrar en conflicto con los configurados en la directiva [WebUsbAskForUrls](#webusbaskforurls). No puede permitir y bloquear una dirección URL.  Para obtener información detallada sobre los patrones de url válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -4412,7 +4466,7 @@ En las instancias de macOS, las aplicaciones y extensiones externas al sitio web
 
 Los usuarios pueden modificar el código fuente de cualquier extensión con herramientas de desarrollo, lo que podría representar la extensión como no funcional. Si esto le preocupa, configure la directiva DeveloperToolsDisabled.
 
-Cada elemento de lista de la directiva es una cadena que contiene un id. de extensión y, opcionalmente, una dirección URL "update" separada por un punto y coma (;). El id. de extensión es la cadena de 32 letras que se encuentra, por ejemplo, en edge://extensions cuando está en el modo para desarrolladores. Si se especifica, la dirección URL "update" debe apuntar a un documento de actualización manifiesto XML ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ). De forma predeterminada, se usa la dirección URL de actualización del sitio web de complementos de Microsoft Edge. La dirección URL "update" establecida en esta directiva solo se usa para la instalación inicial; las actualizaciones posteriores de la extensión utilizan la dirección URL de actualización en el manifiesto de la extensión.
+Cada elemento de lista de la directiva es una cadena que contiene un id. de extensión y, opcionalmente, una dirección URL "update" separada por un punto y coma (;). El id. de extensión es la cadena de 32 letras que se encuentra, por ejemplo, en edge://extensions cuando está en el modo para desarrolladores. Si se especifica, la dirección URL "update" debe apuntar a un documento de actualización manifiesto XML ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). De forma predeterminada, se usa la dirección URL de actualización del sitio web de complementos de Microsoft Edge. La dirección URL "update" establecida en esta directiva solo se usa para la instalación inicial; las actualizaciones posteriores de la extensión utilizan la dirección URL de actualización en el manifiesto de la extensión.
 
 Tenga en cuenta: esta directiva no se aplica al modo de InPrivate. Obtenga más información sobre las extensiones de hospedaje (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
@@ -4481,7 +4535,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 Defina direcciones URL que pueden instalar extensiones y temas directamente, sin tener que arrastrar y soltar los paquetes a la página edge://extensions.
 
-Cada elemento de esta lista es un patrón de coincidencia de estilo de extensión (vea [https://go.microsoft.com/fwlink/?linkid=2095039](/microsoft-edge/extensions-chromium/enterprise/match-patterns)). Los usuarios pueden instalar fácilmente elementos desde cualquier dirección URL que coincida con un elemento de esta lista. Tanto la ubicación del archivo *.crx como la página desde la que se inicia la descarga (en otras palabras, la de referencia) deben estar permitidas por estos patrones. No hospede los archivos en una ubicación que requiera autenticación.
+Cada elemento de esta lista es un patrón de coincidencia de estilo de extensión (vea [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Los usuarios pueden instalar fácilmente elementos desde cualquier dirección URL que coincida con un elemento de esta lista. Tanto la ubicación del archivo *.crx como la página desde la que se inicia la descarga (en otras palabras, la de referencia) deben estar permitidas por estos patrones. No hospede los archivos en una ubicación que requiera autenticación.
 
 La directiva [ExtensionInstallBlocklist](#extensioninstallblocklist) tiene prioridad sobre esta directiva. Las extensiones que se encuentren en la lista de bloqueados no se instalarán, incluso si proviene de un sitio de esta lista.
 
@@ -4546,7 +4600,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   La configuración de esta directiva controla la configuración de la administración de extensiones de Microsoft Edge, incluida cualquier configuración controlada por directivas existentes relacionadas con las extensiones. Esta directiva reemplaza cualquier directiva heredada que pueda configurarse.
 
-Esta directiva asigna un Id. de extensión o una dirección URL de actualización únicamente a su configuración específica. Se puede establecer una configuración predeterminada para el Id. especial "*", que se aplica a todas las extensiones sin una configuración personalizada en esta directiva. Con una dirección URL de actualización, la configuración se aplica a las extensiones con la dirección URL de actualización exacta establecida en el manifiesto de la extensión ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ).
+Esta directiva asigna un Id. de extensión o una dirección URL de actualización únicamente a su configuración específica. Se puede establecer una configuración predeterminada para el Id. especial "*", que se aplica a todas las extensiones sin una configuración personalizada en esta directiva. Con una dirección URL de actualización, la configuración se aplica a las extensiones con la dirección URL de actualización exacta establecida en el manifiesto de la extensión ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
 
 Para bloquear extensiones de un almacén de terceros determinado, solo tienes que bloquear el update_url para ese almacén. Por ejemplo, si desea bloquear extensiones de Chrome Web Store, puede usar el siguiente JSON.
 
@@ -5314,7 +5368,7 @@ Si deshabilita esta directiva o no la configura, los usuarios podrán cambiar la
 
 Si habilita esta directiva, impedirá que los usuarios puedan cambiar la dirección URL en la barra de direcciones.
 
-Para obtener información detallada sobre cómo configurar la pantalla completa, consulte [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
+Para obtener información detallada sobre cómo configurar la pantalla completa, consulte [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -5378,7 +5432,7 @@ Si habilitas esta directiva, los archivos descargados como parte de la sesión d
 
 Si deshabilitas esta directiva o no la configuras, los archivos descargados como parte de la sesión de pantalla completa no se eliminan cuando se cierra Microsoft Edge.
 
-Para obtener información detallada sobre cómo configurar la pantalla completa, consulta [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
+Para obtener información detallada sobre cómo configurar la pantalla completa, consulta [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -6873,7 +6927,7 @@ Si habilita esta directiva, podrá crear una lista de hosts para los que Microso
 
 Si no configura esta directiva, no se crea ninguna lista de hosts para los que Microsoft Edge omite un proxy. Deje esta directiva sin configurar si especificó algún otro método para configurar las directivas de proxy.
 
-Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
+Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -6944,7 +6998,7 @@ Si decide usar:
   * fixed_servers = servidores proxy fijos Puede determinar más opciones con [ProxyServer](#proxyserver) y [ProxyBypassList](#proxybypasslist).
   * pac_script = un script de proxy .pac. Usa [ProxyPacUrl](#proxypacurl) para configurar la dirección URL en un archivo .pac de proxy.
 
-Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
+Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
 Si no configura esta directiva, los usuarios podrán elegir su propia configuración de proxy.
 
@@ -7028,7 +7082,7 @@ Si habilita esta directiva, puede especificar la dirección URL de un archivo PA
 
 Si deshabilita o no configura esta directiva, no se especificará ningún archivo PAC. Deje esta directiva sin configurar si especificó algún otro método para configurar las directivas de proxy.
 
-Para obtener ejemplos más detallados, vea [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
+Para obtener ejemplos más detallados, vea [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -7096,7 +7150,7 @@ Si habilita esta directiva, el servidor proxy configurado por la misma se utiliz
 
 Si deshabilita o no configura esta directiva, los usuarios pueden elegir su propia configuración de proxy mientras se encuentran en este modo de proxy. Deje esta directiva sin configurar si especificó algún otro método para configurar las directivas de proxy.
 
-Para obtener más opciones y ejemplos detallados, vea [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
+Para obtener más opciones y ejemplos detallados, vea [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -7180,7 +7234,7 @@ Para ProxyMode, si elige el valor:
   * fixed_servers: se usan los campos ProxyServer y ProxyBypassList.
   * pac_script: se usan los campos ProxyPacUrl y ProxyBypassList.
 
-Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
+Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -10115,7 +10169,7 @@ Si alguna de las condiciones es false, el mensaje de inicio del protocolo extern
 
 Si no configura esta Directiva, no se puede iniciar ningún protocolo sin una indicación. Los usuarios pueden optar por no recibir mensajes para cada protocolo o por sitio, salvo que la Directiva [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) se configure como deshabilitada. Esta directiva no afecta a las exenciones de mensaje por protocolo/por sitio establecidas por los usuarios.
 
-Los modelos de coincidencia de origen usan un formato similar al de la Directiva de [ URLBlocklist](#urlblocklist), que se explican en [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Los modelos de coincidencia de origen usan un formato similar al de la Directiva de [ URLBlocklist](#urlblocklist), que se explican en [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
 Sin embargo, los patrones de coincidencia de origen para esta Directiva no pueden contener elementos "/path" o "@query". Cualquier patrón que contenga un elemento "/path" o "@query" se pasará por alto.
 
@@ -10237,7 +10291,7 @@ Si configura direcciones URL en esta Directiva, los archivos solo se abrirán au
 
 Si no define esta Directiva, todas las descargas en las que el tipo de archivo está en [AutoOpenFileTypes](#autoopenfiletypes) se abrirán automáticamente.
 
-Se tiene que dar formato a un modelo de dirección URL con el [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Se tiene que dar formato a un modelo de dirección URL con el [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -10699,7 +10753,7 @@ Si no configura esta directiva, la experiencia predeterminada tendrá anuncios e
 
 Esta directiva solo está disponible para los SKUs K-12 identificados como inquilinos de EDU por Microsoft.
 
-Por favor, vea[https://go.microsoft.com/fwlink/?linkid=2119711](/microsoft-365/education/deploy/install-microsoft-edge) para obtener más información sobre esta directiva, o si se aplican las siguientes situaciones:
+Por favor, vea[https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711) para obtener más información sobre esta directiva, o si se aplican las siguientes situaciones:
 
 * Tiene un espacio empresarial de educación, pero la directiva no funciona.
 
@@ -11445,7 +11499,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 Esta directiva le permite no divulgar los certificados de los nombres de host en las direcciones URL especificadas por la transparencia de certificados. Esto le permite usar certificados que de otro modo no serían de confianza, ya que no fueron divulgados públicamente de forma correcta, lo que dificulta la detección de los certificados que fueron emitidos de forma errónea en estos servidores.
 
-Forme el modelo de URL de acuerdo con [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Dado que los certificados son válidos para un nombre de host determinado, independientemente del esquema, puerto o ruta de acceso, sólo se considerará una parte del nombre de host de la dirección URL. Los hosts comodín no son compatibles.
+Forme el modelo de URL de acuerdo con [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Dado que los certificados son válidos para un nombre de host determinado, independientemente del esquema, puerto o ruta de acceso, sólo se considerará una parte del nombre de host de la dirección URL. Los hosts comodín no son compatibles.
 
 Al no configurar esta directiva, cualquier certificado que deba divulgarse a través de la transparencia de certificados es considerado como no confiable si no es revelado.
 
@@ -11652,7 +11706,7 @@ Si no configura esta Directiva, los usuarios con versiones de Microsoft Edge ant
 
 Deshabilitar ClickOnce puede impedir que las aplicaciones ClickOnce (archivos. Application) se inicien correctamente.
 
-Para obtener más información sobre ClickOnce, vea [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) y [https://go.microsoft.com/fwlink/?linkid=2099880](/visualstudio/deployment/clickonce-security-and-deployment).
+Para obtener más información sobre ClickOnce, vea [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) y [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -12051,7 +12105,7 @@ Use la información anterior al configurar esta directiva.
 
   #### <a name="description"></a>Descripción
 
-  Habilita el uso de cuentas de Active Directory para el inicio de sesión automático en caso de que los equipos de los usuarios se unan a un dominio y el entorno no se haya unido de forma híbrida. Si desea que los usuarios inicien sesión automáticamente con sus cuentas de Azure Active Directory, en su lugar, llame a Azure AD join (vea[https://go.microsoft.com/fwlink/?linkid=2118197](/azure/active-directory/devices/azureadjoin-plan) para obtener más información) o a una combinación híbrida (vea[https://go.microsoft.com/fwlink/?linkid=2118365](/azure/active-directory/devices/hybrid-azuread-join-plan) para obtener más información) en su entorno.
+  Habilita el uso de cuentas de Active Directory para el inicio de sesión automático en caso de que los equipos de los usuarios se unan a un dominio y el entorno no se haya unido de forma híbrida. Si desea que los usuarios inicien sesión automáticamente con sus cuentas de Azure Active Directory, en su lugar, llame a Azure AD join (vea[https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) para obtener más información) o a una combinación híbrida (vea[https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) para obtener más información) en su entorno.
 
 En cada inicio, Microsoft Edge intentará iniciar sesión con esta directiva, siempre y cuando el primer perfil que se inicie no haya iniciado sesión o no haya ocurrido antes un inicio de sesión automático.
 
@@ -12379,7 +12433,7 @@ Si establece esta directiva en false, Microsoft Edge deja de comprobar si es el 
 
 Si no define esta Directiva, Microsoft Edge permite a los usuarios controlar si son las predeterminadas y, en caso contrario, si las notificaciones de usuario deben aparecer.
 
-Nota para los administradores de Windows: esta directiva solo funciona en los ordenadores que ejecuten Windows 7. Para las versiones posteriores de Windows, hay que implementar un archivo de "asociaciones de aplicación predeterminadas" que hace de Microsoft Edge el controlador de los protocolos https y http (y, opcionalmente, del protocolo ftp y formatos de archivo como .html, .htm, .pdf, .svg, .webp). Vea [https://go.microsoft.com/fwlink/?linkid=2094932](./edge-default-browser.md) para obtener más información.
+Nota para los administradores de Windows: esta directiva solo funciona en los ordenadores que ejecuten Windows 7. Para las versiones posteriores de Windows, hay que implementar un archivo de "asociaciones de aplicación predeterminadas" que hace de Microsoft Edge el controlador de los protocolos https y http (y, opcionalmente, del protocolo ftp y formatos de archivo como .html, .htm, .pdf, .svg, .webp). Vea [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932) para obtener más información.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -12911,7 +12965,7 @@ Los datos de diagnóstico se recopilan para proteger, actualizar y mejorar el re
 
 Algunos de los datos de diagnóstico opcionales están relacionados con el uso del explorador, los sitios web que visita y los informes de bloqueos, que ayudan a Microsoft a mejorar el producto y el servicio.
 
-Esta Directiva no es compatible con dispositivos Windows 10. Para controlar esta colección de datos en Windows 10, los administradores de TI tienen que usar la directiva de grupo de datos de diagnóstico de Windows. Esta directiva será "Permitir telemetría" o "Permitir datos de diagnóstico", en función de la versión de Windows. Más información sobre la colección de datos de diagnóstico de Windows 10: [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+Esta Directiva no es compatible con dispositivos Windows 10. Para controlar esta colección de datos en Windows 10, los administradores de TI tienen que usar la directiva de grupo de datos de diagnóstico de Windows. Esta directiva será "Permitir telemetría" o "Permitir datos de diagnóstico", en función de la versión de Windows. Más información sobre la colección de datos de diagnóstico de Windows 10: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
 
 Use una de las opciones siguientes para configurar esta directiva:
 
@@ -12999,7 +13053,7 @@ Si deshabilita esta directiva, los usuarios no podrán abrir archivos mediante e
 
 Nota: si deshabilita DirectInvoke, es posible que algunas características de Microsoft SharePoint Online no funcionen correctamente.
 
-Para obtener más información acerca de DirectInvoke, vea [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) y [https://go.microsoft.com/fwlink/?linkid=2099871](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85)).
+Para obtener más información acerca de DirectInvoke, vea [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) y [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -14176,7 +14230,7 @@ Si deshabilita esta Directiva o no la configura, los tipos de archivo que desenc
 
 Si habilita esta directiva:
 
-* El patrón de dirección URL debe tener un formato acorde con [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+* El patrón de dirección URL debe tener un formato acorde con [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 * La extensión de tipo de archivo escrita tiene que ser ASCII en minúsculas. El separador inicial no se debe incluir cuando se indica la extensión de tipo de archivo, por lo que se debe usar "jnlp" en lugar de ".jnlp".
 
 Por ejemplo:
@@ -16591,7 +16645,7 @@ Si establece esta directiva en "Habilitada" o no la configura, los sitios web qu
 
 Si establece esta directiva en "Deshabilitada", la detección de bloqueos mejorada se deshabilita, y los usuarios recibirán el comportamiento de la detección de bloqueos de Internet Explorer básica.
 
-Para obtener más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+Para obtener más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
 Asignación de opciones de directiva:
 
@@ -16650,7 +16704,7 @@ Use la información anterior al configurar esta directiva.
 
   #### <a name="description"></a>Descripción
 
-  Para obtener instrucciones sobre cómo configurar la experiencia óptima en el modo de Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+  Para obtener instrucciones sobre cómo configurar la experiencia óptima en el modo de Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
 Asignación de opciones de directiva:
 
@@ -16719,7 +16773,7 @@ Si establece esta directiva en true o no la configura, el usuario puede usar el 
 
 Si establece esta directiva en false, el usuario no tiene permiso para usar el argumento de la línea de comandos --ie-mode-file-url para iniciar archivos locales en el modo de Internet Explorer.
 
-Para más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+Para más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -16778,7 +16832,7 @@ Cuando se solicita que una dirección URL de archivo:// se inicie en el modo de 
 
 Si establece esta directiva en el valor especial "*" o no la configuras, se permiten todas las extensiones de archivo.
 
-Para más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+Para más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -16840,7 +16894,7 @@ Si establece esta directiva en true, el menú contextual 'Abrir vínculo en nuev
 
 Si establece esta directiva en false o no la configura, no se agregará el elemento de menú contextual.
 
-Para más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+Para más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -16891,7 +16945,7 @@ Para más información sobre el modo Internet Explorer, vea [https://go.microsof
 
   #### <a name="description"></a>Descripción
 
-  Para obtener instrucciones sobre cómo configurar la experiencia óptima en el modo de Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+  Para obtener instrucciones sobre cómo configurar la experiencia óptima en el modo de Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -16956,7 +17010,7 @@ Si establece esta directiva en "AutomaticNavigationsOnly", obtendrá la experien
 
 Si establece esta directiva en "AllInPageNavigations", todas las navegaciones realizadas desde páginas cargadas en modo IE hasta los sitios sin configurar se mantendrán en el modo de Internet Explorer (opción menos recomendada).
 
-Para obtener más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2105106](./edge-learnmore-inpage-nav.md)
+Para obtener más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
 
 Asignación de opciones de directiva:
 
@@ -17808,13 +17862,13 @@ Si la Directiva [EnableMediaRouter](#enablemediarouter) está deshabilitada, no 
 
   #### <a name="description"></a>Descripción
 
-  Esta directiva ya no es compatible. Se reemplaza por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 y macOS) y Permitir telemetría en Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)).
+  Esta directiva ya no es compatible. Se reemplaza por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 y macOS) y Permitir telemetría en Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 Esta directiva permite los informes de datos de uso y relacionados con bloqueos acerca de Microsoft Edge para Microsoft.
 
 Habilita esta directiva para enviar informes de datos de uso y relacionados con bloqueos a Microsoft. Deshabilita esta directiva para no enviar los datos a Microsoft. En ambos casos, los usuarios no pueden cambiar ni invalidar la configuración.
 
-En Windows 10, si no se configura esta directiva, Microsoft Edge se ajustará por defecto a la configuración de datos de diagnóstico de Windows. Si habilita esta directiva, Microsoft Edge solo podrá enviar datos de uso si la configuración de los datos de diagnóstico de Windows está establecida en Mejorado o Completo. Si deshabilita esta directiva, Microsoft Edge no enviará los datos de uso. Los datos relacionados con bloqueos se envían en función de la configuración de datos de diagnóstico de Windows. Obtenga más información acerca de la configuración de datos de diagnóstico de Windows en [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+En Windows 10, si no se configura esta directiva, Microsoft Edge se ajustará por defecto a la configuración de datos de diagnóstico de Windows. Si habilita esta directiva, Microsoft Edge solo podrá enviar datos de uso si la configuración de los datos de diagnóstico de Windows está establecida en Mejorado o Completo. Si deshabilita esta directiva, Microsoft Edge no enviará los datos de uso. Los datos relacionados con bloqueos se envían en función de la configuración de datos de diagnóstico de Windows. Obtenga más información acerca de la configuración de datos de diagnóstico de Windows en [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569).
 
 En Windows 7, Windows 8 y macOS, esta directiva controla el envío de datos de uso y de bloqueos. Si no configura esta directiva, Microsoft Edge se ajustará de forma predeterminada a las preferencias del usuario.
 
@@ -18703,7 +18757,7 @@ Si esta Directiva no se configura o se deshabilita, se instalará el BHO.
 
 El BHO es necesario para que se produzca la redirección no compatible del sitio, pero el hecho de que se produzca el redireccionamiento también lo controla [RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode).
 
-Para obtener más información sobre esta Directiva, vea [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
+Para obtener más información sobre esta Directiva, vea [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -18764,7 +18818,7 @@ Cuando se inicia Microsoft Edge para cargar un sitio desde Internet Explorer, se
 
 Si establece esta directiva en "Deshabilitar", Internet Explorer no redirige el tráfico a Microsoft Edge.
 
-Para obtener más información sobre esta Directiva, vea  [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
+Para obtener más información sobre esta Directiva, vea  [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
 
 Asignación de opciones de directiva:
 
@@ -19258,7 +19312,7 @@ Si deshabilita esta directiva o no la configura, solo se usarán los perfiles lo
 
 [SyncDisabled](#syncdisabled) solo deshabilita la sincronización en la nube y no afecta a esta directiva.
 
-Consulte [https://go.microsoft.com/fwlink/?linkid=2150058](./microsoft-edge-on-premises-sync.md) para obtener más información sobre el uso de perfiles de usuario móviles.
+Consulte [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) para obtener más información sobre el uso de perfiles de usuario móviles.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -19443,7 +19497,7 @@ Si deshabilita la directiva [SSLErrorOverrideAllowed](#sslerroroverrideallowed),
 
 Si no configura esta directiva, la directiva [SSLErrorOverrideAllowed](#sslerroroverrideallowed) se aplicará para todos los sitios.
 
-Para obtener información detallada acerca de los patrones de origen válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * no es un valor aceptado para esta directiva. Esta directiva solo coincide según el origen, por lo que cualquier ruta de acceso o consulta en el patrón de dirección URL se ignora.
+Para obtener información detallada acerca de los patrones de origen válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva. Esta directiva solo coincide según el origen, por lo que cualquier ruta de acceso o consulta en el patrón de dirección URL se ignora.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -19962,7 +20016,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>Descripción
 
-  Para obtener instrucciones sobre cómo configurar la experiencia óptima en el modo de Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
+  Para obtener instrucciones sobre cómo configurar la experiencia óptima en el modo de Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -20013,13 +20067,13 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>Descripción
 
-  Esta directiva ya no es compatible. Se reemplaza por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 y macOS) y Permitir telemetría en Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)).
+  Esta directiva ya no es compatible. Se reemplaza por [DiagnosticData](#diagnosticdata) (para Windows 7, Windows 8 y macOS) y Permitir telemetría en Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
 
 Esta directiva permite enviar información a Microsoft acerca de los sitios web visitados en Microsoft Edge para mejorar servicios como la búsqueda.
 
 Habilite esta directiva para enviar información a Microsoft acerca de los sitios web visitados en Microsoft Edge. Deshabilite esta directiva para no enviar información a Microsoft acerca de los sitios web visitados en Microsoft Edge. En ambos casos, los usuarios no pueden cambiar ni invalidar la configuración.
 
-En Windows 10, si no se configura esta directiva, Microsoft Edge se ajustará por defecto a la configuración de datos de diagnóstico de Windows. Si esta directiva está habilitada, Microsoft Edge sólo enviará información sobre los sitios web visitados desde Microsoft Edge si la configuración de datos de diagnóstico de Windows está establecida como Completa Si esta directiva está deshabilitada, Microsoft Edge no enviará información acerca de los sitios web visitados. Obtenga más información acerca de la configuración de datos de diagnóstico de Windows en: [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+En Windows 10, si no se configura esta directiva, Microsoft Edge se ajustará por defecto a la configuración de datos de diagnóstico de Windows. Si esta directiva está habilitada, Microsoft Edge sólo enviará información sobre los sitios web visitados desde Microsoft Edge si la configuración de datos de diagnóstico de Windows está establecida como Completa Si esta directiva está deshabilitada, Microsoft Edge no enviará información acerca de los sitios web visitados. Obtenga más información acerca de la configuración de datos de diagnóstico de Windows en: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
 
 Esta directiva controla el envío de información sobre los sitios web visitados en Windows 7, Windows 8 y macOS. Si no configura esta directiva, Microsoft Edge se ajustará de forma predeterminada a las preferencias del usuario.
 
@@ -20089,7 +20143,7 @@ Para los patrones de dirección URL que no coincidan con esta directiva, se empl
 
 Los patrones de dirección URL definidos en esta directiva no pueden entrar en conflicto con aquellos configurados en la directiva [SensorsBlockedForUrls](#sensorsblockedforurls). No puede permitir y bloquear una dirección URL.
 
-Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -20160,7 +20214,7 @@ Para los patrones de dirección URL que no coincidan con esta directiva, se empl
 
 Los patrones de dirección URL definidos en esta directiva no pueden entrar en conflicto con aquellos configurados en la directiva [SensorsAllowedForUrls](#sensorsallowedforurls). No puede permitir y bloquear una dirección URL.
 
-Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -20231,7 +20285,7 @@ Para los patrones de dirección URL que no coincidan con esta directiva, se empl
 
 Los patrones de dirección URL definidos en esta directiva no pueden entrar en conflicto con aquellos configurados en la directiva [SerialBlockedForUrls](#serialblockedforurls). No puede permitir y bloquear una dirección URL.
 
-Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -20302,7 +20356,7 @@ Para los patrones de dirección URL que no coincidan con esta directiva, se empl
 
 Los patrones de dirección URL en esta directiva no pueden entrar en conflicto con los configurados en la directiva [SerialAskForUrls](#serialaskforurls). No puede permitir y bloquear una dirección URL.
 
-Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Para información detallada sobre los patrones de dirección URL válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -21789,7 +21843,7 @@ Si no configura la directiva, los usuarios podrán elegir si desean usar la func
 
   El establecimiento de la Directiva permite tener acceso a las direcciones URL indicadas, como excepciones para [URLBlocklist](#urlblocklist).
 
-Aplique formato al modelo de dirección URL en función de [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Aplique formato al modelo de dirección URL en función de [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
 Puede usar esta directiva para abrir excepciones a las listas de bloqueo restrictivas. Por ejemplo, puede incluir "\*" en la lista de bloqueados para bloquear todas las solicitudes y, a continuación, usar esta directiva para permitir el acceso a una lista limitada de direcciones URL. Puede usar esta directiva para abrir excepciones para determinados esquemas, subdominios de otros dominios, puertos o rutas de acceso específicas.
 
@@ -21870,7 +21924,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   Define una lista de sitios basada en los patrones de dirección URL que están bloqueados (sus usuarios no pueden cargarlos).
 
-Aplique formato al modelo de dirección URL en función de [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+Aplique formato al modelo de dirección URL en función de [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
 Puede definir excepciones en la directiva [URLAllowlist](#urlallowlist). Estas directivas están limitadas a 1000 entradas; las siguientes entradas se omiten.
 
