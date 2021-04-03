@@ -1,4 +1,4 @@
-# last revised 03/22/2021
+# last revised 03/31/2021
 - name: Documentación de Microsoft Edge Enterprise
   href: index.yml
 - name: Documentación de Microsoft Edge
@@ -23,7 +23,9 @@
   items:
     - name: Plan de desarrollo de Microsoft Edge Enterprise
       href: microsoft-edge-roadmap.md
-    - name: Planear tu implementación de Microsoft Edge
+    - name: Compatibilidad con plataforma para características de Microsoft Edge
+      href: microsoft-edge-platform-feature-matrix.md
+    - name: Planear su implementación de Microsoft Edge
       href: deploy-edge-plan-deployment.md
     - name: Microsoft Edge en su entorno
       href: deploy-edge-prepare-to-deploy.md
@@ -113,28 +115,32 @@
       href: microsoft-edge-pdf.md
     - name: Establecer Microsoft Edge como explorador predeterminado
       href: edge-default-browser.md
-    - name: Usar Microsoft Edge en modo IE
+    - name: Usar Microsoft Edge en modo Internet Explorer
       items:
-        - name: Acerca del modo IE
+        - name: ¿Qué es el modo de Internet Explorer (IE)?
           href: edge-ie-mode.md
-        - name: Configurar sitios en la lista de sitios de modo de empresa
+        - name: Estrategia de configuración de sitios de empresa
           href: edge-ie-mode-sitelist.md
         - name: Configurar directivas de modo IE
           href: edge-ie-mode-policies.md
         - name: Deshabilitar Internet Explorer 11
           href: edge-ie-disable-ie11.md
-        - name: Guía paso a paso para la Detección de sitio empresarial
-          href: edge-ie-mode-site-discovery.md
-        - name: Preguntas más frecuentes sobre el modo IE
-          href: edge-ie-mode-faq.md
-        - name: Instrucciones adicionales
+        - name: Detección de sitios y administración de listas
           items:
-            - name: Asociar extensiones de archivo con el modo Internet Explorer
-              href: edge-ie-mode-add-guidance-filetype-associations.md
-            - name: Compartir cookies de Microsoft Edge a Internet Explorer
-              href: edge-ie-mode-add-guidance-cookieshare.md
+            - name: Guía paso a paso para la Detección de sitio empresarial
+              href: edge-ie-mode-site-discovery.md
             - name: Enterprise Site List Manager en Microsoft Edge
               href: edge-ie-mode-site-list-manager.md
+        - name: Mantener la navegación en la página en modo IE
+          href: edge-learnmore-inpage-nav.md
+        - name: Compartir cookies de Microsoft Edge a Internet Explorer
+          href: edge-ie-mode-add-guidance-cookieshare.md
+        - name: Sitios configurables en modo IE
+          href: edge-learnmore-configurable-sites-ie-mode.md
+        - name: Asociar extensiones de archivo con el modo Internet Explorer
+          href: edge-ie-mode-add-guidance-filetype-associations.md
+        - name: Solución de problemas y preguntas frecuentes del modo IE
+          href: edge-ie-mode-faq.md
 - name: Seguridad de Microsoft Edge
   items:
     - name: Seguridad para su empresa
@@ -177,12 +183,8 @@
           href: edge-learn-more-co-di.md
         - name: Opciones de línea de comandos para configurar las opciones del proxy
           href: edge-learnmore-cmdline-options-proxy-settings.md
-        - name: Sitios configurables en modo IE
-          href: edge-learnmore-configurable-sites-ie-mode.md
         - name: Formato de filtro para directivas basadas en listas de direcciones URL
           href: edge-learnmmore-url-list-filter format.md
-        - name: Mantener la navegación en la página en modo IE
-          href: edge-learnmore-inpage-nav.md
         - name: Descargas de contenido mixto
           href: edge-learnmore-mixed-content-downloads.md
         - name: Implementación progresiva para actualizaciones de canal estable
