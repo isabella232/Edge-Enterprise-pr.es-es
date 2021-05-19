@@ -419,7 +419,7 @@ y sugerencias para los servicios Microsoft|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Bloquear el acceso a sensores en sitios específicos|
 |[SerialAskForUrls](#serialaskforurls)|Permitir la API de serie en sitios específicos|
 |[SerialBlockedForUrls](#serialblockedforurls)|Bloquear la API en serie en sitios específicos|
-|[ShowMicrosoftRewards](#showmicrosoftrewards)|Mostrar las experiencias de MicrosoftRewards|
+|[ShowMicrosoftRewards](#showmicrosoftrewards)|Mostrar las experiencias de Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Muestra el acceso directo de Microsoft Office en la barra de favoritos (en desuso)|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Permite las recomendaciones y notificaciones promocionales de Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Habilite la compatibilidad con el intercambio de HTTP firmado (SXG)|
@@ -4174,7 +4174,7 @@ Use la información anterior al configurar esta directiva.
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 
@@ -5076,7 +5076,7 @@ Si no configura esta directiva, Microsoft Edge intentará detectar si un servido
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 
@@ -6481,7 +6481,7 @@ Use la información anterior al configurar esta directiva.
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 
@@ -7314,7 +7314,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 
@@ -7381,7 +7381,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 
@@ -7447,11 +7447,11 @@ Si no configuras esta opción, los usuarios pueden elegir si quieren usar pesta�
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 
-  Esta configuración de directiva te permite configurar el tiempo de espera, en segundos, después del cual las pestañas en segundo plano inactivas se pondrán automáticamente en suspensión si las pestañas en reposo están habilitadas. De forma predeterminada, el tiempo de espera es de 7200 segundos (2horas).
+  Esta configuración de directiva te permite configurar el tiempo de espera, en segundos, después del cual las pestañas en segundo plano inactivas se pondrán automáticamente en suspensión si las pestañas en reposo están habilitadas. De forma predeterminada, el tiempo de espera es de 7 200 segundos (2 horas).
 
 Las pestañas solo se ponen en modo de suspensión automáticamente cuando la directiva [SleepTabsEnabled](#sleepingtabsenabled) está habilitada o no está configurada y el usuario ha habilitado la configuración de pestañas en reposo.
 
@@ -17128,7 +17128,7 @@ Si deshabilita o no configura esta directiva, los usuarios no podrán ver las op
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 
@@ -18433,7 +18433,7 @@ Las opciones de configuración del usuario para habilitar o deshabilitar el asis
 
   #### <a name="description"></a>Descripción
 
-  Esta directiva ha quedado en desuso porque no funciona, independientemente del inicio de sesión en el explorador. No funciona en la versión91 de Microsoft Edge. Si quiere configurar el inicio de sesión del explorador, utilice la directiva [BrowserSignin](#browsersignin).
+  Esta directiva ha quedado en desuso porque no funciona, independientemente del inicio de sesión en el explorador. No funciona en la versión 91 de Microsoft Edge. Si quiere configurar el inicio de sesión del explorador, utilice la directiva [BrowserSignin](#browsersignin).
 
 Le permite configurar si quiere activar la autenticación proactiva en Microsoft Edge.
 
@@ -20409,27 +20409,27 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### <a name="showmicrosoftrewards"></a>ShowMicrosoftRewards
 
-  #### <a name="show-microsoft-rewards-experiences"></a>Mostrar las experiencias de MicrosoftRewards
+  #### <a name="show-microsoft-rewards-experiences"></a>Mostrar las experiencias de Microsoft Rewards
 
   
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 
   Muestra las notificaciones y la experiencia de Microsoft Rewards.
 Si habilita esta directiva:
-   - Los usuarios con una cuenta de Microsoft (excepto las de AzureAD) en los mercados con recompensas por búsquedas verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
+   - Los usuarios con una cuenta de Microsoft (excepto las de Azure AD) en los mercados con recompensas por búsquedas verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
    - La configuración para habilitar las Microsoft Rewards en la configuración de Microsoft Edge se habilitará y se activará.
 
 Si se deshabilita esta directiva:
-   - Los usuarios con una cuenta de Microsoft (excepto las de AzureAD) en los mercados con recompensas por búsquedas no verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
+   - Los usuarios con una cuenta de Microsoft (excepto las de Azure AD) en los mercados con recompensas por búsquedas no verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
    - La configuración para habilitar las Microsoft Rewards en la configuración de Microsoft Edge se deshabilitará y se desactivará.
 
 Si no se configura esta directiva:
-   - Los usuarios con una cuenta de Microsoft (excepto las de AzureAD) en los mercados con recompensas por búsquedas verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
+   - Los usuarios con una cuenta de Microsoft (excepto las de Azure AD) en los mercados con recompensas por búsquedas verán la experiencia de Microsoft Rewards en su perfil de usuario de Microsoft Edge.
    - La configuración para habilitar las Microsoft Rewards en la configuración de Microsoft Edge se habilitará y se activará.
 
   #### <a name="supported-features"></a>Características admitidas:
@@ -21519,7 +21519,7 @@ Si desactiva esta directiva, no se congelarán las pestañas.
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 
@@ -22304,7 +22304,7 @@ Si deshabilita esta directiva, los usuarios no podrán invocar la característic
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 
@@ -22859,7 +22859,7 @@ Si la directiva está deshabilitada o no está configurada, WebDriver no podrá 
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde la versión88.
+  - En Windows y macOS desde la versión 88.
 
   #### <a name="description"></a>Descripción
 

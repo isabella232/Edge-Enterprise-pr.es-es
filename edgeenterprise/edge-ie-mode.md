@@ -88,7 +88,7 @@ Los siguientes requisitos previos se aplican al uso de Microsoft Edge con modo I
   > ** Windows 7 y Windows Server 2008 R2 serán compatibles con Microsoft Edge incluso después de que estos sistemas operativos queden sin soporte. Para que el modo IE sea compatible con estos sistemas operativos, los dispositivos deberán tener las [Actualizaciones de seguridad extendidas para Windows](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Recomendamos que actualice a un sistema operativo compatible lo antes posible para mantener la seguridad. El soporte técnico de Microsoft Edge para las actualizaciones de seguridad extendidas se debe considerar un puente temporal para obtener un estado de SO compatible.
 
 2. Plantilla administrativa de Microsoft Edge. Para obtener más información, consulta [Configurar Microsoft Edge](./configure-microsoft-edge.md).
-3. Internet Explorer11 habilitado en Características de Windows.
+3. Internet Explorer 11 habilitado en Características de Windows.
 
 ## <a name="see-also"></a>Consulte también
 

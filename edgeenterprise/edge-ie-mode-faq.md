@@ -52,7 +52,7 @@ Si ya ha instalado todas las actualizaciones de Windows necesarias, es posible q
 Soluciones posibles:
 
 - Ejecuta el instalador de cualquier canal en el nivel del sistema: `installer.exe --system-level`.
-- Habilita Internet Explorer11 en Características de Windows.
+- Habilita Internet Explorer 11 en Características de Windows.
 
 Para comprobar que Microsoft Edge está instalado en el nivel del sistema, escriba "edge://version" en la barra de direcciones de Microsoft Edge. La ruta de acceso del archivo ejecutable mostrará una ruta de acceso que comenzará por *C:\Archivos de programa*, lo que indica una instalación del sistema. Si la ruta del archivo ejecutable comienza por "C:\Usuarios", desinstale y vuelva a instalar Microsoft Edge con privilegios de administrador.
 

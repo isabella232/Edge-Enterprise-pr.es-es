@@ -47,7 +47,7 @@ Microsoft Edge sigue la directiva del ciclo de vida moderna y es compatible con 
 
 - Windows Server 2008 R2 **
 - Windows Server 2012
-- Windows Server2012R2
+- Windows Server 2012 R2
 - Windows Server 2016 (LTSC)
 - Windows Server 2019 (LTSC)
 - Windows Server (SAC)

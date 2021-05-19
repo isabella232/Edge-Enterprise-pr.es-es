@@ -29,7 +29,7 @@ Estas notas de versión proporcionan información sobre las nuevas característi
  Para entender los canales de Microsoft Edge, vea la [Información general sobre los canales de Microsoft Edge](microsoft-edge-channels.md).
 
 > [!NOTE]
-> Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de MicrosoftEdge](microsoft-edge-update-progressive-rollout.md).
+> Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 
 ## <a name="version-89077468-april-1"></a>Versión 89.0.774.68: 1 de abril
 
@@ -39,11 +39,11 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](./microso
 
 Se han corregido varios errores y problemas de rendimiento.
 
-## <a name="version-89077457-march-18"></a>Versión89.0.774.57: 18 de marzo
+## <a name="version-89077457-march-18"></a>Versión 89.0.774.57: 18 de marzo
 
 Se han corregido varios errores y problemas de rendimiento.
 
-## <a name="version-89077454-march-13"></a>Versión89.0.774.54: 13 de marzo
+## <a name="version-89077454-march-13"></a>Versión 89.0.774.54: 13 de marzo
 
 > [!IMPORTANT]
 > Esta actualización contiene [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193). El equipo de Chromium ha indicado que tiene una vulnerabilidad de seguridad ampliamente conocida. Para más información, vea la [Guía de actualización de Seguridad](https://msrc.microsoft.com/update-guide).
@@ -153,8 +153,8 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](./microso
 
 - **Desusos:**
 
-  - Desusar la compatibilidad con el protocolo FTP. Se ha quitado la compatibilidad con el protocolo FTP heredado de MicrosoftEdge. Si se intenta navegar a un vínculo FTP, el explorador dirigirá el sistema operativo para que abra una aplicación externa para controlar el vínculo FTP. Como alternativa, los administradores de TI pueden configurar MicrosoftEdge para usar el modo IE para los sitios que dependen del protocolo FTP.
-  - La compatibilidad con AdobeFlash se eliminará. A partir de la versión88 de Microsoft Edge Beta, se eliminarán la funcionalidad y la compatibilidad con Adobe Flash. Más información: [actualización sobre la finalización del soporte en Adobe Flash Player: blog de MicrosoftEdge (Windows.com)](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/)
+  - Desusar la compatibilidad con el protocolo FTP. Se ha quitado la compatibilidad con el protocolo FTP heredado de Microsoft Edge. Si se intenta navegar a un vínculo FTP, el explorador dirigirá el sistema operativo para que abra una aplicación externa para controlar el vínculo FTP. Como alternativa, los administradores de TI pueden configurar Microsoft Edge para usar el modo IE para los sitios que dependen del protocolo FTP.
+  - La compatibilidad con Adobe Flash se eliminará. A partir de la versión 88 de Microsoft Edge Beta, se eliminarán la funcionalidad y la compatibilidad con Adobe Flash. Más información: [actualización sobre la finalización del soporte en Adobe Flash Player: blog de Microsoft Edge (Windows.com)](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/)
 
 - **Autenticación:**
 
@@ -186,7 +186,7 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](./microso
 
   - Mejorar la productividad y la multitarea con pestañas verticales. A medida que el número de pestañas horizontales crece, los títulos de sitios comienzan a cortarse y los controles de pestaña se pierden a medida que se reducen las pestañas. Esto interrumpe el flujo de trabajo del usuario, ya que dedica más tiempo a buscar, cambiar y administrar sus pestañas, y menos tiempo a la tarea. Las pestañas verticales permiten a los usuarios mover sus pestañas al costado, donde los iconos alineados verticalmente y los títulos de sitio más largos hacen que sea más fácil digitalizar, identificar y cambiar a la pestaña que quiera abrir rápidamente.
   - Rellene automáticamente el campo de fecha de nacimiento. Microsoft Edge ya ayuda a ahorrar tiempo y esfuerzo mientras rellenas formularios y crea cuentas en línea mediante el rellenado automático de datos de usuario, como direcciones, nombres, números de teléfono, etc. Microsoft Edge ahora es compatible con el campo de fecha de nacimiento que los usuarios pueden guardar y rellenar automáticamente. Un usuario puede ver, editar y eliminar esta información en cualquier momento en la configuración de su perfil.
-  - Mejoras en el historial de Cerrados recientemente. Cerrados recientemente ahora mantiene las últimas 25pestañas y ventanas de cualquier sesión de exploración pasada en lugar de solo la sesión anterior. Los usuarios pueden seleccionar Cerrados recientemente en la nueva experiencia de historial para ver todas las pestañas que estaban abiertas.
+  - Mejoras en el historial de Cerrados recientemente. Cerrados recientemente ahora mantiene las últimas 25 pestañas y ventanas de cualquier sesión de exploración pasada en lugar de solo la sesión anterior. Los usuarios pueden seleccionar Cerrados recientemente en la nueva experiencia de historial para ver todas las pestañas que estaban abiertas.
   - La función "Tu día de un vistazo" está activada de forma predeterminada. A partir de la versión 88 de Microsoft Edge, los trabajadores de la información pueden beneficiarse de las características de productividad inteligentes en su página de Nueva pestaña. Los usuarios de Microsoft Edge 87 también experimentarán estas características en un plazo de 2 semanas después del lanzamiento de la versión 88 de Microsoft Edge. Ofrecemos contenido personalizado y relevante a los usuarios que hayan iniciado sesión con su cuenta profesional o educativa, con tecnología de M365 Graph. Los usuarios pueden examinar rápidamente sus módulos "Tu día de un vistazo" para realizar un seguimiento sencillo de las reuniones y del trabajo reciente, así como iniciar rápidamente las aplicaciones que quiera usar.
 
 - **Sincronización del historial y las pestañas abiertas.** Para el deleite de nuestros usuarios, ahora el historial y pestañas abiertas se pueden sincronizar. Habilitar estas características ayudará a los usuarios a continuar su sesión anterior. El historial de exploración y las pestañas abiertas estarán disponibles en todos sus dispositivos de sincronización. Hemos actualizado las directivas de sincronización y del historial de exploradores, por lo que ahora los usuarios están conectados y son productivos en todos los dispositivos mediante Microsoft Edge. [Más información](https://blogs.windows.com/windowsexperience/2021/01/21/this-year-lets-resolve-to-make-the-most-of-our-time-online-and-better-protect-ourselves-from-online-threats/).

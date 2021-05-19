@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Compatibilidad con el idioma para mostrar de Microsoft Edge para Windows y macOS.
-ms.openlocfilehash: 37073213fcdacac6b8182dcbef93901c82110756
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
+ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447104"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406165"
 ---
 # <a name="microsoft-edge-language-support"></a>Compatibilidad con idiomas de Microsoft Edge
 
@@ -42,7 +42,7 @@ Dependiendo del idioma, aparecerán una o varias de las siguientes acciones:
 
 - Muestra Microsoft Edge en este idioma.
   - En Windows, marca esta casilla y luego haz clic en **Reiniciar**.
-  - En macOS, Microsoft Edge se muestra en el idioma preferido del sistema. Puedes cambiar el idioma en **Preferencias del sistema > Idioma y región**. Reiniciar MicrosoftEdge.
+  - En macOS, Microsoft Edge se muestra en el idioma preferido del sistema. Puedes cambiar el idioma en **Preferencias del sistema > Idioma y región**. Reiniciar Microsoft Edge.
 - Ofrece la traducción de páginas a este idioma. Esta opción solo está disponible si habilitas la **Oferta de traducir páginas que no se encuentran en un idioma que conoces**.
 - Moverse a la parte superior
 - Subir
@@ -156,5 +156,5 @@ En la tabla siguiente se enumeran los idiomas para mostrar compatibles con Micro
 
 ## <a name="see-also"></a>Consulta también
 
-- [Documentación de Microsoft Edge](./index.yml)
+- [Documentación de Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
