@@ -18,7 +18,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/12/2020
 ms.locfileid: "11167312"
 ---
-# Microsoft Edge: Directivas de actualización
+# <a name="microsoft-edge---update-policies"></a>Microsoft Edge: Directivas de actualización
 
 La última versión de Microsoft Edge incluye las siguientes directivas que puedes usar para controlar cómo y cuándo se actualiza Microsoft Edge.
 
