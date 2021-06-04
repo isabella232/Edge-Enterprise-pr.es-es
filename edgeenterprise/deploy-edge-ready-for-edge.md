@@ -21,11 +21,11 @@ ms.locfileid: "11157693"
 
 En el artículo se proporciona información para los administradores de TI que planeen implementar Microsoft Edge y necesiten información sobre la compatibilidad con aplicaciones y sobre el soporte técnico.
 
-## Compatibilidad de aplicaciones web y soporte
+##  <a name="web-application-compatibility-and-support"></a>Compatibilidad de aplicaciones web y soporte
 
 Para facilitarte planear la implementación de Microsoft Edge, hemos compilado una lista de aplicaciones web que puede que use tu organización. Esta lista te permite determinar si la aplicación web está preparada para Microsoft Edge, según se indique en la declaración de soporte técnico pública del proveedor de aplicaciones Web.
 
-### Agregar a la lista de aplicaciones
+###  <a name="add-to-the-application-list"></a>Agregar a la lista de aplicaciones
 
 La lista se actualiza regularmente a medida que se identifican las declaraciones de soporte de los comentarios de compromiso del cliente.
 
@@ -36,7 +36,7 @@ Si eres un proveedor de aplicaciones web y te gustaría incluir la declaración 
 - Nombre del proveedor
 - URL de declaración de soporte técnico
 
-### Lista de aplicaciones
+###  <a name="application-list"></a>Lista de aplicaciones
 
 Microsoft no prueba ni certifica estas aplicaciones en Microsoft Edge. La lista se compiló basándose en recursos disponibles al público. Consulta siempre la declaración de soporte más actual del proveedor. Es posible que algunas aplicaciones requieran el uso del modo IE como se indique en la declaración de soporte.
 
@@ -143,7 +143,7 @@ En la tabla siguiente se enumeran las instrucciones de soporte técnico de los p
 | Zoom  | Zoom  | https://support.zoom.us/hc/en-us/articles/201362023-System-Requirements-for-PC-Mac-and-Linux#h_92957a85-2506-43a2-bd4a-5bb274778518  |
 | ZScaler  | Zscaler   | https://help.zscaler.com/zia/supported-browsers |
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Planear tu implementación de Microsoft Edge](deploy-edge-plan-deployment.md)

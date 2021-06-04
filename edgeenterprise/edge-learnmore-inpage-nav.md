@@ -26,7 +26,7 @@ Una navegación en la página se inicia desde un vínculo, un script o un formul
 >[!NOTE]
 >Este artículo se aplica a Microsoft Edge, versión 81 o posterior.
 
-## Requisitos previos
+##  <a name="prerequisites"></a>Requisitos previos
 
 Las siguientes actualizaciones de Windows son necesarias para esta directiva:
 
@@ -36,13 +36,13 @@ Las siguientes actualizaciones de Windows son necesarias para esta directiva:
 - Windows 10, versión 1709 ([KB4534318](https://support.microsoft.com/help/4534318))
 
 
-## Acerca de esta directiva
+##  <a name="about-this-policy"></a>Acerca de esta directiva
 
 Esta directiva te proporciona tiempo para identificar y configurar todos los servidores de autenticación usados por los sitios en modo IE. Sin embargo, esta directiva puede dar lugar a una experiencia de navegación incoherente, en la que algunos sitios se muestran en modo IE y en otras ocasiones se muestran en modo Microsoft Edge. Esta experiencia depende de si la navegación al sitio comenzó desde una página en modo IE. Cualquier sitio que no se haya configurado explícitamente para abrirse en un motor de procesamiento específico estará sujeto a esta incoherencia.
 
 Si habilitas esta directiva, se recomienda que la deshabilites después de que hayas identificado todos los servidores de autenticación y los hayas agregado como neutros a la lista de sitios. De esta forma, te asegurarás de que los sitios modernos nunca se muestren accidentalmente en modo IE.
 
-## Mantener la navegación en la página en modo IE
+##  <a name="keep-in-page-navigation-in-ie-mode"></a>Mantener la navegación en la página en modo IE
 
 Para mantener toda la navegación en la página o la automática en modo Internet Explorer, sigue estos pasos:
 
@@ -64,6 +64,6 @@ Para mantener toda la navegación en la página o la automática en modo Interne
 
 6. Haz clic en **Aceptar** o **Aplicar** para guardar la configuración de la directiva.
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

@@ -24,7 +24,7 @@ En este artículo se describe el formato de filtro que se usa para las directiva
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
-## Formato de filtro
+##  <a name="the-filter-format"></a>Formato de filtro
 
 El formato de filtro es:
 
@@ -42,7 +42,7 @@ Los campos del formato de filtro son:
 | **ruta** (*opcional*) | Puedes usar cualquier cadena de la ruta. |
 | **consulta** (*opcional*) | La **consulta** es un valor clave o tokens solo de clave separados por un signo ampersand ("&"). Separa los tokens de valor clave con un signo igual ("="). Para indicar una coincidencia de prefijo, puedes usar un asterisco ("\*") al final de la **consulta**. |
 
-## Comparación del formato de filtro con el formato de dirección URL
+##  <a name="comparing-the-filter-format-to-the-url-format"></a>Comparación del formato de filtro con el formato de dirección URL
 
 El formato de filtro se asemeja al formato de la dirección URL, excepto en lo siguiente:
 
@@ -51,7 +51,7 @@ El formato de filtro se asemeja al formato de la dirección URL, excepto en lo s
 - Puedes usar un carácter comodín ("*") como **host** y puedes poner un prefijo de un punto (".").
 - Puedes usar una barra diagonal ("/") o un punto (".") como sufijo del **host**. En este caso, se ignora el sufijo.
 
-## Criterios de selección de filtros
+##  <a name="filter-selection-criteria"></a>Criterios de selección de filtros
 
 El filtro seleccionado para una dirección URL es la coincidencia más específica encontrada después de procesar las siguientes reglas de selección de filtro:
 
@@ -65,7 +65,7 @@ El filtro seleccionado para una dirección URL es la coincidencia más específi
    >[!NOTE]
    >El comportamiento predeterminado es permitir la solicitud de dirección URL si no coincide con ningún filtro.
 
-## Ejemplo de criterios de selección de filtros
+##  <a name="example-filter-selection-criteria"></a>Ejemplo de criterios de selección de filtros
 
 En este ejemplo, al buscar una coincidencia con "https://sub.contoso.com/docs", la selección de filtros hará lo siguiente:
 
@@ -75,7 +75,7 @@ En este ejemplo, al buscar una coincidencia con "https://sub.contoso.com/docs", 
 4. De los filtros restantes, se quitan los que no tengan "/docs" como prefijo de la **ruta**.
 5. De los filtros restantes, se selecciona y aplica el filtro con el prefijo de ruta más larga. Si no se encuentra ningún filtro, el proceso de selección vuelve a iniciarse en el paso 1. El proceso se repite con el siguiente subdominio.
 
-### Información adicional de filtros
+###  <a name="additional-filter-information"></a>Información adicional de filtros
 
 Si un filtro tiene un punto (".") como prefijo del **host**, solo se filtran las coincidencias exactas de **host**. Por ejemplo:
 
@@ -99,13 +99,13 @@ Cualquier otro **esquema** se trata como un **esquema** personalizado, pero solo
 
 - El filtro "http://contoso.com/path?query=A" no coincide con "http://contoso.com/Path?query=A" o "http://contoso.com/path?Query=A". Coincide con "http://contoso.COM/path?query=A".
 
-## Licencia de contenido
+##  <a name="content-license"></a>Licencia de contenido
 
 > [!NOTE]
 > Algunas partes de esta página son modificaciones que se basan en trabajo creado y compartido por Chromium.org y que se usan de acuerdo con los términos descritos en la [Licencia internacional de Creative Commons Atribution 4.0](http://creativecommons.org/licenses/by/4.0/). La [página original de Chromium se puede encontrar aquí](https://www.chromium.org/administrators/url-blacklist-filter-format).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este trabajo dispone de licencia conforme a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licencia internacional de Creative Commons Attribution 4.0</a>.
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

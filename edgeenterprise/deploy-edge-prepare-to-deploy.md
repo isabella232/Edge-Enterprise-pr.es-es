@@ -23,7 +23,7 @@ En este artículo se describe cómo preparar la implementación de Microsoft Edg
 
 Según la [entrada de blog](https://aka.ms/EdgeLegacyEOS) del equipo de productos de Microsoft Edge, la compatibilidad con la aplicación de escritorio Microsoft Edge (versión anterior) finalizará el 9 de marzo de 2021. Cuando apliques la versión de la actualización del martes (o "B") de abril, se eliminará Microsoft Edge (versión anterior) de los dispositivos que ejecuten desde Windows 10 RS4 a 20H1 y se sustituirá por Microsoft Edge.
 
-## Cómo prepararse
+##  <a name="how-to-prepare"></a>Cómo prepararse
 
 Para prepararse para la instalación de Microsoft Edge en los dispositivos de Windows 10 RS4 a 20H1 con la versión de la actualización del martes de abril, recomendamos leer [Planificar tu implementación de Microsoft Edge](deploy-edge-plan-deployment.md).
 
@@ -33,7 +33,7 @@ Después de planificar tu implementación, usa uno de los siguientes métodos pa
 
 - **Quita la aplicación de escritorio de Microsoft Edge (versión anterior) antes de su fecha de finalización del servicio del 9 de marzo de 2021 e implementa Microsoft Edge**. Para Windows 10 RS4 a 20H1, puedes hacerlo mediante actualizaciones de Windows. Para obtener más información, ve [Implementar Microsoft Edge con actualizaciones de Windows 10](deploy-edge-with-windows-10-updates.md).
 
-## Ve también
+##  <a name="see-also"></a>Ve también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Planear tu implementación de Microsoft Edge](deploy-edge-plan-deployment.md)

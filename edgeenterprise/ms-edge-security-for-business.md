@@ -23,15 +23,15 @@ Microsoft Edge se basa en el proyecto de fuente abierta Chromium —el mismo pro
 
 Entremos en detalles: empezaremos por las **amenazas externas** y, después, pasaremos a los **riesgos internos y la protección de la información**.
 
-## Protección contra amenazas externas
+##  <a name="external-threat-protection"></a>Protección contra amenazas externas
 
-### La protección mejor valorada para hacer frente a la suplantación de identidad (phishing) y al software malintencionado
+###  <a name="highest-rated-protection-against-phishing-and-malware"></a>La protección mejor valorada para hacer frente a la suplantación de identidad (phishing) y al software malintencionado
 
 Integrado en Microsoft Edge, SmartScreen bloquea más intentos de [suplantación de identidad (phishing)](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) y [malware](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) que la navegación segura de Google Chrome, según un estudio independiente de NSS Labs. SmartScreen ofrece comprobaciones de reputación de los sitios y de las descargas en tiempo real mientras los usuarios trabajan en línea. Además, forma parte de [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), que obtiene información y señales generadas en la amplia red global de Microsoft de activos, investigadores y asociados. Microsoft Edge ejecuta comprobaciones de listas dinámicas y basadas en la nube de descargas y sitios peligrosos, lo que ayuda a detectar y a bloquear incluso amenazas efímeras que desaparecen rápidamente.  
 
 [Microsoft Edge con SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) bloqueó el 95,5 % de los intentos de phishing durante la prueba de [Protección de phishing de NSS Labs](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) y el 98,5 % de los intentos de malware durante la prueba de [Protección de malware de NSS Labs](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf), frente al 86,9 % y el 86,0 %, respectivamente, que obtuvo la navegación segura de Google Chrome.
 
-### El único explorador en Windows 10 que admite de forma nativa el aislamiento de hardware
+###  <a name="the-only-browser-on-windows-10-that-natively-supports-hardware-isolation"></a>El único explorador en Windows 10 que admite de forma nativa el aislamiento de hardware
 
 Microsoft Edge es el único explorador en Windows 10 que admite de forma nativa funciones de aislamiento de hardware. Como parte de Windows 10 Pro o Enterprise, la Protección de aplicaciones de Microsoft defender (Protección de aplicaciones) ejecuta los sitios que no sean de confianza en un kernel aislado del dispositivo local y de las redes internas. Los sitios que no son de confianza se ejecutan en un "contenedor", de modo que, cuando tenga lugar un ataque, quede en un espacio aislado del resto de la red corporativa. Para más información, consulte [compatibilidad de Microsoft Edge con la Protección de aplicaciones](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-defender-application-guard).
 
@@ -40,9 +40,9 @@ Para Chrome, se encuentra disponible una extensión para poder emplear el aislam
 > [!NOTE]
 > La Protección de aplicaciones está disponible en Windows 10, 1809 y posteriores. La Protección de aplicaciones no está disponible en las ediciones de Windows 10 Home.
 
-## Protección de la información y contra riesgos internos
+##  <a name="internal-risks-and-information-protection"></a>Protección de la información y contra riesgos internos
 
-### Soporte nativo para la seguridad de Microsoft 365 sin software adicional
+###  <a name="native-support-for-microsoft-365-security-without-additional-software"></a>Soporte nativo para la seguridad de Microsoft 365 sin software adicional
 
 Además de proteger contra amenazas externas, los administradores de TI también deben proteger frente a riesgos internos. La protección —sólida y a escala— de datos corporativos confidenciales es una de las máximas prioridades de los administradores de TI, sobre todo teniendo en cuenta que el personal se ha descentralizado. Microsoft Edge es el único explorador con compatibilidad nativa para el Acceso condicional de Azure AD, para Windows Information Protection y para la nueva prevención de pérdida de datos (DLP) de Microsoft Endpoint sin necesidad de software adicional.
 
@@ -63,7 +63,7 @@ Para obtener más información sobre los requisitos previos de DLP de Endpoint y
 > [!NOTE]
 > Se requiere una suscripción a Microsoft 365 E5 o a Cumplimiento de Microsoft 365 E5 para obtener la prevención de pérdida de datos de Microsoft Endpoint.
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Vídeo: Seguridad, compatibilidad y capacidad de administración de Microsoft Edge](microsoft-edge-video-security-compatibility-manageability.md)

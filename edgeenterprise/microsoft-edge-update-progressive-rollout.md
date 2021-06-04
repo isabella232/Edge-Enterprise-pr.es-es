@@ -24,15 +24,15 @@ A partir de la versión 83 de Microsoft Edge, realizaremos implementaciones grad
 > [!NOTE]
 > Esto aplica a la versión 83 o posterior del canal estable de Microsoft Edge.
 
-## ¿Por qué necesitamos la implementación progresiva?
+##  <a name="why-do-we-need-progressive-rollout"></a>¿Por qué necesitamos la implementación progresiva?
 
 Al supervisar el estado de nuestras actualizaciones de manera cercana y llevar a cabo las actualizaciones a lo largo de varios días, podemos limitar el impacto de los problemas que se pueden producir en la nueva actualización. Con la versión 83 de Microsoft Edge, las implementaciones progresivas se habilitarán para todas las versiones de Microsoft Edge para Windows 7, Windows 8 y 8.1, y Windows 10. Ofreceremos soporte técnico de Microsoft Edge en Mac tan pronto como esté listo.
 
-## ¿Cómo funcionan las actualizaciones?
+##  <a name="how-will-the-updates-work"></a>¿Cómo funcionan las actualizaciones?
 
 Cada instalación de Microsoft Edge se asigna a un valor de actualización. Cuando comencemos con las implementaciones, verá la actualización cuando el valor de su dispositivo se encuentre dentro del intervalo de valores de actualización. A medida que progresa la implementación (en pocos días), todos los usuarios obtendrán la actualización. Las actualizaciones del explorador con correcciones de seguridad críticas tendrán una cadencia de lanzamiento más rápida que las actualizaciones que no tengan correcciones de seguridad importantes. Esto se lleva a cabo para asegurar la protección inmediata frente a las vulnerabilidades.
 
-## ¿Cómo afecta esto a las empresas?
+##  <a name="how-does-this-affect-enterprises"></a>¿Cómo afecta esto a las empresas?
 
 Los artefactos de Microsoft Edge se distribuyen a las empresas a través de varios mecanismos, como Microsoft Intune, Windows Server Update Services (WSUS) y Administrador de configuración. Estas herramientas de implementación se comportan de manera diferente en lo que respecta al lanzamiento progresivo:
 
@@ -41,6 +41,6 @@ Los artefactos de Microsoft Edge se distribuyen a las empresas a través de vari
 
 Comparta sus valiosos comentarios a través de la opción de voz, el botón comentarios en la aplicación, o, sino, debajo de los comentarios, en caso de que tenga alguna duda o consulta.
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

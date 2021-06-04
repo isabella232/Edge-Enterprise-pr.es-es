@@ -24,7 +24,7 @@ Este artículo describe cómo configurar las opciones de directiva en macOS con 
 También puede configurar las opciones de directiva de Microsoft Edge en macOS mediante un archivo de lista de propiedades (.plist). Para obtener más información, consulte [configurar para macOS con un archivo .plist](configure-microsoft-edge-on-mac.md)
 
 
-## Requisitos previos
+##  <a name="prerequisites"></a>Requisitos previos
 
 Se necesita el siguiente software:
 
@@ -32,7 +32,7 @@ Se necesita el siguiente software:
 - Archivo de plantillas de directiva, versión 81.0.416.3
 - Jamf Pro, versión 10.19
 
-## Acerca del menú de configuración personalizada y de la aplicación de Jamf Pro
+##  <a name="about-the-jamf-pro-application-&-custom-settings-menu"></a>Acerca del menú de configuración personalizada y de la aplicación de Jamf Pro
 
 Antes de Jamf Pro 10,18, administrar Office 365 suponía la creación manual de un archivo .plist. Este era un flujo de trabajo muy largo que requería sólidos conocimientos técnicos. Jamf Pro 10.18 eliminó estos obstáculos al simplificar el proceso de configuración. Sin embargo, los administradores de TI solo podrían usar esta nueva interfaz de usuario para aplicaciones específicas y dominios de preferencias especificados por Jamf.
 
@@ -40,7 +40,7 @@ En Jamf Pro 10.19, un usuario puede cargar un manifiesto JSON como "esquema pers
 
 Para obtener más información, vea [perfiles de configuración del equipo](https://jamf.it/computer-configuration-profiles) en la guía del administrador de Jamf Pro.
 
-## Obtener el manifiesto de directiva para una versión específica de Microsoft Edge
+##  <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Obtener el manifiesto de directiva para una versión específica de Microsoft Edge
 
 Para obtener el manifiesto de directiva:
 
@@ -56,7 +56,7 @@ Después de desempaquetar el archivo CAB, desempaquete el archivo ZIP y vaya al 
 
 Este manifiesto se publicará en cada paquete de directivas empezando con la compilación 81.0.416.3. Si desea probar directivas en el canal de desarrollo, puede tomar el manifiesto asociado a cada lanzamiento de desarrollo y probarlo en Jamf Pro.  
 
-## Usar el manifiesto de directiva en Jamf Pro
+##  <a name="use-the-policy-manifest-in-jamf-pro"></a>Usar el manifiesto de directiva en Jamf Pro
 
 Siga los pasos siguientes para cargar el manifiesto de directiva en Jamf Pro y crear un perfil de directiva para macOS.
 
@@ -105,7 +105,7 @@ Siga los pasos siguientes para cargar el manifiesto de directiva en Jamf Pro y c
 
 Después de crear el nuevo perfil de configuración aún tiene que configurar el **ámbito** del perfil.
 
-### Para configurar el ámbito
+###  <a name="to-configure-the-scope"></a>Para configurar el ámbito
 
 1. Para **destinos**, proporcione la siguiente configuración mínima:
 
@@ -115,7 +115,7 @@ Después de crear el nuevo perfil de configuración aún tiene que configurar el
 2. Para **limitaciones**, conserve la configuración predeterminada: ninguna. Haga clic en **Cancelar**.
 3. Para **exclusiones**, conserve la configuración predeterminada: ninguna. Haga clic en **Cancelar**.
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para macOS con Intune](configure-microsoft-edge-on-mac.md)

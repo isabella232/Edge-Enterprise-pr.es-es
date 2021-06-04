@@ -29,7 +29,7 @@ Para ayudarle con la implementación inicial, use las siguientes asignaciones de
 > - [Referencia de directiva de explorador](microsoft-edge-policies.md)
 > - [Actualizar referencia de directiva](microsoft-edge-update-policies.md)
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
 - [Configuración de Microsoft Edge en Windows](configure-microsoft-edge.md)
 - [Configuración de Microsoft Edge en macOS](configure-microsoft-edge-on-mac.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

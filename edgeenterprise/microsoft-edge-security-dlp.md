@@ -27,7 +27,7 @@ Esta mezcla de las actividades de los usuarios también se distribuye en los dis
 
 Microsoft Edge es compatible de forma nativa con dos soluciones DLP distintas, DLP de Microsoft Endpoint y la protección de información de Windows (WIP).
 
-## Prevención de pérdida de datos de Microsoft Endpoint (DLP de Endpoint)
+##  <a name="microsoft-endpoint-data-loss-prevention-(endpoint-dlp)"></a>Prevención de pérdida de datos de Microsoft Endpoint (DLP de Endpoint)
 
 DLP de Microsoft Endpoint es la siguiente generación de prevención de pérdida de datos con conceptos modernos como la protección centrada en los datos. Está integrado en Windows 10 y Microsoft Edge, de modo que no necesitará agentes ni complementos adicionales en el dispositivo.
 
@@ -51,7 +51,7 @@ Entre las actividades de usuario que se pueden auditar y administrar en los disp
 
 Para obtener información más detallada sobre las actividades de usuario que se pueden auditar y administrar, consulte [actividades de Endpoint que se pueden supervisar y tomar medidas en](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true).
 
-## Windows Information Protection
+##  <a name="windows-information-protection"></a>Windows Information Protection
 
 Consulte [Soporte técnico para protección de la información de Windows](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection), donde se describe cómo Microsoft Edge es compatible con la protección de información de Windows (WIP). Puede obtener más información sobre los requisitos del sistema, las prestaciones y las características compatibles en las secciones siguientes:
 
@@ -59,7 +59,7 @@ Consulte [Soporte técnico para protección de la información de Windows](https
 - [Beneficios de la Protección de la Información de Windows](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
 - [Las características WIP compatibles en Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Vídeo: prevención de pérdida de datos-Microsoft Edge](https://www.youtube.com/watch?v=dLD04U9eTqg)

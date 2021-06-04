@@ -25,7 +25,7 @@ La última versión de Microsoft Edge incluye las siguientes directivas que pued
 Para obtener información sobre otras directivas disponibles en Microsoft Edge, consulta la [referencia de directiva del explorador Microsoft Edge](microsoft-edge-policies.md)
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
-## Directivas disponibles
+##  <a name="available-policies"></a>Directivas disponibles
 Estas tablas enumeran todas las directivas de grupo relacionadas con la actualización disponibles en esta versión de Microsoft Edge. Usa los vínculos de la tabla para obtener más detalles sobre directivas específicas.
 
 |||
@@ -65,10 +65,10 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con la actualiz
 |[Instalar](#install-webview)|Permitir instalación|
 |[Actualización](#update-webview)|Invalidar directiva de actualización|
 
-## Directivas de aplicaciones
+##  <a name="applications-policies"></a>Directivas de aplicaciones
 
 [Volver al principio](#microsoft-edge---update-policies)
-### InstallDefault
+###  <a name="installdefault"></a>InstallDefault
 #### Valor predeterminado de Permitir instalación
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
@@ -99,7 +99,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### UpdateDefault
+###  <a name="updatedefault"></a>UpdateDefault
 #### Valor predeterminado de Invalidar directiva de actualización
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
@@ -134,7 +134,7 @@ Permite especificar el comportamiento predeterminado de todos los canales relaci
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### Instalar
+###  <a name="install"></a>Instalar
 #### Permitir instalación
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
@@ -173,7 +173,7 @@ Especifica si se puede instalar un canal de Microsoft Edge en dispositivos unido
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### Actualizar
+###  <a name="update"></a>Actualizar
 #### Invalidar directiva de actualización
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
@@ -218,7 +218,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### Allowsxs
+###  <a name="allowsxs"></a>Allowsxs
 #### Permitir la experiencia de exploradores Microsoft Edge en paralelo
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
@@ -249,7 +249,7 @@ Para que esta directiva de grupo surta efecto, debe configurarse antes de la ins
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### CreateDesktopShortcutDefault
+###  <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### Impedir la creación de accesos directos de escritorio durante la instalación predeterminada
 >Microsoft Edge Update 1.3.128.0 y posteriores
 
@@ -277,7 +277,7 @@ Si Microsoft Edge ya está instalado, esta directiva no tendrá ningún efecto.
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### CreateDesktopShortcut
+###  <a name="createdesktopshortcut"></a>CreateDesktopShortcut
 #### Impedir la creación de accesos directos de escritorio durante la instalación
 >Microsoft Edge Update 1.3.128.0 y posteriores
 
@@ -313,7 +313,7 @@ Si Microsoft Edge ya está instalado, esta directiva no tendrá ningún efecto.
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### RollbackToTargetVersion
+###  <a name="rollbacktotargetversion"></a>RollbackToTargetVersion
 #### Revertir a la versión de destino
 >Microsoft Edge Update 1.3.133.3 y posteriores
 
@@ -362,7 +362,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### TargetVersionPrefix
+###  <a name="targetversionprefix"></a>TargetVersionPrefix
 #### Invalidación de versión de destino
 >Microsoft Edge Update 1.3.119.43 y posteriores
 
@@ -403,10 +403,10 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-## Directivas de preferencias
+##  <a name="preferences-policies"></a>Directivas de preferencias
 
 [Volver al principio](#microsoft-edge---update-policies)
-### AutoUpdateCheckPeriodMinutes
+###  <a name="autoupdatecheckperiodminutes"></a>AutoUpdateCheckPeriodMinutes
 #### invalidar el período de buscar actualizaciones automáticas
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
@@ -431,7 +431,7 @@ Si se habilita, esta directiva permite establecer un valor para el número míni
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### UpdatesSuppressed
+###  <a name="updatessuppressed"></a>UpdatesSuppressed
 #### Período de tiempo en cada día para suprimir la búsqueda de actualizaciones automáticas
 >Microsoft Edge Update 1.3.33.5 y posteriores
 
@@ -462,10 +462,10 @@ start min  : 0x00000002
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-## Directivas de servidor proxy
+##  <a name="proxy-server-policies"></a>Directivas de servidor proxy
 
 [Volver al principio](#microsoft-edge---update-policies)
-### ProxyMode
+###  <a name="proxymode"></a>ProxyMode
 #### Elegir cómo especificar la configuración del servidor proxy
 >Microsoft Edge Update 1.3.21.81 y posteriores
 
@@ -498,7 +498,7 @@ fixed_servers
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### ProxyPacUrl
+###  <a name="proxypacurl"></a>ProxyPacUrl
 #### Dirección URL a un archivo proxy .pac
 >Microsoft Edge Update 1.3.21.81 y posteriores
 
@@ -527,7 +527,7 @@ https://www.microsoft.com
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### ProxyServer
+###  <a name="proxyserver"></a>ProxyServer
 #### Dirección o dirección URL del servidor proxy
 >Microsoft Edge Update 1.3.21.81 y posteriores
 
@@ -556,10 +556,10 @@ https://www.microsoft.com
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-## Directivas de Microsoft Edge WebView
+##  <a name="microsoft-edge-webview-policies"></a>Directivas de Microsoft Edge WebView
 
 [Volver al principio](#microsoft-edge---update-policies)
-### Instalar (WebView)
+###  <a name="install-(webview)"></a>Instalar (WebView)
 #### Permitir instalación
 >Microsoft Edge Update 1.3.127.1 y posteriores
 
@@ -587,7 +587,7 @@ Le permite especificar si Microsoft Edge WebView se puede instalar con Microsoft
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-### Actualización (WebView)
+###  <a name="update-(webview)"></a>Actualización (WebView)
 #### Invalidar directiva de actualización
 >Microsoft Edge Update 1.3.127.1 y posteriores
 
@@ -618,6 +618,6 @@ Las actualizaciones automáticas están habilitadas de forma predeterminada. Al 
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
   - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
   - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

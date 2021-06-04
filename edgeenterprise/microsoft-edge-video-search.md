@@ -26,11 +26,11 @@ En este vídeo, se muestra cómo Microsoft Edge lleva la experiencia de compatib
 > [!NOTE]
 > Este vídeo se grabó en Microsoft Ignite 2019, en la sesión THR2279: Microsoft Edge y Búsqueda de Microsoft: guía completa para usuarios y administradores de TI.
 
-## Sobre el vídeo
+##  <a name="about-the-video"></a>Sobre el vídeo
 
 La Búsqueda de Microsoft agrega resultados de búsqueda en la Intranet personalizados e integrados para sitios, personas, archivos y más a través de Microsoft Edge en el equipo, Mac y dispositivos móviles. Por último, le mostramos cómo configurar la Búsqueda de Microsoft como parte de Microsoft 365 y cómo implementar Microsoft Edge desde System Center Configuration Manager y Microsoft Intune en todas las plataformas.
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Lista de reproducción de Microsoft Edge en YouTube](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

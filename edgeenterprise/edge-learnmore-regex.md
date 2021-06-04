@@ -35,7 +35,7 @@ En esta página, se muestra la sintaxis de las expresiones regulares aceptada po
 
 También se muestran algunas sintaxis aceptadas por PCRE, PERL y VIM.
 
-## Tablas de sintaxis
+##  <a name="syntax-tables"></a>Tablas de sintaxis
 
 | Tipos de expresiones de carácter único | Ejemplos |
 | --- | --- |
@@ -500,13 +500,13 @@ La sintaxis de flag es xyz (conjunto) o -xyz (limpiar) o xy-z (conjunto xy, limp
 | (\*BSR\_ANYCRLF) | establecer convención \R (NO COMPATIBLE) PCRE |
 | (\*BSR\_UNICODE) | (NO COMPATIBLE) PCRE |
 
-## Licencia de contenido
+##  <a name="content-license"></a>Licencia de contenido
 
 > [!NOTE]
 > Algunas partes de esta página son modificaciones que se basan en trabajo creado y compartido por Chromium.org y que se usan de acuerdo con los términos descritos en la [Licencia internacional de Creative Commons Atribution 4.0](http://creativecommons.org/licenses/by/4.0/). La página original se puede encontrar [aquí](https://github.com/google/re2/wiki/Syntax).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este trabajo dispone de licencia conforme a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licencia internacional de Creative Commons Attribution 4.0</a>.
 
-## Consulte también
+##  <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

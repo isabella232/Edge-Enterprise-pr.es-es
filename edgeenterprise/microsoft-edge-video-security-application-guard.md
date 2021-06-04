@@ -23,11 +23,11 @@ En este vídeo se muestra cómo Microsoft Edge es compatible con el aislamiento 
 
 [![Aislamiento del explorador utilizando la Protección de aplicaciones]( media/microsoft-edge-video-security-application-guard/0.png)](http://www.youtube.com/watch?v=zQjaRqNXMqw "Browser isolation using Application Guard")
 
-## Sobre el vídeo
+##  <a name="about-the-video"></a>Sobre el vídeo
 
 Con Microsoft Edge, puede ayudar a reducir la exposición de su empresa a los ataques en la Web. Aprende cómo Microsoft Edge soporta la Protección de aplicaciones de Microsoft Defender para usar el aislamiento de explorador frente a amenazas externas.
 
-## Consulta también
+##  <a name="see-also"></a>Consulta también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Compatibilidad de Microsoft Edge para la Protección de aplicaciones de Microsoft Defender](microsoft-edge-security-windows-defender-application-guard.md)

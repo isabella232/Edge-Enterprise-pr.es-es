@@ -23,11 +23,11 @@ Este vídeo muestra el lector de PDF de nivel empresarial de Microsoft Edge. Haz
 
 [![Lector de PDF de nivel empresarial](media/microsoft-edge-video-pdf-reader/0.png)](http://www.youtube.com/watch?v=XWAqNQ0xAcE "Enterprise grade PDF reader")
 
-## Sobre el vídeo
+##  <a name="about-the-video"></a>Sobre el vídeo
 
 Este vídeo destaca las características del lector de PDF integrado en Microsoft Edge. Entérate de cómo los usuarios pueden escribir con lápiz y resaltar archivos PDF, abrir documentos protegidos y ver y validar firmas digitales basadas en certificados.
 
-## Consulta también
+##  <a name="see-also"></a>Consulta también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Lector de PDF en Microsoft Edge](microsoft-edge-pdf.md)

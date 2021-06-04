@@ -37,7 +37,7 @@ En las secciones siguientes se proporcionan instrucciones específicas para plan
 - [Evalúa el piloto](#validate-your-deployment)
 - [Implementa Microsoft Edge en toda la empresa](#broad-deployment-of-microsoft-edge)
 
-## Evalúa las necesidades del explorador y del entorno del explorador existentes
+##  <a name="evaluate-your-existing-browser-environment-and-browser-needs"></a>Evalúa las necesidades del explorador y del entorno del explorador existentes
 
 Dedica tiempo a comprender la visión del proyecto y el estado del explorador actual para garantizar que todas las partes interesadas del proyecto están coordinadas y trabajan por el mismo resultado.
 
@@ -68,27 +68,27 @@ También debes comprender los **requisitos previos** para las características q
 Teniendo en cuenta estas respuestas, estás listo para planear la implementación de Microsoft Edge.
 <!--bookmark -->
 
-## Asegúrate de que los dispositivos con Windows 10 están listos
+##  <a name="make-sure-your-windows-10-devices-are-ready"></a>Asegúrate de que los dispositivos con Windows 10 están listos
 
 El canal estable de Microsoft Edge requiere la última actualización acumulativa (LCU) de octubre 2019 (o posterior). Si intentas implementar en un dispositivo Windows 10 que tiene una LCU anterior, la instalación fallará. Para más información sobre la LCU mínima que se debe aplicar antes de implementar Edge, consulta [Actualizaciones de Windows para admitir la próxima versión de Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-windows-updates).
 
-## Determinar tu metodología de implementación
+##  <a name="determine-your-deployment-methodology"></a>Determinar tu metodología de implementación
 
 Cuando sepas el estado final que deseas, estarás listo para empezar a planear cómo llegar allí. Los dos métodos principales para implementar Microsoft Edge son por rol y por sitio.
 
-### Implementar en usuarios finales por rol
+###  <a name="deploy-to-end-users-by-role"></a>Implementar en usuarios finales por rol
 
 Si la compatibilidad de aplicaciones es tu principal preocupación y no sabes bien qué aplicaciones probar, es posible que quieras considerar la posibilidad de implementar para usuarios finales por rol. Esto permite que cada oleada de una implementación por fases proporcione comentarios e información sobre las aplicaciones que quizás deban modificarse para tener su configuración modificada para abordar problemas de compatibilidad.
 
-### Implementar en usuarios finales por sitio
+###  <a name="deploy-to-end-users-by-site"></a>Implementar en usuarios finales por sitio
 
 Si el ancho de banda es tu principal preocupación, es posible que quieras considerar la posibilidad de realizar pruebas de compatibilidad de aplicaciones por adelantado. Una vez finalizadas la pruebas, implementa en usuarios finales por sitio para que puedas aprovechar el almacenamiento en caché de otras optimizaciones de distribución de software.
 
-## Realizar detección de sitio
+##  <a name="do-site-discovery"></a>Realizar detección de sitio
 
 Si tienes una dependencia de aplicaciones web heredadas y planeas usar el modo Internet Explorer (lo que hacen la mayoría de los clientes), es probable que tengas que realizar una detección adicional del sitio.
 
-### Si ya has implementado y configurado la versión heredada de Microsoft Edge
+###  <a name="if-you've-already-deployed-and-configured-the-legacy-version-of-microsoft-edge"></a>Si ya has implementado y configurado la versión heredada de Microsoft Edge
 
 Si ya has configurado tu lista de sitios de empresa para que funcione con la versión heredada de Microsoft Edge, tu trabajo está casi hecho. Lo único que puedes tener que agregar son sitios neutros.
 
@@ -96,14 +96,14 @@ Los sitios neutros son normalmente sitios que proporcionan inicio de sesión ún
 
 Identifica cualquier sitio SSO (u otros sitios neutros) que uses y agrégalos a tu lista de sitios de empresa.
 
-### Si has configurado Internet Explorer como explorador predeterminado
+###  <a name="if-you've-configured-internet-explorer-as-your-default-browser"></a>Si has configurado Internet Explorer como explorador predeterminado
 
 Si actualmente solo usas Internet Explorer, es posible que no sepas qué sitios se han actualizado a los estándares web modernos y que aún requieren Internet Explorer. Quieres encontrar estos sitios y agregarlos a la lista de sitios de empresa. Esto te permite usar el modo Internet Explorer solo en los sitios que lo necesitan.
 
 > [!TIP]
 > Usa las herramientas de [detección de sitio de empresa](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery?redirectedfrom=MSDN) para detectar los sitios que pueden necesitar el modo Internet Explorer. Puedes recopilar datos de equipos que ejecutan Windows Internet Explorer 8 a través de Internet Explorer 11 en Windows 10, Windows 8.1 o Windows 7.
 
-### Analizar datos de detección de sitios
+###  <a name="analyze-site-discovery-data"></a>Analizar datos de detección de sitios
 
 Una vez que hayas recopilado los datos del sitio, te recomendamos que sigas un proceso de cuatro pasos para analizar los datos:
 
@@ -115,7 +115,7 @@ Una vez que hayas recopilado los datos del sitio, te recomendamos que sigas un p
    > [!NOTE]
    > Como práctica recomendada, agrupa todos los sitios que componen una aplicación. Si se necesitan todos los sitios para realizar una tarea y tienden a actualizarse a la vez, es una buen indicador que deben agruparse. De esta manera, al actualizar una aplicación, es más sencillo eliminar todo el sitio del modo Internet Explorer y empezar a usar un explorador moderno para esa aplicación.
 
-## Determinar la estrategia de canal
+##  <a name="determine-your-channel-strategy"></a>Determinar la estrategia de canal
 
 Microsoft Edge se publica en [varios canales](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels).
 
@@ -124,7 +124,7 @@ Microsoft Edge se publica en [varios canales](https://docs.microsoft.com/DeployE
 
 El canal estable es lo que querrás implementar en la mayoría de los dispositivos. Sin embargo, debes pensar en una estrategia de implementación que incluya varios dispositivos y canales.
 
-### Varios dispositivos y canales
+###  <a name="multiple-devices-and-channels"></a>Varios dispositivos y canales
 
 Se recomienda tener un subconjunto representativo de dispositivos configurados para usar el canal beta. Esto te permite obtener una vista previa de los próximos cambios al explorador. Puedes ver si estos cambios van a afectar a los usuarios finales o a las aplicaciones.
 
@@ -135,7 +135,7 @@ Dado que es posible instalar varios canales en un dispositivo, puedes reducir el
 > [!NOTE]
 > Si el usuario ha habilitado la sincronización, su configuración se sincronizará entre los canales, lo que facilitará aún más la transición entre canales.
 
-## Definir y configurar directivas
+##  <a name="define-and-configure-policies"></a>Definir y configurar directivas
 
 Una vez que hayas creado tu lista de sitios de empresa, recomendamos identificar y configurar las directivas que piensas implementar con Microsoft Edge. De esta forma, se garantiza que estas directivas se aplican al realizar las pruebas.
 
@@ -145,7 +145,7 @@ Para las directivas de seguridad, te recomendamos que comiences con la línea ba
 
 Para otras directivas, te recomendamos que revises las configuraciones de directiva para [Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies) y [Microsoft Edge Updates](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies).
 
-### Definir la estrategia de actualización y las directivas
+###  <a name="define-your-update-strategy-and-policies"></a>Definir la estrategia de actualización y las directivas
 
 También quieres determinar cómo quieres realizar las actualizaciones después de implementar Microsoft Edge:
 
@@ -161,7 +161,7 @@ Con independencia de la estrategia de actualización, te recomendamos que aprove
 >[!NOTE]
 >El soporte de Microsoft Edge solo se aplicará a la versión más reciente de Microsoft Edge de cada canal
 
-## Realizar pruebas de compatibilidad de aplicaciones
+##  <a name="do-app-compatibility-testing"></a>Realizar pruebas de compatibilidad de aplicaciones
 
 La compatibilidad de aplicaciones para Microsoft Edge es muy alta, tan alta que Microsoft proporciona las siguientes promesas de compatibilidad:
 
@@ -171,7 +171,7 @@ La compatibilidad de aplicaciones para Microsoft Edge es muy alta, tan alta que 
 
 Si dispones de una aplicación en la que no se cumple esta promesa de compatibilidad, lo solucionaremos con [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
 
-### Línea interna de pruebas de aplicaciones de negocio
+###  <a name="internal-line-of-business-app-testing"></a>Línea interna de pruebas de aplicaciones de negocio
 
 A pesar de nuestra promesa de compatibilidad, sabemos que muchas organizaciones deben validar algunas aplicaciones por motivos de cumplimiento o administración de riesgos. Aunque esperamos que esto sea muy sencillo, es importante que ser organizado y riguroso en las pruebas de la aplicación.
 
@@ -182,11 +182,11 @@ Hay dos maneras de realizar las pruebas de compatibilidad de aplicaciones:
 
 Elige el método más apropiado para cada aplicación, para administrar el riesgo sin invertir demasiado en pruebas de compatibilidad.
 
-### Soporte para aplicaciones de terceros
+###  <a name="third-party-app-support"></a>Soporte para aplicaciones de terceros
 
 A parte de sus propias líneas de aplicaciones de negocio, muchas organizaciones usan aplicaciones de orígenes externos. El artículo [Preparado para Microsoft Edge](deploy-edge-ready-for-edge.md) contiene una lista de aplicaciones web que pueden usarse en la organización. En esta lista se proporcionan vínculos a las instrucciones de soporte técnico de los productos cuando se usan con Microsoft Edge.
 
-## Implementar Microsoft Edge en un grupo piloto
+##  <a name="deploy-microsoft-edge-to-a-pilot-group"></a>Implementar Microsoft Edge en un grupo piloto
 
 Una vez que hayas definido las directivas y hayas finalizado la prueba de compatibilidad de aplicación inicial, estarás listo para implementar en tu grupo piloto. Implementa en tu grupo piloto mediante una de las siguientes herramientas:
 
@@ -194,7 +194,7 @@ Una vez que hayas definido las directivas y hayas finalizado la prueba de compat
 - [Configuration Manager](https://docs.microsoft.com/DeployEdge/deploy-edge-with-configuration-manager).
 - Otra herramienta de administración, descarga e implementa [el archivo MSI para Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise).
 
-## Validar tu implementación
+##  <a name="validate-your-deployment"></a>Validar tu implementación
 
 Después de implementar tu piloto, quieres capturar todos los comentarios que recibes de tus usuarios.
 
@@ -202,11 +202,11 @@ Después de implementar tu piloto, quieres capturar todos los comentarios que re
 - Capturar comentarios sobre la configuración de directiva. Asegúrate de que los usuarios puedan usar características clave y que realicen su trabajo mientras siguen las directrices de seguridad.
 - Captura comentarios sobre la facilidad de uso y las nuevas características. Identifica las áreas en las que se debe desarrollar y ofrecer la formación en función de las preguntas del usuario.
 
-## Amplia implementación de Microsoft Edge
+##  <a name="broad-deployment-of-microsoft-edge"></a>Amplia implementación de Microsoft Edge
 
 Después de finalizar el piloto y actualizar el plan de implementación con las lecciones aprendidas del piloto, estarás listo para realizar una implementación completa de Microsoft Edge para todos los usuarios.  ¡Enhorabuena!
 
-## Consulta también
+##  <a name="see-also"></a>Consulta también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Vídeo: Implementación de Microsoft Edge](microsoft-edge-video-deploy.md)
