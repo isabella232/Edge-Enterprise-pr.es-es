@@ -33,7 +33,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con la actualiz
 |[Aplicaciones](#applications)|[Preferencias](#preferences)|
 |[Servidor proxy](#proxy-server)|[Microsoft Edge WebView](#microsoft-edge-webview)|
 
-### [Aplicaciones](#applications-policies)
+### <a name="application"></a>[Aplicaciones](#applications-policies)
 |Nombre de directiva|Título|
 |-|-|
 |[InstallDefault](#installdefault)|Valor predeterminado de Permitir instalación|
@@ -46,20 +46,20 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con la actualiz
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Revertir a la versión de destino (por canal)|
 |[TargetVersionPrefix](#targetversionprefix)|Invalidación de versión de destino (por canal)|
 
-### [Preferencias](#preferences-policies)
+### <a name="preferences"></a>[Preferencias](#preferences-policies)
 |Nombre de directiva|Título|
 |-|-|
 |[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|invalidar el período de buscar actualizaciones automáticas|
 |[UpdatesSuppressed](#updatessuppressed)|Período de tiempo en cada día para suprimir la búsqueda de actualizaciones automáticas|
 
-### [Servidor proxy](#proxy-server-policies)
+### <a name="proxy-server"></a>[Servidor proxy](#proxy-server-policies)
 |Nombre de directiva|Leyenda|
 |-|-|
 |[ProxyMode](#proxymode)|Elegir cómo especificar la configuración del servidor proxy|
 |[ProxyPacUrl](#proxypacurl)|Dirección URL a un archivo proxy .pac|
 |[ProxyServer](#proxyserver)|Dirección o dirección URL del servidor proxy|
 
-### [Microsoft Edge WebView](#microsoft-edge-webview-policies)
+### <a name="install-webview"></a>[Microsoft Edge WebView](#microsoft-edge-webview-policies)
 |Nombre de directiva|Título|
 |-|-|
 |[Instalar](#install-webview)|Permitir instalación|
