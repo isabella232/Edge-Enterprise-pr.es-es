@@ -1,23 +1,23 @@
 ### YamlMime:FAQ
 metadata:
-  title: Preguntas más frecuentes (P+F) sobre Microsoft Edge en la empresa
+  title: Preguntas más frecuentes (FAQ) sobre Microsoft Edge en la empresa
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
-  ms.date: 11/04/2020
+  ms.date: 05/19/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
   description: Preguntas más frecuentes sobre la implementación de Microsoft Edge en la empresa
-  ms.openlocfilehash: 6a0a3c508f36318c080b6ccc62271b0d79bb9630
-  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+  ms.openlocfilehash: b9c1af51c8eb1898369bc4e3c52734736db5ebe3
+  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/24/2021
-  ms.locfileid: "11448154"
-title: Preguntas más frecuentes sobre Microsoft Edge en la empresa
+  ms.lasthandoff: 06/25/2021
+  ms.locfileid: "11617260"
+title: Preguntas más frecuentes (preguntas frecuentes) sobre Microsoft Edge en la empresa
 summary: >
   > [!NOTE]
 
@@ -25,19 +25,16 @@ summary: >
 sections:
 - name: Omitido
   questions:
-  - question: ¿Cómo puedo saber qué versión de MicrosoftEdge tengo?
+  - question: ¿Cómo puedo saber qué versión de Microsoft Edge tengo?
     answer: >
       En la esquina superior derecha de Microsoft Edge, seleccione el icono de puntos suspensivos (**...**) y, a continuación, **seleccione Configuración**. Selecciona **Acerca de Microsoft Edge** para ver la versión de Microsoft Edge.
-  - question: ¿Seguirá recibiendo actualizaciones InternetExplorer11?
+  - question: ¿Qué hay de Internet Explore 11?
     answer: >
-      Nos comprometemos a conservar Internet Explorer como un explorador con soporte, confiable y seguro. Internet Explorer sigue siendo un componente de Windows y sigue el ciclo de vida de soporte técnico del sistema operativo en el que está instalado. Para obtener más información, consulta [Preguntas frecuentes del ciclo de vida: Internet Explorer](https://support.microsoft.com/help/17454/). Si bien continuamos ofreciendo soporte y actualizando Internet Explorer, las últimas funciones y actualizaciones de la plataforma solo estarán disponibles en Microsoft Edge.
-  - question: ¿Puedo ejecutar la versión actual de Microsoft Edge (versión heredada) en paralelo al probar la nueva versión?
-    answer: >
-      Sí, no hay ningún problema. A partir del 15 de enero de 2020, la nueva versión de Microsoft Edge (basadas en Chromium) se distribuirá a los dispositivos de las ediciones Home y Pro que ejecuten Windows 10, versión 1803 o posterior. Los dispositivos unidos a un dominio están excluidos de esta actualización. Para más información, consulta [Introducción a las actualizaciones de Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview). Puede tener una instalación en paralelo de Microsoft Edge Legacy mientras evalúa la siguiente versión de Microsoft Edge. Para obtener más información, consulta [Cómo obtener acceso a la versión anterior de Microsoft Edge](./microsoft-edge-sysupdate-access-old-edge.md). Además, cada uno de los nuevos canales de Microsoft Edge también admite instalaciones en paralelo. Para más información, consulta [Introducción a los canales de Microsoft Edge](./microsoft-edge-channels.md).
-  - question: ¿MicrosoftEdge (basado en Chromium) admite los controles ActiveX y BHO como Silverlight o Java?
+      La aplicación de escritorio de Internet Explorer 11 se retirará y se retirará de la compatibilidad el 15 de junio de 2022 (para obtener una lista de lo que está en el ámbito, vea las preguntas más [frecuentes](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)). Las mismas aplicaciones y sitios de IE11 que usas hoy pueden abrirse en Microsoft Edge con el modo de Internet Explorer. Obtenga más información [aquí](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
+  - question: ¿Microsoft Edge (basado en Chromium) admite los controles ActiveX y BHO como Silverlight o Java?
     answer: >
       No. Microsoft Edge no admite controles ActiveX o objetos de ayuda del explorador (BHO) como Silverlight o Java. Sin embargo, si está ejecutando aplicaciones web que usen controles ActiveX, BHO o modos de documentos heredados en Internet Explorer 11, puede configurarlos para que se ejecuten en modo IE en el nuevo Microsoft Edge. Para obtener más información, consulte [Configurar el modo IE en Microsoft Edge](./edge-ie-mode.md).
-  - question: ¿Se pasarán los favoritos desde la versión actual de Microsoft Edge o tengo que volver a agregarlos?
+  - question: ¿Se van a porte los favoritos desde la versión actual de Microsoft Edge o voy a tener que volver a agregarlos?
     answer: "Actualmente, Microsoft Edge admite importar desde instalaciones existentes de Microsoft Edge, Chrome, Internet Explorer y Firefox (en Win10). Se admiten las siguientes opciones de configuración para importar: Marcadores, Historial, Contraseñas y Autorrelleno (pagos, direcciones y formularios genéricos). Puedes elegir importar desde la experiencia de primera ejecución o desde la configuración del explorador.  \n"
   - question: ¿Cuál es la diferencia entre los canales/compilaciones estable, Beta, Dev y Canary?
     answer: >

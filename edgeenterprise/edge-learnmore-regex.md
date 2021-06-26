@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sintaxis de Expresiones regulares 2
-ms.openlocfilehash: 9654a25d2c0474601fb719b145ebb1f59241a6d9
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 5d7026a034300e098497c63911f7516f72877c5d
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981128"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617320"
 ---
-# Sintaxis de Expresiones regulares 2 (re2.h)
+# <a name="regular-expression-2-re2h-syntax"></a>Sintaxis de Expresiones regulares 2 (re2.h)
 
 Las expresiones regulares son una notación para describir conjuntos de cadenas de caracteres. Cuando una cadena se encuentra en el conjunto descrito por una expresión regular, se entiende, a menudo, que la expresión regular coincide con la cadena.
 
@@ -35,7 +35,7 @@ En esta página, se muestra la sintaxis de las expresiones regulares aceptada po
 
 También se muestran algunas sintaxis aceptadas por PCRE, PERL y VIM.
 
-##  <a name="syntax-tables"></a>Tablas de sintaxis
+## <a name="syntax-tables"></a>Tablas de sintaxis
 
 | Tipos de expresiones de carácter único | Ejemplos |
 | --- | --- |
@@ -51,12 +51,12 @@ También se muestran algunas sintaxis aceptadas por PCRE, PERL y VIM.
 | clase de carácter de Unicode negado (nombre de una letra) | \PN |
 | clase de carácter de Unicode negado | \P{Greek} |
 
-| | Composiciones |
+|&nbsp;| Composiciones |
 | --- | --- |
 | xy | x seguido de y |
 | x\|y | x o y (prefiere x) |
 
-| | Repeticiones |
+|&nbsp;| Repeticiones |
 | --- | --- |
 | x\* | cero o más x, prefiere más |
 | x+ | una o más x, prefiere más |
@@ -77,7 +77,7 @@ También se muestran algunas sintaxis aceptadas por PCRE, PERL y VIM.
 
 Restricción de implementación: los recuentos de formularios x{n,m}, x {n,}, y x {n} rechazan los formularios que crean un recuento de repeticiones mínimo o máximo superior a 1000. Las repeticiones ilimitadas no están sujetas a esta restricción.
 
-| | Repeticiones posesivas |
+|&nbsp;| Repeticiones posesivas |
 | --- | --- |
 | x\*+ | cero o más x, posesiva (NO COMPATIBLE) |
 | x++ | una o más x, posesiva (NO COMPATIBLE) |
@@ -86,7 +86,7 @@ Restricción de implementación: los recuentos de formularios x{n,m}, x {n,}, y 
 | x{n,}+ | n o más x, posesiva (NO COMPATIBLE) |
 | x{n}+ | exactamente n x, posesiva (NO COMPATIBLE) |
 
-| | Agrupación |
+|&nbsp;| Agrupación |
 | --- | --- |
 | (re) | grupo de captura numerado (subcoincidencia) |
 | (?P&lt;nombre&gt;re) | nombrado &amp; grupo de captura numerado (subcoincidencia) |
@@ -101,7 +101,7 @@ Restricción de implementación: los recuentos de formularios x{n,m}, x {n,}, y 
 | re@&gt; | coincidencia posesiva de re (NO COMPATIBLE) VIM |
 | %(re) | grupo de no captura (NO COMPATIBLE) VIM |
 
-| | Flags |
+|&nbsp;| Flags |
 | --- | --- |
 | i | no distingue mayúsculas de minúsculas (predeterminado false) |
 | m | modo de varias líneas: ^ y $ coinciden en línea inicial/final, además del texto inicial/final (predeterminado false) |
@@ -110,7 +110,7 @@ Restricción de implementación: los recuentos de formularios x{n,m}, x {n,}, y 
 
 La sintaxis de flag es xyz (conjunto) o -xyz (limpiar) o xy-z (conjunto xy, limpiar z).
 
-|  | Cadenas vacías |
+|&nbsp;| Cadenas vacías |
 | --- | --- |
 | ^ | al comienzo del texto o la línea (m=true) |
 | $ | al final del texto (como \z, no \Z) o línea (m=true) |
@@ -141,7 +141,7 @@ La sintaxis de flag es xyz (conjunto) o -xyz (limpiar) o xy-z (conjunto xy, limp
 | \%23c | en columna 23 (NO COMPATIBLE) VIM |
 | \%23v | en columna virtual 23 (NO COMPATIBLE) VIM |
 
-|  | Secuencias de escape |
+|&nbsp;| Secuencias de escape |
 | --- | --- |
 | \a | campana (≡ \007) |
 | \f | fuente de formulario (≡ \014) |
@@ -182,7 +182,7 @@ La sintaxis de flag es xyz (conjunto) o -xyz (limpiar) o xy-z (conjunto xy, limp
 | \%u1234 | carácter Unicode 0x1234 (NO COMPATIBLE) VIM |
 | \%U12345678 | carácter Unicode 0x12345678 (NO COMPATIBLE) VIM |
 
-|  | Elementos de clases de carácter |
+|&nbsp;| Elementos de clases de carácter |
 | --- | --- |
 | x | carácter único |
 | A-Z | rango de caracteres (inclusivo) |
@@ -191,7 +191,7 @@ La sintaxis de flag es xyz (conjunto) o -xyz (limpiar) o xy-z (conjunto xy, limp
 | \p{Foo} | clase foo de carácter de Unicode |
 | \pF | clase F de carácter de Unicode (nombre de una letra) |
 
-|  | Clases de caracteres con nombre como elementos de clase de carácter |
+|&nbsp;| Clases de caracteres con nombre como elementos de clase de carácter |
 | --- | --- |
 | [\d] | dígitos (≡ \d) |
 | [^\d] | no dígitos (≡ \D) |
@@ -232,7 +232,7 @@ La sintaxis de flag es xyz (conjunto) o -xyz (limpiar) o xy-z (conjunto xy, limp
 | [[:word:]] | caracteres de palabras (≡ [0-9A-Za-z\_]) |
 | [[:xdigit:]] | dígito hexadecimal (≡ [0-9A-Fa-f]) |
 
-| | Nombres de clase de carácter Unicode: categoría general |
+|&nbsp;| Nombres de clase de carácter Unicode: categoría general |
 | --- | --- |
 | C | otro |
 | CC | control |
@@ -433,7 +433,7 @@ La sintaxis de flag es xyz (conjunto) o -xyz (limpiar) o xy-z (conjunto xy, limp
 | Yi |
 | Zanabazar\_Cuadrado |
 
-|  | clases de carácter Vim |
+|&nbsp;| clases de carácter Vim |
 | --- | --- |
 | \i | carácter identificador (NO COMPATIBLE) VIM |
 | \I | \i excepto dígitos (NO COMPATIBLE) VIM |
@@ -470,7 +470,7 @@ La sintaxis de flag es xyz (conjunto) o -xyz (limpiar) o xy-z (conjunto xy, limp
 | \V | verynomagic (NO COMPATIBLE) VIM |
 | \Z | ignorar las diferencias en Unicode que combinan caracteres (NO COMPATIBLE) VIM |
 
-|  | Mágico |
+| &nbsp; | Mágico |
 | --- | --- |
 | (?{code}) | código Perl arbitrario (NO COMPATIBLE) PERL |
 | (??{code}) | código Perl arbitrario pospuesto (NO COMPATIBLE) PERL |
@@ -500,13 +500,13 @@ La sintaxis de flag es xyz (conjunto) o -xyz (limpiar) o xy-z (conjunto xy, limp
 | (\*BSR\_ANYCRLF) | establecer convención \R (NO COMPATIBLE) PCRE |
 | (\*BSR\_UNICODE) | (NO COMPATIBLE) PCRE |
 
-##  <a name="content-license"></a>Licencia de contenido
+## <a name="content-license"></a>Licencia de contenido
 
 > [!NOTE]
 > Algunas partes de esta página son modificaciones que se basan en trabajo creado y compartido por Chromium.org y que se usan de acuerdo con los términos descritos en la [Licencia internacional de Creative Commons Atribution 4.0](http://creativecommons.org/licenses/by/4.0/). La página original se puede encontrar [aquí](https://github.com/google/re2/wiki/Syntax).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este trabajo dispone de licencia conforme a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licencia internacional de Creative Commons Attribution 4.0</a>.
 
-##  <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

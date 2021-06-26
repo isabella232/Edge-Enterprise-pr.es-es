@@ -3,28 +3,28 @@ title: Asignación de directivas de Google Chrome a Microsoft Edge
 ms.author: brianalt
 author: brianalt
 manager: srugh
-ms.date: 02/10/2020
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Asignación de directivas de Google Chrome a Microsoft Edge
-ms.openlocfilehash: 10253d8d18864fedf5cfaf7d064766ad641675d4
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: e6a85549ee260dbebdafd900dc4ca634dc7dbd12
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448044"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617870"
 ---
 # <a name="google-chrome-to-microsoft-edge-policy-mapping"></a>Asignación de directivas de Google Chrome a Microsoft Edge
 
-Este artículo asigna las directivas de Google Chrome a las directivas de Microsoft Edge relevantes compatibles con la versión 80. En el caso de las directivas de Microsoft Edge (versión heredada), vea el artículo [Asignación de directiva de Microsoft Edge (versión heredada) a Microsoft Edge](microsoft-edge-policy-map-legacy-to-newedge.md).
+Este artículo asigna las directivas de Google Chrome a las directivas de Microsoft Edge relevantes compatibles con la versión 80. En el caso de las directivas de Microsoft Edge (versión heredada), vea el artículo [Asignación de directiva de Microsoft Edge (versión heredada) a Microsoft Edge](/deployedge/microsoft-edge-policy-map-chrome-to-newedge?branch=master).
 
 > [!NOTE]
 > La siguiente asignación está pensada para ayudarle con la implementación inicial de la versión 80 de Microsoft Edge. Para obtener una lista definitiva de las últimas directivas, consulte:
-> - [Referencia de directiva de explorador](microsoft-edge-policies.md)
-> - [Actualizar referencia de directiva](microsoft-edge-update-policies.md)
+> - [Referencia de directiva de explorador](/deployedge/microsoft-edge-policies)
+> - [Actualizar referencia de directiva](/deployedge/microsoft-edge-update-policies)
 
 ## <a name="google-chrome-to-microsoft-edge-policy-map"></a>Asignación de directivas de Google Chrome a Microsoft Edge
 
@@ -94,8 +94,8 @@ Este artículo asigna las directivas de Google Chrome a las directivas de Micros
 |[CloudPrintProxyEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintProxyEnabled)|No disponible|
 |[CloudPrintSubmitEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintSubmitEnabled)|No disponible|
 |[CloudReportingEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudReportingEnabled)|No disponible|
-|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)|[CoalesceH2ConnectionsWithClientCertificatesForHosts](./microsoft-edge-policies.md#coalesceh2connectionswithclientcertificatesforhosts)|
-|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)|[CommandLineFlagSecurityWarningsEnabled](./microsoft-edge-policies.md#commandlineflagsecuritywarningsenabled)|
+|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)
+|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)
 |[ComponentUpdatesEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ComponentUpdatesEnabled)|[ComponentUpdatesEnabled](./microsoft-edge-policies.md#componentupdatesenabled)|
 |[CookiesAllowedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesAllowedForUrls)|[CookiesAllowedForUrls](./microsoft-edge-policies.md#cookiesallowedforurls)|
 |[CookiesBlockedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesBlockedForUrls)|[CookiesBlockedForUrls](./microsoft-edge-policies.md#cookiesblockedforurls)|

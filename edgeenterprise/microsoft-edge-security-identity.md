@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Soporte y configuración de identidad de Microsoft Edge
-ms.openlocfilehash: 8b4fe3c46e0c8dd76d0e22051fb63465e34202f2
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 34a5a4aa958873a012d0a2da4184cb508af27a8a
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447544"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617920"
 ---
 # <a name="microsoft-edge-identity-support-and-configuration"></a>Soporte y configuración de identidad de Microsoft Edge
 
@@ -91,7 +91,7 @@ Para los servicios que requieren la delegación de credenciales de negociación,
 
 ### <a name="proactive-authentication"></a>Autenticación proactiva
 
-La autenticación proactiva es una optimización del SSO del explorador al sitio web que carga por adelantado la autenticación en ciertos sitios web propios. Esto permite mejorar el rendimiento de la barra de direcciones si el usuario usa Bing como motor de búsqueda. Esto proporciona a los usuarios resultados de Búsqueda de Microsoft para empresas (MSB) y resultados personalizados. También permite la autenticación en servicios clave como la página de pestaña nueva de Office. Puede controlarla mediante la directiva [ProactiveAuthEnabled]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#proactiveauthenabled).
+La autenticación proactiva es una optimización del SSO del explorador al sitio web que carga por adelantado la autenticación en ciertos sitios web propios. Esto permite mejorar el rendimiento de la barra de direcciones si el usuario usa Bing como motor de búsqueda. Esto proporciona a los usuarios resultados de Búsqueda de Microsoft para empresas (MSB) y resultados personalizados. También permite la autenticación en servicios clave como la página de pestaña nueva de Office. Puede controlarla mediante la directiva [ProactiveAuthEnabled]( /deployedge/microsoft-edge-policies#proactiveauthenabled).
 
 ### <a name="windows-hello-credui-for-ntlm-authentication"></a>CredUI de Windows Hello para la autenticación NTLM
 
