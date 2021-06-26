@@ -1,6 +1,6 @@
 ---
 title: Diagnosticar y corregir problemas de sincronización de Microsoft Edge
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 03/08/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Instrucciones y herramientas que un administrador de Microsoft Edge puede usar para solucionar los problemas comunes de sincronización de la empresa
-ms.openlocfilehash: 49fb0c5fc555e4f7ad4c728477387e931a5fbb5f
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: d934e1ad73500fcb7f15bcd7dd29cb0f905577c5
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447164"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617910"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a><span data-ttu-id="f6a63-103">Diagnosticar y corregir problemas de sincronización de Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="f6a63-103">Diagnose and fix Microsoft Edge sync issues</span></span>
 
