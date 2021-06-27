@@ -3,35 +3,36 @@ title: Sistemas operativos admitidos con Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 02/02/2021
+ms.date: 05/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sistemas operativos admitidos con Microsoft Edge
-ms.openlocfilehash: 81b9999a98a913e72f3a064f32bd88b301e52b5f
-ms.sourcegitcommit: 90f33698262b255a63d6ba6ec854a12c1091a630
+ms.openlocfilehash: 2e0002e38c090676e5443718b36fb2fb7956ba15
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "11311517"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617900"
 ---
-# Sistemas operativos admitidos con Microsoft Edge
+# <a name="microsoft-edge-supported-operating-systems"></a>Sistemas operativos admitidos con Microsoft Edge
 
 En este artículo se describen los sistemas operativos admitidos que se aplican a Microsoft Edge.
 
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posteriores para el escritorio.
 
-##  <a name="supported-operating-systems-for-microsoft-edge"></a>Sistemas operativos admitidos para Microsoft Edge
+## <a name="supported-operating-systems-for-microsoft-edge"></a>Sistemas operativos admitidos para Microsoft Edge
 
 > [!NOTE]
 > La funcionalidad del producto y la disponibilidad de las características pueden variar en los sistemas operativos antiguos. Para asegurarse de que Microsoft Edge se instala correctamente, utilice la versión más reciente de cualquier sistema operativo especificado a continuación. Esta guía incluye la última actualización acumulativa, según corresponda.
 
+
 Microsoft Edge sigue la directiva del ciclo de vida moderna y es compatible con los siguientes sistemas operativos.
 
-###  <a name="windows-client"></a>Cliente de Windows
+### <a name="windows-client"></a>Cliente de Windows
 
 - Windows 7 **
 - Windows 8.1
@@ -43,7 +44,7 @@ Microsoft Edge sigue la directiva del ciclo de vida moderna y es compatible con 
 - Windows 10 IoT Enterprise SAC ***
 - Windows 10 IoT Enterprise 2019 LTSC ****
 
-###  <a name="windows-server"></a>Windows Server
+### <a name="windows-server"></a>Windows Server
 
 - Windows Server 2008 R2 **
 - Windows Server 2012
@@ -59,32 +60,36 @@ Microsoft Edge sigue la directiva del ciclo de vida moderna y es compatible con 
 >
 > **** El OPK de Microsoft Edge está disponible en MOO para los fabricantes OEM de IoT para preinstalar y distribuir como parte de su solución basada en Windows 10 IoT Enterprise.
 
-###  <a name="macos"></a>macOS
+### <a name="macos"></a>macOS
 
 - Sierra (10.12) y versiones posteriores
 
-###  <a name="ios"></a>iOS
+### <a name="ios"></a>iOS
 
 Microsoft Edge para iPad&reg; y iPhone&reg; requiere iOS 11.0 o posterior. Microsoft Edge para iPad Pro&trade; requiere iOS 11.0 o posterior. Microsoft Edge se admite en las dos versiones más recientes de iOS. Cuando se publica una nueva versión de iOS, los requisitos del sistema operativo para Microsoft Edge se convierten en las dos versiones más recientes; la nueva versión de iOS y de la versión anterior.
 
-###  <a name="android"></a>Android
+### <a name="android"></a>Android
 
 Microsoft Edge para Android se puede instalar en tabletas y teléfonos que cumplan los siguientes criterios: dispositivos que ejecutan Android KitKat 4.4 o posterior con un procesador basado en ARM.
 
-###  <a name="apple-silicon-macs"></a>Equipos Mac con Apple Silicon
+### <a name="apple-silicon-macs"></a>Equipos Mac con Apple Silicon
 
 Compatibilidad nativa de Microsoft Edge desde la versión estable 88 para equipos Mac con Apple Silicon.
 
-###  <a name="chromebooks"></a>Chromebooks
+### <a name="linux"></a>Linux
+
+Las compilaciones en versión preliminar están disponibles para Linux. Para cualquier problema relacionado con Microsoft Edge en Linux, ya sea como desarrollador o como empresa, envíe sus comentarios directamente a través del explorador o mediante nuestros foros de TechCommunity https://techcommunity.microsoft.com/t5/microsoft-edge-insider/ct-p/MicrosoftEdgeInsider. El soporte técnico empresarial para Microsoft Edge en Linux estará disponible más adelante.
+
+### <a name="chromebooks"></a>Chromebooks
 
 Microsoft Edge no es compatible con Chromebooks.
 
-##  <a name="recent-changes"></a>Cambios recientes
+## <a name="recent-changes"></a>Cambios recientes
 
 - **17/12/2020**: soporte de Microsoft Edge en Windows 7 y Windows Server 2008 R2 ampliado hasta el 15 de enero de 2022.
 - **28/01/2021**: soporte de Microsoft Edge para Mac con Apple Silicon.
 
-##  <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Directiva moderna de ciclo de vida de Microsoft](https://support.microsoft.com/help/30881/modern-lifecycle-policy)

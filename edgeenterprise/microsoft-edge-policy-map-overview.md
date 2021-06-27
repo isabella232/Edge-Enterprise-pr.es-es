@@ -10,18 +10,17 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Introducción a la asignación de directivas de Microsoft Edge
-ms.openlocfilehash: 12967a90ab920bb25473902f2dd2c08fd003f934
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 724dba17d6f129abff4be52eda175c611cc9544f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981178"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617830"
 ---
-# Introducción a la asignación de directivas de Microsoft Edge
+# <a name="microsoft-edge-policy-mapping-overview"></a>Introducción a la asignación de directivas de Microsoft Edge
 
-Para ayudarle con la implementación inicial, use las siguientes asignaciones de directivas para migrar su configuración de directivas de Microsoft Edge (versión heredada 45 y anteriores) o Google Chrome (versión 80) a Microsoft Edge (versión 80).
+Para ayudarle con la implementación inicial, use las siguientes asignaciones de directivas para migrar su configuración de directivas de Google Chrome (versión 80) a Microsoft Edge (versión 80).
 
-- [Asignación de directiva de Microsoft Edge heredado a Microsoft Edge](microsoft-edge-policy-map-legacy-to-newedge.md)
 - [Asignación de directivas de Google Chrome a Microsoft Edge](microsoft-edge-policy-map-chrome-to-newedge.md)
 
 > [!NOTE]
@@ -29,7 +28,7 @@ Para ayudarle con la implementación inicial, use las siguientes asignaciones de
 > - [Referencia de directiva de explorador](microsoft-edge-policies.md)
 > - [Actualizar referencia de directiva](microsoft-edge-update-policies.md)
 
-##  <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también
 - [Configuración de Microsoft Edge en Windows](configure-microsoft-edge.md)
 - [Configuración de Microsoft Edge en macOS](configure-microsoft-edge-on-mac.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
