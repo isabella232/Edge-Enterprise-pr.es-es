@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de todas las directivas admitidas por Microsoft Edge Update
-ms.openlocfilehash: 0cdcda984efff8d10a84431e44c49ffbf28ddf07
-ms.sourcegitcommit: c2ac4f889b625210b9365a60a447482fb5b4c9d4
+ms.openlocfilehash: 921a95c0a5e80ba08fa745748ffa8b0da714ea7d
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "11167312"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617890"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge: Directivas de actualización
 
@@ -25,15 +25,11 @@ La última versión de Microsoft Edge incluye las siguientes directivas que pued
 Para obtener información sobre otras directivas disponibles en Microsoft Edge, consulta la [referencia de directiva del explorador Microsoft Edge](microsoft-edge-policies.md)
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
-##  <a name="available-policies"></a>Directivas disponibles
+## <a name="available-policies"></a>Directivas disponibles
 Estas tablas enumeran todas las directivas de grupo relacionadas con la actualización disponibles en esta versión de Microsoft Edge. Usa los vínculos de la tabla para obtener más detalles sobre directivas específicas.
 
-|||
-|-|-|
-|[Aplicaciones](#applications)|[Preferencias](#preferences)|
-|[Servidor proxy](#proxy-server)|[Microsoft Edge WebView](#microsoft-edge-webview)|
-
-### <a name="application"></a>[Aplicaciones](#applications-policies)
+|&nbsp;|&nbsp;| |**-**|-| |**[Aplicaciones](#applications)**|[Preferencias](#preferences)| |**[Servidor proxy](#proxy-server)**|[Vista web de Microsoft Edge](#microsoft-edge-webview)|
+### [<a name="applications"></a>Aplicaciones](#applications-policies)
 |Nombre de directiva|Título|
 |-|-|
 |[InstallDefault](#installdefault)|Valor predeterminado de Permitir instalación|
@@ -46,33 +42,33 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con la actualiz
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Revertir a la versión de destino (por canal)|
 |[TargetVersionPrefix](#targetversionprefix)|Invalidación de versión de destino (por canal)|
 
-### <a name="preferences"></a>[Preferencias](#preferences-policies)
+### [<a name="preferences"></a>Preferencias](#preferences-policies)
 |Nombre de directiva|Título|
 |-|-|
 |[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|invalidar el período de buscar actualizaciones automáticas|
 |[UpdatesSuppressed](#updatessuppressed)|Período de tiempo en cada día para suprimir la búsqueda de actualizaciones automáticas|
 
-### <a name="proxy-server"></a>[Servidor proxy](#proxy-server-policies)
+### [<a name="proxy-server"></a>Servidor proxy](#proxy-server-policies)
 |Nombre de directiva|Leyenda|
 |-|-|
 |[ProxyMode](#proxymode)|Elegir cómo especificar la configuración del servidor proxy|
 |[ProxyPacUrl](#proxypacurl)|Dirección URL a un archivo proxy .pac|
 |[ProxyServer](#proxyserver)|Dirección o dirección URL del servidor proxy|
 
-### <a name="install-webview"></a>[Microsoft Edge WebView](#microsoft-edge-webview-policies)
+### [<a name="microsoft-edge-webview"></a>Microsoft Edge WebView](#microsoft-edge-webview-policies)
 |Nombre de directiva|Título|
 |-|-|
 |[Instalar](#install-webview)|Permitir instalación|
 |[Actualización](#update-webview)|Invalidar directiva de actualización|
 
-##  <a name="applications-policies"></a>Directivas de aplicaciones
+## <a name="applications-policies"></a>Directivas de aplicaciones
 
 [Volver al principio](#microsoft-edge---update-policies)
-###  <a name="installdefault"></a>InstallDefault
-#### Valor predeterminado de Permitir instalación
+### <a name="installdefault"></a>InstallDefault
+#### <a name="allow-installation-default"></a>Valor predeterminado de Permitir instalación
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Puede especificar el comportamiento predeterminado de todos los canales para permitir o bloquear Microsoft Edge en dispositivos unidos al dominio.
 
 Puede reemplazar esta directiva para canales individuales si habilita la directiva [Permitir instalación](#install) para canales específicos.
@@ -82,28 +78,28 @@ Si deshabilita esta directiva, se bloquea la instalación de Microsoft Edge. Est
 Esta directiva no impide que se ejecute Microsoft Edge Update ni impide que los usuarios instalen software de Microsoft Edge con otros métodos.
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft® Active Directory®.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: InstallDefault
 - Nombre de GP: valor predeterminado de Permitir instalación
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Aplicaciones
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre de valor: InstallDefault
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 0x00000001
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="updatedefault"></a>UpdateDefault
-#### Valor predeterminado de Invalidar directiva de actualización
+### <a name="updatedefault"></a>UpdateDefault
+#### <a name="update-policy-override-default"></a>Valor predeterminado de Invalidar directiva de actualización
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Permite especificar el comportamiento predeterminado de todos los canales relacionados con la manera en que Microsoft Edge Update trata las actualizaciones disponibles para Microsoft Edge. Se puede invalidar para canales individuales especificando la directiva '[Invalidar directiva de actualización](#update)' para esos canales específicos.
 
   Si habilitas esta directiva, Microsoft Edge Update trata las actualizaciones de Microsoft Edge de acuerdo con la configuración de las siguientes opciones:
@@ -117,28 +113,28 @@ Permite especificar el comportamiento predeterminado de todos los canales relaci
   Si no habilitas ni configuras esta directiva, Microsoft Edge Update administra las actualizaciones disponibles según se especifica en la directiva '[Invalidar directiva de actualizaciones](#update)'.
 
   Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft® Active Directory®.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: UpdateDefault
 - Nombre de GP: Valor predeterminado de Invalidar directiva de actualización
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Aplicaciones
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre de valor: UpdateDefault
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 0x00000003
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="install"></a>Instalar
-#### Permitir instalación
+### <a name="install"></a>Instalar
+#### <a name="allow-installation"></a>Permitir instalación
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Especifica si se puede instalar un canal de Microsoft Edge en dispositivos unidos al dominio.
 
   Si habilita esta directiva para un canal, no se bloqueará la instalación de Microsoft Edge.
@@ -148,8 +144,8 @@ Especifica si se puede instalar un canal de Microsoft Edge en dispositivos unido
   Si no configura esta directiva para un canal, la configuración de la directiva "[Valor predeterminado de Permitir instalación](#installdefault)" determinará si los usuarios pueden instalar dicho canal de Microsoft Edge.
 
   Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft® Active Directory®.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: Install
 - Nombre de GP: Permitir instalación
 - Ruta de GP: 
@@ -158,7 +154,7 @@ Especifica si se puede instalar un canal de Microsoft Edge en dispositivos unido
   - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge Canary
   - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge Dev
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: 
   - (Estable): instalar{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
@@ -166,18 +162,18 @@ Especifica si se puede instalar un canal de Microsoft Edge en dispositivos unido
   - (Canarias): instalar{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): instalar{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 0x00000001
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="update"></a>Actualizar
-#### Invalidar directiva de actualización
+### <a name="update"></a>Actualizar
+#### <a name="update-policy-override"></a>Invalidar directiva de actualización
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Especifica cómo trata Microsoft Edge Update las actualizaciones disponibles de Microsoft Edge.
 
 Si habilitas esta directiva, Microsoft Edge Update trata las actualizaciones de Microsoft Edge de acuerdo con la configuración de las siguientes opciones:
@@ -193,8 +189,8 @@ Si no habilitas ni configuras esta directiva, Microsoft Edge Update administra l
 Vea [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406) para obtener más información.
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft® Active Directory®.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: Actualización
 - Nombre de GP: Invalidar directiva de actualización
 - Ruta de GP: 
@@ -203,7 +199,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge Canary
   - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge Dev
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: 
   - (Estable): actualizar{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
@@ -211,18 +207,21 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - (Canarias): actualizar{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): actualizar{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
-0x00000001
+always allow updates 0x00000001
+Automatic silent updates only 0x00000003
+manual updates only 0x00000002
+updates disabled 0x00000000
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="allowsxs"></a>Allowsxs
-#### Permitir la experiencia de exploradores Microsoft Edge en paralelo
+### <a name="allowsxs"></a>Allowsxs
+#### <a name="allow-microsoft-edge-side-by-side-browser-experience"></a>Permitir la experiencia de exploradores Microsoft Edge en paralelo
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Esta directiva permite a un usuario ejecutar Microsoft Edge (Edge HTML) y Microsoft Edge (basado en Chromium) en paralelo.
 
 Si esta directiva se establece en “No configurado”, Microsoft Edge (basado en Chromium) reemplazará a Microsoft Edge (Edge HTML) después del canal estable de Microsoft Edge (basado en Chromium) y se instalarán las actualizaciones de seguridad de noviembre de 2019.  Este es el mismo comportamiento que la opción “Deshabilitado”.
@@ -232,64 +231,64 @@ La opción “Deshabilitado” bloquea la experiencia en paralelo y Microsoft Ed
 Cuando esta directiva está “Habilitada”, se pueden ejecutar en paralelo Microsoft Edge (Edge HTML) y Microsoft Edge (basado en Chromium) después de instalado Microsoft Edge (basado en Chromium).
 
 Para que esta directiva de grupo surta efecto, debe configurarse antes de la instalación automática de Microsoft Edge (basado en Chromium) por parte de Windows Update. Nota: un usuario puede bloquear la actualización automática de Microsoft Edge (basado en Chromium) mediante el kit de herramientas de bloqueo de Microsoft Edge (basado en Chromium).
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: Allowsxs
 - Nombre de GP: permitir la experiencia en paralelo de exploradores Microsoft Edge
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Aplicaciones
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: Allowsxs
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 0x00000001
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
-#### Impedir la creación de accesos directos de escritorio durante la instalación predeterminada
+### <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
+#### <a name="prevent-desktop-shortcut-creation-upon-install-default"></a>Impedir la creación de accesos directos de escritorio durante la instalación predeterminada
 >Microsoft Edge Update 1.3.128.0 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Permite especificar el comportamiento predeterminado de todos los canales para crear un acceso directo en el escritorio cuando se instala Microsoft Edge.
 
   Si habilita esta directiva, se creará un acceso directo de escritorio cuando se instale Microsoft Edge.
 Si deshabilita esta directiva, no se creará ningún acceso directo de escritorio cuando se instale Microsoft Edge.
 Si no configura esta directiva, se creará un acceso directo de escritorio a Microsoft Edge durante la instalación.
 Si Microsoft Edge ya está instalado, esta directiva no tendrá ningún efecto.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: CreateDesktopShortcutDefault
 - Nombre de GP: configuración predeterminada para impedir la creación de accesos directos de escritorio durante la instalación
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Aplicaciones
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: CreateDesktopShortcutDefault
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 0x00000001
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="createdesktopshortcut"></a>CreateDesktopShortcut
-#### Impedir la creación de accesos directos de escritorio durante la instalación
+### <a name="createdesktopshortcut"></a>CreateDesktopShortcut
+#### <a name="prevent-desktop-shortcut-creation-upon-install"></a>Impedir la creación de accesos directos de escritorio durante la instalación
 >Microsoft Edge Update 1.3.128.0 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Si habilita esta directiva, se creará un acceso directo de escritorio cuando se instale Microsoft Edge.
 Si deshabilita esta directiva, no se creará ningún acceso directo de escritorio cuando se instale Microsoft Edge.
 Si no configura esta directiva, se creará un acceso directo de escritorio a Microsoft Edge durante la instalación.
 Si Microsoft Edge ya está instalado, esta directiva no tendrá ningún efecto.
 
   Si no configura esta directiva para un canal, la configuración de directiva '[Impedir la creación de accesos directos de escritorio durante la instalación predeterminada](#createdesktopshortcutdefault)' determina la creación de accesos directos cuando se instala Microsoft Edge.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: CreateDesktopShortcut
 - Nombre de GP: impedir la creación de métodos abreviados de escritorio durante la instalación
 - Ruta de GP: 
@@ -298,7 +297,7 @@ Si Microsoft Edge ya está instalado, esta directiva no tendrá ningún efecto.
   - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge Canary
   - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge Dev
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: 
   - (Stable): CreateDesktopShortcut{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
@@ -306,18 +305,18 @@ Si Microsoft Edge ya está instalado, esta directiva no tendrá ningún efecto.
   - (Canary): CreateDesktopShortcut{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): CreateDesktopShortcut{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 0x00000001
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="rollbacktotargetversion"></a>RollbackToTargetVersion
-#### Revertir a la versión de destino
+### <a name="rollbacktotargetversion"></a>RollbackToTargetVersion
+#### <a name="rollback-to-target-version"></a>Revertir a la versión de destino
 >Microsoft Edge Update 1.3.133.3 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Especifica que Microsoft Edge Update debe revertir las instalaciones de Microsoft Edge a la versión que se indica en "[Invalidación de la versión de destino](#targetversionprefix)".
 
 Esta directiva no surte efecto a menos que "[Invalidación de la versión de destino](#targetversionprefix)" e "[Invalidación de la directiva de actualización](#update)" se establezcan en uno de los estados activados (es decir, Permitir siempre las actualizaciones, Solo actualizaciones silenciosas automáticas o Solo actualizaciones manuales).
@@ -337,8 +336,8 @@ Esta directiva se aplica a Microsoft Edge, versión 86 o posterior.
 Vea [https://go.microsoft.com/fwlink/?linkid=2133918](https://go.microsoft.com/fwlink/?linkid=2133918) para obtener más información.
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft® Active Directory®.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: RollbackToTargetVersion
 - Nombre de GP: Revertir a la versión de destino
 - Ruta de GP: 
@@ -347,7 +346,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge Canary
   - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge Dev
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: 
   - (Estable): RollbackToTargetVersion{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
@@ -355,18 +354,18 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - (Canary): RollbackToTargetVersion{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): RollbackToTargetVersion{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 0x00000001
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="targetversionprefix"></a>TargetVersionPrefix
-#### Invalidación de versión de destino
+### <a name="targetversionprefix"></a>TargetVersionPrefix
+#### <a name="target-version-override"></a>Invalidación de versión de destino
 >Microsoft Edge Update 1.3.119.43 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Cuando se habilita esta directiva y la actualización automática está habilitada, Microsoft Edge se actualizará a la versión especificada por este valor de directiva.
 
 El valor de directiva debe ser una versión específica de Microsoft Edge, como 83.0.499.12.
@@ -378,8 +377,8 @@ Si la versión especificada no existe o no tiene el formato correcto, Microsoft 
 Vea [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707) para obtener más información.
 
 Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft® Active Directory®.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: TargetVersionPrefix
 - Nombre de GP: Invalidación de versión de destino
 - Ruta de GP: 
@@ -388,7 +387,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge Canary
   - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge Dev
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: 
   - (Estable): TargetVersionPrefix{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
@@ -396,64 +395,64 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
   - (Canary): TargetVersionPrefix{65C35B14-6C1D-4122-AC46-7148CC9D6497}
   - (Dev): TargetVersionPrefix{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Tipo de valor: REG_SZ
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 83.0.499.12
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-##  <a name="preferences-policies"></a>Directivas de preferencias
+## <a name="preferences-policies"></a>Directivas de preferencias
 
 [Volver al principio](#microsoft-edge---update-policies)
-###  <a name="autoupdatecheckperiodminutes"></a>AutoUpdateCheckPeriodMinutes
-#### invalidar el período de buscar actualizaciones automáticas
+### <a name="autoupdatecheckperiodminutes"></a>AutoUpdateCheckPeriodMinutes
+#### <a name="auto-update-check-period-override"></a>invalidar el período de buscar actualizaciones automáticas
 >Microsoft Edge Update 1.2.145.5 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Si se habilita, esta directiva permite establecer un valor para el número mínimo de minutos entre las búsquedas de actualizaciones automáticas. De lo contrario, de manera predeterminada, la actualización automática busca actualizaciones cada 10 horas.
 
   Si quieres deshabilitar todas las búsquedas de actualizaciones automáticas, establece el valor en 0 (no recomendado).
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: AutoUpdateCheckPeriodMinutes
 - Nombre de GP: invalidar el período de buscar actualizaciones automáticas
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Preferencias
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre de valor: AutoUpdateCheckPeriodMinutes
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 0x00000578
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="updatessuppressed"></a>UpdatesSuppressed
-#### Período de tiempo en cada día para suprimir la búsqueda de actualizaciones automáticas
+### <a name="updatessuppressed"></a>UpdatesSuppressed
+#### <a name="time-period-in-each-day-to-suppress-auto-update-check"></a>Período de tiempo en cada día para suprimir la búsqueda de actualizaciones automáticas
 >Microsoft Edge Update 1.3.33.5 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Si habilitas esta Directiva, las búsquedas de actualizaciones se suprimirán cada día, a partir de Hora:Minuto durante un período de tiempo (en minutos). La duración no se ve afectada por el horario de verano. Por ejemplo, si la hora de inicio es 22:00 y la duración es 480 minutos, las actualizaciones se suprimirán durante 8 horas exactamente, independientemente de si el horario de verano comienza o finaliza durante este período.
 
   Si deshabilitas o no configuras esta directiva, las búsquedas de actualizaciones no se suprimirán durante ningún período determinado.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: UpdatesSuppressed
 - Nombre de GP: período de tiempo en cada día para suprimir la búsqueda de actualizaciones automáticas
   - Opciones {Hora, Minuto, Duración}
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Preferencias
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: 
   - UpdatesSuppressedDurationMin
   - UpdatesSuppressedStartHour
   - UpdatesSuppressedStartMin
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 duration   : 0x0000003c
 start hour : 0x00000001
@@ -462,14 +461,14 @@ start min  : 0x00000002
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-##  <a name="proxy-server-policies"></a>Directivas de servidor proxy
+## <a name="proxy-server-policies"></a>Directivas de servidor proxy
 
 [Volver al principio](#microsoft-edge---update-policies)
-###  <a name="proxymode"></a>ProxyMode
-#### Elegir cómo especificar la configuración del servidor proxy
+### <a name="proxymode"></a>ProxyMode
+#### <a name="choose-how-to-specify-proxy-server-settings"></a>Elegir cómo especificar la configuración del servidor proxy
 >Microsoft Edge Update 1.3.21.81 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Permite especificar la configuración del servidor proxy que usa Microsoft Edge Update.
 
   Si habilitas esta directiva, puedes elegir entre las siguientes opciones de servidor proxy:
@@ -481,28 +480,28 @@ Permite especificar la configuración del servidor proxy que usa Microsoft Edge 
   Si habilitas esta directiva, los usuarios de la organización no pueden cambiar la configuración de proxy en Microsoft Edge Update.
 
   Si deshabilitas o no configuras esta directiva, no se configuran las opciones del servidor proxy, pero los usuarios de la organización pueden elegir su propia configuración de proxy para Microsoft Edge Update.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: ProxyMode
 - Nombre de GP: elige cómo especificar la configuración del servidor proxy
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Servidor proxy
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: ProxyMode
 - Tipo de valor: REG_SZ
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 fixed_servers
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="proxypacurl"></a>ProxyPacUrl
-#### Dirección URL a un archivo proxy .pac
+### <a name="proxypacurl"></a>ProxyPacUrl
+#### <a name="url-to-a-proxy-pac-file"></a>Dirección URL a un archivo proxy .pac
 >Microsoft Edge Update 1.3.21.81 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Permite especificar una dirección URL para un archivo de configuración automática de proxy (PAC).
 
   Si habilitas esta directiva, puedes especificar una dirección URL para un archivo PAC que automatice cómo Microsoft Edge Update selecciona el servidor proxy adecuado para localizar un sitio web en particular.
@@ -510,28 +509,28 @@ Permite especificar una dirección URL para un archivo de configuración automá
   Esta directiva solo se aplica si has especificado una configuración de proxy manual en la directiva '[Elegir cómo especificar la configuración del servidor proxy](#proxymode)'.
 
   No configures esta directiva si has especificado una configuración de proxy diferente de manual en la directiva '[Elegir cómo especificar la configuración del servidor proxy](#proxymode)'.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: ProxyPacUrl
 - Nombre de GP: dirección URL a un archivo proxy .pac
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Servidor proxy
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: ProxyPacUrl
 - Tipo de valor: REG_SZ
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 https://www.microsoft.com
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="proxyserver"></a>ProxyServer
-#### Dirección o dirección URL del servidor proxy
+### <a name="proxyserver"></a>ProxyServer
+#### <a name="address-or-url-of-proxy-server"></a>Dirección o dirección URL del servidor proxy
 >Microsoft Edge Update 1.3.21.81 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Permite especificar la dirección URL del servidor proxy que usa Microsoft Edge Update.
 
   Si habilitas esta directiva, puedes establecer la dirección URL del servidor proxy usado por Microsoft Edge Update en tu organización.
@@ -539,59 +538,59 @@ Permite especificar la dirección URL del servidor proxy que usa Microsoft Edge 
   Esta directiva solo se aplica si has seleccionado una configuración de proxy manual en la directiva '[Elegir cómo especificar la configuración del servidor proxy](#proxymode)'.
 
   No configures esta directiva si has especificado una configuración de proxy diferente de manual en la directiva '[Elegir cómo especificar la configuración del servidor proxy](#proxymode)'.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: ProxyServer
 - Nombre de GP: dirección o dirección URL del servidor proxy
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Servidor proxy
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: ProxyServer
 - Tipo de valor: REG_SZ
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 https://www.microsoft.com
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-##  <a name="microsoft-edge-webview-policies"></a>Directivas de Microsoft Edge WebView
+## <a name="microsoft-edge-webview-policies"></a>Directivas de Microsoft Edge WebView
 
 [Volver al principio](#microsoft-edge---update-policies)
-###  <a name="install-(webview)"></a>Instalar (WebView)
-#### Permitir instalación
+### <a name="install-webview"></a>Instalar (WebView)
+#### <a name="allow-installation"></a>Permitir instalación
 >Microsoft Edge Update 1.3.127.1 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Le permite especificar si Microsoft Edge WebView se puede instalar con Microsoft Edge Update.
 
   - Si habilita esta directiva, los usuarios pueden instalar Microsoft Edge WebView con Microsoft Edge Update.
   - Si deshabilita esta directiva, los usuarios no pueden instalar Microsoft Edge WebView con Microsoft Edge Update.
   - Si no configura esta directiva, la configuración de la directiva del "[Valor predeterminado de Permitir instalación](#installdefault)" determinará si los usuarios pueden instalar Microsoft Edge WebView con Microsoft Edge Update.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: Install
 - Nombre de GP: Permitir instalación
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Microsoft Edge WebView
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: 
   - Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 0x00000001
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-###  <a name="update-(webview)"></a>Actualización (WebView)
-#### Invalidar directiva de actualización
+### <a name="update-webview"></a>Actualización (WebView)
+#### <a name="update-policy-override"></a>Invalidar directiva de actualización
 >Microsoft Edge Update 1.3.127.1 y posteriores
 
-#### Descripción
+#### <a name="description"></a>Descripción
 Te permite especificar si las actualizaciones automáticas están habilitadas para Microsoft Edge WebView. Microsoft Edge WebView es un componente usado por las aplicaciones para mostrar contenido web.
 Las actualizaciones automáticas están habilitadas de forma predeterminada. Al deshabilitar las actualizaciones automáticas de Microsoft Edge WebView, se pueden producir problemas de compatibilidad con las aplicaciones que dependen de este componente.
 
@@ -600,24 +599,24 @@ Las actualizaciones automáticas están habilitadas de forma predeterminada. Al 
   - Actualizaciones deshabilitadas: las actualizaciones nunca se descargan ni aplican
 
   Si no habilitas esta directiva, las actualizaciones se descargan y se aplican automáticamente.
-#### Información y configuración de Windows
-##### Información de directiva de grupo (ADMX)
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 - Nombre único de GP: Actualización
 - Nombre de GP: Invalidar directiva de actualización
 - Ruta de GP: Plantillas administrativas/Microsoft Edge Update/Microsoft Edge WebView
 - Nombre de archivo GP ADMX: msedgeupdate.admx
-##### Configuración del Registro de Windows
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
 - Nombre del valor: 
   - Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
 - Tipo de valor: REG_DWORD
-##### Valor de ejemplo:
+##### <a name="example-value"></a>Valor de ejemplo:
 ```
 0x00000001
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-##  <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
   - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
   - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
