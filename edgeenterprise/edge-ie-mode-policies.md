@@ -1,23 +1,26 @@
 ---
 title: Configurar directivas de modo IE
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 03/29/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Configurar directivas de modo IE
-ms.openlocfilehash: a2abf6f6ef71c1f30786031ef19b9633bfafc43f
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: d73a9649619a746fd1ef382f0911ad7e45255f06
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470168"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617440"
 ---
 # <a name="configure-ie-mode-policies"></a>Configurar directivas de modo IE
+
+>[!Note]
+> La aplicación de escritorio Internet Explorer 11 se retirará y dejará de recibir soporte el 15 de junio de 2022 (para ver una lista de lo que está en juego, [consulta las preguntas frecuentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Las mismas aplicaciones y sitios de IE11 que usa hoy pueden abrirse en Microsoft Edge con el modo de Internet Explorer. [Puedes obtener más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Este artículo explica cómo se configuran las directivas de modo IE.
 
@@ -30,8 +33,8 @@ La configuración del modo IE requiere tres pasos:
 2. [Redirigir sitios de Microsoft Edge al modo IE](#redirect-sites-from-microsoft-edge-to-ie-mode)
 3. (Opcional) [Redirigir sitios de IE a Microsoft Edge](#redirect-sites-from-ie-to-microsoft-edge)
 
-    1. Si está listo para deshabilitar la aplicación IE11, siga los pasos descritos en [ Deshabilitar Internet Explorer 11](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11)
-    2. De lo contrario, siga el resto de los pasos en [Redirigir sitios de IE a Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
+    1. Si está listo para deshabilitar la aplicación IE11, siga los pasos descritos en [ Deshabilitar Internet Explorer 11](/deployedge/edge-ie-disable-ie11)
+    2. De lo contrario, siga el resto de los pasos en [Redirigir sitios de IE a Microsoft Edge](/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
 > Las directivas para habilitar el modo IE se pueden configurar con Intune. Para obtener más información, consulta [Agregar Microsoft Edge a Microsoft Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) y [Configurar las directivas de Microsoft Edge con Microsoft Intune](./configure-edge-with-intune.md).
@@ -44,7 +47,7 @@ Se puede configurar Internet Explorer para abrirlo directamente desde Microsoft 
 
 1. Descarga u usa la última [plantilla administrativa de Microsoft Edge](https://www.microsoft.com/en-us/edge/business/download).
 2. Abre el Editor de directivas de grupo.
-3. Haz clic en **Configuración del equipo** > **Plantillas administrativas** > **Microsoft Edge**.
+3. Haz clic en** Configuración de usuario/Configuración**del equipo  >  **Plantillas**  >  **administrativas Microsoft Edge**.
 4. Haz doble clic en **Configurar la integración de Internet Explorer**.
 5. Seleccione **Habilitado**.
 6. En **Opciones**, establece el valor de la lista desplegable en 
@@ -84,7 +87,7 @@ El modo IE puede usar la directiva existente que configura la Lista de sitios de
 1. Crear o volver a usar una lista de sitios XML
     1. Todos los sitios que tengan el elemento _\<open-in\>IE11\</open-in\>_ se abrirán ahora en modo IE.
 2. Abre el Editor de directivas de grupo.
-3. Haz clic en **Configuración del equipo** > **Plantillas administrativas** > **Componentes de Windows** > **Internet Explorer**.
+3. Haz clic en **Configuración del usuario/Configuración del equipo** > **Plantillas administrativas** > **Componentes de Windows** > **Internet Explorer**.
 4. Haz doble clic en **Usar la lista de sitios web de IE del Modo de empresa**.
 5. Seleccione **Habilitado**.
 6. En **Opciones**, escribe la ubicación de la lista de sitios web. Puedes usar una de las siguientes ubicaciones:
@@ -100,7 +103,7 @@ También es posible configurar el modo IE con una directiva independiente para M
 1. Crear o volver a usar una lista de sitios XML
     1. Todos los sitios que tengan el elemento _\<open-in\>IE11\</open-in\>_ se abrirán ahora en modo IE.
 2. Abre el Editor de directivas de grupo.
-3. Haz clic en **Configuración del equipo** > **Plantillas administrativas** > **Microsoft Edge**.
+3. Haz clic en** Configuración de usuario/Configuración**del equipo  >  **Plantillas**  >  **administrativas Microsoft Edge**.
 4. Haz doble clic en **Configurar la lista de sitios del modo de empresa**.
 5. Seleccione **Habilitado**.
 6. En **Opciones**, escribe la ubicación de la lista de sitios web. Puedes usar una de las siguientes ubicaciones:
@@ -118,7 +121,7 @@ El modo IE se puede configurar como "para todos los sitios" en la zona Intranet 
 > La zona de Intranet local contiene sitios agregados explícitamente, pero también asigna sitios a esta zona mediante heurística. Esto puede incluir nombres de host sin punto (p.ej. **https**:**//nomina**) y sitios que el script de configuración de proxy configura para eludir el proxy. Si un usuario externo controla DNS o proxy, podría exigir el uso de los sitios web en modo IE.
 
 1. Abre el Editor de directivas de grupo local.
-2. Haz clic en **Configuración del equipo** > **Plantillas administrativas** > **Microsoft Edge**.
+2. Haz clic en** Configuración de usuario/Configuración**del equipo  >  **Plantillas**  >  **administrativas Microsoft Edge**.
 3. Haz doble clic en **Enviar todos los sitios de intranet a Internet Explorer**.
 4. Selecciona **Habilitado** y luego haz clic en **Aceptar** o **Aplicar** para guardar la configuración de directiva.
 
@@ -127,7 +130,7 @@ El modo IE se puede configurar como "para todos los sitios" en la zona Intranet 
 Es posible impedir que los usuarios usen Internet Explorer para los sitios que no lo necesiten. Internet Explorer puede redirigir sitios automáticamente a Microsoft Edge si no están en la lista de sitios.
 
 1. Abre el Editor de directivas de grupo.
-2. Haz clic en **Configuración del equipo** > **Herramientas administrativas** > **Componentes de Windows** > **Internet Explorer**.
+2. Haz clic en **Configuración del usuario/Configuración del ordenador** > **Herramientas administrativas** > **Componentes de Windows** > **Internet Explorer**.
 3. Haz doble clic en **Enviar todos los sitios que no se incluyan en la lista de sitios del modo de empresa a Microsoft Edge**.
 4. Selecciona **Habilitado**
 5. Haz clic en **Aceptar** o **Aplicar** para guardar esta configuración.

@@ -1,21 +1,21 @@
 ---
 title: Materiales para la adopción de clientes de Microsoft Edge
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlynd
-ms.date: 03/01/2021
+ms.date: 06/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Materiales para la adopción de clientes de Microsoft Edge
-ms.openlocfilehash: 4752b0b5221d0134c68a50153679979449d893ca
-ms.sourcegitcommit: 81383d92dba379d5e6073066c4cdcc2761390f8f
+ms.openlocfilehash: f8a37bceeee9b55587a14a97a5b64b73ec27d23f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385370"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617849"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a>Materiales para la adopción de clientes para Microsoft Edge
 
@@ -25,20 +25,31 @@ Compruebe si hay más materiales a medida que se están disponibles.
 
 ## <a name="customer-adoption-kit"></a>Kit de adopción de clientes
 
-El kit de adopción del cliente contiene el material siguiente:
+El kit de adopción del cliente contiene el siguiente material:
+- Kit de retiro de Internet Explorer **(disponible en inglés, alemán, español, francés, japonés, coreano, chino (simplificado))**
+    - Correos electrónicos de adopción
+    - Volantes
+    - Infografía
+    - Formulario de colección de sitios
+- Kit de adopción general
+    - Guía de implementación de TI
+    - Guía de introducción para el usuario
+    - Plantillas de correo electrónico de adopción
+    - Banners
+    - Señalización digital
+    - Localizador
+    - Vídeo de demostración y GIFs
+    - Vínculos de recursos en la web
 
-- Guía de implementación de sistemas de información
-- Guía de introducción para el usuario
-- Plantillas de correo electrónico de adopción
-- Banners
-- Señalización digital
-- Localizador
-- Vídeo de demostración y GIFs
-- Vínculos de recursos en la web
+El kit de adopción está disponible en inglés y en otros idiomas, incluidos francés, alemán y japonés. Seleccione el idioma que prefiera en el [Centro de descarga del Kit de adopción del cliente Microsoft Edge](https://www.microsoft.com/download/details.aspx?id=102119).
 
-El kit de adopción está disponible en inglés y en otros idiomas, incluidos francés, alemán y japonés. Seleccione el idioma que prefiera en el centro [de descarga del Kit de adopción del cliente Microsoft Edge](https://www.microsoft.com/download/details.aspx?id=102119).
+### <a name="internet-explorer-ie-retirement-resources"></a>Recursos de retiro de Internet Explorer (IE)
 
-### <a name="it-deployment-guide"></a>Guía de implementación de sistemas de información
+Encuentre recursos valiosos y orientación de expertos para ayudar a su organización a pasar de forma segura y rápida de IE a Microsoft Edge.
+
+:::image type="content" source="media/customer-adoption-not-md/Internet Explorer Retirement Screenshot.png" alt-text="Retiro de Internet Explorer":::
+
+### <a name="it-deployment-guide"></a>Guía de implementación de TI
 
 Use esta guía para empezar a planear la implementación y descubrir cómo empezar con la implementación de Microsoft Edge en su entorno.
 

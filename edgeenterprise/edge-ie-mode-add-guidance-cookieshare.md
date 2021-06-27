@@ -3,21 +3,24 @@ title: Compartir cookies de Microsoft Edge a Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 05/19/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Como compartir cookies de Microsoft Edge a Internet Explorer '
-ms.openlocfilehash: d94c1337b7a3dbee789efb16e9c8b0a5ebc2c23b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 563179852ff23142b540345222ba7e943547535d
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447744"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617470"
 ---
 # <a name="cookie-sharing-from-microsoft-edge-to-internet-explorer"></a>Compartir cookies de Microsoft Edge a Internet Explorer
+
+>[!Note]
+> La aplicación de escritorio Internet Explorer 11 será retirada y dejará de recibir soporte el 15 de junio de 2022 (para ver una lista de lo que está en juego, [consulte las preguntas frecuentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Las mismas aplicaciones y sitios de IE11 que use hoy pueden abrirse en Microsoft Edge mediante el uso del modo Internet Explorer. [Más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Este artículo explica cómo configurar el uso compartido de cookies de sesión de un proceso de Microsoft Edge al proceso de Internet Explorer, mientras se usa el modo de Internet Explorer.
 

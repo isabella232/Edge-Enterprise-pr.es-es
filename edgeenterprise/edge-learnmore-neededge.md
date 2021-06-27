@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Redirección de Internet Explorer a Microsoft Edge por motivos de compatibilidad con sitios web modernos
-ms.openlocfilehash: ffb295b5c844d15fee2b0fa23e78be9cd34ef03f
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 7cd74eda6d8ada7647862ea69f77a982713f0c14
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447594"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617300"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>Redirección de Internet Explorer a Microsoft Edge por motivos de compatibilidad con sitios web modernos
 
@@ -24,6 +24,9 @@ ms.locfileid: "11447594"
 
 ## <a name="overview"></a>Introducción
 
+>[!Note]
+> La aplicación de escritorio Internet Explorer 11 será retirada y dejará de recibir soporte el 15 de junio de 2022 (para ver una lista de lo que está en juego, [consulte las preguntas frecuentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Las mismas aplicaciones y sitios de IE11 que usas hoy pueden abrirse en Microsoft Edge con el modo Internet Explorer. [Más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+
 Muchos sitios web modernos tienen diseños que no son compatibles con Internet Explorer. Siempre que un usuario de Internet Explorer visite un sitio público incompatible, recibirá un mensaje en el que se indicará que el sitio no es compatible con el explorador y tendrá que cambiar de forma manual a otro explorador.
 
 La necesidad de cambiar manualmente a otro navegador diferente, cambia a partir de la versión estable de Microsoft Edge 87.
@@ -31,7 +34,16 @@ La necesidad de cambiar manualmente a otro navegador diferente, cambia a partir 
 Cuando un usuario se dirige a un sitio que no es compatible con Internet Explorer, se le redirigirá automáticamente a Microsoft Edge. En este artículo se describe la experiencia de usuario para la redirección y las directivas de grupo que se usan para configurar o deshabilitar el redireccionamiento automático.
 
 > [!NOTE]
-> Microsoft mantiene una lista de todos los sitios que se sabe que son incompatibles con Internet Explorer. Para obtener más información, vea [Solicitar actualizaciones a la lista de sitios incompatibles](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+> Microsoft mantiene una lista de todos los sitios que se sabe que son incompatibles con Internet Explorer. Para obtener más información, consulte [Solicitar actualizaciones a la lista de sitios incompatibles](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+
+## <a name="prerequisites"></a>Requisitos previos
+- Microsoft Edge Versión estable 87 o posterior
+- Versiones de Windows
+    - Windows 10 versión 1709 o posterior
+    - Windows 8.1
+    - Windows 7
+
+
 
 ## <a name="redirection-experience"></a>Experiencia de redirección
 
@@ -88,7 +100,7 @@ Además de requerir el BHO, hay una dependencia en **RedirectSitesFromInternetEx
 >
 >Si se encuentra en un dispositivo inscrito en un dominio Unido o en la administración de dispositivos móviles (MDM), no verá esta opción.
 >
-> En su lugar, si quiere permitir que los usuarios carguen los sitios en el modo de Internet Explorer, puede hacerlo configurando la Directiva [permitir la realización de pruebas en el modo de Internet Explorer](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing).
+> En su lugar, si quiere permitir que los usuarios carguen los sitios en el modo de Internet Explorer, puede hacerlo configurando la Directiva [permitir la realización de pruebas en el modo de Internet Explorer](./microsoft-edge-policies.md#intranetredirectbehavior).
 
 ### <a name="policy-hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>Directiva: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 

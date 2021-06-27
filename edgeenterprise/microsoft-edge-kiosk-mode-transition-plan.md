@@ -3,19 +3,19 @@ title: Planear transición al modo quiosco
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Planear transición al modo quiosco
-ms.openlocfilehash: 2a82852f10f2a842f28029738e72f72de4c53c41
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: b563f7ac773fb295d42e2b27b1259af321ce5f70
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447854"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617749"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>Planear transición al modo quiosco
 
@@ -47,23 +47,29 @@ Usa los siguientes pasos como guía para configurar un quiosco en Microsoft Edge
 |[Mostrar el botón Inicio](./microsoft-edge-policies.md#showhomebutton) (directiva)|N|esté|89|Y|
 |[Administrar favoritos](./microsoft-edge-policies.md#managedfavorites) (directiva)|N|esté|89|Y|
 |[Habilitar impresora](./microsoft-edge-policies.md#printingenabled) (directiva)|Y|esté|89|Y|
-|[Configurar la nueva dirección URL de la página de pestaña](./microsoft-edge-policies.md#newtabpagelocation) (directiva)|N|esté||Y|
+|[Configurar la nueva dirección URL de la página de pestaña](./microsoft-edge-policies.md#newtabpagelocation) (directiva)|N|esté|89|Y|
 |Botón Finalizar sesión | N| esté| 89|Y|
 |Todas las direcciones URL internas de Microsoft Edge están bloqueadas, excepto *edge://downloads* y *edge://print* |N|esté|89|esté|
 | CTRL+N bloqueado (abrir una nueva ventana) | esté | esté | 89 |Y|
 | CTRL+T bloqueado (abrir nueva pestaña) |Y | esté | 89 |Y|
 |La configuración y más (...) mostrará solo las opciones necesarias  |esté |esté |89 |esté|
-|Restringir el inicio de otras aplicaciones desde el explorador|Y|esté|90/91|Y|
-|Bloqueo de la configuración de impresión de la interfaz de usuario|Y|esté|90/91|Y|
-|[Establecer la página de la nueva pestaña como página principal](./microsoft-edge-policies.md#homepageisnewtabpage) (directiva)|-|-|TBD|Esté|
+|Restringir el inicio de otras aplicaciones desde el explorador|Y|Y|90|Y|
+|Bloqueo de la configuración de impresión de la interfaz de usuario|Y|Y|90|Y|
+|[Establecer la página de la nueva pestaña como página principal](./microsoft-edge-policies.md#homepageisnewtabpage) (directiva)|N|Y|90|Y|
 
 > [!NOTE]
 > Para obtener información sobre el calendario de lanzamientos de Microsoft Edge, consulta [ Calendario de lanzamientos de Microsoft Edge](microsoft-edge-release-schedule.md).
 
-**Paso 2: probar el nuevo quiosco en Microsoft Edge.** Recomendamos que pruebes a configurar el modo quiosco en Microsoft Edge. Una forma rápida y sencilla de probar el modo quiosco es configurar una aplicación única de acceso asignado mediante la Configuración de Windows, como se describe a continuación.
+**Paso 2: probar el nuevo quiosco en Microsoft Edge.** Recomendamos que pruebes a configurar el modo quiosco en Microsoft Edge. Una forma rápida y sencilla de probar el modo pantalla completa es configurar una aplicación única de acceso asignado mediante la Configuración de Windows, como se describe a continuación.
 
-1. Instala la última versión de Windows 10 Insider Preview, versión 20215 o superior. Sigue las instrucciones que se indican en [Introducción a las versiones preliminares de Windows 10](/windows-insider/get-started).
-2. Instala la versión más reciente del [canal estable de Microsoft Edge](https://www.microsoft.com/edge), versión 87 o posterior.  Para probar las últimas características, puedes descargar el último [canal Microsoft Edge Beta ](https://www.microsoftedgeinsider.com/download), versión 89 o superior.
+1. Las actualizaciones mínimas del sistema para los sistemas operativos enumerados en la siguiente tabla.
+
+|Sistema operativo|Versión|Actualizaciones|
+|--|--|--|
+|Windows 10 | 2004 o posterior|[KB4601382 o posterior](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 o posterior](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. Para probar las últimas funciones, puedes descargar el último [Canal estable de Microsoft Edge](https://www.microsoftedgeinsider.com/download), versión 89 o superior.
 
    > [!IMPORTANT]
    > Debido a que se requiere una instalación a nivel de dispositivo, el canal Canary no es compatible.
@@ -80,15 +86,15 @@ Usa los siguientes pasos como guía para configurar un quiosco en Microsoft Edge
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Modo de pantalla completa: crear cuenta":::
 
-6. En la página **Elegir una aplicación de quiosco** , selecciona **Microsoft Edge** y haz clic en  **Siguiente**.
+6. En la página **Elegir una aplicación de modo pantalla completa** , seleccione **Microsoft Edge** y haga clic en  **Siguiente**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Modo quiosco: elegir una aplicación":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="Elegir un modo de pantalla completa: signo digital de pantalla completa":::
 
 7. Selecciona una de las siguientes opciones para la visualización de Microsoft Edge cuando se ejecuta en modo quiosco:
 
    - Señalización digital/interactiva: muestra un sitio específico en modo de pantalla completa, ejecutando Microsoft Edge.
    - Explorador público: ejecuta una versión multipestaña limitada de Microsoft Edge.
-
+ 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Pantalla completa: inicio de sesión digital en pantalla completa.":::
 
 8. Selecciona  **Siguiente**.
