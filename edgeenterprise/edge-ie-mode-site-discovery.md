@@ -1,25 +1,28 @@
 ---
 title: Guía paso a paso para la Detección de sitio empresarial
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 04/07/2020
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Usar Detección de sitio empresarial para preparar para el modo IE
-ms.openlocfilehash: 2557544a93222b03aaa0961149aa0d3c5d7d8806
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: f6298b801cceeb96d9285f3597de2a6abe8ee36e
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447724"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617480"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>Guía paso a paso para la Detección de sitio empresarial
 
-Este artículo proporciona una guía paso a paso para usar la Detección de sitio empresarial con Administrador de configuración de Microsoft Endpoint.
+>[!Note]
+> La aplicación de escritorio Internet Explorer 11 se retirará y dejará de recibir soporte el 15 de junio de 2022 (para ver una lista de lo que se verá afectado, [consulte las preguntas frecuentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Las mismas aplicaciones y sitios de IE11 que usa hoy pueden abrirse en Microsoft Edge mediante el uso del modo Internet Explorer. [Más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+
+Este artículo proporciona una guía paso a paso para usar la Detección de sitio empresarial con Microsoft Endpoint Configuration Manager.
 
 Detección del sitio empresarial puede ayudarte a configurar la Lista de sitios del modo empresarial. Detección del sitio empresarial te ayudará a:
 

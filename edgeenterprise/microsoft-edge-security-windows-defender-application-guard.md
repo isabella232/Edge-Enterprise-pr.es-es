@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge y Protección de aplicaciones de Microsoft Defender
 ms.author: srugh
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 02/05/2021
+ms.date: 05/06/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Compatibilidad de Microsoft Edge para la Protección de aplicaciones de Microsoft Defender
-ms.openlocfilehash: 2dc1c5b35003c7de4fa474764c46a792bf1e3439
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 7374810eb19ada298963817844e52184c0271a8c
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447174"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11618000"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Compatibilidad de Microsoft Edge para la Protección de aplicaciones de Microsoft Defender
 
@@ -49,7 +49,25 @@ La siguiente captura de pantalla muestra un ejemplo del mensaje de protección d
 
 ## <a name="whats-new"></a>Novedades
 
-La compatibilidad de la protección de aplicaciones en el nuevo navegador Microsoft Edge tiene la misma funcionalidad que el Microsoft Edge Legacy e incluye varias mejoras.
+La Protección de aplicaciones tiene la misma compatibilidad con el nuevo navegador Microsoft Edge que con Microsoft Edge (versión anterior), e incluye varias mejoras.
+
+### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>Sincronización de favoritos desde el host al contenedor
+
+Algunos de nuestros clientes han estado preguntando acerca de la sincronización de favoritos entre el navegador host y el contenedor en la Protección de aplicaciones. A partir de Microsoft Edge 91, los usuarios ahora tienen la opción de configurar la Protección de aplicaciones para sincronizar sus favoritos desde el host al contenedor. Esto garantiza que aparezcan también nuevos favoritos en el contenedor.
+
+Se puede controlar esta compatibilidad por medio de una directiva. Puede actualizar la directiva de Edge [ApplicationGuardFavoritesSyncEnabled](/deployedge/microsoft-edge-policies#applicationguardfavoritessyncenabled) para habilitar o deshabilitar la sincronización de favoritos.
+
+> [!Note]
+> Por motivos de seguridad, la sincronización de favoritos solo es posible desde el host al contenedor y no en el sentido contrario. Para garantizar una lista unificada de favoritos en el host y el contenedor, hemos deshabilitado la administración de favoritos dentro del contenedor.
+
+### <a name="identify-network-traffic-originating-from-the-container"></a>Identificar el tráfico de red que se genera desde el contenedor
+
+Varios clientes usan WDAG en una configuración específica en la que desean identificar el tráfico de red procedente del contenedor. Algunos de los escenarios para esto son:
+
+- Para restringir el acceso a solo un puñado de sitios que no sean de confianza
+- Para permitir el acceso a Internet solo desde el contenedor
+
+A partir de Microsoft Edge versión 91, existe compatibilidad integrada para etiquetar el tráfico de red procedente de los contenedores de la Protección de aplicaciones, lo que permite que las empresas utilicen proxy para filtrar el tráfico y aplicar directivas específicas. Puede usar el encabezado para identificar el tráfico del contenedor o del host mediante [ApplicationGuardTrafficIdentificationEnabled](/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled).
 
 ### <a name="extension-support-inside-the-container"></a>Compatibilidad de extensión dentro del contenedor
 
@@ -109,9 +127,9 @@ Los siguientes artículos proporcionan la información necesaria para instalar, 
 
 ## <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
-### <a name="does-application-guard-work-in-ie-mode"></a>¿Funciona la protección de aplicaciones en modo IE?
+### <a name="does-application-guard-work-in-ie-mode"></a>¿La Protección de aplicaciones funciona en el modo IE?
 
-El modo IE es compatible con la funcionalidad de la protección de aplicaciones, pero no prevemos que se utilice mucho esta característica en el modo IE. Se recomienda desplegar el modo IE para una lista de sitios internos de confianza, y Application Guard es sólo para sitios no confiables. Asegúrese de que todos los sitios o direcciones IP del modo IE se añadan también a la directiva de aislamiento de la red para que la protección de aplicaciones los considere como un recurso de confianza.
+El modo IE admite la funcionalidad de Protección de aplicaciones, pero no se anticipa mucho el uso de esta característica en este modo. Se recomienda implementar el modo IE para una lista de sitios internos de confianza y la Protección de aplicaciones solo para sitios que no sean de confianza. Asegúrese de que todos los sitios o direcciones IP del modo IE se añadan también a la directiva de aislamiento de la red para que la protección de aplicaciones los considere como un recurso de confianza.
 
 ### <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>¿Necesito instalar la extensión de protección de aplicaciones en Chrome?
 
