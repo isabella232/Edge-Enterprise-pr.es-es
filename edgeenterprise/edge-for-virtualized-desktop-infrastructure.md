@@ -121,7 +121,7 @@ Este problema debería mitigarse en las versiones más recientes. Sin embargo, s
 
 ### <a name="degraded-performance-when-rendering-pages-with-exceptionally-large-html-tables"></a>Rendimiento degradado al representar páginas con tablas HTML excepcionalmente grandes
 
-Se sabe que las siguientes directivas de Citrix ralentizan la representación de páginas HTML con tablas muy grandes (más de 30000 filas).
+Se sabe que las siguientes directivas de Citrix ralentizan la representación de páginas HTML con tablas muy grandes (más de 30 000 filas).
 
 - Pantalla del teclado automático
 - Control remoto del cuadro combinado

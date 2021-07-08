@@ -24,7 +24,7 @@ En este artículo se describen las opciones y los pasos para administrar extensi
 - [Administrar extensiones de Microsoft Edge en la empresa](/deployedge/microsoft-edge-manage-extensions)
 
 > [!NOTE]
-> Este artículo aplica a Microsoft Edge, versión77 o posterior.
+> Este artículo aplica a Microsoft Edge, versión 77 o posterior.
 
 ## <a name="block-extensions-based-on-their-permissions"></a>Bloquear extensiones en función de sus permisos
 
