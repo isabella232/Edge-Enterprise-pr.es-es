@@ -3,28 +3,28 @@ title: Configurar Microsoft Edge en macOS con Jamf
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 11/30/2020
+ms.date: 6/29/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurar las opciones de directiva de Microsoft Edge en dispositivos Mac con Jamf
-ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
-ms.translationtype: HT
+ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194718"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641636"
 ---
-# Configurar las opciones de directiva de Microsoft Edge en macOS con Jamf
+# <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>Configurar las opciones de directiva de Microsoft Edge en macOS con Jamf
 
 Este artículo describe cómo configurar las opciones de directiva en macOS con un archivo de manifiesto de directiva de Microsoft Edge en Jamf Pro 10.19.
 
 También puede configurar las opciones de directiva de Microsoft Edge en macOS mediante un archivo de lista de propiedades (.plist). Para obtener más información, consulte [configurar para macOS con un archivo .plist](configure-microsoft-edge-on-mac.md)
 
 
-##  <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Se necesita el siguiente software:
 
@@ -32,7 +32,7 @@ Se necesita el siguiente software:
 - Archivo de plantillas de directiva, versión 81.0.416.3
 - Jamf Pro, versión 10.19
 
-##  <a name="about-the-jamf-pro-application-&-custom-settings-menu"></a>Acerca del menú de configuración personalizada y de la aplicación de Jamf Pro
+## <a name="about-the-jamf-pro-application--custom-settings-menu"></a>Acerca del menú de configuración personalizada y de la aplicación de Jamf Pro
 
 Antes de Jamf Pro 10,18, administrar Office 365 suponía la creación manual de un archivo .plist. Este era un flujo de trabajo muy largo que requería sólidos conocimientos técnicos. Jamf Pro 10.18 eliminó estos obstáculos al simplificar el proceso de configuración. Sin embargo, los administradores de TI solo podrían usar esta nueva interfaz de usuario para aplicaciones específicas y dominios de preferencias especificados por Jamf.
 
@@ -40,7 +40,7 @@ En Jamf Pro 10.19, un usuario puede cargar un manifiesto JSON como "esquema pers
 
 Para obtener más información, vea [perfiles de configuración del equipo](https://jamf.it/computer-configuration-profiles) en la guía del administrador de Jamf Pro.
 
-##  <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Obtener el manifiesto de directiva para una versión específica de Microsoft Edge
+## <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Obtener el manifiesto de directiva para una versión específica de Microsoft Edge
 
 Para obtener el manifiesto de directiva:
 
@@ -56,7 +56,7 @@ Después de desempaquetar el archivo CAB, desempaquete el archivo ZIP y vaya al 
 
 Este manifiesto se publicará en cada paquete de directivas empezando con la compilación 81.0.416.3. Si desea probar directivas en el canal de desarrollo, puede tomar el manifiesto asociado a cada lanzamiento de desarrollo y probarlo en Jamf Pro.  
 
-##  <a name="use-the-policy-manifest-in-jamf-pro"></a>Usar el manifiesto de directiva en Jamf Pro
+## <a name="use-the-policy-manifest-in-jamf-pro"></a>Usar el manifiesto de directiva en Jamf Pro
 
 Siga los pasos siguientes para cargar el manifiesto de directiva en Jamf Pro y crear un perfil de directiva para macOS.
 
@@ -105,7 +105,7 @@ Siga los pasos siguientes para cargar el manifiesto de directiva en Jamf Pro y c
 
 Después de crear el nuevo perfil de configuración aún tiene que configurar el **ámbito** del perfil.
 
-###  <a name="to-configure-the-scope"></a>Para configurar el ámbito
+### <a name="to-configure-the-scope"></a>Para configurar el ámbito
 
 1. Para **destinos**, proporcione la siguiente configuración mínima:
 
@@ -115,7 +115,7 @@ Después de crear el nuevo perfil de configuración aún tiene que configurar el
 2. Para **limitaciones**, conserve la configuración predeterminada: ninguna. Haga clic en **Cancelar**.
 3. Para **exclusiones**, conserve la configuración predeterminada: ninguna. Haga clic en **Cancelar**.
 
-##  <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Configurar para macOS con Intune](configure-microsoft-edge-on-mac.md)

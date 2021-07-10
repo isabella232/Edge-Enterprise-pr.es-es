@@ -3,19 +3,19 @@ title: Compatibilidad con idiomas de Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 03/10/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Compatibilidad con el idioma para mostrar de Microsoft Edge para Windows y macOS.
-ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
-ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
-ms.translationtype: HT
+ms.openlocfilehash: 0331ec5cad241deb059af35be264a2f7abaf2bc8
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "11406165"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642376"
 ---
 # <a name="microsoft-edge-language-support"></a>Compatibilidad con idiomas de Microsoft Edge
 
@@ -156,5 +156,5 @@ En la tabla siguiente se enumeran los idiomas para mostrar compatibles con Micro
 
 ## <a name="see-also"></a>Consulta también
 
-- [Documentación de Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
+- [Documentación de Microsoft Edge](./index.yml)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

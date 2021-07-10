@@ -3,31 +3,31 @@ title: Aislamiento del explorador Microsoft Edge usando Protección de aplicacio
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Aislamiento del explorador Microsoft Edge usando Protección de aplicaciones
-ms.openlocfilehash: e3e4d21669055ddd36a08d307083d43be6f943b4
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: b7056a4d1081bab576094f9bc0b5b86d17395408
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314753"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643006"
 ---
-# Vídeo: aislamiento del explorador Microsoft Edge usando Protección de aplicaciones
+# <a name="video-microsoft-edge-browser-isolation-using-application-guard"></a>Vídeo: aislamiento del explorador Microsoft Edge usando Protección de aplicaciones
 
 En este vídeo se muestra cómo Microsoft Edge es compatible con el aislamiento de explorador mediante Protección de aplicaciones. Haga clic en la siguiente captura de pantalla para ver el vídeo por Arunesh Chandra, Senior Program Manager, Microsoft Edge Security.
 
 [![Aislamiento del explorador utilizando la Protección de aplicaciones]( media/microsoft-edge-video-security-application-guard/0.png)](http://www.youtube.com/watch?v=zQjaRqNXMqw "Browser isolation using Application Guard")
 
-##  <a name="about-the-video"></a>Sobre el vídeo
+## <a name="about-the-video"></a>Sobre el vídeo
 
 Con Microsoft Edge, puede ayudar a reducir la exposición de su empresa a los ataques en la Web. Aprende cómo Microsoft Edge soporta la Protección de aplicaciones de Microsoft Defender para usar el aislamiento de explorador frente a amenazas externas.
 
-##  <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulta también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Compatibilidad de Microsoft Edge para la Protección de aplicaciones de Microsoft Defender](microsoft-edge-security-windows-defender-application-guard.md)

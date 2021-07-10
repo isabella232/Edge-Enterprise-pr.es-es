@@ -4,24 +4,24 @@ metadata:
   ms.author: shisub
   author: dan-wesley
   manager: srugh
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Solución de problemas y preguntas frecuentes para el modo Internet Explorer de Microsoft Edge
-  ms.openlocfilehash: d21fdf47fb1774bc69ae3b2478ff3397c3106f04
-  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.openlocfilehash: 6248632a430f9c342624794b595f1cccc3d7d6a8
+  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "11618264"
+  ms.lasthandoff: 07/09/2021
+  ms.locfileid: "11641866"
 title: Solución de problemas del modo IE y preguntas frecuentes
 summary: >
   >[!Note]
 
-  > La aplicación de escritorio de Internet Explorer 11 se retirará y se retirará de la compatibilidad el 15 de junio de 2022 (para obtener una lista de lo que está en el ámbito, vea las preguntas más [frecuentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Las mismas aplicaciones y sitios de IE11 que usas hoy pueden abrirse en Microsoft Edge con el modo de Internet Explorer. [Obtenga más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+  > La aplicación de escritorio Internet Explorer 11 se retirará y dejará de recibir soporte el 15 de junio de 2022 (para ver una lista de lo que se verá afectado, [consulte las preguntas frecuentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Las mismas aplicaciones y sitios de IE11 que use hoy pueden abrirse en Microsoft Edge mediante el uso del modo Internet Explorer. [Más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 
   En este artículo se ofrecen consejos para la solución de problemas y una lista de preguntas frecuentes para Microsoft Edge versión 77 o posterior.
@@ -96,7 +96,7 @@ sections:
   - question: >
       ¿Reemplazará el modo IE a Internet Explorer 11?
     answer: >
-      Sí, la aplicación de escritorio de Internet Explorer 11 se retirará y se retirará del soporte técnico el 15 de junio de 2022 (para obtener una lista de lo que está en el ámbito, Preguntas más frecuentes sobre el ciclo de vida [- Internet Explorer](https://support.microsoft.com/help/17454/). Las mismas aplicaciones y sitios de IE11 que usas hoy pueden abrirse en Microsoft Edge con el modo de Internet Explorer. [Obtenga más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+      Sí, la aplicación de escritorio de Internet Explorer 11 se retirará y se retirará del soporte técnico el 15 de junio de 2022 (para obtener una lista de lo que está en el ámbito, Preguntas más frecuentes sobre el ciclo de vida [- Internet Explorer](https://support.microsoft.com/help/17454/). Las mismas aplicaciones y sitios de IE11 que usas hoy pueden abrirse en Microsoft Edge con el modo de Internet Explorer. [Más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
   - question: >
       ¿Puedo usar "Abrir con el Explorador" o "Ver en el Explorador de archivos" en SharePoint con el modo IE?
     answer: >
@@ -123,4 +123,4 @@ sections:
 
 
       Ejecute Microsoft Edge con la marca `--ie-mode-test` de línea de comandos, por ejemplo. `msedge.exe --ie-mode-test`, luego seleccione ... -> Más herramientas -> "Abrir sitios en modo Internet Explorer".
-additionalContent: "\n## <a name=\"see-also\"></a>Vea también\n\n- [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)\n- [Acerca del modo IE](./edge-ie-mode.md)\n- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
+additionalContent: "\n## <a name=\"see-also\"></a>Consulte también\n\n- [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)\n- [Acerca del modo IE](./edge-ie-mode.md)\n- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"

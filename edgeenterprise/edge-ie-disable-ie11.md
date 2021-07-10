@@ -3,19 +3,19 @@ title: Deshabilitar Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Obtenga información sobre cómo deshabilitar Internet Explorer 11 y usar el modo de Internet Explorer en Microsoft Edge.
-ms.openlocfilehash: ae4d936df7e432eee250e1c7327acfd206d86410
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 9ea99c794dc06a0eb5167e56e72b6e7b6ee70212
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617490"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641516"
 ---
 # <a name="disable-internet-explorer-11"></a>Deshabilitar Internet Explorer 11
 
@@ -72,8 +72,8 @@ Para deshabilitar Internet Explorer 11 con una directiva de grupo, siga estos pa
 
 1. Asegúrese de que tiene las actualizaciones del sistema operativo necesarias previamente. Este paso actualizará los archivos ADMX directamente en el equipo (específicamente inetres.adml e inetres.admx). Tenga en cuenta que si quiere actualizar la Tienda central, deberá copiar los archivos .adml y .admx de una máquina que tenga las actualizaciones previas. Para más información, consulte [Crear y administrar la Tienda central](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Abra el editor de directivas de grupo.
-3. Vaya a ***configuración del equipo/Plantillas administrativas/Componentes de Windows/Internet Explorer***. 
-4. Haga doble clic en **Deshabilitar Internet Explorer 11 como explorador independiente**.
+3. Vaya a **_Configuración del equipo/Plantillas administrativas/Windows componentes/Internet Explorer_*_. 
+4. Haga doble clic en _*Deshabilitar Internet Explorer 11 como explorador independiente**.
 5. Seleccione **habilitada**.
 6. En **de**opciones, elija uno de los valores siguientes:
 

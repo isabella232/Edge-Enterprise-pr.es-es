@@ -3,20 +3,20 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 06/17/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 21933e81427b84d69f6d3ead4dfc911519e65bb3
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: eba448024e86cd0c0ceb733b6363317d7c6ca5fb
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617880"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642836"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
@@ -260,7 +260,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar SmartScreen de Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forzar a SmartScreen de Microsoft Defender a comprobar las descargas de origen confiable|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -4234,7 +4234,7 @@ Si habilita esta configuración, se bloqueará la instalación de extensiones ex
 
 Si deshabilita esta configuración o la deja sin establecer, las extensiones externas podrán instalarse.
 
-Las extensiones externas y su instalación se documentan en ./microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+Las extensiones externas y su instalación se documentan [aquí.](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options)
 
 
   #### <a name="supported-features"></a>Características admitidas:
@@ -4518,7 +4518,7 @@ Los usuarios pueden modificar el código fuente de cualquier extensión con herr
 
 Cada elemento de lista de la directiva es una cadena que contiene un id. de extensión y, opcionalmente, una dirección URL "update" separada por un punto y coma (;). El id. de extensión es la cadena de 32 letras que se encuentra, por ejemplo, en edge://extensions cuando está en el modo para desarrolladores. Si se especifica, la dirección URL "update" debe apuntar a un documento de actualización manifiesto XML ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). De forma predeterminada, se usa la dirección URL de actualización del sitio web de complementos de Microsoft Edge. La dirección URL "update" establecida en esta directiva solo se usa para la instalación inicial; las actualizaciones posteriores de la extensión utilizan la dirección URL de actualización en el manifiesto de la extensión.
 
-Nota: esta directiva no se aplica al modo de InPrivate. Obtenga información sobre las extensiones de hospedaje (./microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Nota: esta directiva no se aplica al modo de InPrivate. Lea acerca de las extensiones de hospedaje [aquí](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -8111,7 +8111,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
 
   [Volver al principio](#microsoft-edge---policies)
 
@@ -8345,7 +8345,7 @@ Si habilita esta directiva, Microsoft Edge descargará y mostrará los logotipos
 
 Si deshabilita o no configura esta directiva, Microsoft Edge no mostrará ningún logotipo de la compañía o un logotipo de Microsoft en la página de la nueva pestaña.
 
-Para obtener ayuda para determinar el hash SHA-256, vea ./powershell/module/microsoft.powershell.utility/get-filehash.
+Para obtener ayuda para determinar el hash SHA-256, vaya [aquí](/powershell/module/microsoft.powershell.utility/get-filehash).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -24353,7 +24353,7 @@ Si no se establece esta directiva, se habilitará la detección de ventanas ocul
   [Volver al principio](#microsoft-edge---policies)
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

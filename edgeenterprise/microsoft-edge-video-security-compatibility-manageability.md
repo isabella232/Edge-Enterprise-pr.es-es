@@ -3,27 +3,27 @@ title: Seguridad, compatibilidad y capacidad de administración de Microsoft Edg
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Seguridad, compatibilidad y capacidad de administración de Microsoft Edge
-ms.openlocfilehash: 6d0787deac408e243697872b2393112d0d946dbb
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 480efbef308a68849ec3ea99d8a097a1a01a18c6
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314733"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643176"
 ---
-# Vídeo: Seguridad, compatibilidad y capacidad de administración de Microsoft Edge
+# <a name="video-microsoft-edge-security-compatibility-and-manageability"></a>Vídeo: Seguridad, compatibilidad y capacidad de administración de Microsoft Edge
 
 Este vídeo muestra cómo Microsoft Edge mejora la seguridad, la compatibilidad y la capacidad de administración para llevarlas al siguiente nivel. Haz clic en la siguiente captura de pantalla para ver el vídeo de Jeremy Chapman, director de Microsoft 365.
 
 [![Seguridad, compatibilidad y capacidad de administración de Microsoft Edge](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
-##  <a name="about-the-video"></a>Sobre el vídeo
+## <a name="about-the-video"></a>Sobre el vídeo
 
 Realice un paseo práctico para experimentar la seguridad, la compatibilidad y la capacidad de administración del nuevo Microsoft Edge. Microsoft Edge se basa en Chromium y está diseñado para ser el mejor navegador para empresas. Nuestro anfitrión, Jeremy Chapman, le mostrará qué es lo que lo distingue de otros navegadores. Este análisis exhaustivo incluye:
 
@@ -31,7 +31,7 @@ Realice un paseo práctico para experimentar la seguridad, la compatibilidad y l
 - Compatibilidad. Microsoft Edge es compatible con páginas web modernas y antiguas.
 - Capacidad de administración. Piense en la administración de sus actualizaciones o en las opciones de mantenimiento de Microsoft Edge.
 
-##  <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Seguridad de Microsoft Edge para su empresa](ms-edge-security-for-business.md)

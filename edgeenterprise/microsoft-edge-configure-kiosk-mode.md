@@ -3,19 +3,19 @@ title: Configurar el modo de pantalla completa en Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 04/26/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Obtenga información sobre las características del modo de pantalla completa y sobre cómo configurar las opciones del modo de pantalla completa de Microsoft Edge.
-ms.openlocfilehash: 20cb32c0cd27ad6d7437ed8ae0440560f3ed71b2
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 38d94a5dfac15f810a463e43ad2fe44d51ee66c7
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617860"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642196"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurar el modo de pantalla completa en Microsoft Edge
 
@@ -64,9 +64,9 @@ En la tabla siguiente se enumeran las características compatibles con el modo d
 | CTRL+N bloqueado (abrir una nueva ventana) * | S | esté |89|Y|
 | CTRL+T bloqueado (abrir nueva pestaña) |S | N |89|Y|
 |La configuración y más (...) mostrará solo las opciones necesarias  |esté |esté |89|esté|
-|Restringir el inicio de otras aplicaciones desde el explorador|Y|S|90|S|
-|Bloqueo de la configuración de impresión de la interfaz de usuario|Y|S|90|S|
-|[Establecer la nueva etiqueta como página de inicio](./microsoft-edge-policies.md#homepageisnewtabpage) (directiva)|N|S|90|S|
+|Restringir el inicio de otras aplicaciones desde el explorador|Y|Y|90|Y|
+|Bloqueo de la configuración de impresión de la interfaz de usuario|Y|Y|90|Y|
+|[Establecer la página de la nueva pestaña como página principal](./microsoft-edge-policies.md#homepageisnewtabpage) (directiva)|N|Y|90|S|
 
 > [!NOTE]
 > Las características seguidas de "*" solo están habilitadas en un escenario de aplicación única de acceso asignado.

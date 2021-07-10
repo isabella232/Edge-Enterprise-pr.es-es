@@ -3,19 +3,19 @@ title: Redirección de Internet Explorer a Microsoft Edge por motivos de compati
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/16/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Redirección de Internet Explorer a Microsoft Edge por motivos de compatibilidad con sitios web modernos
-ms.openlocfilehash: 7cd74eda6d8ada7647862ea69f77a982713f0c14
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: ec59380b82dc975ba3075d6e008bc0da05136f72
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617300"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642116"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>Redirección de Internet Explorer a Microsoft Edge por motivos de compatibilidad con sitios web modernos
 
@@ -25,7 +25,7 @@ ms.locfileid: "11617300"
 ## <a name="overview"></a>Introducción
 
 >[!Note]
-> La aplicación de escritorio Internet Explorer 11 será retirada y dejará de recibir soporte el 15 de junio de 2022 (para ver una lista de lo que está en juego, [consulte las preguntas frecuentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Las mismas aplicaciones y sitios de IE11 que usas hoy pueden abrirse en Microsoft Edge con el modo Internet Explorer. [Más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> La aplicación de escritorio Internet Explorer 11 será retirada y dejará de recibir soporte el 15 de junio de 2022 (para ver una lista de lo que está en juego, [consulte las preguntas frecuentes](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Las mismas aplicaciones y sitios de IE11 que use hoy pueden abrirse en Microsoft Edge mediante el uso del modo Internet Explorer. [Más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Muchos sitios web modernos tienen diseños que no son compatibles con Internet Explorer. Siempre que un usuario de Internet Explorer visite un sitio público incompatible, recibirá un mensaje en el que se indicará que el sitio no es compatible con el explorador y tendrá que cambiar de forma manual a otro explorador.
 

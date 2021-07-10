@@ -3,19 +3,19 @@ title: Configurar la sincronización de Microsoft Edge Enterprise
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 03/08/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Opciones de administrador y usuario para configurar Microsoft Edge para sincronizar favoritos, contraseñas y otros datos del explorador.
-ms.openlocfilehash: 99edc97bd5f4bab7bf421e0d15e512c5f6f76cc0
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 5e3813664d3942e84d38e4ae1b4fd17e41049cda
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617760"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642826"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Configurar la sincronización de Microsoft Edge Enterprise
 

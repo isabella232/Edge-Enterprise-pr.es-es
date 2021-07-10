@@ -3,21 +3,21 @@ title: Microsoft Edge y Búsqueda de Microsoft
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 12/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge y Búsqueda de Microsoft
-ms.openlocfilehash: edb81fe5214bd7da3ae2c16ecd861c2687e35f33
-ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
-ms.translationtype: HT
+ms.openlocfilehash: 0d2057ddf0f0f48938c7ea2fe2a43bd0d26d1ab1
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "11269301"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642586"
 ---
-# Vídeo: Microsoft Edge y Búsqueda de Microsoft
+# <a name="video-microsoft-edge-and-microsoft-search"></a>Vídeo: Microsoft Edge y Búsqueda de Microsoft
 
 En este vídeo, se muestra cómo Microsoft Edge lleva la experiencia de compatibilidad al siguiente nivel con la Búsqueda de Microsoft. Haz clic en la siguiente captura de pantalla para ver el vídeo de Chuck Friedman, CVP del equipo de Microsoft Edge.
 
@@ -26,11 +26,11 @@ En este vídeo, se muestra cómo Microsoft Edge lleva la experiencia de compatib
 > [!NOTE]
 > Este vídeo se grabó en Microsoft Ignite 2019, en la sesión THR2279: Microsoft Edge y Búsqueda de Microsoft: guía completa para usuarios y administradores de TI.
 
-##  <a name="about-the-video"></a>Sobre el vídeo
+## <a name="about-the-video"></a>Sobre el vídeo
 
 La Búsqueda de Microsoft agrega resultados de búsqueda en la Intranet personalizados e integrados para sitios, personas, archivos y más a través de Microsoft Edge en el equipo, Mac y dispositivos móviles. Por último, le mostramos cómo configurar la Búsqueda de Microsoft como parte de Microsoft 365 y cómo implementar Microsoft Edge desde System Center Configuration Manager y Microsoft Intune en todas las plataformas.
 
-##  <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también
 
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Lista de reproducción de Microsoft Edge en YouTube](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)
