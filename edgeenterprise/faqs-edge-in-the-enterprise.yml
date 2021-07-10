@@ -4,24 +4,24 @@ metadata:
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Preguntas más frecuentes sobre la implementación de Microsoft Edge en la empresa
-  ms.openlocfilehash: b9c1af51c8eb1898369bc4e3c52734736db5ebe3
-  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.openlocfilehash: a592a831f78c5d5e92c919112319120e0f0b3faf
+  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "11617260"
+  ms.lasthandoff: 07/09/2021
+  ms.locfileid: "11641796"
 title: Preguntas más frecuentes (preguntas frecuentes) sobre Microsoft Edge en la empresa
 summary: >
   > [!NOTE]
 
-  > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
+  > Este artículo aplica a Microsoft Edge, versión 77 o posterior.
 sections:
 - name: Omitido
   questions:
@@ -30,7 +30,7 @@ sections:
       En la esquina superior derecha de Microsoft Edge, seleccione el icono de puntos suspensivos (**...**) y, a continuación, **seleccione Configuración**. Selecciona **Acerca de Microsoft Edge** para ver la versión de Microsoft Edge.
   - question: ¿Qué hay de Internet Explore 11?
     answer: >
-      La aplicación de escritorio de Internet Explorer 11 se retirará y se retirará de la compatibilidad el 15 de junio de 2022 (para obtener una lista de lo que está en el ámbito, vea las preguntas más [frecuentes](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)). Las mismas aplicaciones y sitios de IE11 que usas hoy pueden abrirse en Microsoft Edge con el modo de Internet Explorer. Obtenga más información [aquí](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
+      La aplicación de escritorio de Internet Explorer 11 se retirará y se retirará de la compatibilidad el 15 de junio de 2022 (para obtener una lista de lo que está en el ámbito, vea las preguntas más [frecuentes](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)). Las mismas aplicaciones y sitios de IE11 que use hoy pueden abrirse en Microsoft Edge mediante el uso del modo Internet Explorer. Obtenga más información [aquí](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
   - question: ¿Microsoft Edge (basado en Chromium) admite los controles ActiveX y BHO como Silverlight o Java?
     answer: >
       No. Microsoft Edge no admite controles ActiveX o objetos de ayuda del explorador (BHO) como Silverlight o Java. Sin embargo, si está ejecutando aplicaciones web que usen controles ActiveX, BHO o modos de documentos heredados en Internet Explorer 11, puede configurarlos para que se ejecuten en modo IE en el nuevo Microsoft Edge. Para obtener más información, consulte [Configurar el modo IE en Microsoft Edge](./edge-ie-mode.md).
@@ -54,7 +54,7 @@ sections:
   - question: ¿Se admiten las preferencias maestras?
     answer: "No, no se admiten las preferencias maestras. \n"
 additionalContent: >-
-  ## <a name="see-also"></a>Consulta también
+  ## <a name="see-also"></a>Consulte también
 
   - [Página de aterrizaje de documentación de Microsoft Edge](./index.yml)
 
