@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/24/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: ef059624339f4b50b92fb187023991ae0526afa7
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: ab599e3995641290ed806acc241b00e808f7fc1b
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617950"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642536"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -29,7 +29,12 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 > [!NOTE]
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para obtener más información, vea [Cambios que afectan a la compatibilidad del sitio que llegan a Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan a la compatibilidad del sitio que llegan a Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+
+## <a name="version-91086464-july-2"></a>Versión 91.0.864.64: 2 de julio
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-91086459-june-24"></a>Versión 91.0.864.59: 24 de junio
 
@@ -59,31 +64,31 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployed
 
 ### <a name="feature-updates"></a>Actualizaciones de características
 
-- **Identificar el tráfico de red que se origina Protección de aplicaciones de Microsoft Defender contenedores en el nivel de proxy.** A partir Microsoft Edge versión 91, hay compatibilidad integrada para etiquetar el tráfico de red procedente de contenedores de Application Guard, lo que permite a las empresas identificarlos y aplicar directivas específicas.
+- **Identifique el tráfico de red que se origina en contenedores de Protección de aplicaciones de Microsoft Defender en el nivel de proxy**. A partir de Microsoft Edge versión 91, hay compatibilidad integrada para etiquetar el tráfico de red procedente de contenedores de Protección de aplicaciones, lo que permite a las empresas identificarlos y aplicar directivas específicas.
 
-- **Opción de compatibilidad para permitir la sincronización de favoritos desde el host al contenedor de protección de aplicaciones perimetrales**. A partir Microsoft Edge versión 91, los usuarios tienen la opción de configurar Application Guard para sincronizar sus favoritos desde el host al contenedor. Esto garantiza que también aparezcan nuevos favoritos en el contenedor.
+- **Opción de compatibilidad para permitir la sincronización de Favoritos desde el host al contenedor de Protección de aplicaciones de Edge**. A partir de Microsoft Edge versión 91, los usuarios tienen la opción de configurar Protección de aplicaciones para sincronizar sus favoritos desde el host al contenedor. Esto garantiza que también aparezcan nuevos favoritos en el contenedor.
 
 - **A partir de Microsoft Edge versión 91, el explorador interrumpirá automáticamente las descargas de tipos que podrían dañar el equipo si dichas descargas se inician sin interacción del usuario y no son compatibles con la comprobación de Reputación de aplicación SmartScreen**. Los usuarios pueden invalidar y seguir descargando haciendo clic con el botón secundario y seleccionando "Mantener" en el elemento de descarga. Enterprise administradores pueden optar por no participar en este comportamiento mediante la configuración de la siguiente directiva:
   - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings:](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) deshabilitar las advertencias basadas en extensión de tipo de archivo de descarga para tipos de archivo especificados en dominios
 
     Para obtener más información, [vea Microsoft Edge Security downloads interruptions](microsoft-edge-security-downloads-interruptions.md).
 
-- **Compatibilidad con API de reconocimiento de voz**. A partir Microsoft Edge versión 91, se agregará compatibilidad con api para comandos de reconocimiento de voz en Google.com y sitios similares. Esta característica se limita a un grupo de usuarios seleccionados al azar que han permitido la experimentación. Estos usuarios proporcionan comentarios al equipo de características.
+- **Compatibilidad con API de reconocimiento de voz**. A partir de Microsoft Edge versión 91, se agregará compatibilidad de API para los comandos de reconocimiento de voz en Google.com y sitios similares. Esta característica se limita a un grupo de usuarios seleccionados al azar que han habilitado la experimentación. Estos usuarios proporcionan comentarios al equipo de características.
 
-- **Personalice el explorador con nuevos colores de tema.** Haz Microsoft Edge con uno de los 14 nuevos colores del tema en la página Configuración -> Apariencia. También puede instalar temas personalizados desde el sitio Microsoft Edge complemento. [Obtén más información](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
+- **Personalice el explorador con nuevos colores de tema**. Personalice Microsoft Edge con uno de los catorce nuevos colores de tema en Configuración -> Apariencia de la página. También puede instalar temas personalizados desde el sitio del complemento de Microsoft Edge. [Obtén más información](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
 
 ### <a name="policy-updates"></a>Actualizaciones de directivas
 
 #### <a name="new-policies"></a>Nuevas directivas
 
-Se agregaron seis directivas nuevas. Descargue las Plantillas administrativas actualizadas desde la [página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se agregaron las siguientes directivas nuevas:
+Se han agregado seis directivas nuevas. Descargue las Plantillas administrativas actualizadas desde la [página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se agregaron las siguientes directivas nuevas:
 
-- [ApplicationGuardTrafficIdentificationEnabled:](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) identificación de tráfico de Application Guard
+- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled): identificación del tráfico de Protección de aplicaciones
 - [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports): puertos de red permitidos explícitamente
-- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings): permitir la importación de la configuración de la página de inicio
-- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled): permite a los usuarios snip un problema de matemáticas y obtener la solución con una explicación paso a paso en Microsoft Edge
-- [NewTabPageContentEnabled:](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) permitir Microsoft News contenido en la nueva página de pestaña
-- [NewTabPageQuickLinksEnabled:](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) permitir vínculos rápidos en la nueva página de pestañas
+- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings): permitir la importación de la configuración de página de inicio
+- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled): permitir a los usuarios hacer un recorte de un problema matemático y obtener la solución con una explicación paso a paso en Microsoft Edge
+- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled): permitir contenido de Microsoft News en la página de nueva pestaña
+- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled): permitir vínculos rápidos en la página de nueva pestaña
 
 #### <a name="obsoleted-policy"></a>Directiva obsoleta
 
@@ -133,10 +138,10 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployed
 
 -    **El inicio de sesión único (SSO) ya está disponible para las cuentas de Azure Active Directory (Azure AD) y las cuentas de Microsoft (MSA) en macOS.** Un usuario que haya iniciado sesión en Microsoft Edge en macOS ahora tendrá la sesión iniciada de manera automática en los sitios web que estén configurados para permitir el inicio de sesión único con cuentas profesionales y de Microsoft (por ejemplo, bing.com, office.com, msn.com y outlook.com).
 
-- **Pantalla completa.** A partir Microsoft Edge versión 90, hemos bloqueado la configuración de impresión de la interfaz de usuario para permitir solo las impresoras configuradas y las opciones "Imprimir en PDF". También hemos realizado mejoras en el modo de pantalla completa de una sola aplicación de acceso asignado para restringir el inicio de otras aplicaciones desde el explorador. Para obtener más información acerca de las características del modo quiosco, vaya [aquí](/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features).
+- **Pantalla completa.** A partir de Microsoft Edge versión 90, hemos bloqueado la configuración de impresión de la interfaz de usuario para permitir solo las impresoras configuradas y las opciones "Imprimir en PDF". También hemos realizado mejoras en la pantalla completa de una sola aplicación de acceso asignado para restringir el inicio de otras aplicaciones desde el explorador. Para obtener más información acerca de las características del modo quiosco, vaya [aquí](/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features).
 
-- **Interrumpir descargas** A partir de Microsoft Edge versión 91, el explorador interrumpirá automáticamente las descargas de tipos que podrían dañar el equipo si dichas descargas se inician sin interacción del usuario y no son compatibles con la comprobación de reputación de la aplicación SmartScreen. Los usuarios pueden invalidar y seguir descargando haciendo clic con el botón secundario y seleccionando "Mantener" en el elemento de descarga.
-Enterprise administradores pueden optar por no participar en este comportamiento una de estas dos directivas:
+- **Interrumpir descargas** A partir de Microsoft Edge versión 91, el explorador interrumpirá automáticamente las descargas de tipos que podrían dañar el equipo si dichas descargas se inician sin interacción del usuario y no son compatibles con la comprobación de reputación de la aplicación SmartScreen. Los usuarios pueden invalidar y continuar con la descarga haciendo clic con el botón derecho y eligiendo "Mantener" en el elemento de descarga.
+Los administradores de empresa pueden optar por no participar en este comportamiento con una de estas dos directivas:
 - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings:](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) deshabilitar las advertencias basadas en extensiones de tipo de archivo de descarga para tipos de archivo especificados en dominios Para obtener más información, vea [Interrupciones de descargas de Seguridad de Microsoft Edge](/deployedge/microsoft-edge-security-downloads-interruptions)
 
 - **Impresión**:
@@ -161,7 +166,7 @@ Enterprise administradores pueden optar por no participar en este comportamiento
 
 ## <a name="new-policies"></a>Nuevas directivas
 
-Se agregaron ocho directivas nuevas. Descargue las Plantillas administrativas actualizadas desde la [página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se agregaron las siguientes directivas nuevas:
+Se han agregado ocho directivas nuevas. Descargue las Plantillas administrativas actualizadas desde la [página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se agregaron las siguientes directivas nuevas:
 -   [ApplicationGuardFavoritesSyncEnabled](/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled): sincronización de favoritos de Protección de aplicaciones habilitada
 - [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) Identificación de tráfico de Application Guard
 - [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) Puertos de red permitidos explícitamente
