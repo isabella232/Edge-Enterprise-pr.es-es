@@ -1,21 +1,21 @@
 ---
 title: Monitor de contraseñas habilitado automáticamente para usuarios
 ms.author: supalsul
-author: dan-wesley
+author: AndreLBarr
 manager: tulasim
-ms.date: 06/29/2021
+ms.date: 07/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Monitor de contraseñas habilitado automáticamente para usuarios
-ms.openlocfilehash: 76fc4f0c0ce4bb59ba6b2d4d8a82b61592585918
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: bd1fe390b972c66cd9b4c20ab3a9fabde76c7e03
+ms.sourcegitcommit: 65530c0bad3097a510f507503eae9c5c67db47a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643096"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643887"
 ---
 # <a name="password-monitor-auto-enabled-for-users"></a>Monitor de contraseñas habilitado automáticamente para usuarios
 
@@ -31,12 +31,6 @@ El Monitor de contraseñas ayuda a los usuarios de Microsoft Edge a proteger sus
 ### <a name="benefits"></a>Ventajas
 
 Debido a la frecuencia y el ámbito de estos ataques en línea, tener este tipo de protección se ha vuelto algo necesario para todos los usuarios. Microsoft Edge tiene la capacidad integrada de comprobar de forma segura las contraseñas guardadas de los usuarios frente a contraseñas que se sabe que están en peligro y les avisa si se encuentra una coincidencia.  
-
-### <a name="availability"></a>Disponibilidad
-
-El Monitor de contraseñas está disponible en el Canal estable, versión 88, a partir del 21/1. El lanzamiento será gradual y podrían pasar algunas semanas antes de que vea el siguiente mensaje y control en la página **Configuración** > **Perfil** > **Contraseña**.
-
-:::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="Opción para habilitar el Monitor de contraseñas":::
 
 ## <a name="configure-group-policy-for-password-monitor"></a>Configurar la directiva de grupo para el Monitor de contraseñas
 

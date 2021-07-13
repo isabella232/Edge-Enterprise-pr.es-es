@@ -3,30 +3,41 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: 1115c8d7822fef7e3784a465d5d4ddfd7b6bd6b1
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d5e4a4807a12cfd50cd0efaeab672361c68a1508
+ms.sourcegitcommit: e3a30351b02226aa042153f17636d64a12c4518b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643166"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643946"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
 Estas notas de versión proporcionan información sobre las nuevas características y las actualizaciones no relacionadas con la seguridad que se incluyen en el canal beta de Microsoft Edge. Las versiones archivadas de estas notas de la versión están [aquí](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> La plataforma web de Microsoft Edge evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para obtener más información, consulte [Cambios que se van a producir en Microsoft Edge que afectan a la compatibilidad de los sitios](/microsoft-edge/web-platform/site-impacting-changes).
+> La plataforma web de Microsoft Edge evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan a la compatibilidad del sitio que llegan a Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-92090245-july-12"></a>Versión 92.0.902.45: 12 de julio
+
+Se han corregido varios errores y problemas de rendimiento.
+
+## <a name="version-92090240-july-6"></a>Versión 92.0.902.40: 6 de julio
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-92090222-june-21"></a>Versión 92.0.902.22: 21 de junio
 
 ### <a name="feature-updates"></a>Actualizaciones de características
+
+- **Búsqueda de idioma natural para el historial del explorador en la barra de direcciones**. Encontrar el artículo o sitio web que está buscando ahora es más fácil gracias a la búsqueda de idioma natural directamente desde la barra de direcciones. Puedes encontrar resultados de búsqueda basados en el contenido/descripción/sincronización de la página (como "receta de pastel de la semana pasada") además de solo títulos/coincidencias de palabras clave url.
+Tenga en cuenta: se trata de una implementación de características controladas. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
 
 - **Los usuarios pueden obtener fácilmente el modo de Internet Explorer en Microsoft Edge**. A partir de Microsoft Edge versión 92, los usuarios pueden volver a cargar un sitio en el modo de Internet Explorer en Microsoft Edge en lugar de confiar en la aplicación independiente de IE 11 mientras esperan a que se configure un sitio en la lista de sitios del Modo de empresa. Se pedirá a los usuarios que agreguen el sitio a su lista de sitios locales, de modo que navegar a la misma página en Microsoft Edge se representará automáticamente en el modo IE durante los próximos 30 días. Puede usar la directiva *[InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)* para configurar esta experiencia y permitir el acceso a los puntos de entrada del modo IE, así como la capacidad de agregar sitios a la lista de sitios locales. Puede usar la directiva *[InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)* para ajustar el número de días para mantener los sitios en la lista de sitios locales.
 Tenga en cuenta que es necesario KB5003698 o posterior para Windows 10, versión 1909; o es necesario KB5003690 o posterior para Windows 10, versión 2004, Windows 10, versión 20H2 o Windows 10, versión 21H1 para la experiencia de un extremo a otro.
@@ -34,19 +45,19 @@ Tenga en cuenta que es necesario KB5003698 o posterior para Windows 10, versión
 - **Los archivos MHTML se abrirán de forma predeterminada en el modo de Internet Explorer**. A partir de Microsoft Edge versión 92 estable, los tipos de archivo MHTML se abrirán automáticamente en modo de Internet Explorer en Microsoft Edge en lugar de en la aplicación de Internet Explorer (IE11). Esto se observa con más frecuencia al intentar ver los correos electrónicos de Outlook en un explorador. Este cambio solo se producirá si IE11 es el controlador predeterminado para este tipo de archivo. Si prefiere cambiar esto, puede hacerlo antes de instalar la actualización de la versión 92 estable con [esta guía](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
 - **Los instrumentos de pago ahora se sincronizan entre dispositivos**. A partir de Microsoft Edge versión 92, tiene la opción de sincronizar la información de pago entre los dispositivos en los que haya iniciado sesión.
-Tenga en cuenta que se trata de un lanzamiento de características controlado y actualmente estamos al 50 %. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
+Tenga en cuenta: se trata de una implementación de características controladas. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
 
 - **La advertencia "Deshabilitar las extensiones del modo de desarrollador" puede descartarse permanentemente**. A partir de Microsoft Edge versión 92, puede deshabilitar la advertencia "Deshabilitar las extensiones del modo de desarrollador" haciendo clic en la opción "No volver a mostrar".
-Tenga en cuenta que se trata de un lanzamiento de características controlado y actualmente estamos al 25 %. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
+Tenga en cuenta: se trata de una implementación de características controladas. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
 
 - **Administre las extensiones desde la barra de herramientas**. El nuevo menú de extensiones de la barra de herramientas le permite ocultar y anclar extensiones fácilmente. Los vínculos rápidos para administrar extensiones y buscar nuevas le permitirán encontrar fácilmente nuevas extensiones y administrar las existentes.
-Tenga en cuenta que se trata de un lanzamiento de características controlado y actualmente estamos al 25 %. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
+Tenga en cuenta: se trata de una implementación de características controladas. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
 
 - **HTTPS automático**. Los usuarios tendrán la opción de actualizar la navegación de HTTP a HTTPS en dominios que probablemente admitan este protocolo más seguro. Esta compatibilidad también se puede configurar para intentar la entrega a través de HTTPS para todos los dominios.
 Tenga en cuenta que estamos experimentando con esta característica y este comportamiento no se verá si ha optado por no participar en los experimentos.
 
 - **Mejoras en la representación de fuentes**. Se han realizado mejoras en la representación del texto para mejorar la claridad y reducir el desenfoque.
-Tenga en cuenta que se trata de un lanzamiento de características controlado y actualmente estamos al 25 %. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
+Tenga en cuenta: se trata de una implementación de características controladas. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
 
 ### <a name="policy-updates"></a>Actualizaciones de directiva
 
@@ -66,7 +77,6 @@ Se han agregado ocho directivas nuevas. Descargue las Plantillas administrativas
 #### <a name="obsoleted-policy"></a>Directiva obsoleta
 
 - [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Permite certificados firmados usando SHA-1 cuando sean emitidos por anclajes de veracidad locales.
-
 
 ## <a name="version-9209029-june-8"></a>Versión 92.0.902.9: 8 de junio
 
