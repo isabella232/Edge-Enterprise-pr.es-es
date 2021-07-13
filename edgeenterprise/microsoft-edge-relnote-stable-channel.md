@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: ab599e3995641290ed806acc241b00e808f7fc1b
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: f82fdbdddb45951fd9e1eca44f90270bc06c32d1
+ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642536"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643775"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -31,6 +31,9 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 >
 > Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan a la compatibilidad del sitio que llegan a Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
+## <a name="version-91086467-july-8"></a>Versión 91.0.864.67: 8 de julio
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-91086464-july-2"></a>Versión 91.0.864.64: 2 de julio
 
