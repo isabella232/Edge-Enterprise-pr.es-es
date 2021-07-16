@@ -33,10 +33,10 @@ Hay situaciones en las que puedes querer restablecer los datos de Microsoft Edge
 
 ## <a name="back-up-your-favorites"></a>Hacer una copia de seguridad de tus favoritos
 
-Antes de restablecer, te recomendamos que hagas una copia de seguridad de tus favoritos. Sigue estos pasos para realizar una copia de seguridad de tus favoritos.
+Antes de restablecer, te recomendamos que hagas una copia de seguridad de tus favoritos. Siga estos pasos para realizar una copia de seguridad de sus favoritos.
 
-1. En la esquina superior derecha de Microsoft Edge, selecciona **Configuración y más > Favoritos > Más opciones > Exportar favoritos**.
-2. Elige el archivo en el que quieres guardar los favoritos. Puedes escribir tu propio nombre de archivo o usar el nombre que Microsoft Edge proporciona de forma predeterminada, "favoritos_mes_día_año.html" como nombre de archivo. Por ejemplo, "favoritos_12_17_20.html". Si necesitas restaurar tus favoritos más adelante, puedes hacerlo desde ese archivo.
+1. En la esquina superior derecha de Microsoft Edge, seleccione **Configuración y más > Favoritos > Más opciones > Exportar favoritos**.
+2. Elija el archivo en el que quiere guardar los favoritos. Puedes escribir tu propio nombre de archivo o usar el nombre que Microsoft Edge proporciona de forma predeterminada, "favoritos_mes_día_año.html" como nombre de archivo. Por ejemplo, "favoritos_12_17_20.html". Si necesitas restaurar tus favoritos más adelante, puedes hacerlo desde ese archivo.
 3. Haz clic en **Guardar**.
 
 ## <a name="perform-a-reset-to-fix-a-synchronization-problem"></a>Realizar un restablecimiento para corregir un problema de sincronización
@@ -45,15 +45,15 @@ Si Microsoft Edge informa de que no puede sincronizar los datos y sugiere restab
 
 Sigue los pasos siguientes para restablecer.
 
-1. En primer lugar, asegúrate de que has cerrado la sesión de Microsoft Edge en todos los dispositivos, incluidos los dispositivos móviles, excepto el dispositivo en el que estás realizando el restablecimiento. Para cerrar la sesión de Microsoft Edge, en la esquina superior derecha, selecciona **Configuración y más > Configuración > Cerrar sesión**. Al cerrar sesión, no selecciones la opción para borrar los favoritos, la configuración, etc. de tu dispositivo local.
-2. Después de cerrar la sesión de todos los demás dispositivos, abre Microsoft Edge en el escritorio. En la esquina superior derecha de Microsoft Edge, **Selecciona Configuración y más > Sincronizar > Restablecer sincronización**. En el cuadro de diálogo que aparece, elige reanudar la sincronización después de restablecer los datos y selecciona **Restablecer**.
+1. En primer lugar, asegúrate de que has cerrado la sesión de Microsoft Edge en todos los dispositivos, incluidos los dispositivos móviles, excepto el dispositivo en el que estás realizando el restablecimiento. Para cerrar la sesión de Microsoft Edge, en la esquina superior derecha, seleccione **Configuración y más > Configuración > Cerrar sesión**. Al cerrar sesión, no seleccione la opción para borrar los favoritos, la configuración, etc. de su dispositivo local.
+2. Después de cerrar la sesión de todos los demás dispositivos, abra Microsoft Edge en el escritorio. En la esquina superior derecha de Microsoft Edge, seleccione **Configuración y más > Sincronizar > Restablecer sincronización**. En el cuadro de diálogo que aparece, elija reanudar la sincronización después de restablecer los datos y seleccione **Restablecer**.
 
 ## <a name="perform-a-reset-to-remove-your-data-from-microsofts-cloud"></a>Realizar un restablecimiento para quitar los datos de la nube de Microsoft
 
 Si quieres quitar los datos de la nube de Microsoft, sigue estos pasos para restablecer.
 
-1. Detén la sincronización en dispositivos excepto el dispositivo en el que estás realizando el restablecimiento.  En la esquina superior derecha de Microsoft Edge, selecciona **Configuración y más > Configuración > Sincronización > Desactivar sincronización**.  
-2. Después de detener la sincronización, en la esquina superior derecha de Microsoft Edge, selecciona **Configuración y más > Sincronizar > Restablecer sincronización**. En el cuadro de diálogo que aparece, **no** elijas reanudar la sincronización después de restablecer los datos. Selecciona **Restablecer**.
+1. Detenga la sincronización en dispositivos excepto el dispositivo en el que está realizando el restablecimiento.  En la esquina superior derecha de Microsoft Edge, seleccione **Configuración y más > Configuración > Sincronización > Desactivar sincronización**.  
+2. Después de detener la sincronización, en la esquina superior derecha de Microsoft Edge, seleccione **Configuración y más > Sincronizar > Restablecer sincronización**. En el cuadro de diálogo que aparece, **no** elija reanudar la sincronización después de restablecer los datos. Seleccione **Restablecer**.
 
 ## <a name="what-to-expect-during-and-after-a-data-reset"></a>Qué esperar durante y después de restablecer datos
 
