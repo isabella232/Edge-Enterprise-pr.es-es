@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 07/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: f82fdbdddb45951fd9e1eca44f90270bc06c32d1
-ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
+ms.openlocfilehash: 02d4f2fc96215902000d30f37b589ea126496e47
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "11643775"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676067"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -30,6 +30,65 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan la compatibilidad del sitio próximamente en Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-92090255-july-22"></a>Versión 92.0.902.55: 22 de julio
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployedge/microsoft-edge-relnotes-security#july-22-2021).
+
+### <a name="feature-updates"></a>Actualizaciones de características
+
+**Los usuarios pueden obtener fácilmente el modo de Internet Explorer en Microsoft Edge**. A partir de Microsoft Edge versión 92, los usuarios pueden volver a cargar un sitio en el modo de Internet Explorer en Microsoft Edge en lugar de confiar en la aplicación independiente de IE 11 mientras esperan a que se configure un sitio en la lista de sitios del Modo de empresa. Se pedirá a los usuarios que agreguen el sitio a su lista de sitios locales, de modo que navegar a la misma página en Microsoft Edge se representará automáticamente en el modo IE durante los próximos 30 días. Puede usar la directiva [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) para configurar esta experiencia y permitir el acceso a los puntos de entrada del modo IE, así como la capacidad de agregar sitios a la lista de sitios locales. Puede usar la directiva [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationday) para ajustar el número de días para mantener los sitios en la lista de sitios locales. Tenga en cuenta que es necesario KB5003698 o posterior para Windows 10, versión 1909; o es necesario KB5003690 o posterior para Windows 10, versión 2004, Windows 10, versión 20H2 o Windows 10, versión 21H1 para la experiencia de un extremo a otro.
+
+**Los archivos MHTML se abrirán de forma predeterminada en el modo de Internet Explorer**. A partir de Microsoft Edge versión 92 estable, los tipos de archivo MHTML se abrirán automáticamente en modo de Internet Explorer en Microsoft Edge en lugar de en la aplicación de Internet Explorer (IE11). Esto se observa con más frecuencia al intentar ver los correos electrónicos de Outlook en un explorador. Este cambio solo se producirá si IE11 es el controlador predeterminado para este tipo de archivo. Si prefiere cambiar esto, puede hacerlo antes de instalar la actualización de la versión 92 estable con [esta guía](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
+
+**La advertencia "Deshabilitar las extensiones del modo de desarrollador" puede descartarse permanentemente**. A partir de Microsoft Edge versión 92, puede deshabilitar la advertencia "Deshabilitar las extensiones del modo de desarrollador" haciendo clic en la opción "No volver a mostrar".
+
+**Administre las extensiones desde la barra de herramientas**. El nuevo menú de extensiones de la barra de herramientas le permite ocultar y anclar extensiones fácilmente. Los vínculos rápidos para administrar extensiones y buscar nuevas le permitirán encontrar fácilmente nuevas extensiones y administrar las existentes.
+
+**El valor predeterminado de reproducción automática se establecerá en Limitado**.  Para ayudarle a concentrase en línea, hemos cambiado el valor predeterminado para la reproducción automática de medios de Limitar a Permitir, empezando por Microsoft Edge versión 92.
+
+**Los instrumentos de pago ahora se sincronizan entre dispositivos**. A partir de Microsoft Edge versión 92, tiene la opción de sincronizar la información de pago entre los dispositivos en los que haya iniciado sesión. Tenga en cuenta que se trata de un lanzamiento de características controlado. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
+Actualmente, esta característica solo está disponible en Estados Unidos y solo para usuarios de MSA (no para AAD)
+
+**Mejoras en la representación de fuentes**. Se han realizado mejoras en la representación del texto para mejorar la claridad y reducir el desenfoque. Tenga en cuenta que se trata de un lanzamiento de características controlado. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
+
+**Las características del botón de la barra de herramientas, como Favoritos y Colecciones, recordarán la elección del usuario para anclarlas al lado de la ventana**. Ahora habilitado de forma predeterminada, si el usuario decide anclar un botón de la barra de herramientas, siempre se abrirá en estado anclado hasta que decida desanclar.
+
+**Los usuarios ahora pueden administrar la opción "Permitir el inicio de sesión único para sitios de trabajo o escuela con este perfil" a través de la directiva de grupo**.  "Permitir el inicio de sesión único para sitios profesionales o educativos con este perfil" permite que los perfiles que no son de AAD puedan usar el inicio de sesión único para sitios profesionales o educativos con credenciales profesionales o educativas presentes en el equipo. Esta opción se muestra para los usuarios finales como un botón de alternancia en Configuración -> Perfiles -> Preferencias de perfil solo para perfiles que no son de AAD.  Puede usar la directiva [AADWebSiteSSOUsingThisProfileEnabled](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) para configurar el comportamiento.  
+
+**Estado de la contraseña** Es importante usar contraseñas seguras y únicas en diferentes cuentas para mantener la seguridad en línea. Sin embargo, esto es más fácil en la teoría que en la práctica y la mayoría de los usuarios muestran hábitos de contraseña deficientes, como usar contraseñas débiles que son fáciles de adivinar, o reutilizar las mismas contraseñas seguras entre cuentas.
+
+Con esta última versión de Microsoft Edge, la tarea de usar contraseñas seguras y únicas se vuelve un poco más fácil. Microsoft Edge le indicará si las contraseñas guardadas son lo suficientemente seguras y si las ha usado en varios sitios, lo que le ayudará a mantenerse más seguro en línea. Puede encontrar la información de estado de la contraseña en la lista de contraseñas guardadas en la página edge://settings/passwords.
+  
+**Se agregó privacidad para las contraseñas guardadas** Si usa un dispositivo que comparte con otros usuarios o ha dejado el equipo desbloqueado por cualquier motivo, ahora puede realizar una segunda comprobación con la contraseña del dispositivo para evitar que otros usuarios obtengan acceso a las contraseñas de su sitio web. ¡Es muy simple!
+
+**Extensión de Outlook**.  Manténgase al corriente de la bandeja Outlook de Microsoft, el calendario, las tareas y mucho más sin tener que abrir una nueva ventana del explorador.  Puede obtener la nueva extensión de Outlook aquí [Microsoft Outlook: complementos de Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
+
+### <a name="new-policies"></a>Nuevas directivas
+
+- Inicio de sesión único [AADWebSiteSSOUsingThisProfileEnabled](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) para sitios de trabajo o escuela con este perfil habilitado
+- [AutomaticHttpsDefault](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#automatichttpsdefault) Configurar HTTPS automático
+- [HeadlessModeEnabled](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#headlessmodeenabled) Controlar el uso del modo de equipo sin periféricos
+- [InsecurePrivateNetworkRequestsAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) Especifica si se permite que los sitios web inseguros realicen solicitudes a puntos de conexión de red más privados.
+- [InsecurePrivateNetworkRequestsAllowedForUrls](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) Permitir que los sitios enumerados realicen solicitudes a puntos de conexión de red más privados desde contextos inseguros
+- [InternetExplorerIntegrationLocalSiteListExpirationDays](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) Especificar el número de días que un sitio permanece en la lista de sitios del modo IE local
+- [InternetExplorerIntegrationReloadInIEModeAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Permitir que los sitios no configurados se vuelvan a cargar en el modo de Internet Explorer
+- [SharedArrayBufferUnrestrictedAccessAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) Especificar si SharedArrayBuffers se puede usar en un contexto no aislado entre orígenes
+
+### <a name="deprecated-policy"></a>Directivas en desuso
+
+- [InternetExplorerIntegrationTestingAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Permitir pruebas de modo de Internet Explorer
+
+### <a name="obsoleted-policy"></a>Directiva obsoleta
+
+- [EnableSha1ForLocalAnchors](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Permite certificados firmados usando SHA-1 cuando sean emitidos por anclajes de veracidad locales.
+
+## <a name="version-91086471-july-19"></a>Versión 91.0.864.71: 19 de julio
+
+> [!Important]
+>Esta actualización contiene [CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563) que el equipo de Chromium ha notificado que tiene una vulnerabilidad que puede afectar a los usuarios normales. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployedge/microsoft-edge-relnotes-security#july-19-2021).
 
 ## <a name="version-91086467-july-8"></a>Versión 91.0.864.67: 8 de julio
 
