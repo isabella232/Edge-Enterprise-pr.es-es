@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Obtenga información sobre las características del modo de pantalla completa y sobre cómo configurar las opciones del modo de pantalla completa de Microsoft Edge.
-ms.openlocfilehash: 38d94a5dfac15f810a463e43ad2fe44d51ee66c7
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 3483c402d9cd7e0d4a7542bcda98672523c0dfb6
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642196"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676127"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Configurar el modo de pantalla completa en Microsoft Edge
 
@@ -99,7 +99,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: cambia el tiempo (en minutos) de la última actividad de usuario antes de que el modo de pantalla completa de Microsoft Edge restablezca la sesión del usuario. Reemplace "valor" en el siguiente ejemplo por la cantidad de minutos.
+- **--kiosk-idle-timeout-minutes=**: cambie el tiempo (en minutos Microsoft Edge) de la última actividad del usuario antes de que el modo de pantalla completa restablezca la sesión del usuario cerrando el explorador. Nota: esta marca no se reiniciará Microsoft Edge después de cerrarla. Se requiere una tecnología independiente, como Acceso asignado o Inicio del Shell para reiniciar automáticamente Edge después del tiempo de inactividad. Reemplace "valor" en el siguiente ejemplo por la cantidad de minutos.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -160,7 +160,9 @@ Puede administrar el modo pantalla completa de Microsoft Edge asignado a la apli
 
 ### <a name="multi-app-kiosk"></a>Pantalla completa de varias aplicaciones
 
-Microsoft Edge se puede ejecutar con [acceso asignado a varias aplicaciones](/windows/configuration/lock-down-windows-10-to-specific-apps) en Windows 10, que es el equivalente del tipo de pantalla completa de "Exploración normal" de Microsoft Edge (versión anterior). Para configurar Microsoft Edge con acceso asignado de varias aplicaciones, sigue las instrucciones sobre cómo configurar una [pantalla completa de varias aplicaciones.](/windows/configuration/lock-down-windows-10-to-specific-apps) (El AUMID para el canal estable de Microsoft Edge es **MSEdge**).
+Microsoft Edge se puede ejecutar con [acceso asignado a varias aplicaciones](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) en Windows 10, que es el equivalente del tipo de pantalla completa de "Exploración normal" de Microsoft Edge (versión anterior). Para configurar Microsoft Edge con acceso asignado de varias aplicaciones, sigue las instrucciones sobre cómo configurar una [pantalla completa de varias aplicaciones.](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) (El AUMID para el canal estable Microsoft Edge es **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
+
+Al usar Microsoft Edge con acceso asignado de varias aplicaciones, puede configurar la pantalla completa de Microsoft Edge para usar las [directivas de explorador de Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) para configurar la experiencia de exploración para satisfacer sus requisitos únicos.
 
 ### <a name="configure-using-windows-settings"></a>Usar la configuración de Windows
 

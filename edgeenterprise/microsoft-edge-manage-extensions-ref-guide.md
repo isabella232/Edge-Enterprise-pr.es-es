@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Guía de referencia detallada para configurar extensiones de Microsoft Edge mediante la directiva ExtensionSettings.
-ms.openlocfilehash: 3acd798be6b2b56761991d8adaf014ae614a3fd4
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641326"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676107"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Guía detallada de la directiva ExtensionSettings
 
@@ -51,6 +51,7 @@ Esta directiva puede controlar configuraciones, como la dirección URL de actual
 | **update_url** | Only applies to force_installed and normal_installed. Especifica de dónde Microsoft Edge debe descargar una extensión. Si la extensión se hospeda en el sitio web de complementos de Microsoft Edge, use esta ubicación: `https://edge.microsoft.com/extensionwebstorebase/v1/crx`.<br>Microsoft Edge usa la dirección URL que especifique para la instalación inicial de la extensión. Para las actualizaciones de extensiones posteriores, Microsoft Edge usa la dirección URL en el manifiesto de la extensión.   |
 | **runtime_allowed_hosts**| Permite que las extensiones interactúen con sitios web especificados, incluso si también se definen en runtime_blocked_hosts. Puede especificar hasta 100 entradas. Se descartan las entradas adicionales.<br>El formato del patrón de host es similar a [patrones de coincidencia](/microsoft-edge/extensions-chromium/enterprise/match-patterns) excepto en que no puede definir la ruta de acceso. Por ejemplo:<br>- *://*.example.com<br>- *://example.*: se admiten los caracteres comodín eTLD     |
 | **runtime_blocked_hosts**| Impedir que las extensiones interactúen con los sitios web especificados o los modifiquen. Las modificaciones incluyen el bloqueo de la inserción de JavaScript, el acceso a cookies y las modificaciones de solicitudes web.<br>Puede especificar hasta 100 entradas. Se descartan las entradas adicionales.<br>El formato del patrón de host es similar a los patrones de coincidencia, salvo que no se puede definir la ruta de acceso. Por ejemplo:<br>- *://*.example.com<br>- *://example.*: se admiten los caracteres comodín eTLD   |
+| **override_update_url**| Disponible desde edge 93<br>Si se establece en , Edge usa la dirección URL de actualización especificada en la directiva ExtensionSettings o en la directiva `true` ExtensionInstallForcelist, para actualizaciones de extensión posteriores.<br>Si no se establece o se establece en , Edge usa la dirección URL especificada en el manifiesto de la extensión `false` para actualizaciones.|
 
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Configuración mediante una cadena JSON en el Editor de directivas de grupo de Windows

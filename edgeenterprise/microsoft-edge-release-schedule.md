@@ -3,19 +3,19 @@ title: Programa de publicación de versiones de Microsoft Edge
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 07/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Programa de publicación de versiones de Microsoft Edge
-ms.openlocfilehash: e4c9b44101a2b3c28f2c889163b79d4964257ac8
-ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
+ms.openlocfilehash: 86bdc63be6ebdf182525186efd23ca23def14925
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "11643785"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675937"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Programa de publicación de versiones de Microsoft Edge
 
@@ -26,7 +26,7 @@ Este artículo describe la frecuencia de lanzamiento y la programación de lanza
 Microsoft proporciona cuatro opciones, denominadas canales, para administrar la frecuencia con la que Microsoft Edge se actualiza con las nuevas características. El equipo de Microsoft Edge quiere extender las actualizaciones públicas a los canales Beta y Estable cada seis semanas. Para más información sobre nuestros canales, su ciclo de lanzamiento y los niveles de soporte técnico, vea la [Información general de los canales](./microsoft-edge-channels.md#channel-overview).
 
 > [!NOTE]
-> Empezando por la versión del canal estable 94, Microsoft Edge está cambiando a una cadencia de un ciclo de 4 semanas para versiones principales. Pero reconocemos que los clientes empresariales que administran entornos complejos necesitan más tiempo para planear y probar las actualizaciones de Microsoft Edge. Para ayudar a nuestros clientes empresariales que necesitan una escala de tiempo ampliada para administrar las actualizaciones, Microsoft Edge ofrecerá una opción de **Estabilidad extendida alineada con un ciclo de publicación de versiones principales de 8 semanas**; esta opción solo estará disponible para los clientes con entornos administrados.
+> Empezando por la versión del canal estable 94, Microsoft Edge está cambiando a una cadencia de un ciclo de 4 semanas para versiones principales. Pero reconocemos que los clientes empresariales que administran entornos complejos necesitan más tiempo para planear y probar las actualizaciones de Microsoft Edge. Para ayudar a nuestros clientes empresariales que necesitan una escala de tiempo ampliada para administrar las actualizaciones, Microsoft Edge ofrecerá una opción de **Estabilidad extendida alineada con un ciclo de publicación de versiones principales de 8 semanas**; esta opción solo estará disponible para los clientes con entornos administrados. [Consulte nuestra entrada del blog de anuncios](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
 
 ## <a name="release-schedule"></a>Programa de lanzamiento
 
@@ -45,7 +45,7 @@ En la tabla siguiente solo se realiza un seguimiento de las versiones principale
 | 89 | Publicado<br>Versión | 03-Feb-2021<br>[89.0.774.18](/deployedge/microsoft-edge-relnote-beta-channel#version-89077423-february-8) | 04-mar.-2021<br>[89.0.774.45](/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-4) |
 | **90** | Publicado<br>Versión | 16-mar-2021<br>[90.0.818.8](/deployedge/microsoft-edge-relnote-beta-channel#version-9008188-march-16) | **15-Abr-2021**<BR>**[90.0.818.39](/deployedge/microsoft-edge-relnote-stable-channel#version-90081839-april-15)** |
 | **91** | Publicado<br>Versión | **30-Abr-2021**<br>[91.0.864.11](/deployedge/microsoft-edge-relnote-beta-channel#version-91086411-april-30) | **27-May-2021**<BR>**[91.0.864.37](/deployedge/microsoft-edge-relnote-stable-channel#version-91086437-may-27)** |
-| 92 | Publicado<br>Versión | 08-jun-2021<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | Semana del 22-jul-2021 |
+| 92 | Publicado<br>Versión | 08-jun-2021<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | Publicado |
 | 93 | Versión de destino | Semana del 03-ago-2021 | Semana del 02-sep-2021 |
 | 94 | Versión de destino | Semana del 01-sep-2021 | Semana del 23-sep-2021 |
 | 95 | Versión de destino | Semana del 28-sep-2021 | Semana del 21-oct-2021 |

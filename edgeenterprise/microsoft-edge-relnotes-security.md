@@ -3,23 +3,37 @@ title: Notas de la versión para las actualizaciones de seguridad de Microsoft E
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 07/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
-ms.openlocfilehash: 27ac597b4570fd92b6938691fbf08b0bdd20ca43
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e88d0a3726eca4acca519e51ff2d552240ee7ef8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641346"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676097"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
 
 Estas notas de la versión proporcionan información sobre las correcciones de seguridad que se incluyen en las actualizaciones del canal estable de Microsoft Edge.
+
+## <a name="july-22-2021"></a>22 de julio de 2021
+
+Microsoft ha lanzado el último canal estable de  **Microsoft Edge (versión 92.0.902.55),**, que incorpora las últimas actualizaciones de seguridad del proyecto Chromium. Para obtener más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide)
+
+Esta actualización contiene la siguiente actualización específica de Microsoft Edge:
+
+- [CVE-2021-36928](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36928)
+- [CVE-2021-36929](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36929)
+- [CVE-2021-36931](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36931)
+
+## <a name="july-19-2021"></a>19 de julio de 2021
+
+Microsoft ha publicado el último **Canal estable de Microsoft Edge (versión 91.0.864.71)**, que incorpora las últimas actualizaciones de seguridad del proyecto Chromium. Esta actualización contiene [CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563) que el equipo de Chromium ha notificado que tiene una vulnerabilidad que puede afectar a los usuarios normales. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
 
 ## <a name="june-24-2021"></a>24 de junio de 2021
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Obtenga información sobre cómo empaquetar y probar internamente extensiones de Microsoft Edge en la empresa.
-ms.openlocfilehash: aef4438212829006e39572fa938462f13721c580
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 8b0e9ed346848f7ee9330c51f6a1c9274df89371
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642876"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676117"
 ---
 # <a name="self-host-microsoft-edge-extensions"></a>Extensiones de Microsoft Edge de prueba interna
 
@@ -82,7 +82,7 @@ Después de cambiar y probar la extensión actualizada, puede publicarla. Siga e
    > [!IMPORTANT]
    > Use el mismo archivo PEM que se generó y guardó la primera vez que se creó el archivo CRX. Si no usa el mismo archivo PEM, el identificador de aplicación de la extensión cambiará y la actualización se tratará como una nueva extensión.
 
-5. Arrastre y coloque el archivo CRX en la ventana de extensiones y compruebe que se carga.
+5. Arrastre y coloque el archivo CRX en la ventana de extensiones y compruebe que se carga. La extensión se deshabilitará después de esta operación. Para habilitarlo, agregue el identificador CRX de la extensión a la directiva ExtensionInstallAllowList. 
 6. Pruebe la extensión actualizada.
 7. Reemplace el archivo CRX antiguo y el archivo XML por los nuevos archivos de la extensión actualizada.
 
@@ -90,7 +90,7 @@ Los cambios de la extensión se tomarán durante el siguiente ciclo de sincroniz
 
 ## <a name="distribute-a-privately-hosted-extension"></a>Distribución de una extensión hospedada de forma privada
 
-Puede compartir el vínculo de la ubicación donde se hospeda el archivo CRX y, en cuanto los usuarios escriban la dirección URL en su explorador, la extensión se descargará e instalará. Los usuarios pueden habilitar la extensión desde la página edge://extensions. Para permitir que los usuarios instalen extensiones de prueba interna, debe agregar los identificadores de CRX de extensión a la directiva [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist).
+Puede compartir el vínculo de la ubicación donde se hospeda el archivo CRX y, en cuanto los usuarios escriban la dirección URL en su explorador, la extensión se descargará e instalará. Los usuarios pueden habilitar la extensión desde la página edge://extensions. Para permitir que los usuarios instalen extensiones auto hospedadas, debe agregar la extensión CRX IDs a la directiva [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) y agregar la dirección URL de la ubicación donde se hospeda el archivo CRX a la directiva [ExtensionInstallSources.](/deployedge/microsoft-edge-policies#extensioninstallsources)
 
 Como alternativa, puede usar la directiva de grupo [ExtensionInstallForceList](/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension) para forzar la instalación de una extensión en los dispositivos de los usuarios.
 

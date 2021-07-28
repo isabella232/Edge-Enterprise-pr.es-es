@@ -1,21 +1,21 @@
 ---
 title: Lector de PDF en Microsoft Edge
 ms.author: adigan
-author: dan-wesley
+author: AndreaLBarr
 manager: balajek
-ms.date: 06/28/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Obtenga más información sobre el lector de PDF en Microsoft Edge.
-ms.openlocfilehash: 0b1cffceb63c1829c39bdd3fa658df2e5f776584
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e8cf690f818e0fa103aa4f17154d9f95431287b5
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643186"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675987"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Lector de PDF en Microsoft Edge
 
@@ -35,16 +35,17 @@ En la tabla siguiente se muestran los canales y versiones de Microsoft Edge comp
 | Ver e imprimir archivos PDF integrados, en línea y locales | 79.0.309.71                |
 | Relleno básico de formularios<br>(Los formularios de JavaScript no son compatibles) | 79.0.309.71           |
 |Tabla de contenido| 86.0.622.38 |
-| Vista de página |Se promueve actualmente en canales de [Insider de Microsoft Edge](https://www.microsoftedgeinsider.com/) |
+| Vista de página | 88.0.705.50 |
 | Exploración del modo de cotejo |87.0.664.41 |
 | Entrada manuscrita  | 80.0.361.48            |
 | Personalización de entrada de lápiz | 83.0.478.54.  |
 | Resaltar  | 81.0.416.53         |
-| Notas de texto | Se promueve actualmente en canales de [Insider de Microsoft Edge](https://www.microsoftedgeinsider.com/) |
+| Notas de texto | 88.0.705.50 |
 | Leer en voz alta | 84.0.522.63  |
-| Ver archivos protegidos de Microsoft Information Protection (MIP) | Soporte técnico de Windows en 80.0.361.48<br>Soporte técnico para Mac en 81.0.416.53 |
+| Ver Microsoft Information Protection (MIP) protegidos en el mismo inquilino empresarial | Soporte técnico de Windows en 80.0.361.48<br>Soporte técnico para Mac en 81.0.416.53 |
+| Ver Microsoft Information Protection (MIP) protegidos entre inquilinos empresariales | 91.0.864.37  |
 |  Ver archivos protegidos de Information Rights Management (IRM)  | 83.0.478.37            |
-| Ver y validar firmas digitales | Disponible en los canales Canary y Dev. En el que se trabaja activamente. |
+
 
 ### <a name="constraints"></a>Restricciones
 
@@ -115,6 +116,7 @@ Leer en voz alta para PDF agrega la comodidad de escuchar contenido PDF mientras
 > Se requiere una licencia para MIP. Para obtener más información, vea esta [guía de licencias de Microsoft 365.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)
 
 Estos archivos pueden abrirse directamente en el explorador, sin necesidad de descargar ningún otro software ni de instalar ningún complemento. Esta funcionalidad integra la seguridad proporcionada por MIP directamente en el explorador, lo que proporciona un flujo de trabajo sin problemas.
+Puede ver los archivos protegidos de MIP entre inquilinos empresariales. Actualmente, no se admite la visualización de archivos con identidades de consumidor.
 
 ![Documentos PDF protegidos.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 

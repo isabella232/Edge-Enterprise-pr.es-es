@@ -31,11 +31,11 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 >
 > Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan la compatibilidad del sitio próximamente en Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## <a name="version-91086467-july-8"></a>Versión91.0.864.67: 8 de julio
+## <a name="version-91086467-july-8"></a>Versión 91.0.864.67: 8 de julio
 
 Se han corregido varios errores y problemas de rendimiento.
 
-## <a name="version-91086464-july-2"></a>Versión91.0.864.64: 2 de julio
+## <a name="version-91086464-july-2"></a>Versión 91.0.864.64: 2 de julio
 
 Se han corregido varios errores y problemas de rendimiento.
 

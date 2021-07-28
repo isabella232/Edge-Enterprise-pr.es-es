@@ -3,19 +3,19 @@ title: Notas de la versión archivadas para el canal estable de Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión archivadas para el canal estable de Microsoft Edge
-ms.openlocfilehash: d50da924c3c78e38eb55b30cf219145d19fe9816
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d8574e7b77babbf45a062ed9cadd4b60b616d972
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642396"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617960"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión archivadas para el canal estable de Microsoft Edge
 
@@ -90,7 +90,7 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](./microso
   - Monitor de contraseñas. Cuando cualquiera de las contraseñas guardadas en el explorador coincida con las que se ven en la lista de credenciales filtradas, Microsoft Edge le notificará y le pedirá que actualice la contraseña. El Monitor de contraseñas busca coincidencias por usted y está activado de forma predeterminada.
   - Editar contraseña. Ahora puede editar las contraseñas guardadas directamente en la configuración de Microsoft Edge. Reemplazar una contraseña anterior guardada por una nueva cada vez que se actualice la contraseña fuera de Microsoft Edge es sencillo. Solo debe editar la contraseña guardada en Configuración. 
 
-- **Mejorar la velocidad de inicio de Microsoft Edge con el aumento de inicio.** Para mejorar la velocidad de inicio de Microsoft Edge, hemos desarrollado una característica denominada aumento de inicio. El aumento de inicio hace que Microsoft Edge se inicie más rápido al habilitar Microsoft Edge para que se ejecute en segundo plano. Nota: esta característica está limitada a un grupo de usuarios seleccionado aleatoriamente que han habilitado la experimentación. Estos usuarios proporcionan comentarios al equipo de características.
+- **Mejorar la velocidad de inicio de Microsoft Edge con el inicio rápido.** Para mejorar la velocidad de inicio de Microsoft Edge, hemos desarrollado una característica denominada inicio rápido. El inicio rápido hace que Microsoft Edge se inicie más rápido al habilitar Microsoft Edge para que se ejecute en segundo plano. Nota: esta característica está limitada a un grupo de usuarios seleccionado aleatoriamente que han habilitado la experimentación. Estos usuarios proporcionan comentarios al equipo de características.
 
 - **Productividad:**
 
@@ -128,7 +128,7 @@ Se han agregado dieciocho directivas nuevas. Descargue las Plantillas administra
 - [SleepingTabsEnabled](./microsoft-edge-policies.md#sleepingtabsenabled): configura las pestañas en suspensión.
 - [SleepingTabsTimeout](./microsoft-edge-policies.md#sleepingtabstimeout): establece el tiempo de suspensión de la pestaña en segundo plano para las pestañas en suspensión.
 - [SleepingTabsBlockedForUrls](./microsoft-edge-policies.md#sleepingtabsblockedforurls): bloquea las pestañas en suspensión en sitios específicos.
-- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled): habilita el aumento de inicio.
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled): habilita el inicio rápido.
 - [TargetBlankImpliesNoOpener:](./microsoft-edge-policies.md#targetblankimpliesnoopener) evita establecer window.opener para vínculos destinados a _blank.
 - [UpdatePolicyOverride](./microsoft-edge-policies.md#updatepolicyoverride): especifica cómo Microsoft Edge Update controla las actualizaciones disponibles de Microsoft Edge.
 - [VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed): configura la disponibilidad de un diseño vertical para pestañas en el lateral del explorador.
@@ -504,7 +504,7 @@ Las actualizaciones de seguridad se muestran [aquí](./microsoft-edge-relnotes-s
 
 - Varias actualizaciones de DevTools, como la compatibilidad con la personalización de los métodos abreviados de teclado para que coincidan con los de VS Code, y la visualización de DevTools en contraste alto.  Para obtener más información, consulte [Novedades en DevTools (Microsoft Edge 84)](/microsoft-edge/devtools-guide-chromium/whats-new/2020/05/devtools).
 
-### <a name="policy-updates"></a>Actualizaciones de directiva
+### <a name="policy-updates"></a>Actualizaciones de directivas
 
 #### <a name="new-policies"></a>Nuevas directivas
 
@@ -603,7 +603,7 @@ Un usuario escribe "powerbi" como "powerbbi".com. Link doctor propondrá "powerb
 
 - No permitir XmlHttpRequest sincrónico en el descarte de página. Se eliminará el envío de XmlHttpRequests sincrónicos durante la carga de una página web. Este cambio mejora el rendimiento y la confiabilidad del explorador, pero puede afectar a las aplicaciones web que aún no se han actualizado para usar API web más modernas, como sendBeacon y Fetch. La directiva de grupo para deshabilitar este cambio y permitir la XHR sincrónica durante el descarte de la página estará disponible hasta Microsoft Edge 88. Para más información, consulte [Cambios que se van a producir en Microsoft Edge que afectan a la compatibilidad de los sitios](/microsoft-edge/web-platform/site-impacting-changes).
 
-### <a name="policy-updates"></a>Actualizaciones de directiva
+### <a name="policy-updates"></a>Actualizaciones de directivas
 
 #### <a name="new-policies"></a>Nuevas directivas
 

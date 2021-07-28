@@ -3,19 +3,19 @@ title: Configurar directivas de modo IE
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurar directivas de modo IE
-ms.openlocfilehash: 57d0db97a96baf361f88ca8ec90812373440c3d8
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 98d05af8769e25cfe2782a1e273f3b487afcead0
+ms.sourcegitcommit: c6452a458f825dab5638db9ff31268c2dc27f8db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641476"
+ms.lasthandoff: 07/24/2021
+ms.locfileid: "11677127"
 ---
 # <a name="configure-ie-mode-policies"></a>Configurar directivas de modo IE
 
@@ -50,9 +50,9 @@ Se puede configurar Internet Explorer para abrirlo directamente desde Microsoft 
 3. Haz clic en** Configuración de usuario/Configuración**del equipo  >  **Plantillas**  >  **administrativas Microsoft Edge**.
 4. Haz doble clic en **Configurar la integración de Internet Explorer**.
 5. Seleccione **Habilitado**.
-6. En **Opciones**, establece el valor de la lista desplegable en 
+6. En **Opciones**, establece el valor de la lista desplegable en
    -  **Modo de Internet Explorer** para que los sitios se abran en modo IE en Microsoft Edge
-   -  **Internet Explorer 11** si quiere que los sitios se abran en una ventana independiente de Internet Explorer 11
+   -  **Internet Explorer 11** si desea que los sitios se abran en una ventana independiente de Internet Explorer 11 (Esta opción no se admitirá después del 15 de junio de 2022, cuando se retirará la aplicación de escritorio de Internet Explorer 11 y no se admitirá.  Después del 15 de junio de 2022, cuando IE11 ya no estará disponible, esta opción se comportará igual que la opción de modo **de Internet Explorer).**  
    -  **Ninguno** para deshabilitar el modo de Internet Explorer cuando se establece por edge://flags o mediante opciones de línea de comandos
 
    > [!NOTE]

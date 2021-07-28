@@ -1,9 +1,9 @@
 ---
 title: Documentación de directiva de Microsoft Edge Update
 ms.author: stmoody
-author: dan-wesley
+author: AndreaLBarr
 manager: tahills
-ms.date: 06/29/2021
+ms.date: 07/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de todas las directivas admitidas por Microsoft Edge Update
-ms.openlocfilehash: a9808981acad544042c6e0ccb59ff755a670c848
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642326"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675947"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge: Directivas de actualización
 
@@ -41,7 +41,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con la actualiz
 |[CreateDesktopShortcut](#createdesktopshortcut)|Impedir la creación de accesos directos de escritorio durante la instalación (por canal)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Revertir a la versión de destino (por canal)|
 |[TargetVersionPrefix](#targetversionprefix)|Invalidación de versión de destino (por canal)|
-
+|[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Recuperar configuraciones y experimentos|
 ### [<a name="preferences"></a>Preferencias](#preferences-policies)
 |Nombre de directiva|Título|
 |-|-|
@@ -201,7 +201,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 - Nombre de archivo GP ADMX: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 - Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
-- Nombre del valor: 
+- Nombre del valor:
   - (Estable): actualizar{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): actualizar{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canarias): actualizar{65C35B14-6C1D-4122-AC46-7148CC9D6497}
@@ -246,7 +246,6 @@ Para que esta directiva de grupo surta efecto, debe configurarse antes de la ins
 0x00000001
 ```
 [Volver al principio](#microsoft-edge---update-policies)
-
 
 ### <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### <a name="prevent-desktop-shortcut-creation-upon-install-default"></a>Impedir la creación de accesos directos de escritorio durante la instalación predeterminada
@@ -401,6 +400,38 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+#### <a name="retrieve-configurations-and-experiments"></a>Recuperar configuraciones y experimentos
+>Microsoft Edge Update 1.3.145.1 y versiones posteriores
+
+#### <a name="description"></a>Descripción
+En Microsoft Edge Update, el servicio de experimentación y configuración se usa para implementar la carga de experimentación.
+
+La carga de experimentación consiste en una lista de características de desarrollo tempranas que Microsoft está habilitando para probar los comentarios.
+
+Si habilita esta directiva, la carga de experimentación se descarga del Servicio de experimentación y configuración.
+
+Si deshabilita esta directiva, la comunicación con el Servicio de experimentación y configuración se detiene por completo.
+
+Si no configuras esta directiva, en un dispositivo administrado el comportamiento es el mismo que la directiva "deshabilitado".
+
+Si no configura esta directiva, en un dispositivo no administrado, el comportamiento es el mismo que la directiva "habilitada".
+
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+- Nombre único de GP: UpdateExperimentationAndConfigureationServiceControl
+- Nombre de GP: controlar la comunicación del actualizador con el servicio de experimentación y configuración
+- Ruta de acceso de GP: Plantillas administrativas/Actualización perimetral de Microsoftt/Microsoft Edge Update
+- Nombre de archivo GP ADMX: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+- Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
+- Nombre del valor: UpdaterExperimentationAndConfigurationServiceControl
+- Tipo de valor: REG_DWORD
+##### <a name="example-value"></a>Valor de ejemplo:
+```
+0x00000001
+```
+[Volver al principio](#microsoft-edge---update-policies)
 
 ## <a name="preferences-policies"></a>Directivas de preferencias
 
@@ -459,7 +490,6 @@ start hour : 0x00000001
 start min  : 0x00000002
 ```
 [Volver al principio](#microsoft-edge---update-policies)
-
 
 ## <a name="proxy-server-policies"></a>Directivas de servidor proxy
 

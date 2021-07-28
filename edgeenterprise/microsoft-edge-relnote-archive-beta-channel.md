@@ -3,19 +3,19 @@ title: Notas de la versión archivadas para el canal de Microsoft Edge Beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión archivadas para el canal de Microsoft Edge Beta
-ms.openlocfilehash: 065c665892edc264e2ab94375bedf3af9dbc936c
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: c74a2a9f670a781d94738b6db00f84716a429a58
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642426"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617988"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión archivadas para el canal de Microsoft Edge Beta
 
@@ -107,7 +107,7 @@ Se han corregido varios errores y problemas de rendimiento.
 - **Rendimiento:**
 
   - Mejore el rendimiento del explorador con pestañas en suspensión. Las pestañas en suspensión mejoran el rendimiento del explorador al poner pestañas inactivas en reposo para liberar recursos del sistema, como la memoria y la CPU, de modo que las pestañas activas u otras aplicaciones puedan usarlos. Los usuarios pueden impedir que los sitios entren en suspensión y configurar el período de tiempo antes de que la pestaña inactiva se suspenda. Para mantener a los usuarios en su flujo, también se utiliza la heurística para evitar que determinados sitios pasen al modo de suspensión, como los sitios de la intranet. Esta característica se limita a un grupo de usuarios seleccionados al azar que han permitido la experimentación. Planeamos tener la función de pestañas flotantes activada de forma predeterminada en Microsoft Edge versión 89. Esta característica se puede administrar con directivas de grupo.
-  - Mejore la velocidad de inicio de Microsoft Edge con el aumento de inicio. Para mejorar la velocidad de inicio de Microsoft Edge, hemos desarrollado una característica denominada aumento de inicio. El aumento de inicio hace que Microsoft Edge se inicie más rápido al habilitar Microsoft Edge para que se ejecute en segundo plano. Nota: esta característica está limitada a un grupo de usuarios seleccionado aleatoriamente que han habilitado la experimentación. Estos usuarios proporcionan comentarios al equipo de características.
+  - Mejore la velocidad de inicio de Microsoft Edge con el inicio rápido. Para mejorar la velocidad de inicio de Microsoft Edge, hemos desarrollado una característica denominada inicio rápido. El inicio rápido hace que Microsoft Edge se inicie más rápido al habilitar Microsoft Edge para que se ejecute en segundo plano. Nota: esta característica está limitada a un grupo de usuarios seleccionado aleatoriamente que han habilitado la experimentación. Estos usuarios proporcionan comentarios al equipo de características.
 
 - **Productividad:**
 
@@ -144,7 +144,7 @@ Se han agregado dieciséis directivas nuevas. Descargue las Plantillas administr
 - [SleepingTabsEnabled](./microsoft-edge-policies.md#sleepingtabsenabled): configura las pestañas en suspensión.
 - [SleepingTabsTimeout](./microsoft-edge-policies.md#sleepingtabstimeout): establece el tiempo de suspensión de la pestaña en segundo plano para las pestañas en suspensión.
 - [SleepingTabsBlockedForUrls](./microsoft-edge-policies.md#sleepingtabsblockedforurls): bloquea las pestañas en suspensión en sitios específicos.
-- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled): habilita el aumento de inicio.
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled): habilita el inicio rápido.
 - [UpdatePolicyOverride](./microsoft-edge-policies.md#updatepolicyoverride): especifica cómo Microsoft Edge Update controla las actualizaciones disponibles de Microsoft Edge.
 - [VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed): configura la disponibilidad de un diseño vertical para pestañas en el lateral del explorador.
 - [WebRtcAllowLegacyTLSProtocols](./microsoft-edge-policies.md#webrtcallowlegacytlsprotocols): permite la degradación de TLS/DTLS heredada en WebRTC.

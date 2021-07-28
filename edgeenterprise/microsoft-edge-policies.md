@@ -213,7 +213,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 
 |Nombre de directiva|Título|
 |-|-|
-|[StartupBoostEnabled](#startupboostenabled)|Habilitar el impulso de arranque|
+|[StartupBoostEnabled](#startupboostenabled)|Habilitar el inicio rápido|
 ### [*<a name="printing"></a>Impresión*](#printing-policies)
 
 |Nombre de directiva|Título|
@@ -260,7 +260,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar SmartScreen de Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forzar a SmartScreen de Microsoft Defender a comprobar las descargas de origen confiable|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -6205,7 +6205,7 @@ Esta directiva solo afecta al botón revelar contraseña del explorador, no afec
 
   ### <a name="startupboostenabled"></a>StartupBoostEnabled
 
-  #### <a name="enable-startup-boost"></a>Habilitar el impulso de arranque
+  #### <a name="enable-startup-boost"></a>Habilitar el inicio rápido
 
   
   
@@ -6219,13 +6219,13 @@ Esta directiva solo afecta al botón revelar contraseña del explorador, no afec
 
 Si Microsoft Edge se ejecuta en segundo plano, es posible que el explorador no se cierre cuando se cierre la última ventana y no se reiniciará en segundo plano cuando se cierre la ventana. Vea la directiva [BackgroundModeEnabled](#backgroundmodeenabled) para obtener información sobre lo que sucede después de configurar Microsoft Edge en el modo segundo plano.
 
-Si se habilita esta directiva, se activará el impulso de arranque.
+Si se habilita esta directiva, se activará el inicio rápido.
 
-Si se deshabilita esta directiva, se desactivará el impulso de arranque.
+Si se deshabilita esta directiva, se desactivará el inicio rápido.
 
-Si no configura esta directiva, el impulso de arranque puede estar o no activado en un primer momento. El usuario puede configurarlo en edge://settings/system.
+Si no configura esta directiva, el inicio rápido puede estar o no activado en un primer momento. El usuario puede configurarlo en edge://settings/system.
 
-Obtenga más información sobre el impulso de arranque: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
+Obtenga más información sobre el inicio rápido: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -6242,7 +6242,7 @@ Obtenga más información sobre el impulso de arranque: [https://go.microsoft.co
   ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
 
   - Nombre único de GP: StartupBoostEnabled
-  - Nombre de GP: habilitar el impulso de arranque
+  - Nombre de GP: habilitar el inicio rápido
   - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Rendimiento
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Rendimiento
   - Nombre de archivo de ADMX GP: MSEdge.admx
@@ -8111,7 +8111,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
 
   [Volver al principio](#microsoft-edge---policies)
 

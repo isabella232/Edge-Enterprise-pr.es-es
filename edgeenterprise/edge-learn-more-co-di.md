@@ -1,25 +1,25 @@
 ---
 title: ClickOnce y DirectInvoke en Microsoft Edge
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Aprende sobre ClickOnce y DirectInvoke en Microsoft Edge.
-ms.openlocfilehash: 3d124f141e9212ba5ab25d4b725d32add62077a3
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642056"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675977"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Conocer las funciones de ClickOnce y DirectInvoke en Microsoft Edge
 
-ClickOnce y DirectInvoke son funciones disponibles en IE y Microsoft Edge (versión 45 y versiones anteriores) que admiten el uso de un controlador de archivos para descargar archivos desde un sitio web. Aunque sirven para fines diferentes, ambas funciones permiten que los sitios web especifiquen que un archivo solicitado para descarga se pasa a un controlador de archivos en el dispositivo del usuario. El controlador de archivos nativo de Windows controla las solicitudes de ClickOnce. Las solicitudes DirectInvoke se controlan mediante un controlador de archivos registrado especificado mediante el sitio web que hospeda el archivo.
+ClickOnce y DirectInvoke son características disponibles en IE y Microsoft Edge admiten el uso de un controlador de archivos para descargar archivos de un sitio web. Aunque sirven para fines diferentes, ambas funciones permiten que los sitios web especifiquen que un archivo solicitado para descarga se pasa a un controlador de archivos en el dispositivo del usuario. El controlador de archivos nativo de Windows controla las solicitudes de ClickOnce. Las solicitudes DirectInvoke se controlan mediante un controlador de archivos registrado especificado mediante el sitio web que hospeda el archivo.
 
 Para obtener más información sobre estas funciones, consulta:
 
