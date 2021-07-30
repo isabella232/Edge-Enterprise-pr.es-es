@@ -400,7 +400,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
-### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+### <a name="UpdaterExperimentationAndConfigurationServiceControl"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>Recuperar configuraciones y experimentos
 >Microsoft Edge Update 1.3.145.1 y versiones posteriores
 
