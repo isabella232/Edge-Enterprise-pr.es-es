@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Obtenga información sobre cómo habilitar listas de sitios locales y acceso fácil al modo IE
-ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: db9246fc719648d34b5f54c7d123461b26f1c29f8268c08a1731ef8e6b516331
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676202"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724667"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>Lista de sitios local para el modo IE
 
@@ -37,7 +37,7 @@ En este artículo se explica cómo configurar el fácil acceso al modo de Intern
 
 2. Microsoft Edge versión 92 (92.0.925.0 o posterior)
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 El modo IE funciona con la configuración de la Enterprise de sitio de modo de instalación. Mientras identifica y configura sitios en la lista de sitios para que usen el modo IE, los usuarios ya no necesitan esperar ni volver a la aplicación IE11 independiente.
 
@@ -116,7 +116,7 @@ Esta directiva no tiene efecto si deshabilitó la directiva *InternetExplorerInt
 
 La lista de sitios local no se sincroniza actualmente entre dispositivos. Esta mejora se encuentra actualmente en nuestro registro pendiente y se actualizará cuando esté disponible.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 Deshabilitar Internet Explorer 11: [deshabilitar Internet Explorer 11 | Microsoft Docs](/deployedge/edge-ie-disable-ie11)
 

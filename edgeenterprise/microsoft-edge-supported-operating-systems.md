@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Sistemas operativos admitidos con Microsoft Edge
-ms.openlocfilehash: 3c5af933e6a9e6bf66f0f486f77c8ddd9364a53e
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 37942c12de7570774072f6ae963b3681be636378c8e5c97a6acb11d570127a8d
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642626"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727543"
 ---
 # <a name="microsoft-edge-supported-operating-systems"></a>Sistemas operativos admitidos con Microsoft Edge
 
@@ -36,12 +36,12 @@ Microsoft Edge sigue la directiva del ciclo de vida moderna y es compatible con 
 
 - Windows 7 **
 - Windows 8.1
-- Windows 10 SAC 1709 y versiones posteriores **_
+- Windows 10 SAC 1709 y versiones posteriores ***
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
 - Sesión múltiple de Windows 10 Enterprise
-- Windows 10 IoT Enterprise SAC _***
+- Windows 10 IoT Enterprise SAC ***
 - Windows 10 IoT Enterprise 2019 LTSC ****
 
 ### <a name="windows-server"></a>Windows Server
@@ -56,9 +56,9 @@ Microsoft Edge sigue la directiva del ciclo de vida moderna y es compatible con 
 > [!IMPORTANT]
 > ** Seguiremos ofreciendo soporte para Microsoft Edge en Windows 7 y Windows Server 2008 R2 hasta el 15 de enero de 2022. Estos sistemas operativos ya no cuentan con soporte y Microsoft recomienda pasar a un sistema operativo con soporte, como Windows 10. Si bien Microsoft Edge le ayuda a tener mayor seguridad en la Web, su equipo puede seguir siendo vulnerable a riesgos. Para que el modo IE sea compatible con estos sistemas operativos, los dispositivos deberán tener las [Actualizaciones de seguridad extendidas para Windows](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Sin las actualizaciones de seguridad extendidas para Windows 7, las funcionalidades de Internet Explorer serán vulnerables a riesgos de seguridad. Asimismo, es posible que las funcionalidades del modo Internet Explorer no estén disponibles sin el mantenimiento continuo de las actualizaciones de seguridad extendidas.  
 >
-> **_ De la misma manera, para las versiones de Windows 10 SAC que no son compatibles pero con Microsoft Edge compatible, se recomienda actualizar a una versión de Win10 SAC compatible lo antes posible para mantener la seguridad. La compatibilidad de Microsoft Edge en este estado debería considerarse algo temporal para obtener un sistema operativo compatible.
+> De la misma forma que arriba, para las versiones de SAC que no son compatibles con Windows 10, pero que no son compatibles con Microsoft Edge, se recomienda realizar una actualización a una versión de Win10 SAC compatible tan pronto como sea posible para que permanezcan seguras. La compatibilidad de Microsoft Edge en este estado debería considerarse algo temporal para obtener un sistema operativo compatible.
 >
-> _ *** El OPK de Microsoft Edge está disponible en MOO para los fabricantes OEM de IoT para preinstalar y distribuir como parte de su solución basada en Windows 10 IoT Enterprise.
+> **** El OPK de Microsoft Edge está disponible en MOO para los fabricantes OEM de IoT para preinstalar y distribuir como parte de su solución basada en Windows 10 IoT Enterprise.
 
 ### <a name="macos"></a>macOS
 

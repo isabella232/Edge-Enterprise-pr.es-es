@@ -3,19 +3,19 @@ title: Notas de la versión archivadas para el canal estable de Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de la versión archivadas para el canal estable de Microsoft Edge
-ms.openlocfilehash: d8574e7b77babbf45a062ed9cadd4b60b616d972
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 662ebb40ce14714365b257a1a6127960df6baf90ecc8106cec5e49f35b9c51ea
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617960"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727443"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión archivadas para el canal estable de Microsoft Edge
 
@@ -504,11 +504,11 @@ Las actualizaciones de seguridad se muestran [aquí](./microsoft-edge-relnotes-s
 
 - Varias actualizaciones de DevTools, como la compatibilidad con la personalización de los métodos abreviados de teclado para que coincidan con los de VS Code, y la visualización de DevTools en contraste alto.  Para obtener más información, consulte [Novedades en DevTools (Microsoft Edge 84)](/microsoft-edge/devtools-guide-chromium/whats-new/2020/05/devtools).
 
-### <a name="policy-updates"></a>Actualizaciones de directivas
+### <a name="policy-updates"></a>Actualizaciones de directiva
 
 #### <a name="new-policies"></a>Nuevas directivas
 
-Se han agregado siete directivas nuevas. Descargue las Plantillas administrativas actualizadas desde la [página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Se han agregado las siguientes directivas nuevas.
+Se han agregado siete directivas nuevas. Descargue las plantillas administrativas actualizadas desde la [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Se han agregado las siguientes directivas nuevas.
 
 - [AppCacheForceEnabled](./microsoft-edge-policies.md#appcacheforceenabled): permite volver a habilitar la característica AppCache, incluso si está desactivada de forma predeterminada.
 - [ApplicationGuardContainerProxy](./microsoft-edge-policies.md#applicationguardcontainerproxy): configurar las opciones del contenedor proxy de Protección de aplicaciones.
@@ -603,7 +603,7 @@ Un usuario escribe "powerbi" como "powerbbi".com. Link doctor propondrá "powerb
 
 - No permitir XmlHttpRequest sincrónico en el descarte de página. Se eliminará el envío de XmlHttpRequests sincrónicos durante la carga de una página web. Este cambio mejora el rendimiento y la confiabilidad del explorador, pero puede afectar a las aplicaciones web que aún no se han actualizado para usar API web más modernas, como sendBeacon y Fetch. La directiva de grupo para deshabilitar este cambio y permitir la XHR sincrónica durante el descarte de la página estará disponible hasta Microsoft Edge 88. Para más información, consulte [Cambios que se van a producir en Microsoft Edge que afectan a la compatibilidad de los sitios](/microsoft-edge/web-platform/site-impacting-changes).
 
-### <a name="policy-updates"></a>Actualizaciones de directivas
+### <a name="policy-updates"></a>Actualizaciones de directiva
 
 #### <a name="new-policies"></a>Nuevas directivas
 

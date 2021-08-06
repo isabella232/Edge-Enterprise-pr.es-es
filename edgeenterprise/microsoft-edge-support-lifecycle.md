@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Ciclo de vida de Microsoft Edge
-ms.openlocfilehash: 941b77920978bba82dd5edcb192ddfab898f4053
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: c9967a093168e0a289cd26f8c3927fc4188f916564e221b66394c6a510083ed1
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676092"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726963"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Directiva de ciclo de vida de Microsoft Edge
 
@@ -25,7 +25,7 @@ En este artículo se describe la directiva de ciclo de vida que se aplica a Micr
 > Este artículo se aplica a Microsoft Edge, versión 77 o posteriores.
 
 > [!NOTE]
-> Empezando por la versión del canal estable 94, Microsoft Edge está cambiando a una cadencia de un ciclo de 4 semanas para versiones principales. Pero reconocemos que los clientes empresariales que administran entornos complejos necesitan más tiempo para planear y probar las actualizaciones de Microsoft Edge. Para ayudar a nuestros clientes empresariales que necesitan una escala de tiempo extendida para administrar actualizaciones, Microsoft Edge ofrecerá una opción estable extendida alineada a un ciclo de lanzamiento principal de 8 semanas más **largo;** esta opción solo estará disponible para clientes con entornos administrados. [Consulte nuestra entrada de blog de anuncios](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
+> Empezando por la versión del canal estable 94, Microsoft Edge está cambiando a una cadencia de un ciclo de 4 semanas para versiones principales. Pero reconocemos que los clientes empresariales que administran entornos complejos necesitan más tiempo para planear y probar las actualizaciones de Microsoft Edge. Para ayudar a nuestros clientes empresariales que necesitan una escala de tiempo extendida para administrar actualizaciones, Microsoft Edge ofrecerá una opción estable extendida alineada a un ciclo de lanzamiento principal de 8 semanas más **largo;** esta opción solo estará disponible para clientes con entornos administrados. [Consulte nuestra entrada del blog de anuncios](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
 
 ## <a name="overview-of-the-lifecycle-policy-for-microsoft-edge"></a>Información general sobre la directiva de ciclo de vida para Microsoft Edge
 

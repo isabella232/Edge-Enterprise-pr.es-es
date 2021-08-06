@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Instrucciones y herramientas que un administrador de Microsoft Edge puede usar para solucionar los problemas comunes de sincronización de la empresa
-ms.openlocfilehash: c46fc716424faf361ea0a3bfab68737b64725473
-ms.sourcegitcommit: cb264068ccad14eb8ca8393ea04dd3dc8682527a
+ms.openlocfilehash: 61ef4b69e16ecc2955f3f4dc46b9a22e3a8563a1e5c691430fe0645ceb23ad79
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "11708659"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725740"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Diagnosticar y corregir problemas de sincronización de Microsoft Edge
 

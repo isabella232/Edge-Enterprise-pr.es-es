@@ -1,49 +1,49 @@
 ---
-ms.openlocfilehash: bc66462291f4b1959fe1080ab33849c935218ebd
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e9faa9064a6be1582ac63de2869d0df12d111f4e40486fdd2ede1d76edbd81dc
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981085"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725643"
 ---
 <!-- BEGIN MICROSOFT SECURITY.MD V0.0.5 BLOCK -->
 
-##  <a name="security"></a>Seguridad
+## <a name="security"></a>Seguridad
 
-Microsoft asume seriamente la seguridad de nuestros productos de software y servicios, lo que incluye todos los repositorios de código fuente administrados a través de nuestras organizaciones de GitHub, que incluyen [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [dotnet](https://github.com/dotnet), [ASPNET](https://github.com/aspnet), [Xamarin](https://github.com/xamarin)y [nuestras organizaciones de github](https://opensource.microsoft.com/).
+Microsoft se toma muy en serio la seguridad de nuestros productos y servicios de software, que incluye todos los repositorios de código fuente administrados a través de nuestras organizaciones de GitHub, que incluyen [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet,](https://github.com/dotnet) [AspNet,](https://github.com/aspnet) [Xamarin](https://github.com/xamarin)y nuestras [organizaciones GitHub](https://opensource.microsoft.com/).
 
-Si cree que ha encontrado una vulnerabilidad de seguridad en cualquier repositorio de propiedad de Microsoft que cumpla con [la definición de una vulnerabilidad de seguridad de Microsoft](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10)), comuníquese con nosotros tal y como se describe a continuación.
+Si cree que ha encontrado una vulnerabilidad de seguridad en cualquier repositorio propiedad de Microsoft que cumpla con la definición de Vulnerabilidad de seguridad de [Microsoft,](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10))informe de ello como se describe a continuación.
 
-##  <a name="reporting-security-issues"></a>Notificar problemas de seguridad
+## <a name="reporting-security-issues"></a>Informes de problemas de seguridad
 
-**No informas de las vulnerabilidades de seguridad por problemas públicos de GitHub.**
+**No informe de vulnerabilidades de seguridad a través de problemas GitHub públicos.**
 
-En su lugar, comuníquese con el centro de respuestas de seguridad de Microsoft (MSRC) en [https://msrc.microsoft.com/create-report](https://msrc.microsoft.com/create-report) .
+En su lugar, informe al Centro de respuesta de seguridad de Microsoft (MSRC) en [https://msrc.microsoft.com/create-report](https://msrc.microsoft.com/create-report) .
 
-Si prefiere enviar sin iniciar sesión, envíe un mensaje de correo electrónico a [Secure@microsoft.com](mailto:secure@microsoft.com).  Si es posible, Cifre el mensaje con nuestra clave PGP; Descárguela desde la [Página de clave PGP del centro de respuestas de seguridad de Microsoft](https://www.microsoft.com/en-us/msrc/pgp-key-msrc).
+Si prefiere enviar sin iniciar sesión, envíe un correo electrónico [a secure@microsoft.com](mailto:secure@microsoft.com).  Si es posible, cifre el mensaje con nuestra clave PGP; descárbalo de la página [clave PGP](https://www.microsoft.com/en-us/msrc/pgp-key-msrc)del Centro de respuesta de seguridad de Microsoft .
 
-Recibirás una respuesta en un plazo de 24 horas. Si, por algún motivo, no puedes hacer un seguimiento por correo electrónico para asegurarnos de que recibiste tu mensaje original. Puede encontrar más información en [Microsoft.com/MSRC](https://www.microsoft.com/msrc). 
+Debe recibir una respuesta en un plazo de 24 horas. Si por alguna razón no lo hace, haga un seguimiento por correo electrónico para asegurarse de que recibimos el mensaje original. Encontrará información adicional en [microsoft.com/msrc](https://www.microsoft.com/msrc). 
 
-Incluye la información solicitada que se muestra a continuación (todo lo que puedas proporcionar) para ayudarnos a comprender mejor la naturaleza y el alcance del posible problema:
+Incluya la información solicitada que se muestra a continuación (tanto como pueda proporcionar) para ayudarnos a comprender mejor la naturaleza y el ámbito del posible problema:
 
-  * Tipo de problema (por ejemplo, desbordamiento del búfer, inserción de SQL, secuencias de comandos entre sitios, etc.)
-  * Rutas completas de los archivos de origen relacionados con la manifestación del problema
+  * Tipo de problema (por ejemplo, desbordamiento de búfer, SQL, scripting entre sitios, etc.)
+  * Rutas de acceso completas de los archivos de origen relacionados con la manifestación del problema
   * La ubicación del código fuente afectado (etiqueta/rama/confirmación o dirección URL directa)
   * Cualquier configuración especial necesaria para reproducir el problema
   * Instrucciones paso a paso para reproducir el problema
-  * Código de prueba de concepto o de explotación (si es posible)
-  * Impacto del problema, incluido el modo en que un atacante podría explotar el problema
+  * Prueba de concepto o código de vulnerabilidad (si es posible)
+  * Impacto del problema, incluida la forma en que un atacante puede aprovechar el problema
 
-Esta información nos ayudará a clasificar tu informe más rápidamente.
+Esta información nos ayudará a triage your report more quickly.
 
-Si está informando de un error Bounty, los informes completos pueden contribuir a un premio de Bounty superior. Para obtener más información sobre nuestros programas activos, visita la página del [programa Microsoft Bug Bounty](https://microsoft.com/msrc/bounty) .
+Si estás informando de una recompensa por errores, los informes más completos pueden contribuir a una recompensa de recompensa más alta. Visite nuestra página [del Programa de recompensas de errores de Microsoft](https://microsoft.com/msrc/bounty) para obtener más información sobre nuestros programas activos.
 
-##  <a name="preferred-languages"></a>Idiomas preferidos
+## <a name="preferred-languages"></a>Idiomas preferidos
 
-Preferimos que todas las comunicaciones estén en inglés.
+Preferimos que todas las comunicaciones sean en inglés.
 
-##  <a name="policy"></a>Directiva
+## <a name="policy"></a>Directiva
 
-Microsoft sigue el principio de [revelación de vulnerabilidad coordinada](https://www.microsoft.com/en-us/msrc/cvd).
+Microsoft sigue el principio de [divulgación](https://www.microsoft.com/en-us/msrc/cvd)coordinada de vulnerabilidad .
 
 <!-- END MICROSOFT SECURITY.MD BLOCK -->

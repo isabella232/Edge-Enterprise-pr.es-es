@@ -3,7 +3,7 @@ title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 06/28/2021
+ms.date: 08/01/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: eba448024e86cd0c0ceb733b6363317d7c6ca5fb
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
-ms.translationtype: HT
+ms.openlocfilehash: 61ea386b4a0762f6b95a0f2c1944ca35d0749ea9d75f85330f85472414988200
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642836"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724173"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
@@ -29,41 +29,6 @@ Puede descargar el [Kit Microsoft Security Compliance](https://www.microsoft.com
 > [!NOTE]
 > Este artículo se aplica a Microsoft Edge, versión 77 o posterior.
 
-## <a name="new-policies"></a>Nuevas directivas
-
-En la siguiente tabla, se muestran las nuevas directivas para esta actualización.
-
-|Nombre|Subtítulo|
-|--|--|
-|[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Inicio de sesión único para sitios de trabajo o escuela con este perfil habilitado|
-|[AutomaticHttpsDefault](#automatichttpsdefault)|Configurar HTTPS automático|
-|[CECPQ2Enabled](#cecpq2enabled)|CECPQ2 acuerdo de clave post-cuántico habilitado para TLS|
-|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Especifica si se permite que los sitios web inseguros realicen solicitudes a puntos de conexión de red más privados|
-|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Permitir que los sitios enumerados realicen solicitudes a puntos de conexión de red más privados desde contextos inseguros|
-|[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Especificar el número de días que un sitio permanece en la lista de sitios del modo IE local|
-|[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Permitir que los sitios no configurados se vuelvan a cargar en el modo Internet Explorer|
-|[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Habilitar Windows para buscar datos de exploración de Microsoft Edge local|
-|[TripleDESEnabled](#tripledesenabled)|Habilitar conjuntos de cifrado 3DES en TLS|
-
-## <a name="deprecated-policies"></a>Directivas en desuso
-
-En la siguiente tabla se enumeran las directivas en desuso para esta actualización.
-
-|Nombre|Subtítulo|
-|--|--|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Permitir pruebas en el modo de Internet Explorer (en desuso)|
-|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Habilitar la configuración predeterminada del comportamiento del cookie SameSite heredada (en desuso)|
-
-## <a name="obsolete-policies"></a>Directivas obsoletas
-
-En la siguiente tabla se enumeran las directivas obsoletas para esta actualización.
-
-|Nombre|Subtítulo|
-|--|--|
-|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Permitir certificados firmados con SHA-1 cuando los emiten anclas de confianza locales (obsoleta)|
-|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Configurar la experiencia de página nueva pestaña de Microsoft Edge (obsoleta)|
-|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Permitir que el controlador de WebDriver invalide las directivas que no sean compatibles|
-
 ## <a name="available-policies"></a>Directivas disponibles
 
 Estas tablas enumeran todas las directivas de grupo relacionadas con el explorador disponibles en esta versión de Microsoft Edge. Usa los vínculos de la tabla para obtener más detalles sobre directivas específicas.
@@ -72,8 +37,10 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 - [Transmitir](#cast)
 - [Configuración del Contenido](#content-settings)
 - [Proveedor de búsquedas predeterminado](#default-search-provider)
+- [Experimentación](#experimentation)
 - [Extensions](#extensions)
 - [Autenticación HTTP](#http-authentication)
+- [Identidad e inicio de sesión](#identity-and-sign-in)
 - [Configuración de pantalla completa](#kiosk-mode-settings)
 - [Capacidad de administración](#manageability)
 - [Mensajería nativa](#native-messaging)
@@ -115,6 +82,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|Configuración de geolocalización predeterminada|
 |[DefaultImagesSetting](#defaultimagessetting)|Configuración predeterminada de imágenes|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|Controlar el uso de excepciones de contenido inseguro|
+|[DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)|Controlar el uso de JIT de JavaScript|
 |[DefaultJavaScriptSetting](#defaultjavascriptsetting)|Configuración predeterminada de JavaScript|
 |[DefaultNotificationsSetting](#defaultnotificationssetting)|Configuración predeterminada de notificación|
 |[DefaultPluginsSetting](#defaultpluginssetting)|Configuración predeterminada de Adobe Flash (obsoleto)|
@@ -131,6 +99,8 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|Bloquear contenidos inseguros en determinados sitios|
 |[JavaScriptAllowedForUrls](#javascriptallowedforurls)|Permitir JavaScript en determinados sitios|
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|Bloquear JavaScript en determinados sitios|
+|[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|Permitir que JavaScript use JIT en estos sitios|
+|[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|Impedir que JavaScript use JIT en estos sitios|
 |[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Habilitar la configuración predeterminada del comportamiento del cookie SameSite heredada (en desuso)|
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Revertir a la conducta heredada de SameSite para las cookies en determinados sitios|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Permitir las notificaciones en determinados sitios|
@@ -140,6 +110,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Permitir ventanas emergentes en determinados sitios|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Bloquear ventanas emergentes en determinados sitios|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Registrar controladores de protocolo|
+|[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|Permitir que las notificaciones establezcan Microsoft Edge como lector de PDF predeterminado|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Elija si los usuarios pueden recibir imágenes de fondo y texto personalizados, recomendaciones, notificaciones y sugerencias para servicios Microsoft|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Conceder acceso a determinados sitios para conectarse a dispositivos USB determinados|
 |[WebUsbAskForUrls](#webusbaskforurls)|Permitir WebUSB en determinados sitios|
@@ -157,6 +128,11 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)|URL de búsqueda del proveedor de búsqueda predeterminado|
 |[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|URL del proveedor de búsqueda predeterminado para sugerencias|
 |[NewTabPageSearchBox](#newtabpagesearchbox)|Configurar la nueva experiencia del cuadro de búsqueda de la página de pestañas|
+### [*<a name="experimentation"></a>Experimentación*](#experimentation-policies)
+
+|Nombre de directiva|Subtítulo|
+|-|-|
+|[FeatureFlagOverridesControl](#featureflagoverridescontrol)|Configurar la capacidad de los usuarios para invalidar las marcas de características|
 ### [*<a name="extensions"></a>Extensions*](#extensions-policies)
 
 |Nombre de directiva|Título|
@@ -181,6 +157,12 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Incluir un puerto no estándar en Kerberos SPN|
 |[NtlmV2Enabled](#ntlmv2enabled)|Controlar si la autenticación NTLMv2 está habilitada|
 |[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|Autenticación de Windows Hello para HTTP habilitada|
+### [*<a name="identity-and-sign-in"></a>Identidad e inicio de sesión*](#identity-and-sign-in-policies)
+
+|Nombre de directiva|Subtítulo|
+|-|-|
+|[ImplicitSignInEnabled](#implicitsigninenabled)|Habilitar el inicio de sesión implícito|
+|[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth Authentication Flow Se aplica para el inicio de sesión|
 ### [*<a name="kiosk-mode-settings"></a>Configuración de pantalla completa*](#kiosk-mode-settings-policies)
 
 |Nombre de directiva|Título|
@@ -201,14 +183,16 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|Permitir los hosts de mensajería nativo en el nivel de usuario (instalado sin permisos de administrador) |
 ### [*<a name="password-manager-and-protection"></a>Administrador de contraseñas y protección*](#password-manager-and-protection-policies)
 
-|Nombre de directiva|Título|
+|Nombre de directiva|Subtítulo|
 |-|-|
+|[PasswordGeneratorEnabled](#passwordgeneratorenabled)|Permitir a los usuarios obtener una sugerencia de contraseña segura siempre que creen una cuenta en línea|
 |[PasswordManagerEnabled](#passwordmanagerenabled)|Habilitar el guardado de contraseñas en el administrador de contraseñas|
 |[PasswordMonitorAllowed](#passwordmonitorallowed)|Permitir que los usuarios puedan recibir alertas si se detecta que las contraseñas no son seguras|
 |[PasswordProtectionChangePasswordURL](#passwordprotectionchangepasswordurl)|Configurar el cambio de contraseña URL|
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Configurar la lista de URLs de acceso a la empresa donde el servicio de protección de contraseñas debe capturar los salted hashes de una contraseña|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Configurar el desencadenador de advertencia de protección con contraseña|
 |[PasswordRevealEnabled](#passwordrevealenabled)|Habilitar el botón revelar contraseña|
+|[PrimaryPasswordSetting](#primarypasswordsetting)|Configura una configuración que pide a los usuarios que escriban la contraseña del dispositivo mientras usan el autorrelleno de contraseñas|
 ### [*<a name="performance"></a>Rendimiento*](#performance-policies)
 
 |Nombre de directiva|Título|
@@ -227,6 +211,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Modo predeterminado de impresión de imágenes gráficas del fondo|
 |[PrintingEnabled](#printingenabled)|Habilitar la impresión|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Tamaño de página de impresión predeterminado|
+|[PrintingWebpageLayout](#printingwebpagelayout)|Establece el diseño para la impresión|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Imprimir usando el cuadro de diálogo de impresión del sistema|
 ### [*<a name="private-network-request-settings"></a>Configuración de solicitud de red privada*](#private-network-request-settings-policies)
 
@@ -260,7 +245,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar SmartScreen de Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forzar a SmartScreen de Microsoft Defender a comprobar las descargas de origen confiable|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -308,6 +293,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[AutofillCreditCardEnabled](#autofillcreditcardenabled)|Habilitar Autorrellenar para las tarjetas de crédito|
 |[AutomaticHttpsDefault](#automatichttpsdefault)|Configurar HTTPS automático|
 |[AutoplayAllowed](#autoplayallowed)|Permitir la reproducción automática multimedia para sitios web|
+|[AutoplayAllowlist](#autoplayallowlist)|Permitir reproducción automática de medios en sitios específicos|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Seguir ejecutando aplicaciones en segundo plano después de cerrar Microsoft Edge|
 |[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Permitir actualizaciones en segundo plano de la lista de plantillas disponibles para Colecciones y otras características que utilizan plantillas|
 |[BingAdsSuppression](#bingadssuppression)|Bloquear todos los anuncios en los resultados de búsqueda de Bing.|
@@ -334,6 +320,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Configurar el inicio de sesión automático con una cuenta de dominio de Active Directory cuando no haya cuenta de dominio de Azure AD|
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configurar Texto a voz en línea|
 |[ConfigureShare](#configureshare)|Configurar Compartir experiencia|
+|[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configurar la característica Ver en el Explorador de archivos para páginas de SharePoint en Microsoft Edge|
 |[CustomHelpLink](#customhelplink)|Especificar el vínculo de ayuda personalizada|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|Comprobaciones de interceptación de DNS habilitadas|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Establecer Microsoft Edge como explorador predeterminado|
@@ -402,6 +389,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Configurar la disponibilidad del modo InPrivate|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Habilitar advertencias para formularios inseguros|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Controlar la característica IntensiveWakeUpThrottling|
+|[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Configurar la lista Enterprise sitio en la nube del modo de almacenamiento|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Configurar la detección de bloqueos mejorada para el modo de Internet Explorer|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Configurar la integración de Internet Explorer|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Permitir el inicio de archivos locales en el modo de Internet Explorer|
@@ -410,12 +398,15 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Especificar el número de días que un sitio permanece en la lista de sitios del modo IE local|
 |[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Permitir que los sitios no configurados se vuelvan a cargar en el modo Internet Explorer|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Configurar la lista de sitios del Modo de empresa|
+|[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|Configurar la frecuencia con la que se actualiza Enterprise lista de sitios de modo de actualización|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Especificar cómo se comportan las navegaciones "en la página" de los sitios no configurados al iniciarse en las páginas en modo Internet Explorer|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Permitir pruebas en el modo de Internet Explorer (en desuso)|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Comportamiento de la redirección de intranet|
 |[IsolateOrigins](#isolateorigins)|Habilitar el aislamiento de sitio para determinados orígenes|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Habilitar Windows para buscar datos de exploración de Microsoft Edge local|
 |[LocalProvidersEnabled](#localprovidersenabled)|Permita sugerencias de proveedores locales.|
+|[MAUEnabled](#mauenabled)|Use siempre Microsoft AutoUpdate como actualizador para Microsoft Edge|
+|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|Permitir el inicio de sesión único para sitios de Microsoft con este perfil|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Establece valores de configuración administrados para sitios web en orígenes específicos|
 |[ManagedFavorites](#managedfavorites)|Configurar Favoritos|
 |[ManagedSearchEngines](#managedsearchengines)|Administrar motores de búsqueda|
@@ -440,6 +431,8 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|Redirigir los sitios incompatibles de Internet Explorer a Microsoft Edge.|
 |[RelaunchNotification](#relaunchnotification)|Notifique a un usuario que es recomendable reiniciar el explorador, o es necesario para actualizaciones pendientes|
 |[RelaunchNotificationPeriod](#relaunchnotificationperiod)|Establezca el período de tiempo de las notificaciones de actualización|
+|[RelaunchWindow](#relaunchwindow)|Establecer el intervalo de tiempo para el relanzamiento|
+|[RemoteDebuggingAllowed](#remotedebuggingallowed)|Permitir depuración remota|
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|Habilitar integridad de código de representador|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|Especifique si se necesitan comprobaciones OCSP/CRL en línea para los anclajes de veracidad local|
 |[ResolveNavigationErrorsUseWebService](#resolvenavigationerrorsusewebservice)|Habilite la resolución de errores de navegación con un servicio Web|
@@ -485,6 +478,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Establecer el límite en megabytes de memoria que puede utilizar una única instancia de Microsoft Edge.|
 |[TrackingPrevention](#trackingprevention)|Bloquear el seguimiento de la actividad de exploración de los usuarios en la web|
 |[TranslateEnabled](#translateenabled)|Habilitar la traducción|
+|[TravelAssistanceEnabled](#travelassistanceenabled)|Habilitar asistencia para viajes|
 |[TripleDESEnabled](#tripledesenabled)|Habilitar conjuntos de cifrado 3DES en TLS|
 |[URLAllowlist](#urlallowlist)|Definir una lista de direcciones URL permitidas|
 |[URLBlocklist](#urlblocklist)|Bloquear el acceso a una lista de direcciones URL|
@@ -1563,6 +1557,78 @@ Use la información anterior al configurar esta directiva.
   - Valor de ejemplo:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="defaultjavascriptjitsetting"></a>DefaultJavaScriptJitSetting
+
+  #### <a name="control-use-of-javascript-jit"></a>Controlar el uso de JIT de JavaScript
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Permite establecer si Microsoft Edge el motor de JavaScript v8 con el compilador JIT (Just In Time) habilitado o no.
+
+Deshabilitar el JIT de JavaScript significará que Microsoft Edge puede representar contenido web más lentamente y también puede deshabilitar partes de JavaScript, incluido WebAssembly. Deshabilitar javascript JIT puede permitir que Microsoft Edge contenido web en una configuración más segura.
+
+Esta directiva se puede invalidar para patrones de dirección URL específicos mediante las directivas [JavaScriptJitAllowedForSites](#javascriptjitallowedforsites) y [JavaScriptJitBlockedForSites.](#javascriptjitblockedforsites)
+
+Si no configura esta directiva, JavaScript JIT está habilitado.
+
+Asignación de opciones de directiva:
+
+* AllowJavaScriptJit (1) = Permitir que cualquier sitio ejecute JavaScript JIT
+
+* BlockJavaScriptJit (2) = No permitir que ningún sitio ejecute JavaScript JIT
+
+Use la información anterior al configurar esta directiva.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: DefaultJavaScriptJitSetting
+  - Nombre de GP: Control use of JavaScript JIT
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge / Configuración de contenido
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: DefaultJavaScriptJitSetting
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: DefaultJavaScriptJitSetting
+  - Valor de ejemplo:
+``` xml
+<integer>1</integer>
 ```
   
 
@@ -2662,6 +2728,146 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### <a name="javascriptjitallowedforsites"></a>JavaScriptJitAllowedForSites
+
+  #### <a name="allow-javascript-to-use-jit-on-these-sites"></a>Permitir que JavaScript use JIT en estos sitios
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Permite establecer una lista de patrones de url de sitio que especifican sitios que pueden ejecutar JavaScript con el compilador JIT (Just In Time) habilitado.
+
+Para obtener información detallada sobre los patrones de url de sitio válidos, consulte [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) . * no es un valor aceptado para esta directiva.
+
+Las excepciones de directiva JIT de JavaScript solo se aplicarán en una granularidad del sitio (eTLD+1). Un conjunto de directivas para solo subdomain.contoso.com no se aplicará correctamente a contoso.com o subdomain.contoso.com ya que ambos se resuelven en el mismo eTLD+1 (contoso.com) para el que no existe ninguna directiva. En este caso, la directiva debe establecerse en contoso.com para que se aplique correctamente tanto para contoso.com como para subdomain.contoso.com.
+
+Esta directiva se aplica fotograma a fotograma y no se basa solo en la dirección URL de origen de nivel superior, por lo que, por ejemplo, si contoso.com aparece en la directiva JavaScriptJitAllowedForSites pero contoso.com carga un marco que contiene fabrikam.com, contoso.com tendrá JIT de JavaScript habilitado, pero fabrikam.com usará la directiva de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting), si está establecida o predeterminada en JavaScript JIT habilitado.
+
+Si no configura esta directiva para un sitio, la directiva de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) se aplica al sitio, si se establece, de lo contrario Javascript JIT está habilitado para el sitio.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Lista de cadenas
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: JavaScriptJitAllowedForSites
+  - Nombre de GP: permitir que JavaScript use JIT en estos sitios
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge / Configuración de contenido
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites\1 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: JavaScriptJitAllowedForSites
+  - Valor de ejemplo:
+``` xml
+<array>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="javascriptjitblockedforsites"></a>JavaScriptJitBlockedForSites
+
+  #### <a name="block-javascript-from-using-jit-on-these-sites"></a>Impedir que JavaScript use JIT en estos sitios
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Permite establecer una lista de patrones de dirección URL de sitio que especifican sitios que no pueden ejecutar el compilador JIT de JavaScript (Just In Time) habilitado.
+
+Deshabilitar el JIT de JavaScript significará que Microsoft Edge puede representar contenido web más lentamente y también puede deshabilitar partes de JavaScript, incluido WebAssembly. Deshabilitar javascript JIT puede permitir que Microsoft Edge contenido web en una configuración más segura.
+
+Para obtener información detallada sobre los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * no es un valor aceptado para esta directiva.
+
+Las excepciones de directiva JIT de JavaScript solo se aplicarán en una granularidad del sitio (eTLD+1). Un conjunto de directivas para solo subdomain.contoso.com no se aplicará correctamente a contoso.com o subdomain.contoso.com ya que ambos se resuelven en el mismo eTLD+1 (contoso.com) para el que no existe ninguna directiva. En este caso, la directiva debe establecerse en contoso.com para que se aplique correctamente tanto para contoso.com como para subdomain.contoso.com.
+
+Esta directiva se aplica fotograma a fotograma y no se basa solo en la dirección URL de origen de nivel superior, por lo que, por ejemplo, si contoso.com aparece en la directiva JavaScriptJitBlockedForSites pero contoso.com carga un fotograma que contiene fabrikam.com, contoso.com tendrá JavaScript JIT deshabilitado, pero fabrikam.com usará la directiva de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting), si se establece, o de forma predeterminada en JavaScript JIT habilitado.
+
+Si no configura esta directiva para un sitio, la directiva de [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting) se aplica al sitio, si se establece, de lo contrario JavaScript JIT está habilitado para el sitio.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Lista de cadenas
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: JavaScriptJitBlockedForSites
+  - Nombre de GP: impedir que JavaScript use JIT en estos sitios
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge / Configuración de contenido
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: JavaScriptJitBlockedForSites
+  - Valor de ejemplo:
+``` xml
+<array>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### <a name="legacysamesitecookiebehaviorenabled"></a>LegacySameSiteCookieBehaviorEnabled
 
   #### <a name="enable-default-legacy-samesite-cookie-behavior-setting-deprecated"></a>Habilitar la configuración predeterminada del comportamiento del cookie SameSite heredada (en desuso)
@@ -3286,6 +3492,68 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
     <string>https://mail.contoso.com/mail/?extsrc=mailto&url=%s</string>
   </dict>
 </array>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="showpdfdefaultrecommendationsenabled"></a>ShowPDFDefaultRecommendationsEnabled
+
+  #### <a name="allow-notifications-to-set-microsoft-edge-as-default-pdf-reader"></a>Permitir que las notificaciones establezcan Microsoft Edge como lector de PDF predeterminado
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Esta configuración de directiva le permite decidir si los empleados deben recibir recomendaciones para establecer Microsoft Edge como controlador de PDF.
+
+Si habilita o no configura esta configuración, los empleados reciben recomendaciones de Microsoft Edge para establecerse como el controlador de PDF predeterminado.
+
+Si deshabilita esta configuración, los empleados no recibirán ninguna notificación de Microsoft Edge para establecerse como el controlador DE PDF predeterminado.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Booleano
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: ShowPDFDefaultRecommendationsEnabled
+  - Nombre de GP: permitir que las notificaciones establezcan Microsoft Edge como lector de PDF predeterminado
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge / Configuración de contenido
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: ShowPDFDefaultRecommendationsEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: ShowPDFDefaultRecommendationsEnabled
+  - Valor de ejemplo:
+``` xml
+<true/>
 ```
   
 
@@ -4212,6 +4480,85 @@ Use la información anterior al configurar esta directiva.
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ## <a name="experimentation-policies"></a>Directivas de experimentación
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="featureflagoverridescontrol"></a>FeatureFlagOverridesControl
+
+  #### <a name="configure-users-ability-to-override-feature-flags"></a>Configurar la capacidad de los usuarios para invalidar las marcas de características
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Configura la capacidad de los usuarios para invalidar el estado de las marcas de características.
+Si establece esta directiva en "CommandLineOverridesEnabled", los usuarios pueden invalidar el estado de las marcas de características mediante argumentos de línea de comandos, pero no edge://flags página.
+
+Si establece esta directiva en "OverridesEnabled", los usuarios pueden invalidar el estado de las marcas de características mediante argumentos de línea de comandos o edge://flags página.
+
+Si establece esta directiva en "OverridesDisabled", los usuarios no pueden invalidar el estado de las marcas de características mediante argumentos de línea de comandos o edge://flags página.
+
+Si no configura esta directiva, el comportamiento es el mismo que el de "OverridesEnabled".
+
+Asignación de opciones de directiva:
+
+* CommandLineOverridesEnabled (2) = Permitir que los usuarios invalide las marcas de características solo con argumentos de línea de comandos
+
+* OverridesEnabled (1) = Permitir a los usuarios invalidar las marcas de características
+
+* OverridesDisabled (0) = Impedir que los usuarios invalide las marcas de características
+
+Use la información anterior al configurar esta directiva.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: FeatureFlagOverridesControl
+  - Nombre de GP: configurar la capacidad de los usuarios para invalidar las marcas de características
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Experimentación
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: FeatureFlagOverridesControl
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de preferencia: FeatureFlagOverridesControl
+  - Valor de ejemplo:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ## <a name="extensions-policies"></a>Extensiones de las directivas
 
   [Volver al principio](#microsoft-edge---policies)
@@ -4234,7 +4581,7 @@ Si habilita esta configuración, se bloqueará la instalación de extensiones ex
 
 Si deshabilita esta configuración o la deja sin establecer, las extensiones externas podrán instalarse.
 
-Las extensiones externas y su instalación están documentadas [aquí](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options).
+Las extensiones externas y su instalación están documentadas en https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
 
 
   #### <a name="supported-features"></a>Características admitidas:
@@ -4510,7 +4857,7 @@ Si no se establece esta directiva, no se instalarán automáticamente las aplica
 
 Esta directiva sustituye a la de [ExtensionInstallBlocklist](#extensioninstallblocklist). Si se quita de esta lista una aplicación o extensión que haya instalado anteriormente por la fuerza, Microsoft Edge la desinstalará de manera automática.
 
-En las instancias de Microsoft Windows, las aplicaciones y extensiones externas al sitio web de complementos de Microsoft Edge solo se pueden instalar por la fuerza si la instancia está unida a un dominio de Microsoft Active Directory y ejecuta Windows 10 Pro.
+Para Windows instancias no unidas a un dominio de Microsoft Active Directory, la instalación forzada se limita a las aplicaciones y extensiones que aparecen en el sitio web de Microsoft Edge complementos.
 
 En las instancias de macOS, las aplicaciones y extensiones externas al sitio web de complementos de Microsoft Edge solo se pueden instalar por la fuerza si la instancia se administra a través de MDM o se ha unido a un dominio a través de MCX.
 
@@ -4518,7 +4865,7 @@ Los usuarios pueden modificar el código fuente de cualquier extensión con herr
 
 Cada elemento de lista de la directiva es una cadena que contiene un id. de extensión y, opcionalmente, una dirección URL "update" separada por un punto y coma (;). El id. de extensión es la cadena de 32 letras que se encuentra, por ejemplo, en edge://extensions cuando está en el modo para desarrolladores. Si se especifica, la dirección URL "update" debe apuntar a un documento de actualización manifiesto XML ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). De forma predeterminada, se usa la dirección URL de actualización del sitio web de complementos de Microsoft Edge. La dirección URL "update" establecida en esta directiva solo se usa para la instalación inicial; las actualizaciones posteriores de la extensión utilizan la dirección URL de actualización en el manifiesto de la extensión.
 
-Nota: esta directiva no se aplica al modo de InPrivate. Obtenga más información sobre las extensiones de hospedaje [aquí](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Tenga en cuenta: esta directiva no se aplica al modo de InPrivate. Obtenga más información sobre las extensiones de hospedaje (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -4650,7 +4997,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   La configuración de esta directiva controla la configuración de la administración de extensiones de Microsoft Edge, incluida cualquier configuración controlada por directivas existentes relacionadas con las extensiones. Esta directiva reemplaza cualquier directiva heredada que pueda configurarse.
 
-Esta directiva asigna un Id. de extensión o una dirección URL de actualización únicamente a su configuración específica. Se puede establecer una configuración predeterminada para el Id. especial "*", que se aplica a todas las extensiones sin una configuración personalizada en esta directiva. Con una dirección URL de actualización, la configuración se aplica a las extensiones con la dirección URL de actualización exacta indicada en el manifiesto de extensión. Para obtener más información, consulte la guía detallada de la directiva ExtensionSettings disponible en [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
+Esta directiva asigna un Id. de extensión o una dirección URL de actualización únicamente a su configuración específica. Se puede establecer una configuración predeterminada para el Id. especial "*", que se aplica a todas las extensiones sin una configuración personalizada en esta directiva. Con una dirección URL de actualización, la configuración se aplica a las extensiones con la dirección URL de actualización exacta indicada en el manifiesto de extensión. Si la marca "override_update_url" se establece en true, la extensión se instala y actualiza con la dirección URL de actualización especificada en la directiva [ExtensionInstallForcelist](#extensioninstallforcelist) o en el campo "update_url" de esta directiva. La marca "override_update_url" se omite si "update_url" es la dirección URL de actualización del sitio web de complementos perimetrales. Para obtener más información, consulte la guía detallada de la directiva ExtensionSettings disponible en [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
 
 Para bloquear extensiones de un almacén de terceros determinado, solo tiene que bloquear el update_url para ese almacén. Por ejemplo, si desea bloquear extensiones de Chrome Web Store, puede usar el siguiente JSON.
 
@@ -4724,6 +5071,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
       "downloads"
     ],
     "installation_mode": "force_installed",
+    "override_update_url": true,
     "runtime_allowed_hosts": [
       "*://good.contoso.com"
     ],
@@ -4759,7 +5107,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
+  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
   ```
   
 
@@ -4817,6 +5165,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     </array>
     <key>installation_mode</key>
     <string>force_installed</string>
+    <key>override_update_url</key>
+    <true/>
     <key>runtime_allowed_hosts</key>
     <array>
       <string>*://good.contoso.com</string>
@@ -5398,6 +5748,123 @@ Si deshabilita esta política, se utilizará una solicitud básica de nombre de 
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ## <a name="identity-and-sign-in-policies"></a>Directivas de identidad e inicio de sesión
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="implicitsigninenabled"></a>ImplicitSignInEnabled
+
+  #### <a name="enable-implicit-sign-in"></a>Habilitar el inicio de sesión implícito
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Configure esta directiva para permitir o no permitir el inicio de sesión implícito.
+
+Si ha configurado la directiva [BrowserSignin](#browsersignin) en "Deshabilitar el inicio de sesión del explorador", esta directiva no tendrá ningún efecto.
+
+Si habilitas o no configuras esta configuración, se habilitará el inicio de sesión implícito, Edge intentará iniciar sesión en el perfil del usuario en función de qué y cómo inicien sesión en su sistema operativo.
+
+Si deshabilita esta configuración, se deshabilitará el inicio de sesión implícito.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Booleano
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: ImplicitSignInEnabled
+  - Nombre de GP: habilitar el inicio de sesión implícito
+  - Ruta de acceso de GP (obligatorio): Plantillas administrativas/Microsoft Edge/Identidad e inicio de sesión
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: ImplicitSignInEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="oneauthauthenticationenforced"></a>OneAuthAuthenticationEnforced
+
+  #### <a name="oneauth-authentication-flow-enforced-for-signin"></a>OneAuth Authentication Flow Se aplica para el inicio de sesión
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Esta directiva permite a los usuarios decidir si usan la biblioteca de OneAuth para el inicio de sesión y la captura de tokens en Microsoft Edge en Windows 10 RS3 y posteriores.
+
+Si deshabilitas o no configuras esta directiva, el proceso de inicio de sesión usará Windows administrador de cuentas. Microsoft Edge podría usar cuentas que inició sesión en Windows, Microsoft Office u otras aplicaciones de Microsoft para el inicio de sesión, sin necesidad de contraseña. También puedes proporcionar una cuenta y una contraseña válidas para iniciar sesión, que se almacenarán en Windows administrador de cuentas para su uso futuro. Podrá investigar todas las cuentas almacenadas en el Administrador de cuentas Windows a través de Windows Configuración -> Cuentas -> correo electrónico y cuentas.
+
+Si habilita esta directiva, se usará el flujo de autenticación de OneAuth para el inicio de sesión de la cuenta. El flujo de autenticación de OneAuth tiene menos dependencias y puede funcionar sin Windows shell. La cuenta que use no se almacenará en la página Correo electrónico y cuentas.
+
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Booleano
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: OneAuthAuthenticationEnforced
+  - Nombre de GP: Autenticación de OneAuth Flow se aplica para el inicio de sesión
+  - Ruta de acceso de GP (obligatorio): Plantillas administrativas/Microsoft Edge/Identidad e inicio de sesión
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: OneAuthAuthenticationEnforced
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000000
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ## <a name="kiosk-mode-settings-policies"></a>Directivas de configuración de pantalla completa
 
   [Volver al principio](#microsoft-edge---policies)
@@ -5784,6 +6251,61 @@ Si configura esta directiva como Deshabilitada, Microsoft Edge solo puede usar e
   [Volver al principio](#microsoft-edge---policies)
 
   ## <a name="password-manager-and-protection-policies"></a>Administrador de contraseñas y directivas de protección
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="passwordgeneratorenabled"></a>PasswordGeneratorEnabled
+
+  #### <a name="allow-users-to-get-a-strong-password-suggestion-whenever-they-are-creating-an-account-online"></a>Permitir a los usuarios obtener una sugerencia de contraseña segura siempre que creen una cuenta en línea
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Configura el generador de contraseñas Configuración alternancia que habilita o deshabilita la característica para los usuarios.
+
+Si habilitas o no configuras esta directiva, generador de contraseñas ofrecerá a los usuarios una sugerencia de contraseña segura y única (a través de un desplegable) en las páginas Registro y Cambio de contraseña.
+
+Si deshabilita esta directiva, los usuarios ya no verán sugerencias de contraseña segura en las páginas Registro o Cambio de contraseña.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Booleano
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: PasswordGeneratorEnabled
+  - Nombre de GP: permitir a los usuarios obtener una sugerencia de contraseña segura siempre que creen una cuenta en línea
+  - Ruta de acceso de GP (obligatorio): Plantillas administrativas/Microsoft Edge/Administrador de contraseñas y protección 
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: PasswordGeneratorEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000000
+```
+
+  
 
   [Volver al principio](#microsoft-edge---policies)
 
@@ -6199,6 +6721,71 @@ Esta directiva solo afecta al botón revelar contraseña del explorador, no afec
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### <a name="primarypasswordsetting"></a>PrimaryPasswordSetting
+
+  #### <a name="configures-a-setting-that-asks-users-to-enter-their-device-password-while-using-password-autofill"></a>Configura una configuración que pide a los usuarios que escriban la contraseña del dispositivo mientras usan el autorrelleno de contraseñas
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  La característica ayuda a los usuarios a agregar una capa adicional de privacidad a sus cuentas en línea al requerir la autenticación de dispositivos (como una forma de confirmar la identidad del usuario) antes de que la contraseña guardada se llene automáticamente en un formulario web. Esto garantiza que las personas no autorizadas no puedan usar contraseñas guardadas para el autorrelleno.
+
+Esta directiva de grupo configura el selector de botones de radio que habilita esta característica para los usuarios. También tiene un control de frecuencia donde los usuarios pueden especificar la frecuencia con la que les gustaría que se les pida autenticación.
+
+Si establece esta directiva en "Automáticamente, deshabilite esta directiva o no configure esta directiva, el autorrelleno no tendrá ningún flujo de autenticación".
+
+Si estableces esta directiva en "Con contraseña de dispositivo", los usuarios tendrán que escribir la contraseña del dispositivo (o el modo preferido de autenticación en Windows Hello si se encuentra en Windows: PIN, reconocimiento facial o huella digital y opciones equivalentes en mac) para demostrar su identidad y solo entonces se rellenará automáticamente su contraseña. Además, la frecuencia del símbolo del sistema de autenticación se establecería en "Always" de forma predeterminada, pero los usuarios también pueden cambiarla a la otra opción, que es "Once every browsing session".
+
+Asignación de opciones de directiva:
+
+* Automáticamente (0) = Automáticamente
+
+* WithDevicePassword (1) = Con contraseña de dispositivo
+
+Use la información anterior al configurar esta directiva.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: PrimaryPasswordSetting
+  - Nombre de GP: configura una configuración que pide a los usuarios que escriban la contraseña del dispositivo mientras usan el autorrelleno de contraseñas
+  - Ruta de acceso de GP (obligatorio): Plantillas administrativas/Microsoft Edge/Administrador de contraseñas y protección 
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: PrimaryPasswordSetting
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000000
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ## <a name="performance-policies"></a>Directivas de rendimiento
 
   [Volver al principio](#microsoft-edge---policies)
@@ -6546,13 +7133,15 @@ Si no configura esta directiva o la lista de impresoras está vacía, todos los 
 Los destinos de impresora incluyen impresoras de extensión e impresoras locales. Las impresoras de extensión también se conocen como destinos de proveedores de impresión e incluyen cualquier destino que pertenezca a una extensión de Microsoft Edge.
 Las impresoras locales también se conocen como destinos de impresión nativa e incluyen destinos disponibles en el equipo local y en las impresoras de red compartidas.
 
+En Microsoft versión 93 o posterior, si establece esta directiva en "pdf", también deshabilita la opción "Guardar como Pdf" en el menú contextual de clic derecho.
+
 Asignación de opciones de directiva:
 
 * privet (privet) = destinos de protocolo basados en Zeroconf (mDNS + DNS-SD)
 
 * extensión (extensión) = destinos basados en extensiones
 
-* pdf (pdf) = el destino 'Guardar como PDF'
+* pdf (pdf) = el destino "Guardar como PDF". (93 o posterior, también deshabilita desde el menú contextual)
 
 * local (local) = destinos de impresora local
 
@@ -6886,6 +7475,76 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   <key>name</key>
   <string>custom</string>
 </dict>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="printingwebpagelayout"></a>PrintingWebpageLayout
+
+  #### <a name="sets-layout-for-printing"></a>Establece el diseño para la impresión
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Al configurar esta directiva, se establece el diseño de las páginas web de impresión.
+
+Si deshabilita o no configura esta directiva, los usuarios pueden decidir si imprimir páginas web en diseño vertical o horizontal.
+
+Si habilita esta directiva, la opción seleccionada se establece como la opción de diseño.
+
+Asignación de opciones de directiva:
+
+* vertical (0) = Establece la opción de diseño como vertical
+
+* horizontal (1) = Establece la opción de diseño como horizontal
+
+Use la información anterior al configurar esta directiva.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: sí
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: PrintingWebpageLayout
+  - Nombre de GP: establece el diseño para imprimir
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Impresión
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)/Impresión
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
+  - Nombre del valor: PrintingWebpageLayout
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de preferencia: PrintingWebpageLayout
+  - Valor de ejemplo:
+``` xml
+<integer>0</integer>
 ```
   
 
@@ -7422,6 +8081,7 @@ Esta directiva reemplaza las siguientes directivas individuales:
 La configuración de la directiva [ProxySettings](#proxysettings) acepta los siguientes campos:
   * ProxyMode, que permite especificar el servidor proxy utilizado por Microsoft Edge y evita que los usuarios cambien la configuración del proxy
   * ProxyPacUrl, una dirección URL a un archivo proxy .pac
+  * ProxyPacMandatory, que evita que la pila de red vuelva a conexiones directas con script PAC no válido o no disponible
   * ProxyServer, una dirección URL para el servidor proxy
   * ProxyBypassList, una lista de hosts proxy que Microsoft Edge omite
 
@@ -7430,7 +8090,7 @@ Para ProxyMode, si elige el valor:
   * system: usa un proxy del sistema y todos los demás campos se omiten.
   * auto_detect: todos los demás campos se omiten.
   * fixed_servers: se usan los campos ProxyServer y ProxyBypassList.
-  * pac_script: se usan los campos ProxyPacUrl y ProxyBypassList.
+  * pac_script, se usan los campos ProxyPacUrl, ProxyPacMandatory y ProxyBypassList.
 
 Para obtener ejemplos más detallados, vaya a [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
@@ -8111,7 +8771,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
 
   [Volver al principio](#microsoft-edge---policies)
 
@@ -8345,7 +9005,7 @@ Si habilita esta directiva, Microsoft Edge descargará y mostrará los logotipos
 
 Si deshabilita o no configura esta directiva, Microsoft Edge no mostrará ningún logotipo de la compañía o un logotipo de Microsoft en la página de la nueva pestaña.
 
-Para obtener ayuda para determinar el algoritmo hash SHA-256, vaya [aquí](/powershell/module/microsoft.powershell.utility/get-filehash).
+Para obtener ayuda para determinar el algoritmo hash SHA-256, vea https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -10475,13 +11135,13 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
     "allowed_origins": [
       "https://example.com",
       "https://.mail.example.com"
-    ], 
+    ],
     "protocol": "msteams"
-  }, 
+  },
   {
     "allowed_origins": [
       "*"
-    ], 
+    ],
     "protocol": "msoutlook"
   }
 ]
@@ -10517,7 +11177,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
       <string>https://.mail.example.com</string>
     </array>
     <key>protocol</key>
-    <string>teams</string>
+    <string>msteams</string>
   </dict>
   <dict>
     <key>allowed_origins</key>
@@ -10525,7 +11185,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
       <string>*</string>
     </array>
     <key>protocol</key>
-    <string>outlook</string>
+    <string>msoutlook</string>
   </dict>
 </array>
 ```
@@ -10899,7 +11559,7 @@ La configuración predeterminada, "No configurada", respeta la configuración ac
 
 La configuración de "Habilitado" establece la reproducción automática multimedia en "Permitir".  Se permite que todos los sitio web puedan reproducir automáticamente multimedia. Los usuarios no pueden invalidar esta Directiva.
 
-Si está en "Deshabilitado", la reproducción automática multimedia estará en "Bloquear".  No se permite a los sitios web la reproducción automática multimedia. Los usuarios no pueden invalidar esta Directiva.
+Si se establece en "Deshabilitado", se establece la reproducción automática de medios en "Límite".  Esto limita los sitios web que pueden reproducir automáticamente los medios en páginas web con una interacción multimedia alta y secuencias webRTC activas. Antes de Microsoft Edge versión 92, esto establecería la reproducción automática de medios en "Bloquear". Los usuarios no pueden invalidar esta Directiva.
 
 Será necesario cerrar y volver a abrir una cuenta para que esta directiva tenga efecto.
 
@@ -10943,6 +11603,75 @@ Será necesario cerrar y volver a abrir una cuenta para que esta directiva tenga
   - Valor de ejemplo:
 ``` xml
 <true/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="autoplayallowlist"></a>AutoplayAllowlist
+
+  #### <a name="allow-media-autoplay-on-specific-sites"></a>Permitir reproducción automática de medios en sitios específicos
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Defina una lista de sitios, en función de los patrones de dirección URL, que pueden reproducción automática de medios.
+
+Si no configura esta directiva, el valor predeterminado global de la directiva [AutoplayAllowed](#autoplayallowed) (si se establece) o la configuración personal del usuario se usa para todos los sitios.
+
+Para obtener información detallada acerca de los patrones de dirección URL válidos, vea [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+Nota: * no es un valor aceptado para esta directiva.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Lista de cadenas
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: AutoplayAllowlist
+  - Nombre de GP: permitir la reproducción automática de medios en sitios específicos
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: 1, 2, 3, ...
+  - Tipo de valor: lista de REG_SZ
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de preferencia: AutoplayAllowlist
+  - Valor de ejemplo:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
 ```
   
 
@@ -12533,6 +13262,8 @@ Si establece esta directiva como "Deshabilitada" o no la establece, Microsoft Ed
 
 Desde Microsoft Edge 89 en adelante, si hay un perfil local existente con la directiva [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) deshabilitada y la máquina ahora está unida a una implementación híbrida, es decir, tiene una cuenta de Azure AD, actualizará automáticamente el perfil local al perfil de Azure AD para obtener todas las instalaciones de sincronización de Azure AD.
 
+A Microsoft Edge 93 en adelante, si la directiva [ImplicitSignInEnabled](#implicitsigninenabled) está deshabilitada, esta directiva no tendrá ningún efecto.
+
 Asignación de opciones de directiva:
 
 * Deshabilitado (0) = deshabilitado
@@ -12651,12 +13382,13 @@ Obtenga más información sobre esta característica aquí: API SpeechSynthesis:
   #### <a name="supported-versions"></a>Versiones compatibles:
 
   - En Windows desde la versión 83 o posterior
+  - En macOS desde 93 o posterior
 
   #### <a name="description"></a>Descripción
 
-  Si establece esta directiva en "ShareAllowed" (el valor predeterminado), los usuarios podrán acceder a la experiencia de Uso compartido de Windows 10 desde el Menú Configuración y Más en Microsoft Edge para compartir con otras aplicaciones del sistema.
+  Si establece esta directiva en "ShareAllowed" (valor predeterminado), los usuarios podrán acceder a la experiencia compartir desde el menú Configuración y Más en Microsoft Edge para compartir con otras aplicaciones del sistema.
 
-Si establece esta directiva en "ShareDisallowed", los usuarios no podrán acceder a la experiencia de Uso compartido de Windows 10. Si el botón compartir se encuentra en la barra de herramientas, también estará oculto.
+Si establece esta directiva en "ShareDisallowed", los usuarios no podrán acceder a la experiencia compartir. Si el botón compartir se encuentra en la barra de herramientas, también estará oculto.
 
 Asignación de opciones de directiva:
 
@@ -12698,6 +13430,90 @@ Use la información anterior al configurar esta directiva.
 ```
 0x00000001
 ```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de preferencia: ConfigureShare
+  - Valor de ejemplo:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="configureviewinfileexplorer"></a>ConfigureViewInFileExplorer
+
+  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Configurar la característica Ver en el Explorador de archivos para SharePoint páginas en Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Esta configuración le permite configurar la funcionalidad Ver en el Explorador de archivos para la administración de archivos en SharePoint Online mientras usa Microsoft Edge.
+
+Deberá enumerar los dominios específicos donde se permite y enumerar las cookies necesarias para la SharePoint autenticación (rtFa y FedAuth).
+
+En segundo plano, la directiva permite que las direcciones URL con el esquema viewinfileexplorer: abran direcciones URL de WebDAV en el Explorador de archivos de Windows en páginas que coincidan con la lista de dominios y usa las cookies especificadas para la autenticación de WebDAV.
+
+Si habilita esta directiva, puede usar la característica "Ver en el Explorador de archivos" en las bibliotecas SharePoint documentos que enumera. Deberá especificar las cookies de SharePoint dominio y autenticación. Vea el siguiente valor de ejemplo.
+
+Si deshabilita o no configura esta directiva, no puede usar la característica "Ver en el Explorador de archivos" en SharePoint bibliotecas de documentos.
+
+Tenga en cuenta que, aunque esta es una opción disponible a través de Microsoft Edge, en lugar de usar la opción Ver en el Explorador de archivos, el enfoque recomendado para administrar archivos y carpetas fuera de SharePoint es sincronizar los archivos de SharePoint o mover o copiar archivos en SharePoint.
+Sincronizar los SharePoint: https://go.microsoft.com/fwlink/p/?linkid=2166983 mover o copiar archivos en SharePoint:https://go.microsoft.com/fwlink/p/?linkid=2167123
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Diccionario
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: ConfigureViewInFileExplorer
+  - Nombre de GP: configure la característica Ver en el Explorador de archivos SharePoint páginas en Microsoft Edge
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: ConfigureViewInFileExplorer
+  - Tipo de valor: REG_SZ
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
+  {
+    "cookies": [
+      "rtFa",
+      "FedAuth"
+    ],
+    "domain": "contoso.sharepoint.com"
+  }
+]
+```
+
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [{"cookies": ["rtFa", "FedAuth"], "domain": "contoso.sharepoint.com"}]
+  ```
+  
 
   
 
@@ -14804,11 +15620,13 @@ Use la información anterior al configurar esta directiva.
 
   #### <a name="description"></a>Descripción
 
-  Esta directiva permite omitir la lista de puertos restringidos integrada en Microsoft Edge. El conjunto de puertos se define como una lista separada por comas en la que se deben permitir las conexiones salientes.
+  Hay una lista de puertos restringidos integrados en Microsoft Edge. Se producirá un error en las conexiones a estos puertos. Esta directiva permite omitir esa lista. El conjunto de puertos se define como una lista separada por comas en la que se deben permitir las conexiones salientes.
 
 Los puertos están restringidos con el fin de evitar que Microsoft Edge se use como vector para aprovechar las diversas vulnerabilidades de red. Establecer esta directiva puede exponer la red a ataques. Esta directiva está pensada como una solución temporal para el código de error "ERR_UNSAFE_PORT" al migrar a un puerto estándar un servicio que se ejecuta en un puerto bloqueado (por ejemplo, el puerto 80 o 443).
 
 Los sitios web malintencionados pueden detectar fácilmente si esta directiva está establecida y para qué puertos, con el fin de usar esa información para dirigir los ataques.
+
+Cada puerto enumerado en esta directiva se etiqueta con una fecha que se puede desbloquear hasta. Después de esa fecha, el puerto se restringirá independientemente de si se especifica por el valor de esta directiva.
 
 Dejar el valor vacío o sin establecer implica que se bloquearán todos los puertos restringidos. Los valores de puerto no válidos establecidos a través de esta directiva se omitirán, mientras que los válidos se seguirán aplicando.
 
@@ -14816,11 +15634,15 @@ Esta directiva invalida la opción de línea de comandos "--explicitly-allowed-p
 
 Asignación de opciones de directiva:
 
-* 554 (554) = puerto 554 (expira 15/10/2021)
+* 554 (554) = puerto 554 (se puede desbloquear hasta 2021/10/15)
 
-* 10080 (10080) = puerto 10080 (expira 01/04/2022)
+* 10080 (10080) = puerto 10080 (se puede desbloquear hasta 2022/04/01)
 
-* 6566 (6566) = puerto 6566 (expira 15/10/2021)
+* 6566 (6566) = puerto 6566 (se puede desbloquear hasta 2021/10/15)
+
+* 989 (989) = puerto 989 (se puede desbloquear hasta 2022/02/01)
+
+* 990 (990) = puerto 990 (se puede desbloquear hasta 2022/02/01)
 
 Use la información anterior al configurar esta directiva.
 
@@ -17243,6 +18065,65 @@ Tenga en cuenta que la Directiva se aplica por cada proceso del representador, c
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### <a name="internetexplorerintegrationcloudsitelist"></a>InternetExplorerIntegrationCloudSiteList
+
+  #### <a name="configure-the-enterprise-mode-cloud-site-list"></a>Configurar la lista Enterprise sitio en la nube del modo de almacenamiento
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  La configuración de listas de sitios de Microsoft Edge en el Centro de administración de M365 permite hospedar las listas de sitios en una ubicación en la nube compatible y administrar el contenido de las listas de sitios a través de la experiencia integrada. Esta configuración permite especificar qué lista de sitios dentro del Centro de administración de M365 se implementará para los usuarios. El usuario debe haber iniciado sesión Microsoft Edge una cuenta válida de trabajo o escuela. De lo contrario, Microsoft Edge descargará la lista de sitios de la ubicación en la nube.
+
+Esta configuración solo se aplica cuando se configura [internetExplorerIntegrationLevel.](#internetexplorerintegrationlevel)
+
+Si configura esta directiva, Microsoft Edge usará la lista de sitios especificada. Cuando esté habilitado, puede escribir el identificador de la lista de sitios que creó y publicó en la nube en el Centro de administración de M365.
+
+Esta configuración tiene prioridad sobre la directiva [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) de Microsoft Edge, así como la configuración de lista de sitios de Internet Explorer (Use la lista de sitios de IE de modo Enterprise). Si deshabilita o no configura esta directiva, Microsoft Edge usará la directiva [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) en su lugar.
+
+Para obtener más información sobre el modo Internet Explorer, vea [https://go.microsoft.com/fwlink/?linkid=2165707](https://go.microsoft.com/fwlink/?linkid=2165707)
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Cadena
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: InternetExplorerIntegrationCloudSiteList
+  - Nombre de GP: configurar la lista Enterprise sitio en la nube del modo de acceso
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: InternetExplorerIntegrationCloudSiteList
+  - Tipo de valor: REG_SZ
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+"aba95e58-070f-4784-8dcd-e5fd46c2c6d6"
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### <a name="internetexplorerintegrationenhancedhangdetection"></a>InternetExplorerIntegrationEnhancedHangDetection
 
   #### <a name="configure-enhanced-hang-detection-for-internet-explorer-mode"></a>Configurar la detección de bloqueos mejorada para el modo de Internet Explorer
@@ -17732,6 +18613,63 @@ Para obtener más información sobre el modo Internet Explorer, vea [https://go.
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### <a name="internetexplorerintegrationsitelistrefreshinterval"></a>InternetExplorerIntegrationSiteListRefreshInterval
+
+  #### <a name="configure-how-frequently-the-enterprise-mode-site-list-is-refreshed"></a>Configurar la frecuencia con la que se actualiza Enterprise lista de sitios de modo de actualización
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Esta configuración le permite especificar un intervalo de actualización personalizado para la Enterprise de sitio de modo de actualización. El intervalo de actualización se especifica en minutos.
+
+Esta configuración solo se aplica cuando se configura [internetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) o [InternetExplorerIntegrationCloudSiteList.](#internetexplorerintegrationcloudsitelist)
+
+Si configura esta directiva, Microsoft Edge intentará recuperar una versión actualizada de la lista de sitios de modo Enterprise con el intervalo de actualización especificado.
+
+Si deshabilita o no configura esta directiva, Microsoft Edge un intervalo de actualización predeterminado, actualmente 120 minutos.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Integer
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: InternetExplorerIntegrationSiteListRefreshInterval
+  - Nombre de GP: configurar la frecuencia con la que se actualiza Enterprise lista de sitios de modo de actualización
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: InternetExplorerIntegrationSiteListRefreshInterval
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x000000f0
+```
+
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### <a name="internetexplorerintegrationsiteredirect"></a>InternetExplorerIntegrationSiteRedirect
 
   #### <a name="specify-how-in-page-navigations-to-unconfigured-sites-behave-when-started-from-internet-explorer-mode-pages"></a>Especificar cómo se comportan las navegaciones "en la página" de los sitios no configurados al iniciarse en las páginas en modo Internet Explorer
@@ -18129,6 +19067,110 @@ Para finalizar la aplicación de esta directiva, es necesario que se reinicie el
   #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
   
   - Nombre clave de la preferencia: LocalProvidersEnabled
+  - Valor de ejemplo:
+``` xml
+<false/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="mauenabled"></a>MAUEnabled
+
+  #### <a name="always-use-microsoft-autoupdate-as-the-updater-for-microsoft-edge"></a>Use siempre Microsoft AutoUpdate como actualizador para Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En macOS desde 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Esta directiva le permite configurar el actualizador que Microsoft Edge usa.
+
+Si habilita esta directiva, Microsoft AutoUpdate solo Microsoft Edge actualizará la directiva.
+
+Si deshabilita o no configura esta directiva, Microsoft Edge se actualizará mediante Microsoft Edge Update.
+
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Booleano
+
+  
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de preferencia: MAUEnabled
+  - Valor de ejemplo:
+``` xml
+<true/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="msawebsitessousingthisprofileallowed"></a>MSAWebSiteSSOUsingThisProfileAllowed
+
+  #### <a name="allow-single-sign-on-for-microsoft-sites-using-this-profile"></a>Permitir el inicio de sesión único para sitios de Microsoft con este perfil
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  La opción "Permitir inicio de sesión único para sitios de Microsoft con este perfil" permite que los perfiles que no sean de MSA puedan usar el inicio de sesión único para los sitios de Microsoft con las credenciales de MSA presentes en el equipo. Esta opción se muestra para los usuarios finales como alternancia en Configuración -> Perfiles -> Preferencias de perfil para perfiles que no son de MSA.
+
+Si deshabilita esta directiva, los perfiles que no sean de MSA no podrán usar el inicio de sesión único para los sitios de Microsoft con las credenciales de MSA presentes en el equipo.
+
+Si habilita esta directiva o no la configura, los usuarios podrán usar la opción Configuración para garantizar que los perfiles que no sean de MSA puedan usar el inicio de sesión único para los sitios de Microsoft con credenciales de MSA presentes en el equipo siempre que solo exista una cuenta de MSA en el equipo.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: sí
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Booleano
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: MSAWebSiteSSOUsingThisProfileAllowed
+  - Nombre de GP: permitir el inicio de sesión único para los sitios de Microsoft con este perfil
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
+  - Nombre del valor: MSAWebSiteSSOUsingThisProfileAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: MSAWebSiteSSOUsingThisProfileAllowed
   - Valor de ejemplo:
 ``` xml
 <false/>
@@ -19005,6 +20047,8 @@ Esta directiva solo está disponible en las instancias de Windows que están uni
 
 A partir de Microsoft Edge 89, si hay un perfil local existente con la sincronización deshabilitada y el equipo está unido a la máquina, actualizará automáticamente el perfil local al perfil de Azure AD y lo hará no extraíble en lugar de crear un nuevo perfil de Azure AD no extraíble.
 
+A Microsoft Edge 93 en adelante, si la directiva [ImplicitSignInEnabled](#implicitsigninenabled) está deshabilitada, esta directiva no tendrá ningún efecto.
+
   #### <a name="supported-features"></a>Características admitidas:
 
   - Puede ser obligatorio: sí
@@ -19872,6 +20916,166 @@ Si no se establece, se usa el período predeterminado de 604,8 millones de milis
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### <a name="relaunchwindow"></a>RelaunchWindow
+
+  #### <a name="set-the-time-interval-for-relaunch"></a>Establecer el intervalo de tiempo para el relanzamiento
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Especifica una ventana de tiempo de destino para el final del período de notificación de relanzamiento.
+
+Se notifica a los usuarios sobre la necesidad de reiniciar un explorador o reiniciar el dispositivo en función de la configuración de directiva [RelaunchNotification](#relaunchnotification) y [RelaunchNotificationPeriod.](#relaunchnotificationperiod) Los exploradores y dispositivos se reinician por la fuerza al final del período de notificación cuando la directiva [RelaunchNotification](#relaunchnotification) se establece en "Obligatorio". Esta directiva RelaunchWindow se puede usar para aplazar el final del período de notificación de modo que esté dentro de una ventana de tiempo específica.
+
+Si no configura esta directiva, la ventana de tiempo de destino predeterminada para Microsoft Edge es entre las 2 a. m. y las 4 a. m. La ventana de tiempo de destino predeterminada para Microsoft Edge es todo el día (es decir, el final del período de notificación nunca se aplaza).
+
+Nota: Aunque la directiva puede aceptar varios elementos en las entradas, se omiten todos los elementos menos el primer elemento.
+Advertencia: La configuración de esta directiva puede retrasar la aplicación de las actualizaciones de software.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: sí
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Diccionario
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: RelaunchWindow
+  - Nombre de GP: establecer el intervalo de tiempo para el relanzamiento
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: RelaunchWindow
+  - Tipo de valor: REG_SZ
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
+  "entries": [
+    {
+      "duration_mins": 240,
+      "start": {
+        "hour": 2,
+        "minute": 15
+      }
+    }
+  ]
+}
+```
+
+  ##### <a name="compact-example-value"></a>Valor de ejemplo de Compact:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {"entries": [{"duration_mins": 240, "start": {"hour": 2, "minute": 15}}]}
+  ```
+  
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de preferencia: RelaunchWindow
+  - Valor de ejemplo:
+``` xml
+<key>RelaunchWindow</key>
+<dict>
+  <key>entries</key>
+  <array>
+    <dict>
+      <key>duration_mins</key>
+      <integer>240</integer>
+      <key>start</key>
+      <dict>
+        <key>hour</key>
+        <integer>2</integer>
+        <key>minute</key>
+        <integer>15</integer>
+      </dict>
+    </dict>
+  </array>
+</dict>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
+  ### <a name="remotedebuggingallowed"></a>RemoteDebuggingAllowed
+
+  #### <a name="allow-remote-debugging"></a>Permitir depuración remota
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Controla si los usuarios pueden usar la depuración remota.
+
+Si habilita o no configura esta directiva, los usuarios pueden usar la depuración remota especificando modificadores de línea de comandos --remote-debug-port y --remote-debugging-pipe.
+
+Si deshabilita esta directiva, los usuarios no podrán usar la depuración remota.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: no
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Booleano
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: RemoteDebuggingAllowed
+  - Nombre de GP: permitir la depuración remota
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendado): N/D
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): N/D
+  - Nombre del valor: RemoteDebuggingAllowed
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: RemoteDebuggingAllowed
+  - Valor de ejemplo:
+``` xml
+<true/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### <a name="renderercodeintegrityenabled"></a>RendererCodeIntegrityEnabled
 
   #### <a name="enable-renderer-code-integrity"></a>Habilitar integridad de código de representador
@@ -20431,7 +21635,7 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>Descripción
 
-  La compatibilidad para suprimir la advertencia de TLS 1.0/1.1 se quitará de Microsoft Edge a partir de la versión 91 (en torno a mayo de 2021) y esta directiva dejará de funcionar.
+  La compatibilidad para suprimir la advertencia tls 1.0/1.1 se quitó de Microsoft Edge a partir de la versión 91 y esta directiva dejó de funcionar entonces.
 
 Establece la versión mínima admitida de TLS. Si no configura esta directiva, Microsoft Edge mostrará un error para TLS 1.0 y TLS 1.1, pero el usuario podrá omitirlo.
 
@@ -21286,15 +22490,15 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
-  - En Windows y macOS desde 91 o posterior
+  - En Windows y macOS desde la versión 92 o posterior
 
   #### <a name="description"></a>Descripción
 
   Especifica si SharedArrayBuffers se puede usar en un contexto no aislado entre orígenes.  Un SharedArrayBuffer es un búfer de datos binario que se puede usar para crear vistas en la memoria compartida.  SharedArrayBuffers tiene una vulnerabilidad de acceso a la memoria en varias CPU populares.
 
-Si habilita esta directiva, los sitios pueden usar SharedArrayBuffers.
+Si habilita esta directiva, los sitios pueden usar SharedArrayBuffers sin restricciones.
 
-Si deshabilita o no configura esta directiva, los sitios no podrán usar SharedArrayBuffers.
+Si deshabilita o no configura esta directiva, los sitios pueden usar SharedArrayBuffers solo cuando estén aislados entre orígenes.
 
 Microsoft Edge requerirá aislamiento entre orígenes al usar SharedArrayBuffers a partir de Microsoft Edge 91 por motivos de compatibilidad web.
 
@@ -22760,6 +23964,70 @@ Si no configura la directiva, los usuarios podrán elegir si desean usar la func
 
   [Volver al principio](#microsoft-edge---policies)
 
+  ### <a name="travelassistanceenabled"></a>TravelAssistanceEnabled
+
+  #### <a name="enable-travel-assistance"></a>Habilitar asistencia para viajes
+
+  
+  
+  #### <a name="supported-versions"></a>Versiones compatibles:
+
+  - En Windows y macOS desde la versión 93 o posterior
+
+  #### <a name="description"></a>Descripción
+
+  Configure esta directiva para permitir o no permitir la asistencia de viaje.
+
+La característica de asistencia de viaje proporciona información útil y relevante a un usuario que realiza tareas relacionadas con viajes en el explorador. Esta característica proporciona sugerencias e información de confianza y validadas a los usuarios de todos los orígenes recopilados por Microsoft.
+
+Si habilita o no configura esta configuración, la asistencia de viaje se habilitará para los usuarios cuando realicen tareas relacionadas con viajes.
+
+Si deshabilita esta configuración, la asistencia de viaje se deshabilitará y los usuarios no podrán ver ninguna recomendación relacionada con viajes.
+
+  #### <a name="supported-features"></a>Características admitidas:
+
+  - Puede ser obligatorio: sí
+  - Puede ser recomendable: sí
+  - Actualización de directiva dinámica: no es necesario reiniciar el explorador
+
+  #### <a name="data-type"></a>Tipo de datos:
+
+  - Booleano
+
+  #### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+
+  ##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+
+  - Nombre único de GP: TravelAssistanceEnabled
+  - Nombre de GP: habilitar la asistencia para viajes
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
+  - Nombre de archivo de ADMX GP: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+
+  - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
+  - Ruta de acceso (recomendada): SOFTWARE\Directivas\Microsoft\Microsoft Edge\Recomendado
+  - Nombre del valor: TravelAssistanceEnabled
+  - Tipo de valor: REG_DWORD
+
+  ##### <a name="example-value"></a>Valor de ejemplo:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Información y configuración de Mac
+  
+  - Nombre clave de la preferencia: TravelAssistanceEnabled
+  - Valor de ejemplo:
+``` xml
+<true/>
+```
+  
+
+  [Volver al principio](#microsoft-edge---policies)
+
   ### <a name="tripledesenabled"></a>TripleDESEnabled
 
   #### <a name="enable-3des-cipher-suites-in-tls"></a>Habilitar conjuntos de cifrado 3DES en TLS
@@ -23779,9 +25047,9 @@ Si establece esta directiva como falsa o no la establece, las características d
 
   ### <a name="webdriveroverridesincompatiblepolicies"></a>WebDriverOverridesIncompatiblePolicies
 
-  #### <a name="allow-webdriver-to-override-incompatible-policies-obsolete"></a>Permitir que el controlador de WebDriver invalide las directivas que no sean compatibles
+  #### <a name="allow-webdriver-to-override-incompatible-policies-obsolete"></a>Permitir que el controlador de WebDrive reemplace las directivas que no sean compatibles
 
-  >EN DESUSO: esta directiva está en desuso. Actualmente se admite pero quedará obsoleta en una versión futura.
+  
   >OBSOLETA: Esta directiva está obsoleta y no funciona después de Microsoft Edge 84.
   #### <a name="supported-versions"></a>Versiones compatibles:
 
@@ -24353,7 +25621,7 @@ Si no se establece esta directiva, se habilitará la detección de ventanas ocul
   [Volver al principio](#microsoft-edge---policies)
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

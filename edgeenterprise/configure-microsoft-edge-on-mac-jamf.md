@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurar las opciones de directiva de Microsoft Edge en dispositivos Mac con Jamf
-ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: be706795d093b9dcecf33ee1bf7071286082fad1fea98a98b34145e87a9b7393
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641636"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725347"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>Configurar las opciones de directiva de Microsoft Edge en macOS con Jamf
 
@@ -45,8 +45,8 @@ Para obtener más información, vea [perfiles de configuración del equipo](http
 Para obtener el manifiesto de directiva:
 
 - Diríjase a la [Página de inicio Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise).
-- En la lista desplegable Canal o versión, seleccione **cualquier canal con la versión 81 o posterior.**_.
-- En la lista desplegable Compilación, seleccione cualquier _*compilación 81 o posterior.**_
+- En la lista desplegable Canal/Versión, seleccione **cualquier canal con la versión 81 o posterior.***
+- En la lista desplegable Compilación, seleccione cualquier **compilación del 81 o posterior.***.
 - Haga clic en obtener archivos de directiva para descargar nuestro paquete de plantillas de directivas.
 
   > [!NOTE]
@@ -61,7 +61,7 @@ Este manifiesto se publicará en cada paquete de directivas empezando con la com
 Siga los pasos siguientes para cargar el manifiesto de directiva en Jamf Pro y crear un perfil de directiva para macOS.
 
 1. Inicie sesión en Jamf.
-2. Seleccione la pestaña _*Equipo**.
+2. Seleccione la pestaña **equipo**.
 3. En **administración de contenido**, seleccione **perfiles de configuración**.
 4. En la página **perfiles de configuración**, haga clic en **+ nuevo**.
 

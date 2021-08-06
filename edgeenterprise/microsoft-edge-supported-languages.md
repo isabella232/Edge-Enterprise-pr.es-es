@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Compatibilidad con el idioma para mostrar de Microsoft Edge para Windows y macOS.
-ms.openlocfilehash: 0331ec5cad241deb059af35be264a2f7abaf2bc8
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 5ffd39764b6fb96e7fd5dc3307a42fd16e24aee2f2475bb0eb4c2c6f066bf732
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642376"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726953"
 ---
 # <a name="microsoft-edge-language-support"></a>Compatibilidad con idiomas de Microsoft Edge
 

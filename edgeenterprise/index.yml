@@ -12,12 +12,12 @@ metadata:
   author: dan-wesley
   ms.author: kvice
   ms.date: 02/02/2021
-  ms.openlocfilehash: 807aaa38da97222da8d52e36ad55995ef1c44e80
-  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+  ms.openlocfilehash: 2aeb0e2452ce009c5c798bdee3c07ed324c6efbe2d96fa12e5fe92d6dd020e54
+  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/24/2021
-  ms.locfileid: "11448144"
+  ms.lasthandoff: 08/05/2021
+  ms.locfileid: "11725953"
 landingContent:
 - title: Más información sobre Microsoft Edge en la empresa
   linkLists:
@@ -33,13 +33,13 @@ landingContent:
     links:
     - text: Vídeos de Microsoft Edge
       url: microsoft-edge-videos.md
-    - text: Canal de YouTube de Microsoft Edge
+    - text: Microsoft Edge Canal de YouTube
       url: https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA
 - title: Implementar y actualizar Microsoft Edge
   linkLists:
   - linkListType: deploy
     links:
-    - text: Planear su implementación de Microsoft Edge
+    - text: Planear la implementación de Microsoft Edge
       url: deploy-edge-plan-deployment.md
     - text: 'Vídeo: Implementación de Microsoft Edge'
       url: microsoft-edge-video-deploy.md
@@ -61,7 +61,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: 'Vídeo: seguridad, compatibilidad y capacidad de administración'
+    - text: 'Vídeo: Seguridad, compatibilidad y capacidad de administración'
       url: microsoft-edge-video-security-compatibility-manageability.md
     - text: Seguridad
       url: ms-edge-security-for-business.md

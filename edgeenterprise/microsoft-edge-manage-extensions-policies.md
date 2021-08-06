@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Usar directivas de grupo para administrar extensiones de Microsoft Edge en la empresa
-ms.openlocfilehash: dad239a448ec1f0ebef60c7072bfaad5c3baed57
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 9aa727bc199966bc70b5a52b7dbcdd16f2aed705f253bfef366f4faa9c2085d9
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641376"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726231"
 ---
 # <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>Usar directivas de grupo para administrar extensiones de Microsoft Edge
 
@@ -140,7 +140,7 @@ Puede usar las directivas [ExtensionInstallBlocklist](/DeployEdge/microsoft-edge
 2. Seleccione **Habilitado**.
 3. Haga clic en **Mostrar**.
 4. Escriba el id. de la aplicación de las extensiones que desea bloquear. Al agregar varios id. de la aplicación, use una fila independiente para cada id.
-5. Para bloquear todas las extensiones, escriba * _ en la directiva para evitar que se *\** instalen extensiones. Puede usarlo junto con la directiva "Permitir que se instalen extensiones específicas" para permitir que solo se instalen determinadas extensiones. En la captura de pantalla siguiente se muestra una extensión que se bloqueará en función del id. de la aplicación proporcionado.
+5. Para bloquear todas las extensiones, escriba **\*** en la directiva para evitar que se instalen las extensiones. Puede usarlo junto con la directiva "Permitir que se instalen extensiones específicas" para permitir que solo se instalen determinadas extensiones. En la captura de pantalla siguiente se muestra una extensión que se bloqueará en función del id. de la aplicación proporcionado.
 
    :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-2.png" alt-text="Use el id. de la aplicación para bloquear una extensión.":::
 
@@ -154,7 +154,7 @@ Puede usar las directivas [ExtensionInstallBlocklist](/DeployEdge/microsoft-edge
 
 Use la directiva [ExtensionInstallForcelist](/DeployEdge/microsoft-edge-policies#extensioninstallforcelist) para controlar qué extensiones están bloqueadas o permitidas. Siga estos pasos como guía para forzar la instalación de una extensión.
 
-1. En el Editor de directivas de grupo, vaya a _ Plantillas administrativas> Microsoft Edge > extensiones >* y,*a continuación, *seleccione Controlar qué extensiones se **instalan de forma silenciosa.**
+1. En el Editor de directiva de grupo, vaya a **Plantillas administrativas > Microsoft Edge > Extensiones >** y, a continuación, seleccione **Controlar qué extensiones se instalan de forma silenciosa**.
 2. Seleccione **Habilitado**.  
 3. Haga clic en **Mostrar**.
 4. Escriba el id. de la aplicación o los id. de la extensión o extensiones que desea forzar la instalación.  
