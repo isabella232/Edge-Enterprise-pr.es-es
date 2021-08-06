@@ -1,7 +1,7 @@
 ---
 title: Monitor de contraseñas habilitado automáticamente para usuarios
 ms.author: supalsul
-author: AndreLBarr
+author:
 manager: tulasim
 ms.date: 07/12/2021
 audience: ITPro
