@@ -4,19 +4,19 @@ metadata:
   ms.author: shisub
   author: dan-wesley
   manager: srugh
-  ms.date: 06/29/2021
+  ms.date: 08/05/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Solución de problemas y preguntas frecuentes para el modo Internet Explorer de Microsoft Edge
-  ms.openlocfilehash: b5fa1666a83b4e687faf1075ea57a9f65dbbeffb3242eb2bce5ea13dd42c422f
-  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+  ms.openlocfilehash: 7facf29ed4abab85ef0abadc1bc85778c4bdac07b2e30493e588b62394fd861a
+  ms.sourcegitcommit: 1d5a9ed583c91939dc9443594e1d5cffda5d3fbe
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "11724593"
+  ms.lasthandoff: 08/07/2021
+  ms.locfileid: "11810498"
 title: Solución de problemas del modo IE y preguntas frecuentes
 summary: >
   >[!Note]
@@ -98,29 +98,16 @@ sections:
     answer: >
       Sí, la aplicación de escritorio de Internet Explorer 11 se retirará y se retirará del soporte técnico el 15 de junio de 2022 (para obtener una lista de lo que está en el ámbito, Preguntas más frecuentes sobre el ciclo de vida [- Internet Explorer](https://support.microsoft.com/help/17454/). Las mismas aplicaciones y sitios de IE11 que usas hoy pueden abrirse en Microsoft Edge con el modo de Internet Explorer. [Más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
   - question: >
+      ¿Cómo puedo depurar mi aplicación heredada mientras se usa el modo IE en Microsoft Edge?
+    answer: "Puede usar IEChooser para iniciar Internet Explorer DevTools para depurar el contenido de las pestañas del modo IE. Para usar IEChooser, siga estos pasos.\n1. Abra IEChooser.\n    - Abrir el cuadro de diálogo Ejecutar Por ejemplo, presione `Windows logo key`  +  `R` .\n    - Escriba `%systemroot%\\system32\\f12\\IEChooser.exe` y, a continuación, **seleccione Aceptar**.\n2. En IEChooser, seleccione la entrada para la pestaña Modo IE.\n  \n"
+  - question: >
       ¿Puedo usar "Abrir con el Explorador" o "Ver en el Explorador de archivos" en SharePoint con el modo IE?
     answer: >
       Sí, si esto funciona en Internet Explorer 11 independiente, funcionará en el modo IE. Sin embargo, en lugar de usar la opción Abrir con el explorador, el enfoque recomendado para administrar archivos y carpetas por fuera de SharePoint es [sincronizar los archivos de SharePoint](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88) o [mover o copiar archivos en SharePoint](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc).
   - question: >
       ¿El modo IE Microsoft Edge la opción "nomerge" compatible con Internet Explorer 11?
-    answer: >
-      No hay ninguna línea de comandos explícita en Microsoft Edge que refleje la opción *no combinar*, pero existen un par de alternativas que recomendamos para ofrecer esta funcionalidad.
-
-
-      1. Usar perfiles en Microsoft Edge: cada perfil se asigna a una sesión de IE diferente para las páginas en modo IE, por lo que se comporta de la misma forma que la opción *no combinar*.
-
-      2. Usa la línea de comandos `--user-data-dir=<path>`, pero con una ruta de acceso diferente para cada sesión. Si es necesario, puedes crear una utilidad que el usuario puede ejecutar y que inicia Microsoft Edge y cambia la ruta de acceso de la sesión.
-
-
-      Si las opciones anteriores no son adecuadas para el escenario en cuestión, puedes enviarnos un comentario en uno de nuestros canales: Soporte técnico de Microsoft o el [foro TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
+    answer: "Las alternativas recomendadas para la funcionalidad nomerge en Microsoft Edge son-\n1. Usar perfiles en Microsoft Edge: cada perfil se asigna a una sesión de IE diferente para las páginas en modo IE, por lo que se comporta de la misma forma que la opción *no combinar*.\n2. Usa la línea de comandos `--user-data-dir=<path>`, pero con una ruta de acceso diferente para cada sesión. Si es necesario, puedes crear una utilidad que el usuario puede ejecutar y que inicia Microsoft Edge y cambia la ruta de acceso de la sesión.\n\nSi ninguna de estas opciones funciona para el escenario, a partir de **Microsoft Edge versión 93,** el modo IE en Microsoft Edge admitirá nomerge. Para un usuario final, cuando se inicia una nueva ventana del explorador desde una aplicación de modo IE, estará en una sesión independiente, como el comportamiento de nomerge en IE11. \n\nEn segundo plano, para cada ventana de Microsoft Edge, la primera vez que se visita una pestaña de modo IE dentro de esa ventana, si es uno de los sitios *\"nomerge\"* designados, esa ventana se bloquea en una sesión de IE \"nomerge\" diferente de todas las demás ventanas de Microsoft Edge al menos hasta que se cierre la última pestaña del modo IE en esa ventana. Esto se debe a un comportamiento anterior en el que los usuarios podían iniciar IE sinmerge y también podían iniciar Microsoft Edge sin necesidad de sumerger a través de otros mecanismos. Todos los sitios que se abran en una nueva ventana (a través de window.open) respetarán la naturaleza de combinación del proceso primario. Tenga en cuenta que el cambio de sesión no es compatible;  las navegaciónes dentro de la misma pestaña del modo IE usarán la misma sesión.\n\nPuede validar el comportamiento en el canal **beta** Microsoft Edge (versión 93 o posterior) siguiendo estos pasos:\n1. Asegúrese de que el modo IE está habilitado Microsoft Edge versión 93 o posterior. \n2. Puede configurar sitios que necesiten impedir el uso compartido de sesiones en la lista de sitios de modo Enterprise estableciendo el valor del atributo merge-type en \"nomerge\". Este atributo no se aplica solo cuando el elemento de apertura está establecido en Microsoft Edge. De forma predeterminada, todos los sitios tienen un valor de tipo merge de merge. \n   (**Nota:** La herramienta de administrador de listas de sitios integrada disponible en edge://compat/sitelistmanager incluirá esta opción con la versión Microsoft Edge 93 *Stable)*\n\n   ```\n   <site url=\"contoso.com\">\n   <open-in merge-type=\"no-merge\">IE11</open-in>\n   </site>\n   ```\n    \n3. Use la línea de `--enable-features=msAllowNoMergeIEMode` comandos . (**Nota:** Esta línea de comandos existe actualmente con fines de validación y no será necesaria después de la Microsoft Edge versión estable de *93)*\n4. Navegue a cualquier sitio configurado como nomerge. El sitio debe estar en su propia sesión de IE sin incluir. Cuando abra otra Microsoft Edge o ventana y navegue al mismo sitio, debe estar en su propia sesión de IE (observe varios procesos iexplore.exe en el Administrador de tareas).\n\nSi tiene comentarios, póngase en contacto con uno de nuestros canales de comentarios: soporte técnico de Microsoft o foro [techcommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).\n"
   - question: >
       ¿Puedo guardar vínculos como páginas web en el modo Internet Explorer?
-    answer: "Sí, puede habilitar la opción de Guardar destino como en el menú contextual del modo Internet Explorer en Microsoft Edge. Para hacerlo, configure la directiva de grupo *\"Permitir la opción Guardar destino como en el modo Internet Explorer\"* que se encuentra en *Configuración del equipo > Plantillas administrativas > Componentes de Windows > Internet Explorer*.\nEl mecanismo de guardado funciona de la misma manera que en Internet Explorer y, si el destino está guardado como archivo HTML, al volver a abrir el archivo se representará la página en Microsoft Edge.\n \nTenga en cuenta que esta funcionalidad requiere las siguientes actualizaciones mínimas del sistema operativo:\n- Windows 10, versión 2004, Windows Server versión 2004, Windows 10, versión 20H2: [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10, versión 1903, Windows 10, versión 1909, Windows Server versión 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)\n- Windows 10, versión 1809, Windows Server versión 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)\n- Windows 10, versión 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10, versión 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10, versión 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n"
-  - question: >
-      ¿Puedo abrir un sitio en modo IE sin una lista Enterprise sitio de modo de acceso?
-    answer: >
-      Sí, para fines de prueba, el modo IE puede alternar para una instancia de explorador determinada.
-
-
-      Ejecute Microsoft Edge con la marca `--ie-mode-test` de línea de comandos, por ejemplo. `msedge.exe --ie-mode-test`, luego seleccione ... -> Más herramientas -> "Abrir sitios en modo Internet Explorer".
+    answer: "Sí, puede habilitar la opción de Guardar destino como en el menú contextual del modo Internet Explorer en Microsoft Edge. Para hacerlo, configure la directiva de grupo *\"Permitir la opción Guardar destino como en el modo Internet Explorer\"* que se encuentra en *Configuración del equipo > Plantillas administrativas > Componentes de Windows > Internet Explorer*.\nEl mecanismo de guardado funciona de la misma manera que en Internet Explorer y, si el destino está guardado como archivo HTML, al volver a abrir el archivo se representará la página en Microsoft Edge.\n \nTenga en cuenta que esta funcionalidad requiere las siguientes actualizaciones mínimas del sistema operativo:\n- Windows 10, versión 2004, Windows Server versión 2004, Windows 10, versión 20H2: [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10, versión 1903, Windows 10, versión 1909, Windows Server versión 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)\n- Windows 10, versión 1809, Windows Server versión 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)\n- Windows 10, versión 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10, versión 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10, versión 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n\n\n          \n"
 additionalContent: "\n## <a name=\"see-also\"></a>Consulte también\n\n- [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)\n- [Acerca del modo IE](./edge-ie-mode.md)\n- [Información adicional del modo de empresa](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
