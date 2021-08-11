@@ -3,19 +3,19 @@ title: ¿¿Qué es el modo Internet Explorer?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprenda cómo el modo Internet Explorer en Microsoft Edge proporciona acceso a sitios que necesitan Internet Explorer 11 y acceso a sitios modernos.
-ms.openlocfilehash: 7d1d9d201abee9cd9f0d648f2757e3276945d2f4dcf635ea0cd17a64e684aec4
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: cc88c6745d40bfd33a345d76e2b2090f0f33243271350e4449d698d4a0fab71e
+ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726072"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "11810200"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>¿Qué es el modo Internet Explorer (IE)?
 
@@ -47,17 +47,17 @@ Solo los sitios que configure específicamente (mediante Directiva) usarán el m
 ### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>El modo IE admite las siguientes funciones de Internet Explorer
 
 - Todos los modos de documento y modos de empresa
-- Controles ActiveX (como Java o Silverlight)
+- Controles ActiveX (como Java o Silverlight). **Nota**: [Finalización del soporte](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788) de Silverlight el 12 de octubre de 2021. 
 - Objetos auxiliares de explorador 
 - Configuración y directivas de grupo de Internet Explorer que afectan a la configuración de zonas de seguridad y al modo protegido
-- Las herramientas de desarrollo F12 para IE, cuando se inicia con [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
+- Las herramientas de desarrollo F12 para IE, cuando se inicia con [IEChooser](/deployedge/edge-ie-mode-faq#how-can-i-debug-my-legacy-application-while-using-ie-mode-on-microsoft-edge-)
 - Extensiones de Microsoft Edge (no se admiten las extensiones que interactúan directamente con el contenido de la página de Internet Explorer).
 
 ### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>El modo IE no admite las siguientes funciones de Internet Explorer
 
 - Barras de herramientas de Internet Explorer
-- Configuración y directivas de grupo de Internet Explorer que afectan al menú de navegación (por ejemplo, motores de búsqueda y páginas principales).
-- Herramientas de desarrollo de IE11 or Microsoft Edge F12
+- La configuración y las directivas de grupo de Internet Explorer que controlan el menú de navegación.
+- Herramientas de desarrollo de IE11 o Microsoft Edge F12
 
 ## <a name="prerequisites"></a>Requisitos previos
 
