@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: bea9c325471617c0ad680b0dabe8cd0d847d5ac0d95941f773471f74ffd0f771
-ms.sourcegitcommit: b5093c47bd5e927cde1d486eb71e0ee2483a8bd8
+ms.openlocfilehash: 8d76d11f40f179534120429d3494a50cc19f4a32
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "11810474"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882236"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
@@ -76,6 +76,10 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 #### <a name="additional-change"></a>Cambio adicional
 
 - [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Agregar compatibilidad con plataforma mac
+
+## <a name="version-93096118-august-10"></a>Versión 93.0.961.18: 10 de agosto
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-92090262-july-29"></a>Versión 92.0.902.62: 29 de julio
 

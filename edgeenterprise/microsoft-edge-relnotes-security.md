@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
-ms.openlocfilehash: ad0d3c20c5ebcf79e4624e7b02721a674e39000dfb1082e630c7dfa5e366b531
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: efe0bbb1b8b771e92e439f9452696f6d424e4465
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810190"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882166"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
 
@@ -135,7 +135,7 @@ Microsoft ha lanzado el último **canal estable de Microsoft Edge (versión 87.0
 
 ## <a name="november-19-2020"></a>19 de noviembre de 2020
 
-Microsoft ha lanzado el último **canal estable de Microsoft Edge (versión 87.0.664.41)**, que incorpora las actualizaciones más recientes de seguridad del proyecto Chromium. Para más información, consulte la [Guía de actualización de seguridad](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Microsoft ha lanzado el último **canal estable de Microsoft Edge (versión 87.0.664.41)**, que incorpora las actualizaciones más recientes de seguridad del proyecto Chromium. Para obtener más información, consulte la [Guía de actualización de seguridad](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## <a name="november-13-2020"></a>13 de noviembre de 2020
 

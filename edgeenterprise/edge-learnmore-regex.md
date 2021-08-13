@@ -1,33 +1,33 @@
 ---
 title: Sintaxis de Expresiones regulares 2
 ms.author: comanea
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 08/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Sintaxis de Expresiones regulares 2
-ms.openlocfilehash: 48c19aaf039d239c05ef1b7e35faa8cfd6cb37349e53066b45d8183f6c64638d
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 78f21846c142d67470cd421a34baafa9d0021bd0
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726003"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882146"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>Sintaxis de Expresiones regulares 2 (re2.h)
 
 Las expresiones regulares son una notación para describir conjuntos de cadenas de caracteres. Cuando una cadena se encuentra en el conjunto descrito por una expresión regular, se entiende, a menudo, que la expresión regular coincide con la cadena.
 
-La expresión regular más simple es un carácter literal único. A excepción de los metacaracteres como *\*+?()|*, los caracteres coinciden con sí mismos. Para hacer coincidir un metacarácter, haga que se escape con una barra diagonal inversa: \+ coincidirá con un carácter más literal.
+La expresión regular más simple es un carácter literal único. A excepción de los metacaracteres como `\*+?()|`, los caracteres coinciden con sí mismos. Para que coincida con un metacaracter, escárrelo con una barra diagonal inversa: `\+` coincide con un carácter literal más.
 
 Se pueden modificar o concatenar dos expresiones regulares para formar una nueva expresión regular: si *e<sub>1</sub>* coincide con _s_ y *e<sub>2</sub>* coincide con _t_, entonces *e<sub>1</sub>* | *e<sub>2</sub>* coincide con _s_ o _t_, y *e<sub>1</sub>* *e<sub>2</sub>*  coincide con_st_.
 
-Los metacaracteres _\*_ , _+_ , y _?_ son operadores de repetición: *e<sub>1</sub>* _\*_ coincide con una secuencia de cero o más (probablemente diferentes) cadenas, cada una de las cuales coincide con *e<sub>1</sub>*; *e<sub>1</sub>* _+_ coincide con una o más de una; *e<sub>1</sub>* _?_ coincide con cero o una.
+Los metacaracteres _`\`_ , _+_ , y _?_ son operadores de repetición: *e<sub>1</sub>* _`\`_ coincide con una secuencia de cero o más (probablemente diferentes) cadenas, cada una de las cuales coincide con *e<sub>1</sub>*; *e<sub>1</sub>* _+_ coincide con una o más de una; *e<sub>1</sub>* _?_ coincide con cero o una.
 
-La precedencia de operadores, desde el enlace más débil hasta el más fuerte, es, primero, alternancia, luego, concatenación y, por último, los operadores de repetición. Se pueden usar paréntesis explícitos para forzar significados distintos, al igual que en las expresiones aritméticas. Ejemplos: _ab|cd_ es equivalente a _(ab)|(cd)_ ; _ab\*_ es equivalente a _a(b\*)_ .
+La precedencia de operadores, desde el enlace más débil hasta el más fuerte, es, primero, alternancia, luego, concatenación y, por último, los operadores de repetición. Se pueden usar paréntesis explícitos para forzar significados distintos, al igual que en las expresiones aritméticas. Algunos ejemplos: _ab|cd_ equivale a _(ab)|( cd)_ ; _`ab\`_ equivale a _`a(b\)`_ .
 
 De la sintaxis descrita hasta ahora, la mayoría es de la sintaxis de las expresiones regulares _egrep_ de Unix. Este subconjunto basta para describir todos los lenguajes regulares: en líneas generales, un lenguaje regular es un conjunto de cadenas que se pueden hacer coincidir a través de un único paso por el texto utilizando solo una cantidad fija de memoria. Las utilidades de las expresiones regulares más recientes (en especial, Perl y aquellas que la han copiado) han agregado varios operadores nuevos y secuencias de escape, que hacen que las expresiones regulares sean más concisas y, a veces, más codificadas, pero, por lo general, no son más eficaces.
 

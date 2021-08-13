@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Compatibilidad con preferencias iniciales en Microsoft Edge explorador.
-ms.openlocfilehash: 4ac5e69ad1efa61752097348324f917d9155d4f823d520895296c8ab01d7065c
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: 39af88d21107ad548166c749c3ba765754270b48
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810239"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882266"
 ---
-# <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Configurar Microsoft Edge configuración de preferencias iniciales para la primera ejecución
+# <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Configurar Microsoft Edge con las preferencias iniciales para la primera ejecución
 
 Usa la siguiente información para configurar la configuración Microsoft Edge preferencias iniciales en los Windows dispositivos.
 

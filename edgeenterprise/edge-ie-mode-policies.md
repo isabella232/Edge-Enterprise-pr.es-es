@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurar directivas de modo IE
-ms.openlocfilehash: a4b5e029935aed7e5d3cf23cc681448464b2f4e4a96d9d380d9cfb60ced88b2b
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 7ca8dffb0bc20acf954cf0f272f3894b39355846
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726113"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882136"
 ---
 # <a name="configure-ie-mode-policies"></a>Configurar directivas de modo IE
 
@@ -75,10 +75,8 @@ Puedes usar las siguientes directivas de grupo para configurar sitios específic
     > [!NOTE]
     > No es obligatorio configurar la directiva de Microsoft Edge. Muchas organizaciones usan esto para invalidar, lo que les permite dirigir la Lista de sitios actual a todos los usuarios con la directiva de IE, y dirigir más fácilmente una versión actualizada a las pruebas piloto con la directiva de Microsoft Edge.
 
-Para obtener más información sobre la lista de sitios de modo de empresa, consulta:
+Para obtener más información sobre Enterprise de sitios de modo de acceso, vea [Use the Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager).
 
-- [Usar Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [Agregar varios sitios a la lista de sitios del modo de empresa mediante un archivo y la herramienta Enterprise Mode Site List Manager (esquema v.2)](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
 
 ### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>Configurar usando la directiva de listas de sitios web de IE de modo de empresa
 

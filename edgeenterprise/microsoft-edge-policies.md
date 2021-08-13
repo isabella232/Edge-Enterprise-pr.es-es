@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 61ea386b4a0762f6b95a0f2c1944ca35d0749ea9d75f85330f85472414988200
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9693195b466da999c7ada8f6a4453401e684326f
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724173"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882256"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
@@ -245,7 +245,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar SmartScreen de Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forzar a SmartScreen de Microsoft Defender a comprobar las descargas de origen confiable|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -320,7 +320,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Configurar el inicio de sesión automático con una cuenta de dominio de Active Directory cuando no haya cuenta de dominio de Azure AD|
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Configurar Texto a voz en línea|
 |[ConfigureShare](#configureshare)|Configurar Compartir experiencia|
-|[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configurar la característica Ver en el Explorador de archivos para páginas de SharePoint en Microsoft Edge|
+|[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Configurar la característica Ver en el Explorador de archivos para SharePoint páginas en Microsoft Edge|
 |[CustomHelpLink](#customhelplink)|Especificar el vínculo de ayuda personalizada|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|Comprobaciones de interceptación de DNS habilitadas|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Establecer Microsoft Edge como explorador predeterminado|
@@ -8771,7 +8771,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
 
   [Volver al principio](#microsoft-edge---policies)
 
