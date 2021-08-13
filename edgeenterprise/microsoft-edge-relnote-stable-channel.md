@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/05/2021
+ms.date: 08/06/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 02841bd8574a71be63181d474d076dab9c48642e208e7a9c016f330bb1d68e08
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: ab373397b49405ec608e27e8f51309489715d940
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810220"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882126"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -57,7 +57,7 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployed
 
 **Administre las extensiones desde la barra de herramientas**. El nuevo menú de extensiones de la barra de herramientas le permite ocultar y anclar extensiones fácilmente. Los vínculos rápidos para administrar extensiones y buscar nuevas le permitirán encontrar fácilmente nuevas extensiones y administrar las existentes.
 
-**El valor predeterminado de reproducción automática se establecerá en Limitado**.  Para ayudarle a concentrase en línea, hemos cambiado el valor predeterminado para la reproducción automática de medios de Limitar a Permitir, empezando por Microsoft Edge versión 92.
+**El valor predeterminado de reproducción automática se establecerá en "Limite"**.  Para ayudarle a concentrase en línea, hemos cambiado el valor predeterminado para la reproducción automática de medios de Limitar a Permitir, empezando por Microsoft Edge versión 92.
 
 **Los instrumentos de pago ahora se sincronizan entre dispositivos**. A partir de Microsoft Edge versión 92, tiene la opción de sincronizar la información de pago entre los dispositivos en los que haya iniciado sesión. Tenga en cuenta que se trata de un lanzamiento de características controlado. Si no ve esta característica, vuelva a comprobar en breve, ya que continuaremos con el lanzamiento.
 Actualmente, esta característica solo está disponible en Estados Unidos y solo para usuarios de MSA (no para AAD)
