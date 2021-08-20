@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurar la directiva de Microsoft Edge para Windows con Microsoft Intune.
-ms.openlocfilehash: cd11c8c92d67197d9cf1a24691615b0a56dd727626b9741b5664a5d1080ba950
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 63eb29018bf4ec9c5a32d11b215f422e150383c9
+ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725525"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "11907264"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Configurar la directiva de Microsoft Edge con Microsoft Intune
 
@@ -53,7 +53,8 @@ Este procedimiento aprovecha las plantillas administrativas (que es posible que 
 3. Desde **dispositivos** | **Información general**, seleccione **Perfiles de configuración** (en el encabezado Directiva).
 4. En la barra de comandos superior, selecciona **Crear perfil**.
 5. En la lista desplegable que se muestra debajo de **Plataforma**, seleccione **Windows 10 y luego**.
-6. En la lista desplegable que se muestra debajo de **Perfil**, seleccione **Plantillas administrativas** y, a continuación, haga clic en el botón**crear**. La siguiente captura de pantalla muestra las listas desplegables para seleccionar la plataforma y el tipo de perfil.
+6. En la lista desplegable debajo de **Tipo de perfil**, seleccione **Plantillas**.
+7. En Nombre **de plantilla,** seleccione **Plantillas administrativas** y, a continuación, haga clic en **el botón** Crear. La siguiente captura de pantalla muestra las listas desplegables para seleccionar la plataforma y el tipo de perfil.
 
     ![Seleccionar plataforma y tipo de perfil](./media/configure-edge-with-intune/create-profile-platform.png)
 
