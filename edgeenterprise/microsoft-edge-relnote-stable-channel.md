@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 66d70216da337b5052a7e5b86446db50c30a6f66
-ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
+ms.openlocfilehash: 6a4c65d253a88384da7393ab846777093dc86e86
+ms.sourcegitcommit: 584a6a9877ae0c3fcb9acc0b8c158e280b0360ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "11909905"
+ms.lasthandoff: 08/23/2021
+ms.locfileid: "11912065"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -34,6 +34,10 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 ## <a name="version-92090278-august-19"></a>Versión 92.0.902.78: 19 de agosto
 
 Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployedge/microsoft-edge-relnotes-security#august-19-2021).
+
+## <a name="version-92090273-august-12"></a>Versión 92.0.902.73: 12 de agosto
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-92090267-august-5"></a>Versión 92.0.902.67: 5 de agosto
 
@@ -314,7 +318,7 @@ Se han corregido varios errores y problemas de rendimiento.
 ## <a name="version-89077445-march-4"></a>Versión 89.0.774.45: 4 de marzo
 
 > [!IMPORTANT]
-> Esta actualización contiene [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad. Para más información, vea la [Guía de actualización de Seguridad](https://msrc.microsoft.com/update-guide).
+> Esta actualización contiene [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
 
 Las actualizaciones de seguridad del canal estable se muestran [aquí](./microsoft-edge-relnotes-security.md#march-4-2021).
 
