@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Compatibilidad de Microsoft Edge para la Protección de aplicaciones de Microsoft Defender
-ms.openlocfilehash: 4bb8f48bd5ccdfd555d44cecc8cfe9253a6ba17e42f60e2b8a0086411c10e9fb
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 4d9f5b0590199a9938b19e60fdd38e7c0098ac76
+ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727040"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11925996"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Compatibilidad de Microsoft Edge para la Protección de aplicaciones de Microsoft Defender
 
@@ -50,6 +50,13 @@ La siguiente captura de pantalla muestra un ejemplo del mensaje de protección d
 ## <a name="whats-new"></a>Novedades
 
 La Protección de aplicaciones tiene la misma compatibilidad con el nuevo navegador Microsoft Edge que con Microsoft Edge (versión anterior), e incluye varias mejoras.
+
+### <a name="enable-application-guard-in-passive-mode-and-browse-edge-normally"></a>Habilitar La Protección de aplicaciones en modo pasivo y examinar Edge normalmente
+
+A partir de Microsoft Edge 94, los usuarios ahora tienen la opción de configurar el modo pasivo, lo que significa que Application Guard omite la configuración de la lista de sitios y los usuarios pueden examinar Edge normalmente. Este apoyo puede ser controlado a través de la directiva. Puede actualizar la directiva perimetral [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) para habilitar o deshabilitar el modo pasivo.
+
+> [!Note]
+> Esta directiva SOLO afecta a Edge, por lo que las navegación de otros exploradores podrían redirigirse al contenedor de Protección de aplicaciones si tiene las extensiones correspondientes habilitadas.
 
 ### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>Sincronización de favoritos desde el host al contenedor
 
