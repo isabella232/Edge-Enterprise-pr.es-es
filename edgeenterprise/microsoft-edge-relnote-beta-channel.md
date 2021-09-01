@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/25/2021
+ms.date: 08/31/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: dc2eebb2faabd4c04e0db4a5be4ffaaaff8aebcf
-ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
+ms.openlocfilehash: 1fad7c52819ce5ca6516d400ea00151a54bc66e7
+ms.sourcegitcommit: 822db9d312a13a13928ff1c10c2b35b6b46598fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11926006"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "11934630"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
@@ -42,7 +42,7 @@ Se han corregido varios errores y problemas de rendimiento.
 
 - **Preferencias iniciales en Microsoft Edge.**  A partir Microsoft Edge versión 93, la implementación de Microsoft Edge en su empresa será más fácil con la adición de preferencias iniciales.
 
-- **El modo IE en Microsoft Edge admitirá el comportamiento "nomerge".**  A partir Microsoft Edge versión 93, el modo IE en Microsoft Edge _admitirá nomerge_. Para un usuario final, cuando se inicia una nueva ventana del explorador desde una aplicación de modo IE, estará en una sesión independiente, similar al comportamiento de IE11. Deberá ajustar la lista de sitios para configurar sitios que necesiten impedir el uso compartido de sesiones. En segundo plano, para cada ventana de Microsoft Edge, la primera vez que se visita una pestaña de modo IE dentro de esa ventana, si es uno de los sitios "nomerge" designados, esa ventana se bloquea en una sesión de IE "nomerge" diferente de todas las demás ventanas de Microsoft Edge al menos hasta que se cierre la última pestaña del modo IE en esa ventana. Obtenga más información [aquí](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-).
+- **El modo IE en Microsoft Edge admitirá el comportamiento de "no combinar".**  A partir Microsoft Edge versión 93, el modo IE en Microsoft Edge admitirá "no-merge". Para un usuario final, cuando se inicia una nueva ventana del explorador desde una aplicación de modo IE, estará en una sesión independiente, similar al comportamiento de IE11. Deberá ajustar la lista de sitios para configurar sitios que necesiten impedir el uso compartido de sesiones. En segundo plano, para cada ventana de Microsoft Edge, la primera vez que se visita una pestaña de modo IE dentro de esa ventana, si es uno de los sitios designados para "no combinar", esa ventana se bloquea en una sesión de IE diferente "sin combinar" de todas las demás ventanas de Microsoft Edge al menos hasta que se cierre la última pestaña del modo IE en esa ventana. Obtenga más información [aquí](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-).
 
 - **Grupos de pestañas.**  La capacidad de clasificar las pestañas en grupos definidos por el usuario le ayuda a encontrar, cambiar y administrar pestañas de forma más eficaz en varias secuencias de trabajo. Para habilitar esto, estamos activando la agrupación de pestañas a partir Microsoft Edge versión 93.
 
@@ -144,7 +144,7 @@ Tenga en cuenta que estamos experimentando con esta característica y este compo
 - **Mejoras en la representación de fuentes**. Se han realizado mejoras en la representación del texto para mejorar la claridad y reducir el desenfoque.
 Tenga en cuenta que se trata de un lanzamiento de características controlado. Si no ves esta característica, vuelve en breve mientras continuamos nuestra implementación.
 
-### <a name="policy-updates"></a>Actualizaciones de directiva
+### <a name="policy-updates"></a>Actualizaciones de directivas
 
 #### <a name="new-policies"></a>Nuevas directivas
 
@@ -207,7 +207,7 @@ Se han corregido varios errores y problemas de rendimiento.
 
 - **Personalice el explorador con nuevos colores de tema**. Personalice Microsoft Edge con uno de los catorce nuevos colores de tema en Configuración -> Apariencia de la página. También puede instalar temas personalizados desde el sitio del complemento de Microsoft Edge. [Obtener más información](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
 
-- **Interrumpir descargas** A partir de Microsoft Edge versión 91, el explorador interrumpirá automáticamente las descargas de tipos que podrían dañar el equipo si esas descargas se inician sin una interacción del usuario y no son compatibles con la comprobación de Reputación de aplicación SmartScreen. Los usuarios pueden invalidar y continuar con la descarga haciendo clic con el botón derecho y eligiendo "Mantener" en el elemento de descarga.
+- **Interrumpir descargas** A partir de Microsoft Edge versión 91, el explorador interrumpirá automáticamente las descargas de tipos que podrían dañar el equipo si esas descargas se inician sin una interacción del usuario y no son compatibles con la comprobación de Reputación de aplicación SmartScreen. Los usuarios pueden invalidar y seguir descargando haciendo clic con el botón secundario y seleccionando "Mantener" en el elemento de descarga.
 Los administradores de empresa pueden optar por no participar en este comportamiento con una de estas dos directivas:
     - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) Deshabilita las advertencias basadas en la extensión del tipo de archivo de descarga para los tipos de archivo especificados en los dominios. Para obtener más información, consulte [Interrupciones de descargas de Seguridad de Microsoft Edge](/deployedge/microsoft-edge-security-downloads-interruptions)
 
