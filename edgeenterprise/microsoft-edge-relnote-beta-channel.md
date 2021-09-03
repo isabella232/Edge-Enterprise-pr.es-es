@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/31/2021
+ms.date: 09/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: 1fad7c52819ce5ca6516d400ea00151a54bc66e7
-ms.sourcegitcommit: 822db9d312a13a13928ff1c10c2b35b6b46598fd
+ms.openlocfilehash: 993e91faeadf9e734af421bf46c4fca9953fa320
+ms.sourcegitcommit: 9f7324ff156de0a0c75e2217104e543f182649f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "11934630"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11938313"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
@@ -23,6 +23,28 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!NOTE]
 > La plataforma web de Microsoft Edge evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan la compatibilidad del sitio próximamente en Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-9409929-september-2"></a>Versión 94.0.992.9: 2 de septiembre
+
+### <a name="feature-updates"></a>Actualizaciones de características
+
+- **Microsoft Edge a una cadencia de 4 semanas para actualizaciones en canales Beta y Estable.**  Adoptaremos un nuevo ciclo de lanzamiento de 4 semanas para las versiones principales. Puede leer más sobre la decisión aquí: https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
+
+- **Nueva opción estable extendida que se ofrece.**  Ofrecemos una nueva opción extended stable a nuestros clientes Enterprise administrados. La opción Estable extendida se mantendrá en revisiones numeradas uniformes y se actualizará cada 8 semanas. Habrá una actualización de seguridad quincenal.  Información adicional aquí: https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
+
+- **Mejoras en el comportamiento predeterminado de abrir archivos MHTML.**  Los archivos MHTML seguirán abiertos en modo IE si el modo IE está habilitado, a menos que el archivo MHTML se haya guardado desde Microsoft Edge (mediante las opciones Guardar como o Guardar página como en Microsoft Edge). Si el archivo se guardó Microsoft Edge, ahora se abrirá en Microsoft Edge.  Este cambio corregirá un problema de representación que se observó al abrir un archivo MHTML en modo IE cuando se guardaba desde Microsoft Edge.
+
+- **Restringir las solicitudes de red privada a contextos seguros.** El acceso a recursos en redes locales (intranet) desde páginas en Internet requiere que esas páginas se entreguen a través de HTTPS. Este cambio se está produciendo en el Chromium proyecto, en el que Microsoft Edge se basa. Para obtener más información, vaya a la [entrada Estado de la plataforma Chrome](https://chromestatus.com/feature/5436853517811712). Hay dos directivas de compatibilidad disponibles para admitir escenarios que necesitan conservar la compatibilidad con páginas no seguras: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) e [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls).
+
+- **Bloquear descargas de contenido mixto.** Las páginas seguras solo descargarán archivos hospedados en otras páginas seguras y las descargas hospedadas en páginas no seguras (que no son HTTPS) se bloquearán si se inician desde una página segura. Este cambio se está produciendo en el Chromium proyecto, en el que Microsoft Edge se basa. Para obtener más información, vaya a la entrada [del blog de seguridad de Google](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html).
+
+- **Habilitar el inicio de sesión implícito para cuentas locales.**   Al habilitar la directiva OnlyOnPremisesImplicitSigninEnabled, solo se habilitarán las cuentas locales para el inicio de sesión implícito.  Microsoft Edge no intentará iniciar sesión implícitamente en cuentas de MSA o AAD. También se detendrán las actualizaciones de cuentas locales a cuentas de AAD.
+
+- **Cuadros de texto de formulario gratuitos agregados a documentos PDF.**  Ahora se admite la adición de cuadros de texto de formularios gratuitos a documentos PDF que puede usar para rellenar formularios y agregar notas visibles.
+
+- **Actualice las contraseñas con facilidad.**  Ahora, el explorador te llevará directamente a la página Cambiar contraseña de un sitio web determinado que te ahorrará tiempo y clics evitando la necesidad de navegar a la página manualmente. Una vez que estés en esta página, el explorador también rellenará automáticamente la contraseña existente y sugerirá una nueva contraseña segura y única.  Tenga en cuenta que actualmente esta característica está disponible en un número limitado de sitios.  
+
+- **Nueva página de configuración de accesibilidad.** Hemos unido la configuración relacionada con la accesibilidad en una sola página. Puede encontrar la nueva página edge://settings/accessibility en la lista de configuración principal. Aquí puedes encontrar la configuración para hacer que la página web sea más grande, mostrar un esquema de alta visibilidad alrededor del área de enfoque y otras configuraciones que pueden ayudar a mejorar la experiencia de navegación web. Seguiremos agregando nueva configuración aquí en versiones futuras de Microsoft Edge.
 
 ## <a name="version-93096133-august-27"></a>Versión 93.0.961.33: 27 de agosto
 
@@ -40,7 +62,7 @@ Se han corregido varios errores y problemas de rendimiento.
 
 ### <a name="feature-updates"></a>Actualizaciones de características
 
-- **Preferencias iniciales en Microsoft Edge.**  A partir Microsoft Edge versión 93, la implementación de Microsoft Edge en su empresa será más fácil con la adición de preferencias iniciales.
+- **Preferencias iniciales en Microsoft Edge.**  A partir Microsoft Edge versión 93, la implementación de Microsoft Edge en su empresa será más fácil con la adición de [preferencias iniciales.](/deployedge/initial-preferences-support-on-microsoft-edge-browser)
 
 - **El modo IE en Microsoft Edge admitirá el comportamiento de "no combinar".**  A partir Microsoft Edge versión 93, el modo IE en Microsoft Edge admitirá "no-merge". Para un usuario final, cuando se inicia una nueva ventana del explorador desde una aplicación de modo IE, estará en una sesión independiente, similar al comportamiento de IE11. Deberá ajustar la lista de sitios para configurar sitios que necesiten impedir el uso compartido de sesiones. En segundo plano, para cada ventana de Microsoft Edge, la primera vez que se visita una pestaña de modo IE dentro de esa ventana, si es uno de los sitios designados para "no combinar", esa ventana se bloquea en una sesión de IE diferente "sin combinar" de todas las demás ventanas de Microsoft Edge al menos hasta que se cierre la última pestaña del modo IE en esa ventana. Obtenga más información [aquí](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-).
 
@@ -144,7 +166,7 @@ Tenga en cuenta que estamos experimentando con esta característica y este compo
 - **Mejoras en la representación de fuentes**. Se han realizado mejoras en la representación del texto para mejorar la claridad y reducir el desenfoque.
 Tenga en cuenta que se trata de un lanzamiento de características controlado. Si no ves esta característica, vuelve en breve mientras continuamos nuestra implementación.
 
-### <a name="policy-updates"></a>Actualizaciones de directivas
+### <a name="policy-updates"></a>Actualizaciones de directiva
 
 #### <a name="new-policies"></a>Nuevas directivas
 

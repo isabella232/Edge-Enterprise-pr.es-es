@@ -11,12 +11,12 @@ metadata:
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Preguntas más frecuentes sobre la implementación de Microsoft Edge en la empresa
-  ms.openlocfilehash: edf0ec730ece83126619519cdd45d20f3271dd99845f4786f29dde32befec2b6
-  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+  ms.openlocfilehash: d4d707533c8733059e8fadc8fe8de9a85b8dc64d
+  ms.sourcegitcommit: 0b23434b719dbeb302edf200a47550ee7b62a86a
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "11725963"
+  ms.lasthandoff: 09/03/2021
+  ms.locfileid: "11938837"
 title: Preguntas más frecuentes (preguntas frecuentes) sobre Microsoft Edge en la empresa
 summary: >
   > [!NOTE]
@@ -28,7 +28,7 @@ sections:
   - question: ¿Cómo puedo saber qué versión de Microsoft Edge tengo?
     answer: >
       En la esquina superior derecha de Microsoft Edge, seleccione el icono de puntos suspensivos (**...**) y, a continuación, **seleccione Configuración**. Selecciona **Acerca de Microsoft Edge** para ver la versión de Microsoft Edge.
-  - question: ¿Qué hay de Internet Explore 11?
+  - question: ¿Qué hay de Internet Explorer 11?
     answer: >
       La aplicación de escritorio de Internet Explorer 11 se retirará y se retirará de la compatibilidad el 15 de junio de 2022 (para obtener una lista de lo que está en el ámbito, vea las preguntas más [frecuentes](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)). Las mismas aplicaciones y sitios de IE11 que use hoy pueden abrirse en Microsoft Edge mediante el uso del modo Internet Explorer. Obtenga más información [aquí](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549).
   - question: ¿Microsoft Edge (basado en Chromium) admite los controles ActiveX y BHO como Silverlight o Java?
@@ -54,7 +54,7 @@ sections:
   - question: ¿Se admiten las preferencias maestras?
     answer: "No, no se admiten las preferencias maestras. \n"
 additionalContent: >-
-  ## <a name="see-also"></a>Consulte también
+  ## <a name="see-also"></a>Consulta también
 
   - [Página de aterrizaje de documentación de Microsoft Edge](./index.yml)
 
