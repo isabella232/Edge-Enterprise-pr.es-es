@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/19/2021
+ms.date: 09/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 3c21b06358d4aa563b67027d65a1aa5fec5f5dfc
-ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
+ms.openlocfilehash: e759a78587c594460b49d6858f127bcac90ff8d3
+ms.sourcegitcommit: a74b88408fcf820706c1ca2fd19d7ef83a1ddd76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11926016"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11938212"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -30,6 +30,34 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan la compatibilidad del sitio próximamente en Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096138-september-02"></a>Versión 93.0.961.38: 02 de septiembre
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployedge/microsoft-edge-relnotes-security#september-02-2021).
+
+### <a name="feature-updates"></a>Actualizaciones de características
+
+- **Preferencias iniciales en Microsoft Edge.**  Microsoft Edge ahora admite un número limitado de preferencias iniciales (anteriormente Preferencias maestras). Los administradores de TI pueden implementar esta configuración como predeterminada antes de que los usuarios ejecuten el explorador por primera vez. Información adicional aquí: configure Microsoft Edge con las [preferencias iniciales para la primera ejecución.](/deployedge/initial-preferences-support-on-microsoft-edge-browser)
+
+- **El modo IE en Microsoft Edge admitirá el comportamiento "sin tiempo de respuesta".**  Para un usuario final, cuando se inicia una nueva ventana del explorador desde una aplicación en modo IE, estará en una sesión independiente, similar al comportamiento de tiempo de respuesta en IE11. Tendrá que ajustar la lista de sitios para configurar los sitios que necesitan evitar el uso compartido de sesiones como "sin tiempo de respuesta". En segundo plano, para cada ventana de Microsoft Edge, la primera vez que se visita una pestaña de modo IE dentro de esa ventana, si es uno de los sitios designados “sin tiempo de respuesta”, esa ventana se bloquea en una sesión de IE sin tiempo de respuesta diferente de todas las demás ventanas de Microsoft Edge al menos hasta que se cierre la última pestaña de “ modo ” IE en esa ventana. Esto se debe al comportamiento anterior en el que los usuarios podían iniciar IE sin tiempo de respuesta y también podían iniciar Microsoft Edge sin tiempo de respuesta a través de otros mecanismos.  Información adicional aquí: [solución de problemas del modo IE y preguntas más frecuentes | Microsoft Docs](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)
+
+- **Nueva directiva para detener el inicio de sesión implícito.**  La directiva [ImplicitSignInEnabled](/deployedge/microsoft-edge-policies#implicitsigninenabled) permite a los administradores del sistema deshabilitar el inicio de sesión implícito en Microsoft Edge exploradores.
+
+- **Directivas para omitir los avisos de ClickOnce y DirectInvoke.** Hemos actualizado nuestras directivas para habilitar la omisión de los mensajes de ClickOnce y la aplicación de DirectInvoke para los tipos de archivo especificados, desde dominios especificados. Para ello, tendrá que:
+
+  - Habilitar [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) o [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
+  - Habilitar la directiva [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) y establecer la lista de tipos de archivo específicos para los que ClickOnce y DirectInvoke deben estar deshabilitados.
+  - Habilitar la directiva [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) y establecer la lista de dominios específicos para los que se deshabilitarán ClickOnce y DirectInvoke.
+
+  Nota: AutoOpenAllowedForURLs es una directiva de apoyo para AutoOpenFileTypes. Si AutoOpenAllowedForURLs no está establecido y AutoOpenFileTypes está establecido, los tipos de archivo enumerados se abrirán automáticamente desde todas las direcciones URL.
+
+- **Grupos de pestañas.**  Estamos activando la agrupación de pestañas, que proporciona la capacidad de clasificar las pestañas en grupos definidos por el usuario y le ayuda a encontrar, cambiar y administrar pestañas de forma más eficaz en varias secuencias de trabajo.  
+
+- **Oculta la barra de título mientras usas pestañas verticales.**  Vuelve a obtener los píxeles adicionales ocultando la barra de título del explorador, en pestañas verticales. Ahora puede ir a edge://settings/appearance y, en la sección Personalizar barra de herramientas, seleccione la opción para ocultar la barra de título en el modo de tabulación vertical.
+
+- **Imagen de vídeo en imagen (PiP) desde la barra de herramientas activable.**  Al mantener el mouse sobre un vídeo compatible, aparecerá una barra de herramientas que le permite ver ese vídeo en una ventana de PiP.  Tenga en cuenta que actualmente está disponible para los usuarios de Microsoft Edge en macOS.  
+
+- **Eliminación de 3DES en TLS. Se quitará la compatibilidad con el conjunto de cifrado TLS_RSA_WITH_3DES_EDE_CBC_SHA.** Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para obtener más información, vaya a la entrada [Estado de la plataforma de Chrome](https://chromestatus.com/feature/6678134168485888). Además, en Microsoft Edge versión 93, la directiva [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) estará disponible para admitir escenarios que necesitan conservar la compatibilidad con servidores obsoletos. Esta directiva de compatibilidad quedará obsoleta y dejará de funcionar en Microsoft Edge versión 95. Asegúrese de actualizar los servidores afectados antes de ese momento.
 
 ## <a name="version-92090284-august-26"></a>Versión 92.0.902.84: 26 de agosto
 
@@ -322,7 +350,7 @@ Se han corregido varios errores y problemas de rendimiento.
 ## <a name="version-89077445-march-4"></a>Versión 89.0.774.45: 4 de marzo
 
 > [!IMPORTANT]
-> Esta actualización contiene [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad. Para más información, vea la [Guía de actualización de Seguridad](https://msrc.microsoft.com/update-guide).
+> Esta actualización contiene [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
 
 Las actualizaciones de seguridad del canal estable se muestran [aquí](./microsoft-edge-relnotes-security.md#march-4-2021).
 
@@ -353,7 +381,7 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](./microso
 
 #### <a name="new-policies"></a>Nuevas directivas
 
-Se han agregado siete directivas nuevas. Descargue las plantillas administrativas actualizadas desde la [Página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se han agregado las siguientes directivas nuevas.
+Se han agregado siete directivas nuevas. Descargue las Plantillas administrativas actualizadas desde la [página de aterrizaje de Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Se han agregado las siguientes directivas nuevas.
 
 - [BrowsingDataLifetime](./microsoft-edge-policies.md#browsingdatalifetime): configuración de la duración de los datos de exploración
 - [MAMEnabled](./microsoft-edge-policies.md#mamenabled): administración de aplicaciones móviles habilitada
