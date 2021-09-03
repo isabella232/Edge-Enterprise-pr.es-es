@@ -1,9 +1,9 @@
 ---
 title: Documentación de directiva de explorador Microsoft Edge
 ms.author: stmoody
-author: AndreaLBarr
+author: dan-wesley
 manager: tahills
-ms.date: 08/31/2021
+ms.date: 08/30/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: 9b71e641af62b0ad56e4f2e9bf52a061dafa52a3
-ms.sourcegitcommit: 5aeaeb85eba7572d1871ad55568a8bea4d4a4e5f
+ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
+ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "11934579"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11936568"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
@@ -254,7 +254,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar SmartScreen de Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forzar a SmartScreen de Microsoft Defender a comprobar las descargas de origen confiable|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -3236,7 +3236,7 @@ Si no establece esta directiva, se utilizará el valor predeterminado global par
 
   - Nombre único de GP: NotificationsBlockedForUrls
   - Nombre de GP: bloquear las notificaciones en sitios determinados
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge / Configuración de contenido
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/Configuración de contenido
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -6283,7 +6283,7 @@ Si deshabilita esta directiva, Microsoft Edge no se comunicará con Intune para 
   ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendada): N/D
+  - Ruta de acceso (recomendado): N/D
   - Nombre del valor: MAMEnabled
   - Tipo de valor: REG_DWORD
 
@@ -7581,7 +7581,7 @@ Use la información anterior al configurar esta directiva.
   ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendada): N/D
+  - Ruta de acceso (recomendado): N/D
   - Nombre del valor: PrintingBackgroundGraphicsDefault
   - Tipo de valor: REG_SZ
 
@@ -9041,7 +9041,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
 
   [Volver al principio](#microsoft-edge---policies)
 
@@ -12435,14 +12435,14 @@ Use la información anterior al configurar esta directiva.
 
   - Nombre único de GP: BrowserSignin
   - Nombre de GP: configuración del inicio de sesión en el explorador
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendada): N/D
+  - Ruta de acceso (recomendado): N/D
   - Nombre del valor: BrowserSignin
   - Tipo de valor: REG_DWORD
 
@@ -19038,7 +19038,7 @@ Use la información anterior al configurar esta directiva.
 
   - Nombre único de GP: InternetExplorerIntegrationSiteRedirect
   - Nombre de GP: especificar el comportamiento de las navegaciones "en la página" de los sitios no configurados cuando se inician desde las páginas en modo Internet Explorer
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -21244,7 +21244,7 @@ Si no se establece, se usa el período predeterminado de 604,8 millones de milis
 
 Se notifica a los usuarios sobre la necesidad de reiniciar un explorador o reiniciar el dispositivo en función de la configuración de directiva [RelaunchNotification](#relaunchnotification) y [RelaunchNotificationPeriod](#relaunchnotificationperiod). Los exploradores y dispositivos se reinician a la fuerza al final del período de notificación cuando la directiva [RelaunchNotification](#relaunchnotification) se establece en "Obligatorio". Esta directiva RelaunchWindow se puede usar para aplazar el final del período de notificación de modo que esté dentro de una ventana de tiempo específica.
 
-Si no configura esta directiva, la ventana de tiempo de destino predeterminada para Microsoft Edge es entre las 2 a. m. y las 4 a. m. La ventana de tiempo de destino predeterminada para Microsoft Edge es todo el día (por ejemplo, el final del período de notificación nunca se aplaza).
+Si no configura esta directiva, el período de tiempo de destino predeterminado es todo el día (es decir, el final del período de notificación nunca se aplaza).
 
 Nota: Aunque la directiva puede aceptar varios elementos en las entradas, se omiten todos los elementos menos el primero.
 Advertencia: Configurar esta directiva puede retrasar la aplicación de las actualizaciones de software.
@@ -22840,7 +22840,7 @@ Si no se configura esta directiva:
 
   - Nombre único de GP: ShowMicrosoftRewards
   - Nombre de GP: Mostrar las experiencias de Microsoft Rewards
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendada): Plantillas administrativas/Microsoft Edge: configuración predeterminada (los usuarios pueden reemplazarla)
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -23805,7 +23805,7 @@ Esta Directiva no afecta a las conexiones basadas en QUIC. QUIC puede apagarse a
   ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - Ruta de acceso (recomendada): N/D
+  - Ruta de acceso (recomendado): N/D
   - Nombre del valor: 1, 2, 3, ...
   - Tipo de valor: lista de REG_SZ
 
@@ -23940,7 +23940,7 @@ Esta directiva estará obsoleta en La versión 95 de Microsoft Edge.
   ##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
 
   - Ruta de acceso (obligatoria): SOFTWARE\Directivas\Microsoft\Microsoft Edge
-  - Ruta de acceso (recomendada): N/D
+  - Ruta de acceso (recomendado): N/D
   - Nombre del valor: TargetBlankImpliesNoOpener
   - Tipo de valor: REG_DWORD
 
@@ -25270,7 +25270,7 @@ Si establece esta directiva como falsa o no la establece, las características d
 
   - Nombre único de GP: WebComponentsV0Enabled
   - Nombre GP: vuelva a habilitar los componentes Web API V0 hasta M84 (obsoleto)
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
