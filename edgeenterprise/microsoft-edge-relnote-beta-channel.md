@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/02/2021
+ms.date: 09/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: 993e91faeadf9e734af421bf46c4fca9953fa320
-ms.sourcegitcommit: 9f7324ff156de0a0c75e2217104e543f182649f2
+ms.openlocfilehash: d455b2ccab734ba8792754b81994ac381b974f73
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11938313"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980231"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
@@ -23,6 +23,10 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 > [!NOTE]
 > La plataforma web de Microsoft Edge evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan la compatibilidad del sitio próximamente en Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099214-september-7"></a>Versión 94.0.992.14: 7 de septiembre
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-9409929-september-2"></a>Versión 94.0.992.9: 2 de septiembre
 
@@ -34,9 +38,9 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 
 - **Mejoras en el comportamiento predeterminado de abrir archivos MHTML.**  Los archivos MHTML seguirán abiertos en modo IE si el modo IE está habilitado, a menos que el archivo MHTML se haya guardado desde Microsoft Edge (mediante las opciones Guardar como o Guardar página como en Microsoft Edge). Si el archivo se guardó Microsoft Edge, ahora se abrirá en Microsoft Edge.  Este cambio corregirá un problema de representación que se observó al abrir un archivo MHTML en modo IE cuando se guardaba desde Microsoft Edge.
 
-- **Restringir las solicitudes de red privada a contextos seguros.** El acceso a recursos en redes locales (intranet) desde páginas en Internet requiere que esas páginas se entreguen a través de HTTPS. Este cambio se está produciendo en el Chromium proyecto, en el que Microsoft Edge se basa. Para obtener más información, vaya a la [entrada Estado de la plataforma Chrome](https://chromestatus.com/feature/5436853517811712). Hay dos directivas de compatibilidad disponibles para admitir escenarios que necesitan conservar la compatibilidad con páginas no seguras: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) e [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls).
+- **Restringir las solicitudes de red privada a contextos seguros.** El acceso a recursos en redes locales (intranet) desde páginas en Internet requiere que esas páginas se entreguen a través de HTTPS. Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para obtener más información, vaya a la entrada [Estado de la plataforma de Chrome](https://chromestatus.com/feature/5436853517811712). Hay dos directivas de compatibilidad disponibles para admitir escenarios que necesitan conservar la compatibilidad con páginas no seguras: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) e [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls).
 
-- **Bloquear descargas de contenido mixto.** Las páginas seguras solo descargarán archivos hospedados en otras páginas seguras y las descargas hospedadas en páginas no seguras (que no son HTTPS) se bloquearán si se inician desde una página segura. Este cambio se está produciendo en el Chromium proyecto, en el que Microsoft Edge se basa. Para obtener más información, vaya a la entrada [del blog de seguridad de Google](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html).
+- **Bloquear descargas de contenido mixto.** Las páginas seguras solo descargarán archivos hospedados en otras páginas seguras y las descargas hospedadas en páginas no seguras (que no son HTTPS) se bloquearán si se inician desde una página segura. Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para obtener más información, vaya a la entrada [del blog de seguridad de Google](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html).
 
 - **Habilitar el inicio de sesión implícito para cuentas locales.**   Al habilitar la directiva OnlyOnPremisesImplicitSigninEnabled, solo se habilitarán las cuentas locales para el inicio de sesión implícito.  Microsoft Edge no intentará iniciar sesión implícitamente en cuentas de MSA o AAD. También se detendrán las actualizaciones de cuentas locales a cuentas de AAD.
 
@@ -45,6 +49,16 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 - **Actualice las contraseñas con facilidad.**  Ahora, el explorador te llevará directamente a la página Cambiar contraseña de un sitio web determinado que te ahorrará tiempo y clics evitando la necesidad de navegar a la página manualmente. Una vez que estés en esta página, el explorador también rellenará automáticamente la contraseña existente y sugerirá una nueva contraseña segura y única.  Tenga en cuenta que actualmente esta característica está disponible en un número limitado de sitios.  
 
 - **Nueva página de configuración de accesibilidad.** Hemos unido la configuración relacionada con la accesibilidad en una sola página. Puede encontrar la nueva página edge://settings/accessibility en la lista de configuración principal. Aquí puedes encontrar la configuración para hacer que la página web sea más grande, mostrar un esquema de alta visibilidad alrededor del área de enfoque y otras configuraciones que pueden ayudar a mejorar la experiencia de navegación web. Seguiremos agregando nueva configuración aquí en versiones futuras de Microsoft Edge.
+
+***Nuevas directivas***
+
+- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Omitir la configuración de la lista de sitios de Application Guard y examinar Edge normalmente
+- [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) Solo cuenta local habilitada para el inicio de sesión implícito
+- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) Habilitar la compatibilidad con Windows reglas de tabla de enrutamiento del sistema operativo al realizar conexiones punto a punto a través de WebRTC
+
+***Directiva obsoleta***
+
+- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) Habilitar la característica User-Agent sugerencias de cliente
 
 ## <a name="version-93096133-august-27"></a>Versión 93.0.961.33: 27 de agosto
 
@@ -64,20 +78,20 @@ Se han corregido varios errores y problemas de rendimiento.
 
 - **Preferencias iniciales en Microsoft Edge.**  A partir Microsoft Edge versión 93, la implementación de Microsoft Edge en su empresa será más fácil con la adición de [preferencias iniciales.](/deployedge/initial-preferences-support-on-microsoft-edge-browser)
 
-- **El modo IE en Microsoft Edge admitirá el comportamiento de "no combinar".**  A partir Microsoft Edge versión 93, el modo IE en Microsoft Edge admitirá "no-merge". Para un usuario final, cuando se inicia una nueva ventana del explorador desde una aplicación de modo IE, estará en una sesión independiente, similar al comportamiento de IE11. Deberá ajustar la lista de sitios para configurar sitios que necesiten impedir el uso compartido de sesiones. En segundo plano, para cada ventana de Microsoft Edge, la primera vez que se visita una pestaña de modo IE dentro de esa ventana, si es uno de los sitios designados para "no combinar", esa ventana se bloquea en una sesión de IE diferente "sin combinar" de todas las demás ventanas de Microsoft Edge al menos hasta que se cierre la última pestaña del modo IE en esa ventana. Obtenga más información [aquí](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-).
+- **El modo IE en Microsoft Edge admitirá el comportamiento "sin tiempo de respuesta".**  A partir Microsoft Edge versión 93, el modo IE en Microsoft Edge admitirá "no-merge". Para un usuario final, cuando se inicia una nueva ventana del explorador desde una aplicación de modo IE, estará en una sesión independiente, similar al comportamiento de IE11. Deberá ajustar la lista de sitios para configurar sitios que necesiten impedir el uso compartido de sesiones. En segundo plano, para cada ventana de Microsoft Edge, la primera vez que se visita una pestaña de modo IE dentro de esa ventana, si es uno de los sitios designados “sin tiempo de respuesta”, esa ventana se bloquea en una sesión de IE sin tiempo de respuesta diferente de todas las demás ventanas de Microsoft Edge al menos hasta que se cierre la última pestaña de “ modo ” IE en esa ventana. Obtenga más información [aquí](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-).
 
 - **Grupos de pestañas.**  La capacidad de clasificar las pestañas en grupos definidos por el usuario le ayuda a encontrar, cambiar y administrar pestañas de forma más eficaz en varias secuencias de trabajo. Para habilitar esto, estamos activando la agrupación de pestañas a partir Microsoft Edge versión 93.
 
-- **Ocultar la barra de título mientras se usan pestañas verticales.**  Recuperar los pocos píxeles extra ocultando la barra de título del explorador, mientras que en pestañas verticales. A partir Microsoft Edge versión 93, puedes ir a edge://settings/appearance y, en la sección Personalizar barra de herramientas, selecciona la opción para ocultar la barra de título mientras estás en modo pestaña vertical.
+- **Oculta la barra de título mientras usas pestañas verticales.**  Vuelve a obtener los píxeles adicionales ocultando la barra de título del explorador, en pestañas verticales. A partir Microsoft Edge versión 93, puedes ir a edge://settings/appearance y, en la sección Personalizar barra de herramientas, selecciona la opción para ocultar la barra de título mientras estás en modo pestaña vertical.
 
-- **Imagen de vídeo en imagen (PiP) de la barra de herramientas activada.**  A partir Microsoft Edge versión 93, será aún más fácil entrar en modo Imagen en imagen (PiP). Cuando mantengas el mouse sobre un vídeo compatible, aparecerá una barra de herramientas que te permite ver ese vídeo en una ventana de PiP.  Nota: esta opción está disponible actualmente para Microsoft Edge usuarios en macOS.  Revierta en breve mientras continuamos nuestra implementación para Windows usuarios.
+- **Imagen de vídeo en imagen (PiP) desde la barra de herramientas activable.**  A partir Microsoft Edge versión 93, será aún más fácil entrar en modo Imagen en imagen (PiP). Al mantener el mouse sobre un vídeo compatible, aparecerá una barra de herramientas que le permite ver ese vídeo en una ventana de PiP.  Nota: esta opción está disponible actualmente para Microsoft Edge usuarios en macOS.  Revierta en breve mientras continuamos nuestra implementación para Windows usuarios.
 
-- **Eliminación de 3DES en TLS.**  A partir Microsoft Edge versión 93, se quitará la compatibilidad TLS_RSA_WITH_3DES_EDE_CBC_SHA conjunto de cifrado. Este cambio se está produciendo en el Chromium proyecto, en el que Microsoft Edge se basa. Para obtener más información, vaya a la [entrada Estado de la plataforma Chrome](https://chromestatus.com/feature/6678134168485888). Además, en Microsoft Edge versión 93, la directiva [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) estará disponible para admitir escenarios que necesitan conservar la compatibilidad con servidores obsoletos. Esta directiva de compatibilidad se volverá obsoleta y dejará de funcionar en Microsoft Edge versión 95. Asegúrese de actualizar los servidores afectados antes de ese momento.
+- **Eliminación de 3DES en TLS.**  A partir Microsoft Edge versión 93, se quitará la compatibilidad TLS_RSA_WITH_3DES_EDE_CBC_SHA conjunto de cifrado. Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para obtener más información, vaya a la entrada [Estado de la plataforma de Chrome](https://chromestatus.com/feature/6678134168485888). Además, en Microsoft Edge versión 93, la directiva [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) estará disponible para admitir escenarios que necesitan conservar la compatibilidad con servidores obsoletos. Esta directiva de compatibilidad quedará obsoleta y dejará de funcionar en Microsoft Edge versión 95. Asegúrese de actualizar los servidores afectados antes de ese momento.
 
-- **Directivas para omitir ClickOnce mensajes de DirectInvoke.**  Hemos actualizado nuestras directivas para habilitar la omisión de mensajes de ClickOnce y la aplicación de DirectInvoke para tipos de archivo especificados, desde dominios especificados. Para ello, tendrá que:
+- **Directivas para omitir los avisos de ClickOnce y DirectInvoke.**  Hemos actualizado nuestras directivas para habilitar la omisión de los mensajes de ClickOnce y la aplicación de DirectInvoke para los tipos de archivo especificados, desde dominios especificados. Para ello, tendrá que:
 
   - Habilitar [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) o [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
-  - Habilitar [la directiva AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) y establecer la lista de tipos de archivo específicos para los que ClickOnce y DirectInvoke deben deshabilitarse
+  - Habilitar la directiva [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) y establecer la lista de tipos de archivo específicos para los que ClickOnce y DirectInvoke deben estar deshabilitados.
   - Habilitar la [directiva AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) y establecer la lista de dominios específicos para los que ClickOnce y DirectInvoke se deshabilitarán
 
   Nota: AutoOpenAllowedForURLs es una directiva de apoyo para AutoOpenFileTypes. Si AutoOpenAllowedForURLs no está establecido y AutoOpenFileTypes está establecido, los tipos de archivo enumerados se abrirán automáticamente desde todas las direcciones URL.

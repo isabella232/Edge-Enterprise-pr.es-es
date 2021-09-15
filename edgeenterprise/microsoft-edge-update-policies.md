@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de todas las directivas admitidas por Microsoft Edge Update
-ms.openlocfilehash: 7b6043ecb96cb30ee9b51fc9966f925b223e72f29ac325ad06208d743f60e18f
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724873"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980081"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge: Directivas de actualización
 
@@ -400,7 +400,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
-### <a name="UpdaterExperimentationAndConfigurationServiceControl"></a>UpdaterExperimentationAndConfigurationServiceControl
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>Recuperar configuraciones y experimentos
 >Microsoft Edge Update 1.3.145.1 y versiones posteriores
 

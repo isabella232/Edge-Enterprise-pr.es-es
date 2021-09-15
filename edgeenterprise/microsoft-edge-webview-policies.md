@@ -12,11 +12,11 @@ ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
 ms.openlocfilehash: b0a7949d71ca037e1adf02b71637f5b1e7351cce
-ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11936548"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980481"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2: directivas
 
@@ -160,7 +160,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, V
   [Volver al principio](#microsoft-edge-webview2---policies)
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

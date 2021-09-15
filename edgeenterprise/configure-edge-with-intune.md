@@ -11,11 +11,11 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Configurar la directiva de Microsoft Edge para Windows con Microsoft Intune.
 ms.openlocfilehash: 63eb29018bf4ec9c5a32d11b215f422e150383c9
-ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "11907264"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979832"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Configurar la directiva de Microsoft Edge con Microsoft Intune
 

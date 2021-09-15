@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Obtenga más información sobre el lector de PDF en Microsoft Edge.
-ms.openlocfilehash: b15632f75499e8271d38d85fd1a713a03f9171f896febbd59093fcc2585b3f37
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: e8cf690f818e0fa103aa4f17154d9f95431287b5
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725023"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979595"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Lector de PDF en Microsoft Edge
 

@@ -3,23 +3,31 @@ title: Notas de la versión para las actualizaciones de seguridad de Microsoft E
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/02/2021
+ms.date: 09/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
-ms.openlocfilehash: e44339eed45620fa6fe4b76e5b201e2308baa69f
-ms.sourcegitcommit: 9f7324ff156de0a0c75e2217104e543f182649f2
+ms.openlocfilehash: 04efca8825edd3764954dbf1455321bd1b4475ef
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11938314"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980212"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
 
-Estas notas de la versión proporcionan información sobre las correcciones de seguridad que se incluyen en las actualizaciones del Canal estable de Microsoft Edge.
+Estas notas de la versión han proporcionado información sobre las correcciones de seguridad que se incluyen en las actualizaciones del Canal estable de Microsoft Edge.
+
+## <a name="september-9-2021"></a>9 de septiembre de 2021
+
+Microsoft ha lanzado el último canal estable de **Microsoft Edge (versión 93.0.961.44)** que incorpora las últimas actualizaciones de seguridad del Chromium proyecto. Para obtener más información, vea la [Guía de actualizaciones de seguridad](https://msrc.microsoft.com/update-guide)
+
+Esta actualización contiene la siguiente actualización específica de Microsoft Edge:
+
+- [CVE-2021-38669](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38669)
 
 ## <a name="september-2-2021"></a>2 de septiembre de 2021
 
@@ -27,11 +35,11 @@ Microsoft ha publicado el canal estable de  **Microsoft Edge más reciente (ve
 
 Esta actualización contiene la siguiente actualización específica de Microsoft Edge:
 
-- [CVE-2021-26436](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26436)
 - [CVE-2021-36930](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36930)
+- [CVE-2021-26436](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26436)
+- [CVE-2021-26439](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26439)
 - [CVE-2021-38641](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38641)
 - [CVE-2021-38642](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38642)
-- [CVE-2021-38670](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38670)
 
 ## <a name="august-19-2021"></a>19 de agosto de 2021
 

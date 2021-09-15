@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Usar directivas de grupo para administrar extensiones de Microsoft Edge en la empresa
-ms.openlocfilehash: 9aa727bc199966bc70b5a52b7dbcdd16f2aed705f253bfef366f4faa9c2085d9
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: dad239a448ec1f0ebef60c7072bfaad5c3baed57
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726231"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980241"
 ---
 # <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>Usar directivas de grupo para administrar extensiones de Microsoft Edge
 

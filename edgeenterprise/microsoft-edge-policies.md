@@ -12,11 +12,11 @@ ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
 ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
-ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11936568"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979942"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
@@ -254,7 +254,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar SmartScreen de Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forzar a SmartScreen de Microsoft Defender a comprobar las descargas de origen confiable|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -9041,7 +9041,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
 
   [Volver al principio](#microsoft-edge---policies)
 
@@ -19170,7 +19170,7 @@ Use la información anterior al configurar esta directiva.
 
   - Nombre único de GP: IntranetRedirectBehavior
   - Nombre de GP: comportamiento de redirección de intranet
-  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/Microsoft Edge/
+  - Ruta de acceso de GP (obligatoria): Plantillas administrativas/ Microsoft Edge/
   - Ruta de acceso de GP (recomendado): N/D
   - Nombre de archivo de ADMX GP: MSEdge.admx
 
@@ -25932,7 +25932,7 @@ Si no se establece esta directiva, se habilitará la detección de ventanas ocul
   [Volver al principio](#microsoft-edge---policies)
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
 - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
