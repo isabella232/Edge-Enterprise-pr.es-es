@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de la versión archivadas para el canal estable de Microsoft Edge
-ms.openlocfilehash: 662ebb40ce14714365b257a1a6127960df6baf90ecc8106cec5e49f35b9c51ea
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: d50da924c3c78e38eb55b30cf219145d19fe9816
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727443"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980162"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión archivadas para el canal estable de Microsoft Edge
 
@@ -508,7 +508,7 @@ Las actualizaciones de seguridad se muestran [aquí](./microsoft-edge-relnotes-s
 
 #### <a name="new-policies"></a>Nuevas directivas
 
-Se han agregado siete directivas nuevas. Descargue las plantillas administrativas actualizadas desde la [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Se han agregado las siguientes directivas nuevas.
+Se han agregado siete directivas nuevas. Descargue las Plantillas administrativas actualizadas desde la [página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Se han agregado las siguientes directivas nuevas.
 
 - [AppCacheForceEnabled](./microsoft-edge-policies.md#appcacheforceenabled): permite volver a habilitar la característica AppCache, incluso si está desactivada de forma predeterminada.
 - [ApplicationGuardContainerProxy](./microsoft-edge-policies.md#applicationguardcontainerproxy): configurar las opciones del contenedor proxy de Protección de aplicaciones.

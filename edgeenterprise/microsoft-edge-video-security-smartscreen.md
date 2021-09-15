@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Exploración segura en Microsoft Edge con SmartScreen de Microsoft Defender
-ms.openlocfilehash: 7de4ea75351ef65b70a399ba22b242ff988454ce0378191316f896aedc2d45d3
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 41f32daf407dafd3babafc1ce88ba5ee621921cf
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725702"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980132"
 ---
 # <a name="video-secure-browsing-on-microsoft-edge"></a>Vídeo: Exploración segura en Microsoft Edge
 
