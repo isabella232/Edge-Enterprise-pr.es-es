@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Compatibilidad con preferencias iniciales en Microsoft Edge explorador.
-ms.openlocfilehash: 39af88d21107ad548166c749c3ba765754270b48
-ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
+ms.openlocfilehash: 7a497fd2f3305b0c027a396936ef86bacbcb5b20
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "11882266"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979821"
 ---
 # <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Configurar Microsoft Edge con las preferencias iniciales para la primera ejecución
 
@@ -48,11 +48,11 @@ A continuación se muestra la lista de opciones de preferencias que admite actua
 | página principal | Homepage_url |
 | homepage_is_newtabpage | homepage_is_newtabpage |
 | Sesión | restore_on_startup<br>startup_urls |
-| Extensiones | Extensiones : configuración |
+| Extensions | Extensiones : configuración |
 
 ## <a name="1-download-an-example-initial_preferences-file"></a>1: Descargar un archivo de initial_preferences ejemplo
 
-Para empezar, descargue el ejemplo de initial_preferences *formulario* de esta ubicación en la [Microsoft Edge Enterprise de](https://www.microsoft.com/edge/business/download) aterrizaje y **siga** los pasos que se indican a continuación.
+Para empezar, descargue el archivo "Directiva" desde la [Microsoft Edge Enterprise de aterrizaje](https://www.microsoft.com/edge/business/download). Extraiga los archivos y abra el `initial_preferences` archivo dentro de la `examples` carpeta.
 
 ## <a name="2-customize-and-validate-the-initial_preferences-file"></a>2: Personalizar y validar el initial_preferences archivo
 
@@ -86,6 +86,6 @@ Implemente *el archivo initial_preferences* en los dispositivos de los usuarios 
 
 Las preferencias iniciales solo tendrán efecto cuando el archivo initial_preferences se implemente antes de que los usuarios finales ejecuten por primera vez el explorador.  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [El *initial_prefrences* de plantilla de ejemplo](https://www.microsoft.com/edge/business/download)
