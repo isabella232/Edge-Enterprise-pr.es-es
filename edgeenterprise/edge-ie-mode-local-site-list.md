@@ -3,19 +3,19 @@ title: Lista de sitios local para el modo IE
 ms.author: shisub
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/20/2021
+ms.date: 09/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Obtenga información sobre cómo habilitar listas de sitios locales y acceso fácil al modo IE
-ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 8130a835cd803f5cdeb50f825ccee895f35f62e3
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979761"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016569"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>Lista de sitios local para el modo IE
 
@@ -53,9 +53,10 @@ Para habilitar la experiencia de lista de sitios local, los usuarios pueden ir a
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/internet-explorer-compatibilitiy.png" alt-text="Compatibilidad con Internet Explorer":::
 
->[! Nota:]  
-
->1. Si ha habilitado las pruebas del modo IE a través de la directiva *InternetExplorerIntegrationTestingAllowed,* verá esta configuración, pero se mostrará en gris a menos que habilite explícitamente la directiva *InternetExplorerIntegrationReloadInIEModeAllowed.*  
+>[!Note]  
+>
+>1. Si ha habilitado las pruebas del modo IE a través de la directiva *InternetExplorerIntegrationTestingAllowed,* verá esta configuración, pero se mostrará en gris a menos que habilite explícitamente la directiva *InternetExplorerIntegrationReloadInIEModeAllowed.*
+>
 >2. Si **Permitir que los** sitios se vuelvan a cargar en modo Internet Explorer está establecido en Predeterminado, es posible que los usuarios puedan volver a cargar sitios en modo IE si tienen uso de Internet Explorer 11 existente. ****  
 
 Cuando esta configuración está habilitada, los usuarios pueden volver a cargar un sitio en modo IE seleccionando Configuración y más **(el**icono de puntos suspensivos ...) > Recargar en modo Internet Explorer . Los usuarios también pueden seleccionar la pestaña Volver a cargar en modo **Internet Explorer** cuando hacen clic con el botón secundario en una pestaña o cuando hacen clic con el botón secundario en un vínculo, elija Abrir vínculo en la nueva pestaña modo de **Internet Explorer.**

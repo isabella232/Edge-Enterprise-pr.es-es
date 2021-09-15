@@ -4,19 +4,19 @@ metadata:
   ms.author: shisub
   author: AndreaLBarr
   manager: srugh
-  ms.date: 08/31/2021
+  ms.date: 09/31/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Solución de problemas y preguntas frecuentes para el modo Internet Explorer de Microsoft Edge
-  ms.openlocfilehash: 591d963ed807c65b580e74fe10ad989bdceb852e
-  ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+  ms.openlocfilehash: b332f6b7399627e91d7dd51c624c3d56f9317ee5
+  ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/12/2021
-  ms.locfileid: "11980022"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "12016539"
 title: Solución de problemas del modo IE y preguntas frecuentes
 summary: >
   >[!Note]
@@ -79,8 +79,7 @@ sections:
 
 
       Para comprobar que Microsoft Edge está instalado en el nivel del sistema, escriba "edge://version" en la barra de direcciones de Microsoft Edge. La ruta de acceso del archivo ejecutable mostrará una ruta de acceso que comenzará por *C:\Archivos de programa*, lo que indica una instalación del sistema. Si la ruta del archivo ejecutable comienza por "C:\Usuarios", desinstale y vuelva a instalar Microsoft Edge con privilegios de administrador.
-  - question: >
-      Mensaje de error: "Para abrir esta página en modo IE, prueba a reiniciar Microsoft Edge".
+  - question: Recibir el mensaje de error "Para abrir esta página en modo IE, intente reiniciar Microsoft Edge".
     answer: >
       Es posible que vea este error si se ha producido un error inesperado en Internet Explorer. Por lo general, el reinicio de Microsoft Edge soluciona este error.
   - question: >
@@ -99,7 +98,18 @@ sections:
       Sí, la aplicación de escritorio de Internet Explorer 11 se retirará y se retirará del soporte técnico el 15 de junio de 2022 (para obtener una lista de lo que está en el ámbito, Preguntas más frecuentes sobre el ciclo de vida [- Internet Explorer](https://support.microsoft.com/help/17454/). Las mismas aplicaciones y sitios de IE11 que usas hoy pueden abrirse en Microsoft Edge con el modo de Internet Explorer. [Más información aquí](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
   - question: >
       ¿Cómo puedo depurar mi aplicación heredada mientras se usa el modo IE en Microsoft Edge?
-    answer: "Puede usar IEChooser para iniciar Internet Explorer DevTools para depurar el contenido de las pestañas del modo IE. Para usar IEChooser, siga estos pasos.\n1. Abra IEChooser.\n    - Abrir el cuadro de diálogo Ejecutar Por ejemplo, presione `Windows logo key`  +  `R` .\n    - Escriba `%systemroot%\\system32\\f12\\IEChooser.exe` y, a continuación, **seleccione Aceptar**.\n2. En IEChooser, seleccione la entrada para la pestaña Modo IE.\n  \n"
+    answer: >
+      Puede usar IEChooser para iniciar Internet Explorer DevTools para depurar el contenido de las pestañas del modo IE. Para usar IEChooser, siga estos pasos.
+
+      1. Abra IEChooser.
+          - Abrir el cuadro de diálogo Ejecutar Por ejemplo, presione `Windows logo key`  +  `R` .
+          - Escriba `%systemroot%\system32\f12\IEChooser.exe` y, a continuación, **seleccione Aceptar**.
+      2. En IEChooser, seleccione la entrada para la pestaña Modo IE.
+  - question: ¿Puedo probar un sitio en Microsoft Edge mientras está configurado para abrir el modo IE en la lista de sitios Enterprise modo de acceso?
+    answer: >-
+      Sí, mientras moderniza los sitios heredados, puede probar las aplicaciones configuradas del modo IE en Microsoft Edge. Para ello, puede ejecutar Microsoft Edge con la marca `--ie-mode-test` de línea de comandos. Asegúrese de que no hay otras instancias Microsoft Edge ejecución.
+
+      A continuación, puede seleccionar Configuración y más (el icono de puntos suspensivos ...) > Más herramientas > Abrir sitios en modo perimetral.
   - question: >
       ¿Puedo usar "Abrir con el Explorador" o "Ver en el Explorador de archivos" en SharePoint con el modo IE?
     answer: >
