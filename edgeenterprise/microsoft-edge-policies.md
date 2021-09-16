@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de Windows y Mac para todas las directivas admitidas por Explorador Microsoft Edge
-ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 44dac3dd6bb489ac43e50433319b0a7908495df5
+ms.sourcegitcommit: 6eefb7cb134f25a1e2d1f515a3a8600524a4b6e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979942"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "12017994"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge: directivas
 
@@ -1914,7 +1914,8 @@ Use la información anterior al configurar esta directiva.
 
   Esta directiva no funciona porque Microsoft Edge ya no admite Flash.
 
-[PluginsAllowedForUrls](#pluginsallowedforurls) y [PluginsBlockedForUrls](#pluginsblockedforurls) se comprueban primero y, después, esta directiva. Las opciones son "ClickToPlay" y "BlockPlugins". Si establece esta directiva en "BlockPlugins", este complemento será denegado para todos los sitios web. "ClickToPlay" permite ejecutar el complemento Flash, pero los usuarios deben hacer clic en el marcador de posición para iniciarlo.
+
+            [PluginsAllowedForUrls](#pluginsallowedforurls) y [PluginsBlockedForUrls](#pluginsblockedforurls) se comprueban primero y, después, esta directiva. Las opciones son "ClickToPlay" y "BlockPlugins". Si establece esta directiva en "BlockPlugins", este complemento será denegado para todos los sitios web. "ClickToPlay" permite ejecutar el complemento Flash, pero los usuarios deben hacer clic en el marcador de posición para iniciarlo.
 
 Si no configura esta directiva, el usuario puede cambiar esta configuración manualmente.
 
@@ -8343,10 +8344,18 @@ Si no configura esta directiva, los usuarios podrán elegir su propia configurac
 
 Esta directiva reemplaza las siguientes directivas individuales:
 
-[ProxyMode](#proxymode)
-[ProxyPacUrl](#proxypacurl)
-[ProxyServer](#proxyserver)
-[ProxyBypassList](#proxybypasslist)
+
+            [ProxyMode](#proxymode)
+            
+
+            [ProxyPacUrl](#proxypacurl)
+            
+
+            [ProxyServer](#proxyserver)
+            
+
+            [ProxyBypassList](#proxybypasslist)
+          
 
 La configuración de la directiva [ProxySettings](#proxysettings) acepta los siguientes campos:
   * ProxyMode, que permite especificar el servidor proxy utilizado por Microsoft Edge y evita que los usuarios cambien la configuración del proxy
@@ -13721,9 +13730,11 @@ Use la información anterior al configurar esta directiva.
 
   ### <a name="configureviewinfileexplorer"></a>ConfigureViewInFileExplorer
 
-  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Configurar la característica Vista en el Explorador de archivos para páginas de SharePoint en Microsoft Edge
+  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Configurar la característica Ver en Explorador de archivos para páginas de SharePoint en Microsoft Edge
 
-  
+> [!NOTE]
+> Actualmente, la directiva ConfigureViewInFileExplorer solo se puede aplicar a instancias de Windows unidas a un dominio de Microsoft Active Directory o en las instancias de Windows 10 Pro o Enterprise que están inscritas para la administración de dispositivos.
+
   
   #### <a name="supported-versions"></a>Versiones compatibles:
 
@@ -16662,7 +16673,8 @@ Si no configura esta directiva, los usuarios podrán activar o desactivar la sin
 
 Para que esta directiva funcione correctamente, la directiva [BrowserSignin](#browsersignin) no debe estar configurada, o bien debe establecerse como habilitada. Si [BrowserSignin](#browsersignin) está establecido como deshabilitado, [ForceSync](#forcesync) no tendrá efecto.
 
-[SyncDisabled](#syncdisabled) no debe estar configurado o debe establecerse como "Falso". Si se establece como "Verdadero", [ForceSync](#forcesync) no tendrá efecto.
+
+            [SyncDisabled](#syncdisabled) no debe estar configurado o debe establecerse como "Falso". Si se establece como "Verdadero", [ForceSync](#forcesync) no tendrá efecto.
 
 0 = No iniciar automáticamente la sincronización y mostrar el consentimiento de sincronización (predeterminado) 1 = Forzar la activación de la sincronización para el perfil de usuario de Azure AD o Azure AD degradado y no mostrar la solicitud de consentimiento de sincronización
 
@@ -17188,19 +17200,40 @@ Si deshabilita o no configura esta directiva, se mostrará la primera vista de W
 
 Nota: Las opciones específicas de configuración que se muestran al usuario en la primera vista de Windows, también se pueden administrar mediante el uso de otras directivas específicas. Puede usar la directiva HideFirstRunExperience junto a estas directivas para configurar una experiencia de navegación específica en sus dispositivos administrados. Entre estas directivas se encuentran:
 
--[AutoImportAtFirstRun](#autoimportatfirstrun)
 
--[NewTabPageLocation](#newtabpagelocation)
+            -
+            [AutoImportAtFirstRun](#autoimportatfirstrun)
+          
 
--[NewTabPageSetFeedType](#newtabpagesetfeedtype)
 
--[ForceSync](#forcesync)
+            -
+            [NewTabPageLocation](#newtabpagelocation)
+          
 
--[SyncDisabled](#syncdisabled)
 
--[BrowserSignin](#browsersignin)
+            -
+            [NewTabPageSetFeedType](#newtabpagesetfeedtype)
+          
 
--[NonRemovableProfileEnabled](#nonremovableprofileenabled)
+
+            -
+            [ForceSync](#forcesync)
+          
+
+
+            -
+            [SyncDisabled](#syncdisabled)
+          
+
+
+            -
+            [BrowserSignin](#browsersignin)
+          
+
+
+            -
+            [NonRemovableProfileEnabled](#nonremovableprofileenabled)
+          
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -17325,7 +17358,8 @@ Si no se configura esta directiva, se importarán los datos de autorrelleno dura
 
 Puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará los datos de autorelleno durante la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción de **datos de autorelleno** en la importación manual.
 
-**Nota**: actualmente, esta directiva administra la importación desde los exploradores Google Chrome (en Windows 7, 8 y 10 y en macOS) y Mozilla Firefox (en Windows 7, 8 y 10 y en macOS).
+
+            **Nota**: actualmente, esta directiva administra la importación desde los exploradores Google Chrome (en Windows 7, 8 y 10 y en macOS) y Mozilla Firefox (en Windows 7, 8 y 10 y en macOS).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -17393,7 +17427,8 @@ Si no configura esta directiva, se importará la configuración del explorador d
 
 También puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará la configuración durante la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción de la **configuración del explorador** en la importación manual.
 
-**Nota**: actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8 y 10 y en macOS).
+
+            **Nota**: actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8 y 10 y en macOS).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -17459,7 +17494,8 @@ Si no configura esta directiva, las cookies no importarán durante la primera ej
 
 También puede establecer esta directiva como una recomendación. Esto quiere decir que Microsoft Edge importará las cookies durante la primera ejecución.
 
-**Nota**: actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8 y 10 y en macOS).
+
+            **Nota**: actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8 y 10 y en macOS).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -17527,7 +17563,8 @@ Si no configura esta directiva, se importarán las extensiones durante la primer
 
 También puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará las extensiones durante la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción de los**favoritos** en la importación manual.
 
-**Nota**: actualmente, esta directiva solo admite la importación de Google Chrome (en Windows 7, 8 y 10 y en macOS).
+
+            **Nota**: actualmente, esta directiva solo admite la importación de Google Chrome (en Windows 7, 8 y 10 y en macOS).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -17595,7 +17632,8 @@ Si no configura esta directiva, se importarán los favoritos durante la primera 
 
 También puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará los favoritos durante la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción de los**favoritos** en la importación manual.
 
-**Nota**: actualmente, esta directiva administra la importación desde los exploradores Internet Explorer (en Windows 7, 8 y 10), Google Chrome (en Windows, 7, 8, 10 y en macOS), Mozilla Firefox (en Windows 7, 8 y 10 y en macOS) y Apple Safari (en macOs).
+
+            **Nota**: actualmente, esta directiva administra la importación desde los exploradores Internet Explorer (en Windows 7, 8 y 10), Google Chrome (en Windows, 7, 8, 10 y en macOS), Mozilla Firefox (en Windows 7, 8 y 10 y en macOS) y Apple Safari (en macOs).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -17663,7 +17701,8 @@ Si no se configura esta directiva, se importará el historial de exploración du
 
 También puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará el historial de exploración durante la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción del **historial de exploración** en la importación manual.
 
-**Nota**: actualmente, esta directiva administra la importación desde los exploradores Internet Explorer (en Windows 7, 8 y 10), Google Chrome (en Windows, 7, 8, 10 y en macOS), Mozilla Firefox (en Windows 7, 8 y 10 y en macOS) y Apple Safari (macOs).
+
+            **Nota**: actualmente, esta directiva administra la importación desde los exploradores Internet Explorer (en Windows 7, 8 y 10), Google Chrome (en Windows, 7, 8, 10 y en macOS), Mozilla Firefox (en Windows 7, 8 y 10 y en macOS) y Apple Safari (macOs).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -17731,7 +17770,8 @@ Si no se configura esta directiva, se importará la configuración de su página
 
 Puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará la configuración de su página principal durante la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción de la **página principal** en la importación manual.
 
-**Nota**: actualmente, esta directiva administra la importación desde Internet Explorer (en Windows 7, 8 y 10).
+
+            **Nota**: actualmente, esta directiva administra la importación desde Internet Explorer (en Windows 7, 8 y 10).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -17799,7 +17839,8 @@ Si no configura esta directiva, se importarán las pestañas abiertas durante la
 
 También puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará las pestañas abiertas durante la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción de las **pestañas abiertas** en la importación manual.
 
-**Nota**: actualmente, esta directiva solo admite la importación de Google Chrome (en Windows 7, 8 y 10 y en macOS).
+
+            **Nota**: actualmente, esta directiva solo admite la importación de Google Chrome (en Windows 7, 8 y 10 y en macOS).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -17867,7 +17908,8 @@ Si no se configura esta directiva, se importará la información de pago durante
 
 También puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará la información de pago durante la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción de la **información de pago** en la importación manual.
 
-**Nota:** actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8, 10 y en macOS).
+
+            **Nota:** actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8, 10 y en macOS).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -17935,7 +17977,8 @@ Si no configura esta directiva, se importarán las contraseñas durante la prime
 
 Puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará las contraseñas durante la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción de las **contraseñas** en la importación manual.
 
-**Nota**: actualmente, esta directiva administra la importación desde los exploradores Internet Explorer (en Windows 7, 8 y 10), Google Chrome (en Windows, 7, 8, 10 y en macOS) y Mozilla Firefox (en Windows 7, 8 y 10 y en macOS).
+
+            **Nota**: actualmente, esta directiva administra la importación desde los exploradores Internet Explorer (en Windows 7, 8 y 10), Google Chrome (en Windows, 7, 8, 10 y en macOS) y Mozilla Firefox (en Windows 7, 8 y 10 y en macOS).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -18003,7 +18046,8 @@ Si no se configura esta directiva, se importará la configuración del motor de 
 
 Puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará la configuración del motor de búsqueda durante la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción del **motor de búsqueda** en la importación manual.
 
-**Nota**: actualmente, esta directiva administra la importación desde Internet Explorer (en Windows 7, 8 y 10).
+
+            **Nota**: actualmente, esta directiva administra la importación desde Internet Explorer (en Windows 7, 8 y 10).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -18069,7 +18113,8 @@ Si no configura esta directiva, los accesos directos se importarán durante la p
 
 También puede establecer esta directiva como una recomendación. Esto quiere decir que Microsoft Edge importará los accesos directos durante la primera ejecución.
 
-**Nota**: actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8, 10 y en macOS).
+
+            **Nota**: actualmente, esta directiva administra la importación desde Google Chrome (en Windows 7, 8, 10 y en macOS).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -18137,7 +18182,8 @@ Si no configura esta directiva, la configuración de inicio se importará en la 
 
 Puede establecer esta directiva como una recomendación. Esto significa que Microsoft Edge importará la configuración de inicio en la primera ejecución, pero los usuarios pueden seleccionar o borrar la opción de **configuración del explorador** durante la importación manual.
 
-**Nota:** Esta directiva administra actualmente la importación desde los exploradores Microsoft Edge (versión anterior) y Google Chrome (en Windows 7, 8 y 10).
+
+            **Nota:** Esta directiva administra actualmente la importación desde los exploradores Microsoft Edge (versión anterior) y Google Chrome (en Windows 7, 8 y 10).
 
   #### <a name="supported-features"></a>Características admitidas:
 
@@ -19138,7 +19184,8 @@ Si deshabilita o no configura esta directiva, los usuarios no podrán ver las op
 
 Si esta directiva no está configurada, el explorador usará el comportamiento predeterminado de las comprobaciones de interceptación de DNS y las sugerencias de redirección de intranet. En M88, están habilitadas de forma predeterminada, pero se deshabilitarán de forma predeterminada en la versión futura.
 
-[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) es una directiva relacionada que también puede deshabilitar las comprobaciones de interceptación de DNS. Sin embargo, esta directiva es una versión más flexible que puede controlar por separado la barra de información de redireccionamiento de la intranet y podría ampliarse en el futuro.
+
+            [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) es una directiva relacionada que también puede deshabilitar las comprobaciones de interceptación de DNS. Sin embargo, esta directiva es una versión más flexible que puede controlar por separado la barra de información de redireccionamiento de la intranet y podría ampliarse en el futuro.
 Si [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) o esta directiva realizan una solicitud para deshabilitar las comprobaciones de intercepción, las comprobaciones se deshabilitarán.
 Si esta directiva deshabilita las comprobaciones de interceptación de DNS pero [GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar) está habilitado, las consultas de una sola palabra seguirán generando navegaciones de la intranet.
 
@@ -21513,7 +21560,8 @@ Si habilita esta directiva, se utilizará un servicio web para las pruebas de co
 
 Si desactiva esta directiva, Microsoft Edge usará las API nativas para intentar resolver los problemas de navegación y conectividad de red.
 
-**Nota**: A excepción de Windows 8 y las versiones posteriores de Windows, Microsoft Edge *siempre* usará las API nativas para resolver los problemas de conectividad.
+
+            **Nota**: A excepción de Windows 8 y las versiones posteriores de Windows, Microsoft Edge *siempre* usará las API nativas para resolver los problemas de conectividad.
 
 Si no configura esta directiva, Microsoft Edge respetará la preferencia de usuario establecida en Servicios en Edge://configuración/privacidad.
 Específicamente, hay un botón de alternancia **Usar un servicio web para ayudar a resolver errores de navegación**, que el usuario puede activar o desactivar. Tenga en cuenta que si ha habilitado esta directiva (ResolveNavigationErrorsUseWebService), la opción **Usar un servicio web para ayudar a resolver los errores de navegación** estará activada, pero el usuario no podrá cambiar la opción con el botón de alternancia. Si ha deshabilitado esta directiva, la configuración **Usar un servicio web para ayudar a resolver los errores de navegación** se desactivará y el usuario no podrá cambiar la configuración con el botón de alternancia.
@@ -21697,7 +21745,8 @@ Si no configura esta Directiva, se usará la ruta de acceso del perfil móvil pr
 
 Si deshabilita esta directiva o no la configura, solo se usarán los perfiles locales habituales.
 
-[SyncDisabled](#syncdisabled) solo deshabilita la sincronización en la nube y no afecta a esta directiva.
+
+            [SyncDisabled](#syncdisabled) solo deshabilita la sincronización en la nube y no afecta a esta directiva.
 
 Consulte [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058) para obtener más información sobre el uso de perfiles de usuario móviles.
 
