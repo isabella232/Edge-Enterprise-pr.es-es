@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 4feb2ae1b1d819e4c8c52421bee68bec6c5cb97c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 88a3636504f1d28c3a5aaddf5d3ce773b4c2318a
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980222"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016559"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -30,6 +30,13 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan la compatibilidad del sitio próximamente en Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096147-september-11"></a>Versión 93.0.961.47: 11 de septiembre
+
+> [!Important]
+> Esta actualización contiene [CVE-2021-30632](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632) que el equipo de Chromium ha notificado como una vulnerabilidad de seguridad. Para obtener más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployedge/microsoft-edge-relnotes-security#september-11-2021).
 
 ## <a name="version-93096144-september-9"></a>Versión 93.0.961.44: 9 de septiembre
 
@@ -59,75 +66,75 @@ Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployed
 
 - **Oculta la barra de título mientras usas pestañas verticales.**  Vuelve a obtener los píxeles adicionales ocultando la barra de título del explorador, en pestañas verticales. Ahora puede ir a edge://settings/appearance y, en la sección Personalizar barra de herramientas, seleccione la opción para ocultar la barra de título en el modo de tabulación vertical.
 
-- **Imagen de vídeo en imagen (PiP) desde la barra de herramientas activable.**  Al mantener el mouse sobre un vídeo compatible, aparecerá una barra de herramientas que le permite ver ese vídeo en una ventana de PiP.  Tenga en cuenta que actualmente está disponible para los usuarios de Microsoft Edge en macOS.  
+- **Imagen de vídeo en imagen (PiP) desde la barra de herramientas activable.**  Al pasar el ratón por encima de un vídeo compatible, aparecerá una barra de herramientas que le permite ver ese vídeo en una ventana de PiP.  Tenga en cuenta que actualmente está disponible para los usuarios de Microsoft Edge en macOS.  
 
-- **Eliminación de 3DES en TLS. Se quitará la compatibilidad con el conjunto de cifrado TLS_RSA_WITH_3DES_EDE_CBC_SHA.** Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para obtener más información, vaya a la entrada [Estado de la plataforma de Chrome](https://chromestatus.com/feature/6678134168485888). Además, en Microsoft Edge versión 93, la directiva [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) estará disponible para admitir escenarios que necesitan conservar la compatibilidad con servidores obsoletos. Esta directiva de compatibilidad quedará obsoleta y dejará de funcionar en Microsoft Edge versión 95. Asegúrese de actualizar los servidores afectados antes de ese momento.
+- **Eliminación de 3DES en TLS. Se quitará la compatibilidad con el conjunto de cifrado TLS_RSA_WITH_3DES_EDE_CBC_SHA.** Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para obtener más información, vaya a la entrada [Estado de la plataforma de Chrome](https://chromestatus.com/feature/6678134168485888). Además, en Microsoft Edge versión 93, la directiva [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) estará disponible para admitir escenarios que necesitan conservar la compatibilidad con servidores obsoletos. Esta directiva de compatibilidad quedará obsoleta y dejará de funcionar en Microsoft Edge versión 95. Hay que asegurarse de actualizar los servidores afectados antes de ese momento.
 
 ***Nuevas directivas***
 
 - 
-            [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Permitir reproducción automática multimedia en sitios específicos
+            [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Permite la reproducción automática de medios en sitios específicos
 - 
             [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) Contrato de clave posterior a Quantum de CECPQ2 habilitado para TLS
 - 
-            [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Configurar la característica Ver en Explorador de archivos para páginas de SharePoint en Microsoft Edge
+            [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Configura la característica Ver en el Explorador de archivos para páginas de SharePoint en Microsoft Edge
 - 
-            [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) Controlar el uso de JIT de JavaScript
+            [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) Controla el uso de JIT de JavaScript
 - 
-            [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled) Permitir que las notificaciones establezcan Microsoft Edge como lector de PDF predeterminado
+            [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled) Permite que las notificaciones establezcan Microsoft Edge como lector de PDF predeterminado
 - 
-            [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) Configurar la capacidad de los usuarios para invalidar las marcas de características
+            [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) Configura la capacidad de los usuarios para invalidar las marcas de características
 - 
-            [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled) Habilitar inicio de sesión implícito
+            [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled) Habilita el inicio de sesión implícito
 - 
-            [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) Configurar la lista de sitios en la nube de modo de empresa
+            [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) Configura la lista de sitios en la nube de modo de empresa
 - 
-            [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) Configurar la frecuencia con la que se actualiza la lista de sitios de modo de empresa
+            [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) Configura la frecuencia con la que se actualiza la lista de sitios de modo de empresa
 - 
-            [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) Permitir que JavaScript use JIT en estos sitios
+            [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) Permite que JavaScript use JIT en estos sitios
 - 
-            [JavaScriptJitBlockedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitblockedforsites) Impedir que JavaScript use JIT en estos sitios
+            [JavaScriptJitBlockedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitblockedforsites) Impide que JavaScript use JIT en estos sitios
 - 
-            [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Habilitar Windows para buscar datos de exploración de Microsoft Edge locales
+            [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Habilita Windows buscar datos de exploración de Microsoft Edge locales
 - 
-            [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled) Usar siempre Microsoft AutoUpdate como actualizador para Microsoft Edge
+            [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled) Siempre se ha de usar Microsoft AutoUpdate como actualizador para Microsoft Edge
 - 
-            [MSAWebSiteSSOUsingThisProfileAllowed](/DeployEdge/microsoft-edge-policies#msawebsitessousingthisprofileallowed) Permitir el inicio de sesión único para sitios de Microsoft con este perfil
+            [MSAWebSiteSSOUsingThisProfileAllowed](/DeployEdge/microsoft-edge-policies#msawebsitessousingthisprofileallowed) Permite el inicio de sesión único para sitios de Microsoft con este perfil
 - 
             [OneAuthAuthenticationEnforced](/DeployEdge/microsoft-edge-policies#oneauthauthenticationenforced) Flujo de autenticación de OneAuth aplicado para el inicio de sesión
 - 
-            [PasswordGeneratorEnabled](/DeployEdge/microsoft-edge-policies#passwordgeneratorenabled) Permitir a los usuarios obtener una sugerencia de contraseña segura siempre que creen una cuenta en línea
+            [PasswordGeneratorEnabled](/DeployEdge/microsoft-edge-policies#passwordgeneratorenabled) Permite a los usuarios obtener una sugerencia de contraseña segura siempre que creen una cuenta en línea
 - 
-            [PrimaryPasswordSetting](/DeployEdge/microsoft-edge-policies#primarypasswordsetting) Configura un ajuste que pide a los usuarios que introduzcan la contraseña de su dispositivo mientras se utiliza el relleno automático de la contraseña
+            [PrimaryPasswordSetting](/DeployEdge/microsoft-edge-policies#primarypasswordsetting) Configura un ajuste que pide a los usuarios que introduzcan la contraseña de su dispositivo mientras se utiliza el autorrelleno de la contraseña
 - 
-            [PrintingWebpageLayout](/DeployEdge/microsoft-edge-policies#printingwebpagelayout) Establece el diseño para imprimir
+            [PrintingWebpageLayout](/DeployEdge/microsoft-edge-policies#printingwebpagelayout) Establece el diseño para la impresión
 - 
-            [RemoteDebuggingAllowed](/DeployEdge/microsoft-edge-policies#remotedebuggingallowed) Permitir depuración remota
+            [RemoteDebuggingAllowed](/DeployEdge/microsoft-edge-policies#remotedebuggingallowed) Permite la depuración remota
 - 
-            [RelaunchWindow](/DeployEdge/microsoft-edge-policies#relaunchwindow) Establecer el intervalo de tiempo para reiniciar
+            [RelaunchWindow](/DeployEdge/microsoft-edge-policies#relaunchwindow) Establece el intervalo de tiempo para el reinicio
 - 
-            [TravelAssistanceEnabled](/DeployEdge/microsoft-edge-policies#travelassistanceenabled) Habilitar asistencia para viajes
+            [TravelAssistanceEnabled](/DeployEdge/microsoft-edge-policies#travelassistanceenabled) Habilita la asistencia para viajes
 - 
-            [TripleDESEnabled](/DeployEdge/microsoft-edge-policies#tripledesenabled) Habilitar conjuntos de cifrado 3DES en TLS
+            [TripleDESEnabled](/DeployEdge/microsoft-edge-policies#tripledesenabled) Habilita conjuntos de cifrado 3DES en TLS
 - 
-            [WAMAuthBelowWin10RS3Enabled](/DeployEdge/microsoft-edge-policies#wamauthbelowwin10rs3enabled) WAM para la autenticación posterior a Windows 10 RS3 habilitado
+            [WAMAuthBelowWin10RS3Enabled](/DeployEdge/microsoft-edge-policies#wamauthbelowwin10rs3enabled) WAM para la autenticación por debajo de Windows 10 RS3 habilitado
 
 ***Directivas en desuso***
 
 - 
-            [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Habilitar la configuración de comportamiento de cookies de SameSite heredado predeterminado
+            [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Habilita la configuración del comportamiento de cookies de SameSite heredado predeterminado
 
 ***Directiva obsoleta***
 
 - 
-            [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) Configurar la experiencia de la página de pestaña nueva de Microsoft Edge
+            [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) Configura la experiencia de la nueva página de pestaña de Microsoft Edge
 
 ***Cambio adicional***
 
 - 
-            [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Agregar compatibilidad con la plataforma mac
+            [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Agrega compatibilidad con la plataforma mac
 - 
-            [PasswordMonitorAllowed](/DeployEdge/microsoft-edge-policies#passwordmonitorallowed) Agregar compatibilidad con la plataforma mac
+            [PasswordMonitorAllowed](/DeployEdge/microsoft-edge-policies#passwordmonitorallowed) Agrega compatibilidad con la plataforma mac
 
 
 ## <a name="version-92090284-august-26"></a>Versión 92.0.902.84: 26 de agosto
@@ -349,7 +356,7 @@ Se han corregido varios errores y problemas de rendimiento.
 ## <a name="version-90081841-april-16"></a>Versión 90.0.818.41: 16 de abril ##
 
 > [!Important]
->Esta actualización contiene [CVE-2021-21224](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21224) que el equipo de Chromium ha notificado que tiene una vulnerabilidad en estado de desasose. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
+>Esta actualización contiene [CVE-2021-21224](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21224) que el equipo de Chromium ha notificado como una vulnerabilidad de seguridad. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
 
 Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployedge/microsoft-edge-relnotes-security#april-16-2021).
 
@@ -478,7 +485,7 @@ Se han corregido varios errores y problemas de rendimiento.
 ## <a name="version-89077445-march-4"></a>Versión 89.0.774.45: 4 de marzo
 
 > [!IMPORTANT]
-> Esta actualización contiene [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
+> Esta actualización contiene [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166), que ha sido reportado por el equipo de Chromium como una vulnerabilidad de seguridad. Para más información, vea la [Guía de actualización de Seguridad](https://msrc.microsoft.com/update-guide).
 
 Las actualizaciones de seguridad del canal estable se muestran [aquí](./microsoft-edge-relnotes-security.md#march-4-2021).
 
