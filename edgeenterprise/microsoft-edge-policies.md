@@ -254,7 +254,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con el explorad
 |[SmartScreenEnabled](#smartscreenenabled)|Configurar SmartScreen de Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Forzar a SmartScreen de Microsoft Defender a comprobar las descargas de origen confiable|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Configurar SmartScreen de Microsoft Defender para bloquear aplicaciones potencialmente no deseadas.|
-### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startup-home-page-and-new-tab-page"></a>Inicio&comma; página principal y página de pestaña nueva*](#startup-home-page-and-new-tab-page-policies)
 
 |Nombre de directiva|Título|
 |-|-|
@@ -9050,7 +9050,7 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 
   [Volver al principio](#microsoft-edge---policies)
 
-  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
+  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Directivas de Inicio&comma; página principal y página de pestaña nueva
 
   [Volver al principio](#microsoft-edge---policies)
 
