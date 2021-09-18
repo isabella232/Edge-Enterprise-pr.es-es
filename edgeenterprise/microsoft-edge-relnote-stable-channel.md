@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/09/2021
+ms.date: 09/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: e13778ee9a93a4621ad77a00da1d85def3f97225
-ms.sourcegitcommit: 6eefb7cb134f25a1e2d1f515a3a8600524a4b6e3
+ms.openlocfilehash: cf37c34aa1c0d61e2118acf8a599ff574d6ff156
+ms.sourcegitcommit: dbe3fb9932022554c118ac02d4e9ab5f09c53709
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "12017974"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "12018990"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -30,6 +30,13 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan a la compatibilidad del sitio que llegan a Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096152-september-16"></a>Versión 93.0.961.52: 16 de septiembre
+
+>[!Important]
+>Esta actualización contiene una corrección para [CVE-2021-30633](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632), que el equipo de Chromium ha notificado como una vulnerabilidad de seguridad. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployedge/microsoft-edge-relnotes-security#september-16-2021).
 
 ## <a name="version-93096147-september-11"></a>Versión 93.0.961.47: 11 de septiembre
 
