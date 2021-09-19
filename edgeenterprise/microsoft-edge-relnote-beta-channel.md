@@ -3,26 +3,30 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/13/2021
+ms.date: 09/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: 93fbb135befd1691220a1d9b4499d0713b1740f3
-ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
+ms.openlocfilehash: 95f3f02401d00e59eed1df20688d0069db1e8b06
+ms.sourcegitcommit: 93e141b725a08727b030332ea82f983d35c2a745
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "12016469"
+ms.lasthandoff: 09/19/2021
+ms.locfileid: "12019179"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
 Estas notas de versión proporcionan información sobre las nuevas características y las actualizaciones no relacionadas con la seguridad que se incluyen en el canal beta de Microsoft Edge. Las versiones archivadas de estas notas de la versión están [aquí](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> La plataforma web de Microsoft Edge evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan la compatibilidad del sitio próximamente en Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> La plataforma web de Microsoft Edge evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan a la compatibilidad del sitio que llegan a Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099223-september-17"></a>Versión 94.0.992.23: 17 de septiembre
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-94099219-september-13"></a>Versión 94.0.992.19: 13 de septiembre
 
@@ -102,40 +106,40 @@ Se han corregido varios errores y problemas de rendimiento.
 
 ### <a name="new-policies"></a>Nuevas directivas
 
-- [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Permitir reproducción automática de medios en sitios específicos
-- [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) CECPQ2 post-quantum key-agreement enabled for TLS
-- [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Configurar la característica Ver en el Explorador de archivos para SharePoint páginas en Microsoft Edge
+- [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Permitir reproducción automática multimedia en sitios específicos
+- [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) Contrato de clave posterior a Quantum de CECPQ2 habilitado para TLS
+- [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Configurar la característica Ver en Explorador de archivos para páginas de SharePoint en Microsoft Edge
 - [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) Controlar el uso de JIT de JavaScript
 - [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled) Permitir que las notificaciones establezcan Microsoft Edge como lector de PDF predeterminado
 - [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) Configurar la capacidad de los usuarios para invalidar las marcas de características
-- [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled) Habilitar el inicio de sesión implícito
-- [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) Configurar la lista Enterprise sitio en la nube del modo de almacenamiento
-- [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) Configurar la frecuencia con la que se actualiza Enterprise lista de sitios de modo de actualización
+- [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled) Habilitar inicio de sesión implícito
+- [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) Configurar la lista de sitios en la nube de modo de empresa
+- [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) Configurar la frecuencia con la que se actualiza la lista de sitios de modo de empresa
 - [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) Permitir que JavaScript use JIT en estos sitios
 - [JavaScriptJitBlockedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitblockedforsites) Impedir que JavaScript use JIT en estos sitios
-- [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Habilitar Windows buscar datos de exploración Microsoft Edge local
-- [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled) Use siempre Microsoft AutoUpdate como actualizador para Microsoft Edge
+- [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Habilitar Windows para buscar datos de exploración de Microsoft Edge locales
+- [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled) Usar siempre Microsoft AutoUpdate como actualizador para Microsoft Edge
 - [MSAWebSiteSSOUsingThisProfileAllowed](/DeployEdge/microsoft-edge-policies#msawebsitessousingthisprofileallowed) Permitir el inicio de sesión único para sitios de Microsoft con este perfil
-- [OneAuthAuthenticationEnforced](/DeployEdge/microsoft-edge-policies#oneauthauthenticationenforced) OneAuth Authentication Flow Se aplica para el inicio de sesión
+- [OneAuthAuthenticationEnforced](/DeployEdge/microsoft-edge-policies#oneauthauthenticationenforced) Flujo de autenticación de OneAuth aplicado para el inicio de sesión
 - [PasswordGeneratorEnabled](/DeployEdge/microsoft-edge-policies#passwordgeneratorenabled) Permitir a los usuarios obtener una sugerencia de contraseña segura siempre que creen una cuenta en línea
-- [PrimaryPasswordSetting](/DeployEdge/microsoft-edge-policies#primarypasswordsetting) Configura una configuración que pide a los usuarios que escriban la contraseña del dispositivo mientras usan el autorrelleno de contraseñas
-- [PrintingWebpageLayout](/DeployEdge/microsoft-edge-policies#printingwebpagelayout) Establece el diseño para la impresión
+- [PrimaryPasswordSetting](/DeployEdge/microsoft-edge-policies#primarypasswordsetting) Configura un ajuste que pide a los usuarios que introduzcan la contraseña de su dispositivo mientras se utiliza el relleno automático de la contraseña
+- [PrintingWebpageLayout](/DeployEdge/microsoft-edge-policies#printingwebpagelayout) Establece el diseño para imprimir
 - [RemoteDebuggingAllowed](/DeployEdge/microsoft-edge-policies#remotedebuggingallowed) Permitir depuración remota
-- [RelaunchWindow](/DeployEdge/microsoft-edge-policies#relaunchwindow) Establecer el intervalo de tiempo para el relanzamiento
+- [RelaunchWindow](/DeployEdge/microsoft-edge-policies#relaunchwindow) Establecer el intervalo de tiempo para reiniciar
 - [TravelAssistanceEnabled](/DeployEdge/microsoft-edge-policies#travelassistanceenabled) Habilitar asistencia para viajes
 - [TripleDESEnabled](/DeployEdge/microsoft-edge-policies#tripledesenabled) Habilitar conjuntos de cifrado 3DES en TLS
 
 #### <a name="deprecated-policy"></a>Directivas en desuso
 
-- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Habilitar la configuración predeterminada del comportamiento de cookies samesite heredada
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Habilitar la configuración de comportamiento de cookies de SameSite heredado predeterminado
 
 #### <a name="obsoleted-policy"></a>Directiva obsoleta
 
-- [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) Configurar la nueva Microsoft Edge página de pestañas
+- [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) Configurar la experiencia de la página de pestaña nueva de Microsoft Edge
 
 #### <a name="additional-change"></a>Cambio adicional
 
-- [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Agregar compatibilidad con plataforma mac
+- [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Agregar compatibilidad con la plataforma mac
 
 ## <a name="version-93096118-august-10"></a>Versión 93.0.961.18: 10 de agosto
 
