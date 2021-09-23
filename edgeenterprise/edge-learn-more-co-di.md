@@ -3,23 +3,25 @@ title: ClickOnce y DirectInvoke en Microsoft Edge
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/16/2021
+ms.date: 09/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Aprende sobre ClickOnce y DirectInvoke en Microsoft Edge.
-ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 48702082dc3c352519c8003e226bf99c63765150
+ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979586"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12034439"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Conocer las funciones de ClickOnce y DirectInvoke en Microsoft Edge
 
 ClickOnce y DirectInvoke son características disponibles en IE y Microsoft Edge admiten el uso de un controlador de archivos para descargar archivos de un sitio web. Aunque sirven para fines diferentes, ambas funciones permiten que los sitios web especifiquen que un archivo solicitado para descarga se pasa a un controlador de archivos en el dispositivo del usuario. El controlador de archivos nativo de Windows controla las solicitudes de ClickOnce. Las solicitudes DirectInvoke se controlan mediante un controlador de archivos registrado especificado mediante el sitio web que hospeda el archivo.
+
+Después de configurar ClickOnce DirectInvoke, los mensajes ClickOnce o DirectInvoke se pueden omitir configurando directivas de empresa adicionales. Estas directivas pueden admitir omitir los mensajes ClickOnce DirectInvoke para tipos de archivo especificados para todos los dominios o para tipos de archivo especificados de dominios especificados.
 
 Para obtener más información sobre estas funciones, consulta:
 
@@ -88,6 +90,10 @@ El segundo elemento emergente solo aparece si:
 ## <a name="clickonce-and-directinvoke-policies"></a>Directivas ClickOnce y DirectInvoke
 
 Hay dos directivas de grupo que puedes usar para habilitar o deshabilitar ClickOnce y DirectInvoke para los usuarios de empresa. Estas dos directivas son [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) y [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). Estas dos directivas se etiquetan en el Editor de directivas de grupo como "Permitir que los usuarios abran archivos mediante el protocolo ClickOnce" y "Permitir que los usuarios abran archivos mediante el protocolo DirectInvoke", respectivamente.
+
+Para especificar los tipos de archivo para los que se deben omitir los mensajes de ClickOnce o DirectInvoke, use la directiva etiquetada en el Editor de directivas de grupo como "Lista de tipos de archivo que se deben abrir automáticamente al descargar". Esto permitirá que los tipos de archivo especificados se abran automáticamente después de la descarga para todos los dominios.  
+
+Para omitir los mensajes de ClickOnce o DirectInvoke para tipos de archivo específicos para dominios específicos, configura dos directivas adicionales etiquetadas en el Editor de directivas de grupo como "Lista de tipos de archivo que se deben abrir automáticamente al descargar" y "Direcciones URL donde AutoOpen-FileTypes se pueden aplicar". Tenga en cuenta que la directiva "DIRECCIONES URL donde se puede aplicar AutoOpen- FileTypes" es una directiva de apoyo para "Lista de tipos de archivo que se deben abrir automáticamente al descargar" y no hace nada por su cuenta.  
 
 ## <a name="clickonce-and-directinvoke-behavior"></a>Comportamiento ClickOnce y DirectInvoke
 
