@@ -1,9 +1,9 @@
 ---
 title: Documentación de directiva de Microsoft Edge Update
 ms.author: stmoody
-author: AndreaLBarr
+author: RyanHechtMSFT
 manager: tahills
-ms.date: 07/23/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Documentación de todas las directivas admitidas por Microsoft Edge Update
-ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: b96fc0e44434b5ab36a16b1bc14f0aebe0deacf4
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980081"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037220"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge: Directivas de actualización
 
@@ -41,6 +41,7 @@ Estas tablas enumeran todas las directivas de grupo relacionadas con la actualiz
 |[CreateDesktopShortcut](#createdesktopshortcut)|Impedir la creación de accesos directos de escritorio durante la instalación (por canal)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Revertir a la versión de destino (por canal)|
 |[TargetVersionPrefix](#targetversionprefix)|Invalidación de versión de destino (por canal)|
+|[TargetChannelOverride](#targetchanneloverride)|Invalidación del canal de destino (solo estable)|
 |[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Recuperar configuraciones y experimentos|
 ### [<a name="preferences"></a>Preferencias](#preferences-policies)
 |Nombre de directiva|Título|
@@ -400,6 +401,42 @@ Esta directiva solo está disponible en las instancias de Windows unidas a un do
 ```
 [Volver al principio](#microsoft-edge---update-policies)
 
+### <a name="targetchanneloverride"></a>TargetChannelOverride
+>Microsoft Edge Update 1.3.147.1 y versiones posteriores
+
+#### <a name="description"></a>Descripción
+Especifica a qué canal Microsoft Edge se debe actualizar. 
+
+Si habilita esta poicy, el Microsoft Edge se actualizará al Canal según cómo configure las siguientes opciones:
+
+  - Estable: Microsoft Edge se actualizará a la versión estable más reciente.
+  - Beta: Microsoft Edge se actualizará a la versión beta más reciente.
+  - Desarrollo: Microsoft Edge se actualizará a la versión de desarrollo más reciente.
+  - Estable extendido: Microsoft Edge se actualizará a la última versión estable extendida, que sigue una cadencia de lanzamiento más larga que estable. Para obtener más información, visite https://go.microsoft.com/fwlink/?linkid=2163508 .
+
+Si no configura esta directiva, Microsoft Edge se actualizará a la versión más reciente disponible para el canal estable.
+
+Esta directiva solo está disponible en Microsoft Edge Stable.
+
+Esta directiva solo está disponible en las instancias de Windows unidas a un dominio de Microsoft® Active Directory®.
+#### <a name="windows-information-and-settings"></a>Información y configuración de Windows
+##### <a name="group-policy-admx-info"></a>Información de directiva de grupo (ADMX)
+- Nombre único de GP: TargetChannelOverride
+- Nombre de GP: invalidación de canal de destino
+- Ruta de GP: 
+  - Plantillas administrativas/Microsoft Edge Update/Aplicaciones/Microsoft Edge
+- Nombre de archivo GP ADMX: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Configuración del Registro de Windows
+- Ruta: HKEY_LOCAL_MACHINE\SOFTWARE\Directivas\Microsoft\EdgeUpdate
+- Nombre del valor: 
+  - (Estable): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+- Tipo de valor: REG_SZ
+##### <a name="example-value"></a>Valor de ejemplo:
+```
+extended
+```
+[Volver al principio](#microsoft-edge---update-policies)
+
 ### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>Recuperar configuraciones y experimentos
 >Microsoft Edge Update 1.3.145.1 y versiones posteriores
@@ -647,6 +684,6 @@ Las actualizaciones automáticas están habilitadas de forma predeterminada. Al 
 [Volver al principio](#microsoft-edge---update-policies)
 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
   - [Configuración de Microsoft Edge](configure-microsoft-edge.md)
   - [Página de aterrizaje de Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
