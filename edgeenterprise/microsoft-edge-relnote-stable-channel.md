@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/22/2021
+ms.date: 09/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: ffd0beb7533edf88fdab9402cb2486e71b1773e6
-ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
+ms.openlocfilehash: 491debce74949c9e146acdcf825c99edf2f7f81e
+ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12034449"
+ms.lasthandoff: 09/25/2021
+ms.locfileid: "12044842"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -29,9 +29,46 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 > [!NOTE]
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan a la compatibilidad del sitio que llegan a Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan a la compatibilidad del sitio próximamente en Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
 
-## <a name="version-93096152-september-16"></a>Versión 93.0.961.52: 16 de septiembre
+## <a name="version-94099231-september-24"></a>Versión 94.0.992.31: 24 de septiembre
+
+> [!Important]
+> Esta actualización contiene una corrección para [CVE-2021-37973](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973) que el equipo de Chromium ha notificado que tiene una vulnerabilidad de seguridad. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
+
+### <a name="feature-updates"></a>Actualizaciones de características
+
+- **Microsoft Edge ha completado el paso a una cadencia de 4 semanas para actualizaciones.**  Hemos adoptado un nuevo ciclo de lanzamiento de 4 semanas para las versiones principales. Más información aquí: https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
+
+- **Nueva opción Estable extendida que se ofrece.**  Ofrecemos una nueva opción Estable extendida a nuestros clientes de empresa administrados. La opción Estable extendida se mantendrá en revisiones numeradas uniformes y se actualizará cada 8 semanas. Habrá una actualización de seguridad quincenal.  Información adicional aquí: https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
+
+- **Mejoras en el comportamiento predeterminado de abrir archivos MHTML.**  Los archivos MHTML seguirán abriéndose en modo IE si el modo IE está habilitado, a menos que el archivo MHTML se haya guardado desde Microsoft Edge (mediante las opciones Guardar como o Guardar página como en Microsoft Edge). Si el archivo se guardó desde Microsoft Edge, ahora se abrirá en Microsoft Edge.  Este cambio corregirá un problema de representación observado al abrir un archivo MHTML en modo IE cuando se guarda desde Microsoft Edge.
+
+- **Restringir las solicitudes de red privada a contextos seguros.** El acceso a recursos en redes locales (intranet) desde páginas de Internet requiere que esas páginas se entreguen a través de HTTPS. Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para más información, vaya a la entrada [Estado de la plataforma de Chrome](https://chromestatus.com/feature/5436853517811712). Hay dos directivas de compatibilidad disponibles para admitir escenarios que necesitan conservar la compatibilidad con páginas no seguras: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) y [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls).
+
+- **Bloquear descargas de contenido mixto.** Las páginas seguras solo descargarán archivos hospedados en otras páginas seguras y las descargas hospedadas en páginas no seguras (que no son HTTPS) se bloquearán si se inician desde una página segura. Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para más información, vaya a la [entrada del blog de seguridad de Google.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
+
+- **Habilitar el inicio de sesión implícito para cuentas locales.** Al habilitar la directiva [OnlyOnPremisesImplicitSigninEnabled](/deployedge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled), solo se habilitarán las cuentas locales para el inicio de sesión implícito.  Microsoft Edge no intentará iniciar sesión implícitamente en cuentas de MSA o AAD. También se detendrán las actualizaciones de cuentas locales a cuentas de AAD.
+
+- **Nueva página de configuración de accesibilidad.**  Hemos unido la configuración relacionada con la accesibilidad en una sola página. Puede encontrar la nueva página edge://settings/accessibility en la lista de configuración principal. Aquí puede encontrar la configuración para aumentar el tamaño de la página web, mostrar un esquema de alta visibilidad en torno al área de enfoque y otras opciones de configuración que pueden ayudar a mejorar su experiencia de exploración web. Seguiremos agregando nuevas opciones de configuración aquí en versiones futuras de Microsoft Edge.
+
+***Nuevas directivas***
+
+- 
+            [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Ignorar la configuración de la lista de sitios de Protección de aplicaciones y navegar en Microsoft Edge con normalidad
+- 
+            [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) Solo cuenta local habilitada para el inicio de sesión implícito
+- 
+            [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) Habilitar la compatibilidad con las reglas de tabla de enrutamiento del sistema operativo Windows al realizar conexiones punto a punto a través de WebRTC
+
+***Directiva obsoleta***
+
+- 
+            [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) Habilitar la característica User-Agent Client Hints (en desuso).
+
+## <a name="version-93096152-september-16"></a>Versión93.0.961.52: 16 de septiembre
 
 >[!Important]
 >Esta actualización contiene una corrección para [CVE-2021-30633](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632), que el equipo de Chromium ha notificado como una vulnerabilidad de seguridad. Para más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
