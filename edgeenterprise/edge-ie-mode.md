@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Aprenda cómo el modo Internet Explorer en Microsoft Edge proporciona acceso a sitios que necesitan Internet Explorer 11 y acceso a sitios modernos.
-ms.openlocfilehash: cf2271f8b95c97a63695abf471ae67e693798ff2
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a426d9bd9d2ac3d81682e9fc2304e9e90d3461f8
+ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979831"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "12053329"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>¿Qué es el modo Internet Explorer (IE)?
 
@@ -36,16 +36,16 @@ Cuando un sitio se carga en modo IE, el indicador del logotipo IE aparece en el 
 
   ![Indicador del logotipo de IE](./media/ie-mode/ie-logo-indicator1.png)
 
-Solo los sitios que configure específicamente (mediante Directiva) usarán el modo IE y todos los demás sitios se mostrarán como sitios web modernos. Para que un sitio use el modo IE, tiene que:
+Solo los sitios que configure específicamente (mediante directiva) usarán el modo IE y todos los demás sitios se mostrarán como sitios web modernos. Para que un sitio use el modo IE, tiene que:
 
-- Enumere el sitio en el modo de empresa XML de la lista de sitios definido en una de estas directivas:
+- Enumerar el sitio en la lista de sitios de modo empresa XML definido en una de estas directivas:
   - Microsoft Edge 78 o posterior, "Configurar la lista de sitios de modo de empresa"
   - Internet Explorer, "Usar la lista de sitios web de IE del modo de empresa"
   > [!NOTE]
-  > Solo se procesa una lista de sitios de modo de empresa. La Directiva de lista de sitios de Microsoft Edge tiene prioridad sobre la Directiva de lista de sitios de Internet Explorer.
-- Todos los sitios de intranet cuando la **directiva de grupo Enviar todos los sitios de intranet a Internet Explorer** está habilitada (Microsoft Edge 77 o posterior).
+  > Solo se procesa una lista de sitios de modo de empresa. La directiva de lista de sitios de Microsoft Edge tiene prioridad sobre la directiva de lista de sitios de Internet Explorer.
+- Configure la directiva de grupo **Enviar todos los sitios de intranet a Internet Explorer** y establézcala en **Habilitado** (Microsoft Edge 77 o posterior).
 
-### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>El modo IE admite las siguientes funciones de Internet Explorer
+### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>El modo IE admite las siguientes funcionalidades de Internet Explorer
 
 - Todos los modos de documento y modos de empresa
 - Controles ActiveX (como Java o Silverlight). 
