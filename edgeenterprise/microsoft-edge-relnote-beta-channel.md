@@ -3,26 +3,56 @@ title: Notas de la versión de Microsoft Edge para el canal beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/17/2021
+ms.date: 09/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal beta
-ms.openlocfilehash: 95f3f02401d00e59eed1df20688d0069db1e8b06
-ms.sourcegitcommit: 93e141b725a08727b030332ea82f983d35c2a745
+ms.openlocfilehash: c62d540b014a47f1240d542c68ee52822719239f
+ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2021
-ms.locfileid: "12019179"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "12053319"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Notas de la versión para el canal beta de Microsoft Edge
 
 Estas notas de versión proporcionan información sobre las nuevas características y las actualizaciones no relacionadas con la seguridad que se incluyen en el canal beta de Microsoft Edge. Las versiones archivadas de estas notas de la versión están [aquí](microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
-> La plataforma web de Microsoft Edge evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan a la compatibilidad del sitio que llegan a Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> La plataforma web de Microsoft Edge evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan a la compatibilidad del sitio próximamente en Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-95010209-september-28"></a>Versión 95.0.1020.9: 28 de septiembre
+
+### <a name="feature-updates"></a>Actualizaciones de características
+
+- **Ver en el Explorador de archivos compatibilidad con SharePoint bibliotecas en línea en Microsoft Edge.**  Ahora puede habilitar la funcionalidad Ver en el Explorador de archivos en SharePoint bibliotecas de documentos modernas en línea. Para que esta experiencia sea visible y funcione para los usuarios, deberá habilitar la directiva de Microsoft Edge "Configurar la característica Ver en el Explorador de archivos para páginas de SharePoint en [Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) y actualizar la configuración de inquilino de SharePoint Online. Más información: Ver SharePoint archivos con el Explorador de archivos en [Microsoft Edge: SharePoint en Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+
+- **Los vínculos de dirección URL de archivo de zona de intranet se abrirán Windows Explorador de archivos.**  Puede permitir que los vínculos de dirección URL de archivo a archivos de zona de intranet que se originaron en sitios web HTTPS de zona de intranet abran Windows Explorador de archivos para ese archivo o directorio. Puede habilitar esta experiencia con la directiva [IntranetFileLinksEnabled.](/deployedge/microsoft-edge-policies#intranetfilelinksenabled)
+
+- **Mejoras en la experiencia de descargas.**  La compatibilidad con la experiencia de usuario de descarga se extiende a las aplicaciones web progresivas PWAs y WebView. También comenzaremos a admitir arrastrar y colocar en el Explorador de archivos y escritorio.
+
+- **Resalte donde lo dejó en documentos PDF.**  Ahora podrá reanudar la lectura desde la última vez que cerró el documento PDF.
+
+- **El modo de eficiencia amplía la duración de la batería cuando el portátil entra en modo de ahorro de batería.**  El modo de eficiencia se activará cuando el portátil entre en modo de ahorro de batería para permitir que el explorador administre el uso de recursos para ampliar la duración de la batería de la máquina. Tendrá cuatro opciones para cuando el modo de eficiencia se active, Unplugged y batería baja, Unplugged, Always y Never. Tenga en cuenta que se trata de un lanzamiento de características controlado. Los dispositivos con una batería deben tener la característica activada.
+
+***Nuevas directivas***
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) Habilitar el bloqueo de puntos de extensión heredados del explorador
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) Especifica si los módulos WebAssembly se pueden enviar entre orígenes
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) Especifica si la directiva de permisos de captura para mostrar está activada o omitida
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) Configurar el ajuste de píxeles entre alturas window.open procedentes de páginas de modo IE frente a páginas de modo perimetral
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) Configurar el ajuste de píxeles entre anchos window.open procedentes de páginas de modo IE frente a páginas de modo perimetral
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) Permitir que los vínculos de dirección URL de archivo de zona de intranet Microsoft Edge abrir en el Windows de archivos
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) Configurar el comportamiento de reversión de bloqueo de ShadowStack
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) Búsqueda visual habilitada
+
+***Directivas obsoletas***
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Permitir pruebas de modo de Internet Explorer
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Habilitar la configuración de comportamiento de cookies de SameSite heredado predeterminado
 
 ## <a name="version-94099223-september-17"></a>Versión 94.0.992.23: 17 de septiembre
 
@@ -42,13 +72,13 @@ Se han corregido varios errores y problemas de rendimiento.
 
 - **Microsoft Edge a una cadencia de 4 semanas para actualizaciones en canales Beta y Estable.**  Adoptaremos un nuevo ciclo de lanzamiento de 4 semanas para las versiones principales. Puede leer más sobre la decisión aquí: https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
 
-- **Nueva opción estable extendida que se ofrece.**  Ofrecemos una nueva opción extended stable a nuestros clientes Enterprise administrados. La opción Estable extendida se mantendrá en revisiones numeradas uniformes y se actualizará cada 8 semanas. Habrá una actualización de seguridad quincenal.  Información adicional aquí: https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
+- **Nueva opción Estable extendida que se ofrece.**  Ofrecemos una nueva opción Estable extendida a nuestros clientes de empresa administrados. La opción Estable extendida se mantendrá en revisiones numeradas uniformes y se actualizará cada 8 semanas. Habrá una actualización de seguridad quincenal.  Información adicional aquí: https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
 
-- **Mejoras en el comportamiento predeterminado de abrir archivos MHTML.**  Los archivos MHTML seguirán abiertos en modo IE si el modo IE está habilitado, a menos que el archivo MHTML se haya guardado desde Microsoft Edge (mediante las opciones Guardar como o Guardar página como en Microsoft Edge). Si el archivo se guardó Microsoft Edge, ahora se abrirá en Microsoft Edge.  Este cambio corregirá un problema de representación que se observó al abrir un archivo MHTML en modo IE cuando se guardaba desde Microsoft Edge.
+- **Mejoras en el comportamiento predeterminado de abrir archivos MHTML.**  Los archivos MHTML seguirán abriéndose en modo IE si el modo IE está habilitado, a menos que el archivo MHTML se haya guardado desde Microsoft Edge (mediante las opciones Guardar como o Guardar página como en Microsoft Edge). Si el archivo se guardó desde Microsoft Edge, ahora se abrirá en Microsoft Edge.  Este cambio corregirá un problema de representación observado al abrir un archivo MHTML en modo IE cuando se guarda desde Microsoft Edge.
 
-- **Restringir las solicitudes de red privada a contextos seguros.** El acceso a recursos en redes locales (intranet) desde páginas en Internet requiere que esas páginas se entreguen a través de HTTPS. Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para obtener más información, vaya a la entrada [Estado de la plataforma de Chrome](https://chromestatus.com/feature/5436853517811712). Hay dos directivas de compatibilidad disponibles para admitir escenarios que necesitan conservar la compatibilidad con páginas no seguras: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) e [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls).
+- **Restringir las solicitudes de red privada a contextos seguros.** El acceso a recursos en redes locales (intranet) desde páginas de Internet requiere que esas páginas se entreguen a través de HTTPS. Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para más información, vaya a la entrada [Estado de la plataforma de Chrome](https://chromestatus.com/feature/5436853517811712). Hay dos directivas de compatibilidad disponibles para admitir escenarios que necesitan conservar la compatibilidad con páginas no seguras: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) y [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls).
 
-- **Bloquear descargas de contenido mixto.** Las páginas seguras solo descargarán archivos hospedados en otras páginas seguras y las descargas hospedadas en páginas no seguras (que no son HTTPS) se bloquearán si se inician desde una página segura. Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para obtener más información, vaya a la entrada [del blog de seguridad de Google](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html).
+- **Bloquear descargas de contenido mixto.** Las páginas seguras solo descargarán archivos hospedados en otras páginas seguras y las descargas hospedadas en páginas no seguras (que no son HTTPS) se bloquearán si se inician desde una página segura. Este cambio se produce en el proyecto Chromium, en el que se basa Microsoft Edge. Para más información, vaya a la [entrada del blog de seguridad de Google.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
 
 - **Habilitar el inicio de sesión implícito para cuentas locales.**   Al habilitar la directiva OnlyOnPremisesImplicitSigninEnabled, solo se habilitarán las cuentas locales para el inicio de sesión implícito.  Microsoft Edge no intentará iniciar sesión implícitamente en cuentas de MSA o AAD. También se detendrán las actualizaciones de cuentas locales a cuentas de AAD.
 
@@ -56,17 +86,17 @@ Se han corregido varios errores y problemas de rendimiento.
 
 - **Actualice las contraseñas con facilidad.**  Ahora, el explorador te llevará directamente a la página Cambiar contraseña de un sitio web determinado que te ahorrará tiempo y clics evitando la necesidad de navegar a la página manualmente. Una vez que estés en esta página, el explorador también rellenará automáticamente la contraseña existente y sugerirá una nueva contraseña segura y única.  Tenga en cuenta que actualmente esta característica está disponible en un número limitado de sitios.  
 
-- **Nueva página de configuración de accesibilidad.** Hemos unido la configuración relacionada con la accesibilidad en una sola página. Puede encontrar la nueva página edge://settings/accessibility en la lista de configuración principal. Aquí puedes encontrar la configuración para hacer que la página web sea más grande, mostrar un esquema de alta visibilidad alrededor del área de enfoque y otras configuraciones que pueden ayudar a mejorar la experiencia de navegación web. Seguiremos agregando nueva configuración aquí en versiones futuras de Microsoft Edge.
+- **Nueva página de configuración de accesibilidad.** Hemos unido la configuración relacionada con la accesibilidad en una sola página. Puede encontrar la nueva página edge://settings/accessibility en la lista de configuración principal. Aquí puede encontrar la configuración para aumentar el tamaño de la página web, mostrar un esquema de alta visibilidad en torno al área de enfoque y otras opciones de configuración que pueden ayudar a mejorar su experiencia de exploración web. Seguiremos agregando nuevas opciones de configuración aquí en versiones futuras de Microsoft Edge.
 
 ***Nuevas directivas***
 
-- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Omitir la configuración de la lista de sitios de Application Guard y examinar Edge normalmente
+- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Ignorar la configuración de la lista de sitios de Protección de aplicaciones y navegar en Microsoft Edge con normalidad
 - [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) Solo cuenta local habilitada para el inicio de sesión implícito
-- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) Habilitar la compatibilidad con Windows reglas de tabla de enrutamiento del sistema operativo al realizar conexiones punto a punto a través de WebRTC
+- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) Habilitar la compatibilidad con las reglas de tabla de enrutamiento del sistema operativo Windows al realizar conexiones punto a punto a través de WebRTC
 
 ***Directiva obsoleta***
 
-- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) Habilitar la característica User-Agent sugerencias de cliente
+- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) Habilitar la característica User-Agent Client Hints (en desuso).
 
 ## <a name="version-93096133-august-27"></a>Versión 93.0.961.33: 27 de agosto
 
@@ -188,7 +218,7 @@ Tenga en cuenta que estamos experimentando con esta característica y este compo
 - **Mejoras en la representación de fuentes**. Se han realizado mejoras en la representación del texto para mejorar la claridad y reducir el desenfoque.
 Tenga en cuenta que se trata de un lanzamiento de características controlado. Si no ves esta característica, vuelve en breve mientras continuamos nuestra implementación.
 
-### <a name="policy-updates"></a>Actualizaciones de directiva
+### <a name="policy-updates"></a>Actualizaciones de directivas
 
 #### <a name="new-policies"></a>Nuevas directivas
 
