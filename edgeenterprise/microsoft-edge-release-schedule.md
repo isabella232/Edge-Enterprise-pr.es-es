@@ -3,19 +3,19 @@ title: Programa de publicación de versiones de Microsoft Edge
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/27/2021
+ms.date: 09/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Programa de publicación de versiones de Microsoft Edge
-ms.openlocfilehash: 3a6a4e825d902b1b5377845d47d546ff2fb6fc24
-ms.sourcegitcommit: 0d5255246b485a8b231cc624e261742a526f6769
+ms.openlocfilehash: 89594a26880354105f2f4605b261e5d3ba0836d7
+ms.sourcegitcommit: efd607fff9c09638a476bb75c7f6835184066e4d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "12044916"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "12056031"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Programa de publicación de versiones de Microsoft Edge
 
@@ -48,7 +48,7 @@ En la tabla siguiente solo se realiza un seguimiento de las versiones principale
 | 92 | Publicado<br>Versión | 08-jun-2021<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | 22-Jul-2021<BR>[92.0.902.55](/deployedge/microsoft-edge-relnote-stable-channel#version-92090255-july-22) |
 | 93 | Publicado<br>Versión | 03-Ago-2021<br>[93.0.961.11](/deployedge/microsoft-edge-relnote-beta-channel#version-93096111-August-03) | 02-Sep-2021<BR>[93.0.961.38](/deployedge/microsoft-edge-relnote-stable-channel#version-93096138-September-02) |
 | 94 | Publicado<br>Versión | 02-Sep-2021<br>[94.0.992.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9409929-September-02) | 24-Sep-2021<BR>[94.0.992.31](/deployedge/microsoft-edge-relnote-stable-channel#version-94099231-September-24) |
-| 95 | Versión de destino | Semana del 28-sep-2021 | Semana del 21-oct-2021 |
+| 95 | Publicado<br>Versión | 82-Sep-2021<br>[95.0.1020.9](/deployedge/microsoft-edge-relnote-beta-channel#version-95010209-September-28) | Semana del 21-oct-2021 |
 | 96 | Versión de destino | Semana del 26-oct-2021 | Semana del 18-nov-2021 |
 | 97 | Versión de destino | Semana del 30-nov-2021 | Semana del 06-ene-2022 |
 
