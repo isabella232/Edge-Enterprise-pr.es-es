@@ -3,19 +3,19 @@ title: 'Seguridad del administrador de contraseñas de Microsoft Edge '
 ms.author: v-andreabarr
 author: AndreaLBarr
 manager: collw
-ms.date: 06/29/2021
+ms.date: 09/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Seguridad del administrador de contraseñas de Microsoft Edge
-ms.openlocfilehash: 816bbd2c18fcae0a20a19fb0feab199454aa67b6
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 6f9dadab36c755113ad647e7e78a0bbbb2f8c965
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980452"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057358"
 ---
 # <a name="microsoft-edge-password-manager-security"></a>Seguridad del administrador de contraseñas de Microsoft Edge 
 
@@ -141,7 +141,7 @@ Cuando las contraseñas del explorador se cifran en el disco, la clave de cifrad
 Una característica de Contraseña maestra (que autentica al usuario antes de rellenar automáticamente sus datos) ofrece una ventaja en cuanto a comodidad, para una mitigación de amenazas más amplia. En concreto, ayuda a reducir la ventana de exposición de datos contra malware latente o atacantes físicamente locales. Sin embargo, una Contraseña maestra no es la solución perfecta, ya que los atacantes locales y el malware dedicado tienen diversas estrategias para eludir la protección de una Contraseña maestra.
 
 > [!Note]
-> Microsoft reconoce el valor de autenticar a los usuarios antes de autorrellenar y esta funcionalidad se agregará a Microsoft Edge en una versión futura.
+> Microsoft Edge ahora ofrece la capacidad de habilitar la autenticación antes de la funcionalidad de autocompletar; esto proporciona a los usuarios una capa adicional de privacidad e impide que sus contraseñas almacenadas sean usadas por cualquiera menos por ellos. Para obtener más información, consulta [Privacidad adicional para las contraseñas guardadas.](https://support.microsoft.com/topic/additional-privacy-for-your-saved-passwords-31dbd670-e314-4901-a546-6f302548502e)  
 
 ## <a name="can-using-a-password-manager-impact-my-privacy"></a>¿El uso de un administrador de contraseñas puede afectar a mi privacidad?
 
