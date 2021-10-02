@@ -3,23 +3,27 @@ title: Notas de la versión para las actualizaciones de seguridad de Microsoft E
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/24/2021
+ms.date: 10/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
-ms.openlocfilehash: 3d90844417994b7941b4e27122ef9564cc40e19f
-ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
+ms.openlocfilehash: 050f9976390d9b5f279b9f0fa11d1494e9f82391
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2021
-ms.locfileid: "12044832"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057356"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Notas de la versión para las actualizaciones de seguridad de Microsoft Edge
 
 Estas notas de la versión proporcionan información sobre las correcciones de seguridad que se incluyen en las actualizaciones del canal estable de Microsoft Edge.
+
+## <a name="october-1-2021"></a>1 de octubre de 2021
+
+Microsoft ha lanzado el último **canal estable de Microsoft Edge (versión 94.0.992.38)**, que incorpora las últimas actualizaciones de seguridad del proyecto Chromium. Esta actualización contiene una corrección para [CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975) y [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976), que el equipo de Chromium ha notificado que contienen una vulnerabilidad de seguridad. Para obtener más información, consulte la [Guía de actualización de seguridad](https://msrc.microsoft.com/update-guide).
 
 ## <a name="september-24-2021"></a>24 de septiembre de 2021
 
@@ -175,7 +179,7 @@ Microsoft ha lanzado el último **canal estable de Microsoft Edge (versión 87.0
 
 ## <a name="november-19-2020"></a>19 de noviembre de 2020
 
-Microsoft ha lanzado el último **canal estable de Microsoft Edge (versión 87.0.664.41)**, que incorpora las actualizaciones más recientes de seguridad del proyecto Chromium. Para más información, consulte la [Guía de actualización de seguridad](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Microsoft ha lanzado el último **canal estable de Microsoft Edge (versión 87.0.664.41)**, que incorpora las actualizaciones más recientes de seguridad del proyecto Chromium. Para obtener más información, consulte la [Guía de actualización de seguridad](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## <a name="november-13-2020"></a>13 de noviembre de 2020
 

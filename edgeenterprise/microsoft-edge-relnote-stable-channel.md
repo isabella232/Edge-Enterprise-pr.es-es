@@ -3,19 +3,19 @@ title: Notas de la versión de Microsoft Edge para el canal estable
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/24/2021
+ms.date: 10/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Notas de la versión de Microsoft Edge para el canal estable
-ms.openlocfilehash: 491debce74949c9e146acdcf825c99edf2f7f81e
-ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
+ms.openlocfilehash: f15c8e1d4dcd037b0948e7309387ba3baa5d1ffa
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2021
-ms.locfileid: "12044842"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057346"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Notas de la versión para el canal estable de Microsoft Edge
 
@@ -29,7 +29,18 @@ Estas notas de versión proporcionan información sobre las nuevas característi
 > [!NOTE]
 > Para el Canal estable, las actualizaciones se implementarán de manera progresiva en uno o más días. Para más información, consulte [Implementaciones progresivas de actualizaciones de Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, vea [Cambios que afectan a la compatibilidad del sitio próximamente en Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes).
+> Microsoft Edge La plataforma web evoluciona constantemente para mejorar la experiencia del usuario, la seguridad y la privacidad. Para más información, consulte [Cambios que afectan a la compatibilidad del sitio próximamente en Microsoft Edge](/ microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099238-october-1"></a>Versión 94.0.992.38: 1 de octubre
+
+> [!Important]
+> Esta actualización contiene una corrección para [CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975) y [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976), que el equipo de Chromium ha notificado que contienen una vulnerabilidad de seguridad. Para obtener más información, vea la [Guía de actualizaciones de seguridad](https://msrc.microsoft.com/update-guide)
+
+Las actualizaciones de seguridad del canal estable se muestran [aquí](/deployedge/microsoft-edge-relnotes-security#october-01-2021).
+
+## <a name="version-94099237-september-30"></a>Versión 94.0.992.37: 30 de septiembre
+
+Se han corregido varios errores y problemas de rendimiento.
 
 ## <a name="version-94099231-september-24"></a>Versión 94.0.992.31: 24 de septiembre
 
