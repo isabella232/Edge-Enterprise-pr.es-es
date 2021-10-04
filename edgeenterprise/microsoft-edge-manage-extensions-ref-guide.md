@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Guía de referencia detallada para configurar extensiones de Microsoft Edge mediante la directiva ExtensionSettings.
-ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 3660910a252377efe8dff47dec8f811ecdd2018e
+ms.sourcegitcommit: b67ebf9a68205407f5eaec343cb0722cfdd17396
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979962"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "12061109"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Guía detallada de la directiva ExtensionSettings
 
@@ -52,7 +52,35 @@ Esta directiva puede controlar configuraciones, como la dirección URL de actual
 | **runtime_allowed_hosts**| Permite que las extensiones interactúen con sitios web especificados, incluso si también se definen en runtime_blocked_hosts. Puede especificar hasta 100 entradas. Se descartan las entradas adicionales.<br>El formato del patrón de host es similar a [patrones de coincidencia](/microsoft-edge/extensions-chromium/enterprise/match-patterns) excepto en que no puede definir la ruta de acceso. Por ejemplo:<br>- *://*.example.com<br>- *://example.*: se admiten los caracteres comodín eTLD     |
 | **runtime_blocked_hosts**| Impedir que las extensiones interactúen con los sitios web especificados o los modifiquen. Las modificaciones incluyen el bloqueo de la inserción de JavaScript, el acceso a cookies y las modificaciones de solicitudes web.<br>Puede especificar hasta 100 entradas. Se descartan las entradas adicionales.<br>El formato del patrón de host es similar a los patrones de coincidencia, salvo que no se puede definir la ruta de acceso. Por ejemplo:<br>- *://*.example.com<br>- *://example.*: se admiten los caracteres comodín eTLD   |
 | **override_update_url**| Disponible desde edge 93<br>Si se establece en , Edge usa la dirección URL de actualización especificada en la directiva ExtensionSettings o en la directiva `true` ExtensionInstallForcelist, para actualizaciones de extensión posteriores.<br>Si no se establece o se establece en , Edge usa la dirección URL especificada en el manifiesto de la extensión `false` para actualizaciones.|
+| **toolbar_state**| Disponible desde edge 94<br>Esta configuración de directiva permite forzar la presentación de una extensión instalada en la barra de herramientas. El estado predeterminado es `default_shown` para todas las extensiones. Los siguientes estados son posibles para esta configuración<br>-`force_shown`: puede forzar a mostrar una extensión instalada en la barra de herramientas. Los usuarios no podrán ocultar el icono de extensión específico de la barra de herramientas.<br>-`default_hidden`: En este estado, las extensiones se ocultan en la barra de herramientas durante la instalación. Los usuarios pueden mostrarlas en la barra de herramientas, si es necesario.<br>-`default_shown`: esta es la configuración de sordera de todas las extensiones instaladas en el explorador.
 
+Estas son las claves que se permiten en el ámbito global (*): 
+
+- blocked_permissions
+- installation_mode: solo "bloqueado", "permitido" o "eliminado" son los valores válidos en este ámbito.
+- runtime_blocked_hosts
+- blocked_install_message
+- allowed_types
+- runtime_allowed_hosts
+- install_sources
+
+Estas son las claves que se permiten en un ámbito de extensión individual: 
+
+- blocked_permissions
+- minimum_version_required
+- blocked_install_message
+- toolbar_state (disponible desde edge 94)
+- installation_mode - `"blocked"` , `"allowed"` , , y son los `"removed"` `"force_installed"` valores `"normal_installed"` posibles.
+- runtime_allowed_hosts
+- update_url
+- override_update_url
+- runtime_blocked_hosts
+- toolbar_state
+
+Estas son las claves que se permiten en un ámbito de dirección URL de actualización: 
+
+- blocked_permissions
+- installation_mode: solo `"blocked"` , `"allowed"` o son los `"removed"` valores válidos en este ámbito.
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Configuración mediante una cadena JSON en el Editor de directivas de grupo de Windows
 
