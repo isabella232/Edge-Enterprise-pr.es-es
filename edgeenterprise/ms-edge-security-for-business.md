@@ -3,19 +3,19 @@ title: Seguridad de Microsoft Edge para su empresa
 ms.author: collw
 author: seanongit
 manager: chuckf
-ms.date: 06/29/2021
+ms.date: 10/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Seguridad de Microsoft Edge para su empresa
-ms.openlocfilehash: d16b22b63212e3f5319b0bb7df1e457e45cd6208
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 1480edb80698a20f27c4b0f365da9f18ee5fb46e
+ms.sourcegitcommit: 1c664ec030947d89cb5d7c4b834c9292cc1c87b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980332"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "12087706"
 ---
 # <a name="microsoft-edge-security-for-your-business"></a>Seguridad de Microsoft Edge para su empresa
 
@@ -27,9 +27,9 @@ Entremos en detalles: empezaremos por las **amenazas externas** y, después, pas
 
 ### <a name="highest-rated-protection-against-phishing-and-malware"></a>La protección mejor valorada para hacer frente a la suplantación de identidad (phishing) y al software malintencionado
 
-Integrado en Microsoft Edge, SmartScreen bloquea más intentos de [suplantación de identidad (phishing)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1) y [malware](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW) que la navegación segura de Google Chrome, según un estudio independiente de NSS Labs. SmartScreen ofrece comprobaciones de reputación de los sitios y de las descargas en tiempo real mientras los usuarios trabajan en línea. Además, forma parte de [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), que obtiene información y señales generadas en la amplia red global de Microsoft de activos, investigadores y asociados. Microsoft Edge ejecuta comprobaciones de listas dinámicas y basadas en la nube de descargas y sitios peligrosos, lo que ayuda a detectar y a bloquear incluso amenazas efímeras que desaparecen rápidamente.  
+Integrado en Microsoft Edge, SmartScreen de Microsoft Defender bloquea más intentos de [suplantación](https://aka.ms/EdgePhishingReport) de identidad y [malware](https://aka.ms/EdgeMalwareReport) que la navegación por Caja fuerte de Google Chrome, según un estudio independiente de CyberRatings.org. SmartScreen de Microsoft Defender proporciona comprobaciones de reputación en tiempo real de sitios y descargas a medida que los usuarios trabajan en línea y forma parte del Graph de seguridad inteligente de [Microsoft,](https://www.microsoft.com/microsoft-365/windows/intelligent-security)que dibuja las señales y los conocimientos generados a partir de la gran red de activos globales, investigadores y partners de Microsoft. Microsoft Edge ejecuta comprobaciones de listas dinámicas y basadas en la nube de descargas y sitios peligrosos, lo que ayuda a detectar y a bloquear incluso amenazas efímeras que desaparecen rápidamente.  
 
-[SmartScreen de Microsoft Edge](//DeployEdge/microsoft-edge-security-smartscreen) bloqueó el 95.5 % de los intentos de phishing durante la prueba de [Protección de phishing de NSS Labs](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1) y el 98.5 % de los intentos de malware durante la prueba de [Protección de malware de NSS Labs](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW), frente al 86.9 % y el 86.0 %, respectivamente, que obtuvo la navegación segura de Google Chrome.
+[Microsoft Edge SmartScreen](//DeployEdge/microsoft-edge-security-smartscreen) bloqueó el 92,3 % de los intentos de suplantación de identidad durante la prueba de [phishing](https://aka.ms/EdgePhishingReport) de CyberRatings.org y el 97,4 % de los intentos de malware durante la prueba de malware frente a los exploradores web de [CyberRatings.org](https://aka.ms/EdgeMalwareReport) en comparación con las tasas de exploración de Caja fuerte de Chrome del 84,6 % y el 86,3 %, respectivamente.
 
 ### <a name="the-only-browser-on-windows-10-that-natively-supports-hardware-isolation"></a>El único explorador en Windows 10 que admite de forma nativa el aislamiento de hardware
 
